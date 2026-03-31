@@ -44,7 +44,7 @@ const mcqQuestions = [
       D: "+20 cm"
     },
     answer: "B",
-    set: "31/1/1",
+    set: "31/S/1",
     year: "2025"
   },
   {
@@ -56,7 +56,7 @@ const mcqQuestions = [
       D: "Convex lens"
     },
     answer: "A",
-    set: "31/1/1",
+    set: "31/S/1",
     year: "2025"
   },
   {
@@ -74,6 +74,18 @@ Which statements are correct?`,
     },
     answer: "A",
     set: "31/1/1",
+    year: "2025"
+  }
+  {
+    question: `If the absolute refractive indices of two media X and Y are respectively, then the refractive index of Y with respect to X will be :`,
+    options: {
+      A: "10/9",
+      B: "9/10",
+      C: "9/8",
+      D: "8/9"
+    },
+    answer: "A",
+    set: "31/2/1",
     year: "2025"
   }
 ];
