@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics4Fun</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root{
+--bg-dark:#0f172a;
+--bg-card:#1e293b;
+--highlight:#38bdf8;
+--text-light:#f1f5f9;
+--radius:14px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--bg-dark);
+color:var(--text-light);
+display:flex;
+height:100vh;
+overflow:hidden;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:240px;
+background:#111827;
+display:flex;
+flex-direction:column;
+padding:30px 20px;
+}
+
+.sidebar h2{
+font-size:24px;
+color:#38bdf8;
+margin-bottom:25px;
+text-align:center;
+}
+
+.nav-link{
+background:transparent;
+border:none;
+text-align:left;
+padding:12px 15px;
+color:white;
+border-radius:14px;
+margin-bottom:10px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active{
+background:#38bdf8;
+color:black;
+font-weight:bold;
+}
+
+/* Header */
+
+.header{
+background:#1e293b;
+padding:18px;
+font-size:24px;
+font-weight:600;
+text-align:center;
+color:#38bdf8;
+box-shadow:0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Main */
+
+.main{
+flex:1;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+}
+
+.content{
+padding:25px;
+overflow-y:auto;
+height:100%;
+}
+
+/* Cards */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:var(--bg-card);
+border-radius:14px;
+padding:20px;
+transition:0.3s;
+box-shadow:0 6px 12px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 18px rgba(0,0,0,0.5);
+}
+
+.card h3{
+color:#38bdf8;
+font-size:18px;
+margin-bottom:12px;
+}
+
+/* Resource Buttons */
+
+.resources a{
+display:inline-flex;
+align-items:center;
+gap:7px;
+margin:6px 6px 0 0;
+padding:9px 14px;
+background:#38bdf8;
+color:black;
+border-radius:20px;
+text-decoration:none;
+font-weight:500;
+font-size:13px;
+transition:0.25s;
+}
+
+.resources a:hover{
+background:#7dd3fc;
+transform:scale(1.08);
+}
+
+/* Grade Theme Colors */
+
+.grade7 .card{border-left:6px solid #22c55e;}
+.grade8 .card{border-left:6px solid #22c55e;}
+.grade9 .card{border-left:6px solid #38bdf8;}
+.grade10 .card{border-left:6px solid #f59e0b;}
+
+
+.grade8 .header{color:#22c55e;}
+.grade9 .header{color:#38bdf8;}
+.grade10 .header{color:#f59e0b;}
+
+/* Mobile */
+
+@media(max-width:768px){
+body{flex-direction:column;}
+
+.sidebar{
+flex-direction:row;
+overflow-x:auto;
+width:100%;
+height:auto;
+padding:10px;
+}
+
+.nav-link{flex:1;margin:5px;}
+}
+
+</style>
+</head>
+
+<body class="grade8">
+
+<div class="sidebar">
+<h2>Physics4Fun</h2>
+<button class="nav-link active" onclick="loadChapters(7,this)">Grade 7</button>
+<button class="nav-link active" onclick="loadChapters(8,this)">Grade 8</button>
+<button class="nav-link" onclick="loadChapters(9,this)">Grade 9</button>
+<button class="nav-link" onclick="loadChapters(10,this)">Grade 10</button>
+</div>
+
+<div class="main">
+<div class="header">📚</div>
+
+<div class="content">
+<div id="chapter-area" class="grid"></div>
+</div>
+</div>
+
+<script>
+
+/* ========== PUT YOUR GOOGLE DRIVE LINKS HERE ========== */
+
+const contentLinks = {
+
+7:{
+"Earth, moon and the Sun":{notes:"#",mock:"https://sites.google.com/view/physics4fun/grade-7/7-electricity"},
+"Light - Shadows and Reflections":{notes:"#",mock:"https://sites.google.com/view/physics4fun/grade-7/7-light"},
+},
+8:{
+"Force and Pressure":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"},
+"Friction":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"},
+"Sound":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"}
+},
+
+9:{
+"Motion":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"},
+"Laws of Motion":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"},
+"Gravitation":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"}
+},
+
+10:{
+"Light – Reflection & Refraction":{notes:"https://drive.google.com/file/d/1tkPCDJORYMdniOACWwHkG_wYFiGkpe_p/view?usp=drive_link",ppt:"https://1drv.ms/p/c/631f954b563ed511/IQDtewD8IRHzSos_Zv8oK132AUBlXVXkU44-BqK0qvE259I?e=sCKvtz&nav=eyJzSWQiOjI1NiwiY0lkIjowfQ",pyq:"https://sites.google.com/view/physics4fun/grade-10/1-pyqs",mock:"#",problems:"#"},
+"Human Eye & Colourful World":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"},
+"Electricity":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"},
+"Magnetic Effects of Current":{notes:"#",ppt:"#",pyq:"#",mock:"#",problems:"#"}
+}
+
+};
+
+/* Icons */
+
+const labels={
+notes:'<i class="fa-solid fa-book-open"></i> Notes',
+ppt:'<i class="fa-solid fa-file-powerpoint"></i> PPTs',
+pyq:'<i class="fa-solid fa-clipboard-question"></i> PYQs',
+mock:'<i class="fa-solid fa-pen-to-square"></i> Mock Test',
+problems:'<i class="fa-solid fa-square-root-variable"></i> Numericals'
+};
+
+function loadChapters(grade,btn){
+
+document.querySelectorAll('.nav-link').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+
+document.body.classList.remove("grade7", "grade8","grade9","grade10");
+document.body.classList.add("grade"+grade);
+
+const container=document.getElementById('chapter-area');
+container.innerHTML="";
+
+const chapters=contentLinks[grade];
+
+Object.keys(chapters).forEach(chap=>{
+
+const card=document.createElement('div');
+card.className='card';
+
+const title=document.createElement('h3');
+title.textContent=chap;
+
+const links=document.createElement('div');
+links.className='resources';
+
+Object.keys(chapters[chap]).forEach(type=>{
+const a=document.createElement('a');
+a.href=chapters[chap][type];
+a.target="_blank";
+a.innerHTML=labels[type];
+links.appendChild(a);
+});
+
+card.appendChild(title);
+card.appendChild(links);
+container.appendChild(card);
+
+});
+}
+
+window.onload=()=>{
+loadChapters(8,document.querySelector(".nav-link.active"));
+};
+
+</script>
+
+</body>
+</html>
