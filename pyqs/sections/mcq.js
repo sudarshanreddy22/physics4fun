@@ -75,9 +75,9 @@ Which statements are correct?`,
     answer: "A",
     set: "31/1/1",
     year: "2025"
-  }
+  },
   {
-    question: `If the absolute refractive indices of two media X and Y are respectively, then the refractive index of Y with respect to X will be :`,
+    question: `If the absolute refractive indices of two media X and Y are 6/5 and 4/3 respectively, then the refractive index of Y with respect to X will be :`,
     options: {
       A: "10/9",
       B: "9/10",
