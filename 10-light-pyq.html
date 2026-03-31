@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics4Fun | Light - Reflection and Refraction</title>
+
+<style>
+
+/* GENERAL */
+
+body{
+font-family:Segoe UI,Arial;
+background:#f5f7fb;
+margin:0;
+}
+
+.container{
+max-width:950px;
+margin:auto;
+padding:20px;
+}
+
+.chapter-title{
+background:#2563eb;
+color:white;
+padding:12px;
+border-radius:12px;
+text-align:center;
+font-size:20px;
+font-weight:600;
+}
+
+/* TABS */
+
+.tabs{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin:20px 0;
+}
+
+.tab-link{
+display:flex;
+align-items:center;
+gap:8px;
+padding:7px 12px;
+border-radius:14px;
+cursor:pointer;
+font-weight:600;
+}
+
+.tab-link.active-tab{
+background:#2563eb !important;
+color:white !important;
+}
+
+.circle{
+width:30px;
+height:30px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:700;
+}
+
+/* SECTIONS */
+
+.section{
+display:none;
+margin-top:10px;
+}
+
+.section.active{
+display:block;
+}
+
+/* QUESTION CARD */
+
+.question-item,.mcq-card{
+display:flex;
+gap:12px;
+align-items:flex-start;
+background:white;
+padding:14px;
+border-radius:12px;
+margin-bottom:10px;
+}
+
+.qno{
+width:26px;
+height:26px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:13px;
+flex-shrink:0;
+}
+
+/* BADGES */
+
+.set-badge{
+font-size:12px;
+font-weight:700;
+padding:4px 12px;
+border-radius:999px;
+background:#334155;
+color:white;
+}
+
+.year-badge{
+font-size:12px;
+font-weight:700;
+padding:4px 12px;
+border-radius:999px;
+background:#7f1d1d;
+color:white;
+}
+
+/* OPTIONS */
+
+.options{
+margin-top:12px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.options.ar{
+grid-template-columns:repeat(4,1fr);
+}
+
+.option{
+border:2px solid #e5e7eb;
+border-radius:10px;
+padding:10px 14px;
+cursor:pointer;
+background:#fafafa;
+display:flex;
+align-items:center;
+justify-content:flex-start;
+gap:10px;
+}
+
+.option:hover{
+border-color:#2563eb;
+background:#eff6ff;
+}
+
+.opt-label{
+display:flex;
+width:26px;
+height:26px;
+border-radius:50%;
+background:#e5e7eb;
+align-items:center;
+justify-content:center;
+font-weight:700;
+flex-shrink:0;
+}
+
+/* ANSWER COLOURS */
+
+.option.correct{
+background:#dcfce7;
+border-color:#22c55e;
+}
+
+.option.wrong{
+background:#fee2e2;
+border-color:#ef4444;
+}
+
+.option.correct .opt-label{
+background:#22c55e;
+color:white;
+}
+
+.option.wrong .opt-label{
+background:#ef4444;
+color:white;
+}
+
+.options.answered .option{
+pointer-events:none;
+}
+
+/* EXPLANATION */
+
+.explanation{
+display:none;
+margin-top:12px;
+padding:12px;
+background:#f1f5ff;
+border-left:4px solid #2563eb;
+border-radius:6px;
+font-size:14px;
+}
+
+/* CATEGORY COLOURS */
+
+.qno.mcq{background:#7c3aed;}
+.qno.ar{background:#f97316;}
+.qno.two{background:#16a34a;}
+.qno.three{background:#dc2626;}
+.qno.four{background:#0ea5e9;}
+.qno.five{background:#ec4899;}
+
+
+/* ===== AUTO QUESTION NUMBERING ===== */
+
+.section{
+counter-reset: question;
+}
+
+.qno::before{
+counter-increment: question;
+content: counter(question);
+}
+
+
+/* ===== SET CODE BADGE ===== */
+
+.set-badge{
+font-size:12px;
+font-weight:700;
+padding:4px 12px;
+border-radius:999px;
+background:#8A244B;
+color:white;
+letter-spacing:0.4px;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ===== YEAR BADGE ===== */
+
+.year-badge{
+font-size:12px;
+font-weight:700;
+padding:4px 12px;
+border-radius:999px;
+background:#F63049;
+color:white;
+letter-spacing:0.4px;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="chapter-title">
+Light - Reflection and Refraction
+</div>
+
+<!-- TABS -->
+
+<div class="tabs">
+
+<div onclick="showSection('mcq',this)" class="tab-link active-tab" style="background:#ede9fe;color:#5b21b6;">
+<div class="circle" style="background:#7c3aed;">1</div> MCQs
+</div>
+
+<div onclick="showSection('ar',this)" class="tab-link" style="background:#fff7ed;color:#c2410c;">
+<div class="circle" style="background:#f97316;">1</div> A & R
+</div>
+
+<div onclick="showSection('two',this)" class="tab-link" style="background:#dcfce7;color:#15803d;">
+<div class="circle" style="background:#16a34a;">2</div>Marks
+</div>
+
+<div onclick="showSection('three',this)" class="tab-link" style="background:#fee2e2;color:#b91c1c;">
+<div class="circle" style="background:#dc2626;">3</div>Marks
+</div>
+
+<div onclick="showSection('four',this)" class="tab-link" style="background:#e0e7ff;color:#3730a3;">
+<div class="circle" style="background:#0ea5e9;">4</div>Marks
+</div>
+
+<div onclick="showSection('five',this)" class="tab-link" style="background:#fce7f3;color:#be185d;">
+<div class="circle" style="background:#ec4899;">5</div>Marks
+</div>
+
+</div>
+
+<!-- MCQ -->
+
+<div id="mcq" class="section active">
+
+<div class="mcq-card">
+<div class="qno mcq"></div>
+<div style="flex:1">
+A convex lens of focal length 15 cm is forming a real image. If the size of image is same as the size of object, the position of object and image respectively will be:
+<div class="options" data-answer="B">
+<div class="option" data-opt="A"><span class="opt-label">A</span>−15 cm and −15 cm from lens</div>
+<div class="option" data-opt="B"><span class="opt-label">B</span>−15 cm and +15 cm from lens</div>
+<div class="option" data-opt="C"><span class="opt-label">C</span>−30 cm and +30 cm from lens</div>
+<div class="option" data-opt="D"><span class="opt-label">D</span>−30 cm and −30 cm from lens</div>
+</div>
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2026</div></div>
+</div>
+
+<div class="mcq-card">
+<div class="qno mcq"></div>
+<div style="flex:1">
+From the following options choose the one which gives negative magnification greater than one : 
+<div class="options" data-answer="A">
+<div class="option" data-opt="A"><span class="opt-label">A</span>Concave mirror; Nature of image - real</div>
+<div class="option" data-opt="B"><span class="opt-label">B</span>Concave mirror; Nature of image - virtual</div>
+<div class="option" data-opt="C"><span class="opt-label">C</span>Convex mirror; Nature of image - real</div>
+<div class="option" data-opt="D"><span class="opt-label">D</span>Convex mirror; Nature of image - virtual</div>
+</div>
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/2/1</div><div class="year-badge">2026</div></div>
+</div>
+
+
+<div class="mcq-card">
+<div class="qno mcq"></div>
+<div style="flex:1">
+Rays from the sun converge at a point 25 cm behind convex lens. The distance at which an object be placed in front of the lens to get a virtual image, is: 
+<div class="options" data-answer="D">
+<div class="option" data-opt="A"><span class="opt-label">A</span>20 cm</div>
+<div class="option" data-opt="B"><span class="opt-label">B</span>40 cm</div>
+<div class="option" data-opt="C"><span class="opt-label">C</span>50 cm</div>
+<div class="option" data-opt="D"><span class="opt-label">D</span>More than 50 cm</div>
+</div>
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/5/1</div><div class="year-badge">2026</div></div>
+</div>
+
+
+
+
+<div class="mcq-card">
+<div class="qno mcq"></div>
+<div style="flex:1">
+A 5 cm long rod is placed vertically in front of a concave mirror.  
+Its 5 cm image is formed at 20 cm in front of the mirror.  
+The focal length of the mirror is:
+<div class="options" data-answer="B">
+<div class="option" data-opt="A"><span class="opt-label">A</span> −20 cm</div>
+<div class="option" data-opt="B"><span class="opt-label">B</span> −10 cm</div>
+<div class="option" data-opt="C"><span class="opt-label">C</span> −5 cm</div>
+<div class="option" data-opt="D"><span class="opt-label">D</span> +20 cm</div>
+</div>
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+
+<div class="mcq-card">
+<div class="qno mcq"></div>
+<div style="flex:1">
+An optical device which always produces images with magnification m = +1 is:
+<div class="options" data-answer="A">
+<div class="option" data-opt="A"><span class="opt-label">A</span>Plane mirror</div>
+<div class="option" data-opt="B"><span class="opt-label">B</span>Convex mirror</div>
+<div class="option" data-opt="C"><span class="opt-label">C</span>Concave mirror</div>
+<div class="option" data-opt="D"><span class="opt-label">D</span>Convex lens</div>
+</div>
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+
+<div class="mcq-card">
+<div class="qno mcq"></div>
+<div style="flex:1">
+Mirror X is used in solar furnace and Mirror Y is used as a rear-view mirror.<br>
+(i) Image by X is real and at focus <br>
+(ii) Image by Y is virtual and diminished<br>
+(iii) Image by X is virtual and erect <br>
+(iv) Image by Y is real at focus <br>
+Which statements are correct?
+<div class="options" data-answer="A">
+<div class="option" data-opt="A"><span class="opt-label">A</span>(i) and (ii)</div>
+<div class="option" data-opt="B"><span class="opt-label">B</span>(ii) and (iii)</div>
+<div class="option" data-opt="C"><span class="opt-label">C</span>(iii) and (iv)</div>
+<div class="option" data-opt="D"><span class="opt-label">D</span>(i) and (iv)</div>
+</div>
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!-- A&R -->
+
+<div id="ar" class="section">
+
+<div class="mcq-card">
+<div class="qno ar"></div>
+<div style="flex:1">
+<b>Assertion:</b> Convex mirror forms virtual image.<br>
+<b>Reason:</b> Focus lies behind mirror.
+<div class="options ar" data-answer="A">
+<div class="option" data-opt="A"><span class="opt-label">A</span></div>
+<div class="option" data-opt="B"><span class="opt-label">B</span></div>
+<div class="option" data-opt="C"><span class="opt-label">C</span></div>
+<div class="option" data-opt="D"><span class="opt-label">D</span></div>
+</div>
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2026</div></div>
+</div>
+
+<div class="mcq-card">
+<div class="qno ar"></div>
+<div style="flex:1">
+<b>Assertion:</b> Concave mirror can form real image.<br>
+<b>Reason:</b> Reflected rays converge.
+<div class="options ar" data-answer="A">
+<div class="option" data-opt="A"><span class="opt-label">A</span></div>
+<div class="option" data-opt="B"><span class="opt-label">B</span></div>
+<div class="option" data-opt="C"><span class="opt-label">C</span></div>
+<div class="option" data-opt="D"><span class="opt-label">D</span></div>
+</div>
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2026</div></div>
+</div>
+
+</div>
+
+<!-- 2 MARK -->
+
+<div id="two" class="section">
+
+
+
+<div class="question-item">
+
+<div class="qno two"></div>
+
+<div>
+
+The given figure shows image formation by a lens.<br>
+
+<img src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun-images/main/light.png"
+style="width:320px;margin:10px 0;">
+
+<br>
+
+(a) What is the type of lens used for image formation in the given ray diagram? <br>
+(b) If the real image is formed at a distance of 30 cm from the lens and the size of image is twice the size of the object, where was the object placed?
+
+<div class="explanation">
+Explanation will be updated shortly
+</div>
+
+</div>
+
+<div style="display:flex;gap:6px;margin-left:auto;">
+<div class="set-badge">31/1/1</div>
+<div class="year-badge">2026</div>
+</div>
+
+</div>
+
+
+
+<div class="question-item">
+<div class="qno two"></div>
+<div>
+A mirror always forms a virtual, erect and diminished image. Identify the mirror and draw a labelled ray diagram for image formation. 
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/2</div><div class="year-badge">2026</div></div>
+</div>
+
+
+<div class="question-item">
+<div class="qno two"></div>
+<div>
+Draw the ray diagram for the image formation by a lens which shows magnification of +2.
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/3</div><div class="year-badge">2026</div></div>
+</div>
+
+
+
+<div class="question-item">
+<div class="qno two"></div>
+<div>
+An object is placed at a distance of 60 cm from a concave lens of focal length 30 cm. Use lens formula to find the position of the image formed in this case
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+<div class="question-item">
+<div class="qno two"></div>
+<div>
+An object is placed at a distance of 30 cm in front of a concave mirror of focal length 20 cm. Use mirror formula to determine the position of the image formed in this case
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+
+<div class="question-item">
+<div class="qno two"></div>
+<div>
+An object is placed at a distance of 10 cm in front of a concave mirror of focal length 15 cm. Use mirror formula to determine the position of the image formed by this mirror.
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+<div class="question-item">
+<div class="qno two"></div>
+<div>
+Out of the two lenses, one concave and the other convex, state which one will diverge a parallel beam of light falling on it. Draw a ray diagram to show the principal focus of the lens. 
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+
+
+</div>
+
+<!-- 3 MARK -->
+
+<div id="three" class="section">
+
+<div class="question-item">
+<div class="qno three"></div>
+<div>
+Draw ray diagrams to show the nature, position and relative size of the image formed by a convex mirror when the object is placed 
+(i) at infinity and 
+(ii) between infinity and pole P of the mirror.
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+<div class="question-item">
+<div class="qno three"></div>
+<div>
+A convex lens forms an 8.0 cm long image of a 2.0 cm long object which is kept at a distance of 6.0 cm from the optical centre of the lens. If the object and the image are on the same side of the lens, find (i) the nature of the image, (ii) the position of the image, and (iii) the focal length of the lens. 
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/2/1</div><div class="year-badge">2025</div></div>
+</div>
+
+
+<div class="question-item">
+<div class="qno three"></div>
+<div>
+An object is placed at a distance of 20 cm from the optical centre of a concave lens and its image is formed on the same side of the lens as the object. If the distance of the image from optical centre of the lens is 10 cm, use lens formula to determine (i) focal length, and (ii) power of the lens in new Cartesian sign conventions. 
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/2/2</div><div class="year-badge">2025</div></div>
+</div>
+
+
+
+</div>
+
+<!-- 4 MARK -->
+
+<div id="four" class="section">
+
+
+<div class="question-item">
+<div class="qno four"></div>
+<div>
+<b>Read the passage and answer the questions:</b><br>
+Lenses can form different types of images depending upon their focal length and position of object. A convex lens can create real, inverted or virtual, erect images, while a concave lens forms only virtual and diminished images. The focal length determines the power of lens. Convex lenses have positive focal length while concave lenses have negative focal length by convention. When lenses are placed together, their combined power is determined by the sum of their individual Powers. Ray diagrams help to visualize how light converges or diverges through lens to form an image.<br>
+(a) A convex lens of focal length 20 cm is used to form an image. If an object is placed at 40 cm from the lens, what will be the position and nature of image?<br>
+(b) Illustrate the formation of image with the help of ray diagram, when the object is placed between the optical centre and principal focus of concave lens.<br>
+(c) (i) A lens combination consists of a convex lens of focal length 30 cm and a concave lens of focal length 15 cm placed together. Find the equivalent focal length and power of this lens combination.<br>
+<b>OR</b><br>
+(ii) Two lenses are placed in contact. One is a concave lens with focal length 2 m and the Other is a convex lens with focal length 1.5 m. What type of lens will the combination behave as (convex or concave)? Give reason.<br>
+
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2026</div></div>
+</div>
+
+
+
+
+<div class="question-item">
+<div class="qno four"></div>
+<div>
+In our laboratories we use compound microscopes to see the magnified image of a microscopic object. A compound microscope is made up of two lenses. The lens nearest to the object to be viewed, called objective lens, forms real, inverted and magnified image of the object. This image serves as an object for the second lens called eyepiece. The eyepiece forms virtual, erect and magnified image of its object. Thus, the resultant image formed by a microscope is virtual, inverted and magnified with respect to the microscopic object viewed.<br>
+(a)	The image of an object formed by a convex lens of focal length 2 cm is real, inverted and magnified. What is the range of object distance in this <br>
+(b)	The image of an object formed by a convex lens of focal length 6 cm is virtual, erect and magnified. What is the range of object distance in this case? <br>
+(c)	(i) An object is placed at a distance of 12 cm from the optical centre of a convex lens of focal length 18 cm. Draw a labelled ray diagram to show the formation of image in this case.<br>
+OR<br>
+(c)	(ii) The image formed by a convex lens is real, inverted and of the same size as the object. If the distance between the objects and the image is 60 cm, determine the focal length of the lens. Give justification for your answer.
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="year-badge">2024C</div></div>
+</div>
+
+<div class="question-item">
+<div class="qno four"></div>
+<div>
+Under the guidance of his teacher on a sunny day, a student took a concave mirror of large aperture in his hand and directed its reflecting surface towards the sun. After that he directed the light reflected by the
+concave mirror on a thick sheet of white paper held close to the mirror. He observed a bright circular spot of light on the paper. Then he moved the mirror back and forth gradually until he got the brightest and smallest spot of light on the paper. The teacher said this sharp spot of light is, in fact, the real and inverted image of the sun and the distance between the mirror and this image is the focal length of this concave mirror.
+(a)	Define the term principal focus of a concave mirror<br>
+(b)	If the distance between the pole and focus of a concave mirror is 12 cm, what is the radius of curvature of the mirror?<br>
+(c)	(i) List two properties of the image formed due to a concave mirror of focal length 15 cm in each of the following cases:<br>
+(1)	object distance 20 cm<br>
+(2)	object distance 10 cm<br>
+OR<br>
+(c)	(ii) A 3 cm long candle flame is placed in front of a concave mirror. If the distance between the pole and the candle flame is 40 cm and the image is formed at the same place where the candle flame is located, find the<br>
+(1)	focal length of the mirror, and<br>
+(2)	magnification of the image formed with sign as per the New Cartesian Sign Convention.
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="year-badge">2024C</div></div>
+</div>
+
+</div>
+
+<!-- 5 MARK -->
+
+<div id="five" class="section">
+
+<div class="question-item">
+<div class="qno five"></div>
+<div>
+(i) The power of a lens X' is – 2.5 D. Name the lens and determine its focal length in cm. For which eye defect of vision will an optician prescribe this type of lens as a corrective lens? <br>
+(ii) "The value of magnification 'm' for a lens is -2." Using new Cartesian Sign Convention and considering that an object is placed at a distance of 20 cm from the optical centre of this lens, state :
+(I) the nature of the image formed;<br>
+(II) size of the image compared to the size of the object; <br>
+(III) position of the image, and <br>
+(IV) sign of the height of the image. <br>
+(iii) The numerical values of the focal lengths of two lenses A and B are 10 cm and 20 cm respectively. Which one of the two will show higher degree of convergence/divergence?
+Give reason to justify your answer.
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+<div class="question-item">
+<div class="qno five"></div>
+<div>
+(i) Draw a ray diagram to show the refraction of a ray of light through a rectangular glass slab when it falls obliquely from air into glass.<br>
+(ii) State Snell's law of refraction of light.<br>
+(iii) Differentiate between the virtual images formed by a convex lens and a concave lens on the basis of :<br>
+(I) object distance, and<br>
+(II) magnification.  
+<div class="explanation">Explanation will be updated shortly</div>
+</div>
+<div style="display:flex;gap:6px;margin-left:auto;"><div class="set-badge">31/1/1</div><div class="year-badge">2025</div></div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* TAB SWITCH */
+
+function showSection(id,el){
+
+document.querySelectorAll(".section").forEach(sec=>sec.classList.remove("active"));
+document.querySelectorAll(".tab-link").forEach(tab=>tab.classList.remove("active-tab"));
+
+document.getElementById(id).classList.add("active");
+el.classList.add("active-tab");
+
+}
+
+/* MCQ CHECK */
+
+document.querySelectorAll(".option").forEach(opt=>{
+
+opt.onclick=function(){
+
+let box=this.closest(".options");
+
+if(box.classList.contains("answered")) return;
+
+let correct=box.dataset.answer;
+let selected=this.dataset.opt;
+
+box.classList.add("answered");
+
+if(selected===correct){
+this.classList.add("correct");
+}
+else{
+this.classList.add("wrong");
+box.querySelector(`[data-opt="${correct}"]`).classList.add("correct");
+}
+
+}
+
+});
+
+/* EXPLANATION TOGGLE */
+
+document.querySelectorAll(".mcq-card,.question-item").forEach(card=>{
+
+card.addEventListener("click",function(e){
+
+if(e.target.classList.contains("option")) return;
+
+let exp=this.querySelector(".explanation");
+
+if(!exp) return;
+
+exp.style.display = exp.style.display==="block" ? "none" : "block";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
