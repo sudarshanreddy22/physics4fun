@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics4Fun</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* ===================================================
+   CSS VARIABLES
+   =================================================== */
+:root{
+  --bg:                  #0d1526;
+  --sidebar-bg:          #0a1120;
+  --sidebar-border:      #1e2d47;
+  --header-bg:           rgba(10,17,32,0.96);
+  --card-bg:             rgba(255,255,255,0.055);
+  --card-border:         rgba(255,255,255,0.08);
+  --card-hover:          rgba(255,255,255,0.09);
+  --text:                #e2e8f0;
+  --text-muted:          #64748b;
+  --text-sub:            #94a3b8;
+  --item-hover:          rgba(255,255,255,0.06);
+  --item-active:         rgba(59,130,246,0.18);
+  --item-active-border:  #3b82f6;
+  --secbar-bg:           rgba(255,255,255,0.04);
+  --secbar-btn:          rgba(255,255,255,0.06);
+  --secbar-hover:        rgba(255,255,255,0.12);
+  --opt-bg:              rgba(255,255,255,0.06);
+  --opt-border:          rgba(255,255,255,0.12);
+  --opt-hover-bg:        rgba(59,130,246,0.15);
+  --opt-hover-border:    #3b82f6;
+  --opt-label:           rgba(255,255,255,0.12);
+  --exp-bg:              rgba(59,130,246,0.1);
+  --exp-border:          #3b82f6;
+  --scrollthumb:         #334155;
+  --divider:             rgba(255,255,255,0.06);
+  --grade-pill-bg:       rgba(255,255,255,0.06);
+  --badge-set:           #8A244B;
+  --badge-year:          #F63049;
+  --brand:               #60a5fa;
+  --accent1:             #7c3aed;
+  --accent2:             #06b6d4;
+  --pyqtab-bar-bg:       #0d1933;
+  --pyqtab-bar-border:   rgba(255,255,255,0.07);
+  --pyqtab-indicator:    rgba(255,255,255,0.06);
+}
+
+body.light{
+  --bg:                  #f0f4fb;
+  --sidebar-bg:          #ffffff;
+  --sidebar-border:      #e2e8f0;
+  --header-bg:           rgba(255,255,255,0.97);
+  --card-bg:             #ffffff;
+  --card-border:         #e5e7eb;
+  --card-hover:          #f8faff;
+  --text:                #0f172a;
+  --text-muted:          #94a3b8;
+  --text-sub:            #475569;
+  --item-hover:          #f1f5f9;
+  --item-active:         #eff6ff;
+  --item-active-border:  #2563eb;
+  --secbar-bg:           #ffffff;
+  --secbar-btn:          #f1f5f9;
+  --secbar-hover:        #e0e7ff;
+  --opt-bg:              #fafafa;
+  --opt-border:          #e5e7eb;
+  --opt-hover-bg:        #eff6ff;
+  --opt-hover-border:    #2563eb;
+  --opt-label:           #e5e7eb;
+  --exp-bg:              #f1f5ff;
+  --exp-border:          #2563eb;
+  --scrollthumb:         #cbd5e1;
+  --divider:             #e2e8f0;
+  --grade-pill-bg:       #f1f5f9;
+  --brand:               #2563eb;
+  --accent1:             #7c3aed;
+  --accent2:             #0ea5e9;
+  --pyqtab-bar-bg:       #ffffff;
+  --pyqtab-bar-border:   #e2e8f0;
+  --pyqtab-indicator:    #f1f5f9;
+}
+
+/* ===================================================
+   RESET & BASE
+   =================================================== */
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Plus Jakarta Sans',Segoe UI,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transition:background 0.3s,color 0.3s;
+}
+
+/* ===================================================
+   HEADER
+   =================================================== */
+.header{
+  display:flex;
+  align-items:center;
+  height:52px;
+  padding:0 16px;
+  background:var(--header-bg);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--divider);
+  flex-shrink:0;
+  z-index:60;
+}
+
+.left-controls{display:flex;align-items:center;gap:8px;}
+
+.icon-btn{
+  width:34px;height:34px;
+  border-radius:8px;
+  border:1px solid var(--divider);
+  background:var(--card-bg);
+  color:var(--text);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;
+  transition:background 0.15s,border-color 0.15s;
+}
+.icon-btn:hover{background:var(--item-hover);border-color:var(--item-active-border);}
+
+.header-title{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.brand-name{
+  font-size:18px;font-weight:800;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;letter-spacing:-0.3px;
+}
+
+.breadcrumb{
+  display:flex;align-items:center;
+  gap:6px;margin-left:16px;
+}
+.bc-sep{color:var(--text-muted);font-size:12px;}
+.bc-chip{
+  font-size:12px;font-weight:600;
+  padding:3px 10px;border-radius:20px;
+  background:var(--grade-pill-bg);
+  color:var(--text-sub);
+  border:1px solid var(--divider);
+}
+.bc-chip.active{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:white;border:none;
+}
+
+/* ===================================================
+   LAYOUT
+   =================================================== */
+.main{display:flex;flex:1;overflow:hidden;}
+
+/* ===================================================
+   SIDEBAR
+   =================================================== */
+.sidebar{
+  width:232px;min-width:232px;
+  background:var(--sidebar-bg);
+  border-right:1px solid var(--sidebar-border);
+  display:flex;flex-direction:column;overflow:hidden;
+  transition:width 0.25s,min-width 0.25s,opacity 0.2s;
+}
+.sidebar.hide{width:0;min-width:0;opacity:0;pointer-events:none;}
+
+.sb-inner{flex:1;overflow-y:auto;padding:10px 8px;}
+
+.sb-label{
+  font-size:9.5px;font-weight:700;
+  letter-spacing:1.4px;text-transform:uppercase;
+  color:var(--text-muted);
+  padding:8px 8px 4px;
+}
+
+/* grade row */
+.grade-row{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 10px;border-radius:10px;cursor:pointer;
+  margin-bottom:2px;border:1px solid transparent;
+  transition:background 0.14s,border-color 0.14s;user-select:none;
+}
+.grade-row:hover{background:var(--item-hover);}
+.grade-row.open{background:var(--item-active);border-color:var(--item-active-border);}
+
+.grade-pill{
+  font-size:11px;font-weight:800;
+  padding:3px 9px;border-radius:20px;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:white;flex-shrink:0;
+}
+.grade-label{font-size:13px;font-weight:700;color:var(--text);flex:1;}
+.grade-arrow{font-size:9px;color:var(--text-muted);transition:transform 0.2s;flex-shrink:0;}
+.grade-row.open .grade-arrow{transform:rotate(90deg);color:var(--brand);}
+
+/* chapter list */
+.chapter-list{
+  display:none;margin:2px 0 4px 18px;
+  border-left:2px solid var(--item-active-border);
+}
+.chapter-list.open{display:block;}
+
+.ch-item{
+  display:flex;align-items:center;gap:9px;
+  padding:7px 10px 7px 12px;border-radius:8px;
+  cursor:pointer;font-size:12px;font-weight:600;
+  color:var(--text-sub);margin-bottom:1px;
+  border-left:2px solid transparent;
+  transition:background 0.12s,color 0.12s;
+}
+.ch-item:hover{background:var(--item-hover);color:var(--text);}
+.ch-item.active{color:var(--text);background:var(--item-active);border-left-color:var(--brand);}
+.ch-icon{font-size:14px;flex-shrink:0;}
+.ch-item.unavailable{color:var(--text-muted);cursor:default;}
+.ch-item.unavailable:hover{background:transparent;}
+
+/* ===================================================
+   CONTENT WRAPPER
+   =================================================== */
+.content-wrap{
+  flex:1;display:flex;flex-direction:column;overflow:hidden;
+  background:var(--bg);
+}
+
+/* ===================================================
+   SECTION BAR  (PYQs / Notes / Mock / Simulation)
+   =================================================== */
+.section-bar{
+  display:none;align-items:center;gap:8px;
+  padding:10px 18px;
+  background:var(--secbar-bg);
+  border-bottom:1px solid var(--divider);
+  flex-shrink:0;
+}
+.section-bar.visible{display:flex;}
+
+.sec-btn{
+  display:flex;align-items:center;gap:7px;
+  padding:6px 14px;border-radius:20px;cursor:pointer;
+  font-size:12px;font-weight:700;
+  background:var(--secbar-btn);color:var(--text-sub);
+  border:1px solid var(--divider);
+  transition:background 0.14s,color 0.14s,border-color 0.14s;
+}
+.sec-btn:hover{background:var(--secbar-hover);color:var(--text);}
+.sec-btn.active{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:white;border-color:transparent;
+}
+.sec-btn.coming{opacity:0.45;cursor:not-allowed;}
+
+/* ===================================================
+   PYQ TAB BAR  — sticky horizontal strip
+   =================================================== */
+#pyq-tabbar{
+  display:none;                       /* shown when PYQ panel is active */
+  align-items:center;
+  gap:0;
+  background:var(--pyqtab-bar-bg);
+  border-bottom:1px solid var(--pyqtab-bar-border);
+  padding:0 18px;
+  flex-shrink:0;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+#pyq-tabbar::-webkit-scrollbar{display:none;}
+#pyq-tabbar.visible{display:flex;}
+
+.pyq-tab{
+  display:flex;align-items:center;gap:7px;
+  padding:11px 16px;
+  cursor:pointer;
+  font-size:12px;font-weight:700;
+  color:var(--text-muted);
+  border-bottom:3px solid transparent;
+  white-space:nowrap;
+  transition:color 0.15s,border-color 0.15s,background 0.15s;
+  flex-shrink:0;
+}
+.pyq-tab:hover{color:var(--text);background:var(--pyqtab-indicator);}
+
+/* active state: coloured underline + matching text */
+.pyq-tab.t-mcq.active  {color:#7c3aed;border-bottom-color:#7c3aed;}
+.pyq-tab.t-ar.active   {color:#f97316;border-bottom-color:#f97316;}
+.pyq-tab.t-two.active  {color:#16a34a;border-bottom-color:#16a34a;}
+.pyq-tab.t-three.active{color:#dc2626;border-bottom-color:#dc2626;}
+.pyq-tab.t-four.active {color:#0ea5e9;border-bottom-color:#0ea5e9;}
+.pyq-tab.t-five.active {color:#ec4899;border-bottom-color:#ec4899;}
+
+/* tab dot/pill */
+.tab-dot{
+  width:20px;height:20px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:800;color:white;
+  flex-shrink:0;
+}
+
+/* ===================================================
+   CONTENT SCROLL AREA
+   =================================================== */
+#content{
+  flex:1;overflow-y:auto;
+  padding:18px 22px;
+}
+
+/* welcome */
+.welcome{
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  height:100%;gap:12px;color:var(--text-muted);
+}
+.welcome-icon{font-size:52px;}
+.welcome h2{font-size:18px;font-weight:700;color:var(--text-sub);}
+.welcome p{font-size:13px;}
+
+/* notes */
+.notes-placeholder{
+  background:var(--card-bg);border:1px solid var(--card-border);
+  border-radius:14px;padding:28px;color:var(--text-sub);
+  font-size:14px;line-height:1.7;
+}
+
+/* ===================================================
+   NOTES — full redesign
+   =================================================== */
+.notes-content{padding:4px 0 24px;}
+
+/* Title bar */
+.notes-title{
+  font-size:20px;font-weight:800;color:var(--text);
+  margin-bottom:16px;padding:14px 18px;
+  background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(124,58,237,0.1));
+  border:1px solid rgba(59,130,246,0.25);
+  border-radius:14px;display:flex;align-items:center;gap:10px;
+}
+
+/* Section card */
+.notes-section{
+  background:var(--card-bg);border:1px solid var(--card-border);
+  border-radius:14px;padding:16px 18px;margin-bottom:10px;
+  transition:border-color 0.2s,box-shadow 0.2s;
+}
+.notes-section:hover{
+  border-color:var(--item-active-border);
+  box-shadow:0 2px 12px rgba(59,130,246,0.1);
+}
+.notes-section-heading{
+  font-size:14.5px;font-weight:700;color:var(--brand);
+  margin-bottom:12px;display:flex;align-items:center;gap:9px;
+}
+.notes-section-heading .n-sec-icon{font-size:16px;flex-shrink:0;}
+.notes-section-heading::before{display:none;}
+.notes-section ul,.notes-section ol{margin:6px 0 6px 20px;padding:0;}
+.notes-section li{font-size:13.5px;line-height:1.8;color:var(--text);margin-bottom:3px;}
+.notes-section p{font-size:13.5px;line-height:1.8;color:var(--text);margin:6px 0;}
+
+/* Sub-heading inside section */
+.n-section-sub{
+  font-size:12.5px;font-weight:700;color:var(--text-muted);
+  text-transform:uppercase;letter-spacing:0.8px;
+  margin:14px 0 8px;padding-bottom:4px;
+  border-bottom:1px solid var(--divider);
+}
+
+/* Definition text */
+.n-def{
+  font-size:13.5px;line-height:1.8;color:var(--text);
+  margin:0 0 10px;
+}
+
+/* ── Callout boxes ── */
+.n-callout{
+  display:flex;align-items:flex-start;gap:10px;
+  border-radius:10px;padding:10px 14px;margin:10px 0;
+  font-size:13px;line-height:1.75;
+}
+.n-callout-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.n-callout-blue {background:rgba(59,130,246,0.1);border-left:3px solid #3b82f6;}
+.n-callout-yellow{background:rgba(245,158,11,0.1);border-left:3px solid #f59e0b;}
+.n-callout-green {background:rgba(16,185,129,0.1);border-left:3px solid #10b981;}
+.n-callout-purple{background:rgba(124,58,237,0.1);border-left:3px solid #7c3aed;}
+
+/* ── Chips row ── */
+.n-chips-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0;}
+.n-chip{
+  font-size:11.5px;font-weight:600;padding:4px 11px;
+  border-radius:999px;background:rgba(59,130,246,0.12);
+  color:var(--brand);border:1px solid rgba(59,130,246,0.25);
+}
+
+/* ── Term cards (2-col grid) ── */
+.n-two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;}
+.n-term-card{
+  background:var(--secbar-bg);border:1px solid var(--card-border);
+  border-radius:10px;padding:10px 12px;
+}
+.n-term-label{font-size:12.5px;font-weight:700;color:var(--brand);margin-bottom:3px;}
+.n-term-desc{font-size:12.5px;color:var(--text-sub);line-height:1.6;}
+
+/* ── Law box ── */
+.n-law-box{
+  background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.2);
+  border-radius:12px;padding:14px 16px;margin:10px 0;
+}
+.n-law-title{font-size:13px;font-weight:700;color:var(--brand);margin-bottom:10px;}
+.n-law-item{
+  display:flex;align-items:flex-start;gap:10px;
+  margin-bottom:8px;font-size:13.5px;line-height:1.7;color:var(--text);
+}
+.n-law-item:last-child{margin-bottom:0;}
+.n-law-num{
+  background:var(--brand);color:#fff;font-size:11px;font-weight:800;
+  width:22px;height:22px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+
+/* ── Image cards ── */
+.n-img-card{
+  background:var(--secbar-bg);border:1px solid var(--card-border);
+  border-radius:12px;padding:12px;margin:10px 0;text-align:center;
+}
+.n-img{display:block;margin:0 auto;border-radius:8px;max-width:100%;height:auto;}
+.n-img-sm {max-width:200px;}
+.n-img-md {max-width:340px;}
+.n-img-lg {max-width:100%;}
+.n-img-xl {max-width:100%;}
+.n-img-case{max-width:100%;max-height:160px;object-fit:contain;}
+.n-img-caption{
+  font-size:11.5px;color:var(--text-muted);margin-top:8px;
+  font-style:italic;line-height:1.5;
+}
+
+/* ── Highlight cards (side-by-side) ── */
+.n-highlight-card{border-radius:12px;padding:14px;border:1px solid transparent;}
+.n-card-blue{
+  background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);
+}
+.n-card-purple{
+  background:rgba(124,58,237,0.08);border-color:rgba(124,58,237,0.2);
+}
+.n-hcard-title{font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.n-hcard-body{font-size:13px;color:var(--text-sub);line-height:1.6;}
+
+/* ── Term list (key-value rows) ── */
+.n-term-list{margin:8px 0;}
+.n-tl-item{
+  display:flex;gap:10px;padding:8px 10px;
+  border-radius:8px;font-size:13px;line-height:1.6;
+  border-bottom:1px solid var(--divider);
+}
+.n-tl-item:last-child{border-bottom:none;}
+.n-tl-key{
+  font-weight:700;color:var(--brand);min-width:165px;flex-shrink:0;
+}
+.n-tl-val{color:var(--text);}
+
+/* ── Formula banner ── */
+.n-formula-banner{
+  display:flex;align-items:center;gap:14px;
+  background:linear-gradient(90deg,rgba(59,130,246,0.15),rgba(124,58,237,0.1));
+  border:1px solid rgba(59,130,246,0.3);
+  border-radius:10px;padding:12px 16px;margin:12px 0;
+}
+.n-fb-label{
+  font-size:11px;font-weight:800;text-transform:uppercase;
+  letter-spacing:0.8px;color:var(--brand);white-space:nowrap;
+}
+.n-fb-eq{
+  font-family:'Courier New',monospace;font-size:15px;
+  font-weight:700;color:var(--text);
+}
+
+/* ── Formula grid cards ── */
+.n-formula-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;}
+.n-formula-card{
+  background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);
+  border-radius:12px;padding:12px 14px;
+}
+.n-fc-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--brand);margin-bottom:6px;}
+.n-fc-eq{font-family:'Courier New',monospace;font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.n-fc-note{font-size:11.5px;color:var(--text-muted);line-height:1.5;}
+
+/* ── Magnification table ── */
+.n-mag-table{margin:10px 0;border-radius:10px;overflow:hidden;border:1px solid var(--card-border);}
+.n-mt-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  padding:8px 12px;font-size:13px;color:var(--text);
+  border-bottom:1px solid var(--divider);
+}
+.n-mt-row:last-child{border-bottom:none;}
+.n-mt-head{background:rgba(59,130,246,0.12);font-weight:700;color:var(--brand);}
+
+/* ── Checklist ── */
+.n-checklist{margin:6px 0;}
+.n-check-item{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:8px 10px;font-size:13.5px;color:var(--text);
+  border-radius:8px;margin-bottom:4px;
+  background:var(--secbar-bg);
+}
+.n-check-icon{font-size:16px;flex-shrink:0;}
+
+/* ── Compare grid ── */
+.n-compare-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  margin:10px 0;border-radius:12px;overflow:hidden;
+  border:1px solid var(--card-border);
+}
+.n-compare-2col{grid-template-columns:1fr 1fr;}
+.n-compare-header{
+  padding:8px 12px;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.6px;
+}
+.n-compare-real   {background:rgba(16,185,129,0.15);color:#10b981;}
+.n-compare-virtual{background:rgba(124,58,237,0.12);color:#a78bfa;}
+.n-compare-label  {background:rgba(255,255,255,0.04);padding:8px 12px;font-size:13px;font-weight:600;color:var(--text-sub);border-top:1px solid var(--divider);}
+.n-compare-real-cell   {background:rgba(16,185,129,0.05);padding:8px 12px;font-size:13px;color:var(--text);border-top:1px solid var(--divider);line-height:1.6;}
+.n-compare-virtual-cell{background:rgba(124,58,237,0.05);padding:8px 12px;font-size:13px;color:var(--text);border-top:1px solid var(--divider);line-height:1.6;}
+
+/* ── Case grid ── */
+.n-case-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;}
+.n-case-card{
+  border-radius:12px;padding:12px;border:1px solid var(--card-border);
+  background:var(--card-bg);
+}
+.n-case-real  {border-top:3px solid #ef4444;}
+.n-case-virtual{border-top:3px solid #7c3aed;}
+.n-case-num{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-muted);margin-bottom:6px;}
+.n-case-obj{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.n-case-img-pos{font-size:12px;color:var(--text-sub);margin-bottom:3px;}
+.n-case-size{font-size:12px;color:var(--text-sub);margin-bottom:5px;}
+.n-case-nature{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:999px;display:inline-block;}
+.n-case-nature.real{background:rgba(239,68,68,0.15);color:#f87171;}
+.n-case-nature.virtual{background:rgba(124,58,237,0.15);color:#a78bfa;}
+
+/* ── Rule cards ── */
+.n-rule-card{
+  display:flex;flex-direction:column;
+  background:var(--secbar-bg);border:1px solid var(--card-border);
+  border-radius:12px;padding:12px 14px;margin-bottom:8px;
+}
+.n-rule-badge{
+  font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;
+  color:var(--brand);margin-bottom:6px;
+}
+.n-rule-text{font-size:13.5px;color:var(--text);line-height:1.7;}
+
+/* ── Applications cards ── */
+.n-app-card{border-radius:12px;padding:14px;border:1px solid var(--card-border);}
+.n-app-concave{background:rgba(239,68,68,0.06);border-color:rgba(239,68,68,0.2);}
+.n-app-convex {background:rgba(59,130,246,0.06);border-color:rgba(59,130,246,0.2);}
+.n-app-title{font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.n-app-list{margin:0 0 0 16px;padding:0;}
+.n-app-list li{font-size:13px;color:var(--text-sub);line-height:1.75;margin-bottom:2px;}
+
+/* ── Sign convention grid ── */
+.n-sign-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0;}
+.n-sign-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:10px;font-size:13px;color:var(--text);
+}
+.n-sign-pos{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);}
+.n-sign-neg{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);}
+.n-sign-sym{font-size:20px;font-weight:800;flex-shrink:0;width:24px;text-align:center;}
+.n-sign-pos .n-sign-sym{color:#10b981;}
+.n-sign-neg .n-sign-sym{color:#ef4444;}
+
+/* ── Tip banner ── */
+.n-tip-banner{
+  display:flex;align-items:center;gap:8px;
+  background:linear-gradient(90deg,rgba(245,158,11,0.18),rgba(245,158,11,0.06));
+  border-left:3px solid #f59e0b;
+  border-radius:0 8px 8px 0;
+  padding:8px 14px;margin-bottom:10px;
+}
+.n-tip-icon{font-size:16px;}
+.n-tip-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:#f59e0b;}
+
+/* ── Clean table ── */
+.n-clean-table{width:100%;border-collapse:collapse;margin:4px 0;font-size:13px;}
+.n-clean-table th{
+  background:rgba(59,130,246,0.12);color:var(--brand);
+  font-weight:700;padding:9px 14px;text-align:left;
+  border-bottom:2px solid rgba(59,130,246,0.25);
+}
+.n-clean-table td{
+  padding:8px 14px;border-bottom:1px solid var(--divider);
+  color:var(--text);line-height:1.6;vertical-align:top;
+}
+.n-clean-table tr:last-child td{border-bottom:none;}
+.n-clean-table tr:hover td{background:var(--item-hover);}
+
+/* ── Example row ── */
+.n-example-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0;}
+.n-eg-item{
+  background:var(--secbar-bg);border:1px solid var(--card-border);
+  border-radius:8px;padding:9px 12px;font-size:13px;color:var(--text);
+}
+
+/* Responsive: stack on narrow screens */
+@media(max-width:520px){
+  .n-two-col,.n-formula-grid,.n-case-grid,.n-compare-grid,
+  .n-sign-grid,.n-example-row{grid-template-columns:1fr;}
+  .n-mag-table .n-mt-row{grid-template-columns:1fr;gap:2px;}
+  .n-compare-grid{grid-template-columns:1fr;}
+  .n-compare-label,.n-compare-header{display:none;}
+  .n-compare-real-cell,.n-compare-virtual-cell{border-radius:6px;margin-bottom:2px;}
+}
+
+/* ===================================================
+   QUESTION CARDS
+   =================================================== */
+.mcq-card,.question-item{
+  display:flex;gap:12px;align-items:flex-start;
+  background:var(--card-bg);border:1px solid var(--card-border);
+  padding:14px;border-radius:12px;margin-bottom:10px;cursor:pointer;
+  transition:background 0.15s,border-color 0.15s;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12);
+}
+.mcq-card:hover,.question-item:hover{
+  background:var(--card-hover);border-color:var(--item-active-border);
+}
+
+.qno{
+  width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:13px;font-weight:700;flex-shrink:0;
+}
+.qno.mcq  {background:#7c3aed;}
+.qno.ar   {background:#f97316;}
+.qno.two  {background:#16a34a;}
+.qno.three{background:#dc2626;}
+.qno.four {background:#0ea5e9;}
+.qno.five {background:#ec4899;}
+
+/* auto-number */
+.pyq-section{counter-reset:question;}
+.qno::before{counter-increment:question;content:counter(question);}
+
+/* badges */
+.set-badge{
+  font-size:11px;font-weight:700;padding:3px 10px;
+  border-radius:999px;background:var(--badge-set);
+  color:white;white-space:nowrap;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+.year-badge{
+  font-size:11px;font-weight:700;padding:3px 10px;
+  border-radius:999px;background:var(--badge-year);
+  color:white;white-space:nowrap;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* options */
+.options{
+  margin-top:12px;display:grid;
+  grid-template-columns:repeat(2,1fr);gap:8px;
+}
+.options.ar{grid-template-columns:repeat(4,1fr);}
+
+.option{
+  border:2px solid var(--opt-border);border-radius:10px;
+  padding:9px 12px;cursor:pointer;background:var(--opt-bg);
+  display:flex;align-items:center;gap:9px;font-size:13px;
+  transition:background 0.12s,border-color 0.12s;
+}
+.option:hover{border-color:var(--opt-hover-border);background:var(--opt-hover-bg);}
+
+.opt-label{
+  width:24px;height:24px;border-radius:50%;
+  background:var(--opt-label);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:12px;flex-shrink:0;color:var(--text);
+}
+
+.option.correct{background:#dcfce7 !important;border-color:#22c55e !important;}
+.option.wrong  {background:#fee2e2 !important;border-color:#ef4444 !important;}
+.option.correct .opt-label{background:#22c55e;color:white;}
+.option.wrong   .opt-label{background:#ef4444;color:white;}
+.options.answered .option{pointer-events:none;}
+
+body:not(.light) .option.correct{background:rgba(34,197,94,0.2)  !important;border-color:#22c55e !important;}
+body:not(.light) .option.wrong  {background:rgba(239,68,68,0.2)   !important;border-color:#ef4444 !important;}
+
+/* explanation */
+.explanation{
+  display:none;margin-top:10px;padding:12px;
+  background:var(--exp-bg);border-left:3px solid var(--exp-border);
+  border-radius:6px;font-size:13px;color:var(--text-sub);
+}
+
+/* ===================================================
+   TOAST
+   =================================================== */
+#toast{
+  position:fixed;bottom:24px;left:50%;
+  transform:translateX(-50%) translateY(16px);
+  background:#1e293b;color:#f1f5f9;
+  padding:10px 22px;border-radius:30px;
+  font-size:13px;font-weight:600;
+  box-shadow:0 4px 20px rgba(0,0,0,0.35);
+  opacity:0;pointer-events:none;
+  transition:opacity 0.25s,transform 0.25s;
+  z-index:999;border:1px solid #334155;
+}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ===================================================
+   SCROLLBARS
+   =================================================== */
+.sb-inner::-webkit-scrollbar,#content::-webkit-scrollbar{width:4px;}
+.sb-inner::-webkit-scrollbar-track,#content::-webkit-scrollbar-track{background:transparent;}
+.sb-inner::-webkit-scrollbar-thumb,#content::-webkit-scrollbar-thumb{background:var(--scrollthumb);border-radius:4px;}
+
+</style>
+</head>
+<body>
+
+<!-- ===================================================
+     HEADER
+     =================================================== -->
+<div class="header">
+  <div class="left-controls">
+    <button class="icon-btn" onclick="toggleSidebar()">☰</button>
+    <button class="icon-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+  </div>
+  <div class="header-title">
+    <span class="brand-name">Physics4Fun</span>
+    <div class="breadcrumb" id="breadcrumb" style="display:none;">
+      <span class="bc-sep">▸</span>
+      <span class="bc-chip" id="bc-grade"></span>
+      <span class="bc-sep">▸</span>
+      <span class="bc-chip active" id="bc-chapter"></span>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ===================================================
+     SIDEBAR
+     =================================================== -->
+<div class="sidebar" id="sidebar">
+<div class="sb-inner">
+
+  <div class="sb-label">Grades</div>
+
+  <!-- CLASS 10 -->
+  <div class="grade-row" onclick="toggleGrade('g10',this)">
+    <span class="grade-pill">10</span>
+    <span class="grade-label">Class 10</span>
+    <span class="grade-arrow">▶</span>
+  </div>
+  <div class="chapter-list" id="g10">
+    <div class="ch-item" onclick="selectChapter('Light – Reflection &amp; Refraction','10','💡',this)">
+      <span class="ch-icon">💡</span>Light – Reflection &amp; Refraction
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Human Eye &amp; Colourful World')">
+      <span class="ch-icon">👁️</span>Human Eye &amp; Colourful World
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Electricity')">
+      <span class="ch-icon">⚡</span>Electricity
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Magnetic Effects of Current')">
+      <span class="ch-icon">🧲</span>Magnetic Effects of Current
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Carbon &amp; Its Compounds')">
+      <span class="ch-icon">🔬</span>Carbon &amp; Its Compounds
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Chemical Reactions &amp; Equations')">
+      <span class="ch-icon">⚗️</span>Chemical Reactions &amp; Equations
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Acids, Bases &amp; Salts')">
+      <span class="ch-icon">🧪</span>Acids, Bases &amp; Salts
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Life Processes')">
+      <span class="ch-icon">🌿</span>Life Processes
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Heredity &amp; Evolution')">
+      <span class="ch-icon">🧬</span>Heredity &amp; Evolution
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Sources of Energy')">
+      <span class="ch-icon">☀️</span>Sources of Energy
+    </div>
+  </div>
+
+  <!-- CLASS 9 -->
+  <div class="grade-row" onclick="toggleGrade('g9',this)">
+    <span class="grade-pill">9</span>
+    <span class="grade-label">Class 9</span>
+    <span class="grade-arrow">▶</span>
+  </div>
+  <div class="chapter-list" id="g9">
+    <div class="ch-item unavailable" onclick="showUnavailable('Motion')">
+      <span class="ch-icon">🏃</span>Motion
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Force &amp; Laws of Motion')">
+      <span class="ch-icon">⚙️</span>Force &amp; Laws of Motion
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Gravitation')">
+      <span class="ch-icon">🌍</span>Gravitation
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Work &amp; Energy')">
+      <span class="ch-icon">⚡</span>Work &amp; Energy
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Sound')">
+      <span class="ch-icon">🔊</span>Sound
+    </div>
+  </div>
+
+  <!-- CLASS 8 -->
+  <div class="grade-row" onclick="toggleGrade('g8',this)">
+    <span class="grade-pill">8</span>
+    <span class="grade-label">Class 8</span>
+    <span class="grade-arrow">▶</span>
+  </div>
+  <div class="chapter-list" id="g8">
+    <div class="ch-item unavailable" onclick="showUnavailable('Force &amp; Pressure')">
+      <span class="ch-icon">💪</span>Force &amp; Pressure
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Light')">
+      <span class="ch-icon">💡</span>Light
+    </div>
+    <div class="ch-item" onclick="selectChapter('Electricity','8','⚡',this)">
+      <span class="ch-icon">⚡</span>Electricity
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Sound')">
+      <span class="ch-icon">🔊</span>Sound
+    </div>
+    <div class="ch-item unavailable" onclick="showUnavailable('Stars &amp; Solar System')">
+      <span class="ch-icon">🌟</span>Stars &amp; Solar System
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===================================================
+     CONTENT WRAPPER
+     =================================================== -->
+<div class="content-wrap">
+
+  <!-- Top section bar: PYQs / Notes / Mock / Simulation -->
+  <div class="section-bar" id="sectionBar">
+    <div class="sec-btn active" onclick="switchSection('pyq',this)">📋 PYQs</div>
+    <div class="sec-btn" onclick="switchSection('notes',this)">📖 Notes</div>
+    <div class="sec-btn coming">🎯 Mock Test</div>
+    <div class="sec-btn coming">🔭 Simulation</div>
+  </div>
+
+  <!-- PYQ CATEGORY TAB BAR — sticky, always visible when PYQ panel is open -->
+  <div id="pyq-tabbar">
+    <div class="pyq-tab t-mcq active" onclick="showPyqSec('mcq',this)">
+      <span class="tab-dot" style="background:#7c3aed;">1</span>MCQs
+    </div>
+    <div class="pyq-tab t-ar" onclick="showPyqSec('ar',this)">
+      <span class="tab-dot" style="background:#f97316;">1</span>A &amp; R
+    </div>
+    <div class="pyq-tab t-two" onclick="showPyqSec('two',this)">
+      <span class="tab-dot" style="background:#16a34a;">2</span>2 Marks
+    </div>
+    <div class="pyq-tab t-three" onclick="showPyqSec('three',this)">
+      <span class="tab-dot" style="background:#dc2626;">3</span>3 Marks
+    </div>
+    <div class="pyq-tab t-four" onclick="showPyqSec('four',this)">
+      <span class="tab-dot" style="background:#0ea5e9;">4</span>4 Marks
+    </div>
+    <div class="pyq-tab t-five" onclick="showPyqSec('five',this)">
+      <span class="tab-dot" style="background:#ec4899;">5</span>5 Marks
+    </div>
+  </div>
+
+  <!-- SCROLLABLE CONTENT -->
+  <div id="content">
+
+    <!-- WELCOME -->
+    <div class="welcome" id="welcome">
+      <div class="welcome-icon">⚗️</div>
+      <h2>Welcome to Physics4Fun</h2>
+      <p>Select a grade and chapter from the left to get started.</p>
+    </div>
+
+    <!-- PYQ PANEL -->
+    <div id="pyq-panel" style="display:none;">
+      <div id="pyq-mcq"   class="pyq-section" style="display:block;"></div>
+      <div id="pyq-ar"    class="pyq-section" style="display:none;"></div>
+      <div id="pyq-two"   class="pyq-section" style="display:none;"></div>
+      <div id="pyq-three" class="pyq-section" style="display:none;"></div>
+      <div id="pyq-four"  class="pyq-section" style="display:none;"></div>
+      <div id="pyq-five"  class="pyq-section" style="display:none;"></div>
+    </div>
+
+    <!-- NOTES PANEL -->
+    <div id="notes-panel" style="display:none;">
+      <div id="notes-content-wrap" class="notes-content">
+        <!-- dynamically rendered by renderNotes() -->
+      </div>
+    </div>
+
+  </div><!-- /#content -->
+</div><!-- /.content-wrap -->
+</div><!-- /.main -->
+
+<div id="toast"></div>
+
+<!-- ===================================================
+     DATA — loaded from separate JS files
+     To use external files, replace these script tags with:
+       <script src="https://physics4fun.in/pyqs/sections/mcq.jsmcq.js"></script>  etc.
+     =================================================== -->
+<script src="https://physics4fun.in/pyqs/sections/mcq.js"></script>     
+<script src="https://physics4fun.in/pyqs/sections/ar.js"></script>
+<script src="https://physics4fun.in/pyqs/sections/two.js"></script>
+<script src="https://physics4fun.in/pyqs/sections/three.js"></script>
+<script src="https://physics4fun.in/pyqs/sections/four.js"></script>
+<script src="https://physics4fun.in/pyqs/sections/five.js"></script>
+<script src="https://physics4fun.in/pyqs/sections/notes_light_10.js"></script>
+<script src="https://physics4fun.in/pyqs/sections/notes_electricity_8.js"></script>
+
+<!-- ===================================================
+     APP LOGIC
+     =================================================== -->
+<script>
+
+/* ─── NOTES DATA MAP ─── */
+const notesMap = {
+  'Light – Reflection & Refraction|10': notesLight10,
+  'Electricity|8': notesElectricity8,
+};
+
+let currentChapterKey = null;
+
+/* ─── RENDER NOTES ─── */
+function renderNotes(key) {
+  const wrap = document.getElementById('notes-content-wrap');
+  const data = notesMap[key];
+  if (!data) {
+    wrap.innerHTML = `<div class="notes-placeholder"><strong>📖 Notes</strong><br><br>Notes for this chapter will be available soon. Stay tuned!</div>`;
+    return;
+  }
+  const sectionsHTML = data.sections.map(sec => `
+    <div class="notes-section">
+      <div class="notes-section-heading">
+        <span class="n-sec-icon">${sec.icon || '📌'}</span>
+        ${sec.heading}
+      </div>
+      ${sec.content}
+    </div>
+  `).join('');
+  wrap.innerHTML = `
+    <div class="notes-title">${data.icon || '📖'} ${data.title} <span style="font-size:12px;font-weight:500;color:var(--text-muted);margin-left:4px;">Class ${data.grade}</span></div>
+    ${sectionsHTML}
+  `;
+}
+
+/* ─── BADGE HTML ─── */
+function badgesHTML(q){
+  return (q.set ? `<div class="set-badge">${q.set}</div>` : '')
+       + `<div class="year-badge">${q.year}</div>`;
+}
+
+/* ─── RENDER MCQ ─── */
+function renderMCQ(){
+  const sec = document.getElementById('pyq-mcq');
+  mcqQuestions.forEach(q => {
+    const card = document.createElement('div');
+    card.className = 'mcq-card';
+    const opts = Object.entries(q.options).map(([k,v]) =>
+      `<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`
+    ).join('');
+    card.innerHTML = `
+      <div class="qno mcq"></div>
+      <div style="flex:1">${q.question}
+        <div class="options" data-answer="${q.answer}">${opts}</div>
+        <div class="explanation">Explanation will be updated shortly</div>
+      </div>
+      <div style="display:flex;gap:5px;margin-left:auto;flex-shrink:0;">${badgesHTML(q)}</div>`;
+    sec.appendChild(card);
+  });
+}
+
+/* ─── RENDER A&R ─── */
+function renderAR(){
+  const sec = document.getElementById('pyq-ar');
+  arQuestions.forEach(q => {
+    const card = document.createElement('div');
+    card.className = 'mcq-card';
+    card.innerHTML = `
+      <div class="qno ar"></div>
+      <div style="flex:1">
+        <b>Assertion:</b> ${q.assertion}<br><b>Reason:</b> ${q.reason}
+        <div class="options ar" data-answer="${q.answer}">
+          <div class="option" data-opt="A"><span class="opt-label">A</span></div>
+          <div class="option" data-opt="B"><span class="opt-label">B</span></div>
+          <div class="option" data-opt="C"><span class="opt-label">C</span></div>
+          <div class="option" data-opt="D"><span class="opt-label">D</span></div>
+        </div>
+        <div class="explanation">Explanation will be updated shortly</div>
+      </div>
+      <div style="display:flex;gap:5px;margin-left:auto;flex-shrink:0;">${badgesHTML(q)}</div>`;
+    sec.appendChild(card);
+  });
+}
+
+/* ─── RENDER WRITTEN ─── */
+function renderWritten(data, secId, cls){
+  const sec = document.getElementById('pyq-' + secId);
+  data.forEach(q => {
+    const item = document.createElement('div');
+    item.className = 'question-item';
+    item.innerHTML = `
+      <div class="qno ${cls}"></div>
+      <div style="flex:1">${q.question}
+        <div class="explanation">Explanation will be updated shortly</div>
+      </div>
+      <div style="display:flex;gap:5px;margin-left:auto;flex-shrink:0;">${badgesHTML(q)}</div>`;
+    sec.appendChild(item);
+  });
+}
+
+/* render everything on load */
+renderMCQ();
+renderAR();
+renderWritten(twoMarkQuestions,   'two',   'two');
+renderWritten(threeMarkQuestions, 'three', 'three');
+renderWritten(fourMarkQuestions,  'four',  'four');
+renderWritten(fiveMarkQuestions,  'five',  'five');
+
+
+/* ─── SIDEBAR: GRADE TOGGLE ─── */
+function toggleGrade(id, row){
+  const list = document.getElementById(id);
+  const isOpen = list.classList.contains('open');
+  document.querySelectorAll('.chapter-list').forEach(l => l.classList.remove('open'));
+  document.querySelectorAll('.grade-row').forEach(r => r.classList.remove('open'));
+  if(!isOpen){ list.classList.add('open'); row.classList.add('open'); }
+}
+
+/* ─── SELECT CHAPTER ─── */
+function selectChapter(name, grade, icon, el){
+  if(el.classList.contains('unavailable')){ showUnavailable(name); return; }
+
+  document.querySelectorAll('.ch-item').forEach(i => i.classList.remove('active'));
+  el.classList.add('active');
+
+  document.getElementById('bc-grade').textContent   = 'Class ' + grade;
+  document.getElementById('bc-chapter').textContent = icon + ' ' + name.replace(/&amp;/g,'&');
+  document.getElementById('breadcrumb').style.display = 'flex';
+
+  document.getElementById('welcome').style.display = 'none';
+  document.getElementById('sectionBar').classList.add('visible');
+
+  /* store context for notes */
+  currentChapterKey = name.replace(/&amp;/g,'&') + '|' + grade;
+  const hasNotes = !!notesMap[currentChapterKey];
+
+  /* update Notes button appearance */
+  const noteBtn = document.querySelector('.sec-btn:nth-child(2)');
+  if(hasNotes){ noteBtn.classList.remove('coming'); }
+  else { noteBtn.classList.add('coming'); }
+
+  /* activate PYQ by default */
+  document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.sec-btn').classList.add('active');
+
+  const hasPyq = !!document.getElementById('pyq-mcq').children.length;
+  document.getElementById('pyq-panel').style.display   = 'block';
+  document.getElementById('notes-panel').style.display = 'none';
+  document.getElementById('pyq-tabbar').classList.add('visible');
+
+  /* reset to MCQ tab */
+  showPyqSec('mcq', document.querySelector('.pyq-tab'));
+  document.getElementById('content').scrollTop = 0;
+}
+
+/* ─── SECTION BAR SWITCH ─── */
+function switchSection(type, el){
+  if(el.classList.contains('coming')){ showUnavailable('This section'); return; }
+  document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  const isPyq   = type === 'pyq';
+  const isNotes = type === 'notes';
+  document.getElementById('pyq-panel').style.display   = isPyq   ? 'block' : 'none';
+  document.getElementById('notes-panel').style.display = isNotes ? 'block' : 'none';
+  document.getElementById('pyq-tabbar').classList.toggle('visible', isPyq);
+  if(isNotes){ renderNotes(currentChapterKey); document.getElementById('content').scrollTop = 0; }
+}
+
+/* ─── PYQ TAB SWITCH ─── */
+function showPyqSec(id, el){
+  document.querySelectorAll('.pyq-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.pyq-section').forEach(s => s.style.display = 'none');
+  document.getElementById('pyq-' + id).style.display = 'block';
+  document.getElementById('content').scrollTop = 0;
+}
+
+/* ─── MCQ CHECK ─── */
+document.addEventListener('click', function(e){
+  const opt = e.target.closest('.option');
+  if(!opt) return;
+  const box = opt.closest('.options');
+  if(!box || box.classList.contains('answered')) return;
+  const correct  = box.dataset.answer;
+  const selected = opt.dataset.opt;
+  box.classList.add('answered');
+  if(selected === correct){ opt.classList.add('correct'); }
+  else{
+    opt.classList.add('wrong');
+    box.querySelector(`[data-opt="${correct}"]`).classList.add('correct');
+  }
+});
+
+/* ─── EXPLANATION TOGGLE ─── */
+document.addEventListener('click', function(e){
+  if(e.target.closest('.option')) return;
+  const card = e.target.closest('.mcq-card,.question-item');
+  if(!card) return;
+  const exp = card.querySelector('.explanation');
+  if(!exp) return;
+  exp.style.display = exp.style.display === 'block' ? 'none' : 'block';
+});
+
+/* ─── SIDEBAR TOGGLE ─── */
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('hide');
+}
+
+/* ─── THEME TOGGLE ─── */
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  document.getElementById('themeBtn').textContent =
+    document.body.classList.contains('light') ? '☀️' : '🌙';
+}
+
+/* ─── COMING SOON TOAST ─── */
+function showUnavailable(name){
+  const t = document.getElementById('toast');
+  t.textContent = '⏳  ' + name + ' — Coming Soon!';
+  t.classList.add('show');
+  clearTimeout(window._tt);
+  window._tt = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* ─── OPEN CLASS 10 ON LOAD ─── */
+window.addEventListener('DOMContentLoaded', () => {
+  toggleGrade('g10', document.querySelector('.grade-row'));
+});
+
+</script>
+</body>
+</html>
