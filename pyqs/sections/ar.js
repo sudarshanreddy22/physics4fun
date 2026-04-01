@@ -10,17 +10,24 @@
 
 const arQuestions = [
   {
-    assertion: "Convex mirror forms virtual image.",
-    reason:    "Focus lies behind mirror.",
+    assertion: "A concave Iens of very short focal length causes higher divergence than one with longer focal length",
+    reason:    "The power of lens is directly proportional to its focal length",
     answer:    "A",
-    set:       "31/1/1",
-    year:      "2026"
+    set:       "",
+    year:      "2021C"
   },
   {
-    assertion: "Concave mirror can form real image.",
-    reason:    "Reflected rays converge.",
+    assertion: "The SI unit of power of lens is 'dioptre'",
+    reason:    "The power of concave lens is positive and that of convex lens is negative",
     answer:    "A",
-    set:       "31/1/1",
-    year:      "2026"
+    set:       "",
+    year:      "2021C"
+  },
+  {
+    assertion: "A solar cooker cooks the meal due to green house effect",
+    reason:    "The plane mirror is responsible for producing the green house effect",
+    answer:    "A",
+    set:       "",
+    year:      "2020"
   }
 ];
