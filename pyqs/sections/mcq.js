@@ -89,7 +89,7 @@ Which statements are correct?`,
     year: "2025"
   },
   
-  {
+   {
     question: `An object is placed at a distance of 30 cm from the pole of a concave mirror. If its real and inverted image is formed at 60 cm in front of the mirror, the focal length of the mirror is :`,
     options: {
       A: "– 15 cm",
