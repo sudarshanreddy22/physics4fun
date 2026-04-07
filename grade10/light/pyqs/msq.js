@@ -26,7 +26,20 @@ window.mcqData = [
     options:{A:"Plane mirror",B:"Convex mirror ",C:"Concave mirror",D:"Convex lens"},
     answer:"A", set:"31/S/1", year:"2025"
   },
-   
+  {
+    question:"Mirror 'X' is used to concentrate sunlight in solar furnace and Mirror 'Y' is fitted on the side of the vehicle to see the traffic behind the driver. Which of the following statements are true for the two mirrors?<br>
+   (i) The image formed by mirror 'X' is real, diminished and at its focus.<br>
+   (ii) The image formed by mirror 'Y' is virtual, diminished and erect.<br>
+   (iii) The image formed by mirror 'X' is virtual, diminished and erect.<br>
+   (iv) The image formed by mirror 'Y' is real, diminished and at its focus.",
+    options:{A:"(i) and (ii)",B:"(ii) and (iii) ",C:"(iii) and (iv)",D:"(i) and (iv)s"},
+    answer:"A", set:"31/1/1", year:"2025"
+  },
+  {
+    question:"If the absolute refractive indices of two media X and Y are 6/5 and 4/3 respectively, then the refractive index of Y with respect to X will be:",
+    options:{A:"10/9",B:"9/10",C:"9/8",D:"8/9"},
+    answer:"A", set:"31/2/1", year:"2025"
+  },
    
   {
     question:"An object is placed at a distance of 30 cm from the pole of a concave mirror. If its real and inverted image is formed at 60 cm in front of the mirror, the focal length of the mirror is:",
@@ -38,11 +51,7 @@ window.mcqData = [
     options:{A:"Plane mirror",B:"Convex mirror",C:"Concave mirror",D:"Convex lens"},
     answer:"A", set:"31/S/1", year:"2025"
   },
-  {
-    question:"If the absolute refractive indices of two media X and Y are 6/5 and 4/3 respectively, then the refractive index of Y with respect to X will be:",
-    options:{A:"10/9",B:"9/10",C:"9/8",D:"8/9"},
-    answer:"A", set:"31/2/1", year:"2025"
-  },
+
 
 
 
