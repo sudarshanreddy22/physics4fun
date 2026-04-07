@@ -3,1144 +3,1218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Physics4Fun</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Physics4Fun — CBSE Physics Grades 6–12</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!-- MathJax for LaTeX formula rendering -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
 <style>
-
-/* ===================================================
-   CSS VARIABLES
-   =================================================== */
 :root{
-  --bg:                  #0d1526;
-  --sidebar-bg:          #0a1120;
-  --sidebar-border:      #1e2d47;
-  --header-bg:           rgba(10,17,32,0.96);
-  --card-bg:             rgba(255,255,255,0.055);
-  --card-border:         rgba(255,255,255,0.08);
-  --card-hover:          rgba(255,255,255,0.09);
-  --text:                #e2e8f0;
-  --text-muted:          #64748b;
-  --text-sub:            #94a3b8;
-  --item-hover:          rgba(255,255,255,0.06);
-  --item-active:         rgba(59,130,246,0.18);
-  --item-active-border:  #3b82f6;
-  --secbar-bg:           rgba(255,255,255,0.04);
-  --secbar-btn:          rgba(255,255,255,0.06);
-  --secbar-hover:        rgba(255,255,255,0.12);
-  --opt-bg:              rgba(255,255,255,0.06);
-  --opt-border:          rgba(255,255,255,0.12);
-  --opt-hover-bg:        rgba(59,130,246,0.15);
-  --opt-hover-border:    #3b82f6;
-  --opt-label:           rgba(255,255,255,0.12);
-  --exp-bg:              rgba(59,130,246,0.1);
-  --exp-border:          #3b82f6;
-  --scrollthumb:         #334155;
-  --divider:             rgba(255,255,255,0.06);
-  --grade-pill-bg:       rgba(255,255,255,0.06);
-  --badge-set:           #8A244B;
-  --badge-year:          #F63049;
-  --brand:               #60a5fa;
-  --accent1:             #7c3aed;
-  --accent2:             #06b6d4;
-  --pyqtab-bar-bg:       #0d1933;
-  --pyqtab-bar-border:   rgba(255,255,255,0.07);
-  --pyqtab-indicator:    rgba(255,255,255,0.06);
+  --bg:#070d1a;--bg2:#0d1526;--bg3:#0f1a2e;
+  --sidebar-bg:#070d1a;--sidebar-border:rgba(255,255,255,0.055);
+  --header-bg:rgba(7,13,26,0.97);
+  --card-bg:rgba(255,255,255,0.04);--card-border:rgba(255,255,255,0.08);
+  --text:#e2e8f0;--text-muted:#4a5568;--text-sub:#718096;
+  --item-hover:rgba(255,255,255,0.05);--item-active:rgba(99,102,241,0.14);
+  --item-active-border:#6366f1;--divider:rgba(255,255,255,0.055);
+  --brand:#818cf8;--accent1:#6366f1;--accent2:#06b6d4;--accent3:#f59e0b;
+  --grade-pill-bg:rgba(99,102,241,0.2);--scrollthumb:#1a2540;
+  --col-notes:#818cf8;--col-desc:#34d399;--col-mock:#fbbf24;
+  --col-ppt:#f87171;--col-flash:#c084fc;--col-sim:#38bdf8;--col-pyq:#fb923c;--col-games:#10b981;
+  --sbg-notes:rgba(99,102,241,0.14);--sbg-desc:rgba(52,211,153,0.12);
+  --sbg-mock:rgba(251,191,36,0.12);--sbg-ppt:rgba(248,113,113,0.12);
+  --sbg-flash:rgba(192,132,252,0.12);--sbg-sim:rgba(56,189,248,0.12);
+  --sbg-pyq:rgba(251,146,60,0.12);--sbg-games:rgba(16,185,129,0.12);
+  --pyq-mcq:#7c3aed;--pyq-ar:#f97316;--pyq-two:#16a34a;
+  --pyq-three:#dc2626;--pyq-four:#0ea5e9;--pyq-five:#ec4899;
 }
-
 body.light{
-  --bg:                  #f0f4fb;
-  --sidebar-bg:          #ffffff;
-  --sidebar-border:      #e2e8f0;
-  --header-bg:           rgba(255,255,255,0.97);
-  --card-bg:             #ffffff;
-  --card-border:         #e5e7eb;
-  --card-hover:          #f8faff;
-  --text:                #0f172a;
-  --text-muted:          #94a3b8;
-  --text-sub:            #475569;
-  --item-hover:          #f1f5f9;
-  --item-active:         #eff6ff;
-  --item-active-border:  #2563eb;
-  --secbar-bg:           #ffffff;
-  --secbar-btn:          #f1f5f9;
-  --secbar-hover:        #e0e7ff;
-  --opt-bg:              #fafafa;
-  --opt-border:          #e5e7eb;
-  --opt-hover-bg:        #eff6ff;
-  --opt-hover-border:    #2563eb;
-  --opt-label:           #e5e7eb;
-  --exp-bg:              #f1f5ff;
-  --exp-border:          #2563eb;
-  --scrollthumb:         #cbd5e1;
-  --divider:             #e2e8f0;
-  --grade-pill-bg:       #f1f5f9;
-  --brand:               #2563eb;
-  --accent1:             #7c3aed;
-  --accent2:             #0ea5e9;
-  --pyqtab-bar-bg:       #ffffff;
-  --pyqtab-bar-border:   #e2e8f0;
-  --pyqtab-indicator:    #f1f5f9;
+  --bg:#f0f4fb;--bg2:#ffffff;--bg3:#f4f7fe;
+  --sidebar-bg:#ffffff;--sidebar-border:#e5e7eb;
+  --header-bg:rgba(255,255,255,0.97);
+  --card-bg:#ffffff;--card-border:#e5e7eb;
+  --text:#0f172a;--text-muted:#94a3b8;--text-sub:#475569;
+  --item-hover:#f1f5f9;--item-active:#eff6ff;--item-active-border:#4f46e5;
+  --divider:#e5e7eb;--brand:#4f46e5;--accent1:#4f46e5;--accent2:#0891b2;--accent3:#d97706;
+  --grade-pill-bg:#ede9fe;--scrollthumb:#cbd5e1;
+  --col-notes:#4f46e5;--col-desc:#059669;--col-mock:#d97706;
+  --col-ppt:#dc2626;--col-flash:#7c3aed;--col-sim:#0284c7;--col-pyq:#ea580c;--col-games:#059669;
+  --sbg-notes:rgba(79,70,229,0.08);--sbg-desc:rgba(5,150,105,0.08);
+  --sbg-mock:rgba(217,119,6,0.08);--sbg-ppt:rgba(220,38,38,0.08);
+  --sbg-flash:rgba(124,58,237,0.08);--sbg-sim:rgba(2,132,199,0.08);
+  --sbg-pyq:rgba(234,88,12,0.08);--sbg-games:rgba(5,150,105,0.08);
 }
-
-/* ===================================================
-   RESET & BASE
-   =================================================== */
 *{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);display:flex;flex-direction:column;overflow:hidden;transition:background .3s,color .3s;}
+::-webkit-scrollbar{width:4px;height:4px;}
+::-webkit-scrollbar-thumb{background:var(--scrollthumb);border-radius:4px;}
 
-body{
-  font-family:'Plus Jakarta Sans',Segoe UI,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-  transition:background 0.3s,color 0.3s;
-}
+/* ── HEADER ── */
+.header{display:flex;align-items:center;height:52px;padding:0 12px;background:var(--header-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--divider);flex-shrink:0;z-index:60;gap:8px;}
+.brand{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;background:linear-gradient(130deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.5px;}
+.brand-tag{font-size:8.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:20px;background:var(--sbg-notes);color:var(--col-notes);border:1px solid rgba(99,102,241,0.25);}
+.header-center{flex:1;display:flex;align-items:center;justify-content:center;}
+.breadcrumb{display:none;align-items:center;gap:5px;}
+.breadcrumb.visible{display:flex;}
+.bc-sep{color:var(--text-muted);font-size:11px;}
+.bc-chip{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--grade-pill-bg);color:var(--brand);border:1px solid rgba(99,102,241,0.2);white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis;}
+.bc-chip.active{background:linear-gradient(130deg,var(--accent1),var(--accent2));color:#fff;border:none;}
+.header-right{display:flex;align-items:center;gap:6px;margin-left:auto;}
+.icon-btn{width:32px;height:32px;border-radius:8px;border:1px solid var(--divider);background:var(--card-bg);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .15s;flex-shrink:0;}
+.icon-btn:hover{background:var(--item-hover);border-color:var(--brand);}
+.icon-btn.toggled{background:var(--sbg-sim);border-color:var(--col-sim);}
 
-/* ===================================================
-   HEADER
-   =================================================== */
-.header{
-  display:flex;
-  align-items:center;
-  height:52px;
-  padding:0 16px;
-  background:var(--header-bg);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--divider);
-  flex-shrink:0;
-  z-index:60;
-}
-
-.left-controls{display:flex;align-items:center;gap:8px;}
-
-.icon-btn{
-  width:34px;height:34px;
-  border-radius:8px;
-  border:1px solid var(--divider);
-  background:var(--card-bg);
-  color:var(--text);
-  cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  font-size:15px;
-  transition:background 0.15s,border-color 0.15s;
-}
-.icon-btn:hover{background:var(--item-hover);border-color:var(--item-active-border);}
-
-.header-title{
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.brand-name{
-  font-size:18px;font-weight:800;
-  background:linear-gradient(90deg,var(--accent1),var(--accent2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;letter-spacing:-0.3px;
-}
-
-.breadcrumb{
-  display:flex;align-items:center;
-  gap:6px;margin-left:16px;
-}
-.bc-sep{color:var(--text-muted);font-size:12px;}
-.bc-chip{
-  font-size:12px;font-weight:600;
-  padding:3px 10px;border-radius:20px;
-  background:var(--grade-pill-bg);
-  color:var(--text-sub);
-  border:1px solid var(--divider);
-}
-.bc-chip.active{
-  background:linear-gradient(90deg,var(--accent1),var(--accent2));
-  color:white;border:none;
-}
-
-/* ===================================================
-   LAYOUT
-   =================================================== */
+/* ── LAYOUT ── */
 .main{display:flex;flex:1;overflow:hidden;}
 
-/* ===================================================
-   SIDEBAR
-   =================================================== */
-.sidebar{
-  width:232px;min-width:232px;
-  background:var(--sidebar-bg);
-  border-right:1px solid var(--sidebar-border);
-  display:flex;flex-direction:column;overflow:hidden;
-  transition:width 0.25s,min-width 0.25s,opacity 0.2s;
-}
+/* ── SIDEBAR ── */
+.sidebar{width:244px;min-width:244px;background:var(--sidebar-bg);border-right:1px solid var(--sidebar-border);display:flex;flex-direction:column;overflow:hidden;transition:width .25s,min-width .25s,opacity .2s;}
 .sidebar.hide{width:0;min-width:0;opacity:0;pointer-events:none;}
-
-.sb-inner{flex:1;overflow-y:auto;padding:10px 8px;}
-
-.sb-label{
-  font-size:9.5px;font-weight:700;
-  letter-spacing:1.4px;text-transform:uppercase;
-  color:var(--text-muted);
-  padding:8px 8px 4px;
-}
-
-/* grade row */
-.grade-row{
-  display:flex;align-items:center;gap:10px;
-  padding:8px 10px;border-radius:10px;cursor:pointer;
-  margin-bottom:2px;border:1px solid transparent;
-  transition:background 0.14s,border-color 0.14s;user-select:none;
-}
+.sb-inner{flex:1;overflow-y:auto;padding:8px 5px 24px;}
+.sb-label{font-size:8.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);padding:12px 10px 4px;display:flex;align-items:center;gap:6px;}
+.sb-label::after{content:'';flex:1;height:1px;background:var(--divider);}
+.grade-row{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:10px;cursor:pointer;margin-bottom:2px;border:1px solid transparent;transition:all .14s;user-select:none;}
 .grade-row:hover{background:var(--item-hover);}
 .grade-row.open{background:var(--item-active);border-color:var(--item-active-border);}
-
-.grade-pill{
-  font-size:11px;font-weight:800;
-  padding:3px 9px;border-radius:20px;
-  background:linear-gradient(90deg,var(--accent1),var(--accent2));
-  color:white;flex-shrink:0;
-}
-.grade-label{font-size:13px;font-weight:700;color:var(--text);flex:1;}
-.grade-arrow{font-size:9px;color:var(--text-muted);transition:transform 0.2s;flex-shrink:0;}
+.grade-pill{font-size:10px;font-weight:800;padding:2px 8px;border-radius:20px;background:linear-gradient(130deg,var(--accent1),var(--accent2));color:#fff;flex-shrink:0;min-width:24px;text-align:center;}
+.grade-label{font-size:12.5px;font-weight:700;color:var(--text);flex:1;}
+.grade-sub{font-size:9px;color:var(--text-muted);}
+.grade-arrow{font-size:9px;color:var(--text-muted);transition:transform .2s;}
 .grade-row.open .grade-arrow{transform:rotate(90deg);color:var(--brand);}
-
-/* chapter list */
-.chapter-list{
-  display:none;margin:2px 0 4px 18px;
-  border-left:2px solid var(--item-active-border);
-}
+.chapter-list{display:none;margin:2px 0 4px 13px;border-left:2px solid var(--item-active-border);}
 .chapter-list.open{display:block;}
-
-.ch-item{
-  display:flex;align-items:center;gap:9px;
-  padding:7px 10px 7px 12px;border-radius:8px;
-  cursor:pointer;font-size:12px;font-weight:600;
-  color:var(--text-sub);margin-bottom:1px;
-  border-left:2px solid transparent;
-  transition:background 0.12s,color 0.12s;
-}
+.ch-item{display:flex;align-items:center;gap:7px;padding:6px 9px;border-radius:8px;cursor:pointer;font-size:11.5px;font-weight:600;color:var(--text-sub);margin-bottom:1px;transition:all .12s;position:relative;}
 .ch-item:hover{background:var(--item-hover);color:var(--text);}
-.ch-item.active{color:var(--text);background:var(--item-active);border-left-color:var(--brand);}
-.ch-icon{font-size:14px;flex-shrink:0;}
-.ch-item.unavailable{color:var(--text-muted);cursor:default;}
-.ch-item.unavailable:hover{background:transparent;}
+.ch-item.active{color:var(--text);background:var(--item-active);padding-left:11px;}
+.ch-item.active::before{content:'';position:absolute;left:-2px;top:5px;bottom:5px;width:3px;background:var(--brand);border-radius:2px;}
+.ch-icon{font-size:13px;flex-shrink:0;}
+.ch-name{flex:1;line-height:1.35;}
+.ch-pyq-badge{font-size:7.5px;font-weight:800;padding:1px 5px;border-radius:999px;background:var(--sbg-pyq);color:var(--col-pyq);border:1px solid rgba(251,146,60,0.3);flex-shrink:0;letter-spacing:.3px;}
 
-/* ===================================================
-   CONTENT WRAPPER
-   =================================================== */
-.content-wrap{
-  flex:1;display:flex;flex-direction:column;overflow:hidden;
-  background:var(--bg);
-}
+/* ── CONTENT WRAP ── */
+.content-wrap{flex:1;display:flex;flex-direction:column;overflow:hidden;transition:max-width .3s;}
 
-/* ===================================================
-   SECTION BAR  (PYQs / Notes / Mock / Simulation)
-   =================================================== */
-.section-bar{
-  display:none;align-items:center;gap:8px;
-  padding:10px 18px;
-  background:var(--secbar-bg);
-  border-bottom:1px solid var(--divider);
-  flex-shrink:0;
-}
+/* ══════════════════════════════════════════
+   3D SECTION BAR
+══════════════════════════════════════════ */
+.section-bar{display:none;align-items:center;gap:5px;padding:10px 16px;background:var(--bg2);border-bottom:1px solid var(--divider);flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
+.section-bar::-webkit-scrollbar{display:none;}
 .section-bar.visible{display:flex;}
 
 .sec-btn{
-  display:flex;align-items:center;gap:7px;
-  padding:6px 14px;border-radius:20px;cursor:pointer;
-  font-size:12px;font-weight:700;
-  background:var(--secbar-btn);color:var(--text-sub);
-  border:1px solid var(--divider);
-  transition:background 0.14s,color 0.14s,border-color 0.14s;
+  display:flex;align-items:center;gap:7px;padding:7px 13px;border-radius:12px;
+  cursor:pointer;font-size:12px;font-weight:700;
+  background:var(--card-bg);color:var(--text-sub);border:1px solid var(--card-border);
+  transition:all .18s;flex-shrink:0;white-space:nowrap;
 }
-.sec-btn:hover{background:var(--secbar-hover);color:var(--text);}
-.sec-btn.active{
-  background:linear-gradient(90deg,var(--accent1),var(--accent2));
-  color:white;border-color:transparent;
-}
-.sec-btn.coming{opacity:0.45;cursor:not-allowed;}
+.sec-btn:hover:not(.coming){transform:translateY(-1px);color:var(--text);}
+.sec-btn.coming{opacity:.35;cursor:not-allowed;}
 
-/* ===================================================
-   PYQ TAB BAR  — sticky horizontal strip
-   =================================================== */
-#pyq-tabbar{
-  display:none;                       /* shown when PYQ panel is active */
-  align-items:center;
-  gap:0;
-  background:var(--pyqtab-bar-bg);
-  border-bottom:1px solid var(--pyqtab-bar-border);
-  padding:0 18px;
-  flex-shrink:0;
-  overflow-x:auto;
-  scrollbar-width:none;
+/* 3D icon inside each button */
+.sec-icon-3d{
+  width:24px;height:24px;border-radius:7px;display:flex;align-items:center;
+  justify-content:center;font-size:13px;flex-shrink:0;
+  transition:transform .2s;
 }
+.sec-btn:hover:not(.coming) .sec-icon-3d{transform:scale(1.2) rotate(-6deg);}
+.sec-btn.active .sec-icon-3d{transform:scale(1.1);}
+
+/* Notes */
+.sec-notes .sec-icon-3d{background:linear-gradient(135deg,rgba(99,102,241,.4),rgba(99,102,241,.15));box-shadow:0 3px 8px rgba(99,102,241,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-notes.active{background:var(--sbg-notes);border-color:var(--col-notes);color:var(--col-notes);}
+/* Descriptive */
+.sec-desc .sec-icon-3d{background:linear-gradient(135deg,rgba(52,211,153,.4),rgba(52,211,153,.15));box-shadow:0 3px 8px rgba(52,211,153,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-desc.active{background:var(--sbg-desc);border-color:var(--col-desc);color:var(--col-desc);}
+/* Mock */
+.sec-mock .sec-icon-3d{background:linear-gradient(135deg,rgba(251,191,36,.4),rgba(251,191,36,.15));box-shadow:0 3px 8px rgba(251,191,36,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-mock.active{background:var(--sbg-mock);border-color:var(--col-mock);color:var(--col-mock);}
+/* PPT */
+.sec-ppt .sec-icon-3d{background:linear-gradient(135deg,rgba(248,113,113,.4),rgba(248,113,113,.15));box-shadow:0 3px 8px rgba(248,113,113,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-ppt.active{background:var(--sbg-ppt);border-color:var(--col-ppt);color:var(--col-ppt);}
+/* Flash */
+.sec-flash .sec-icon-3d{background:linear-gradient(135deg,rgba(192,132,252,.4),rgba(192,132,252,.15));box-shadow:0 3px 8px rgba(192,132,252,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-flash.active{background:var(--sbg-flash);border-color:var(--col-flash);color:var(--col-flash);}
+/* Sim */
+.sec-sim .sec-icon-3d{background:linear-gradient(135deg,rgba(56,189,248,.4),rgba(56,189,248,.15));box-shadow:0 3px 8px rgba(56,189,248,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-sim.active{background:var(--sbg-sim);border-color:var(--col-sim);color:var(--col-sim);}
+/* PYQ */
+.sec-pyq .sec-icon-3d{background:linear-gradient(135deg,rgba(251,146,60,.4),rgba(251,146,60,.15));box-shadow:0 3px 8px rgba(251,146,60,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-pyq.active{background:var(--sbg-pyq);border-color:var(--col-pyq);color:var(--col-pyq);}
+/* Games */
+.sec-games .sec-icon-3d{background:linear-gradient(135deg,rgba(16,185,129,.4),rgba(16,185,129,.15));box-shadow:0 3px 8px rgba(16,185,129,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-games.active{background:var(--sbg-games);border-color:var(--col-games);color:var(--col-games);}
+
+/* ── PYQ TABBAR ── */
+#pyq-tabbar{display:none;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
 #pyq-tabbar::-webkit-scrollbar{display:none;}
 #pyq-tabbar.visible{display:flex;}
+.pyq-tab{display:flex;align-items:center;gap:6px;padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;flex-shrink:0;border-radius:6px 6px 0 0;}
+.pyq-tab:hover{color:var(--text);background:var(--item-hover);}
+.tab-dot{width:19px;height:19px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;color:#fff;flex-shrink:0;}
+.pyq-tab.t-mcq.active{color:var(--pyq-mcq);border-bottom-color:var(--pyq-mcq);}
+.pyq-tab.t-ar.active{color:var(--pyq-ar);border-bottom-color:var(--pyq-ar);}
+.pyq-tab.t-one.active{color:#84cc16;border-bottom-color:#84cc16;}
+.pyq-tab.t-two.active{color:var(--pyq-two);border-bottom-color:var(--pyq-two);}
+.pyq-tab.t-three.active{color:var(--pyq-three);border-bottom-color:var(--pyq-three);}
+.pyq-tab.t-four.active{color:var(--pyq-four);border-bottom-color:var(--pyq-four);}
+.pyq-tab.t-five.active{color:var(--pyq-five);border-bottom-color:var(--pyq-five);}
 
-.pyq-tab{
-  display:flex;align-items:center;gap:7px;
-  padding:11px 16px;
-  cursor:pointer;
-  font-size:12px;font-weight:700;
-  color:var(--text-muted);
-  border-bottom:3px solid transparent;
-  white-space:nowrap;
-  transition:color 0.15s,border-color 0.15s,background 0.15s;
-  flex-shrink:0;
-}
-.pyq-tab:hover{color:var(--text);background:var(--pyqtab-indicator);}
+/* ── CONTENT ── */
+#content{flex:1;overflow-y:auto;padding:18px 20px 32px;}
 
-/* active state: coloured underline + matching text */
-.pyq-tab.t-mcq.active  {color:#7c3aed;border-bottom-color:#7c3aed;}
-.pyq-tab.t-ar.active   {color:#f97316;border-bottom-color:#f97316;}
-.pyq-tab.t-two.active  {color:#16a34a;border-bottom-color:#16a34a;}
-.pyq-tab.t-three.active{color:#dc2626;border-bottom-color:#dc2626;}
-.pyq-tab.t-four.active {color:#0ea5e9;border-bottom-color:#0ea5e9;}
-.pyq-tab.t-five.active {color:#ec4899;border-bottom-color:#ec4899;}
+/* Welcome */
+.welcome{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;text-align:center;padding:20px;}
+.welcome-atom{font-size:64px;animation:float 3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.welcome h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;background:linear-gradient(130deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.welcome p{font-size:13px;color:var(--text-muted);max-width:300px;line-height:1.7;}
+.welcome-pills{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-top:6px;}
+.w-pill{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;border:1px solid var(--divider);color:var(--text-muted);}
 
-/* tab dot/pill */
-.tab-dot{
-  width:20px;height:20px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:800;color:white;
-  flex-shrink:0;
-}
+/* ══ NOTES ══ */
+.notes-content{padding-bottom:30px;}
+.notes-title{font-size:20px;font-weight:800;margin-bottom:16px;padding:16px 20px;background:linear-gradient(130deg,rgba(99,102,241,.18),rgba(6,182,212,.10));border:1px solid rgba(99,102,241,.25);border-radius:16px;display:flex;align-items:center;gap:13px;box-shadow:0 4px 20px rgba(99,102,241,.1);}
+.notes-section{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:17px 19px;margin-bottom:12px;transition:all .2s;}
+.notes-section:hover{border-color:rgba(99,102,241,.3);box-shadow:0 4px 20px rgba(99,102,241,.1);transform:translateY(-1px);}
+.notes-section-heading{font-size:14px;font-weight:800;color:var(--brand);margin-bottom:12px;display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:1px solid var(--divider);}
+.n-sec-icon{width:30px;height:30px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;background:linear-gradient(135deg,var(--sbg-notes),rgba(6,182,212,.1));border:1px solid rgba(99,102,241,.2);box-shadow:0 2px 8px rgba(99,102,241,.15),inset 0 1px 0 rgba(255,255,255,.08);}
+.notes-section ul,.notes-section ol{margin:8px 0 8px 20px;}
+.notes-section li{font-size:13.5px;line-height:1.85;margin-bottom:4px;}
+.notes-section p{font-size:13.5px;line-height:1.85;margin:7px 0;}
+.notes-section strong{color:var(--text);font-weight:700;}
+.n-callout{display:flex;align-items:flex-start;gap:10px;border-radius:10px;padding:11px 14px;margin:9px 0;font-size:13px;line-height:1.75;}
+.n-callout-icon{font-size:16px;flex-shrink:0;}
+.n-callout-blue{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(99,102,241,.05));border-left:3px solid var(--accent1);}
+.n-callout-yellow{background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(245,158,11,.05));border-left:3px solid var(--accent3);}
+.n-callout-green{background:linear-gradient(135deg,rgba(52,211,153,.12),rgba(52,211,153,.05));border-left:3px solid #34d399;}
+.n-callout-purple{background:linear-gradient(135deg,rgba(167,139,250,.12),rgba(167,139,250,.05));border-left:3px solid #a78bfa;}
+.n-formula-banner{display:flex;align-items:center;gap:13px;background:linear-gradient(90deg,rgba(99,102,241,.18),rgba(6,182,212,.10));border:1px solid rgba(99,102,241,.28);border-radius:10px;padding:11px 15px;margin:11px 0;box-shadow:0 2px 12px rgba(99,102,241,.1);}
+.n-fb-label{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--brand);padding:2px 8px;background:rgba(99,102,241,.15);border-radius:20px;border:1px solid rgba(99,102,241,.3);white-space:nowrap;}
+.n-fb-eq{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:600;color:var(--text);text-shadow:0 0 20px rgba(99,102,241,.35);}
+.n-def{font-size:13.5px;line-height:1.85;padding:10px 14px;margin:8px 0;background:rgba(255,255,255,.03);border-radius:8px;border-left:3px solid var(--brand);}
+.n-chips-row{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0;}
+.n-chip{font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;background:var(--sbg-notes);color:var(--col-notes);border:1px solid rgba(99,102,241,.22);cursor:default;transition:transform .12s;}
+.n-chip:hover{transform:scale(1.05);}
+.n-img-card{border-radius:10px;overflow:hidden;margin:11px 0;background:var(--card-bg);border:1px solid var(--card-border);}
+.n-img{width:100%;display:block;}
+.n-img-caption{font-size:11px;color:var(--text-muted);padding:7px 12px;font-style:italic;}
+.n-two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:9px 0;}
+.n-term-card{background:var(--bg3);border:1px solid var(--card-border);border-radius:8px;padding:9px 12px;}
+.n-term-label{font-size:11px;font-weight:800;color:var(--brand);margin-bottom:3px;}
+.n-term-desc{font-size:12px;color:var(--text-sub);line-height:1.6;}
 
-/* ===================================================
-   CONTENT SCROLL AREA
-   =================================================== */
-#content{
-  flex:1;overflow-y:auto;
-  padding:18px 22px;
-}
+/* ══ NOTES EXTRAS (Law boxes, Compare grids) ══ */
+.n-law-box{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(6,182,212,.06));border:1px solid rgba(99,102,241,.3);border-radius:12px;padding:14px 18px;margin:10px 0;}
+.n-law-title{font-size:12.5px;font-weight:800;color:var(--brand);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.n-law-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.8;margin-bottom:6px;}
+.n-law-num{width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;box-shadow:0 2px 8px rgba(99,102,241,.4);}
+.n-img-md{max-width:420px;border-radius:8px;display:block;}
+.n-compare-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1px;background:var(--divider);border-radius:10px;overflow:hidden;margin:9px 0;font-size:12.5px;}
+.n-compare-header{background:var(--bg3);padding:9px 12px;font-size:11px;font-weight:800;color:var(--text-muted);letter-spacing:.3px;}
+.n-compare-header.n-compare-real{background:rgba(52,211,153,.1);color:#34d399;}
+.n-compare-header.n-compare-virtual{background:rgba(192,132,252,.1);color:#c084fc;}
+.n-compare-cell{background:var(--card-bg);padding:8px 12px;font-size:12px;line-height:1.6;}
+.n-compare-cell.n-compare-real{border-left:2px solid rgba(52,211,153,.3);}
+.n-compare-cell.n-compare-virtual{border-left:2px solid rgba(192,132,252,.3);}
 
-/* welcome */
-.welcome{
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  height:100%;gap:12px;color:var(--text-muted);
-}
-.welcome-icon{font-size:52px;}
-.welcome h2{font-size:18px;font-weight:700;color:var(--text-sub);}
-.welcome p{font-size:13px;}
+/* ══ DESCRIPTIVE ══ */
+.desc-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:15px 17px;margin-bottom:10px;transition:all .2s;position:relative;overflow:hidden;}
+.desc-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--col-desc),transparent);}
+.desc-card:hover{border-color:rgba(52,211,153,.3);transform:translateY(-1px);}
+.desc-q-num{font-size:9.5px;font-weight:800;color:var(--col-desc);letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;}
+.desc-q-text{font-size:13.5px;line-height:1.8;color:var(--text);}
+.desc-q-marks{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;background:var(--sbg-desc);color:var(--col-desc);border:1px solid rgba(52,211,153,.22);display:inline-block;margin-top:7px;}
+.desc-ans-toggle{font-size:11.5px;font-weight:700;color:var(--col-desc);cursor:pointer;padding:5px 0;margin-top:5px;display:flex;align-items:center;gap:5px;border:none;background:none;transition:opacity .15s;}
+.desc-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(52,211,153,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:2px solid var(--col-desc);}
+.desc-answer.open{display:block;}
 
-/* notes */
-.notes-placeholder{
-  background:var(--card-bg);border:1px solid var(--card-border);
-  border-radius:14px;padding:28px;color:var(--text-sub);
-  font-size:14px;line-height:1.7;
-}
+/* ══ MOCK TEST ══ */
+.mock-header{background:linear-gradient(135deg,rgba(251,191,36,.16),rgba(251,191,36,.05));border:1px solid rgba(251,191,36,.28);border-radius:14px;padding:15px 18px;margin-bottom:14px;display:flex;align-items:center;gap:13px;}
+.mock-icon{font-size:30px;}
+.mock-info h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;}
+.mock-info p{font-size:12px;color:var(--text-muted);margin-top:3px;}
+.mock-badges{display:flex;gap:5px;margin-top:7px;flex-wrap:wrap;}
+.mock-badge{font-size:10px;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--sbg-mock);color:var(--col-mock);border:1px solid rgba(251,191,36,.28);}
+.mock-q-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:15px 17px;margin-bottom:9px;transition:border-color .2s;}
+.mock-q-card:hover{border-color:rgba(251,191,36,.22);}
+.mock-q-num{font-size:9.5px;font-weight:800;color:var(--col-mock);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+.mock-q-text{font-size:13.5px;line-height:1.8;margin-bottom:11px;}
+.mock-options{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.mock-opt{display:flex;align-items:flex-start;gap:7px;padding:8px 11px;border-radius:9px;cursor:pointer;border:1px solid var(--card-border);background:var(--bg3);transition:all .15s;font-size:12.5px;line-height:1.5;}
+.mock-opt:hover:not([data-selected]):not(.correct):not(.wrong){border-color:var(--col-mock);background:var(--sbg-mock);}
+.mock-opt.correct{border-color:#34d399;background:rgba(52,211,153,.1);color:#34d399;}
+.mock-opt.wrong{border-color:#f87171;background:rgba(248,113,113,.1);color:#f87171;}
+.mock-opt.selected{border-color:var(--col-mock);background:var(--sbg-mock);}
+.mock-opt-label{font-size:10px;font-weight:800;width:18px;height:18px;border-radius:5px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.mock-exp{display:none;margin-top:9px;padding:9px 13px;background:rgba(251,191,36,.06);border-left:2px solid var(--col-mock);border-radius:8px;font-size:12.5px;line-height:1.75;color:var(--text-sub);}
+.mock-exp.open{display:block;}
+#mock-submit{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:11px;border:none;background:linear-gradient(130deg,var(--accent3),#f97316);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;margin-top:8px;}
+#mock-submit:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(245,158,11,.3);}
+#mock-score{display:none;background:linear-gradient(135deg,rgba(52,211,153,.15),rgba(99,102,241,.1));border:1px solid rgba(52,211,153,.3);border-radius:14px;padding:20px;margin-top:12px;text-align:center;}
+#mock-score h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;}
+#mock-score p{font-size:13px;color:var(--text-sub);margin-top:4px;}
 
-/* ===================================================
-   NOTES — full redesign
-   =================================================== */
-.notes-content{padding:4px 0 24px;}
+/* ══ PPT ══ */
+.ppt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;}
+.ppt-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:14px;cursor:pointer;transition:all .2s;text-align:center;}
+.ppt-card:hover{border-color:rgba(248,113,113,.4);transform:translateY(-2px);box-shadow:0 8px 24px rgba(248,113,113,.1);}
+.ppt-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,rgba(248,113,113,.2),rgba(245,158,11,.15));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:9px;}
+.ppt-name{font-size:12px;font-weight:700;color:var(--text);}
+.ppt-slides{font-size:10.5px;color:var(--text-muted);margin-top:3px;}
 
-/* Title bar */
-.notes-title{
-  font-size:20px;font-weight:800;color:var(--text);
-  margin-bottom:16px;padding:14px 18px;
-  background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(124,58,237,0.1));
-  border:1px solid rgba(59,130,246,0.25);
-  border-radius:14px;display:flex;align-items:center;gap:10px;
-}
+/* ══ FLASH CARDS ══ */
+.flashcard-controls{display:flex;gap:7px;margin-bottom:13px;align-items:center;flex-wrap:wrap;}
+.fc-ctrl-btn{padding:7px 15px;border-radius:10px;border:1px solid var(--divider);background:var(--card-bg);color:var(--text-sub);font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;}
+.fc-ctrl-btn:hover{background:var(--item-hover);color:var(--text);}
+.fc-count{font-size:12px;color:var(--text-muted);margin-left:auto;}
+.flashcard-wrap{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;}
+.flashcard{perspective:1000px;cursor:pointer;height:155px;}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d;}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+.fc-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:13px;padding:15px 17px;display:flex;flex-direction:column;justify-content:center;}
+.fc-front{background:linear-gradient(135deg,rgba(192,132,252,.2),rgba(99,102,241,.1));border:1px solid rgba(192,132,252,.28);box-shadow:0 4px 18px rgba(192,132,252,.12);}
+.fc-back{background:linear-gradient(135deg,rgba(52,211,153,.18),rgba(6,182,212,.1));border:1px solid rgba(52,211,153,.28);transform:rotateY(180deg);box-shadow:0 4px 18px rgba(52,211,153,.12);}
+.fc-label{font-size:8.5px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:7px;}
+.fc-front .fc-label{color:var(--col-flash);}
+.fc-back .fc-label{color:var(--col-desc);}
+.fc-text{font-size:12.5px;font-weight:600;line-height:1.65;color:var(--text);}
+.fc-hint{font-size:10px;color:var(--text-muted);margin-top:9px;}
 
-/* Section card */
-.notes-section{
-  background:var(--card-bg);border:1px solid var(--card-border);
-  border-radius:14px;padding:16px 18px;margin-bottom:10px;
-  transition:border-color 0.2s,box-shadow 0.2s;
-}
-.notes-section:hover{
-  border-color:var(--item-active-border);
-  box-shadow:0 2px 12px rgba(59,130,246,0.1);
-}
-.notes-section-heading{
-  font-size:14.5px;font-weight:700;color:var(--brand);
-  margin-bottom:12px;display:flex;align-items:center;gap:9px;
-}
-.notes-section-heading .n-sec-icon{font-size:16px;flex-shrink:0;}
-.notes-section-heading::before{display:none;}
-.notes-section ul,.notes-section ol{margin:6px 0 6px 20px;padding:0;}
-.notes-section li{font-size:13.5px;line-height:1.8;color:var(--text);margin-bottom:3px;}
-.notes-section p{font-size:13.5px;line-height:1.8;color:var(--text);margin:6px 0;}
+/* ══ SIMULATIONS ══ */
+.sim-list{display:flex;flex-direction:column;gap:14px;}
+.sim-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:15px;overflow:hidden;transition:all .2s;}
+.sim-card:hover{border-color:rgba(56,189,248,.25);}
+.sim-header{display:flex;align-items:center;gap:11px;padding:13px 17px;cursor:pointer;background:linear-gradient(90deg,rgba(56,189,248,.06),transparent);border-bottom:1px solid var(--divider);}
+.sim-icon-3d{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:21px;background:linear-gradient(135deg,rgba(56,189,248,.35),rgba(56,189,248,.12));border:1px solid rgba(56,189,248,.3);box-shadow:0 3px 10px rgba(56,189,248,.22),inset 0 1px 0 rgba(255,255,255,.2);flex-shrink:0;}
+.sim-title{font-size:14px;font-weight:800;}
+.sim-desc{font-size:11.5px;color:var(--text-muted);margin-top:2px;}
+.sim-launch-btn{margin-left:auto;font-size:11px;font-weight:700;padding:6px 13px;border-radius:20px;border:1px solid rgba(56,189,248,.3);background:var(--sbg-sim);color:var(--col-sim);cursor:pointer;transition:all .15s;white-space:nowrap;}
+.sim-launch-btn:hover{background:rgba(56,189,248,.2);}
+.sim-embed{display:none;}
+.sim-embed.open{display:block;}
+.sim-iframe{width:100%;border:none;display:block;background:#080e1c;min-height:300px;}
 
-/* Sub-heading inside section */
-.n-section-sub{
-  font-size:12.5px;font-weight:700;color:var(--text-muted);
-  text-transform:uppercase;letter-spacing:0.8px;
-  margin:14px 0 8px;padding-bottom:4px;
-  border-bottom:1px solid var(--divider);
-}
+/* ══ PYQ ══ */
+.pyq-set-label{font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);padding:10px 0 5px;display:flex;align-items:center;gap:7px;}
+.pyq-set-label::after{content:'';flex:1;height:1px;background:var(--divider);}
+.set-badge{font-size:9.5px;font-weight:800;padding:2px 7px;border-radius:20px;background:rgba(124,58,237,.2);color:#a78bfa;border:1px solid rgba(124,58,237,.3);}
+.year-badge{font-size:9.5px;font-weight:800;padding:2px 7px;border-radius:20px;background:rgba(239,68,68,.2);color:#f87171;border:1px solid rgba(239,68,68,.3);}
+.mcq-card{display:flex;flex-direction:column;background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:13px 15px;margin-bottom:9px;transition:border-color .2s;cursor:pointer;position:relative;}
+.mcq-card:hover{border-color:rgba(124,58,237,.22);}
+.mcq-card-top{display:flex;gap:11px;}
+.mcq-card-badges{display:flex;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--divider);}
+.question-item{display:flex;flex-direction:column;background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:13px 15px;margin-bottom:9px;cursor:pointer;transition:border-color .2s;position:relative;}
+.question-item:hover{border-color:rgba(99,102,241,.22);}
+.question-item-top{display:flex;gap:11px;}
+.question-item-badges{display:flex;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--divider);}
+.qno{min-width:32px;height:24px;padding:0 8px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;flex-shrink:0;}
+.qno.mcq{background:var(--pyq-mcq);}
+.qno.ar{background:var(--pyq-ar);}
+.qno.one{background:#84cc16;}
+.qno.two{background:var(--pyq-two);}
+.qno.three{background:var(--pyq-three);}
+.qno.four{background:var(--pyq-four);}
+.qno.five{background:var(--pyq-five);}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:10px 0 3px;}
+.option{display:flex;align-items:flex-start;gap:7px;padding:7px 11px;border-radius:9px;cursor:pointer;border:1px solid var(--card-border);background:var(--bg3);transition:all .15s;font-size:12.5px;line-height:1.5;}
+.option:hover{border-color:rgba(124,58,237,.4);background:rgba(124,58,237,.07);}
+.option.correct{border-color:#34d399;background:rgba(52,211,153,.1);color:#34d399;}
+.option.wrong{border-color:#f87171;background:rgba(248,113,113,.1);color:#f87171;}
+.opt-label{font-size:9.5px;font-weight:800;width:17px;height:17px;border-radius:5px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.options.answered .option{cursor:default;}
+.explanation{display:none;margin-top:9px;padding:9px 13px;background:rgba(99,102,241,.06);border-left:2px solid var(--brand);border-radius:8px;font-size:12.5px;line-height:1.75;color:var(--text-sub);}
 
-/* Definition text */
-.n-def{
-  font-size:13.5px;line-height:1.8;color:var(--text);
-  margin:0 0 10px;
-}
+/* ══ GAMES & PUZZLES ══ */
+.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
+.game-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:15px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
+.game-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--col-games),transparent);}
+.game-card:hover{border-color:rgba(16,185,129,.3);transform:translateY(-2px);box-shadow:0 6px 20px rgba(16,185,129,.15);}
+.game-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.game-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;background:linear-gradient(135deg,rgba(16,185,129,.25),rgba(16,185,129,.1));border:1px solid rgba(16,185,129,.3);box-shadow:0 2px 8px rgba(16,185,129,.2);}
+.game-title{font-size:14px;font-weight:800;color:var(--text);flex:1;}
+.game-desc{font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:12px;}
+.game-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--sbg-games);color:var(--col-games);border:1px solid rgba(16,185,129,.25);display:inline-block;}
+.game-content{display:none;margin-top:15px;padding-top:15px;border-top:1px solid var(--divider);}
+.game-content.open{display:block;}
+.game-launch-btn{width:100%;margin-top:10px;padding:8px;border-radius:10px;border:1px solid rgba(16,185,129,.3);background:var(--sbg-games);color:var(--col-games);font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;}
+.game-launch-btn:hover{background:rgba(16,185,129,.2);}
 
-/* ── Callout boxes ── */
-.n-callout{
-  display:flex;align-items:flex-start;gap:10px;
-  border-radius:10px;padding:10px 14px;margin:10px 0;
-  font-size:13px;line-height:1.75;
-}
-.n-callout-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
-.n-callout-blue {background:rgba(59,130,246,0.1);border-left:3px solid #3b82f6;}
-.n-callout-yellow{background:rgba(245,158,11,0.1);border-left:3px solid #f59e0b;}
-.n-callout-green {background:rgba(16,185,129,0.1);border-left:3px solid #10b981;}
-.n-callout-purple{background:rgba(124,58,237,0.1);border-left:3px solid #7c3aed;}
+/* ══ EMPTY / COMING SOON ══ */
+.no-content-state{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;gap:9px;color:var(--text-muted);text-align:center;padding:20px;}
+.no-content-icon{font-size:40px;margin-bottom:4px;}
+.no-content-state h3{font-size:14.5px;font-weight:700;color:var(--text-sub);}
+.no-content-state p{font-size:12.5px;max-width:340px;line-height:1.7;}
+.no-content-tag{font-size:10.5px;font-weight:700;padding:3px 13px;border-radius:999px;background:var(--sbg-notes);color:var(--col-notes);border:1px solid rgba(99,102,241,.3);margin-top:3px;}
 
-/* ── Chips row ── */
-.n-chips-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0;}
-.n-chip{
-  font-size:11.5px;font-weight:600;padding:4px 11px;
-  border-radius:999px;background:rgba(59,130,246,0.12);
-  color:var(--brand);border:1px solid rgba(59,130,246,0.25);
-}
-
-/* ── Term cards (2-col grid) ── */
-.n-two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;}
-.n-term-card{
-  background:var(--secbar-bg);border:1px solid var(--card-border);
-  border-radius:10px;padding:10px 12px;
-}
-.n-term-label{font-size:12.5px;font-weight:700;color:var(--brand);margin-bottom:3px;}
-.n-term-desc{font-size:12.5px;color:var(--text-sub);line-height:1.6;}
-
-/* ── Law box ── */
-.n-law-box{
-  background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.2);
-  border-radius:12px;padding:14px 16px;margin:10px 0;
-}
-.n-law-title{font-size:13px;font-weight:700;color:var(--brand);margin-bottom:10px;}
-.n-law-item{
-  display:flex;align-items:flex-start;gap:10px;
-  margin-bottom:8px;font-size:13.5px;line-height:1.7;color:var(--text);
-}
-.n-law-item:last-child{margin-bottom:0;}
-.n-law-num{
-  background:var(--brand);color:#fff;font-size:11px;font-weight:800;
-  width:22px;height:22px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-}
-
-/* ── Image cards ── */
-.n-img-card{
-  background:var(--secbar-bg);border:1px solid var(--card-border);
-  border-radius:12px;padding:12px;margin:10px 0;text-align:center;
-}
-.n-img{display:block;margin:0 auto;border-radius:8px;max-width:100%;height:auto;}
-.n-img-sm {max-width:200px;}
-.n-img-md {max-width:340px;}
-.n-img-lg {max-width:100%;}
-.n-img-xl {max-width:100%;}
-.n-img-case{max-width:100%;max-height:160px;object-fit:contain;}
-.n-img-caption{
-  font-size:11.5px;color:var(--text-muted);margin-top:8px;
-  font-style:italic;line-height:1.5;
-}
-
-/* ── Highlight cards (side-by-side) ── */
-.n-highlight-card{border-radius:12px;padding:14px;border:1px solid transparent;}
-.n-card-blue{
-  background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);
-}
-.n-card-purple{
-  background:rgba(124,58,237,0.08);border-color:rgba(124,58,237,0.2);
-}
-.n-hcard-title{font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:6px;}
-.n-hcard-body{font-size:13px;color:var(--text-sub);line-height:1.6;}
-
-/* ── Term list (key-value rows) ── */
-.n-term-list{margin:8px 0;}
-.n-tl-item{
-  display:flex;gap:10px;padding:8px 10px;
-  border-radius:8px;font-size:13px;line-height:1.6;
-  border-bottom:1px solid var(--divider);
-}
-.n-tl-item:last-child{border-bottom:none;}
-.n-tl-key{
-  font-weight:700;color:var(--brand);min-width:165px;flex-shrink:0;
-}
-.n-tl-val{color:var(--text);}
-
-/* ── Formula banner ── */
-.n-formula-banner{
-  display:flex;align-items:center;gap:14px;
-  background:linear-gradient(90deg,rgba(59,130,246,0.15),rgba(124,58,237,0.1));
-  border:1px solid rgba(59,130,246,0.3);
-  border-radius:10px;padding:12px 16px;margin:12px 0;
-}
-.n-fb-label{
-  font-size:11px;font-weight:800;text-transform:uppercase;
-  letter-spacing:0.8px;color:var(--brand);white-space:nowrap;
-}
-.n-fb-eq{
-  font-family:'Courier New',monospace;font-size:15px;
-  font-weight:700;color:var(--text);
-}
-
-/* ── Formula grid cards ── */
-.n-formula-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;}
-.n-formula-card{
-  background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);
-  border-radius:12px;padding:12px 14px;
-}
-.n-fc-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--brand);margin-bottom:6px;}
-.n-fc-eq{font-family:'Courier New',monospace;font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;}
-.n-fc-note{font-size:11.5px;color:var(--text-muted);line-height:1.5;}
-
-/* ── Magnification table ── */
-.n-mag-table{margin:10px 0;border-radius:10px;overflow:hidden;border:1px solid var(--card-border);}
-.n-mt-row{
-  display:grid;grid-template-columns:1fr 1fr;
-  padding:8px 12px;font-size:13px;color:var(--text);
-  border-bottom:1px solid var(--divider);
-}
-.n-mt-row:last-child{border-bottom:none;}
-.n-mt-head{background:rgba(59,130,246,0.12);font-weight:700;color:var(--brand);}
-
-/* ── Checklist ── */
-.n-checklist{margin:6px 0;}
-.n-check-item{
-  display:flex;align-items:flex-start;gap:10px;
-  padding:8px 10px;font-size:13.5px;color:var(--text);
-  border-radius:8px;margin-bottom:4px;
-  background:var(--secbar-bg);
-}
-.n-check-icon{font-size:16px;flex-shrink:0;}
-
-/* ── Compare grid ── */
-.n-compare-grid{
-  display:grid;grid-template-columns:1fr 1fr 1fr;
-  margin:10px 0;border-radius:12px;overflow:hidden;
-  border:1px solid var(--card-border);
-}
-.n-compare-2col{grid-template-columns:1fr 1fr;}
-.n-compare-header{
-  padding:8px 12px;font-size:12px;font-weight:700;
-  text-transform:uppercase;letter-spacing:0.6px;
-}
-.n-compare-real   {background:rgba(16,185,129,0.15);color:#10b981;}
-.n-compare-virtual{background:rgba(124,58,237,0.12);color:#a78bfa;}
-.n-compare-label  {background:rgba(255,255,255,0.04);padding:8px 12px;font-size:13px;font-weight:600;color:var(--text-sub);border-top:1px solid var(--divider);}
-.n-compare-real-cell   {background:rgba(16,185,129,0.05);padding:8px 12px;font-size:13px;color:var(--text);border-top:1px solid var(--divider);line-height:1.6;}
-.n-compare-virtual-cell{background:rgba(124,58,237,0.05);padding:8px 12px;font-size:13px;color:var(--text);border-top:1px solid var(--divider);line-height:1.6;}
-
-/* ── Case grid ── */
-.n-case-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;}
-.n-case-card{
-  border-radius:12px;padding:12px;border:1px solid var(--card-border);
-  background:var(--card-bg);
-}
-.n-case-real  {border-top:3px solid #ef4444;}
-.n-case-virtual{border-top:3px solid #7c3aed;}
-.n-case-num{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-muted);margin-bottom:6px;}
-.n-case-obj{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
-.n-case-img-pos{font-size:12px;color:var(--text-sub);margin-bottom:3px;}
-.n-case-size{font-size:12px;color:var(--text-sub);margin-bottom:5px;}
-.n-case-nature{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:999px;display:inline-block;}
-.n-case-nature.real{background:rgba(239,68,68,0.15);color:#f87171;}
-.n-case-nature.virtual{background:rgba(124,58,237,0.15);color:#a78bfa;}
-
-/* ── Rule cards ── */
-.n-rule-card{
-  display:flex;flex-direction:column;
-  background:var(--secbar-bg);border:1px solid var(--card-border);
-  border-radius:12px;padding:12px 14px;margin-bottom:8px;
-}
-.n-rule-badge{
-  font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;
-  color:var(--brand);margin-bottom:6px;
-}
-.n-rule-text{font-size:13.5px;color:var(--text);line-height:1.7;}
-
-/* ── Applications cards ── */
-.n-app-card{border-radius:12px;padding:14px;border:1px solid var(--card-border);}
-.n-app-concave{background:rgba(239,68,68,0.06);border-color:rgba(239,68,68,0.2);}
-.n-app-convex {background:rgba(59,130,246,0.06);border-color:rgba(59,130,246,0.2);}
-.n-app-title{font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:8px;}
-.n-app-list{margin:0 0 0 16px;padding:0;}
-.n-app-list li{font-size:13px;color:var(--text-sub);line-height:1.75;margin-bottom:2px;}
-
-/* ── Sign convention grid ── */
-.n-sign-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0;}
-.n-sign-item{
-  display:flex;align-items:center;gap:10px;
-  padding:10px 12px;border-radius:10px;font-size:13px;color:var(--text);
-}
-.n-sign-pos{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);}
-.n-sign-neg{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);}
-.n-sign-sym{font-size:20px;font-weight:800;flex-shrink:0;width:24px;text-align:center;}
-.n-sign-pos .n-sign-sym{color:#10b981;}
-.n-sign-neg .n-sign-sym{color:#ef4444;}
-
-/* ── Tip banner ── */
-.n-tip-banner{
-  display:flex;align-items:center;gap:8px;
-  background:linear-gradient(90deg,rgba(245,158,11,0.18),rgba(245,158,11,0.06));
-  border-left:3px solid #f59e0b;
-  border-radius:0 8px 8px 0;
-  padding:8px 14px;margin-bottom:10px;
-}
-.n-tip-icon{font-size:16px;}
-.n-tip-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:#f59e0b;}
-
-/* ── Clean table ── */
-.n-clean-table{width:100%;border-collapse:collapse;margin:4px 0;font-size:13px;}
-.n-clean-table th{
-  background:rgba(59,130,246,0.12);color:var(--brand);
-  font-weight:700;padding:9px 14px;text-align:left;
-  border-bottom:2px solid rgba(59,130,246,0.25);
-}
-.n-clean-table td{
-  padding:8px 14px;border-bottom:1px solid var(--divider);
-  color:var(--text);line-height:1.6;vertical-align:top;
-}
-.n-clean-table tr:last-child td{border-bottom:none;}
-.n-clean-table tr:hover td{background:var(--item-hover);}
-
-/* ── Example row ── */
-.n-example-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0;}
-.n-eg-item{
-  background:var(--secbar-bg);border:1px solid var(--card-border);
-  border-radius:8px;padding:9px 12px;font-size:13px;color:var(--text);
-}
-
-/* Responsive: stack on narrow screens */
-@media(max-width:520px){
-  .n-two-col,.n-formula-grid,.n-case-grid,.n-compare-grid,
-  .n-sign-grid,.n-example-row{grid-template-columns:1fr;}
-  .n-mag-table .n-mt-row{grid-template-columns:1fr;gap:2px;}
-  .n-compare-grid{grid-template-columns:1fr;}
-  .n-compare-label,.n-compare-header{display:none;}
-  .n-compare-real-cell,.n-compare-virtual-cell{border-radius:6px;margin-bottom:2px;}
-}
-
-/* ===================================================
-   QUESTION CARDS
-   =================================================== */
-.mcq-card,.question-item{
-  display:flex;gap:12px;align-items:flex-start;
-  background:var(--card-bg);border:1px solid var(--card-border);
-  padding:14px;border-radius:12px;margin-bottom:10px;cursor:pointer;
-  transition:background 0.15s,border-color 0.15s;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12);
-}
-.mcq-card:hover,.question-item:hover{
-  background:var(--card-hover);border-color:var(--item-active-border);
-}
-
-.qno{
-  width:26px;height:26px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  color:white;font-size:13px;font-weight:700;flex-shrink:0;
-}
-.qno.mcq  {background:#7c3aed;}
-.qno.ar   {background:#f97316;}
-.qno.two  {background:#16a34a;}
-.qno.three{background:#dc2626;}
-.qno.four {background:#0ea5e9;}
-.qno.five {background:#ec4899;}
-
-/* auto-number */
-.pyq-section{counter-reset:question;}
-.qno::before{counter-increment:question;content:counter(question);}
-
-/* badges */
-.set-badge{
-  font-size:11px;font-weight:700;padding:3px 10px;
-  border-radius:999px;background:var(--badge-set);
-  color:white;white-space:nowrap;
-  box-shadow:0 2px 6px rgba(0,0,0,0.2);
-}
-.year-badge{
-  font-size:11px;font-weight:700;padding:3px 10px;
-  border-radius:999px;background:var(--badge-year);
-  color:white;white-space:nowrap;
-  box-shadow:0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* options */
-.options{
-  margin-top:12px;display:grid;
-  grid-template-columns:repeat(2,1fr);gap:8px;
-}
-.options.ar{grid-template-columns:repeat(4,1fr);}
-
-.option{
-  border:2px solid var(--opt-border);border-radius:10px;
-  padding:9px 12px;cursor:pointer;background:var(--opt-bg);
-  display:flex;align-items:center;gap:9px;font-size:13px;
-  transition:background 0.12s,border-color 0.12s;
-}
-.option:hover{border-color:var(--opt-hover-border);background:var(--opt-hover-bg);}
-
-.opt-label{
-  width:24px;height:24px;border-radius:50%;
-  background:var(--opt-label);
-  display:flex;align-items:center;justify-content:center;
-  font-weight:700;font-size:12px;flex-shrink:0;color:var(--text);
-}
-
-.option.correct{background:#dcfce7 !important;border-color:#22c55e !important;}
-.option.wrong  {background:#fee2e2 !important;border-color:#ef4444 !important;}
-.option.correct .opt-label{background:#22c55e;color:white;}
-.option.wrong   .opt-label{background:#ef4444;color:white;}
-.options.answered .option{pointer-events:none;}
-
-body:not(.light) .option.correct{background:rgba(34,197,94,0.2)  !important;border-color:#22c55e !important;}
-body:not(.light) .option.wrong  {background:rgba(239,68,68,0.2)   !important;border-color:#ef4444 !important;}
-
-/* explanation */
-.explanation{
-  display:none;margin-top:10px;padding:12px;
-  background:var(--exp-bg);border-left:3px solid var(--exp-border);
-  border-radius:6px;font-size:13px;color:var(--text-sub);
-}
-
-/* ===================================================
-   TOAST
-   =================================================== */
-#toast{
-  position:fixed;bottom:24px;left:50%;
-  transform:translateX(-50%) translateY(16px);
-  background:#1e293b;color:#f1f5f9;
-  padding:10px 22px;border-radius:30px;
-  font-size:13px;font-weight:600;
-  box-shadow:0 4px 20px rgba(0,0,0,0.35);
-  opacity:0;pointer-events:none;
-  transition:opacity 0.25s,transform 0.25s;
-  z-index:999;border:1px solid #334155;
-}
+/* ══ TOAST ══ */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(14px);background:rgba(10,15,30,.95);color:var(--text);padding:9px 18px;border-radius:12px;font-size:13px;font-weight:600;pointer-events:none;opacity:0;transition:all .25s;z-index:999;border:1px solid var(--divider);backdrop-filter:blur(12px);}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
-/* ===================================================
-   SCROLLBARS
-   =================================================== */
-.sb-inner::-webkit-scrollbar,#content::-webkit-scrollbar{width:4px;}
-.sb-inner::-webkit-scrollbar-track,#content::-webkit-scrollbar-track{background:transparent;}
-.sb-inner::-webkit-scrollbar-thumb,#content::-webkit-scrollbar-thumb{background:var(--scrollthumb);border-radius:4px;}
-
+/* ══ RESPONSIVE ══ */
+@media(max-width:640px){
+  .sidebar{position:fixed;top:52px;left:0;bottom:0;z-index:50;width:80vw;max-width:270px;transform:translateX(-100%);transition:transform .25s;width:80vw!important;min-width:0!important;opacity:1!important;}
+  .sidebar:not(.hide){transform:translateX(0);}
+  .sidebar.hide{transform:translateX(-100%);}
+  .mock-options{grid-template-columns:1fr;}
+  .n-two-col{grid-template-columns:1fr;}
+  .ppt-grid{grid-template-columns:1fr 1fr;}
+  #content{padding:14px 12px 24px;}
+  .brand-tag{display:none;}
+}
 </style>
 </head>
 <body>
 
-<!-- ===================================================
-     HEADER
-     =================================================== -->
-<div class="header">
-  <div class="left-controls">
-    <button class="icon-btn" onclick="toggleSidebar()">☰</button>
-    <button class="icon-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+<!-- HEADER -->
+<header class="header">
+  <div style="display:flex;align-items:center;gap:8px;">
+    <button class="icon-btn" onclick="toggleSidebar()" title="Menu">☰</button>
+    <span class="brand">Physics4Fun</span>
+    <span class="brand-tag">CBSE</span>
   </div>
-  <div class="header-title">
-    <span class="brand-name">Physics4Fun</span>
-    <div class="breadcrumb" id="breadcrumb" style="display:none;">
-      <span class="bc-sep">▸</span>
-      <span class="bc-chip" id="bc-grade"></span>
-      <span class="bc-sep">▸</span>
-      <span class="bc-chip active" id="bc-chapter"></span>
+
+  <div class="header-center">
+    <div class="breadcrumb" id="breadcrumb">
+      <span class="bc-chip" id="bc-grade">—</span>
+      <span class="bc-sep">›</span>
+      <span class="bc-chip active" id="bc-chapter">—</span>
     </div>
   </div>
-</div>
 
+  <div class="header-right">
+    <button class="icon-btn" id="viewToggleBtn" onclick="toggleViewMode()" title="Mobile/Desktop Toggle">📱</button>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Dark/Light">🌙</button>
+  </div>
+</header>
+
+<!-- MAIN -->
 <div class="main">
 
-<!-- ===================================================
-     SIDEBAR
-     =================================================== -->
-<div class="sidebar" id="sidebar">
-<div class="sb-inner">
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sb-inner">
 
-  <div class="sb-label">Grades</div>
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 📘 CBSE BOARD -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(6,182,212,.1));padding:8px 12px;border-radius:10px;margin-bottom:10px;border:1px solid rgba(99,102,241,.3);">📘 CBSE Board</div>
 
-  <!-- CLASS 10 -->
-  <div class="grade-row" onclick="toggleGrade('g10',this)">
-    <span class="grade-pill">10</span>
-    <span class="grade-label">Class 10</span>
-    <span class="grade-arrow">▶</span>
-  </div>
-  <div class="chapter-list" id="g10">
-    <div class="ch-item" onclick="selectChapter('Light – Reflection &amp; Refraction','10','💡',this)">
-      <span class="ch-icon">💡</span>Light – Reflection &amp; Refraction
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Human Eye &amp; Colourful World')">
-      <span class="ch-icon">👁️</span>Human Eye &amp; Colourful World
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Electricity')">
-      <span class="ch-icon">⚡</span>Electricity
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Magnetic Effects of Current')">
-      <span class="ch-icon">🧲</span>Magnetic Effects of Current
-    </div>
-  </div>
+      <!-- Grades 6-8 -->
+      <div class="sb-label">Grades 6 – 8</div>
 
-  <!-- CLASS 9 -->
-  <div class="grade-row" onclick="toggleGrade('g9',this)">
-    <span class="grade-pill">9</span>
-    <span class="grade-label">Class 9</span>
-    <span class="grade-arrow">▶</span>
-  </div>
-  <div class="chapter-list" id="g9">
-    <div class="ch-item unavailable" onclick="showUnavailable('Motion')">
-      <span class="ch-icon">🏃</span>Motion
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Force &amp; Laws of Motion')">
-      <span class="ch-icon">⚙️</span>Force &amp; Laws of Motion
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Gravitation')">
-      <span class="ch-icon">🌍</span>Gravitation
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Work &amp; Energy')">
-      <span class="ch-icon">⚡</span>Work &amp; Energy
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Sound')">
-      <span class="ch-icon">🔊</span>Sound
-    </div>
-  </div>
+      <div class="grade-row" onclick="toggleGrade('cbse-g6',this)">
+        <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g6">
+        <div class="ch-item" onclick="selectChapter('Motion and Measurement','6','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Motion &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Light, Shadows and Reflections','6','💡',this,false,'ch2')"><span class="ch-icon">💡</span><span class="ch-name">Light, Shadows &amp; Reflections</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity and Circuits','6','⚡',this,false,'ch3')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity &amp; Circuits</span></div>
+      </div>
 
-  <!-- CLASS 8 -->
-  <div class="grade-row" onclick="toggleGrade('g8',this)">
-    <span class="grade-pill">8</span>
-    <span class="grade-label">Class 8</span>
-    <span class="grade-arrow">▶</span>
-  </div>
-  <div class="chapter-list" id="g8">
-    <div class="ch-item unavailable" onclick="showUnavailable('Force &amp; Pressure')">
-      <span class="ch-icon">💪</span>Force &amp; Pressure
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Light')">
-      <span class="ch-icon">💡</span>Light
-    </div>
-    <div class="ch-item" onclick="selectChapter('Electricity','8','⚡',this)">
-      <span class="ch-icon">⚡</span>Electricity
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Sound')">
-      <span class="ch-icon">🔊</span>Sound
-    </div>
-    <div class="ch-item unavailable" onclick="showUnavailable('Stars &amp; Solar System')">
-      <span class="ch-icon">🌟</span>Stars &amp; Solar System
-    </div>
-  </div>
+      <div class="grade-row" onclick="toggleGrade('cbse-g7',this)">
+        <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g7">
+        <div class="ch-item" onclick="selectChapter('Heat and Temperature','7','🌡️',this,false,'ch1')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat and Temperature</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion and Time','7','⏱️',this,false,'ch2')"><span class="ch-icon">⏱️</span><span class="ch-name">Motion and Time</span></div>
+        <div class="ch-item" onclick="selectChapter('Electric Current and its Effects','7','⚡',this,false,'ch3')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Current &amp; Effects</span></div>
+      </div>
 
-</div>
-</div>
+      <div class="grade-row" onclick="toggleGrade('cbse-g8',this)">
+        <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g8">
+        <div class="ch-item" onclick="selectChapter('Force and Pressure','8','💪',this,false,'ch1')"><span class="ch-icon">💪</span><span class="ch-name">Force and Pressure</span></div>
+        <div class="ch-item" onclick="selectChapter('Friction','8','🔄',this,false,'ch2')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch3')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+      </div>
 
-<!-- ===================================================
-     CONTENT WRAPPER
-     =================================================== -->
-<div class="content-wrap">
+      <!-- Grades 9-10 -->
+      <div class="sb-label">Grades 9 – 10</div>
 
-  <!-- Top section bar: PYQs / Notes / Mock / Simulation -->
-  <div class="section-bar" id="sectionBar">
-    <div class="sec-btn active" onclick="switchSection('pyq',this)">📋 PYQs</div>
-    <div class="sec-btn" onclick="switchSection('notes',this)">📖 Notes</div>
-    <div class="sec-btn coming">🎯 Mock Test</div>
-    <div class="sec-btn coming">🔭 Simulation</div>
-  </div>
+      <div class="grade-row" onclick="toggleGrade('cbse-g9',this)">
+        <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g9">
+        <div class="ch-item" onclick="selectChapter('Motion','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Force and Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">Force &amp; Laws of Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+      </div>
 
-  <!-- PYQ CATEGORY TAB BAR — sticky, always visible when PYQ panel is open -->
-  <div id="pyq-tabbar">
-    <div class="pyq-tab t-mcq active" onclick="showPyqSec('mcq',this)">
-      <span class="tab-dot" style="background:#7c3aed;">1</span>MCQs
-    </div>
-    <div class="pyq-tab t-ar" onclick="showPyqSec('ar',this)">
-      <span class="tab-dot" style="background:#f97316;">1</span>A &amp; R
-    </div>
-    <div class="pyq-tab t-two" onclick="showPyqSec('two',this)">
-      <span class="tab-dot" style="background:#16a34a;">2</span>2 Marks
-    </div>
-    <div class="pyq-tab t-three" onclick="showPyqSec('three',this)">
-      <span class="tab-dot" style="background:#dc2626;">3</span>3 Marks
-    </div>
-    <div class="pyq-tab t-four" onclick="showPyqSec('four',this)">
-      <span class="tab-dot" style="background:#0ea5e9;">4</span>4 Marks
-    </div>
-    <div class="pyq-tab t-five" onclick="showPyqSec('five',this)">
-      <span class="tab-dot" style="background:#ec4899;">5</span>5 Marks
-    </div>
-  </div>
+      <div class="grade-row" onclick="toggleGrade('cbse-g10',this)">
+        <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g10">
+        <div class="ch-item" onclick="selectChapter('Light – Reflection and Refraction','10','💡',this,true,'light')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection &amp; Refraction</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('The Human Eye and the Colourful World','10','👁️',this,true,'human-eye')"><span class="ch-icon">👁️</span><span class="ch-name">Human Eye &amp; Colourful World</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity','10','⚡',this,true,'electricity')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetic Effects of Electric Current','10','🧲',this,true,'magnetic-effects')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetic Effects of Current</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
 
-  <!-- SCROLLABLE CONTENT -->
-  <div id="content">
+      <!-- Grades 11-12 -->
+      <div class="sb-label">Grades 11 – 12</div>
 
-    <!-- WELCOME -->
-    <div class="welcome" id="welcome">
-      <div class="welcome-icon">⚗️</div>
-      <h2>Welcome to Physics4Fun</h2>
-      <p>Select a grade and chapter from the left to get started.</p>
+      <div class="grade-row" onclick="toggleGrade('cbse-g11',this)">
+        <span class="grade-pill">11</span><span class="grade-label">Class 11</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g11">
+        <div class="ch-item" onclick="selectChapter('Physical World','11','🌍',this,false,'physical-world')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span></div>
+        <div class="ch-item" onclick="selectChapter('Units and Measurements','11','📏',this,false,'units-measurements')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Straight Line','11','➡️',this,false,'motion-line')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Plane','11','✈️',this,false,'motion-plane')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span></div>
+        <div class="ch-item" onclick="selectChapter('Laws of Motion','11','⚙️',this,false,'laws-of-motion')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Work, Energy and Power','11','⚡',this,false,'work-energy')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','11','🌌',this,false,'gravitation')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span></div>
+        <div class="ch-item" onclick="selectChapter('Mechanical Properties of Solids','11','🪨',this,false,'mech-solids')"><span class="ch-icon">🪨</span><span class="ch-name">Mech. Properties of Solids</span></div>
+        <div class="ch-item" onclick="selectChapter('Mechanical Properties of Fluids','11','💧',this,false,'mech-fluids')"><span class="ch-icon">💧</span><span class="ch-name">Mech. Properties of Fluids</span></div>
+        <div class="ch-item" onclick="selectChapter('Thermal Properties of Matter','11','🌡️',this,false,'thermal')"><span class="ch-icon">🌡️</span><span class="ch-name">Thermal Properties of Matter</span></div>
+        <div class="ch-item" onclick="selectChapter('Thermodynamics','11','🔥',this,false,'thermo')"><span class="ch-icon">🔥</span><span class="ch-name">Thermodynamics</span></div>
+        <div class="ch-item" onclick="selectChapter('Kinetic Theory','11','💨',this,false,'kinetic')"><span class="ch-icon">💨</span><span class="ch-name">Kinetic Theory</span></div>
+        <div class="ch-item" onclick="selectChapter('Oscillations','11','🔁',this,false,'oscillations')"><span class="ch-icon">🔁</span><span class="ch-name">Oscillations</span></div>
+        <div class="ch-item" onclick="selectChapter('Waves','11','🌊',this,false,'waves')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cbse-g12',this)">
+        <span class="grade-pill">12</span><span class="grade-label">Class 12</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g12">
+        <div class="ch-item" onclick="selectChapter('Electric Charges and Fields','12','⚡',this,true,'electric-charges')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electrostatic Potential and Capacitance','12','🔋',this,true,'electrostatic-potential')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential &amp; Capacitance</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Current Electricity','12','💡',this,true,'current-electricity')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Moving Charges and Magnetism','12','🧲',this,true,'moving-charges')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges &amp; Magnetism</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetism and Matter','12','🔮',this,true,'magnetism-matter')"><span class="ch-icon">🔮</span><span class="ch-name">Magnetism and Matter</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electromagnetic Induction','12','🌀',this,true,'em-induction')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Alternating Current','12','〰️',this,true,'alternating-current')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electromagnetic Waves','12','📡',this,true,'em-waves')"><span class="ch-icon">📡</span><span class="ch-name">Electromagnetic Waves</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Ray Optics and Optical Instruments','12','🔭',this,true,'ray-optics')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics &amp; Optical Instruments</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Wave Optics','12','🌊',this,true,'wave-optics')"><span class="ch-icon">🌊</span><span class="ch-name">Wave Optics</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Dual Nature of Radiation and Matter','12','☀️',this,true,'dual-nature')"><span class="ch-icon">☀️</span><span class="ch-name">Dual Nature of Radiation &amp; Matter</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Atoms','12','⚛️',this,true,'atoms')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Nuclei','12','☢️',this,true,'nuclei')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Semiconductor Electronics','12','💻',this,true,'semiconductors')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 📗 AP STATE BOARD -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(52,211,153,.1));padding:8px 12px;border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(16,185,129,.3);">📗 AP State Board</div>
+
+      <div class="sb-label">Grades 6 – 10</div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g6',this)">
+        <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g6">
+        <div class="ch-item" onclick="selectChapter('Measurements','6','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Measurements</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion and Measurement of Distances','6','🏃',this,false,'ch2')"><span class="ch-icon">🏃</span><span class="ch-name">Motion &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Light, Shadows and Reflections','6','💡',this,false,'ch3')"><span class="ch-icon">💡</span><span class="ch-name">Light, Shadows &amp; Reflections</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g7',this)">
+        <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g7">
+        <div class="ch-item" onclick="selectChapter('Heat','7','🌡️',this,false,'ch1')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion and Time','7','⏱️',this,false,'ch2')"><span class="ch-icon">⏱️</span><span class="ch-name">Motion and Time</span></div>
+        <div class="ch-item" onclick="selectChapter('Light','7','💡',this,false,'ch3')"><span class="ch-icon">💡</span><span class="ch-name">Light</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g8',this)">
+        <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g8">
+        <div class="ch-item" onclick="selectChapter('Force and Pressure','8','💪',this,false,'ch1')"><span class="ch-icon">💪</span><span class="ch-name">Force and Pressure</span></div>
+        <div class="ch-item" onclick="selectChapter('Friction','8','🔄',this,false,'ch2')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch3')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g9',this)">
+        <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g9">
+        <div class="ch-item" onclick="selectChapter('Motion','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g10',this)">
+        <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">AP State + PYQ</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g10">
+        <div class="ch-item" onclick="selectChapter('Light – Reflection and Refraction','10','💡',this,true,'light')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection &amp; Refraction</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('The Human Eye','10','👁️',this,true,'human-eye')"><span class="ch-icon">👁️</span><span class="ch-name">The Human Eye</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity','10','⚡',this,true,'electricity')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetic Effects of Current','10','🧲',this,true,'magnetic-effects')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetic Effects of Current</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 📙 AP INTERMEDIATE -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(251,191,36,.1));padding:8px 12px;border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(245,158,11,.3);">📙 AP Intermediate</div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-inter-1',this)">
+        <span class="grade-pill">I</span><span class="grade-label">First Year</span><span class="grade-sub">Inter + PYQ</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-inter-1">
+        <div class="ch-item" onclick="selectChapter('Physical World','11','🌍',this,true,'physical-world')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Units and Measurements','11','📏',this,true,'units-measurements')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Straight Line','11','➡️',this,true,'motion-line')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Plane','11','✈️',this,true,'motion-plane')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Laws of Motion','11','⚙️',this,true,'laws-of-motion')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Work, Energy and Power','11','⚡',this,true,'work-energy')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','11','🌌',this,true,'gravitation')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-inter-2',this)">
+        <span class="grade-pill">II</span><span class="grade-label">Second Year</span><span class="grade-sub">Inter + PYQ</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-inter-2">
+        <div class="ch-item" onclick="selectChapter('Electric Charges and Fields','12','⚡',this,true,'electric-charges')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electrostatic Potential and Capacitance','12','🔋',this,true,'electrostatic-potential')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential &amp; Capacitance</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Current Electricity','12','💡',this,true,'current-electricity')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Moving Charges and Magnetism','12','🧲',this,true,'moving-charges')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges &amp; Magnetism</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electromagnetic Induction','12','🌀',this,true,'em-induction')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Alternating Current','12','〰️',this,true,'alternating-current')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Atoms','12','⚛️',this,true,'atoms')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Nuclei','12','☢️',this,true,'nuclei')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Semiconductor Electronics','12','💻',this,true,'semiconductors')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
     </div>
+  </nav>
 
-    <!-- PYQ PANEL -->
-    <div id="pyq-panel" style="display:none;">
-      <div id="pyq-mcq"   class="pyq-section" style="display:block;"></div>
-      <div id="pyq-ar"    class="pyq-section" style="display:none;"></div>
-      <div id="pyq-two"   class="pyq-section" style="display:none;"></div>
-      <div id="pyq-three" class="pyq-section" style="display:none;"></div>
-      <div id="pyq-four"  class="pyq-section" style="display:none;"></div>
-      <div id="pyq-five"  class="pyq-section" style="display:none;"></div>
-    </div>
+  <!-- CONTENT WRAP -->
+  <div class="content-wrap" id="contentWrap">
 
-    <!-- NOTES PANEL -->
-    <div id="notes-panel" style="display:none;">
-      <div id="notes-content-wrap" class="notes-content">
-        <!-- dynamically rendered by renderNotes() -->
+    <!-- SECTION BAR -->
+    <div class="section-bar" id="sectionBar">
+      <div class="sec-btn sec-notes active" id="btn-notes" onclick="switchSection('notes',this)">
+        <span class="sec-icon-3d">📖</span>Notes
+      </div>
+      <div class="sec-btn sec-desc" id="btn-desc" onclick="switchSection('desc',this)">
+        <span class="sec-icon-3d">✏️</span>Descriptive
+      </div>
+      <div class="sec-btn sec-mock" id="btn-mock" onclick="switchSection('mock',this)">
+        <span class="sec-icon-3d">🎯</span>Mock Test
+      </div>
+      <div class="sec-btn sec-ppt" id="btn-ppt" onclick="switchSection('ppt',this)">
+        <span class="sec-icon-3d">📊</span>PPTs
+      </div>
+      <div class="sec-btn sec-flash" id="btn-flash" onclick="switchSection('flash',this)">
+        <span class="sec-icon-3d">🃏</span>Flash Cards
+      </div>
+      <div class="sec-btn sec-sim" id="btn-sim" onclick="switchSection('sim',this)">
+        <span class="sec-icon-3d">🔬</span>Simulations
+      </div>
+      <div class="sec-btn sec-games" id="btn-games" onclick="switchSection('games',this)">
+        <span class="sec-icon-3d">🎮</span>Games & Puzzles
+      </div>
+      <div class="sec-btn sec-pyq" id="btn-pyq" onclick="switchSection('pyq',this)" style="display:none;">
+        <span class="sec-icon-3d">📋</span>PYQs
       </div>
     </div>
 
-  </div><!-- /#content -->
-</div><!-- /.content-wrap -->
-</div><!-- /.main -->
+    <!-- PYQ TAB BAR -->
+    <div id="pyq-tabbar">
+      <div class="pyq-tab t-mcq active" onclick="showPyqSec('mcq',this)"><span class="tab-dot" style="background:#7c3aed;">M</span>MCQs</div>
+      <div class="pyq-tab t-ar" onclick="showPyqSec('ar',this)"><span class="tab-dot" style="background:#f97316;">A</span>A&amp;R</div>
+      <div class="pyq-tab t-two" onclick="showPyqSec('two',this)"><span class="tab-dot" style="background:#16a34a;">2</span>Marks</div>
+      <div class="pyq-tab t-three" onclick="showPyqSec('three',this)"><span class="tab-dot" style="background:#dc2626;">3</span>Marks</div>
+      <div class="pyq-tab t-four" onclick="showPyqSec('four',this)"><span class="tab-dot" style="background:#0ea5e9;">4</span>Marks</div>
+      <div class="pyq-tab t-five" onclick="showPyqSec('five',this)"><span class="tab-dot" style="background:#ec4899;">5</span>Marks</div>
+    </div>
+
+    <div id="content">
+      <div class="welcome" id="welcome">
+        <div class="welcome-atom">⚛️</div>
+        <h2>Welcome to Physics4Fun</h2>
+        <p>Your complete Physics platform for CBSE & AP Board (Grades 6–12). Pick a board, grade and chapter from the sidebar.</p>
+        <div class="welcome-pills">
+          <span class="w-pill">📖 Notes</span>
+          <span class="w-pill">✏️ Descriptive</span>
+          <span class="w-pill">🎯 Mock Tests</span>
+          <span class="w-pill">📊 PPTs</span>
+          <span class="w-pill">🃏 Flash Cards</span>
+          <span class="w-pill">🔬 Simulations</span>
+          <span class="w-pill">🎮 Games & Puzzles</span>
+          <span class="w-pill">📋 PYQs</span>
+        </div>
+      </div>
+
+      <div id="panel-notes" style="display:none;"><div id="notes-content-wrap" class="notes-content"></div></div>
+      <div id="panel-desc"  style="display:none;"><div id="desc-content-wrap"></div></div>
+      <div id="panel-mock"  style="display:none;"><div id="mock-content-wrap"></div></div>
+      <div id="panel-ppt"   style="display:none;"><div id="ppt-content-wrap"></div></div>
+      <div id="panel-flash" style="display:none;"><div id="flash-content-wrap"></div></div>
+      <div id="panel-sim"   style="display:none;"><div id="sim-content-wrap"></div></div>
+      <div id="panel-games" style="display:none;"><div id="games-content-wrap"></div></div>
+      <div id="panel-pyq"   style="display:none;">
+        <div id="pyq-mcq"   class="pyq-section"></div>
+        <div id="pyq-ar"    class="pyq-section" style="display:none;"></div>
+        <div id="pyq-one"   class="pyq-section" style="display:none;"></div>
+        <div id="pyq-two"   class="pyq-section" style="display:none;"></div>
+        <div id="pyq-three" class="pyq-section" style="display:none;"></div>
+        <div id="pyq-four"  class="pyq-section" style="display:none;"></div>
+        <div id="pyq-five"  class="pyq-section" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="toast"></div>
 
-<!-- ===================================================
-     DATA — loaded from separate JS files
-     To use external files, replace these script tags with:
-       <script src="https://physics4fun.in/pyqs/sections/mcq.js"></script>  etc.
-     =================================================== -->
-<script src="https://physics4fun.in/pyqs/sections/mcq.js"></script>     
-<script src="https://physics4fun.in/pyqs/sections/ar.js"></script>
-<script src="https://physics4fun.in/pyqs/sections/two.js"></script>
-<script src="https://physics4fun.in/pyqs/sections/three.js"></script>
-<script src="https://physics4fun.in/pyqs/sections/four.js"></script>
-<script src="https://physics4fun.in/pyqs/sections/five.js"></script>
-<script src="https://physics4fun.in/pyqs/sections/notes_light_10.js"></script>
-<script src="https://physics4fun.in/pyqs/sections/notes_electricity_8.js"></script>
-
-<!-- ===================================================
-     APP LOGIC
-     =================================================== -->
 <script>
+/* ══════ STATE ══════ */
+let CUR = { grade:null, chapter:null, slug:null, hasPyq:false, section:'notes' };
 
-/* ─── NOTES DATA MAP ─── */
-const notesMap = {
-  'Light – Reflection & Refraction|10': notesLight10,
-  'Electricity|8': notesElectricity8,
-};
+/* ══════ PYQ TYPES ══════ */
+const PYQ_TYPES = [
+  {id:'mcq',  file:'msq.js',   varName:'mcqData',      label:'MCQs'},
+  {id:'ar',   file:'ar.js',    varName:'arData',        label:'A&R'},
+  {id:'one',  file:'one.js',   varName:'oneMarkData',   label:'1 Mark'},
+  {id:'two',  file:'two.js',   varName:'twoMarkData',   label:'2 Marks'},
+  {id:'three',file:'three.js', varName:'threeMarkData', label:'3 Marks'},
+  {id:'four', file:'four.js',  varName:'fourMarkData',  label:'4 Marks'},
+  {id:'five', file:'five.js',  varName:'fiveMarkData',  label:'5 Marks'},
+];
 
-let currentChapterKey = null;
-
-/* ─── RENDER NOTES ─── */
-function renderNotes(key) {
-  const wrap = document.getElementById('notes-content-wrap');
-  const data = notesMap[key];
-  if (!data) {
-    wrap.innerHTML = `<div class="notes-placeholder"><strong>📖 Notes</strong><br><br>Notes for this chapter will be available soon. Stay tuned!</div>`;
-    return;
-  }
-  const sectionsHTML = data.sections.map(sec => `
-    <div class="notes-section">
-      <div class="notes-section-heading">
-        <span class="n-sec-icon">${sec.icon || '📌'}</span>
-        ${sec.heading}
-      </div>
-      ${sec.content}
-    </div>
-  `).join('');
-  wrap.innerHTML = `
-    <div class="notes-title">${data.icon || '📖'} ${data.title} <span style="font-size:12px;font-weight:500;color:var(--text-muted);margin-left:4px;">Class ${data.grade}</span></div>
-    ${sectionsHTML}
-  `;
-}
-
-/* ─── BADGE HTML ─── */
-function badgesHTML(q){
-  return (q.set ? `<div class="set-badge">${q.set}</div>` : '')
-       + `<div class="year-badge">${q.year}</div>`;
-}
-
-/* ─── RENDER MCQ ─── */
-function renderMCQ(){
-  const sec = document.getElementById('pyq-mcq');
-  mcqQuestions.forEach(q => {
-    const card = document.createElement('div');
-    card.className = 'mcq-card';
-    const opts = Object.entries(q.options).map(([k,v]) =>
-      `<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`
-    ).join('');
-    card.innerHTML = `
-      <div class="qno mcq"></div>
-      <div style="flex:1">${q.question}
-        <div class="options" data-answer="${q.answer}">${opts}</div>
-        <div class="explanation">Explanation will be updated shortly</div>
-      </div>
-      <div style="display:flex;gap:5px;margin-left:auto;flex-shrink:0;">${badgesHTML(q)}</div>`;
-    sec.appendChild(card);
+/* ══════ SCRIPT LOADER ══════ */
+function loadScript(url) {
+  return new Promise(res => {
+    if (document.querySelector(`script[data-src="${url}"]`)) { res(); return; }
+    const s = document.createElement('script');
+    s.dataset.src = url; s.src = url;
+    s.onload = s.onerror = () => res();
+    document.head.appendChild(s);
   });
 }
 
-/* ─── RENDER A&R ─── */
-function renderAR(){
-  const sec = document.getElementById('pyq-ar');
-  arQuestions.forEach(q => {
-    const card = document.createElement('div');
-    card.className = 'mcq-card';
-    card.innerHTML = `
-      <div class="qno ar"></div>
-      <div style="flex:1">
-        <b>Assertion:</b> ${q.assertion}<br><b>Reason:</b> ${q.reason}
-        <div class="options ar" data-answer="${q.answer}">
-          <div class="option" data-opt="A"><span class="opt-label">A</span></div>
-          <div class="option" data-opt="B"><span class="opt-label">B</span></div>
-          <div class="option" data-opt="C"><span class="opt-label">C</span></div>
-          <div class="option" data-opt="D"><span class="opt-label">D</span></div>
-        </div>
-        <div class="explanation">Explanation will be updated shortly</div>
-      </div>
-      <div style="display:flex;gap:5px;margin-left:auto;flex-shrink:0;">${badgesHTML(q)}</div>`;
-    sec.appendChild(card);
-  });
+/* ══════ SIDEBAR ══════ */
+function toggleGrade(id, row) {
+  const list = document.getElementById(id), open = list.classList.contains('open');
+  document.querySelectorAll('.chapter-list').forEach(x => x.classList.remove('open'));
+  document.querySelectorAll('.grade-row').forEach(x => x.classList.remove('open'));
+  if (!open) { list.classList.add('open'); row.classList.add('open'); }
 }
 
-/* ─── RENDER WRITTEN ─── */
-function renderWritten(data, secId, cls){
-  const sec = document.getElementById('pyq-' + secId);
-  data.forEach(q => {
-    const item = document.createElement('div');
-    item.className = 'question-item';
-    item.innerHTML = `
-      <div class="qno ${cls}"></div>
-      <div style="flex:1">${q.question}
-        <div class="explanation">Explanation will be updated shortly</div>
-      </div>
-      <div style="display:flex;gap:5px;margin-left:auto;flex-shrink:0;">${badgesHTML(q)}</div>`;
-    sec.appendChild(item);
-  });
-}
+function toggleSidebar() { document.getElementById('sidebar').classList.toggle('hide'); }
 
-/* render everything on load */
-renderMCQ();
-renderAR();
-renderWritten(twoMarkQuestions,   'two',   'two');
-renderWritten(threeMarkQuestions, 'three', 'three');
-renderWritten(fourMarkQuestions,  'four',  'four');
-renderWritten(fiveMarkQuestions,  'five',  'five');
-
-
-/* ─── SIDEBAR: GRADE TOGGLE ─── */
-function toggleGrade(id, row){
-  const list = document.getElementById(id);
-  const isOpen = list.classList.contains('open');
-  document.querySelectorAll('.chapter-list').forEach(l => l.classList.remove('open'));
-  document.querySelectorAll('.grade-row').forEach(r => r.classList.remove('open'));
-  if(!isOpen){ list.classList.add('open'); row.classList.add('open'); }
-}
-
-/* ─── SELECT CHAPTER ─── */
-function selectChapter(name, grade, icon, el){
-  if(el.classList.contains('unavailable')){ showUnavailable(name); return; }
-
+/* ══════ CHAPTER SELECT ══════ */
+function selectChapter(name, grade, icon, el, hasPyq, slug) {
   document.querySelectorAll('.ch-item').forEach(i => i.classList.remove('active'));
   el.classList.add('active');
+  CUR = { grade, chapter:name, slug, hasPyq, section:'notes' };
 
-  document.getElementById('bc-grade').textContent   = 'Class ' + grade;
+  document.getElementById('bc-grade').textContent = 'Class ' + grade;
   document.getElementById('bc-chapter').textContent = icon + ' ' + name.replace(/&amp;/g,'&');
-  document.getElementById('breadcrumb').style.display = 'flex';
-
+  document.getElementById('breadcrumb').classList.add('visible');
   document.getElementById('welcome').style.display = 'none';
   document.getElementById('sectionBar').classList.add('visible');
 
-  /* store context for notes */
-  currentChapterKey = name.replace(/&amp;/g,'&') + '|' + grade;
-  const hasNotes = !!notesMap[currentChapterKey];
+  const pyqBtn = document.getElementById('btn-pyq');
+  pyqBtn.style.display = hasPyq ? 'flex' : 'none';
 
-  /* update Notes button appearance */
-  const noteBtn = document.querySelector('.sec-btn:nth-child(2)');
-  if(hasNotes){ noteBtn.classList.remove('coming'); }
-  else { noteBtn.classList.add('coming'); }
-
-  /* activate PYQ by default */
-  document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector('.sec-btn').classList.add('active');
-
-  const hasPyq = !!document.getElementById('pyq-mcq').children.length;
-  document.getElementById('pyq-panel').style.display   = 'block';
-  document.getElementById('notes-panel').style.display = 'none';
-  document.getElementById('pyq-tabbar').classList.add('visible');
-
-  /* reset to MCQ tab */
-  showPyqSec('mcq', document.querySelector('.pyq-tab'));
+  switchSection('notes', document.getElementById('btn-notes'));
   document.getElementById('content').scrollTop = 0;
+
+  // Mobile: auto-close sidebar
+  if (window.innerWidth <= 640) document.getElementById('sidebar').classList.add('hide');
 }
 
-/* ─── SECTION BAR SWITCH ─── */
-function switchSection(type, el){
-  if(el.classList.contains('coming')){ showUnavailable('This section'); return; }
+/* ══════ SECTION SWITCH ══════ */
+function switchSection(type, el) {
+  CUR.section = type;
   document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
-  const isPyq   = type === 'pyq';
-  const isNotes = type === 'notes';
-  document.getElementById('pyq-panel').style.display   = isPyq   ? 'block' : 'none';
-  document.getElementById('notes-panel').style.display = isNotes ? 'block' : 'none';
-  document.getElementById('pyq-tabbar').classList.toggle('visible', isPyq);
-  if(isNotes){ renderNotes(currentChapterKey); document.getElementById('content').scrollTop = 0; }
-}
+  ['notes','desc','mock','ppt','flash','sim','games','pyq'].forEach(p => {
+    const panel = document.getElementById('panel-'+p);
+    if (panel) panel.style.display = 'none';
+  });
+  document.getElementById('pyq-tabbar').classList.toggle('visible', type === 'pyq');
+  const panel = document.getElementById('panel-'+type);
+  if (panel) panel.style.display = 'block';
 
-/* ─── PYQ TAB SWITCH ─── */
-function showPyqSec(id, el){
-  document.querySelectorAll('.pyq-tab').forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
-  document.querySelectorAll('.pyq-section').forEach(s => s.style.display = 'none');
-  document.getElementById('pyq-' + id).style.display = 'block';
-  document.getElementById('content').scrollTop = 0;
-}
-
-/* ─── MCQ CHECK ─── */
-document.addEventListener('click', function(e){
-  const opt = e.target.closest('.option');
-  if(!opt) return;
-  const box = opt.closest('.options');
-  if(!box || box.classList.contains('answered')) return;
-  const correct  = box.dataset.answer;
-  const selected = opt.dataset.opt;
-  box.classList.add('answered');
-  if(selected === correct){ opt.classList.add('correct'); }
-  else{
-    opt.classList.add('wrong');
-    box.querySelector(`[data-opt="${correct}"]`).classList.add('correct');
+  switch(type) {
+    case 'notes': loadNotes(); break;
+    case 'desc':  loadDesc(); break;
+    case 'mock':  loadMock(); break;
+    case 'ppt':   loadPPT(); break;
+    case 'flash': loadFlash(); break;
+    case 'sim':   loadSim(); break;
+    case 'games': loadGames(); break;
+    case 'pyq':
+      if (CUR.hasPyq) loadPYQ();
+      else renderNoPYQ();
+      showPyqSec('mcq', document.querySelector('.pyq-tab.t-mcq'));
+      break;
   }
-});
-
-/* ─── EXPLANATION TOGGLE ─── */
-document.addEventListener('click', function(e){
-  if(e.target.closest('.option')) return;
-  const card = e.target.closest('.mcq-card,.question-item');
-  if(!card) return;
-  const exp = card.querySelector('.explanation');
-  if(!exp) return;
-  exp.style.display = exp.style.display === 'block' ? 'none' : 'block';
-});
-
-/* ─── SIDEBAR TOGGLE ─── */
-function toggleSidebar(){
-  document.getElementById('sidebar').classList.toggle('hide');
+  document.getElementById('content').scrollTop = 0;
 }
 
-/* ─── THEME TOGGLE ─── */
-function toggleTheme(){
+/* ══════ NOTES ══════ */
+async function loadNotes() {
+  const wrap = document.getElementById('notes-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'📖','Notes','Notes for this chapter are being prepared. Check back soon!'); return; }
+  wrap.innerHTML = spinnerHTML('📖','Loading notes…');
+  window.chapterNotes = undefined;
+  document.querySelectorAll('[data-note]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.note = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/note.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.chapterNotes ? renderNotes(window.chapterNotes, wrap)
+    : renderComingSoon(wrap,'📖','Notes','Notes for this chapter are being prepared.');
+}
+
+function renderNotes(d, wrap) {
+  wrap.innerHTML = `<div class="notes-title"><span class="n-sec-icon" style="width:38px;height:38px;font-size:20px;">${d.icon||'📖'}</span>${d.title}<span style="font-size:11px;font-weight:500;color:var(--text-muted);margin-left:4px;">Class ${d.grade}</span></div>`
+    + (d.sections||[]).map(s =>
+      `<div class="notes-section"><div class="notes-section-heading"><span class="n-sec-icon">${s.icon||'📌'}</span>${s.heading}</div>${s.content}</div>`
+    ).join('');
+  // Trigger MathJax rendering for formulas in notes
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+
+/* ══════ DESCRIPTIVE ══════ */
+async function loadDesc() {
+  const wrap = document.getElementById('desc-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'✏️','Descriptive Questions','Questions being prepared.'); return; }
+  window.descqData = undefined;
+  document.querySelectorAll('[data-descq]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.descq = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/descq.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.descqData && window.descqData.length
+    ? renderDesc(window.descqData, wrap)
+    : renderComingSoon(wrap,'✏️','Descriptive Questions','Long-answer questions for this chapter are being added. Add them in <code>descq.js</code>');
+}
+
+function renderDesc(data, wrap) {
+  wrap.innerHTML = data.map((q,i) =>
+    `<div class="desc-card">
+      <div class="desc-q-num">Question ${i+1}</div>
+      <div class="desc-q-text">${q.question}</div>
+      <span class="desc-q-marks">${q.marks||'?'} Mark${(q.marks||1)>1?'s':''}</span>
+      <button class="desc-ans-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'▼ Hide Answer':'▶ Show Answer'">▶ Show Answer</button>
+      <div class="desc-answer">${q.answer||'Answer coming soon.'}</div>
+    </div>`
+  ).join('');
+  // Trigger MathJax rendering
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+
+/* ══════ MOCK TEST ══════ */
+async function loadMock() {
+  const wrap = document.getElementById('mock-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🎯','Mock Test','Mock tests coming soon!'); return; }
+  window.mockTestData = undefined;
+  document.querySelectorAll('[data-mock]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.mock = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/mocktest.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.mockTestData
+    ? renderMock(window.mockTestData, wrap)
+    : renderComingSoon(wrap,'🎯','Mock Test','Mock test for this chapter is being prepared. Add questions in <code>mocktest.js</code>');
+}
+
+function renderMock(d, wrap) {
+  let html = `<div class="mock-header"><span class="mock-icon">🎯</span><div class="mock-info"><h3>${d.title}</h3><p>Test your understanding chapter-wise!</p><div class="mock-badges"><span class="mock-badge">⏱ ${d.duration} min</span><span class="mock-badge">📝 ${d.questions.length} Qs</span><span class="mock-badge">⭐ ${d.totalMarks} Marks</span></div></div></div>`;
+  html += d.questions.map((q,i) =>
+    `<div class="mock-q-card"><div class="mock-q-num">Question ${i+1}</div><div class="mock-q-text">${q.question}</div>
+    <div class="mock-options" data-answer="${q.answer}" data-idx="${i}">
+      ${Object.entries(q.options).map(([k,v])=>`<div class="mock-opt" data-opt="${k}" onclick="pickMockOpt(this)"><span class="mock-opt-label">${k}</span>${v}</div>`).join('')}
+    </div>
+    <div class="mock-exp" id="mexp${i}">${q.explanation||'Explanation coming soon.'}</div></div>`
+  ).join('');
+  html += `<button id="mock-submit" onclick="submitMock(${d.questions.length},${d.totalMarks})">✅ Submit Test</button><div id="mock-score"></div>`;
+  wrap.innerHTML = html;
+}
+
+function pickMockOpt(opt) {
+  const box = opt.closest('.mock-options');
+  if (box.classList.contains('answered')) return;
+  box.querySelectorAll('.mock-opt').forEach(o => { o.classList.remove('selected'); delete o.dataset.selected; });
+  opt.classList.add('selected'); opt.dataset.selected = '1';
+}
+
+function submitMock(total, totalMarks) {
+  let correct = 0;
+  document.querySelectorAll('.mock-options').forEach(box => {
+    box.classList.add('answered');
+    const ans = box.dataset.answer, idx = box.dataset.idx;
+    const sel = box.querySelector('[data-selected]');
+    if (sel) { if (sel.dataset.opt === ans) { sel.classList.add('correct'); correct++; } else sel.classList.add('wrong'); }
+    const corrEl = box.querySelector(`[data-opt="${ans}"]`); if (corrEl) corrEl.classList.add('correct');
+    const exp = document.getElementById('mexp'+idx); if (exp) exp.classList.add('open');
+  });
+  const score = document.getElementById('mock-score'); score.style.display='block';
+  const pct = Math.round(correct/total*100);
+  score.innerHTML = `<h3>${pct>=80?'🏆':pct>=60?'✅':pct>=40?'📚':'💪'} ${correct}/${total} — ${pct}%</h3><p>${pct>=80?'Excellent work!':pct>=60?'Good job!':pct>=40?'Keep practising!':'Review your notes and retry!'}</p>`;
+  score.scrollIntoView({behavior:'smooth',block:'center'});
+  document.getElementById('mock-submit').style.display='none';
+}
+
+/* ══════ PPT ══════ */
+async function loadPPT() {
+  const wrap = document.getElementById('ppt-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'📊','PPTs','Slide decks coming soon!'); return; }
+  window.pptsData = undefined;
+  document.querySelectorAll('[data-ppt]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.ppt = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/ppts.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.pptsData && window.pptsData.length
+    ? (wrap.innerHTML = `<div class="ppt-grid">${window.pptsData.map(p=>`<div class="ppt-card" onclick="window.open('${p.url}','_blank')"><div class="ppt-thumb">${p.icon||'📊'}</div><div class="ppt-name">${p.title}</div><div class="ppt-slides">${p.slides||'?'} slides</div></div>`).join('')}</div>`)
+    : renderComingSoon(wrap,'📊','PPTs / Slides','Chapter slide decks are being prepared. Add PPT links in <code>ppts.js</code>');
+}
+
+/* ══════ FLASH CARDS ══════ */
+async function loadFlash() {
+  const wrap = document.getElementById('flash-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🃏','Flash Cards','Flash cards coming soon!'); return; }
+  window.flashcardsData = undefined;
+  document.querySelectorAll('[data-flash]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.flash = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/flashcards.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.flashcardsData && window.flashcardsData.length
+    ? renderFlash(window.flashcardsData, wrap)
+    : renderComingSoon(wrap,'🃏','Flash Cards','Flash cards coming soon. Add cards in <code>flashcards.js</code>');
+}
+
+function renderFlash(data, wrap) {
+  wrap.innerHTML = `<div class="flashcard-controls">
+    <button class="fc-ctrl-btn" onclick="document.querySelectorAll('.flashcard').forEach(c=>c.classList.toggle('flipped'))">🔄 Flip All</button>
+    <button class="fc-ctrl-btn" onclick="shuffleCards()">🔀 Shuffle</button>
+    <span class="fc-count">${data.length} cards</span>
+  </div>
+  <div class="flashcard-wrap" id="fc-wrap">`
+  + data.map((c,i)=>
+    `<div class="flashcard" id="fc${i}" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-face fc-front"><div class="fc-label">Question</div><div class="fc-text">${c.front}</div><div class="fc-hint">Tap to flip ↩</div></div>
+        <div class="fc-face fc-back"><div class="fc-label">Answer</div><div class="fc-text">${(c.back||'').replace(/\n/g,'<br>')}</div></div>
+      </div>
+    </div>`
+  ).join('') + `</div>`;
+}
+
+function shuffleCards() {
+  const w = document.getElementById('fc-wrap'); if (!w) return;
+  [...w.children].sort(()=>Math.random()-.5).forEach(c=>w.appendChild(c));
+}
+
+/* ══════ SIMULATIONS ══════ */
+async function loadSim() {
+  const wrap = document.getElementById('sim-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🔬','Simulations','Interactive simulations coming soon!'); return; }
+  window.simulationsData = undefined;
+  document.querySelectorAll('[data-sim]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.sim = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/simulations.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.simulationsData && window.simulationsData.length
+    ? renderSim(window.simulationsData, wrap)
+    : renderComingSoon(wrap,'🔬','Simulations','Simulations for this chapter are being built. Add them in <code>simulations.js</code>');
+}
+
+function renderSim(data, wrap) {
+  wrap.dataset.simJson = JSON.stringify(data.map(s=>({title:s.title,icon:s.icon,description:s.description})));
+  wrap.innerHTML = `<div class="sim-list">`
+    + data.map((s,i)=>
+      `<div class="sim-card">
+        <div class="sim-header" onclick="toggleSim(${i})">
+          <span class="sim-icon-3d">${s.icon||'🔬'}</span>
+          <div><div class="sim-title">${s.title}</div><div class="sim-desc">${s.description||''}</div></div>
+          <button class="sim-launch-btn" id="simBtn${i}">▶ Launch</button>
+        </div>
+        <div class="sim-embed" id="simEmbed${i}">
+          <iframe class="sim-iframe" id="simFrame${i}" height="320" sandbox="allow-scripts"></iframe>
+        </div>
+      </div>`
+    ).join('') + `</div>`;
+  // Store html separately
+  wrap._simHtmls = data.map(s=>s.html);
+}
+
+function toggleSim(i) {
+  const embed = document.getElementById('simEmbed'+i);
+  const btn = document.getElementById('simBtn'+i);
+  const frame = document.getElementById('simFrame'+i);
+  const open = embed.classList.toggle('open');
+  btn.textContent = open ? '✕ Close' : '▶ Launch';
+  if (open && !frame.dataset.loaded) {
+    const wrap = document.getElementById('sim-content-wrap');
+    if (wrap._simHtmls && wrap._simHtmls[i]) {
+      frame.srcdoc = wrap._simHtmls[i];
+      frame.dataset.loaded = '1';
+    }
+  }
+}
+
+/* ══════ GAMES & PUZZLES ══════ */
+async function loadGames() {
+  const wrap = document.getElementById('games-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🎮','Games & Puzzles','Interactive games and puzzles coming soon!'); return; }
+  window.gamesData = undefined;
+  document.querySelectorAll('[data-games]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.games = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/games.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.gamesData && window.gamesData.length
+    ? renderGames(window.gamesData, wrap)
+    : renderComingSoon(wrap,'🎮','Games & Puzzles','Games and puzzles for this chapter are coming soon. Add them in <code>games.js</code>');
+}
+
+function renderGames(data, wrap) {
+  wrap.innerHTML = `<div class="games-grid">`
+    + data.map((g,i)=>
+      `<div class="game-card" onclick="toggleGame(${i})">
+        <div class="game-header">
+          <div class="game-icon">${g.icon||'🎮'}</div>
+          <div class="game-title">${g.title}</div>
+        </div>
+        <div class="game-desc">${g.description||''}</div>
+        <span class="game-badge">${g.type||'Interactive'}</span>
+        <div class="game-content" id="gameContent${i}">
+          <div id="gameArea${i}"></div>
+        </div>
+      </div>`
+    ).join('') + `</div>`;
+  wrap._gamesData = data;
+}
+
+function toggleGame(i) {
+  const content = document.getElementById('gameContent'+i);
+  const area = document.getElementById('gameArea'+i);
+  const open = content.classList.toggle('open');
+  
+  if (open && !area.dataset.loaded) {
+    const wrap = document.getElementById('games-content-wrap');
+    if (wrap._gamesData && wrap._gamesData[i]) {
+      const game = wrap._gamesData[i];
+      if (game.html) {
+        area.innerHTML = game.html;
+        area.dataset.loaded = '1';
+        // Execute any game-specific JavaScript
+        if (game.init && typeof game.init === 'function') {
+          game.init(area);
+        }
+      }
+    }
+  }
+}
+
+/* ══════ PYQ LOADER ══════ */
+async function loadPYQ() {
+  if (!CUR.slug || !CUR.hasPyq) { renderNoPYQ(); return; }
+  // Clear + show loading
+  PYQ_TYPES.forEach(t => {
+    const el = document.getElementById('pyq-'+t.id);
+    if (el) { el.innerHTML = spinnerHTML('📋','Loading…'); window[t.varName] = undefined; }
+  });
+  // Remove stale scripts
+  document.querySelectorAll('[data-pyq]').forEach(s=>s.remove());
+  // Load all 7 PYQ files in parallel
+  await Promise.all(PYQ_TYPES.map(t => {
+    const s = document.createElement('script');
+    s.dataset.pyq = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/pyqs/${t.file}`;
+    document.head.appendChild(s);
+    return new Promise(res => { s.onload = s.onerror = res; });
+  }));
+  renderAllPYQ();
+}
+
+function renderAllPYQ() {
+  PYQ_TYPES.forEach(t => {
+    const el = document.getElementById('pyq-'+t.id); if (!el) return;
+    el.innerHTML = '';
+    const data = window[t.varName];
+    if (!data || !data.length) {
+      el.innerHTML = `<div class="no-content-state"><div class="no-content-icon">📭</div><h3>No ${t.label} yet</h3><p>Add questions in <code>${t.file}</code> for this chapter.</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
+      return;
+    }
+    if (t.id==='mcq') renderMCQSection(data,el);
+    else if (t.id==='ar') renderARSection(data,el);
+    else renderWrittenSection(data,el,t.id);
+  });
+}
+
+function badges(q) {
+  return `<div class="mcq-card-badges">
+    ${q.set?`<span class="set-badge">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+  </div>`;
+}
+
+function renderMCQSection(data, el) {
+  data.forEach((q, idx) => {
+    const c = document.createElement('div'); c.className='mcq-card';
+    c.innerHTML = `<div class="mcq-card-top">
+      <div class="qno mcq">${idx+1}</div>
+      <div style="flex:1">
+        <div style="font-size:13.5px;line-height:1.8;margin-bottom:9px;">${q.question}</div>
+        <div class="options" data-answer="${q.answer}">
+          ${Object.entries(q.options).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}
+        </div>
+        <div class="explanation">💡 Explanation will be updated shortly.</div>
+      </div>
+    </div>${badges(q)}`;
+    el.appendChild(c);
+  });
+  // Trigger MathJax rendering
+  if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
+}
+
+function renderARSection(data, el) {
+  const opts = {A:'Both A & R true; R is correct explanation',B:'Both A & R true; R is not correct explanation',C:'A is true, R is false',D:'A is false, R is true'};
+  data.forEach((q, idx) => {
+    const c = document.createElement('div'); c.className='mcq-card';
+    c.innerHTML = `<div class="mcq-card-top">
+      <div class="qno ar">${idx+1}</div>
+      <div style="flex:1">
+        <div style="font-size:13px;line-height:1.8;margin-bottom:5px;"><strong>Assertion:</strong> ${q.assertion}</div>
+        <div style="font-size:13px;line-height:1.8;margin-bottom:9px;"><strong>Reason:</strong> ${q.reason}</div>
+        <div class="options" data-answer="${q.answer}">
+          ${Object.entries(opts).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}
+        </div>
+        <div class="explanation">💡 Explanation will be updated shortly.</div>
+      </div>
+    </div>${badges(q)}`;
+    el.appendChild(c);
+  });
+  // Trigger MathJax rendering
+  if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
+}
+
+function renderWrittenSection(data, el, type) {
+  data.forEach((q, idx) => {
+    const item = document.createElement('div'); item.className='question-item';
+    item.innerHTML = `<div class="question-item-top">
+      <div class="qno ${type}">${idx+1}</div>
+      <div style="flex:1">
+        <div style="font-size:13.5px;line-height:1.8;">${q.question}</div>
+        <div class="explanation">${q.answer||'Answer will be updated shortly.'}</div>
+      </div>
+    </div><div class="question-item-badges">
+      ${q.set?`<span class="set-badge">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+    </div>`;
+    el.appendChild(item);
+  });
+  // Trigger MathJax rendering
+  if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
+}
+
+function renderNoPYQ() {
+  PYQ_TYPES.forEach(t => {
+    const el = document.getElementById('pyq-'+t.id); if (!el) return;
+    el.innerHTML = `<div class="no-content-state"><div class="no-content-icon">📚</div><h3>PYQs available for Class 10 &amp; 12 only</h3><p>Board exam previous year questions are provided for Class 10 and Class 12 chapters.</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
+  });
+}
+
+function showPyqSec(id, el) {
+  document.querySelectorAll('.pyq-tab').forEach(t=>t.classList.remove('active'));
+  if(el) el.classList.add('active');
+  document.querySelectorAll('.pyq-section').forEach(s=>s.style.display='none');
+  const sec = document.getElementById('pyq-'+id); if(sec) sec.style.display='block';
+  document.getElementById('content').scrollTop=0;
+}
+
+/* ══════ MCQ CLICK HANDLERS ══════ */
+document.addEventListener('click', e => {
+  const opt = e.target.closest('.option'); if (!opt) return;
+  const box = opt.closest('.options'); if (!box || box.classList.contains('answered')) return;
+  const ans = box.dataset.answer, sel = opt.dataset.opt;
+  box.classList.add('answered');
+  if (sel===ans) opt.classList.add('correct');
+  else { opt.classList.add('wrong'); const c=box.querySelector(`[data-opt="${ans}"]`); if(c) c.classList.add('correct'); }
+});
+
+document.addEventListener('click', e => {
+  if (e.target.closest('.option,.mock-opt')) return;
+  const card = e.target.closest('.mcq-card,.question-item'); if (!card) return;
+  const exp = card.querySelector('.explanation'); if (exp) exp.style.display = exp.style.display==='block'?'none':'block';
+});
+
+/* ══════ HELPERS ══════ */
+function spinnerHTML(icon, msg) {
+  return `<div class="no-content-state"><div class="no-content-icon">${icon}</div><p style="color:var(--text-muted)">${msg}</p></div>`;
+}
+function renderComingSoon(wrap, icon, name, msg) {
+  wrap.innerHTML = `<div class="no-content-state"><div class="no-content-icon">${icon}</div><h3>${name}</h3><p>${msg}</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
+}
+
+/* ══════ THEME ══════ */
+function toggleTheme() {
   document.body.classList.toggle('light');
-  document.getElementById('themeBtn').textContent =
-    document.body.classList.contains('light') ? '☀️' : '🌙';
+  document.getElementById('themeBtn').textContent = document.body.classList.contains('light')?'🌙':'☀️';
 }
 
-/* ─── COMING SOON TOAST ─── */
-function showUnavailable(name){
+/* ══════ MOBILE / DESKTOP VIEW TOGGLE ══════ */
+let mobileMode = false;
+function toggleViewMode() {
+  mobileMode = !mobileMode;
+  const contentWrap = document.getElementById('contentWrap');
+  const sidebar = document.getElementById('sidebar');
+  const btn = document.getElementById('viewToggleBtn');
+  
+  if (mobileMode) {
+    // Switch to mobile-optimized layout
+    contentWrap.style.maxWidth = '100%';
+    contentWrap.style.width = '100%';
+    sidebar.classList.add('hide');
+    btn.textContent = '🖥️';
+    btn.classList.add('toggled');
+    btn.title = 'Switch to Desktop View';
+    showToast('📱 Mobile Layout - Optimized for small screens');
+  } else {
+    // Switch to desktop layout
+    contentWrap.style.maxWidth = '';
+    contentWrap.style.width = '';
+    sidebar.classList.remove('hide');
+    btn.textContent = '📱';
+    btn.classList.remove('toggled');
+    btn.title = 'Switch to Mobile Layout';
+    showToast('🖥️ Desktop Layout - Full view');
+  }
+}
+
+/* ══════ TOAST ══════ */
+function showToast(msg) {
   const t = document.getElementById('toast');
-  t.textContent = '⏳  ' + name + ' — Coming Soon!';
-  t.classList.add('show');
-  clearTimeout(window._tt);
-  window._tt = setTimeout(() => t.classList.remove('show'), 2600);
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(window._tt); window._tt = setTimeout(()=>t.classList.remove('show'),2600);
 }
 
-/* ─── OPEN CLASS 10 ON LOAD ─── */
+/* ══════ INIT ══════ */
 window.addEventListener('DOMContentLoaded', () => {
-  toggleGrade('g10', document.querySelector('.grade-row'));
+  const cbseG10 = document.querySelector('[onclick*="\'cbse-g10\'"]');
+  if (cbseG10) toggleGrade('cbse-g10', cbseG10);
 });
-
 </script>
 </body>
 </html>
