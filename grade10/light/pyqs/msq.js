@@ -16,7 +16,17 @@ window.mcqData = [
     options:{A:"20 cm",B:"40 cm",C:"50 cm",D:"More than 50 cm"},
     answer:"D", set:"31/5/1", year:"2026"
   },
-
+  {
+    question:"A 5 cm long rod is placed vertically in front of a concave mirror. If its 5 cm long image is formed at 20 cm in front of the mirror, the focal length of the mirror is:",
+    options:{A:"-20 cm",B:"-10 cm",C:"-5 cm",D:"20 cm"},
+    answer:"B", set:"31/S/1", year:"2025"
+  },
+  {
+    question:"An optical device which always produces images of m = + 1 is:",
+    options:{A:"Plane mirror",B:"Convex mirror ",C:"Concave mirror",D:"Convex lens"},
+    answer:"A", set:"31/S/1", year:"2025"
+  },
+   
    
   {
     question:"An object is placed at a distance of 30 cm from the pole of a concave mirror. If its real and inverted image is formed at 60 cm in front of the mirror, the focal length of the mirror is:",
