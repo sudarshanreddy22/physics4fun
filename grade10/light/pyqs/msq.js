@@ -11,6 +11,13 @@ window.mcqData = [
     options:{A:"Concave mirror; Nature of image - real",B:"Concave mirror; Nature of image - virtual",C:"Convex mirror; Nature of image - real",D:"Convex mirror; Nature of image - virtual"},
     answer:"A", set:"31/2/1", year:"2026"
   },
+{
+    question:"Rays from the sun converge at a point 25 cm behind convex lens. The distance at which an object be placed in front of the lens to get a virtual image, is:",
+    options:{A:"20 cm",B:"40 cm",C:"50 cm",D:"More than 50 cm"},
+    answer:"D", set:"31/5/1", year:"2026"
+  },
+
+   
   {
     question:"An object is placed at a distance of 30 cm from the pole of a concave mirror. If its real and inverted image is formed at 60 cm in front of the mirror, the focal length of the mirror is:",
     options:{A:"– 15 cm",B:"– 20 cm",C:"+ 20 cm",D:"+ 15 cm"},
@@ -26,9 +33,8 @@ window.mcqData = [
     options:{A:"10/9",B:"9/10",C:"9/8",D:"8/9"},
     answer:"A", set:"31/2/1", year:"2025"
   },
-  {
-    question:"Rays from the sun converge at a point 25 cm behind convex lens. The distance at which an object be placed in front of the lens to get a virtual image, is:",
-    options:{A:"20 cm",B:"40 cm",C:"50 cm",D:"More than 50 cm"},
-    answer:"D", set:"31/5/1", year:"2026"
-  },
+
+
+
+   
 ];
