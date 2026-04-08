@@ -5,11 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Physics4Fun — CBSE Physics Grades 6–12</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!-- MathJax for LaTeX formula rendering -->
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 <script>
 window.MathJax = {
-  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true },
-  svg: { fontCache: 'global' }
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  svg: {
+    fontCache: 'global'
+  }
 };
 </script>
 <style>
@@ -29,6 +36,8 @@ window.MathJax = {
   --sbg-mock:rgba(251,191,36,0.12);--sbg-ppt:rgba(248,113,113,0.12);
   --sbg-flash:rgba(192,132,252,0.12);--sbg-sim:rgba(56,189,248,0.12);
   --sbg-pyq:rgba(251,146,60,0.12);--sbg-games:rgba(16,185,129,0.12);
+  --pyq-mcq:#7c3aed;--pyq-ar:#f97316;--pyq-two:#16a34a;
+  --pyq-three:#dc2626;--pyq-four:#0ea5e9;--pyq-five:#ec4899;
 }
 body.light{
   --bg:#f0f4fb;--bg2:#ffffff;--bg3:#f4f7fe;
@@ -39,6 +48,12 @@ body.light{
   --item-hover:#f1f5f9;--item-active:#eff6ff;--item-active-border:#4f46e5;
   --divider:#e5e7eb;--brand:#4f46e5;--accent1:#4f46e5;--accent2:#0891b2;--accent3:#d97706;
   --grade-pill-bg:#ede9fe;--scrollthumb:#cbd5e1;
+  --col-notes:#4f46e5;--col-desc:#059669;--col-mock:#d97706;
+  --col-ppt:#dc2626;--col-flash:#7c3aed;--col-sim:#0284c7;--col-pyq:#ea580c;--col-games:#059669;
+  --sbg-notes:rgba(79,70,229,0.08);--sbg-desc:rgba(5,150,105,0.08);
+  --sbg-mock:rgba(217,119,6,0.08);--sbg-ppt:rgba(220,38,38,0.08);
+  --sbg-flash:rgba(124,58,237,0.08);--sbg-sim:rgba(2,132,199,0.08);
+  --sbg-pyq:rgba(234,88,12,0.08);--sbg-games:rgba(5,150,105,0.08);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;}
@@ -46,9 +61,10 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 ::-webkit-scrollbar{width:4px;height:4px;}
 ::-webkit-scrollbar-thumb{background:var(--scrollthumb);border-radius:4px;}
 
-/* ── HEADER & LAYOUT ── */
+/* ── HEADER ── */
 .header{display:flex;align-items:center;height:52px;padding:0 12px;background:var(--header-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--divider);flex-shrink:0;z-index:60;gap:8px;}
 .brand{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;background:linear-gradient(130deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.5px;}
+.brand-tag{font-size:8.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:20px;background:var(--sbg-notes);color:var(--col-notes);border:1px solid rgba(99,102,241,0.25);}
 .header-center{flex:1;display:flex;align-items:center;justify-content:center;}
 .breadcrumb{display:none;align-items:center;gap:5px;}
 .breadcrumb.visible{display:flex;}
@@ -58,389 +74,1185 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .header-right{display:flex;align-items:center;gap:6px;margin-left:auto;}
 .icon-btn{width:32px;height:32px;border-radius:8px;border:1px solid var(--divider);background:var(--card-bg);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .15s;flex-shrink:0;}
 .icon-btn:hover{background:var(--item-hover);border-color:var(--brand);}
+.icon-btn.toggled{background:var(--sbg-sim);border-color:var(--col-sim);}
 
+/* ── LAYOUT ── */
 .main{display:flex;flex:1;overflow:hidden;}
 
 /* ── SIDEBAR ── */
 .sidebar{width:244px;min-width:244px;background:var(--sidebar-bg);border-right:1px solid var(--sidebar-border);display:flex;flex-direction:column;overflow:hidden;transition:width .25s,min-width .25s,opacity .2s;}
 .sidebar.hide{width:0;min-width:0;opacity:0;pointer-events:none;}
 .sb-inner{flex:1;overflow-y:auto;padding:8px 5px 24px;}
-.sb-label{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);padding:12px 10px 4px;}
+.sb-label{font-size:8.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);padding:12px 10px 4px;display:flex;align-items:center;gap:6px;}
+.sb-label::after{content:'';flex:1;height:1px;background:var(--divider);}
 .grade-row{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:10px;cursor:pointer;margin-bottom:2px;border:1px solid transparent;transition:all .14s;user-select:none;}
 .grade-row:hover{background:var(--item-hover);}
 .grade-row.open{background:var(--item-active);border-color:var(--item-active-border);}
-.grade-pill{font-size:10px;font-weight:800;padding:2px 8px;border-radius:20px;background:linear-gradient(130deg,var(--accent1),var(--accent2));color:#fff;flex-shrink:0;}
+.grade-pill{font-size:10px;font-weight:800;padding:2px 8px;border-radius:20px;background:linear-gradient(130deg,var(--accent1),var(--accent2));color:#fff;flex-shrink:0;min-width:24px;text-align:center;}
 .grade-label{font-size:12.5px;font-weight:700;color:var(--text);flex:1;}
+.grade-sub{font-size:9px;color:var(--text-muted);}
+.grade-arrow{font-size:9px;color:var(--text-muted);transition:transform .2s;}
+.grade-row.open .grade-arrow{transform:rotate(90deg);color:var(--brand);}
 .chapter-list{display:none;margin:2px 0 4px 13px;border-left:2px solid var(--item-active-border);}
 .chapter-list.open{display:block;}
-.ch-item{display:flex;align-items:center;gap:7px;padding:6px 9px;border-radius:8px;cursor:pointer;font-size:11.5px;font-weight:600;color:var(--text-sub);margin-bottom:1px;transition:all .12s;}
+.ch-item{display:flex;align-items:center;gap:7px;padding:6px 9px;border-radius:8px;cursor:pointer;font-size:11.5px;font-weight:600;color:var(--text-sub);margin-bottom:1px;transition:all .12s;position:relative;}
 .ch-item:hover{background:var(--item-hover);color:var(--text);}
-.ch-item.active{color:var(--text);background:var(--item-active);padding-left:11px;border-left:3px solid var(--brand);}
+.ch-item.active{color:var(--text);background:var(--item-active);padding-left:11px;}
+.ch-item.active::before{content:'';position:absolute;left:-2px;top:5px;bottom:5px;width:3px;background:var(--brand);border-radius:2px;}
 .ch-icon{font-size:13px;flex-shrink:0;}
-.ch-pyq-badge{font-size:7.5px;font-weight:800;padding:1px 5px;border-radius:999px;background:var(--sbg-pyq);color:var(--col-pyq);border:1px solid rgba(251,146,60,0.3);}
+.ch-name{flex:1;line-height:1.35;}
+.ch-pyq-badge{font-size:7.5px;font-weight:800;padding:1px 5px;border-radius:999px;background:var(--sbg-pyq);color:var(--col-pyq);border:1px solid rgba(251,146,60,0.3);flex-shrink:0;letter-spacing:.3px;}
 
-/* ── CONTENT WRAP & SECTION BAR ── */
-.content-wrap{flex:1;display:flex;flex-direction:column;overflow:hidden;}
-.section-bar{display:none;align-items:center;gap:5px;padding:10px 16px;background:var(--bg2);border-bottom:1px solid var(--divider);overflow-x:auto;}
+/* ── CONTENT WRAP ── */
+.content-wrap{flex:1;display:flex;flex-direction:column;overflow:hidden;transition:max-width .3s;}
+
+/* ══════════════════════════════════════════
+   3D SECTION BAR
+══════════════════════════════════════════ */
+.section-bar{display:none;align-items:center;gap:5px;padding:10px 16px;background:var(--bg2);border-bottom:1px solid var(--divider);flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
 .section-bar::-webkit-scrollbar{display:none;}
 .section-bar.visible{display:flex;}
-.sec-btn{display:flex;align-items:center;gap:7px;padding:7px 13px;border-radius:12px;cursor:pointer;font-size:12px;font-weight:700;background:var(--card-bg);color:var(--text-sub);border:1px solid var(--card-border);transition:all .18s;white-space:nowrap;}
-.sec-btn.active{background:var(--sbg-notes);border-color:var(--col-notes);color:var(--col-notes);}
-.sec-icon-3d{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(99,102,241,.4),rgba(99,102,241,.15));}
 
-#pyq-tabbar{display:none;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;overflow-x:auto;}
+.sec-btn{
+  display:flex;align-items:center;gap:7px;padding:7px 13px;border-radius:12px;
+  cursor:pointer;font-size:12px;font-weight:700;
+  background:var(--card-bg);color:var(--text-sub);border:1px solid var(--card-border);
+  transition:all .18s;flex-shrink:0;white-space:nowrap;
+}
+.sec-btn:hover:not(.coming){transform:translateY(-1px);color:var(--text);}
+.sec-btn.coming{opacity:.35;cursor:not-allowed;}
+
+/* 3D icon inside each button */
+.sec-icon-3d{
+  width:24px;height:24px;border-radius:7px;display:flex;align-items:center;
+  justify-content:center;font-size:13px;flex-shrink:0;
+  transition:transform .2s;
+}
+.sec-btn:hover:not(.coming) .sec-icon-3d{transform:scale(1.2) rotate(-6deg);}
+.sec-btn.active .sec-icon-3d{transform:scale(1.1);}
+
+/* Notes */
+.sec-notes .sec-icon-3d{background:linear-gradient(135deg,rgba(99,102,241,.4),rgba(99,102,241,.15));box-shadow:0 3px 8px rgba(99,102,241,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-notes.active{background:var(--sbg-notes);border-color:var(--col-notes);color:var(--col-notes);}
+/* Descriptive */
+.sec-desc .sec-icon-3d{background:linear-gradient(135deg,rgba(52,211,153,.4),rgba(52,211,153,.15));box-shadow:0 3px 8px rgba(52,211,153,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-desc.active{background:var(--sbg-desc);border-color:var(--col-desc);color:var(--col-desc);}
+/* Mock */
+.sec-mock .sec-icon-3d{background:linear-gradient(135deg,rgba(251,191,36,.4),rgba(251,191,36,.15));box-shadow:0 3px 8px rgba(251,191,36,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-mock.active{background:var(--sbg-mock);border-color:var(--col-mock);color:var(--col-mock);}
+/* PPT */
+.sec-ppt .sec-icon-3d{background:linear-gradient(135deg,rgba(248,113,113,.4),rgba(248,113,113,.15));box-shadow:0 3px 8px rgba(248,113,113,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-ppt.active{background:var(--sbg-ppt);border-color:var(--col-ppt);color:var(--col-ppt);}
+/* Flash */
+.sec-flash .sec-icon-3d{background:linear-gradient(135deg,rgba(192,132,252,.4),rgba(192,132,252,.15));box-shadow:0 3px 8px rgba(192,132,252,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-flash.active{background:var(--sbg-flash);border-color:var(--col-flash);color:var(--col-flash);}
+/* Sim */
+.sec-sim .sec-icon-3d{background:linear-gradient(135deg,rgba(56,189,248,.4),rgba(56,189,248,.15));box-shadow:0 3px 8px rgba(56,189,248,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-sim.active{background:var(--sbg-sim);border-color:var(--col-sim);color:var(--col-sim);}
+/* PYQ */
+.sec-pyq .sec-icon-3d{background:linear-gradient(135deg,rgba(251,146,60,.4),rgba(251,146,60,.15));box-shadow:0 3px 8px rgba(251,146,60,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-pyq.active{background:var(--sbg-pyq);border-color:var(--col-pyq);color:var(--col-pyq);}
+/* Games */
+.sec-games .sec-icon-3d{background:linear-gradient(135deg,rgba(16,185,129,.4),rgba(16,185,129,.15));box-shadow:0 3px 8px rgba(16,185,129,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-games.active{background:var(--sbg-games);border-color:var(--col-games);color:var(--col-games);}
+
+/* ── PYQ TABBAR ── */
+#pyq-tabbar{display:none;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
+#pyq-tabbar::-webkit-scrollbar{display:none;}
 #pyq-tabbar.visible{display:flex;}
-.pyq-tab{padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;}
-.pyq-tab.active{color:var(--text);border-bottom-color:var(--brand);}
+.pyq-tab{display:flex;align-items:center;gap:6px;padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;flex-shrink:0;border-radius:6px 6px 0 0;}
+.pyq-tab:hover{color:var(--text);background:var(--item-hover);}
+.tab-dot{width:19px;height:19px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;color:#fff;flex-shrink:0;}
+.pyq-tab.t-mcq.active{color:var(--pyq-mcq);border-bottom-color:var(--pyq-mcq);}
+.pyq-tab.t-ar.active{color:var(--pyq-ar);border-bottom-color:var(--pyq-ar);}
+.pyq-tab.t-one.active{color:#84cc16;border-bottom-color:#84cc16;}
+.pyq-tab.t-two.active{color:var(--pyq-two);border-bottom-color:var(--pyq-two);}
+.pyq-tab.t-three.active{color:var(--pyq-three);border-bottom-color:var(--pyq-three);}
+.pyq-tab.t-four.active{color:var(--pyq-four);border-bottom-color:var(--pyq-four);}
+.pyq-tab.t-five.active{color:var(--pyq-five);border-bottom-color:var(--pyq-five);}
 
+/* ── CONTENT ── */
 #content{flex:1;overflow-y:auto;padding:18px 20px 32px;}
 
-/* ── UI FIX: CIRCULAR QUESTION BADGE & GLASSMORPHISM SET BADGES ── */
-.qno { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #fff; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-.qno.mcq { background: linear-gradient(135deg, #7c3aed, #c084fc); }
-.qno.ar { background: linear-gradient(135deg, #f97316, #fb923c); }
-.qno.one { background: linear-gradient(135deg, #10b981, #34d399); }
-.qno.two { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
-.qno.three { background: linear-gradient(135deg, #eab308, #facc15); }
-.qno.four { background: linear-gradient(135deg, #ec4899, #f472b6); }
-.qno.five { background: linear-gradient(135deg, #ef4444, #f87171); }
+/* Welcome */
+.welcome{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;text-align:center;padding:20px;}
+.welcome-atom{font-size:64px;animation:float 3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.welcome h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;background:linear-gradient(130deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.welcome p{font-size:13px;color:var(--text-muted);max-width:300px;line-height:1.7;}
+.welcome-pills{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-top:6px;}
+.w-pill{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;border:1px solid var(--divider);color:var(--text-muted);}
 
-.mcq-card, .question-item { display:flex; flex-direction:column; background:var(--card-bg); border:1px solid var(--card-border); border-radius:13px; padding:15px; margin-bottom:12px; }
-.card-top { display:flex; gap:12px; }
+/* ══ NOTES ══ */
+.notes-content{padding-bottom:30px;}
+.notes-title{font-size:20px;font-weight:800;margin-bottom:16px;padding:16px 20px;background:linear-gradient(130deg,rgba(99,102,241,.18),rgba(6,182,212,.10));border:1px solid rgba(99,102,241,.25);border-radius:16px;display:flex;align-items:center;gap:13px;box-shadow:0 4px 20px rgba(99,102,241,.1);}
+.notes-section{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:17px 19px;margin-bottom:12px;transition:all .2s;}
+.notes-section:hover{border-color:rgba(99,102,241,.3);box-shadow:0 4px 20px rgba(99,102,241,.1);transform:translateY(-1px);}
+.notes-section-heading{font-size:14px;font-weight:800;color:var(--brand);margin-bottom:12px;display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:1px solid var(--divider);}
+.n-sec-icon{width:30px;height:30px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;background:linear-gradient(135deg,var(--sbg-notes),rgba(6,182,212,.1));border:1px solid rgba(99,102,241,.2);box-shadow:0 2px 8px rgba(99,102,241,.15),inset 0 1px 0 rgba(255,255,255,.08);}
+.notes-section ul,.notes-section ol{margin:8px 0 8px 20px;}
+.notes-section li{font-size:13.5px;line-height:1.85;margin-bottom:4px;}
+.notes-section p{font-size:13.5px;line-height:1.85;margin:7px 0;}
+.notes-section strong{color:var(--text);font-weight:700;}
+.n-callout{display:flex;align-items:flex-start;gap:10px;border-radius:10px;padding:11px 14px;margin:9px 0;font-size:13px;line-height:1.75;}
+.n-callout-icon{font-size:16px;flex-shrink:0;}
+.n-callout-blue{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(99,102,241,.05));border-left:3px solid var(--accent1);}
+.n-callout-yellow{background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(245,158,11,.05));border-left:3px solid var(--accent3);}
+.n-callout-green{background:linear-gradient(135deg,rgba(52,211,153,.12),rgba(52,211,153,.05));border-left:3px solid #34d399;}
+.n-callout-purple{background:linear-gradient(135deg,rgba(167,139,250,.12),rgba(167,139,250,.05));border-left:3px solid #a78bfa;}
+.n-formula-banner{display:flex;align-items:center;gap:13px;background:linear-gradient(90deg,rgba(99,102,241,.18),rgba(6,182,212,.10));border:1px solid rgba(99,102,241,.28);border-radius:10px;padding:11px 15px;margin:11px 0;box-shadow:0 2px 12px rgba(99,102,241,.1);}
+.n-fb-label{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--brand);padding:2px 8px;background:rgba(99,102,241,.15);border-radius:20px;border:1px solid rgba(99,102,241,.3);white-space:nowrap;}
+.n-fb-eq{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:600;color:var(--text);text-shadow:0 0 20px rgba(99,102,241,.35);}
+.n-def{font-size:13.5px;line-height:1.85;padding:10px 14px;margin:8px 0;background:rgba(255,255,255,.03);border-radius:8px;border-left:3px solid var(--brand);}
+.n-chips-row{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0;}
+.n-chip{font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;background:var(--sbg-notes);color:var(--col-notes);border:1px solid rgba(99,102,241,.22);cursor:default;transition:transform .12s;}
+.n-chip:hover{transform:scale(1.05);}
+.n-img-card{border-radius:10px;overflow:hidden;margin:11px 0;background:var(--card-bg);border:1px solid var(--card-border);}
+.n-img{width:100%;display:block;}
+.n-img-caption{font-size:11px;color:var(--text-muted);padding:7px 12px;font-style:italic;}
+.n-two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:9px 0;}
+.n-term-card{background:var(--bg3);border:1px solid var(--card-border);border-radius:8px;padding:9px 12px;}
+.n-term-label{font-size:11px;font-weight:800;color:var(--brand);margin-bottom:3px;}
+.n-term-desc{font-size:12px;color:var(--text-sub);line-height:1.6;}
 
-.mcq-card-badges { display: flex; gap: 8px; margin-top: 15px; padding-top: 10px; border-top: 1px solid var(--divider); align-items: center; justify-content: flex-start; }
-.set-badge { font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2); backdrop-filter: blur(4px); }
-.set-badge.mcq { background: linear-gradient(135deg, rgba(124,58,237,0.8), rgba(167,139,250,0.8)); }
-.set-badge.ar { background: linear-gradient(135deg, rgba(249,115,22,0.8), rgba(251,146,60,0.8)); }
-.set-badge.one { background: linear-gradient(135deg, rgba(16,185,129,0.8), rgba(52,211,153,0.8)); }
-.set-badge.two { background: linear-gradient(135deg, rgba(59,130,246,0.8), rgba(96,165,250,0.8)); }
-.set-badge.three { background: linear-gradient(135deg, rgba(234,179,8,0.8), rgba(250,204,21,0.8)); }
-.set-badge.four { background: linear-gradient(135deg, rgba(236,72,153,0.8), rgba(244,114,182,0.8)); }
-.set-badge.five { background: linear-gradient(135deg, rgba(239,68,68,0.8), rgba(248,113,113,0.8)); }
-.year-badge { font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid var(--text-muted); color: var(--text-muted); }
+/* ══ NOTES EXTRAS (Law boxes, Compare grids) ══ */
+.n-law-box{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(6,182,212,.06));border:1px solid rgba(99,102,241,.3);border-radius:12px;padding:14px 18px;margin:10px 0;}
+.n-law-title{font-size:12.5px;font-weight:800;color:var(--brand);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.n-law-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.8;margin-bottom:6px;}
+.n-law-num{width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;box-shadow:0 2px 8px rgba(99,102,241,.4);}
+.n-img-md{max-width:420px;border-radius:8px;display:block;}
+.n-compare-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1px;background:var(--divider);border-radius:10px;overflow:hidden;margin:9px 0;font-size:12.5px;}
+.n-compare-header{background:var(--bg3);padding:9px 12px;font-size:11px;font-weight:800;color:var(--text-muted);letter-spacing:.3px;}
+.n-compare-header.n-compare-real{background:rgba(52,211,153,.1);color:#34d399;}
+.n-compare-header.n-compare-virtual{background:rgba(192,132,252,.1);color:#c084fc;}
+.n-compare-cell{background:var(--card-bg);padding:8px 12px;font-size:12px;line-height:1.6;}
+.n-compare-cell.n-compare-real{border-left:2px solid rgba(52,211,153,.3);}
+.n-compare-cell.n-compare-virtual{border-left:2px solid rgba(192,132,252,.3);}
 
-/* Options Styling */
-.options{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px;}
-.option{display:flex;align-items:flex-start;gap:7px;padding:8px 11px;border-radius:9px;cursor:pointer;border:1px solid var(--card-border);background:var(--bg3);font-size:12.5px;}
+/* ══ DESCRIPTIVE ══ */
+.desc-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:15px 17px;margin-bottom:10px;transition:all .2s;position:relative;overflow:hidden;}
+.desc-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--col-desc),transparent);}
+.desc-card:hover{border-color:rgba(52,211,153,.3);transform:translateY(-1px);}
+.desc-q-num{font-size:9.5px;font-weight:800;color:var(--col-desc);letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;}
+.desc-q-text{font-size:13.5px;line-height:1.8;color:var(--text);}
+.desc-q-marks{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;background:var(--sbg-desc);color:var(--col-desc);border:1px solid rgba(52,211,153,.22);display:inline-block;margin-top:7px;}
+.desc-ans-toggle{font-size:11.5px;font-weight:700;color:var(--col-desc);cursor:pointer;padding:5px 0;margin-top:5px;display:flex;align-items:center;gap:5px;border:none;background:none;transition:opacity .15s;}
+.desc-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(52,211,153,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:2px solid var(--col-desc);}
+.desc-answer.open{display:block;}
 
-/* ── UI FIX: SIMULATIONS ACCORDION ── */
-@keyframes slideDown { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
+/* ══ MOCK TEST ══ */
+.mock-header{background:linear-gradient(135deg,rgba(251,191,36,.16),rgba(251,191,36,.05));border:1px solid rgba(251,191,36,.28);border-radius:14px;padding:15px 18px;margin-bottom:14px;display:flex;align-items:center;gap:13px;}
+.mock-icon{font-size:30px;}
+.mock-info h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;}
+.mock-info p{font-size:12px;color:var(--text-muted);margin-top:3px;}
+.mock-badges{display:flex;gap:5px;margin-top:7px;flex-wrap:wrap;}
+.mock-badge{font-size:10px;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--sbg-mock);color:var(--col-mock);border:1px solid rgba(251,191,36,.28);}
+.mock-q-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:15px 17px;margin-bottom:9px;transition:border-color .2s;}
+.mock-q-card:hover{border-color:rgba(251,191,36,.22);}
+.mock-q-num{font-size:9.5px;font-weight:800;color:var(--col-mock);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+.mock-q-text{font-size:13.5px;line-height:1.8;margin-bottom:11px;}
+.mock-options{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.mock-opt{display:flex;align-items:flex-start;gap:7px;padding:8px 11px;border-radius:9px;cursor:pointer;border:1px solid var(--card-border);background:var(--bg3);transition:all .15s;font-size:12.5px;line-height:1.5;}
+.mock-opt:hover:not([data-selected]):not(.correct):not(.wrong){border-color:var(--col-mock);background:var(--sbg-mock);}
+.mock-opt.correct{border-color:#34d399;background:rgba(52,211,153,.1);color:#34d399;}
+.mock-opt.wrong{border-color:#f87171;background:rgba(248,113,113,.1);color:#f87171;}
+.mock-opt.selected{border-color:var(--col-mock);background:var(--sbg-mock);}
+.mock-opt-label{font-size:10px;font-weight:800;width:18px;height:18px;border-radius:5px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.mock-exp{display:none;margin-top:9px;padding:9px 13px;background:rgba(251,191,36,.06);border-left:2px solid var(--col-mock);border-radius:8px;font-size:12.5px;line-height:1.75;color:var(--text-sub);}
+.mock-exp.open{display:block;}
+#mock-submit{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:11px;border:none;background:linear-gradient(130deg,var(--accent3),#f97316);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;margin-top:8px;}
+#mock-submit:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(245,158,11,.3);}
+#mock-score{display:none;background:linear-gradient(135deg,rgba(52,211,153,.15),rgba(99,102,241,.1));border:1px solid rgba(52,211,153,.3);border-radius:14px;padding:20px;margin-top:12px;text-align:center;}
+#mock-score h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;}
+#mock-score p{font-size:13px;color:var(--text-sub);margin-top:4px;}
+
+/* ══ PPT ══ */
+.ppt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;}
+.ppt-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:14px;cursor:pointer;transition:all .2s;text-align:center;}
+.ppt-card:hover{border-color:rgba(248,113,113,.4);transform:translateY(-2px);box-shadow:0 8px 24px rgba(248,113,113,.1);}
+.ppt-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,rgba(248,113,113,.2),rgba(245,158,11,.15));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:9px;}
+.ppt-name{font-size:12px;font-weight:700;color:var(--text);}
+.ppt-slides{font-size:10.5px;color:var(--text-muted);margin-top:3px;}
+
+/* ══ FLASH CARDS ══ */
+.flashcard-controls{display:flex;gap:7px;margin-bottom:13px;align-items:center;flex-wrap:wrap;}
+.fc-ctrl-btn{padding:7px 15px;border-radius:10px;border:1px solid var(--divider);background:var(--card-bg);color:var(--text-sub);font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;}
+.fc-ctrl-btn:hover{background:var(--item-hover);color:var(--text);}
+.fc-count{font-size:12px;color:var(--text-muted);margin-left:auto;}
+.flashcard-wrap{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;}
+.flashcard{perspective:1000px;cursor:pointer;height:155px;}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d;}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+.fc-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:13px;padding:15px 17px;display:flex;flex-direction:column;justify-content:center;}
+.fc-front{background:linear-gradient(135deg,rgba(192,132,252,.2),rgba(99,102,241,.1));border:1px solid rgba(192,132,252,.28);box-shadow:0 4px 18px rgba(192,132,252,.12);}
+.fc-back{background:linear-gradient(135deg,rgba(52,211,153,.18),rgba(6,182,212,.1));border:1px solid rgba(52,211,153,.28);transform:rotateY(180deg);box-shadow:0 4px 18px rgba(52,211,153,.12);}
+.fc-label{font-size:8.5px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:7px;}
+.fc-front .fc-label{color:var(--col-flash);}
+.fc-back .fc-label{color:var(--col-desc);}
+.fc-text{font-size:12.5px;font-weight:600;line-height:1.65;color:var(--text);}
+.fc-hint{font-size:10px;color:var(--text-muted);margin-top:9px;}
+
+/* ══ SIMULATIONS ══ */
 .sim-list{display:flex;flex-direction:column;gap:14px;}
-.sim-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:15px;overflow:hidden; animation: slideDown 0.4s ease;}
-.sim-header{display:flex;align-items:center;gap:11px;padding:15px;cursor:pointer;background:linear-gradient(90deg,rgba(56,189,248,.08),transparent); border-bottom:1px solid var(--divider);}
-.sim-title{font-size:15px;font-weight:800;}
-.sim-desc{font-size:12px;color:var(--text-muted);}
-.sim-launch-btn{margin-left:auto;padding:6px 14px;border-radius:20px;border:1px solid var(--col-sim);background:var(--sbg-sim);color:var(--col-sim);font-weight:700;font-size:11px;}
-.sim-embed{display:none; padding:10px; background:#000;}
+.sim-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:15px;overflow:hidden;transition:all .2s;}
+.sim-card:hover{border-color:rgba(56,189,248,.25);}
+.sim-header{display:flex;align-items:center;gap:11px;padding:13px 17px;cursor:pointer;background:linear-gradient(90deg,rgba(56,189,248,.06),transparent);border-bottom:1px solid var(--divider);}
+.sim-icon-3d{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:21px;background:linear-gradient(135deg,rgba(56,189,248,.35),rgba(56,189,248,.12));border:1px solid rgba(56,189,248,.3);box-shadow:0 3px 10px rgba(56,189,248,.22),inset 0 1px 0 rgba(255,255,255,.2);flex-shrink:0;}
+.sim-title{font-size:14px;font-weight:800;}
+.sim-desc{font-size:11.5px;color:var(--text-muted);margin-top:2px;}
+.sim-launch-btn{margin-left:auto;font-size:11px;font-weight:700;padding:6px 13px;border-radius:20px;border:1px solid rgba(56,189,248,.3);background:var(--sbg-sim);color:var(--col-sim);cursor:pointer;transition:all .15s;white-space:nowrap;}
+.sim-launch-btn:hover{background:rgba(56,189,248,.2);}
+.sim-embed{display:none;}
 .sim-embed.open{display:block;}
-.sim-iframe{width:100%;height:350px;border:none;border-radius:8px;background:#fff;}
+.sim-iframe{width:100%;border:none;display:block;background:#080e1c;min-height:300px;}
 
-/* Miscellaneous */
-.no-content-state{text-align:center;padding:40px 20px;}
-.welcome{text-align:center;padding:50px;}
+/* ══ PYQ ══ */
+.pyq-set-label{font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);padding:10px 0 5px;display:flex;align-items:center;gap:7px;}
+.pyq-set-label::after{content:'';flex:1;height:1px;background:var(--divider);}
+.set-badge{font-size:9px;font-weight:800;padding:3px 9px;border-radius:12px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px;flex-shrink:0;transition:all .2s;}
+.set-badge-1mark{background:linear-gradient(135deg,rgba(132,204,22,.25),rgba(77,124,11,.3));color:#a3d940;border:1px solid rgba(132,204,22,.4);box-shadow:0 2px 8px rgba(132,204,22,.2);}
+.set-badge-2mark{background:linear-gradient(135deg,rgba(22,163,74,.25),rgba(21,128,61,.3));color:#4ade80;border:1px solid rgba(22,163,74,.4);box-shadow:0 2px 8px rgba(22,163,74,.2);}
+.set-badge-3mark{background:linear-gradient(135deg,rgba(220,38,38,.25),rgba(185,28,28,.3));color:#f87171;border:1px solid rgba(220,38,38,.4);box-shadow:0 2px 8px rgba(220,38,38,.2);}
+.set-badge-4mark{background:linear-gradient(135deg,rgba(14,165,233,.25),rgba(3,105,161,.3));color:#38bdf8;border:1px solid rgba(14,165,233,.4);box-shadow:0 2px 8px rgba(14,165,233,.2);}
+.set-badge-5mark{background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(190,24,93,.3));color:#f472b6;border:1px solid rgba(236,72,153,.4);box-shadow:0 2px 8px rgba(236,72,153,.2);}
+.year-badge{font-size:9px;font-weight:800;padding:3px 9px;border-radius:12px;background:linear-gradient(135deg,rgba(239,68,68,.25),rgba(220,38,38,.3));color:#fca5a5;border:1px solid rgba(239,68,68,.4);box-shadow:0 2px 8px rgba(239,68,68,.2);flex-shrink:0;}
+.mcq-card{display:flex;flex-direction:column;background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:13px 15px;margin-bottom:9px;transition:border-color .2s;cursor:pointer;position:relative;}
+.mcq-card:hover{border-color:rgba(124,58,237,.22);}
+.mcq-card-top{display:flex;gap:11px;}
+.mcq-card-badges{display:flex;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--divider);}
+.question-item{display:flex;flex-direction:column;background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:13px 15px;margin-bottom:9px;cursor:pointer;transition:border-color .2s;position:relative;}
+.question-item:hover{border-color:rgba(99,102,241,.22);}
+.question-item-top{display:flex;gap:11px;}
+.question-item-badges{display:flex;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--divider);}
+.qno{min-width:28px;height:28px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.2);}
+.qno.mcq{background:linear-gradient(135deg,var(--pyq-mcq),#5b21b6);}
+.qno.ar{background:linear-gradient(135deg,var(--pyq-ar),#c2410c);}
+.qno.one{background:linear-gradient(135deg,#84cc16,#4d7c0b);}
+.qno.two{background:linear-gradient(135deg,var(--pyq-two),#15803d);}
+.qno.three{background:linear-gradient(135deg,var(--pyq-three),#b91c1c);}
+.qno.four{background:linear-gradient(135deg,var(--pyq-four),#0369a1);}
+.qno.five{background:linear-gradient(135deg,var(--pyq-five),#be185d);}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:10px 0 3px;}
+.option{display:flex;align-items:flex-start;gap:7px;padding:7px 11px;border-radius:9px;cursor:pointer;border:1px solid var(--card-border);background:var(--bg3);transition:all .15s;font-size:12.5px;line-height:1.5;}
+.option:hover{border-color:rgba(124,58,237,.4);background:rgba(124,58,237,.07);}
+.option.correct{border-color:#34d399;background:rgba(52,211,153,.1);color:#34d399;}
+.option.wrong{border-color:#f87171;background:rgba(248,113,113,.1);color:#f87171;}
+.opt-label{font-size:9.5px;font-weight:800;width:17px;height:17px;border-radius:5px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.options.answered .option{cursor:default;}
+.explanation{display:none;margin-top:9px;padding:9px 13px;background:rgba(99,102,241,.06);border-left:2px solid var(--brand);border-radius:8px;font-size:12.5px;line-height:1.75;color:var(--text-sub);}
 
+/* ══ GAMES & PUZZLES ══ */
+.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
+.game-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:15px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
+.game-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--col-games),transparent);}
+.game-card:hover{border-color:rgba(16,185,129,.3);transform:translateY(-2px);box-shadow:0 6px 20px rgba(16,185,129,.15);}
+.game-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.game-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;background:linear-gradient(135deg,rgba(16,185,129,.25),rgba(16,185,129,.1));border:1px solid rgba(16,185,129,.3);box-shadow:0 2px 8px rgba(16,185,129,.2);}
+.game-title{font-size:14px;font-weight:800;color:var(--text);flex:1;}
+.game-desc{font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:12px;}
+.game-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--sbg-games);color:var(--col-games);border:1px solid rgba(16,185,129,.25);display:inline-block;}
+.game-content{display:none;margin-top:15px;padding-top:15px;border-top:1px solid var(--divider);}
+.game-content.open{display:block;}
+.game-launch-btn{width:100%;margin-top:10px;padding:8px;border-radius:10px;border:1px solid rgba(16,185,129,.3);background:var(--sbg-games);color:var(--col-games);font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;}
+.game-launch-btn:hover{background:rgba(16,185,129,.2);}
+
+/* ══ EMPTY / COMING SOON ══ */
+.no-content-state{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;gap:9px;color:var(--text-muted);text-align:center;padding:20px;}
+.no-content-icon{font-size:40px;margin-bottom:4px;}
+.no-content-state h3{font-size:14.5px;font-weight:700;color:var(--text-sub);}
+.no-content-state p{font-size:12.5px;max-width:340px;line-height:1.7;}
+.no-content-tag{font-size:10.5px;font-weight:700;padding:3px 13px;border-radius:999px;background:var(--sbg-notes);color:var(--col-notes);border:1px solid rgba(99,102,241,.3);margin-top:3px;}
+
+/* ══ TOAST ══ */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(14px);background:rgba(10,15,30,.95);color:var(--text);padding:9px 18px;border-radius:12px;font-size:13px;font-weight:600;pointer-events:none;opacity:0;transition:all .25s;z-index:999;border:1px solid var(--divider);backdrop-filter:blur(12px);}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ══ RESPONSIVE ══ */
 @media(max-width:640px){
-  .sidebar{position:fixed;z-index:100;height:100vh;}
-  .options{grid-template-columns:1fr;}
+  .sidebar{position:fixed;top:52px;left:0;bottom:0;z-index:50;width:80vw;max-width:270px;transform:translateX(-100%);transition:transform .25s;width:80vw!important;min-width:0!important;opacity:1!important;}
+  .sidebar:not(.hide){transform:translateX(0);}
+  .sidebar.hide{transform:translateX(-100%);}
+  .mock-options{grid-template-columns:1fr;}
+  .n-two-col{grid-template-columns:1fr;}
+  .ppt-grid{grid-template-columns:1fr 1fr;}
+  #content{padding:14px 12px 24px;}
+  .brand-tag{display:none;}
 }
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
-  <button class="icon-btn" onclick="toggleSidebar()">☰</button>
-  <span class="brand">Physics4Fun</span>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <button class="icon-btn" onclick="toggleSidebar()" title="Menu">☰</button>
+    <span class="brand">Physics4Fun</span>
+    <span class="brand-tag">CBSE</span>
+  </div>
+
   <div class="header-center">
     <div class="breadcrumb" id="breadcrumb">
-      <span class="bc-chip" id="bc-grade">—</span><span class="bc-sep">›</span><span class="bc-chip active" id="bc-chapter">—</span>
+      <span class="bc-chip" id="bc-grade">—</span>
+      <span class="bc-sep">›</span>
+      <span class="bc-chip active" id="bc-chapter">—</span>
     </div>
   </div>
-  <div class="header-right"><button class="icon-btn" onclick="document.body.classList.toggle('light')">🌙</button></div>
+
+  <div class="header-right">
+    <button class="icon-btn" id="viewToggleBtn" onclick="toggleViewMode()" title="Mobile/Desktop Toggle">📱</button>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Dark/Light">🌙</button>
+  </div>
 </header>
 
+<!-- MAIN -->
 <div class="main">
+
+  <!-- SIDEBAR -->
   <nav class="sidebar" id="sidebar">
     <div class="sb-inner">
-      <div class="sb-label">CBSE Board (6-12)</div>
-      <div class="grade-row" onclick="toggleGrade('cbse-g10',this)"><span class="grade-pill">10</span><span class="grade-label">Class 10</span></div>
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 📘 CBSE BOARD -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(6,182,212,.1));padding:8px 12px;border-radius:10px;margin-bottom:10px;border:1px solid rgba(99,102,241,.3);">📘 CBSE Board</div>
+
+      <!-- Grades 6-8 -->
+      <div class="sb-label">Grades 6 – 8</div>
+
+      <div class="grade-row" onclick="toggleGrade('cbse-g6',this)">
+        <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g6">
+        <div class="ch-item" onclick="selectChapter('Motion and Measurement','6','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Motion &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Light, Shadows and Reflections','6','💡',this,false,'ch2')"><span class="ch-icon">💡</span><span class="ch-name">Light, Shadows &amp; Reflections</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity and Circuits','6','⚡',this,false,'ch3')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity &amp; Circuits</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cbse-g7',this)">
+        <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g7">
+        <div class="ch-item" onclick="selectChapter('Heat and Temperature','7','🌡️',this,false,'ch1')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat and Temperature</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion and Time','7','⏱️',this,false,'ch2')"><span class="ch-icon">⏱️</span><span class="ch-name">Motion and Time</span></div>
+        <div class="ch-item" onclick="selectChapter('Electric Current and its Effects','7','⚡',this,false,'ch3')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Current &amp; Effects</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cbse-g8',this)">
+        <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g8">
+        <div class="ch-item" onclick="selectChapter('Force and Pressure','8','💪',this,false,'ch1')"><span class="ch-icon">💪</span><span class="ch-name">Force and Pressure</span></div>
+        <div class="ch-item" onclick="selectChapter('Friction','8','🔄',this,false,'ch2')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch3')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+      </div>
+
+      <!-- Grades 9-10 -->
+      <div class="sb-label">Grades 9 – 10</div>
+
+      <div class="grade-row" onclick="toggleGrade('cbse-g9',this)">
+        <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g9">
+        <div class="ch-item" onclick="selectChapter('Motion','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Force and Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">Force &amp; Laws of Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cbse-g10',this)">
+        <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
       <div class="chapter-list" id="cbse-g10">
-        <div class="ch-item" onclick="selectChapter('Light - Reflection & Refraction', '10', '💡', this, true, 'light')"><span class="ch-icon">💡</span>Light<span class="ch-pyq-badge">PYQ</span></div>
-        <div class="ch-item" onclick="selectChapter('Motion', '9', '🏃', this, true, 'motion')"><span class="ch-icon">🏃</span>Motion<span class="ch-pyq-badge">PYQ</span></div>
-        <div class="ch-item" onclick="selectChapter('Force', '9', '⚖️', this, false, 'force')"><span class="ch-icon">⚖️</span>Force</div>
-        <div class="ch-item" onclick="selectChapter('Electricity', '10', '⚡', this, true, 'electricity')"><span class="ch-icon">⚡</span>Electricity<span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Light – Reflection and Refraction','10','💡',this,true,'light')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection &amp; Refraction</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('The Human Eye and the Colourful World','10','👁️',this,true,'human-eye')"><span class="ch-icon">👁️</span><span class="ch-name">Human Eye &amp; Colourful World</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity','10','⚡',this,true,'electricity')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetic Effects of Electric Current','10','🧲',this,true,'magnetic-effects')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetic Effects of Current</span><span class="ch-pyq-badge">PYQ</span></div>
       </div>
-      
-      <div class="sb-label">AP State Board (6-10)</div>
-      <div class="grade-row" onclick="toggleGrade('ap-g8',this)"><span class="grade-pill">8</span><span class="grade-label">Class 8</span></div>
+
+      <!-- Grades 11-12 -->
+      <div class="sb-label">Grades 11 – 12</div>
+
+      <div class="grade-row" onclick="toggleGrade('cbse-g11',this)">
+        <span class="grade-pill">11</span><span class="grade-label">Class 11</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g11">
+        <div class="ch-item" onclick="selectChapter('Physical World','11','🌍',this,false,'physical-world')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span></div>
+        <div class="ch-item" onclick="selectChapter('Units and Measurements','11','📏',this,false,'units-measurements')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Straight Line','11','➡️',this,false,'motion-line')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Plane','11','✈️',this,false,'motion-plane')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span></div>
+        <div class="ch-item" onclick="selectChapter('Laws of Motion','11','⚙️',this,false,'laws-of-motion')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Work, Energy and Power','11','⚡',this,false,'work-energy')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','11','🌌',this,false,'gravitation')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span></div>
+        <div class="ch-item" onclick="selectChapter('Mechanical Properties of Solids','11','🪨',this,false,'mech-solids')"><span class="ch-icon">🪨</span><span class="ch-name">Mech. Properties of Solids</span></div>
+        <div class="ch-item" onclick="selectChapter('Mechanical Properties of Fluids','11','💧',this,false,'mech-fluids')"><span class="ch-icon">💧</span><span class="ch-name">Mech. Properties of Fluids</span></div>
+        <div class="ch-item" onclick="selectChapter('Thermal Properties of Matter','11','🌡️',this,false,'thermal')"><span class="ch-icon">🌡️</span><span class="ch-name">Thermal Properties of Matter</span></div>
+        <div class="ch-item" onclick="selectChapter('Thermodynamics','11','🔥',this,false,'thermo')"><span class="ch-icon">🔥</span><span class="ch-name">Thermodynamics</span></div>
+        <div class="ch-item" onclick="selectChapter('Kinetic Theory','11','💨',this,false,'kinetic')"><span class="ch-icon">💨</span><span class="ch-name">Kinetic Theory</span></div>
+        <div class="ch-item" onclick="selectChapter('Oscillations','11','🔁',this,false,'oscillations')"><span class="ch-icon">🔁</span><span class="ch-name">Oscillations</span></div>
+        <div class="ch-item" onclick="selectChapter('Waves','11','🌊',this,false,'waves')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cbse-g12',this)">
+        <span class="grade-pill">12</span><span class="grade-label">Class 12</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cbse-g12">
+        <div class="ch-item" onclick="selectChapter('Electric Charges and Fields','12','⚡',this,true,'electric-charges')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electrostatic Potential and Capacitance','12','🔋',this,true,'electrostatic-potential')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential &amp; Capacitance</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Current Electricity','12','💡',this,true,'current-electricity')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Moving Charges and Magnetism','12','🧲',this,true,'moving-charges')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges &amp; Magnetism</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetism and Matter','12','🔮',this,true,'magnetism-matter')"><span class="ch-icon">🔮</span><span class="ch-name">Magnetism and Matter</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electromagnetic Induction','12','🌀',this,true,'em-induction')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Alternating Current','12','〰️',this,true,'alternating-current')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electromagnetic Waves','12','📡',this,true,'em-waves')"><span class="ch-icon">📡</span><span class="ch-name">Electromagnetic Waves</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Ray Optics and Optical Instruments','12','🔭',this,true,'ray-optics')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics &amp; Optical Instruments</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Wave Optics','12','🌊',this,true,'wave-optics')"><span class="ch-icon">🌊</span><span class="ch-name">Wave Optics</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Dual Nature of Radiation and Matter','12','☀️',this,true,'dual-nature')"><span class="ch-icon">☀️</span><span class="ch-name">Dual Nature of Radiation &amp; Matter</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Atoms','12','⚛️',this,true,'atoms')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Nuclei','12','☢️',this,true,'nuclei')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Semiconductor Electronics','12','💻',this,true,'semiconductors')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 📗 AP STATE BOARD -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(52,211,153,.1));padding:8px 12px;border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(16,185,129,.3);">📗 AP State Board</div>
+
+      <div class="sb-label">Grades 6 – 10</div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g6',this)">
+        <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g6">
+        <div class="ch-item" onclick="selectChapter('Measurements','6','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Measurements</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion and Measurement of Distances','6','🏃',this,false,'ch2')"><span class="ch-icon">🏃</span><span class="ch-name">Motion &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Light, Shadows and Reflections','6','💡',this,false,'ch3')"><span class="ch-icon">💡</span><span class="ch-name">Light, Shadows &amp; Reflections</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g7',this)">
+        <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g7">
+        <div class="ch-item" onclick="selectChapter('Heat','7','🌡️',this,false,'ch1')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion and Time','7','⏱️',this,false,'ch2')"><span class="ch-icon">⏱️</span><span class="ch-name">Motion and Time</span></div>
+        <div class="ch-item" onclick="selectChapter('Light','7','💡',this,false,'ch3')"><span class="ch-icon">💡</span><span class="ch-name">Light</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g8',this)">
+        <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
+      </div>
       <div class="chapter-list" id="ap-g8">
-        <div class="ch-item" onclick="selectChapter('Friction', '8', '🔄', this, false, 'friction')"><span class="ch-icon">🔄</span>Friction</div>
+        <div class="ch-item" onclick="selectChapter('Force and Pressure','8','💪',this,false,'ch1')"><span class="ch-icon">💪</span><span class="ch-name">Force and Pressure</span></div>
+        <div class="ch-item" onclick="selectChapter('Friction','8','🔄',this,false,'ch2')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch3')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
       </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g9',this)">
+        <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g9">
+        <div class="ch-item" onclick="selectChapter('Motion','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-g10',this)">
+        <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">AP State + PYQ</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-g10">
+        <div class="ch-item" onclick="selectChapter('Light – Reflection and Refraction','10','💡',this,true,'light')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection &amp; Refraction</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('The Human Eye','10','👁️',this,true,'human-eye')"><span class="ch-icon">👁️</span><span class="ch-name">The Human Eye</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity','10','⚡',this,true,'electricity')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetic Effects of Current','10','🧲',this,true,'magnetic-effects')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetic Effects of Current</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 📙 AP INTERMEDIATE -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(251,191,36,.1));padding:8px 12px;border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(245,158,11,.3);">📙 AP Intermediate</div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-inter-1',this)">
+        <span class="grade-pill">I</span><span class="grade-label">First Year</span><span class="grade-sub">Inter + PYQ</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-inter-1">
+        <div class="ch-item" onclick="selectChapter('Physical World','11','🌍',this,true,'physical-world')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Units and Measurements','11','📏',this,true,'units-measurements')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Straight Line','11','➡️',this,true,'motion-line')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Plane','11','✈️',this,true,'motion-plane')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Laws of Motion','11','⚙️',this,true,'laws-of-motion')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Work, Energy and Power','11','⚡',this,true,'work-energy')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','11','🌌',this,true,'gravitation')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('ap-inter-2',this)">
+        <span class="grade-pill">II</span><span class="grade-label">Second Year</span><span class="grade-sub">Inter + PYQ</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="ap-inter-2">
+        <div class="ch-item" onclick="selectChapter('Electric Charges and Fields','12','⚡',this,true,'electric-charges')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electrostatic Potential and Capacitance','12','🔋',this,true,'electrostatic-potential')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential &amp; Capacitance</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Current Electricity','12','💡',this,true,'current-electricity')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Moving Charges and Magnetism','12','🧲',this,true,'moving-charges')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges &amp; Magnetism</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Electromagnetic Induction','12','🌀',this,true,'em-induction')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Alternating Current','12','〰️',this,true,'alternating-current')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Atoms','12','⚛️',this,true,'atoms')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Nuclei','12','☢️',this,true,'nuclei')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span><span class="ch-pyq-badge">PYQ</span></div>
+        <div class="ch-item" onclick="selectChapter('Semiconductor Electronics','12','💻',this,true,'semiconductors')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
     </div>
   </nav>
 
+  <!-- CONTENT WRAP -->
   <div class="content-wrap" id="contentWrap">
+
+    <!-- SECTION BAR -->
     <div class="section-bar" id="sectionBar">
-      <div class="sec-btn active" onclick="switchSection('notes',this)"><span class="sec-icon-3d">📖</span>Notes</div>
-      <div class="sec-btn" onclick="switchSection('desc',this)"><span class="sec-icon-3d">✏️</span>Descriptive</div>
-      <div class="sec-btn" onclick="switchSection('mock',this)"><span class="sec-icon-3d">🎯</span>Mock Test</div>
-      <div class="sec-btn" onclick="switchSection('sim',this)"><span class="sec-icon-3d">🔬</span>Simulations</div>
-      <div class="sec-btn" onclick="switchSection('games',this)"><span class="sec-icon-3d">🎮</span>Games & Puzzles</div>
-      <div class="sec-btn" id="btn-pyq" onclick="switchSection('pyq',this)" style="display:none;"><span class="sec-icon-3d">📋</span>PYQs</div>
+      <div class="sec-btn sec-notes active" id="btn-notes" onclick="switchSection('notes',this)">
+        <span class="sec-icon-3d">📖</span>Notes
+      </div>
+      <div class="sec-btn sec-desc" id="btn-desc" onclick="switchSection('desc',this)">
+        <span class="sec-icon-3d">✏️</span>Descriptive
+      </div>
+      <div class="sec-btn sec-mock" id="btn-mock" onclick="switchSection('mock',this)">
+        <span class="sec-icon-3d">🎯</span>Mock Test
+      </div>
+      <div class="sec-btn sec-ppt" id="btn-ppt" onclick="switchSection('ppt',this)">
+        <span class="sec-icon-3d">📊</span>PPTs
+      </div>
+      <div class="sec-btn sec-flash" id="btn-flash" onclick="switchSection('flash',this)">
+        <span class="sec-icon-3d">🃏</span>Flash Cards
+      </div>
+      <div class="sec-btn sec-sim" id="btn-sim" onclick="switchSection('sim',this)">
+        <span class="sec-icon-3d">🔬</span>Simulations
+      </div>
+      <div class="sec-btn sec-games" id="btn-games" onclick="switchSection('games',this)">
+        <span class="sec-icon-3d">🎮</span>Games & Puzzles
+      </div>
+      <div class="sec-btn sec-pyq" id="btn-pyq" onclick="switchSection('pyq',this)" style="display:none;">
+        <span class="sec-icon-3d">📋</span>PYQs
+      </div>
     </div>
 
+    <!-- PYQ TAB BAR -->
     <div id="pyq-tabbar">
-      <div class="pyq-tab active" onclick="showPyqSec('mcq',this)">MCQs</div>
-      <div class="pyq-tab" onclick="showPyqSec('ar',this)">A&amp;R</div>
-      <div class="pyq-tab" onclick="showPyqSec('one',this)">1 Mark</div>
-      <div class="pyq-tab" onclick="showPyqSec('two',this)">2 Marks</div>
-      <div class="pyq-tab" onclick="showPyqSec('three',this)">3 Marks</div>
-      <div class="pyq-tab" onclick="showPyqSec('four',this)">4 Marks</div>
-      <div class="pyq-tab" onclick="showPyqSec('five',this)">5 Marks</div>
+      <div class="pyq-tab t-mcq active" onclick="showPyqSec('mcq',this)"><span class="tab-dot" style="background:#7c3aed;">M</span>MCQs</div>
+      <div class="pyq-tab t-ar" onclick="showPyqSec('ar',this)"><span class="tab-dot" style="background:#f97316;">A</span>A &amp; R</div>
+      <div class="pyq-tab t-two" onclick="showPyqSec('two',this)"><span class="tab-dot" style="background:#16a34a;">2</span>Marks</div>
+      <div class="pyq-tab t-three" onclick="showPyqSec('three',this)"><span class="tab-dot" style="background:#dc2626;">3</span>Marks</div>
+      <div class="pyq-tab t-four" onclick="showPyqSec('four',this)"><span class="tab-dot" style="background:#0ea5e9;">4</span>Marks</div>
+      <div class="pyq-tab t-five" onclick="showPyqSec('five',this)"><span class="tab-dot" style="background:#ec4899;">5</span>Marks</div>
     </div>
 
     <div id="content">
       <div class="welcome" id="welcome">
-        <h2 style="font-size:30px">⚛️ Physics4Fun</h2>
-        <p>Select a chapter from the sidebar to begin.</p>
+        <div class="welcome-atom">⚛️</div>
+        <h2>Welcome to Physics4Fun</h2>
+        <p>Your complete Physics platform for CBSE & AP Board (Grades 6–12). Pick a board, grade and chapter from the sidebar.</p>
+        <div class="welcome-pills">
+          <span class="w-pill">📖 Notes</span>
+          <span class="w-pill">✏️ Descriptive</span>
+          <span class="w-pill">🎯 Mock Tests</span>
+          <span class="w-pill">📊 PPTs</span>
+          <span class="w-pill">🃏 Flash Cards</span>
+          <span class="w-pill">🔬 Simulations</span>
+          <span class="w-pill">🎮 Games & Puzzles</span>
+          <span class="w-pill">📋 PYQs</span>
+        </div>
       </div>
-      <div id="panel-notes" style="display:none;"></div>
-      <div id="panel-desc" style="display:none;"></div>
-      <div id="panel-mock" style="display:none;"></div>
-      <div id="panel-sim" style="display:none;"></div>
-      <div id="panel-games" style="display:none;"></div>
-      <div id="panel-pyq" style="display:none;">
-        <div id="pyq-mcq" class="pyq-section"></div>
-        <div id="pyq-ar" class="pyq-section" style="display:none;"></div>
-        <div id="pyq-one" class="pyq-section" style="display:none;"></div>
-        <div id="pyq-two" class="pyq-section" style="display:none;"></div>
+
+      <div id="panel-notes" style="display:none;"><div id="notes-content-wrap" class="notes-content"></div></div>
+      <div id="panel-desc"  style="display:none;"><div id="desc-content-wrap"></div></div>
+      <div id="panel-mock"  style="display:none;"><div id="mock-content-wrap"></div></div>
+      <div id="panel-ppt"   style="display:none;"><div id="ppt-content-wrap"></div></div>
+      <div id="panel-flash" style="display:none;"><div id="flash-content-wrap"></div></div>
+      <div id="panel-sim"   style="display:none;"><div id="sim-content-wrap"></div></div>
+      <div id="panel-games" style="display:none;"><div id="games-content-wrap"></div></div>
+      <div id="panel-pyq"   style="display:none;">
+        <div id="pyq-mcq"   class="pyq-section"></div>
+        <div id="pyq-ar"    class="pyq-section" style="display:none;"></div>
+        <div id="pyq-one"   class="pyq-section" style="display:none;"></div>
+        <div id="pyq-two"   class="pyq-section" style="display:none;"></div>
         <div id="pyq-three" class="pyq-section" style="display:none;"></div>
-        <div id="pyq-four" class="pyq-section" style="display:none;"></div>
-        <div id="pyq-five" class="pyq-section" style="display:none;"></div>
+        <div id="pyq-four"  class="pyq-section" style="display:none;"></div>
+        <div id="pyq-five"  class="pyq-section" style="display:none;"></div>
       </div>
     </div>
   </div>
 </div>
 
+<div id="toast"></div>
+
 <script>
+/* ══════ STATE ══════ */
 let CUR = { grade:null, chapter:null, slug:null, hasPyq:false, section:'notes' };
 
+/* ══════ PYQ TYPES ══════ */
+const PYQ_TYPES = [
+  {id:'mcq',  file:'msq.js',   varName:'mcqData',      label:'MCQs'},
+  {id:'ar',   file:'ar.js',    varName:'arData',        label:'A&R'},
+  {id:'one',  file:'one.js',   varName:'oneMarkData',   label:'1 Mark'},
+  {id:'two',  file:'two.js',   varName:'twoMarkData',   label:'2 Marks'},
+  {id:'three',file:'three.js', varName:'threeMarkData', label:'3 Marks'},
+  {id:'four', file:'four.js',  varName:'fourMarkData',  label:'4 Marks'},
+  {id:'five', file:'five.js',  varName:'fiveMarkData',  label:'5 Marks'},
+];
+
+/* ══════ SCRIPT LOADER ══════ */
+function loadScript(url) {
+  return new Promise(res => {
+    if (document.querySelector(`script[data-src="${url}"]`)) { res(); return; }
+    const s = document.createElement('script');
+    s.dataset.src = url; s.src = url;
+    s.onload = s.onerror = () => res();
+    document.head.appendChild(s);
+  });
+}
+
+/* ══════ SIDEBAR ══════ */
 function toggleGrade(id, row) {
-  const list = document.getElementById(id);
-  list.classList.toggle('open'); row.classList.toggle('open');
+  const list = document.getElementById(id), open = list.classList.contains('open');
+  document.querySelectorAll('.chapter-list').forEach(x => x.classList.remove('open'));
+  document.querySelectorAll('.grade-row').forEach(x => x.classList.remove('open'));
+  if (!open) { list.classList.add('open'); row.classList.add('open'); }
 }
 
 function toggleSidebar() { document.getElementById('sidebar').classList.toggle('hide'); }
 
+/* ══════ CHAPTER SELECT ══════ */
 function selectChapter(name, grade, icon, el, hasPyq, slug) {
   document.querySelectorAll('.ch-item').forEach(i => i.classList.remove('active'));
   el.classList.add('active');
   CUR = { grade, chapter:name, slug, hasPyq, section:'notes' };
-  
+
   document.getElementById('bc-grade').textContent = 'Class ' + grade;
-  document.getElementById('bc-chapter').textContent = icon + ' ' + name;
+  document.getElementById('bc-chapter').textContent = icon + ' ' + name.replace(/&amp;/g,'&');
   document.getElementById('breadcrumb').classList.add('visible');
   document.getElementById('welcome').style.display = 'none';
   document.getElementById('sectionBar').classList.add('visible');
-  document.getElementById('btn-pyq').style.display = hasPyq ? 'flex' : 'none';
 
-  switchSection('notes', document.querySelector('.sec-btn'));
-  if (window.innerWidth <= 640) toggleSidebar();
+  const pyqBtn = document.getElementById('btn-pyq');
+  pyqBtn.style.display = hasPyq ? 'flex' : 'none';
+
+  switchSection('notes', document.getElementById('btn-notes'));
+  document.getElementById('content').scrollTop = 0;
+
+  // Mobile: auto-close sidebar
+  if (window.innerWidth <= 640) document.getElementById('sidebar').classList.add('hide');
 }
 
+/* ══════ SECTION SWITCH ══════ */
 function switchSection(type, el) {
+  CUR.section = type;
   document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
-  ['notes','desc','mock','sim','games','pyq'].forEach(p => {
+  ['notes','desc','mock','ppt','flash','sim','games','pyq'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
   document.getElementById('pyq-tabbar').classList.toggle('visible', type === 'pyq');
-  document.getElementById('panel-'+type).style.display = 'block';
+  const panel = document.getElementById('panel-'+type);
+  if (panel) panel.style.display = 'block';
 
-  // 📦 CRITICAL FIX: DYNAMIC LOADING FALLBACKS FOR ALL CHAPTERS
-  if(type === 'notes') generateFallbackNotes();
-  if(type === 'desc') generateFallbackDesc();
-  if(type === 'mock') generateFallbackMock();
-  if(type === 'games') generateFallbackGames();
-  if(type === 'sim') generateFallbackSims();
-  if(type === 'pyq') generateFallbackPYQs();
+  switch(type) {
+    case 'notes': loadNotes(); break;
+    case 'desc':  loadDesc(); break;
+    case 'mock':  loadMock(); break;
+    case 'ppt':   loadPPT(); break;
+    case 'flash': loadFlash(); break;
+    case 'sim':   loadSim(); break;
+    case 'games': loadGames(); break;
+    case 'pyq':
+      if (CUR.hasPyq) loadPYQ();
+      else renderNoPYQ();
+      showPyqSec('mcq', document.querySelector('.pyq-tab.t-mcq'));
+      break;
+  }
+  document.getElementById('content').scrollTop = 0;
 }
 
-// 📦 Sample Content Generators ensuring unique content per chapter
-function generateFallbackNotes() {
-  document.getElementById('panel-notes').innerHTML = `
-    <h2 style="margin-bottom:15px">📖 ${CUR.chapter} - Complete Notes</h2>
-    <div style="background:var(--card-bg); padding:20px; border-radius:12px; border:1px solid var(--card-border);">
-      <h3 style="color:var(--brand)">1. Introduction to ${CUR.chapter}</h3>
-      <p style="margin:10px 0; line-height:1.6">These are dynamic sample notes generated specifically for the <b>${CUR.chapter}</b> chapter. Every concept relies on fundamental laws of physics.</p>
-      <div style="padding:15px; background:var(--item-active); border-left:4px solid var(--brand); border-radius:8px; margin:15px 0;">
-        <strong>Key Formula:</strong> $ F = ma $ (Sample LaTeX equation rendering)
-      </div>
+/* ══════ NOTES ══════ */
+async function loadNotes() {
+  const wrap = document.getElementById('notes-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'📖','Notes','Notes for this chapter are being prepared. Check back soon!'); return; }
+  wrap.innerHTML = spinnerHTML('📖','Loading notes…');
+  window.chapterNotes = undefined;
+  document.querySelectorAll('[data-note]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.note = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/note.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.chapterNotes ? renderNotes(window.chapterNotes, wrap)
+    : renderComingSoon(wrap,'📖','Notes','Notes for this chapter are being prepared.');
+}
+
+function renderNotes(d, wrap) {
+  wrap.innerHTML = `<div class="notes-title"><span class="n-sec-icon" style="width:38px;height:38px;font-size:20px;">${d.icon||'📖'}</span>${d.title}<span style="font-size:11px;font-weight:500;color:var(--text-muted);margin-left:4px;">Class ${d.grade}</span></div>`
+    + (d.sections||[]).map(s =>
+      `<div class="notes-section"><div class="notes-section-heading"><span class="n-sec-icon">${s.icon||'📌'}</span>${s.heading}</div>${s.content}</div>`
+    ).join('');
+  // Trigger MathJax rendering for formulas in notes
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+
+/* ══════ DESCRIPTIVE ══════ */
+async function loadDesc() {
+  const wrap = document.getElementById('desc-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'✏️','Descriptive Questions','Questions being prepared.'); return; }
+  window.descqData = undefined;
+  document.querySelectorAll('[data-descq]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.descq = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/descq.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.descqData && window.descqData.length
+    ? renderDesc(window.descqData, wrap)
+    : renderComingSoon(wrap,'✏️','Descriptive Questions','Long-answer questions for this chapter are being added. Add them in <code>descq.js</code>');
+}
+
+function renderDesc(data, wrap) {
+  wrap.innerHTML = data.map((q,i) =>
+    `<div class="desc-card">
+      <div class="desc-q-num">Question ${i+1}</div>
+      <div class="desc-q-text">${q.question}</div>
+      <span class="desc-q-marks">${q.marks||'?'} Mark${(q.marks||1)>1?'s':''}</span>
+      <button class="desc-ans-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'▼ Hide Answer':'▶ Show Answer'">▶ Show Answer</button>
+      <div class="desc-answer">${q.answer||'Answer coming soon.'}</div>
+    </div>`
+  ).join('');
+  // Trigger MathJax rendering
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+
+/* ══════ MOCK TEST ══════ */
+async function loadMock() {
+  const wrap = document.getElementById('mock-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🎯','Mock Test','Mock tests coming soon!'); return; }
+  window.mockTestData = undefined;
+  document.querySelectorAll('[data-mock]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.mock = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/mocktest.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.mockTestData
+    ? renderMock(window.mockTestData, wrap)
+    : renderComingSoon(wrap,'🎯','Mock Test','Mock test for this chapter is being prepared. Add questions in <code>mocktest.js</code>');
+}
+
+function renderMock(d, wrap) {
+  let html = `<div class="mock-header"><span class="mock-icon">🎯</span><div class="mock-info"><h3>${d.title}</h3><p>Test your understanding chapter-wise!</p><div class="mock-badges"><span class="mock-badge">⏱ ${d.duration} min</span><span class="mock-badge">📝 ${d.questions.length} Qs</span><span class="mock-badge">⭐ ${d.totalMarks} Marks</span></div></div></div>`;
+  html += d.questions.map((q,i) =>
+    `<div class="mock-q-card"><div class="mock-q-num">Question ${i+1}</div><div class="mock-q-text">${q.question}</div>
+    <div class="mock-options" data-answer="${q.answer}" data-idx="${i}">
+      ${Object.entries(q.options).map(([k,v])=>`<div class="mock-opt" data-opt="${k}" onclick="pickMockOpt(this)"><span class="mock-opt-label">${k}</span>${v}</div>`).join('')}
     </div>
-  `;
-  if(window.MathJax) MathJax.typesetPromise();
+    <div class="mock-exp" id="mexp${i}">${q.explanation||'Explanation coming soon.'}</div></div>`
+  ).join('');
+  html += `<button id="mock-submit" onclick="submitMock(${d.questions.length},${d.totalMarks})">✅ Submit Test</button><div id="mock-score"></div>`;
+  wrap.innerHTML = html;
 }
 
-function generateFallbackDesc() {
-  document.getElementById('panel-desc').innerHTML = `
-    <div class="question-item">
-      <div class="card-top">
-        <div class="qno four">1</div>
-        <div>
-          <div style="font-size:14px; margin-bottom:10px;">Explain the core principles of <b>${CUR.chapter}</b> with relevant real-world examples.</div>
-          <button onclick="this.nextElementSibling.style.display='block';this.style.display='none'" style="padding:5px 10px; cursor:pointer;">Show Answer</button>
-          <div style="display:none; padding:10px; background:var(--item-hover); margin-top:10px; border-radius:8px;">The principles of ${CUR.chapter} dictate how physical bodies interact in our universe...</div>
+function pickMockOpt(opt) {
+  const box = opt.closest('.mock-options');
+  if (box.classList.contains('answered')) return;
+  box.querySelectorAll('.mock-opt').forEach(o => { o.classList.remove('selected'); delete o.dataset.selected; });
+  opt.classList.add('selected'); opt.dataset.selected = '1';
+}
+
+function submitMock(total, totalMarks) {
+  let correct = 0;
+  document.querySelectorAll('.mock-options').forEach(box => {
+    box.classList.add('answered');
+    const ans = box.dataset.answer, idx = box.dataset.idx;
+    const sel = box.querySelector('[data-selected]');
+    if (sel) { if (sel.dataset.opt === ans) { sel.classList.add('correct'); correct++; } else sel.classList.add('wrong'); }
+    const corrEl = box.querySelector(`[data-opt="${ans}"]`); if (corrEl) corrEl.classList.add('correct');
+    const exp = document.getElementById('mexp'+idx); if (exp) exp.classList.add('open');
+  });
+  const score = document.getElementById('mock-score'); score.style.display='block';
+  const pct = Math.round(correct/total*100);
+  score.innerHTML = `<h3>${pct>=80?'🏆':pct>=60?'✅':pct>=40?'📚':'💪'} ${correct}/${total} — ${pct}%</h3><p>${pct>=80?'Excellent work!':pct>=60?'Good job!':pct>=40?'Keep practising!':'Review your notes and retry!'}</p>`;
+  score.scrollIntoView({behavior:'smooth',block:'center'});
+  document.getElementById('mock-submit').style.display='none';
+}
+
+/* ══════ PPT ══════ */
+async function loadPPT() {
+  const wrap = document.getElementById('ppt-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'📊','PPTs','Slide decks coming soon!'); return; }
+  window.pptsData = undefined;
+  document.querySelectorAll('[data-ppt]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.ppt = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/ppts.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.pptsData && window.pptsData.length
+    ? (wrap.innerHTML = `<div class="ppt-grid">${window.pptsData.map(p=>`<div class="ppt-card" onclick="window.open('${p.url}','_blank')"><div class="ppt-thumb">${p.icon||'📊'}</div><div class="ppt-name">${p.title}</div><div class="ppt-slides">${p.slides||'?'} slides</div></div>`).join('')}</div>`)
+    : renderComingSoon(wrap,'📊','PPTs / Slides','Chapter slide decks are being prepared. Add PPT links in <code>ppts.js</code>');
+}
+
+/* ══════ FLASH CARDS ══════ */
+async function loadFlash() {
+  const wrap = document.getElementById('flash-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🃏','Flash Cards','Flash cards coming soon!'); return; }
+  window.flashcardsData = undefined;
+  document.querySelectorAll('[data-flash]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.flash = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/flashcards.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.flashcardsData && window.flashcardsData.length
+    ? renderFlash(window.flashcardsData, wrap)
+    : renderComingSoon(wrap,'🃏','Flash Cards','Flash cards coming soon. Add cards in <code>flashcards.js</code>');
+}
+
+function renderFlash(data, wrap) {
+  wrap.innerHTML = `<div class="flashcard-controls">
+    <button class="fc-ctrl-btn" onclick="document.querySelectorAll('.flashcard').forEach(c=>c.classList.toggle('flipped'))">🔄 Flip All</button>
+    <button class="fc-ctrl-btn" onclick="shuffleCards()">🔀 Shuffle</button>
+    <span class="fc-count">${data.length} cards</span>
+  </div>
+  <div class="flashcard-wrap" id="fc-wrap">`
+  + data.map((c,i)=>
+    `<div class="flashcard" id="fc${i}" onclick="this.classList.toggle('flipped')">
+      <div class="flashcard-inner">
+        <div class="fc-face fc-front"><div class="fc-label">Question</div><div class="fc-text">${c.front}</div><div class="fc-hint">Tap to flip ↩</div></div>
+        <div class="fc-face fc-back"><div class="fc-label">Answer</div><div class="fc-text">${(c.back||'').replace(/\n/g,'<br>')}</div></div>
+      </div>
+    </div>`
+  ).join('') + `</div>`;
+}
+
+function shuffleCards() {
+  const w = document.getElementById('fc-wrap'); if (!w) return;
+  [...w.children].sort(()=>Math.random()-.5).forEach(c=>w.appendChild(c));
+}
+
+/* ══════ SIMULATIONS ══════ */
+async function loadSim() {
+  const wrap = document.getElementById('sim-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🔬','Simulations','Interactive simulations coming soon!'); return; }
+  window.simulationsData = undefined;
+  document.querySelectorAll('[data-sim]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.sim = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/simulations.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.simulationsData && window.simulationsData.length
+    ? renderSim(window.simulationsData, wrap)
+    : renderComingSoon(wrap,'🔬','Simulations','Simulations for this chapter are being built. Add them in <code>simulations.js</code>');
+}
+
+function renderSim(data, wrap) {
+  wrap.dataset.simJson = JSON.stringify(data.map(s=>({title:s.title,icon:s.icon,description:s.description})));
+  wrap.innerHTML = `<div class="sim-list">`
+    + data.map((s,i)=>
+      `<div class="sim-card">
+        <div class="sim-header" onclick="toggleSim(${i})">
+          <span class="sim-icon-3d">${s.icon||'🔬'}</span>
+          <div><div class="sim-title">${s.title}</div><div class="sim-desc">${s.description||''}</div></div>
+          <button class="sim-launch-btn" id="simBtn${i}">▶ Launch</button>
         </div>
-      </div>
-    </div>
-  `;
-}
-
-function generateFallbackMock() {
-  document.getElementById('panel-mock').innerHTML = `
-    <div class="mcq-card">
-      <div class="card-top">
-        <div class="qno one">1</div>
-        <div style="flex:1">
-          <p style="margin-bottom:10px;">Which of the following best describes a key concept in <b>${CUR.chapter}</b>?</p>
-          <div class="options">
-             <div class="option" onclick="this.classList.add('correct')">A. Concept Alpha</div>
-             <div class="option" onclick="this.classList.add('wrong')">B. Concept Beta</div>
-          </div>
+        <div class="sim-embed" id="simEmbed${i}">
+          <iframe class="sim-iframe" id="simFrame${i}" height="320" sandbox="allow-scripts"></iframe>
         </div>
-      </div>
-    </div>
-  `;
+      </div>`
+    ).join('') + `</div>`;
+  // Store html separately
+  wrap._simHtmls = data.map(s=>s.html);
 }
 
-// 🎮 GAMES & PUZZLES 
-function generateFallbackGames() {
-  document.getElementById('panel-games').innerHTML = `
-    <div class="sim-list">
-      <div class="sim-card" style="padding:20px;">
-         <h3 style="margin-bottom:10px">🎮 ${CUR.chapter} Interactive Quiz</h3>
-         <p style="color:var(--text-muted); margin-bottom:15px;">A dynamic memory match game generated for ${CUR.chapter}.</p>
-         <button style="padding:10px 20px; background:var(--col-games); color:#fff; border:none; border-radius:8px; cursor:pointer;">Start Game</button>
-      </div>
-    </div>
-  `;
+function toggleSim(i) {
+  const embed = document.getElementById('simEmbed'+i);
+  const btn = document.getElementById('simBtn'+i);
+  const frame = document.getElementById('simFrame'+i);
+
+  // Close all other simulations first (accordion behavior)
+  const wrap = document.getElementById('sim-content-wrap');
+  if (wrap && wrap._simHtmls) {
+    wrap._simHtmls.forEach((_, idx) => {
+      if (idx !== i) {
+        const otherEmbed = document.getElementById('simEmbed'+idx);
+        const otherBtn = document.getElementById('simBtn'+idx);
+        if (otherEmbed && otherEmbed.classList.contains('open')) {
+          otherEmbed.classList.remove('open');
+          if (otherBtn) otherBtn.textContent = '▶ Launch';
+        }
+      }
+    });
+  }
+
+  const open = embed.classList.toggle('open');
+  btn.textContent = open ? '✕ Close' : '▶ Launch';
+  if (open && !frame.dataset.loaded) {
+    if (wrap._simHtmls && wrap._simHtmls[i]) {
+      frame.srcdoc = wrap._simHtmls[i];
+      frame.dataset.loaded = '1';
+    }
+  }
 }
 
-// 🔢 PYQs UI Enhancements (Circular badges, bottom-left sets)
-function renderPyqCard(qno, type, qtext, setCode, year) {
-  return `
-    <div class="mcq-card">
-      <div class="card-top">
-        <div class="qno ${type}">${qno}</div>
-        <div style="flex:1">
-          <p style="margin-bottom:10px;">${qtext}</p>
+/* ══════ GAMES & PUZZLES ══════ */
+async function loadGames() {
+  const wrap = document.getElementById('games-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🎮','Games & Puzzles','Interactive games and puzzles coming soon!'); return; }
+  window.gamesData = undefined;
+  document.querySelectorAll('[data-games]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.games = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/games.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.gamesData && window.gamesData.length
+    ? renderGames(window.gamesData, wrap)
+    : renderComingSoon(wrap,'🎮','Games & Puzzles','Games and puzzles for this chapter are coming soon. Add them in <code>games.js</code>');
+}
+
+function renderGames(data, wrap) {
+  wrap.innerHTML = `<div class="games-grid">`
+    + data.map((g,i)=>
+      `<div class="game-card" onclick="toggleGame(${i})">
+        <div class="game-header">
+          <div class="game-icon">${g.icon||'🎮'}</div>
+          <div class="game-title">${g.title}</div>
         </div>
-      </div>
-      <div class="mcq-card-badges">
-        <span class="set-badge ${type}">${setCode}</span>
-        <span class="year-badge">${year}</span>
-      </div>
-    </div>
-  `;
+        <div class="game-desc">${g.description||''}</div>
+        <span class="game-badge">${g.type||'Interactive'}</span>
+        <div class="game-content" id="gameContent${i}">
+          <div id="gameArea${i}"></div>
+        </div>
+      </div>`
+    ).join('') + `</div>`;
+  wrap._gamesData = data;
 }
 
-function generateFallbackPYQs() {
-  if(!CUR.hasPyq) return;
-  document.getElementById('pyq-mcq').innerHTML = renderPyqCard(1, 'mcq', `Previous year MCQ question for ${CUR.chapter}.`, '31/1/1', '2024');
-  document.getElementById('pyq-ar').innerHTML = renderPyqCard(1, 'ar', `Assertion: Related to ${CUR.chapter}.<br>Reason: Statement explains assertion.`, '32/2/1', '2023');
-  document.getElementById('pyq-one').innerHTML = renderPyqCard(1, 'one', `Define a term in ${CUR.chapter}.`, 'SET-A', '2022');
-  document.getElementById('pyq-two').innerHTML = renderPyqCard(1, 'two', `Explain brief phenomena of ${CUR.chapter}.`, '31/1/1', '2025');
-  document.getElementById('pyq-three').innerHTML = renderPyqCard(1, 'three', `Derive the equation for ${CUR.chapter}.`, 'SET-B', '2024');
-  document.getElementById('pyq-four').innerHTML = renderPyqCard(1, 'four', `Case study question regarding ${CUR.chapter}.`, '31/3/2', '2026');
-  document.getElementById('pyq-five').innerHTML = renderPyqCard(1, 'five', `Long answer explaining ${CUR.chapter} in detail.`, 'SET-C', '2021');
+function toggleGame(i) {
+  const content = document.getElementById('gameContent'+i);
+  const area = document.getElementById('gameArea'+i);
+
+  // Close all other games first (accordion behavior)
+  const wrap = document.getElementById('games-content-wrap');
+  if (wrap && wrap._gamesData) {
+    wrap._gamesData.forEach((_, idx) => {
+      if (idx !== i) {
+        const otherContent = document.getElementById('gameContent'+idx);
+        if (otherContent && otherContent.classList.contains('open')) {
+          otherContent.classList.remove('open');
+        }
+      }
+    });
+  }
+
+  const open = content.classList.toggle('open');
+
+  if (open && !area.dataset.loaded) {
+    if (wrap._gamesData && wrap._gamesData[i]) {
+      const game = wrap._gamesData[i];
+      if (game.html) {
+        area.innerHTML = game.html;
+        area.dataset.loaded = '1';
+        if (game.init && typeof game.init === 'function') {
+          game.init(area);
+        }
+      }
+    }
+  }
+}
+
+/* ══════ PYQ LOADER ══════ */
+async function loadPYQ() {
+  if (!CUR.slug || !CUR.hasPyq) { renderNoPYQ(); return; }
+  // Clear + show loading
+  PYQ_TYPES.forEach(t => {
+    const el = document.getElementById('pyq-'+t.id);
+    if (el) { el.innerHTML = spinnerHTML('📋','Loading…'); window[t.varName] = undefined; }
+  });
+  // Remove stale scripts
+  document.querySelectorAll('[data-pyq]').forEach(s=>s.remove());
+  // Load all 7 PYQ files in parallel
+  await Promise.all(PYQ_TYPES.map(t => {
+    const s = document.createElement('script');
+    s.dataset.pyq = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/pyqs/${t.file}`;
+    document.head.appendChild(s);
+    return new Promise(res => { s.onload = s.onerror = res; });
+  }));
+  renderAllPYQ();
+}
+
+function renderAllPYQ() {
+  PYQ_TYPES.forEach(t => {
+    const el = document.getElementById('pyq-'+t.id); if (!el) return;
+    el.innerHTML = '';
+    const data = window[t.varName];
+    if (!data || !data.length) {
+      el.innerHTML = `<div class="no-content-state"><div class="no-content-icon">📭</div><h3>No ${t.label} yet</h3><p>Add questions in <code>${t.file}</code> for this chapter.</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
+      return;
+    }
+    if (t.id==='mcq') renderMCQSection(data,el);
+    else if (t.id==='ar') renderARSection(data,el);
+    else renderWrittenSection(data,el,t.id);
+  });
+}
+
+function badges(q, marksType = '') {
+  const setClass = marksType ? `set-badge-${marksType}mark` : 'set-badge';
+  return `<div class="mcq-card-badges">
+    ${q.set?`<span class="set-badge ${setClass}">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+  </div>`;
+}
+
+function renderMCQSection(data, el) {
+  data.forEach((q, idx) => {
+    const c = document.createElement('div'); c.className='mcq-card';
+    c.innerHTML = `<div class="mcq-card-top">
+      <div class="qno mcq">${idx+1}</div>
+      <div style="flex:1">
+        <div style="font-size:13.5px;line-height:1.8;margin-bottom:9px;">${q.question}</div>
+        <div class="options" data-answer="${q.answer}">
+          ${Object.entries(q.options).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}
+        </div>
+        <div class="explanation">💡 Explanation will be updated shortly.</div>
+      </div>
+    </div>
+    <div class="mcq-card-badges" style="display:flex;gap:6px;align-items:center;">
+      ${q.set?`<span class="set-badge set-badge-1mark">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+    </div>`;
+    el.appendChild(c);
+  });
+  if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
+}
+
+function renderARSection(data, el) {
+  const opts = {A:'Both A & R true; R is correct explanation',B:'Both A & R true; R is not correct explanation',C:'A is true, R is false',D:'A is false, R is true'};
+  data.forEach((q, idx) => {
+    const c = document.createElement('div'); c.className='mcq-card';
+    c.innerHTML = `<div class="mcq-card-top">
+      <div class="qno ar">${idx+1}</div>
+      <div style="flex:1">
+        <div style="font-size:13px;line-height:1.8;margin-bottom:5px;"><strong>Assertion:</strong> ${q.assertion}</div>
+        <div style="font-size:13px;line-height:1.8;margin-bottom:9px;"><strong>Reason:</strong> ${q.reason}</div>
+        <div class="options" data-answer="${q.answer}">
+          ${Object.entries(opts).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}
+        </div>
+        <div class="explanation">💡 Explanation will be updated shortly.</div>
+      </div>
+    </div>
+    <div class="mcq-card-badges" style="display:flex;gap:6px;align-items:center;">
+      ${q.set?`<span class="set-badge set-badge-2mark">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+    </div>`;
+    el.appendChild(c);
+  });
+  if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
+}
+
+function renderWrittenSection(data, el, type) {
+  const markClass = type === 'one' ? 'set-badge-1mark' : type === 'two' ? 'set-badge-2mark' : type === 'three' ? 'set-badge-3mark' : type === 'four' ? 'set-badge-4mark' : 'set-badge-5mark';
+  data.forEach((q, idx) => {
+    const item = document.createElement('div'); item.className='question-item';
+    item.innerHTML = `<div class="question-item-top">
+      <div class="qno ${type}">${idx+1}</div>
+      <div style="flex:1">
+        <div style="font-size:13.5px;line-height:1.8;">${q.question}</div>
+        <div class="explanation">${q.answer||'Answer will be updated shortly.'}</div>
+      </div>
+    </div>
+    <div class="question-item-badges" style="display:flex;gap:6px;align-items:center;">
+      ${q.set?`<span class="set-badge ${markClass}">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+    </div>`;
+    el.appendChild(item);
+  });
+  if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
+}
+
+function renderNoPYQ() {
+  PYQ_TYPES.forEach(t => {
+    const el = document.getElementById('pyq-'+t.id); if (!el) return;
+    el.innerHTML = `<div class="no-content-state"><div class="no-content-icon">📚</div><h3>PYQs available for Class 10 &amp; 12 only</h3><p>Board exam previous year questions are provided for Class 10 and Class 12 chapters.</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
+  });
 }
 
 function showPyqSec(id, el) {
   document.querySelectorAll('.pyq-tab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
+  if(el) el.classList.add('active');
   document.querySelectorAll('.pyq-section').forEach(s=>s.style.display='none');
-  document.getElementById('pyq-'+id).style.display='block';
+  const sec = document.getElementById('pyq-'+id); if(sec) sec.style.display='block';
+  document.getElementById('content').scrollTop=0;
 }
 
-// 🧪 SIMULATIONS OVERHAUL: Accordion progressive reveal
-let simHtmlData = [];
-function generateFallbackSims() {
-  const ch = CUR.chapter.toLowerCase();
-  let sims = [];
+/* ══════ MCQ CLICK HANDLERS ══════ */
+document.addEventListener('click', e => {
+  const opt = e.target.closest('.option'); if (!opt) return;
+  const box = opt.closest('.options'); if (!box || box.classList.contains('answered')) return;
+  const ans = box.dataset.answer, sel = opt.dataset.opt;
+  box.classList.add('answered');
+  if (sel===ans) opt.classList.add('correct');
+  else { opt.classList.add('wrong'); const c=box.querySelector(`[data-opt="${ans}"]`); if(c) c.classList.add('correct'); }
+});
+
+document.addEventListener('click', e => {
+  if (e.target.closest('.option,.mock-opt')) return;
+  const card = e.target.closest('.mcq-card,.question-item'); if (!card) return;
+  const exp = card.querySelector('.explanation'); if (exp) exp.style.display = exp.style.display==='block'?'none':'block';
+});
+
+/* ══════ HELPERS ══════ */
+function spinnerHTML(icon, msg) {
+  return `<div class="no-content-state"><div class="no-content-icon">${icon}</div><p style="color:var(--text-muted)">${msg}</p></div>`;
+}
+function renderComingSoon(wrap, icon, name, msg) {
+  wrap.innerHTML = `<div class="no-content-state"><div class="no-content-icon">${icon}</div><h3>${name}</h3><p>${msg}</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
+}
+
+/* ══════ THEME ══════ */
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  document.getElementById('themeBtn').textContent = document.body.classList.contains('light')?'🌙':'☀️';
+}
+
+/* ══════ MOBILE / DESKTOP VIEW TOGGLE ══════ */
+let mobileMode = false;
+function toggleViewMode() {
+  mobileMode = !mobileMode;
+  const contentWrap = document.getElementById('contentWrap');
+  const sidebar = document.getElementById('sidebar');
+  const btn = document.getElementById('viewToggleBtn');
   
-  if (ch.includes('light')) {
-    sims.push({ title: "Ray Diagram Builder", icon: "🔦", html: getHtmlCode('light') });
-    sims.push({ title: "Refraction Index visualizer", icon: "🌈", html: "<h1>Refraction App</h1>" });
-  } else if (ch.includes('motion') || ch.includes('force')) {
-    sims.push({ title: "Distance-Time Graph Plotter", icon: "📈", html: getHtmlCode('motion') });
-    sims.push({ title: "Force Vectors", icon: "⚖️", html: "<h1>Force App</h1>" });
-  } else if (ch.includes('electric')) {
-    sims.push({ title: "Circuit Builder", icon: "⚡", html: getHtmlCode('electricity') });
+  if (mobileMode) {
+    // Switch to mobile-optimized layout
+    contentWrap.style.maxWidth = '100%';
+    contentWrap.style.width = '100%';
+    sidebar.classList.add('hide');
+    btn.textContent = '🖥️';
+    btn.classList.add('toggled');
+    btn.title = 'Switch to Desktop View';
+    showToast('📱 Mobile Layout - Optimized for small screens');
   } else {
-    sims.push({ title: `${CUR.chapter} Concept Explorer`, icon: "🧪", html: `<h1>Exploring ${CUR.chapter}</h1>` });
-    sims.push({ title: `${CUR.chapter} Visualizer`, icon: "📉", html: `<h1>Visualizing ${CUR.chapter}</h1>` });
-  }
-
-  simHtmlData = sims.map(s => s.html);
-  
-  let html = `<div class="sim-list">`;
-  sims.forEach((s, i) => {
-    // Accordion Reveal: Only show first one initially
-    html += `
-      <div class="sim-card" id="simCard${i}" style="display: ${i===0 ? 'block' : 'none'};">
-        <div class="sim-header" onclick="toggleSim(${i}, ${sims.length})">
-          <span class="sim-icon-3d">${s.icon}</span>
-          <div><div class="sim-title">${s.title}</div><div class="sim-desc">Interactive physics model</div></div>
-          <button class="sim-launch-btn" id="simBtn${i}">▶ Launch</button>
-        </div>
-        <div class="sim-embed" id="simEmbed${i}">
-          <iframe class="sim-iframe" id="simFrame${i}" sandbox="allow-scripts allow-same-origin"></iframe>
-        </div>
-      </div>
-    `;
-  });
-  html += `</div>`;
-  document.getElementById('panel-sim').innerHTML = html;
-}
-
-function toggleSim(index, total) {
-  // Collapse all others
-  for(let i=0; i<total; i++) {
-    if(i !== index) {
-      document.getElementById('simEmbed'+i).classList.remove('open');
-      document.getElementById('simBtn'+i).innerHTML = '▶ Launch';
-    }
-  }
-  
-  const embed = document.getElementById('simEmbed'+index);
-  const btn = document.getElementById('simBtn'+index);
-  const frame = document.getElementById('simFrame'+index);
-  
-  const isOpen = embed.classList.toggle('open');
-  btn.innerHTML = isOpen ? '✕ Close' : '▶ Launch';
-  
-  if (isOpen && !frame.dataset.loaded) {
-    frame.srcdoc = simHtmlData[index];
-    frame.dataset.loaded = '1';
-  }
-  
-  // PROGRESSIVE REVEAL: Show the NEXT simulation only after launching the current one
-  if (isOpen && index + 1 < total) {
-    const nextCard = document.getElementById('simCard'+(index+1));
-    if(nextCard) nextCard.style.display = 'block';
+    // Switch to desktop layout
+    contentWrap.style.maxWidth = '';
+    contentWrap.style.width = '';
+    sidebar.classList.remove('hide');
+    btn.textContent = '📱';
+    btn.classList.remove('toggled');
+    btn.title = 'Switch to Mobile Layout';
+    showToast('🖥️ Desktop Layout - Full view');
   }
 }
 
-// Lightweight simulation HTML codes
-function getHtmlCode(type) {
-  if(type === 'light') return `<html><body style="font-family:sans-serif; text-align:center; padding:20px;"><h2>Ray Diagram Simulation</h2><canvas id="c" width="400" height="200" style="border:1px solid #ccc; background:#fff"></canvas><br><input type="range" id="slider" min="10" max="150" value="50"><script>const ctx=document.getElementById('c').getContext('2d'), sl=document.getElementById('slider'); function draw(){ctx.clearRect(0,0,400,200); ctx.beginPath(); ctx.moveTo(0,100); ctx.lineTo(400,100); ctx.stroke(); let u = parseInt(sl.value); ctx.fillStyle='red'; ctx.fillRect(200-u, 50, 5, 50); ctx.fillStyle='blue'; ctx.fillRect(200+u, 100, 5, 50); ctx.fillText('Object', 200-u-10, 40); ctx.fillText('Virtual Image', 200+u-10, 160);} sl.oninput=draw; draw();<\/script></body></html>`;
-  
-  if(type === 'motion') return `<html><body style="font-family:sans-serif; text-align:center; padding:20px;"><h2>Distance-Time Graph</h2><canvas id="c" width="400" height="200" style="border:1px solid #ccc; background:#fff"></canvas><br><button onclick="play()">Animate Motion</button><script>let x=0, timer; const ctx=document.getElementById('c').getContext('2d'); function play(){clearInterval(timer); x=0; ctx.clearRect(0,0,400,200); timer=setInterval(()=>{x+=2; ctx.fillStyle='blue'; ctx.beginPath(); ctx.arc(x, 200 - (x/2), 3, 0, 6.28); ctx.fill(); if(x>400) clearInterval(timer);}, 20);}<\/script></body></html>`;
-  
-  if(type === 'electricity') return `<html><body style="font-family:sans-serif; text-align:center; padding:20px;"><h2>Ohm's Law Circuit Builder</h2>Voltage (V): <input type="range" id="v" min="1" max="20" value="10"><br>Resistance (Ω): <input type="range" id="r" min="1" max="50" value="10"><h1 id="out" style="color:green; margin-top:30px">Current: 1.00 A</h1><script>const v=document.getElementById('v'), r=document.getElementById('r'), o=document.getElementById('out'); function calc(){o.innerText = 'Current: ' + (v.value / r.value).toFixed(2) + ' A';} v.oninput=calc; r.oninput=calc;<\/script></body></html>`;
-  
-  return `<h1>Interactive Simulation</h1>`;
+/* ══════ TOAST ══════ */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(window._tt); window._tt = setTimeout(()=>t.classList.remove('show'),2600);
 }
+
+/* ══════ INIT ══════ */
+window.addEventListener('DOMContentLoaded', () => {
+  const cbseG10 = document.querySelector('[onclick*="\'cbse-g10\'"]');
+  if (cbseG10) toggleGrade('cbse-g10', cbseG10);
+});
 </script>
 </body>
-</html> 
+</html>
