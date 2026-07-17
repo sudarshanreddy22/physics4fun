@@ -233,12 +233,14 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .desc-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:15px 17px;margin-bottom:10px;transition:all .2s;position:relative;overflow:hidden;}
 .desc-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--col-desc),transparent);}
 .desc-card:hover{border-color:rgba(52,211,153,.3);transform:translateY(-1px);}
-.desc-q-num{font-size:9.5px;font-weight:800;color:var(--col-desc);letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;}
-.desc-q-text{font-size:13.5px;line-height:1.8;color:var(--text);}
-.desc-q-marks{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;background:var(--sbg-desc);color:var(--col-desc);border:1px solid rgba(52,211,153,.22);display:inline-block;margin-top:7px;}
-.desc-ans-toggle{font-size:11.5px;font-weight:700;color:var(--col-desc);cursor:pointer;padding:5px 0;margin-top:5px;display:flex;align-items:center;gap:5px;border:none;background:none;transition:opacity .15s;}
-.desc-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(52,211,153,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:2px solid var(--col-desc);}
-.desc-answer.open{display:block;}
+.desc-toggle-all-btn{background:var(--col-desc);color:white;border:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:15px;transition:all .2s;}
+.desc-toggle-all-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.desc-q-icon{display:inline-block;width:16px;height:16px;margin-right:8px;font-size:12px;font-weight:bold;color:var(--col-desc);transition:transform .2s;}
+.desc-q-text{font-size:13.5px;line-height:1.8;color:var(--text);display:flex;align-items:flex-start;padding:12px;border-radius:8px;transition:all .2s;user-select:none;}
+.desc-q-text:hover{background:rgba(52,211,153,.05);}
+.desc-q-content{flex:1;}
+.desc-answer{display:none;margin-top:8px;padding:14px;background:rgba(52,211,153,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-desc);animation:slideDown .3s ease-out;}
+@keyframes slideDown{from{opacity:0;max-height:0;}to{opacity:1;max-height:1000px;}}
 
 /* ══ MOCK TEST ══ */
 .mock-header{background:linear-gradient(135deg,rgba(251,191,36,.16),rgba(251,191,36,.05));border:1px solid rgba(251,191,36,.28);border-radius:14px;padding:15px 18px;margin-bottom:14px;display:flex;align-items:center;gap:13px;}
@@ -267,12 +269,17 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 #mock-score p{font-size:13px;color:var(--text-sub);margin-top:4px;}
 
 /* ══ PPT ══ */
-.ppt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;}
-.ppt-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:14px;cursor:pointer;transition:all .2s;text-align:center;}
-.ppt-card:hover{border-color:rgba(248,113,113,.4);transform:translateY(-2px);box-shadow:0 8px 24px rgba(248,113,113,.1);}
-.ppt-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,rgba(248,113,113,.2),rgba(245,158,11,.15));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:9px;}
-.ppt-name{font-size:12px;font-weight:700;color:var(--text);}
-.ppt-slides{font-size:10.5px;color:var(--text-muted);margin-top:3px;}
+.ppt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.ppt-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:14px;cursor:pointer;transition:all .2s cubic-bezier(.23,1,.32,1);position:relative;overflow:hidden;}
+.ppt-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.15);}
+.ppt-card.onedrive:hover{border-color:#3b82f6;}
+.ppt-card.canva:hover{border-color:#a855f7;}
+.ppt-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,rgba(248,113,113,.2),rgba(245,158,11,.15));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:10px;position:relative;}
+.ppt-source-badge{position:absolute;top:8px;right:8px;font-size:9px;font-weight:800;padding:3px 8px;border-radius:12px;display:flex;align-items:center;gap:3px;backdrop-filter:blur(8px);z-index:10;}
+.ppt-source-badge.onedrive{background:rgba(59,130,246,.9);color:white;}
+.ppt-source-badge.canva{background:rgba(168,85,247,.9);color:white;}
+.ppt-name{font-size:13px;font-weight:700;color:var(--text);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:6px;}
+.ppt-slides{font-size:11px;color:var(--text-muted);font-weight:600;}
 
 /* ══ FLASH CARDS ══ */
 .flashcard-controls{display:flex;gap:7px;margin-bottom:13px;align-items:center;flex-wrap:wrap;}
@@ -332,6 +339,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .qno.three{background:linear-gradient(135deg,var(--pyq-three),#b91c1c);}
 .qno.four{background:linear-gradient(135deg,var(--pyq-four),#0369a1);}
 .qno.five{background:linear-gradient(135deg,var(--pyq-five),#be185d);}
+.qno.desc{background:linear-gradient(135deg,#34d399,#10b981);}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:10px 0 3px;}
 .option{display:flex;align-items:flex-start;gap:7px;padding:7px 11px;border-radius:9px;cursor:pointer;border:1px solid var(--card-border);background:var(--bg3);transition:all .15s;font-size:12.5px;line-height:1.5;}
 .option:hover{border-color:rgba(124,58,237,.4);background:rgba(124,58,237,.07);}
@@ -340,6 +348,13 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .opt-label{font-size:9.5px;font-weight:800;width:17px;height:17px;border-radius:5px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
 .options.answered .option{cursor:default;}
 .explanation{display:none;margin-top:9px;padding:9px 13px;background:rgba(99,102,241,.06);border-left:2px solid var(--brand);border-radius:8px;font-size:12.5px;line-height:1.75;color:var(--text-sub);}
+.pyq-toggle-all-btn{background:var(--col-pyq);color:white;border:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:15px;transition:all .2s;}
+.pyq-toggle-all-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.pyq-question-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:13px 15px;margin-bottom:9px;transition:all .2s;}
+.pyq-question-item:hover{border-color:rgba(251,146,60,.3);}
+.pyq-question-top{display:flex;gap:11px;align-items:flex-start;}
+.pyq-q-icon{display:inline-block;width:16px;height:16px;margin-left:8px;font-size:12px;font-weight:bold;color:var(--col-pyq);transition:transform .2s;flex-shrink:0;}
+.pyq-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(251,146,60,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-pyq);animation:slideDown .3s ease-out;}
 
 /* ══ GAMES & PUZZLES ══ */
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
@@ -415,11 +430,12 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       <!-- 📘 CBSE BOARD -->
       <!-- ═══════════════════════════════════════════════════════════════ -->
       <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(6,182,212,.1));padding:8px 12px;border-radius:10px;margin-bottom:10px;border:1px solid rgba(99,102,241,.3);">📘 CBSE Board</div>
-
-      <!-- Grades 6-8 -->
-      <div class="sb-label">Grades 6 – 8</div>
-
-      <div class="grade-row" onclick="toggleGrade('cbse-g6',this)">
+      
+	  
+	  <!-- Grades 6-10 -->
+      <div class="sb-label">Grades 6 – 10</div>
+	  
+	  <div class="grade-row" onclick="toggleGrade('cbse-g6',this)">
         <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
       </div>
       <div class="chapter-list" id="cbse-g6">
@@ -445,10 +461,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
         <div class="ch-item" onclick="selectChapter('Friction','8','🔄',this,false,'ch2')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
         <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch3')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
       </div>
-
-      <!-- Grades 9-10 -->
-      <div class="sb-label">Grades 9 – 10</div>
-
       <div class="grade-row" onclick="toggleGrade('cbse-g9',this)">
         <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
       </div>
@@ -810,17 +822,49 @@ async function loadDesc() {
 }
 
 function renderDesc(data, wrap) {
-  wrap.innerHTML = data.map((q,i) =>
-    `<div class="desc-card">
-      <div class="desc-q-num">Question ${i+1}</div>
-      <div class="desc-q-text">${q.question}</div>
-      <span class="desc-q-marks">${q.marks||'?'} Mark${(q.marks||1)>1?'s':''}</span>
-      <button class="desc-ans-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'▼ Hide Answer':'▶ Show Answer'">▶ Show Answer</button>
-      <div class="desc-answer">${q.answer||'Answer coming soon.'}</div>
+  let html = `<button id="desc-toggle-all" class="desc-toggle-all-btn" onclick="toggleAllDesc()">Show All</button>`;
+  html += data.map((q,i) =>
+    `<div class="pyq-question-item" data-desc-id="${i}">
+      <div class="pyq-question-top" onclick="toggleDescAnswer(${i})" style="cursor:pointer;">
+        <div class="qno desc" style="flex-shrink:0;">${i+1}</div>
+        <div style="flex:1;">
+          <div style="font-size:13.5px;line-height:1.8;">${q.question}</div>
+        </div>
+        <span class="pyq-q-icon" data-icon-id="desc-${i}">▶</span>
+      </div>
+      <div class="pyq-answer" id="desc-ans-${i}" style="display:none;">${q.answer||'Answer coming soon.'}</div>
     </div>`
   ).join('');
-  // Trigger MathJax rendering
+  wrap.innerHTML = html;
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+function toggleDescAnswer(id) {
+  const answer = document.getElementById(`desc-ans-${id}`);
+  const icon = document.querySelector(`[data-icon-id="desc-${id}"]`);
+  if (answer.style.display === 'none') {
+    answer.style.display = 'block';
+    if (icon) icon.textContent = '▼';
+  } else {
+    answer.style.display = 'none';
+    if (icon) icon.textContent = '▶';
+  }
+  updateToggleAllBtn();
+}
+function toggleAllDesc() {
+  const answers = document.querySelectorAll('[id^="desc-ans-"]');
+  const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
+  answers.forEach((answer, i) => {
+    answer.style.display = allOpen ? 'none' : 'block';
+    const icon = document.querySelector(`[data-icon-id="desc-${i}"]`);
+    if (icon) icon.textContent = allOpen ? '▶' : '▼';
+  });
+  updateToggleAllBtn();
+}
+function updateToggleAllBtn() {
+  const btn = document.getElementById('desc-toggle-all');
+  const answers = document.querySelectorAll('[id^="desc-ans-"]');
+  const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
+  if (btn) btn.textContent = allOpen ? 'Hide All' : 'Show All';
 }
 
 /* ══════ MOCK TEST ══════ */
@@ -887,9 +931,12 @@ async function loadPPT() {
     s.dataset.ppt = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/ppts.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
-  window.pptsData && window.pptsData.length
-    ? (wrap.innerHTML = `<div class="ppt-grid">${window.pptsData.map(p=>`<div class="ppt-card" onclick="window.open('${p.url}','_blank')"><div class="ppt-thumb">${p.icon||'📊'}</div><div class="ppt-name">${p.title}</div><div class="ppt-slides">${p.slides||'?'} slides</div></div>`).join('')}</div>`)
-    : renderComingSoon(wrap,'📊','PPTs / Slides','Chapter slide decks are being prepared. Add PPT links in <code>ppts.js</code>');
+  if (window.pptsData && window.pptsData.length) {
+    wrap.innerHTML = `<div class="ppt-grid">${window.pptsData.map(p=>`<div class="ppt-card ${p.source || 'onedrive'}" onclick="window.open('${p.url}','_blank')"><div class="ppt-thumb">${p.icon || '📊'}<div class="ppt-source-badge ${p.source || 'onedrive'}">${p.source === 'canva' ? '🎨 Canva' : '☁️ OneDrive'}</div></div><div class="ppt-name">${p.title}</div><div class="ppt-slides">${p.slides || '?'} slides</div></div>`).join('')}</div>`;
+  } else {
+    renderComingSoon(wrap,'📊','PPTs / Slides','Chapter slide decks are being prepared. Add PPT links in <code>ppts.js</code>');
+  }
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
 }
 
 /* ══════ FLASH CARDS ══════ */
@@ -1150,21 +1197,53 @@ function renderARSection(data, el) {
 
 function renderWrittenSection(data, el, type) {
   const markClass = type === 'one' ? 'set-badge-1mark' : type === 'two' ? 'set-badge-2mark' : type === 'three' ? 'set-badge-3mark' : type === 'four' ? 'set-badge-4mark' : 'set-badge-5mark';
-  data.forEach((q, idx) => {
-    const item = document.createElement('div'); item.className='question-item';
-    item.innerHTML = `<div class="question-item-top">
-      <div class="qno ${type}">${idx+1}</div>
-      <div style="flex:1">
-        <div style="font-size:13.5px;line-height:1.8;">${q.question}</div>
-        <div class="explanation">${q.answer||'Answer will be updated shortly.'}</div>
+  const typeId = type === 'one' ? 'one' : type === 'two' ? 'two' : type === 'three' ? 'three' : type === 'four' ? 'four' : 'five';
+  let html = `<button id="pyq-toggle-all-${typeId}" class="pyq-toggle-all-btn pyq-toggle-${typeId}" onclick="toggleAllPYQ('${typeId}')">Show All</button>`;
+  html += data.map((q, idx) => `
+    <div class="pyq-question-item" data-pyq-id="${idx}" data-pyq-type="${typeId}">
+      <div class="pyq-question-top" onclick="togglePYQAnswer('${typeId}', ${idx})" style="cursor:pointer;">
+        <div class="qno ${type}" style="flex-shrink:0;">${idx+1}</div>
+        <div style="flex:1;">
+          <div style="font-size:13.5px;line-height:1.8;">${q.question}</div>
+        </div>
+        <span class="pyq-q-icon" data-icon-id="${typeId}-${idx}">▶</span>
+      </div>
+      <div class="pyq-answer" id="pyq-ans-${typeId}-${idx}" style="display:none;">${q.answer||'Answer will be updated shortly.'}</div>
+      <div class="question-item-badges" style="display:flex;gap:6px;align-items:center;margin-top:8px;">
+        ${q.set?`<span class="set-badge ${markClass}">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
       </div>
     </div>
-    <div class="question-item-badges" style="display:flex;gap:6px;align-items:center;">
-      ${q.set?`<span class="set-badge ${markClass}">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
-    </div>`;
-    el.appendChild(item);
-  });
+  `).join('');
+  el.innerHTML = html;
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
+}
+function togglePYQAnswer(typeId, idx) {
+  const answer = document.getElementById(`pyq-ans-${typeId}-${idx}`);
+  const icon = document.querySelector(`[data-icon-id="${typeId}-${idx}"]`);
+  if (answer.style.display === 'none') {
+    answer.style.display = 'block';
+    if (icon) icon.textContent = '▼';
+  } else {
+    answer.style.display = 'none';
+    if (icon) icon.textContent = '▶';
+  }
+  updatePYQToggleBtn(typeId);
+}
+function toggleAllPYQ(typeId) {
+  const answers = document.querySelectorAll(`[id^="pyq-ans-${typeId}-"]`);
+  const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
+  answers.forEach((answer, i) => {
+    answer.style.display = allOpen ? 'none' : 'block';
+    const icon = document.querySelector(`[data-icon-id="${typeId}-${i}"]`);
+    if (icon) icon.textContent = allOpen ? '▶' : '▼';
+  });
+  updatePYQToggleBtn(typeId);
+}
+function updatePYQToggleBtn(typeId) {
+  const btn = document.getElementById(`pyq-toggle-all-${typeId}`);
+  const answers = document.querySelectorAll(`[id^="pyq-ans-${typeId}-"]`);
+  const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
+  if (btn) btn.textContent = allOpen ? 'Hide All' : 'Show All';
 }
 
 function renderNoPYQ() {
