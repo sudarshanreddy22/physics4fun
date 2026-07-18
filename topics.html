@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Physics4Fun — CBSE Physics Grades 6–12</title>
+<title>Physics4Fun — CBSE, AP State & CISCE Cambridge (Grades 6–12)</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <!-- MathJax for LaTeX formula rendering -->
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
@@ -356,6 +356,50 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .pyq-q-icon{display:inline-block;width:16px;height:16px;margin-left:8px;font-size:12px;font-weight:bold;color:var(--col-pyq);transition:transform .2s;flex-shrink:0;}
 .pyq-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(251,146,60,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-pyq);animation:slideDown .3s ease-out;}
 
+/* ══ BOARD HEADERS ══ */
+.board-header{cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(99,102,241,.3);font-size:14px;font-weight:700;user-select:none;transition:all .2s;}
+.board-header:hover{opacity:.8;}
+.board-arrow{display:inline-block;transition:transform .2s;}
+
+/* ══ DESCRIPTIVE SECTION IMPROVEMENTS ══ */
+.desc-tabs{display:flex;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;gap:0;margin-bottom:0;}
+.desc-tabs::-webkit-scrollbar{display:none;}
+.desc-tab{display:flex;align-items:center;gap:6px;padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;flex-shrink:0;border-radius:0;}
+.desc-tab:hover{color:var(--text);background:var(--item-hover);}
+.desc-tab.active{color:var(--text);}
+.desc-tab.tab-all.active{color:var(--col-desc);border-bottom-color:var(--col-desc);}
+.desc-tab.tab-2marks.active{color:var(--pyq-two);border-bottom-color:var(--pyq-two);}
+.desc-tab.tab-3marks.active{color:var(--pyq-three);border-bottom-color:var(--pyq-three);}
+.desc-tab.tab-case.active{color:var(--pyq-four);border-bottom-color:var(--pyq-four);}
+.tab-dot{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;color:#fff;font-size:9px;font-weight:800;flex-shrink:0;}
+.pyq-question-item{margin-bottom:6px;}
+
+/* ══ MCQ SECTION ══ */
+.mcq-filter-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
+.mcq-filter-tab{padding:8px 14px;border-radius:8px;border:1px solid var(--divider);background:var(--card-bg);color:var(--text-sub);cursor:pointer;font-size:12px;font-weight:700;transition:all .15s;user-select:none;}
+.mcq-filter-tab:hover{border-color:var(--brand);color:var(--text);}
+.mcq-filter-tab.active{background:rgba(168,85,247,.12);border-color:#a855f7;color:#a855f7;}
+.mcq-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:15px;margin-bottom:12px;transition:all .2s;}
+.mcq-card:hover{border-color:rgba(168,85,247,.3);}
+.mcq-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.mcq-number{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(168,85,247,.15);color:#a855f7;font-weight:700;font-size:12px;flex-shrink:0;}
+.mcq-difficulty{display:inline-block;}
+.mcq-question{font-size:13.5px;line-height:1.8;color:var(--text);margin-bottom:12px;}
+.options{display:flex;flex-direction:column;gap:8px;}
+.option{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid var(--divider);cursor:pointer;transition:all .15s;background:var(--bg3);}
+.option:hover{border-color:var(--brand);background:var(--item-hover);}
+.option.correct{border-color:#10b981;background:rgba(16,185,129,.1);}.option.correct .opt-label{color:#10b981;font-weight:800;}
+.option.wrong{border-color:#ef4444;background:rgba(239,68,68,.1);}.option.wrong .opt-label{color:#ef4444;font-weight:800;}
+.opt-label{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:var(--sbg-notes);color:var(--col-notes);font-weight:700;font-size:11px;flex-shrink:0;}
+.opt-text{flex:1;font-size:13px;line-height:1.6;color:var(--text-sub);}
+.explanation{display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);font-size:12.5px;line-height:1.7;}
+.explanation strong{color:var(--col-desc);}
+.options.answered{pointer-events:none;}
+
+/* ══ MCQ SECTION BUTTON ══ */
+.sec-mcq .sec-icon-3d{background:linear-gradient(135deg,rgba(168,85,247,.4),rgba(168,85,247,.15));box-shadow:0 3px 8px rgba(168,85,247,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-mcq.active{background:rgba(168,85,247,0.12);border-color:#a855f7;color:#a855f7;}
+
 /* ══ GAMES & PUZZLES ══ */
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
 .game-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:15px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
@@ -395,7 +439,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 }
 </style>
 </head>
-<body>
+<body class="light">
 
 <!-- HEADER -->
 <header class="header">
@@ -427,11 +471,14 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
     <div class="sb-inner">
 
       <!-- ═══════════════════════════════════════════════════════════════ -->
-      <!-- 📘 CBSE BOARD -->
+      <!-- 📘 CBSE BOARD (COLLAPSIBLE - EXPANDED BY DEFAULT) -->
       <!-- ═══════════════════════════════════════════════════════════════ -->
-      <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(6,182,212,.1));padding:8px 12px;border-radius:10px;margin-bottom:10px;border:1px solid rgba(99,102,241,.3);">📘 CBSE Board</div>
+      <div class="board-header" onclick="toggleBoard('cbse-board', this)" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(6,182,212,.1));border-radius:10px;margin-bottom:10px;border:1px solid rgba(99,102,241,.3);font-size:14px;font-weight:700;user-select:none;">
+        <span class="board-arrow" style="transition:transform .2s;">▼</span>
+        <span>📘 CBSE</span>
+      </div>
+      <div class="board-content" id="cbse-board" style="display:block;">
       
-	  
 	  <!-- Grades 6-10 -->
       <div class="sb-label">Grades 6 – 10</div>
 	  
@@ -523,10 +570,16 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
         <div class="ch-item" onclick="selectChapter('Semiconductor Electronics','12','💻',this,true,'semiconductors')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span><span class="ch-pyq-badge">PYQ</span></div>
       </div>
 
+      </div>
+
       <!-- ═══════════════════════════════════════════════════════════════ -->
-      <!-- 📗 AP STATE BOARD -->
+      <!-- 📗 AP STATE BOARD (COLLAPSIBLE - COLLAPSED BY DEFAULT) -->
       <!-- ═══════════════════════════════════════════════════════════════ -->
-      <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(52,211,153,.1));padding:8px 12px;border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(16,185,129,.3);">📗 AP State Board</div>
+      <div class="board-header" onclick="toggleBoard('ap-board', this)" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(52,211,153,.1));border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(16,185,129,.3);font-size:14px;font-weight:700;user-select:none;">
+        <span class="board-arrow" style="transition:transform .2s;">▶</span>
+        <span>📗 AP State</span>
+      </div>
+      <div class="board-content" id="ap-board" style="display:none;">
 
       <div class="sb-label">Grades 6 – 10</div>
 
@@ -608,6 +661,59 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
         <div class="ch-item" onclick="selectChapter('Nuclei','12','☢️',this,true,'nuclei')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span><span class="ch-pyq-badge">PYQ</span></div>
         <div class="ch-item" onclick="selectChapter('Semiconductor Electronics','12','💻',this,true,'semiconductors')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span><span class="ch-pyq-badge">PYQ</span></div>
       </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 📕 CISCE CAMBRIDGE BOARD (COLLAPSIBLE - COLLAPSED BY DEFAULT) -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="board-header" onclick="toggleBoard('cisce-board', this)" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,rgba(239,68,68,.2),rgba(239,68,68,.1));border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(239,68,68,.3);font-size:14px;font-weight:700;user-select:none;">
+        <span class="board-arrow" style="transition:transform .2s;">▶</span>
+        <span>📕 CISCE Cambridge</span>
+      </div>
+      <div class="board-content" id="cisce-board" style="display:none;">
+      
+      <div class="sb-label">Grades 6 – 8</div>
+
+      <div class="grade-row" onclick="toggleGrade('cisce-g6',this)">
+        <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cisce-g6">
+        <div class="ch-item" onclick="selectChapter('Matter','6','🧪',this,false,'ch1')"><span class="ch-icon">🧪</span><span class="ch-name">Matter</span></div>
+        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','6','📏',this,false,'ch2')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Force','6','💪',this,false,'ch3')"><span class="ch-icon">💪</span><span class="ch-name">Force</span></div>
+        <div class="ch-item" onclick="selectChapter('Simple Machines','6','⚙️',this,false,'ch4')"><span class="ch-icon">⚙️</span><span class="ch-name">Simple Machines</span></div>
+        <div class="ch-item" onclick="selectChapter('Light','6','💡',this,false,'ch5')"><span class="ch-icon">💡</span><span class="ch-name">Light</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetism','6','🧲',this,false,'ch6')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetism</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cisce-g7',this)">
+        <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cisce-g7">
+        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','7','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion','7','🏃',this,false,'ch2')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Energy','7','⚡',this,false,'ch3')"><span class="ch-icon">⚡</span><span class="ch-name">Energy</span></div>
+        <div class="ch-item" onclick="selectChapter('Light Energy','7','💡',this,false,'ch4')"><span class="ch-icon">💡</span><span class="ch-name">Light Energy</span></div>
+        <div class="ch-item" onclick="selectChapter('Heat','7','🌡️',this,false,'ch5')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','7','🔊',this,false,'ch6')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity &amp; Magnetism','7','⚡',this,false,'ch7')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity &amp; Magnetism</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cisce-g8',this)">
+        <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cisce-g8">
+        <div class="ch-item" onclick="selectChapter('Matter','8','🧪',this,false,'ch1')"><span class="ch-icon">🧪</span><span class="ch-name">Matter</span></div>
+        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','8','📏',this,false,'ch2')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Force &amp; Pressure','8','💪',this,false,'ch3')"><span class="ch-icon">💪</span><span class="ch-name">Force &amp; Pressure</span></div>
+        <div class="ch-item" onclick="selectChapter('Energy','8','⚡',this,false,'ch4')"><span class="ch-icon">⚡</span><span class="ch-name">Energy</span></div>
+        <div class="ch-item" onclick="selectChapter('Light','8','💡',this,false,'ch5')"><span class="ch-icon">💡</span><span class="ch-name">Light</span></div>
+        <div class="ch-item" onclick="selectChapter('Heat Transfer','8','🌡️',this,false,'ch6')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat Transfer</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch7')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity','8','⚡',this,false,'ch8')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span></div>
+      </div>
+
+      </div>
 
     </div>
   </nav>
@@ -622,6 +728,9 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       </div>
       <div class="sec-btn sec-desc" id="btn-desc" onclick="switchSection('desc',this)">
         <span class="sec-icon-3d">✏️</span>Descriptive
+      </div>
+      <div class="sec-btn sec-mcq" id="btn-mcq" onclick="switchSection('mcq',this)">
+        <span class="sec-icon-3d">🎯</span>MCQs
       </div>
       <div class="sec-btn sec-mock" id="btn-mock" onclick="switchSection('mock',this)">
         <span class="sec-icon-3d">🎯</span>Mock Test
@@ -657,7 +766,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       <div class="welcome" id="welcome">
         <div class="welcome-atom">⚛️</div>
         <h2>Welcome to Physics4Fun</h2>
-        <p>Your complete Physics platform for CBSE & AP Board (Grades 6–12). Pick a board, grade and chapter from the sidebar.</p>
+        <p>Your complete Physics platform for CBSE, AP State & CISCE Cambridge (Grades 6–12). Pick a board, grade and chapter from the sidebar.</p>
         <div class="welcome-pills">
           <span class="w-pill">📖 Notes</span>
           <span class="w-pill">✏️ Descriptive</span>
@@ -672,6 +781,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 
       <div id="panel-notes" style="display:none;"><div id="notes-content-wrap" class="notes-content"></div></div>
       <div id="panel-desc"  style="display:none;"><div id="desc-content-wrap"></div></div>
+      <div id="panel-mcq"  style="display:none;"><div id="mcq-content-wrap"></div></div>
       <div id="panel-mock"  style="display:none;"><div id="mock-content-wrap"></div></div>
       <div id="panel-ppt"   style="display:none;"><div id="ppt-content-wrap"></div></div>
       <div id="panel-flash" style="display:none;"><div id="flash-content-wrap"></div></div>
@@ -718,12 +828,42 @@ function loadScript(url) {
   });
 }
 
+/* ══════ BOARD TOGGLE ══════ */
+function toggleBoard(boardId, el) {
+  const content = document.getElementById(boardId);
+  const arrow = el.querySelector('.board-arrow');
+  const isOpen = content.style.display !== 'none';
+  
+  document.querySelectorAll('.board-content').forEach(b => {
+    if (b.id !== boardId) b.style.display = 'none';
+  });
+  document.querySelectorAll('.board-header').forEach(h => {
+    if (h !== el) {
+      const arr = h.querySelector('.board-arrow');
+      if (arr) arr.textContent = '▶';
+    }
+  });
+  
+  if (isOpen) {
+    content.style.display = 'none';
+    arrow.textContent = '▶';
+  } else {
+    content.style.display = 'block';
+    arrow.textContent = '▼';
+  }
+}
+
 /* ══════ SIDEBAR ══════ */
 function toggleGrade(id, row) {
   const list = document.getElementById(id), open = list.classList.contains('open');
   document.querySelectorAll('.chapter-list').forEach(x => x.classList.remove('open'));
   document.querySelectorAll('.grade-row').forEach(x => x.classList.remove('open'));
-  if (!open) { list.classList.add('open'); row.classList.add('open'); }
+  if (!open) { 
+    list.classList.add('open'); 
+    row.classList.add('open'); 
+    CUR.grade = id;
+    updateSectionVisibility();
+  }
 }
 
 function toggleSidebar() { document.getElementById('sidebar').classList.toggle('hide'); }
@@ -740,8 +880,7 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
   document.getElementById('welcome').style.display = 'none';
   document.getElementById('sectionBar').classList.add('visible');
 
-  const pyqBtn = document.getElementById('btn-pyq');
-  pyqBtn.style.display = hasPyq ? 'flex' : 'none';
+  updateSectionVisibility();
 
   switchSection('notes', document.getElementById('btn-notes'));
   document.getElementById('content').scrollTop = 0;
@@ -751,11 +890,40 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 }
 
 /* ══════ SECTION SWITCH ══════ */
+
+/* Control visibility of PYQs and MCQs based on board-grade */
+const PYQ_GRADES = ['cbse-g10', 'cbse-g12', 'ap-g10', 'ap-inter-1', 'ap-inter-2'];
+
+function updateSectionVisibility() {
+  const mcqBtn = document.getElementById('btn-mcq');
+  const pyqBtn = document.getElementById('btn-pyq');
+  const mcqPanel = document.getElementById('panel-mcq');
+  const pyqPanel = document.getElementById('panel-pyq');
+  
+  if (!mcqBtn || !pyqBtn) return;
+  
+  const isPyqGrade = PYQ_GRADES.includes(CUR.grade);
+  
+  // PYQs available only for specific grades
+  pyqBtn.style.display = isPyqGrade ? 'flex' : 'none';
+  
+  // For PYQ grades, hide the separate MCQs section (as MCQs are inside PYQs)
+  // For all other grades, show only the MCQs section
+  mcqBtn.style.display = isPyqGrade ? 'none' : 'flex';
+
+  // If we are on a section that just got hidden, switch to notes
+  if (isPyqGrade && mcqPanel && mcqPanel.style.display !== 'none') {
+    switchSection('notes', document.getElementById('btn-notes'));
+  } else if (!isPyqGrade && pyqPanel && pyqPanel.style.display !== 'none') {
+    switchSection('notes', document.getElementById('btn-notes'));
+  }
+}
+
 function switchSection(type, el) {
   CUR.section = type;
   document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
-  ['notes','desc','mock','ppt','flash','sim','games','pyq'].forEach(p => {
+  ['notes','desc','mcq','mock','ppt','flash','sim','games','pyq'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
@@ -766,6 +934,7 @@ function switchSection(type, el) {
   switch(type) {
     case 'notes': loadNotes(); break;
     case 'desc':  loadDesc(); break;
+    case 'mcq':   loadMCQ(); break;
     case 'mock':  loadMock(); break;
     case 'ppt':   loadPPT(); break;
     case 'flash': loadFlash(); break;
@@ -822,19 +991,30 @@ async function loadDesc() {
 }
 
 function renderDesc(data, wrap) {
-  let html = `<button id="desc-toggle-all" class="desc-toggle-all-btn" onclick="toggleAllDesc()">Show All</button>`;
-  html += data.map((q,i) =>
-    `<div class="pyq-question-item" data-desc-id="${i}">
+  let html = `<div class="desc-tabs" style="margin-bottom:15px;">
+    <button class="desc-tab tab-all active" onclick="filterDesc('all', this)"><span class="tab-dot" style="background:var(--col-desc);">A</span>All</button>
+    <button class="desc-tab tab-2marks" onclick="filterDesc('2marks', this)"><span class="tab-dot" style="background:var(--pyq-two);">2</span>2 Marks</button>
+    <button class="desc-tab tab-3marks" onclick="filterDesc('3marks', this)"><span class="tab-dot" style="background:var(--pyq-three);">3</span>3 Marks</button>
+    <button class="desc-tab tab-case" onclick="filterDesc('case', this)"><span class="tab-dot" style="background:var(--pyq-four);">C</span>Case-Based</button>
+  </div>`;
+  html += `<button id="desc-toggle-all" class="pyq-toggle-all-btn" style="background:var(--col-desc); margin-bottom:15px; margin-top:5px;" onclick="toggleAllDesc()">Show All</button>`;
+  html += data.map((q,i) => {
+    let type = 'all';
+    if (q.type === 'case' || (q.question && q.question.toLowerCase().includes('case-based'))) type = 'case';
+    else if (q.marks == 2) type = '2marks';
+    else if (q.marks == 3) type = '3marks';
+    
+    return `<div class="pyq-question-item" data-desc-id="${i}" data-desc-type="${type}">
       <div class="pyq-question-top" onclick="toggleDescAnswer(${i})" style="cursor:pointer;">
-        <div class="qno desc" style="flex-shrink:0;">${i+1}</div>
+        <div class="qno desc" style="flex-shrink:0; background:linear-gradient(135deg,var(--col-desc),#059669);">${i+1}</div>
         <div style="flex:1;">
           <div style="font-size:13.5px;line-height:1.8;">${q.question}</div>
         </div>
-        <span class="pyq-q-icon" data-icon-id="desc-${i}">▶</span>
+        <span class="pyq-q-icon" data-icon-id="desc-${i}" style="color:var(--col-desc);">▶</span>
       </div>
-      <div class="pyq-answer" id="desc-ans-${i}" style="display:none;">${q.answer||'Answer coming soon.'}</div>
-    </div>`
-  ).join('');
+      <div class="pyq-answer" id="desc-ans-${i}" style="display:none; background:rgba(52,211,153,0.06); border-left-color:var(--col-desc);">${q.answer||'Answer coming soon.'}</div>
+    </div>`;
+  }).join('');
   wrap.innerHTML = html;
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
 }
@@ -859,6 +1039,77 @@ function toggleAllDesc() {
     if (icon) icon.textContent = allOpen ? '▶' : '▼';
   });
   updateToggleAllBtn();
+}
+
+function filterDesc(type, el) {
+  document.querySelectorAll('.desc-tab').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  
+  document.querySelectorAll('[data-desc-type]').forEach(item => {
+    if (type === 'all') {
+      item.style.display = 'block';
+    } else {
+      item.style.display = item.dataset.descType === type ? 'block' : 'none';
+    }
+  });
+  updateToggleAllBtn();
+}
+
+/* ══════ MCQs ══════ */
+async function loadMCQ() {
+  const wrap = document.getElementById('mcq-content-wrap');
+  if (!CUR.slug) { renderComingSoon(wrap,'🎯','MCQs','MCQs for this chapter are being prepared.'); return; }
+  window.mcqsData = undefined;
+  document.querySelectorAll('[data-mcqs]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.mcqs = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/mcqs.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  window.mcqsData && window.mcqsData.length
+    ? renderMCQs(window.mcqsData, wrap)
+    : renderComingSoon(wrap,'🎯','MCQs','Multiple choice questions for this chapter are being added.');
+}
+
+function renderMCQs(data, wrap) {
+  let html = `<div class="desc-tabs" style="margin-bottom:16px;">
+    <button class="desc-tab tab-all active" onclick="filterMCQs('all')"><span class="tab-dot" style="background:var(--col-desc);">A</span>All</button>
+    <button class="desc-tab tab-2marks" onclick="filterMCQs('easy')"><span class="tab-dot" style="background:var(--pyq-two);">E</span>Easy</button>
+    <button class="desc-tab tab-3marks" onclick="filterMCQs('medium')"><span class="tab-dot" style="background:var(--pyq-three);">M</span>Medium</button>
+    <button class="desc-tab tab-case" onclick="filterMCQs('hard')"><span class="tab-dot" style="background:var(--pyq-four);">H</span>Hard</button>
+  </div>`;
+  html += data.map((q,i) => `<div class="mcq-card" data-difficulty="${q.difficulty||'medium'}"><div class="mcq-header"><span class="mcq-number">${i+1}</span><span class="mcq-difficulty" style="background:${getDifficultyColor(q.difficulty||'medium')};color:#fff;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;">${(q.difficulty||'medium').toUpperCase()}</span></div><div class="mcq-question">${q.question}</div><div class="options" data-answer="${q.answer}">${(q.options||[]).map((opt,idx) => `<div class="option" data-opt="${idx}"><span class="opt-label">${String.fromCharCode(65+idx)}</span><span class="opt-text">${opt}</span></div>`).join('')}</div>${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${q.explanation}</div>` : ''}</div>`).join('');
+  wrap.innerHTML = html;
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+
+
+function getDifficultyColor(difficulty) {
+  const colors = { 'easy': '#10b981', 'medium': '#f59e0b', 'hard': '#ef4444' };
+  return colors[difficulty] || '#f59e0b';
+}
+
+function filterMCQs(level) {
+  // Remove active from all tabs
+  document.querySelectorAll('.desc-tab').forEach(t => t.classList.remove('active'));
+  
+  // Find and activate the clicked tab
+  const tabs = document.querySelectorAll('.desc-tab');
+  tabs.forEach(tab => {
+    const onclick = tab.getAttribute('onclick');
+    if (onclick && onclick.includes(`'${level}'`)) {
+      tab.classList.add('active');
+    }
+  });
+  
+  // Filter MCQ cards
+  document.querySelectorAll('.mcq-card').forEach(card => {
+    if (level === 'all') {
+      card.style.display = 'block';
+    } else {
+      card.style.display = card.dataset.difficulty === level ? 'block' : 'none';
+    }
+  });
 }
 function updateToggleAllBtn() {
   const btn = document.getElementById('desc-toggle-all');
@@ -956,21 +1207,26 @@ async function loadFlash() {
 }
 
 function renderFlash(data, wrap) {
+  const colors = ["rgba(192,132,252,.2),rgba(99,102,241,.1)","rgba(168,85,247,.2),rgba(139,92,246,.1)","rgba(236,72,153,.2),rgba(244,114,182,.1)","rgba(59,130,246,.2),rgba(96,165,250,.1)","rgba(34,197,94,.2),rgba(74,222,128,.1)","rgba(251,146,60,.2),rgba(253,186,116,.1)","rgba(14,165,233,.2),rgba(56,189,248,.1)","rgba(168,85,247,.2),rgba(196,181,253,.1)"];
+  const borders = ["rgba(192,132,252,.28)","rgba(168,85,247,.28)","rgba(236,72,153,.28)","rgba(59,130,246,.28)","rgba(34,197,94,.28)","rgba(251,146,60,.28)","rgba(14,165,233,.28)","rgba(168,85,247,.28)"];
+  const shadows = ["rgba(192,132,252,.12)","rgba(168,85,247,.12)","rgba(236,72,153,.12)","rgba(59,130,246,.12)","rgba(34,197,94,.12)","rgba(251,146,60,.12)","rgba(14,165,233,.12)","rgba(168,85,247,.12)"];
   wrap.innerHTML = `<div class="flashcard-controls">
     <button class="fc-ctrl-btn" onclick="document.querySelectorAll('.flashcard').forEach(c=>c.classList.toggle('flipped'))">🔄 Flip All</button>
     <button class="fc-ctrl-btn" onclick="shuffleCards()">🔀 Shuffle</button>
     <span class="fc-count">${data.length} cards</span>
   </div>
   <div class="flashcard-wrap" id="fc-wrap">`
-  + data.map((c,i)=>
-    `<div class="flashcard" id="fc${i}" onclick="this.classList.toggle('flipped')">
+  + data.map((c,i)=>{
+    const colorIdx = i % colors.length;
+    return `<div class="flashcard" id="fc${i}" onclick="this.classList.toggle('flipped')">
       <div class="flashcard-inner">
-        <div class="fc-face fc-front"><div class="fc-label">Question</div><div class="fc-text">${c.front}</div><div class="fc-hint">Tap to flip ↩</div></div>
+        <div class="fc-face fc-front" style="background:linear-gradient(135deg,${colors[colorIdx]});border:1px solid ${borders[colorIdx]};box-shadow:0 4px 18px ${shadows[colorIdx]};"><div class="fc-label">Question</div><div class="fc-text">${c.front}</div><div class="fc-hint">Tap to flip ↩</div></div>
         <div class="fc-face fc-back"><div class="fc-label">Answer</div><div class="fc-text">${(c.back||'').replace(/\n/g,'<br>')}</div></div>
       </div>
-    </div>`
-  ).join('') + `</div>`;
+    </div>`;
+  }).join('') + `</div>`;
 }
+
 
 function shuffleCards() {
   const w = document.getElementById('fc-wrap'); if (!w) return;
@@ -1101,6 +1357,13 @@ function toggleGame(i) {
       if (game.html) {
         area.innerHTML = game.html;
         area.dataset.loaded = '1';
+        // Execute embedded scripts if any
+        area.querySelectorAll('script').forEach(oldScript => {
+          const newScript = document.createElement('script');
+          Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+          newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+          oldScript.parentNode.replaceChild(newScript, oldScript);
+        });
         if (game.init && typeof game.init === 'function') {
           game.init(area);
         }
