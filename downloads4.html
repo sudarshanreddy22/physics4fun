@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics4Fun — Downloads</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a1a;--bg2:#0f0e26;
+  --card-bg:rgba(255,255,255,0.045);--card-border:rgba(255,255,255,0.09);
+  --glass:rgba(255,255,255,0.06);--glass-border:rgba(255,255,255,0.12);
+  --text:#eef0fb;--text-muted:#8b8fb8;--text-sub:#b4b8dd;
+  --header-bg:rgba(10,10,26,0.85);--divider:rgba(255,255,255,0.08);
+  --brand1:#8b5cf6;--brand2:#06b6d4;--brand3:#ec4899;
+}
+body.light{
+  --bg:#f3f2ff;--bg2:#ffffff;
+  --card-bg:rgba(255,255,255,0.75);--card-border:rgba(139,92,246,0.14);
+  --glass:rgba(255,255,255,0.65);--glass-border:rgba(139,92,246,0.18);
+  --text:#181433;--text-muted:#8683a8;--text-sub:#4a4570;
+  --header-bg:rgba(255,255,255,0.85);--divider:rgba(24,20,51,0.08);
+  --brand1:#7c3aed;--brand2:#0891b2;--brand3:#db2777;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;transition:background .3s,color .3s;position:relative;}
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-thumb{background:rgba(139,92,246,.35);border-radius:4px;}
+
+/* ── AMBIENT BACKGROUND ── */
+.bg-scene{position:fixed;inset:0;overflow:hidden;z-index:0;pointer-events:none;}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:drift 22s ease-in-out infinite;}
+.blob1{width:420px;height:420px;background:radial-gradient(circle,var(--brand1),transparent 70%);top:-120px;left:-100px;animation-duration:26s;}
+.blob2{width:380px;height:380px;background:radial-gradient(circle,var(--brand2),transparent 70%);top:20%;right:-140px;animation-duration:30s;animation-delay:-6s;}
+.blob3{width:340px;height:340px;background:radial-gradient(circle,var(--brand3),transparent 70%);bottom:-100px;left:30%;animation-duration:24s;animation-delay:-12s;}
+body.light .blob{opacity:.18;}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(40px,-30px) scale(1.08);}66%{transform:translate(-30px,25px) scale(.95);}}
+.particle{position:absolute;border-radius:50%;background:#fff;opacity:.5;animation:rise linear infinite;}
+body.light .particle{background:var(--brand1);opacity:.25;}
+@keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0;}10%{opacity:.6;}90%{opacity:.4;}100%{transform:translateY(-100vh) translateX(20px);opacity:0;}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-10px) rotate(6deg);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{animation:fadeUp .6s cubic-bezier(.2,.7,.3,1) both;}
+
+/* ── HEADER ── */
+.header{display:flex;align-items:center;height:56px;padding:0 18px;background:var(--header-bg);backdrop-filter:blur(18px);border-bottom:1px solid var(--divider);position:sticky;top:0;z-index:100;gap:10px;}
+.brand{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;background:linear-gradient(120deg,var(--brand1),var(--brand2) 60%,var(--brand3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.5px;}
+.brand-tag{font-size:8.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:20px;background:var(--glass);color:var(--brand1);border:1px solid var(--glass-border);}
+.icon-btn{width:34px;height:34px;border-radius:10px;border:1px solid var(--glass-border);background:var(--glass);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .2s;text-decoration:none;}
+.icon-btn:hover{transform:translateY(-1px);border-color:var(--brand1);box-shadow:0 4px 14px rgba(139,92,246,.25);}
+.header-right{display:flex;gap:6px;margin-left:auto;}
+
+#content{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 22px 60px;}
+
+/* ── HERO ── */
+.hero{padding:52px 20px 34px;text-align:center;position:relative;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:6px 14px;border-radius:20px;background:var(--glass);border:1px solid var(--glass-border);color:var(--brand2);margin-bottom:18px;}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(30px,5vw,48px);font-weight:800;line-height:1.1;letter-spacing:-1px;background:linear-gradient(120deg,#fff,var(--brand1) 55%,var(--brand2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;}
+body.light .hero h1{background:linear-gradient(120deg,var(--text),var(--brand1) 55%,var(--brand2));-webkit-background-clip:text;background-clip:text;}
+.hero p{font-size:15px;color:var(--text-sub);max-width:520px;margin:0 auto 30px;}
+.hero-float{position:absolute;font-size:26px;opacity:.7;animation:floaty 5s ease-in-out infinite;}
+
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:820px;margin:0 auto;}
+.stat-card{background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(14px);border-radius:16px;padding:16px 10px;transition:transform .25s,box-shadow .25s;}
+.stat-card:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(139,92,246,.18);}
+.stat-num{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;background:linear-gradient(120deg,var(--brand1),var(--brand2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.stat-label{font-size:10.5px;color:var(--text-muted);font-weight:600;margin-top:3px;}
+
+/* ── CATEGORY TABS ── */
+.top-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:8px 0 38px;}
+.top-tab{display:flex;align-items:center;gap:8px;padding:11px 20px;border-radius:14px;border:1px solid var(--glass-border);background:var(--glass);backdrop-filter:blur(14px);color:var(--text-sub);font-weight:700;font-size:13px;cursor:pointer;transition:all .2s;}
+.top-tab:hover{transform:translateY(-2px);color:var(--text);}
+.top-tab.active{color:#fff;border-color:transparent;background:linear-gradient(120deg,var(--brand1),var(--brand2));box-shadow:0 8px 22px rgba(139,92,246,.35);}
+
+.board-panel{display:none;}
+.board-panel.active{display:block;}
+
+/* ── SECTION HEADINGS ── */
+.section-head{display:flex;align-items:baseline;gap:10px;margin:38px 0 16px;}
+.section-head h2{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;}
+.section-head span{font-size:12px;color:var(--text-muted);}
+
+/* ── CATEGORY TILE GRID ── */
+.tile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;}
+.tile{position:relative;border-radius:20px;padding:20px;overflow:hidden;background:var(--card-bg);border:1px solid var(--card-border);backdrop-filter:blur(14px);transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s;cursor:pointer;}
+.tile::before{content:'';position:absolute;inset:0;background:var(--tile-grad);opacity:.14;transition:opacity .3s;}
+.tile:hover{transform:translateY(-7px) scale(1.015);box-shadow:0 18px 40px -12px var(--tile-glow);}
+.tile:hover::before{opacity:.24;}
+.tile-icon{width:52px;height:52px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:24px;background:var(--tile-grad);box-shadow:0 8px 18px -4px var(--tile-glow);position:relative;z-index:1;margin-bottom:14px;}
+.tile-title{font-size:14.5px;font-weight:800;margin-bottom:5px;position:relative;z-index:1;}
+.tile-desc{font-size:12px;color:var(--text-sub);line-height:1.55;position:relative;z-index:1;margin-bottom:14px;min-height:34px;}
+.tile-foot{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;}
+.tile-count{font-size:10.5px;font-weight:700;color:var(--text-muted);}
+.tile-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:20px;border:none;background:var(--tile-grad);color:#fff;font-size:11.5px;font-weight:700;cursor:pointer;position:relative;overflow:hidden;transition:transform .15s;}
+.tile-btn:hover{transform:scale(1.05);}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);animation:ripple .6s ease-out;pointer-events:none;}
+@keyframes ripple{to{transform:scale(3);opacity:0;}}
+
+/* ── FILES DRAWER ── */
+.tile-files{display:none;margin-top:14px;padding-top:12px;border-top:1px solid var(--divider);position:relative;z-index:1;}
+.tile-files.open{display:block;animation:fadeUp .3s ease both;}
+.file-row{display:flex;align-items:center;justify-content:space-between;font-size:11.5px;padding:7px 0;color:var(--text-sub);}
+.file-row a{color:var(--brand2);font-weight:700;text-decoration:none;}
+.file-row a:hover{text-decoration:underline;}
+
+/* ── FEATURED ── */
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;}
+.feat-card{border-radius:22px;padding:26px;position:relative;overflow:hidden;background:var(--feat-grad);isolation:isolate;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .3s;}
+.feat-card:hover{transform:translateY(-6px);}
+.feat-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% -20%,rgba(255,255,255,.35),transparent 60%);z-index:-1;}
+.feat-tag{position:absolute;top:16px;left:20px;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;background:rgba(255,255,255,.25);backdrop-filter:blur(6px);padding:4px 10px;border-radius:20px;color:#fff;}
+.feat-icon{position:absolute;top:14px;right:16px;font-size:34px;opacity:.5;animation:floaty 4s ease-in-out infinite;}
+.feat-title{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;color:#fff;margin-bottom:4px;}
+.feat-desc{font-size:12.5px;color:rgba(255,255,255,.85);margin-bottom:14px;}
+.feat-btn{align-self:flex-start;padding:8px 16px;border-radius:20px;border:1.5px solid rgba(255,255,255,.6);background:rgba(255,255,255,.14);color:#fff;font-weight:700;font-size:12px;cursor:pointer;backdrop-filter:blur(6px);}
+.feat-btn:hover{background:#fff;color:#181433;}
+
+/* ── LIST ROWS (Most Downloaded / Recently Added) ── */
+.row-list{display:flex;flex-direction:column;gap:10px;}
+.row-item{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;background:var(--card-bg);border:1px solid var(--card-border);backdrop-filter:blur(10px);transition:all .2s;}
+.row-item:hover{border-color:var(--row-accent);transform:translateX(4px);}
+.row-rank{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--row-accent);width:22px;}
+.row-icon{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;background:var(--row-accent);flex-shrink:0;box-shadow:0 4px 12px -2px var(--row-accent);}
+.row-body{flex:1;min-width:0;}
+.row-title{font-size:13px;font-weight:700;}
+.row-sub{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.row-badge{font-size:10.5px;font-weight:700;color:var(--row-accent);white-space:nowrap;}
+.new-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#22d3ee;margin-right:5px;box-shadow:0 0 8px #22d3ee;animation:pulse 1.6s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+
+/* ── EXAM BANNER ── */
+.exam-banner{margin-top:44px;border-radius:24px;padding:34px 30px;position:relative;overflow:hidden;background:linear-gradient(120deg,#4c1d95,#0e7490 60%,#831843);text-align:center;}
+.exam-banner::before,.exam-banner::after{content:'';position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08);}
+.exam-banner::before{top:-90px;left:-60px;}
+.exam-banner::after{bottom:-100px;right:-40px;}
+.exam-banner h3{font-family:'Syne',sans-serif;color:#fff;font-size:22px;font-weight:800;margin-bottom:8px;position:relative;}
+.exam-banner p{color:rgba(255,255,255,.85);font-size:13px;margin-bottom:18px;position:relative;}
+.exam-banner .icons-row{display:flex;justify-content:center;gap:22px;font-size:26px;margin-bottom:18px;position:relative;}
+.exam-banner .icons-row span{animation:floaty 4.5s ease-in-out infinite;}
+.exam-banner .icons-row span:nth-child(2){animation-delay:-1.2s;}
+.exam-banner .icons-row span:nth-child(3){animation-delay:-2.4s;}
+.exam-cta{position:relative;padding:11px 26px;border-radius:24px;border:none;background:#fff;color:#4c1d95;font-weight:800;font-size:13px;cursor:pointer;transition:transform .2s;}
+.exam-cta:hover{transform:scale(1.05);}
+
+/* ── EMPTY / COMING SOON ── */
+.coming-soon{text-align:center;padding:60px 20px;color:var(--text-muted);}
+.coming-soon .cs-icon{font-size:44px;margin-bottom:10px;display:block;}
+
+@media(max-width:640px){
+  #content{padding:0 14px 40px;}
+  .stat-row{grid-template-columns:repeat(2,1fr);}
+  .hero{padding:40px 10px 24px;}
+  .hero-float{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-scene" id="bgScene">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+
+<header class="header">
+  <a class="icon-btn" href="topics.html" title="Back to Topics">←</a>
+  <span class="brand">Physics4Fun</span>
+  <span class="brand-tag">Downloads</span>
+  <div class="header-right">
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Dark/Light">🌙</button>
+  </div>
+</header>
+
+<div id="content">
+
+  <div class="hero fade-up">
+    <span class="hero-float" style="top:10px;left:8%;">✨</span>
+    <span class="hero-float" style="top:60px;right:10%;animation-delay:-2s;">🚀</span>
+    <span class="hero-float" style="bottom:10px;left:16%;animation-delay:-3.5s;">📐</span>
+    <h2>All Your Study Resources, Ready to Download</h2>
+    <p>Textbooks, PYQs, Worksheets & More — All in One Place</p>
+    <div class="stat-row">
+      <div class="stat-card"><div class="stat-num">1000+</div><div class="stat-label">Files Available</div></div>
+      <div class="stat-card"><div class="stat-num">58K+</div><div class="stat-label">Downloads</div></div>
+      <div class="stat-card"><div class="stat-num">8</div><div class="stat-label">Categories</div></div>
+      <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Boards Covered</div></div>
+    </div>
+  </div>
+
+  <div class="top-tabs">
+    <div class="top-tab active" data-board="cbse" onclick="switchBoard('cbse',this)">📘 CBSE</div>
+    <div class="top-tab" data-board="apstate" onclick="switchBoard('apstate',this)">📗 AP State</div>
+    <div class="top-tab" data-board="intermediate" onclick="switchBoard('intermediate',this)">🎓 Intermediate</div>
+    <div class="top-tab" data-board="other" onclick="switchBoard('other',this)">📂 Other Resources</div>
+  </div>
+
+  <!-- ══ CBSE PANEL ══ -->
+  <div class="board-panel active" id="panel-cbse">
+
+    <div class="section-head"><h2>📚 Browse by Category</h2><span>tap a tile to open its files</span></div>
+    <div class="tile-grid" id="tileGrid"></div>
+
+    <div class="exam-banner fade-up">
+      <div class="icons-row"><span>🎯</span><span>🏆</span><span>📖</span></div>
+      <h3>Gear up for exam season</h3>
+      <p>Blueprints, PYQs, and revision notes — bundled and ready to download.</p>
+      <button class="exam-cta" onclick="rippleFx(event)">Explore Exam Resources</button>
+    </div>
+  </div>
+
+  <!-- ══ OTHER BOARD PANELS (placeholder) ══ -->
+  <div class="board-panel" id="panel-apstate">
+    <div class="coming-soon"><span class="cs-icon">📗</span><h3>AP State resources are on the way</h3><p>Check back soon — this section will fill up just like CBSE.</p></div>
+  </div>
+  <div class="board-panel" id="panel-intermediate">
+    <div class="coming-soon"><span class="cs-icon">🎓</span><h3>Intermediate resources are on the way</h3><p>Check back soon — this section will fill up just like CBSE.</p></div>
+  </div>
+  <div class="board-panel" id="panel-other">
+    <div class="coming-soon"><span class="cs-icon">📂</span><h3>More resources coming</h3><p>Miscellaneous downloads will land here.</p></div>
+  </div>
+
+</div>
+
+<script>
+/* ══ CATEGORY DATA — edit tiles/files/counts here ══ */
+const CATEGORIES = [
+  { id:'pyq',      icon:'📋', title:'Previous Year Question Papers', desc:'Board exam PYQs, chapter-wise.',        count:'320 files', grad:'linear-gradient(135deg,#8b5cf6,#6366f1)', glow:'rgba(139,92,246,.45)',
+    files:[{name:'Class 10 PYQ Set (2019–2026)',url:'#'},{name:'Class 12 PYQ Set (2019–2026)',url:'#'}] },
+  { id:'scheme',   icon:'✅', title:'Marking Schemes',                desc:'Official answer keys & schemes.',      count:'96 files',  grad:'linear-gradient(135deg,#10b981,#14b8a6)', glow:'rgba(16,185,129,.45)',
+    files:[{name:'Class 10 Marking Scheme 2026',url:'#'},{name:'Class 12 Marking Scheme 2026',url:'#'}] },
+  { id:'ncert',    icon:'📘', title:'NCERT Textbooks',                desc:'Full textbooks, all chapters.',        count:'48 files',  grad:'linear-gradient(135deg,#3b82f6,#06b6d4)', glow:'rgba(59,130,246,.45)',
+    files:[{name:'Physics — Class 9',url:'#'},{name:'Physics — Class 10',url:'#'},{name:'Physics Part I — Class 11',url:'#'},{name:'Physics Part II — Class 12',url:'#'}] },
+    { id:'syllabus', icon:'📅', title:'CBSE Sample Paper',          desc:'Official Pattern',       count:'2 files',  grad:'linear-gradient(135deg,#0ea5e9,#3b82f6)', glow:'rgba(14,165,233,.45)',
+    files:[{name:'2026-27 Class 10',url:'#'},{name:'2026-27 Class 12',url:'#'}] },
+  { id:'worksheet',icon:'📝', title:'Worksheets',                     desc:'Practice sheets by topic.',            count:'210 files', grad:'linear-gradient(135deg,#f97316,#fbbf24)', glow:'rgba(249,115,22,.45)',
+    files:[{name:'Motion — Practice Worksheet',url:'#'},{name:'Electricity — Practice Worksheet',url:'#'}] },
+  { id:'notes',    icon:'📄', title:'Notes PDFs',                     desc:'Concise chapter-wise notes.',          count:'180 files', grad:'linear-gradient(135deg,#6366f1,#8b5cf6)', glow:'rgba(99,102,241,.45)',
+    files:[{name:'Motion — Complete Notes',url:'#'},{name:'EM Induction — Notes',url:'#'}] },
+  { id:'ppt',      icon:'📊', title:'PPTs',                           desc:'Visual slide decks for revision.',     count:'64 files',  grad:'linear-gradient(135deg,#ef4444,#f97316)', glow:'rgba(239,68,68,.45)',
+    files:[{name:'Reflection & Refraction — Slides',url:'#'},{name:"Newton's Laws — Slides",url:'#'}] },
+  { id:'other',    icon:'📥', title:'Other Downloads',                desc:'Wallpapers, checklists & extras.',     count:'34 files',  grad:'linear-gradient(135deg,#8b5cf6,#64748b)', glow:'rgba(139,92,246,.4)',
+    files:[{name:'Exam Day Checklist & Tips',url:'#'},{name:'Formula Wallpaper Pack',url:'#'}] },
+];
+
+const FEATURED = [
+  { tag:'Editor\'s Pick', icon:'🏆', title:'Complete Class 10 PYQ Bundle', desc:'2019–2026, all sets, with solutions.', grad:'linear-gradient(135deg,#8b5cf6,#6366f1)', url:'#' },
+  { tag:'Trending',       icon:'⚡', title:'Class 12 Formula Master Sheet', desc:'Every formula from every chapter.',   grad:'linear-gradient(135deg,#ec4899,#f43f5e)', url:'#' },
+  { tag:'New',            icon:'🧠', title:'Full Syllabus Mind Map Pack',   desc:'Visual maps for rapid revision.',     grad:'linear-gradient(135deg,#14b8a6,#22d3ee)', url:'#' },
+];
+
+const MOST_DOWNLOADED = [
+  { icon:'📋', title:'CBSE Class 10 Physics PYQ (2019–2026)', sub:'PDF · 2.4 MB', accent:'#8b5cf6', badge:'12.4K ⬇' },
+  { icon:'📘', title:'NCERT Physics Textbook — Class 10',     sub:'PDF · 9.0 MB', accent:'#3b82f6', badge:'9.8K ⬇' },
+  { icon:'📑', title:'Class 9–10 Formula Sheet',               sub:'PDF · 310 KB', accent:'#eab308', badge:'7.1K ⬇' },
+];
+
+const RECENTLY_ADDED = [
+  { icon:'✅', title:'CBSE Class 12 Marking Scheme 2026', sub:'Added 2 days ago', accent:'#10b981' },
+  { icon:'🧠', title:'Electricity — Mind Map',            sub:'Added 4 days ago', accent:'#14b8a6' },
+  { icon:'📊', title:"Newton's Laws — Slide Deck",         sub:'Added 6 days ago', accent:'#ef4444' },
+];
+
+function renderTiles(){
+  const wrap = document.getElementById('tileGrid');
+  wrap.innerHTML = CATEGORIES.map((c,i) => `
+    <div class="tile fade-up" style="--tile-grad:${c.grad};--tile-glow:${c.glow};animation-delay:${i*0.04}s;">
+      <div class="tile-icon">${c.icon}</div>
+      <div class="tile-title">${c.title}</div>
+      <div class="tile-desc">${c.desc}</div>
+      <div class="tile-foot">
+        <span class="tile-count">${c.count}</span>
+        <button class="tile-btn" onclick="rippleFx(event);toggleFiles('${c.id}')">View ▾</button>
+      </div>
+      <div class="tile-files" id="files-${c.id}">
+        ${c.files.map(f=>`<div class="file-row"><span>📄 ${f.name}</span><a href="${f.url}" download>Download</a></div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+function renderFeatured(){
+  document.getElementById('featuredGrid').innerHTML = FEATURED.map((f,i)=>`
+    <div class="feat-card fade-up" style="--tile-grad:${f.grad};background:${f.grad};animation-delay:${i*0.05}s;">
+      <span class="feat-tag">${f.tag}</span>
+      <span class="feat-icon">${f.icon}</span>
+      <div class="feat-title">${f.title}</div>
+      <div class="feat-desc">${f.desc}</div>
+      <a class="feat-btn" href="${f.url}" download>Download Now</a>
+    </div>`).join('');
+}
+
+function renderRows(list, targetId, showBadge, showNew){
+  document.getElementById(targetId).innerHTML = list.map((item,i)=>`
+    <div class="row-item fade-up" style="--row-accent:${item.accent};animation-delay:${i*0.04}s;">
+      <span class="row-rank">${String(i+1).padStart(2,'0')}</span>
+      <span class="row-icon" style="background:${item.accent};">${item.icon}</span>
+      <div class="row-body">
+        <div class="row-title">${showNew?'<span class="new-dot"></span>':''}${item.title}</div>
+        <div class="row-sub">${item.sub}</div>
+      </div>
+      ${showBadge && item.badge ? `<span class="row-badge">${item.badge}</span>` : ''}
+    </div>`).join('');
+}
+
+function toggleFiles(id){
+  document.querySelectorAll('.tile-files.open').forEach(el=>{ if(el.id!==`files-${id}`) el.classList.remove('open'); });
+  document.getElementById(`files-${id}`).classList.toggle('open');
+}
+
+function rippleFx(e){
+  const btn = e.currentTarget;
+  const circle = document.createElement('span');
+  const rect = btn.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height);
+  circle.className = 'ripple';
+  circle.style.width = circle.style.height = size+'px';
+  circle.style.left = (e.clientX-rect.left-size/2)+'px';
+  circle.style.top = (e.clientY-rect.top-size/2)+'px';
+  btn.style.position = 'relative';
+  btn.appendChild(circle);
+  setTimeout(()=>circle.remove(),600);
+}
+
+function switchBoard(board, el){
+  document.querySelectorAll('.top-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.board-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById(`panel-${board}`).classList.add('active');
+}
+
+function spawnParticles(){
+  const scene = document.getElementById('bgScene');
+  for(let i=0;i<22;i++){
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = 2 + Math.random()*3;
+    p.style.width = p.style.height = size+'px';
+    p.style.left = Math.random()*100+'vw';
+    p.style.bottom = '-10px';
+    p.style.animationDuration = (14+Math.random()*14)+'s';
+    p.style.animationDelay = (Math.random()*14)+'s';
+    scene.appendChild(p);
+  }
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  document.getElementById('themeBtn').textContent = document.body.classList.contains('light') ? '🌙' : '☀️';
+}
+
+renderTiles();
+renderFeatured();
+renderRows(MOST_DOWNLOADED, 'mostDownloaded', true, false);
+renderRows(RECENTLY_ADDED, 'recentlyAdded', false, true);
+spawnParticles();
+</script>
+</body>
+</html>
