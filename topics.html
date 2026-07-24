@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Physics4Fun — CBSE, AP State & CISCE Cambridge (Grades 6–12)</title>
+<title>Physics4Fun</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <!-- MathJax for LaTeX formula rendering -->
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
@@ -155,12 +155,17 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 /* Games */
 .sec-games .sec-icon-3d{background:linear-gradient(135deg,rgba(16,185,129,.4),rgba(16,185,129,.15));box-shadow:0 3px 8px rgba(16,185,129,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
 .sec-games.active{background:var(--sbg-games);border-color:var(--col-games);color:var(--col-games);}
+.sec-mind .sec-icon-3d{background:linear-gradient(135deg,rgba(217,119,6,.4),rgba(217,119,6,.15));box-shadow:0 3px 8px rgba(217,119,6,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-mind.active{background:rgba(217,119,6,.1);border-color:#d97706;color:#d97706;}
+.sec-gloss .sec-icon-3d{background:linear-gradient(135deg,rgba(8,145,178,.4),rgba(8,145,178,.15));box-shadow:0 3px 8px rgba(8,145,178,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
+.sec-gloss.active{background:rgba(8,145,178,.1);border-color:#0891b2;color:#0891b2;}
 
 /* ── PYQ TABBAR ── */
-#pyq-tabbar{display:none;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
-#pyq-tabbar::-webkit-scrollbar{display:none;}
-#pyq-tabbar.visible{display:flex;}
-.pyq-tab{display:flex;align-items:center;gap:6px;padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;flex-shrink:0;border-radius:6px 6px 0 0;}
+	#pyq-tabbar, #desc-tabbar, .desc-tabs{display:none;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
+	.desc-tabs{display:flex;border-radius:10px;}
+	#pyq-tabbar::-webkit-scrollbar, #desc-tabbar::-webkit-scrollbar{display:none;}
+	#pyq-tabbar.visible, #desc-tabbar.visible{display:flex;}
+	.pyq-tab{display:flex;align-items:center;gap:6px;padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;flex-shrink:0;border-radius:6px 6px 0 0;}
 .pyq-tab:hover{color:var(--text);background:var(--item-hover);}
 .tab-dot{width:19px;height:19px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;color:#fff;flex-shrink:0;}
 .pyq-tab.t-mcq.active{color:var(--pyq-mcq);border-bottom-color:var(--pyq-mcq);}
@@ -169,7 +174,13 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .pyq-tab.t-two.active{color:var(--pyq-two);border-bottom-color:var(--pyq-two);}
 .pyq-tab.t-three.active{color:var(--pyq-three);border-bottom-color:var(--pyq-three);}
 .pyq-tab.t-four.active{color:var(--pyq-four);border-bottom-color:var(--pyq-four);}
-.pyq-tab.t-five.active{color:var(--pyq-five);border-bottom-color:var(--pyq-five);}
+	.pyq-tab.t-five.active{color:var(--pyq-five);border-bottom-color:var(--pyq-five);}
+	
+	/* Descriptive Tabs Active States */
+	#desc-tabbar .pyq-tab.t-all.active{color:var(--col-desc);border-bottom-color:var(--col-desc);}
+	#desc-tabbar .pyq-tab.t-two.active{color:var(--pyq-two);border-bottom-color:var(--pyq-two);}
+	#desc-tabbar .pyq-tab.t-three.active{color:var(--pyq-three);border-bottom-color:var(--pyq-three);}
+	#desc-tabbar .pyq-tab.t-case.active{color:var(--pyq-four);border-bottom-color:var(--pyq-four);}
 
 /* ── CONTENT ── */
 #content{flex:1;overflow-y:auto;padding:18px 20px 32px;}
@@ -316,13 +327,48 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 /* ══ PYQ ══ */
 .pyq-set-label{font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);padding:10px 0 5px;display:flex;align-items:center;gap:7px;}
 .pyq-set-label::after{content:'';flex:1;height:1px;background:var(--divider);}
-.set-badge{font-size:9px;font-weight:800;padding:3px 9px;border-radius:12px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px;flex-shrink:0;transition:all .2s;}
-.set-badge-1mark{background:linear-gradient(135deg,rgba(132,204,22,.25),rgba(77,124,11,.3));color:#a3d940;border:1px solid rgba(132,204,22,.4);box-shadow:0 2px 8px rgba(132,204,22,.2);}
-.set-badge-2mark{background:linear-gradient(135deg,rgba(22,163,74,.25),rgba(21,128,61,.3));color:#4ade80;border:1px solid rgba(22,163,74,.4);box-shadow:0 2px 8px rgba(22,163,74,.2);}
-.set-badge-3mark{background:linear-gradient(135deg,rgba(220,38,38,.25),rgba(185,28,28,.3));color:#f87171;border:1px solid rgba(220,38,38,.4);box-shadow:0 2px 8px rgba(220,38,38,.2);}
-.set-badge-4mark{background:linear-gradient(135deg,rgba(14,165,233,.25),rgba(3,105,161,.3));color:#38bdf8;border:1px solid rgba(14,165,233,.4);box-shadow:0 2px 8px rgba(14,165,233,.2);}
-.set-badge-5mark{background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(190,24,93,.3));color:#f472b6;border:1px solid rgba(236,72,153,.4);box-shadow:0 2px 8px rgba(236,72,153,.2);}
-.year-badge{font-size:9px;font-weight:800;padding:3px 9px;border-radius:12px;background:linear-gradient(135deg,rgba(239,68,68,.25),rgba(220,38,38,.3));color:#fca5a5;border:1px solid rgba(239,68,68,.4);box-shadow:0 2px 8px rgba(239,68,68,.2);flex-shrink:0;}
+.set-badge{
+   font-size:9px;font-weight:800;
+   padding:3px 9px;border-radius:12px;
+   font-family:'JetBrains Mono',monospace;letter-spacing:.5px;flex-shrink:0;transition:all .2s;
+}
+
+.set-badge-1mark{ 
+   background:linear-gradient(135deg,rgba(132,204,22,.25),rgba(77,124,11,.3));
+   color:#a3d940;
+   border:1px solid rgba(132,204,22,.4);
+   box-shadow:0 2px 8px rgba(132,204,22,.2);
+ }
+.set-badge-2mark{
+   background:linear-gradient(135deg,rgba(22,163,74,.25),rgba(21,128,61,.3));
+   color:#4ade80;
+   border:1px solid rgba(22,163,74,.4);
+   box-shadow:0 2px 8px rgba(22,163,74,.2);
+ }
+.set-badge-3mark{
+   background:linear-gradient(135deg,rgba(220,38,38,.25),rgba(185,28,28,.3));
+   color:#f87171;
+   border:1px solid rgba(220,38,38,.4);
+   box-shadow:0 2px 8px rgba(220,38,38,.2);
+ }
+.set-badge-4mark{
+   background:linear-gradient(135deg,rgba(14,165,233,.25),rgba(3,105,161,.3));
+   color:#38bdf8;
+   border:1px solid rgba(14,165,233,.4);
+   box-shadow:0 2px 8px rgba(14,165,233,.2);
+ }
+.set-badge-5mark{
+   background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(190,24,93,.3));
+   color:#f472b6;
+   border:1px solid rgba(236,72,153,.4);
+   box-shadow:0 2px 8px rgba(236,72,153,.2);
+ }
+.year-badge{
+   font-size:9px;font-weight:800;padding:3px 9px;border-radius:12px;
+   font-family:'JetBrains Mono',monospace;letter-spacing:.5px;transition:all .2s;flex-shrink:0;
+ }
+ 
+ 
 .mcq-card{display:flex;flex-direction:column;background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:13px 15px;margin-bottom:9px;transition:border-color .2s;cursor:pointer;position:relative;}
 .mcq-card:hover{border-color:rgba(124,58,237,.22);}
 .mcq-card-top{display:flex;gap:11px;}
@@ -361,20 +407,9 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .board-header:hover{opacity:.8;}
 .board-arrow{display:inline-block;transition:transform .2s;}
 
-/* ══ DESCRIPTIVE SECTION IMPROVEMENTS ══ */
-.desc-tabs{display:flex;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;gap:0;margin-bottom:0;}
-.desc-tabs::-webkit-scrollbar{display:none;}
-.desc-tab{display:flex;align-items:center;gap:6px;padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;flex-shrink:0;border-radius:0;}
-.desc-tab:hover{color:var(--text);background:var(--item-hover);}
-.desc-tab.active{color:var(--text);}
-.desc-tab.tab-all.active{color:var(--col-desc);border-bottom-color:var(--col-desc);}
-.desc-tab.tab-2marks.active{color:var(--pyq-two);border-bottom-color:var(--pyq-two);}
-.desc-tab.tab-3marks.active{color:var(--pyq-three);border-bottom-color:var(--pyq-three);}
-.desc-tab.tab-case.active{color:var(--pyq-four);border-bottom-color:var(--pyq-four);}
-.tab-dot{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;color:#fff;font-size:9px;font-weight:800;flex-shrink:0;}
-.pyq-question-item{margin-bottom:6px;}
 
-/* ══ MCQ SECTION ══ */
+
+/* ══ Objective SECTION ══ */
 .mcq-filter-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
 .mcq-filter-tab{padding:8px 14px;border-radius:8px;border:1px solid var(--divider);background:var(--card-bg);color:var(--text-sub);cursor:pointer;font-size:12px;font-weight:700;transition:all .15s;user-select:none;}
 .mcq-filter-tab:hover{border-color:var(--brand);color:var(--text);}
@@ -384,7 +419,27 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .mcq-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
 .mcq-number{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(168,85,247,.15);color:#a855f7;font-weight:700;font-size:12px;flex-shrink:0;}
 .mcq-difficulty{display:inline-block;}
+.fib-wrap{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.fib-input{flex:1;min-width:160px;padding:8px 12px;border-radius:8px;border:1px solid var(--card-border);background:var(--bg3);color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:13px;}
+.fib-check-btn{padding:8px 16px;border-radius:8px;border:none;background:var(--col-desc);color:#fff;font-weight:700;font-size:12.5px;cursor:pointer;}
+.fib-result{font-size:13px;font-weight:700;width:100%;}
+.fib-blank{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:118px;padding:1px 4px;border-bottom:2px solid var(--pyq-three);vertical-align:middle;}
+.fib-blank.revealed{border-bottom-color:transparent;}
+.fib-toggle-btn{padding:3px 10px;border-radius:20px;border:none;background:var(--pyq-three);color:#fff;font-weight:700;font-size:10.5px;cursor:pointer;white-space:nowrap;}
+.fib-toggle-btn.small{background:transparent;color:var(--pyq-three);border:1px solid var(--pyq-three);padding:2px 8px;}
+.fib-answer-text{color:var(--pyq-three);font-weight:800;}
+.match-wrap{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0;}
+.match-col{display:flex;flex-direction:column;gap:6px;}
+.match-item{padding:8px 12px;border-radius:8px;border:1px solid var(--card-border);background:var(--bg3);font-size:12.5px;cursor:pointer;transition:all .15s;}
+.match-item:hover:not(.paired){border-color:var(--col-mcq,#7c3aed);}
+.match-item.selected{border-color:#7c3aed;background:rgba(124,58,237,.12);}
+.match-item.paired{cursor:default;}
+.match-item.match-correct{border-color:#34d399;background:rgba(52,211,153,.12);color:#34d399;}
+.match-item.match-wrong{border-color:#f87171;background:rgba(248,113,113,.12);color:#f87171;}
+.match-result{font-size:12.5px;font-weight:700;margin:6px 0;}
 .mcq-question{font-size:13.5px;line-height:1.8;color:var(--text);margin-bottom:12px;}
+.options.options-grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.options.options-tof{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 .options{display:flex;flex-direction:column;gap:8px;}
 .option{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid var(--divider);cursor:pointer;transition:all .15s;background:var(--bg3);}
 .option:hover{border-color:var(--brand);background:var(--item-hover);}
@@ -396,11 +451,11 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .explanation strong{color:var(--col-desc);}
 .options.answered{pointer-events:none;}
 
-/* ══ MCQ SECTION BUTTON ══ */
+/* ══ Objective SECTION BUTTON ══ */
 .sec-mcq .sec-icon-3d{background:linear-gradient(135deg,rgba(168,85,247,.4),rgba(168,85,247,.15));box-shadow:0 3px 8px rgba(168,85,247,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
 .sec-mcq.active{background:rgba(168,85,247,0.12);border-color:#a855f7;color:#a855f7;}
 
-/* ══ GAMES & PUZZLES ══ */
+/* ══ LEARN & PLAY ══ */
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
 .game-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:15px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
 .game-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--col-games),transparent);}
@@ -620,7 +675,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       </div>
 
       <div class="grade-row" onclick="toggleGrade('ap-g10',this)">
-        <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">AP State + PYQ</span><span class="grade-arrow">▶</span>
+        <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">AP State</span><span class="grade-arrow">▶</span>
       </div>
       <div class="chapter-list" id="ap-g10">
         <div class="ch-item" onclick="selectChapter('Light – Reflection and Refraction','10','💡',this,true,'light')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection &amp; Refraction</span><span class="ch-pyq-badge">PYQ</span></div>
@@ -635,7 +690,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       <div class="sb-label" style="font-size:14px;background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(251,191,36,.1));padding:8px 12px;border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(245,158,11,.3);">📙 AP Intermediate</div>
 
       <div class="grade-row" onclick="toggleGrade('ap-inter-1',this)">
-        <span class="grade-pill">I</span><span class="grade-label">First Year</span><span class="grade-sub">Inter + PYQ</span><span class="grade-arrow">▶</span>
+        <span class="grade-pill">I</span><span class="grade-label">First Year</span><span class="grade-sub">Inter</span><span class="grade-arrow">▶</span>
       </div>
       <div class="chapter-list" id="ap-inter-1">
         <div class="ch-item" onclick="selectChapter('Physical World','11','🌍',this,true,'physical-world')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span><span class="ch-pyq-badge">PYQ</span></div>
@@ -648,7 +703,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       </div>
 
       <div class="grade-row" onclick="toggleGrade('ap-inter-2',this)">
-        <span class="grade-pill">II</span><span class="grade-label">Second Year</span><span class="grade-sub">Inter + PYQ</span><span class="grade-arrow">▶</span>
+        <span class="grade-pill">II</span><span class="grade-label">Second Year</span><span class="grade-sub">Inter</span><span class="grade-arrow">▶</span>
       </div>
       <div class="chapter-list" id="ap-inter-2">
         <div class="ch-item" onclick="selectChapter('Electric Charges and Fields','12','⚡',this,true,'electric-charges')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span><span class="ch-pyq-badge">PYQ</span></div>
@@ -726,15 +781,16 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       <div class="sec-btn sec-notes active" id="btn-notes" onclick="switchSection('notes',this)">
         <span class="sec-icon-3d">📖</span>Notes
       </div>
-      <div class="sec-btn sec-desc" id="btn-desc" onclick="switchSection('desc',this)">
+	  <div class="sec-btn sec-pyq" id="btn-pyq" onclick="switchSection('pyq',this)" style="display:none;">
+        <span class="sec-icon-3d">📋</span>PYQs
+      </div>
+	  <div class="sec-btn sec-desc" id="btn-desc" onclick="switchSection('desc',this)">
         <span class="sec-icon-3d">✏️</span>Descriptive
       </div>
-      <div class="sec-btn sec-mcq" id="btn-mcq" onclick="switchSection('mcq',this)">
-        <span class="sec-icon-3d">🎯</span>MCQs
+      <div class="sec-btn sec-mcq" id="btn-objective" onclick="switchSection('objective',this)">
+        <span class="sec-icon-3d">🎯</span>Objective
       </div>
-      <div class="sec-btn sec-mock" id="btn-mock" onclick="switchSection('mock',this)">
-        <span class="sec-icon-3d">🎯</span>Mock Test
-      </div>
+
       <div class="sec-btn sec-ppt" id="btn-ppt" onclick="switchSection('ppt',this)">
         <span class="sec-icon-3d">📊</span>PPTs
       </div>
@@ -745,21 +801,33 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
         <span class="sec-icon-3d">🔬</span>Simulations
       </div>
       <div class="sec-btn sec-games" id="btn-games" onclick="switchSection('games',this)">
-        <span class="sec-icon-3d">🎮</span>Games & Puzzles
+        <span class="sec-icon-3d">🎮</span>Play & Learn
       </div>
-      <div class="sec-btn sec-pyq" id="btn-pyq" onclick="switchSection('pyq',this)" style="display:none;">
-        <span class="sec-icon-3d">📋</span>PYQs
+      <div class="sec-btn sec-mind" id="btn-mind" onclick="switchSection('mind',this)">
+        <span class="sec-icon-3d">🗺️</span>Mind Maps
       </div>
+      <div class="sec-btn sec-gloss" id="btn-gloss" onclick="switchSection('gloss',this)">
+        <span class="sec-icon-3d">📚</span>Glossary
+      </div>
+
     </div>
 
     <!-- PYQ TAB BAR -->
     <div id="pyq-tabbar">
-      <div class="pyq-tab t-mcq active" onclick="showPyqSec('mcq',this)"><span class="tab-dot" style="background:#7c3aed;">M</span>MCQs</div>
-      <div class="pyq-tab t-ar" onclick="showPyqSec('ar',this)"><span class="tab-dot" style="background:#f97316;">A</span>A &amp; R</div>
+      <div class="pyq-tab t-mcq active" onclick="showPyqSec('mcq',this)"><span class="tab-dot" style="background:#7c3aed;">1</span>MCQs</div>
+      <div class="pyq-tab t-ar" onclick="showPyqSec('ar',this)"><span class="tab-dot" style="background:#f97316;">1</span>A &amp; R</div>
       <div class="pyq-tab t-two" onclick="showPyqSec('two',this)"><span class="tab-dot" style="background:#16a34a;">2</span>Marks</div>
       <div class="pyq-tab t-three" onclick="showPyqSec('three',this)"><span class="tab-dot" style="background:#dc2626;">3</span>Marks</div>
       <div class="pyq-tab t-four" onclick="showPyqSec('four',this)"><span class="tab-dot" style="background:#0ea5e9;">4</span>Marks</div>
       <div class="pyq-tab t-five" onclick="showPyqSec('five',this)"><span class="tab-dot" style="background:#ec4899;">5</span>Marks</div>
+    </div>
+
+    <!-- DESC TAB BAR (Identical to PYQ) -->
+    <div id="desc-tabbar">
+      <div class="pyq-tab t-all active" onclick="showDescSec('all',this)"><span class="tab-dot" style="background:var(--col-desc);">A</span>All</div>
+      <div class="pyq-tab t-two" onclick="showDescSec('2marks',this)"><span class="tab-dot" style="background:var(--pyq-two);">2</span>Marks</div>
+      <div class="pyq-tab t-three" onclick="showDescSec('3marks',this)"><span class="tab-dot" style="background:var(--pyq-three);">3</span>Marks</div>
+      <div class="pyq-tab t-case" onclick="showDescSec('case',this)"><span class="tab-dot" style="background:var(--pyq-four);">C</span>Case-Based</div>
     </div>
 
     <div id="content">
@@ -775,18 +843,22 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
           <span class="w-pill">🃏 Flash Cards</span>
           <span class="w-pill">🔬 Simulations</span>
           <span class="w-pill">🎮 Games & Puzzles</span>
+          <span class="w-pill">🗺️ Mind Map</span>
+          <span class="w-pill">📚 Glossary</span>
           <span class="w-pill">📋 PYQs</span>
         </div>
       </div>
 
       <div id="panel-notes" style="display:none;"><div id="notes-content-wrap" class="notes-content"></div></div>
       <div id="panel-desc"  style="display:none;"><div id="desc-content-wrap"></div></div>
-      <div id="panel-mcq"  style="display:none;"><div id="mcq-content-wrap"></div></div>
+      <div id="panel-objective"  style="display:none;"><div id="objective-content-wrap"></div></div>
       <div id="panel-mock"  style="display:none;"><div id="mock-content-wrap"></div></div>
       <div id="panel-ppt"   style="display:none;"><div id="ppt-content-wrap"></div></div>
       <div id="panel-flash" style="display:none;"><div id="flash-content-wrap"></div></div>
       <div id="panel-sim"   style="display:none;"><div id="sim-content-wrap"></div></div>
       <div id="panel-games" style="display:none;"><div id="games-content-wrap"></div></div>
+      <div id="panel-mind"  style="display:none;"><div id="mind-content-wrap"></div></div>
+      <div id="panel-gloss" style="display:none;"><div id="gloss-content-wrap"></div></div>
       <div id="panel-pyq"   style="display:none;">
         <div id="pyq-mcq"   class="pyq-section"></div>
         <div id="pyq-ar"    class="pyq-section" style="display:none;"></div>
@@ -804,11 +876,11 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 
 <script>
 /* ══════ STATE ══════ */
-let CUR = { grade:null, chapter:null, slug:null, hasPyq:false, section:'notes' };
+let CUR = { gradeId:null, grade:null, chapter:null, slug:null, hasPyq:false, section:'notes' };
 
 /* ══════ PYQ TYPES ══════ */
 const PYQ_TYPES = [
-  {id:'mcq',  file:'msq.js',   varName:'mcqData',      label:'MCQs'},
+  {id:'mcq',  file:'msq.js',   varName:'mcqData',      label:'Objective'},
   {id:'ar',   file:'ar.js',    varName:'arData',        label:'A&R'},
   {id:'one',  file:'one.js',   varName:'oneMarkData',   label:'1 Mark'},
   {id:'two',  file:'two.js',   varName:'twoMarkData',   label:'2 Marks'},
@@ -872,7 +944,11 @@ function toggleSidebar() { document.getElementById('sidebar').classList.toggle('
 function selectChapter(name, grade, icon, el, hasPyq, slug) {
   document.querySelectorAll('.ch-item').forEach(i => i.classList.remove('active'));
   el.classList.add('active');
-  CUR = { grade, chapter:name, slug, hasPyq, section:'notes' };
+  // CUR.grade is already set by toggleGrade() which uses the full ID (e.g., 'cbse-g10')
+  CUR.chapter = name;
+  CUR.slug = slug;
+  CUR.hasPyq = hasPyq;
+  CUR.section = 'notes';
 
   document.getElementById('bc-grade').textContent = 'Class ' + grade;
   document.getElementById('bc-chapter').textContent = icon + ' ' + name.replace(/&amp;/g,'&');
@@ -891,13 +967,13 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 
 /* ══════ SECTION SWITCH ══════ */
 
-/* Control visibility of PYQs and MCQs based on board-grade */
+/* Control visibility of PYQs and Objective based on board-grade */
 const PYQ_GRADES = ['cbse-g10', 'cbse-g12', 'ap-g10', 'ap-inter-1', 'ap-inter-2'];
 
 function updateSectionVisibility() {
-  const mcqBtn = document.getElementById('btn-mcq');
+  const mcqBtn = document.getElementById('btn-objective');
   const pyqBtn = document.getElementById('btn-pyq');
-  const mcqPanel = document.getElementById('panel-mcq');
+  const mcqPanel = document.getElementById('panel-objective');
   const pyqPanel = document.getElementById('panel-pyq');
   
   if (!mcqBtn || !pyqBtn) return;
@@ -907,8 +983,8 @@ function updateSectionVisibility() {
   // PYQs available only for specific grades
   pyqBtn.style.display = isPyqGrade ? 'flex' : 'none';
   
-  // For PYQ grades, hide the separate MCQs section (as MCQs are inside PYQs)
-  // For all other grades, show only the MCQs section
+  // For PYQ grades, hide the separate Objective section (as Objective are inside PYQs)
+  // For all other grades, show only the Objective section
   mcqBtn.style.display = isPyqGrade ? 'none' : 'flex';
 
   // If we are on a section that just got hidden, switch to notes
@@ -923,18 +999,26 @@ function switchSection(type, el) {
   CUR.section = type;
   document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
-  ['notes','desc','mcq','mock','ppt','flash','sim','games','pyq'].forEach(p => {
+  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
+  
   document.getElementById('pyq-tabbar').classList.toggle('visible', type === 'pyq');
+  document.getElementById('desc-tabbar').classList.toggle('visible', type === 'desc');
+  
   const panel = document.getElementById('panel-'+type);
   if (panel) panel.style.display = 'block';
 
   switch(type) {
     case 'notes': loadNotes(); break;
-    case 'desc':  loadDesc(); break;
-    case 'mcq':   loadMCQ(); break;
+    case 'desc':  
+      loadDesc(); 
+      showDescSec('all', document.querySelector('#desc-tabbar .pyq-tab.t-all'));
+      break;
+    case 'objective': loadObjective(); break;
+    case 'gloss': loadGlossary(); break;
+    case 'mind':  loadMindMap(); break;
     case 'mock':  loadMock(); break;
     case 'ppt':   loadPPT(); break;
     case 'flash': loadFlash(); break;
@@ -950,15 +1034,27 @@ function switchSection(type, el) {
 }
 
 /* ══════ NOTES ══════ */
+const GRADE_ID_MAP = {
+  'cbse-g6':['cbse','6'], 'cbse-g7':['cbse','7'], 'cbse-g8':['cbse','8'], 'cbse-g9':['cbse','9'],
+  'cbse-g10':['cbse','10'], 'cbse-g11':['cbse','11'], 'cbse-g12':['cbse','12'],
+  'ap-g6':['ap-state','6'], 'ap-g7':['ap-state','7'], 'ap-g8':['ap-state','8'], 'ap-g9':['ap-state','9'], 'ap-g10':['ap-state','10'],
+  'ap-inter-1':['ap-inter','11'], 'ap-inter-2':['ap-inter','12'],
+  'cisce-g6':['cisce','6'], 'cisce-g7':['cisce','7'], 'cisce-g8':['cisce','8']
+};
+function parseGradeId(gradeId) {
+  return GRADE_ID_MAP[gradeId] || ['cbse', '6'];
+}
+
 async function loadNotes() {
   const wrap = document.getElementById('notes-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
   if (!CUR.slug) { renderComingSoon(wrap,'📖','Notes','Notes for this chapter are being prepared. Check back soon!'); return; }
   wrap.innerHTML = spinnerHTML('📖','Loading notes…');
   window.chapterNotes = undefined;
   document.querySelectorAll('[data-note]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.note = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/note.js`;
+    s.dataset.note = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/notes.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
   window.chapterNotes ? renderNotes(window.chapterNotes, wrap)
@@ -977,27 +1073,22 @@ function renderNotes(d, wrap) {
 /* ══════ DESCRIPTIVE ══════ */
 async function loadDesc() {
   const wrap = document.getElementById('desc-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
   if (!CUR.slug) { renderComingSoon(wrap,'✏️','Descriptive Questions','Questions being prepared.'); return; }
-  window.descqData = undefined;
+  window.descriptiveData = undefined;
   document.querySelectorAll('[data-descq]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.descq = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/descq.js`;
+    s.dataset.descq = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/descriptive.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
-  window.descqData && window.descqData.length
-    ? renderDesc(window.descqData, wrap)
-    : renderComingSoon(wrap,'✏️','Descriptive Questions','Long-answer questions for this chapter are being added. Add them in <code>descq.js</code>');
+  window.descriptiveData && window.descriptiveData.length
+    ? renderDesc(window.descriptiveData, wrap)
+    : renderComingSoon(wrap,'✏️','Descriptive Questions','Long-answer questions for this chapter are being added. Add them in <code>descriptive.js</code>');
 }
 
 function renderDesc(data, wrap) {
-  let html = `<div class="desc-tabs" style="margin-bottom:15px;">
-    <button class="desc-tab tab-all active" onclick="filterDesc('all', this)"><span class="tab-dot" style="background:var(--col-desc);">A</span>All</button>
-    <button class="desc-tab tab-2marks" onclick="filterDesc('2marks', this)"><span class="tab-dot" style="background:var(--pyq-two);">2</span>2 Marks</button>
-    <button class="desc-tab tab-3marks" onclick="filterDesc('3marks', this)"><span class="tab-dot" style="background:var(--pyq-three);">3</span>3 Marks</button>
-    <button class="desc-tab tab-case" onclick="filterDesc('case', this)"><span class="tab-dot" style="background:var(--pyq-four);">C</span>Case-Based</button>
-  </div>`;
-  html += `<button id="desc-toggle-all" class="pyq-toggle-all-btn" style="background:var(--col-desc); margin-bottom:15px; margin-top:5px;" onclick="toggleAllDesc()">Show All</button>`;
+  let html = `<button id="desc-toggle-all" class="pyq-toggle-all-btn" style="background:var(--col-desc); margin-bottom:15px; margin-top:5px;" onclick="toggleAllDesc()">Show Answers</button>`;
   html += data.map((q,i) => {
     let type = 'all';
     if (q.type === 'case' || (q.question && q.question.toLowerCase().includes('case-based'))) type = 'case';
@@ -1017,6 +1108,21 @@ function renderDesc(data, wrap) {
   }).join('');
   wrap.innerHTML = html;
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+
+function showDescSec(type, el) {
+  document.querySelectorAll('#desc-tabbar .pyq-tab').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  
+  document.querySelectorAll('[data-desc-type]').forEach(item => {
+    if (type === 'all') {
+      item.style.display = 'block';
+    } else {
+      item.style.display = item.dataset.descType === type ? 'block' : 'none';
+    }
+  });
+  updateToggleAllBtn();
+  document.getElementById('content').scrollTop = 0;
 }
 function toggleDescAnswer(id) {
   const answer = document.getElementById(`desc-ans-${id}`);
@@ -1041,92 +1147,149 @@ function toggleAllDesc() {
   updateToggleAllBtn();
 }
 
-function filterDesc(type, el) {
-  document.querySelectorAll('.desc-tab').forEach(t => t.classList.remove('active'));
-  if (el) el.classList.add('active');
-  
-  document.querySelectorAll('[data-desc-type]').forEach(item => {
-    if (type === 'all') {
-      item.style.display = 'block';
-    } else {
-      item.style.display = item.dataset.descType === type ? 'block' : 'none';
-    }
-  });
-  updateToggleAllBtn();
-}
 
-/* ══════ MCQs ══════ */
-async function loadMCQ() {
-  const wrap = document.getElementById('mcq-content-wrap');
-  if (!CUR.slug) { renderComingSoon(wrap,'🎯','MCQs','MCQs for this chapter are being prepared.'); return; }
-  window.mcqsData = undefined;
+
+/* ══════ Objective ══════ */
+async function loadObjective() {
+  const wrap = document.getElementById('objective-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
+  if (!CUR.slug) { renderComingSoon(wrap,'🎯','Objective','Objective questions for this chapter are being prepared.'); return; }
+  window.objectiveData = undefined;
   document.querySelectorAll('[data-mcqs]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.mcqs = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/mcqs.js`;
+    s.dataset.mcqs = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/objective.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
-  window.mcqsData && window.mcqsData.length
-    ? renderMCQs(window.mcqsData, wrap)
-    : renderComingSoon(wrap,'🎯','MCQs','Multiple choice questions for this chapter are being added.');
+  window.objectiveData && window.objectiveData.length
+    ? renderObjective(window.objectiveData, wrap)
+    : renderComingSoon(wrap,'🎯','Objective','Objective questions for this chapter are being added. Add them in <code>objective.js</code>');
 }
 
-function renderMCQs(data, wrap) {
+function renderObjective(data, wrap) {
   let html = `<div class="desc-tabs" style="margin-bottom:16px;">
-    <button class="desc-tab tab-all active" onclick="filterMCQs('all')"><span class="tab-dot" style="background:var(--col-desc);">A</span>All</button>
-    <button class="desc-tab tab-2marks" onclick="filterMCQs('easy')"><span class="tab-dot" style="background:var(--pyq-two);">E</span>Easy</button>
-    <button class="desc-tab tab-3marks" onclick="filterMCQs('medium')"><span class="tab-dot" style="background:var(--pyq-three);">M</span>Medium</button>
-    <button class="desc-tab tab-case" onclick="filterMCQs('hard')"><span class="tab-dot" style="background:var(--pyq-four);">H</span>Hard</button>
+    <div class="pyq-tab t-mcq active" onclick="filterObjective('mcq')"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
+    <div class="pyq-tab t-two" onclick="filterObjective('tof')"><span class="tab-dot" style="background:var(--pyq-two);">T</span>True or False</div>
+    <div class="pyq-tab t-three" onclick="filterObjective('fib')"><span class="tab-dot" style="background:var(--pyq-three);">F</span>Fill in the Blanks</div>
+    <div class="pyq-tab t-four" onclick="filterObjective('match')"><span class="tab-dot" style="background:var(--pyq-four);">X</span>Matching Type</div>
   </div>`;
-  html += data.map((q,i) => `<div class="mcq-card" data-difficulty="${q.difficulty||'medium'}"><div class="mcq-header"><span class="mcq-number">${i+1}</span><span class="mcq-difficulty" style="background:${getDifficultyColor(q.difficulty||'medium')};color:#fff;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;">${(q.difficulty||'medium').toUpperCase()}</span></div><div class="mcq-question">${q.question}</div><div class="options" data-answer="${q.answer}">${(q.options||[]).map((opt,idx) => `<div class="option" data-opt="${idx}"><span class="opt-label">${String.fromCharCode(65+idx)}</span><span class="opt-text">${opt}</span></div>`).join('')}</div>${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${q.explanation}</div>` : ''}</div>`).join('');
+  const counters = {};
+  html += data.map((q) => {
+    const type = q.type || 'mcq';
+    counters[type] = (counters[type]||0)+1;
+    const num = counters[type];
+    const badgeClass = {mcq:'mcq',tof:'two',fib:'three',match:'four',ar:'ar'}[type] || 'mcq';
+    let body = '';
+    let questionOverride = null;
+    if (type === 'mcq') {
+      body = `<div class="options" data-answer="${q.answer}">${(q.options||[]).map((opt,idx) => `<div class="option" data-opt="${idx}"><span class="opt-label">${String.fromCharCode(65+idx)}</span><span class="opt-text">${opt}</span></div>`).join('')}</div>`;
+    } else if (type === 'tof') {
+      body = `<div class="options options-tof" data-answer="${q.answer}">
+        <div class="option" data-opt="true"><span class="opt-label">T</span><span class="opt-text">True</span></div>
+        <div class="option" data-opt="false"><span class="opt-label">F</span><span class="opt-text">False</span></div>
+      </div>`;
+    } else if (type === 'fib') {
+      const ans = (q.answer||'').replace(/"/g,'&quot;');
+      const blankRe = /_{3,}/;
+      const blankHtml = `<span class="fib-blank" data-answer="${ans}"><button class="fib-toggle-btn" onclick="toggleFibAnswer(this)">Show Answer</button></span>`;
+      questionOverride = blankRe.test(q.question||'')
+        ? (q.question||'').replace(blankRe, blankHtml)
+        : `${q.question||''} ${blankHtml}`;
+    } else if (type === 'ar') {
+      const opts = {A:'Both A & R true; R is correct explanation',B:'Both A & R true; R is not correct explanation',C:'A is true, R is false',D:'A is false, R is true'};
+      questionOverride = `<strong>Assertion:</strong> ${q.assertion||''}<br><strong>Reason:</strong> ${q.reason||''}`;
+      body = `<div class="options" data-answer="${q.answer}">${Object.entries(opts).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}</div>`;
+    } else if (type === 'match') {
+      const pairs = q.pairs || [];
+      const shuffled = pairs.map((p,idx)=>({text:p[1],idx})).sort(()=>Math.random()-0.5);
+      body = `<div class="match-wrap" data-total="${pairs.length}">
+        <div class="match-col">${pairs.map((p,idx)=>`<div class="match-item" data-match-left="${idx}">${p[0]}</div>`).join('')}</div>
+        <div class="match-col">${shuffled.map(s=>`<div class="match-item match-right" data-match-right="${s.idx}">${s.text}</div>`).join('')}</div>
+      </div><div class="match-result"></div><button class="fib-check-btn" onclick="checkMatch(this)">Check Matches</button>`;
+    }
+    return `<div class="mcq-card" data-qtype="${type}"><div class="mcq-header"><span class="qno ${badgeClass}">${num}</span><div class="mcq-question" style="margin-bottom:0;">${questionOverride !== null ? questionOverride : q.question}</div></div>${body}${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${q.explanation}</div>` : ''}</div>`;
+  }).join('');
   wrap.innerHTML = html;
+  applyOptionsLayout(wrap);
+  filterObjective('mcq');
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
 }
 
-
-function getDifficultyColor(difficulty) {
-  const colors = { 'easy': '#10b981', 'medium': '#f59e0b', 'hard': '#ef4444' };
-  return colors[difficulty] || '#f59e0b';
+function typeColor(type) {
+  return { mcq:'#7c3aed', tof:'#16a34a', fib:'#dc2626', match:'#0ea5e9' }[type] || '#f59e0b';
+}
+function typeLabel(type) {
+  return { mcq:'MCQ', tof:'TRUE/FALSE', fib:'FILL BLANK', match:'MATCH' }[type] || type.toUpperCase();
 }
 
-function filterMCQs(level) {
-  // Remove active from all tabs
-  document.querySelectorAll('.desc-tab').forEach(t => t.classList.remove('active'));
-  
-  // Find and activate the clicked tab
-  const tabs = document.querySelectorAll('.desc-tab');
+function toggleFibAnswer(btn) {
+  const blank = btn.parentElement;
+  const revealed = blank.classList.toggle('revealed');
+  blank.innerHTML = revealed
+    ? `<span class="fib-answer-text">${blank.dataset.answer}</span><button class="fib-toggle-btn small" onclick="toggleFibAnswer(this)">Hide Answer</button>`
+    : `<button class="fib-toggle-btn" onclick="toggleFibAnswer(this)">Show Answer</button>`;
+}
+function checkFib(input) {
+  const wrap = input.closest('.fib-wrap');
+  const result = wrap.querySelector('.fib-result');
+  const correct = input.value.trim().toLowerCase() === wrap.dataset.answer;
+  result.innerHTML = correct ? '✅ Correct!' : `❌ Incorrect. Answer: <strong>${wrap.dataset.answer}</strong>`;
+  result.style.color = correct ? '#34d399' : '#f87171';
+  input.disabled = true;
+}
+
+document.addEventListener('click', e => {
+  const item = e.target.closest('.match-item'); if (!item || item.classList.contains('paired')) return;
+  const wrap = item.closest('.match-wrap');
+  if (item.hasAttribute('data-match-left')) {
+    wrap.querySelectorAll('[data-match-left]').forEach(x=>x.classList.remove('selected'));
+    item.classList.add('selected');
+  } else if (item.hasAttribute('data-match-right')) {
+    const leftSel = wrap.querySelector('[data-match-left].selected'); if (!leftSel) return;
+    const correct = leftSel.dataset.matchLeft === item.dataset.matchRight;
+    leftSel.classList.add('paired', correct?'match-correct':'match-wrong');
+    item.classList.add('paired', correct?'match-correct':'match-wrong');
+    leftSel.classList.remove('selected');
+  }
+});
+function checkMatch(btn) {
+  const container = btn.closest('.mcq-card');
+  const wrap = container.querySelector('.match-wrap');
+  const total = parseInt(wrap.dataset.total);
+  const correctCount = wrap.querySelectorAll('[data-match-left].match-correct').length;
+  const resultDiv = container.querySelector('.match-result');
+  resultDiv.innerHTML = `${correctCount}/${total} matched correctly.`;
+  resultDiv.style.color = correctCount===total ? '#34d399' : '#f59e0b';
+}
+
+function filterObjective(level) {
+  document.querySelectorAll('#objective-content-wrap .pyq-tab').forEach(t => t.classList.remove('active'));
+  const tabs = document.querySelectorAll('#objective-content-wrap .pyq-tab');
   tabs.forEach(tab => {
     const onclick = tab.getAttribute('onclick');
-    if (onclick && onclick.includes(`'${level}'`)) {
-      tab.classList.add('active');
-    }
+    if (onclick && onclick.includes(`'${level}'`)) tab.classList.add('active');
   });
-  
-  // Filter MCQ cards
-  document.querySelectorAll('.mcq-card').forEach(card => {
-    if (level === 'all') {
-      card.style.display = 'block';
-    } else {
-      card.style.display = card.dataset.difficulty === level ? 'block' : 'none';
-    }
+  document.querySelectorAll('#objective-content-wrap .mcq-card').forEach(card => {
+    card.style.display = (card.dataset.qtype === level) ? 'block' : 'none';
   });
 }
 function updateToggleAllBtn() {
   const btn = document.getElementById('desc-toggle-all');
   const answers = document.querySelectorAll('[id^="desc-ans-"]');
   const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
-  if (btn) btn.textContent = allOpen ? 'Hide All' : 'Show All';
+  if (btn) btn.textContent = allOpen ? 'Hide Answers' : 'Show Answers';
 }
 
 /* ══════ MOCK TEST ══════ */
 async function loadMock() {
   const wrap = document.getElementById('mock-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
   if (!CUR.slug) { renderComingSoon(wrap,'🎯','Mock Test','Mock tests coming soon!'); return; }
   window.mockTestData = undefined;
   document.querySelectorAll('[data-mock]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.mock = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/mocktest.js`;
+    s.dataset.mock = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/mocktest.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
   window.mockTestData
@@ -1174,12 +1337,13 @@ function submitMock(total, totalMarks) {
 /* ══════ PPT ══════ */
 async function loadPPT() {
   const wrap = document.getElementById('ppt-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
   if (!CUR.slug) { renderComingSoon(wrap,'📊','PPTs','Slide decks coming soon!'); return; }
   window.pptsData = undefined;
   document.querySelectorAll('[data-ppt]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.ppt = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/ppts.js`;
+    s.dataset.ppt = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/ppts.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
   if (window.pptsData && window.pptsData.length) {
@@ -1193,12 +1357,13 @@ async function loadPPT() {
 /* ══════ FLASH CARDS ══════ */
 async function loadFlash() {
   const wrap = document.getElementById('flash-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
   if (!CUR.slug) { renderComingSoon(wrap,'🃏','Flash Cards','Flash cards coming soon!'); return; }
   window.flashcardsData = undefined;
   document.querySelectorAll('[data-flash]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.flash = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/flashcards.js`;
+    s.dataset.flash = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/flashcards.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
   window.flashcardsData && window.flashcardsData.length
@@ -1236,17 +1401,18 @@ function shuffleCards() {
 /* ══════ SIMULATIONS ══════ */
 async function loadSim() {
   const wrap = document.getElementById('sim-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
   if (!CUR.slug) { renderComingSoon(wrap,'🔬','Simulations','Interactive simulations coming soon!'); return; }
-  window.simulationsData = undefined;
+  window.simulationData = undefined;
   document.querySelectorAll('[data-sim]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.sim = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/simulations.js`;
+    s.dataset.sim = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/simulation.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
-  window.simulationsData && window.simulationsData.length
-    ? renderSim(window.simulationsData, wrap)
-    : renderComingSoon(wrap,'🔬','Simulations','Simulations for this chapter are being built. Add them in <code>simulations.js</code>');
+  window.simulationData && window.simulationData.length
+    ? renderSim(window.simulationData, wrap)
+    : renderComingSoon(wrap,'🔬','Simulations','Simulations for this chapter are being built. Add them in <code>simulation.js</code>');
 }
 
 function renderSim(data, wrap) {
@@ -1298,15 +1464,16 @@ function toggleSim(i) {
   }
 }
 
-/* ══════ GAMES & PUZZLES ══════ */
+/* ══════ Learn & Play ══════ */
 async function loadGames() {
   const wrap = document.getElementById('games-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
   if (!CUR.slug) { renderComingSoon(wrap,'🎮','Games & Puzzles','Interactive games and puzzles coming soon!'); return; }
   window.gamesData = undefined;
   document.querySelectorAll('[data-games]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.games = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/games.js`;
+    s.dataset.games = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/games.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
   window.gamesData && window.gamesData.length
@@ -1372,9 +1539,59 @@ function toggleGame(i) {
   }
 }
 
+/* ══════ MIND MAP ══════ */
+async function loadMindMap() {
+  const wrap = document.getElementById('mind-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
+  if (!CUR.slug) { renderComingSoon(wrap,'🗺️','Mind Map','Mind map for this chapter is being prepared.'); return; }
+  window.mindmapData = undefined;
+  document.querySelectorAll('[data-mindmap]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.mindmap = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/mindmap.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  if (window.mindmapData && window.mindmapData.branches) {
+    const d = window.mindmapData;
+    wrap.innerHTML = `<div class="notes-section"><div class="notes-section-heading"><span class="n-sec-icon">🗺️</span>${d.title||d.root}</div>`
+      + d.branches.map(b => `<div class="n-law-box"><div class="n-law-title">${b.label}</div>`
+        + (b.children||[]).map(c => `<div class="n-law-item">• ${c}</div>`).join('') + `</div>`).join('') + `</div>`;
+  } else {
+    renderComingSoon(wrap,'🗺️','Mind Map','Mind map for this chapter is being prepared. Add it in <code>mindmap.js</code>');
+  }
+}
+
+/* ══════ GLOSSARY ══════ */
+async function loadGlossary() {
+  const wrap = document.getElementById('gloss-content-wrap');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
+  if (!CUR.slug) { renderComingSoon(wrap,'📚','Glossary','Glossary for this chapter is being prepared.'); return; }
+  window.glossaryData = undefined;
+  document.querySelectorAll('[data-glossary]').forEach(s=>s.remove());
+  await new Promise(res => {
+    const s = document.createElement('script');
+    s.dataset.glossary = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/glossary.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  if (window.glossaryData && window.glossaryData.terms && window.glossaryData.terms.length) {
+    const d = window.glossaryData;
+    wrap.innerHTML = `<input class="fib-input" style="width:100%;margin-bottom:12px;" placeholder="Search terms…" oninput="filterGlossary(this.value)">`
+      + `<div class="n-two-col" id="gloss-grid">` + d.terms.map(t=>`<div class="n-term-card" data-term="${(t.term||'').toLowerCase()}"><span class="n-term-label">${t.term}</span><span class="n-term-desc">${t.definition}</span></div>`).join('') + `</div>`;
+  } else {
+    renderComingSoon(wrap,'📚','Glossary','Glossary for this chapter is being prepared. Add it in <code>glossary.js</code>');
+  }
+}
+function filterGlossary(q) {
+  const lq = q.toLowerCase();
+  document.querySelectorAll('#gloss-grid .n-term-card').forEach(card => {
+    card.style.display = card.dataset.term.includes(lq) || card.textContent.toLowerCase().includes(lq) ? 'block' : 'none';
+  });
+}
+
 /* ══════ PYQ LOADER ══════ */
 async function loadPYQ() {
   if (!CUR.slug || !CUR.hasPyq) { renderNoPYQ(); return; }
+  const [board, gradeNum] = parseGradeId(CUR.grade);
   // Clear + show loading
   PYQ_TYPES.forEach(t => {
     const el = document.getElementById('pyq-'+t.id);
@@ -1382,13 +1599,15 @@ async function loadPYQ() {
   });
   // Remove stale scripts
   document.querySelectorAll('[data-pyq]').forEach(s=>s.remove());
-  // Load all 7 PYQ files in parallel
-  await Promise.all(PYQ_TYPES.map(t => {
+  window.pyqsData = undefined;
+  // Load single consolidated pyqs.js file
+  await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.pyq = '1'; s.src = `grade${CUR.grade}/${CUR.slug}/pyqs/${t.file}`;
-    document.head.appendChild(s);
-    return new Promise(res => { s.onload = s.onerror = res; });
-  }));
+    s.dataset.pyq = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/pyqs.js`;
+    s.onload = s.onerror = res; document.head.appendChild(s);
+  });
+  const data = window.pyqsData || {};
+  PYQ_TYPES.forEach(t => { window[t.varName] = data[t.id] || []; });
   renderAllPYQ();
 }
 
@@ -1398,23 +1617,32 @@ function renderAllPYQ() {
     el.innerHTML = '';
     const data = window[t.varName];
     if (!data || !data.length) {
-      el.innerHTML = `<div class="no-content-state"><div class="no-content-icon">📭</div><h3>No ${t.label} yet</h3><p>Add questions in <code>${t.file}</code> for this chapter.</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
+      el.innerHTML = `<div class="no-content-state"><div class="no-content-icon">📭</div><h3>No ${t.label} yet</h3><p>Add ${t.label} questions to the <code>${t.id}</code> array in <code>pyqs.js</code> for this chapter.</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
       return;
     }
-    if (t.id==='mcq') renderMCQSection(data,el);
+    if (t.id==='mcq') renderObjectiveSection(data,el);
     else if (t.id==='ar') renderARSection(data,el);
     else renderWrittenSection(data,el,t.id);
+  });
+}
+
+function applyOptionsLayout(scope) {
+  (scope || document).querySelectorAll('.options').forEach(box => {
+    const opts = box.querySelectorAll('.option');
+    if (opts.length < 3) return;
+    const allShort = [...opts].every(o => o.textContent.trim().length <= 30);
+    box.classList.toggle('options-grid2', allShort);
   });
 }
 
 function badges(q, marksType = '') {
   const setClass = marksType ? `set-badge-${marksType}mark` : 'set-badge';
   return `<div class="mcq-card-badges">
-    ${q.set?`<span class="set-badge ${setClass}">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+    ${q.set?`<span class="set-badge ${setClass}">${q.set}</span>`:''}${q.year?`<span class="year-badge ${setClass}">${q.year}</span>`:''}
   </div>`;
 }
 
-function renderMCQSection(data, el) {
+function renderObjectiveSection(data, el) {
   data.forEach((q, idx) => {
     const c = document.createElement('div'); c.className='mcq-card';
     c.innerHTML = `<div class="mcq-card-top">
@@ -1428,10 +1656,11 @@ function renderMCQSection(data, el) {
       </div>
     </div>
     <div class="mcq-card-badges" style="display:flex;gap:6px;align-items:center;">
-      ${q.set?`<span class="set-badge set-badge-1mark">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+      ${q.set?`<span class="set-badge set-badge-1mark">${q.set}</span>`:''}${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}
     </div>`;
     el.appendChild(c);
   });
+  applyOptionsLayout(el);
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
 }
 
@@ -1451,17 +1680,18 @@ function renderARSection(data, el) {
       </div>
     </div>
     <div class="mcq-card-badges" style="display:flex;gap:6px;align-items:center;">
-      ${q.set?`<span class="set-badge set-badge-2mark">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+      ${q.set?`<span class="set-badge set-badge-2mark">${q.set}</span>`:''}${q.year?`<span class="year-badge set-badge-2mark">${q.year}</span>`:''}
     </div>`;
     el.appendChild(c);
   });
+  applyOptionsLayout(el);
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
 }
 
 function renderWrittenSection(data, el, type) {
   const markClass = type === 'one' ? 'set-badge-1mark' : type === 'two' ? 'set-badge-2mark' : type === 'three' ? 'set-badge-3mark' : type === 'four' ? 'set-badge-4mark' : 'set-badge-5mark';
   const typeId = type === 'one' ? 'one' : type === 'two' ? 'two' : type === 'three' ? 'three' : type === 'four' ? 'four' : 'five';
-  let html = `<button id="pyq-toggle-all-${typeId}" class="pyq-toggle-all-btn pyq-toggle-${typeId}" onclick="toggleAllPYQ('${typeId}')">Show All</button>`;
+  let html = `<button id="pyq-toggle-all-${typeId}" class="pyq-toggle-all-btn pyq-toggle-${typeId}" onclick="toggleAllPYQ('${typeId}')">Show Answers</button>`;
   html += data.map((q, idx) => `
     <div class="pyq-question-item" data-pyq-id="${idx}" data-pyq-type="${typeId}">
       <div class="pyq-question-top" onclick="togglePYQAnswer('${typeId}', ${idx})" style="cursor:pointer;">
@@ -1473,7 +1703,7 @@ function renderWrittenSection(data, el, type) {
       </div>
       <div class="pyq-answer" id="pyq-ans-${typeId}-${idx}" style="display:none;">${q.answer||'Answer will be updated shortly.'}</div>
       <div class="question-item-badges" style="display:flex;gap:6px;align-items:center;margin-top:8px;">
-        ${q.set?`<span class="set-badge ${markClass}">${q.set}</span>`:''}${q.year?`<span class="year-badge">${q.year}</span>`:''}
+        ${q.set?`<span class="set-badge ${markClass}">${q.set}</span>`:''}${q.year?`<span class="year-badge ${markClass}">${q.year}</span>`:''}
       </div>
     </div>
   `).join('');
@@ -1506,7 +1736,7 @@ function updatePYQToggleBtn(typeId) {
   const btn = document.getElementById(`pyq-toggle-all-${typeId}`);
   const answers = document.querySelectorAll(`[id^="pyq-ans-${typeId}-"]`);
   const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
-  if (btn) btn.textContent = allOpen ? 'Hide All' : 'Show All';
+  if (btn) btn.textContent = allOpen ? 'Hide Answers' : 'Show Answers';
 }
 
 function renderNoPYQ() {
@@ -1517,14 +1747,14 @@ function renderNoPYQ() {
 }
 
 function showPyqSec(id, el) {
-  document.querySelectorAll('.pyq-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('#pyq-tabbar .pyq-tab').forEach(t=>t.classList.remove('active'));
   if(el) el.classList.add('active');
   document.querySelectorAll('.pyq-section').forEach(s=>s.style.display='none');
   const sec = document.getElementById('pyq-'+id); if(sec) sec.style.display='block';
   document.getElementById('content').scrollTop=0;
 }
 
-/* ══════ MCQ CLICK HANDLERS ══════ */
+/* ══════ Objective CLICK HANDLERS ══════ */
 document.addEventListener('click', e => {
   const opt = e.target.closest('.option'); if (!opt) return;
   const box = opt.closest('.options'); if (!box || box.classList.contains('answered')) return;
