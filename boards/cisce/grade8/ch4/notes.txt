@@ -1,0 +1,85 @@
+Work (W):
+Definition: Work is said to be done when a body undergoes displacement (movement from one place to another place) due to the application of an external force.
+To consider work done on a body
+A force should be applied on the body
+There should be displacement (s) in the body in the direction of the applied force.
+Formula: Work (W) = Force (F) x Displacement (s)
+Work is a scalar quantity
+Absolute units of work:
+SI unit: joule (J) (or) newton-metre (N.m)
+CGS Unit:  erg (or) dyne-cm
+Relation between the SI and the CGS absolute units of Work:
+Examples of NO work (zero work):
+A boy pushing a wall
+A porter waiting with luggage over his head
+A child reading a book in a library
+Two persons pushing a heavy wooden log from opposite directions with equal force
+1 joule (J) :
+If a force of 1 newton displaces an object by 1 metre in the direction of applied force then work   done is 1 joule (J)
+1 joule = 1 newton x 1m                    (or)      1 J = 1 N.m
+1 kJ = 1000 J
+1 erg :
+If a force of 1 dyne displaces an object by 1 centi metre in the direction of applied force then work done is 1 erg
+erg = 1 dyne x 1 centi metre         (or)      1 erg = 1 dy.cm
+Energy:
+Energy is defined as the ability of a body to do work
+Work and Energy has same units
+Different types of energy: Mechanical energy, Heat energy, Light energy, Sound energy, Electrical energy… etc.,
+Mechanical Energy:
+The energy possessed by bodies due to their position and/or motion.
+It is of two forms – 1. Potential Energy 2. Kinetic Energy
+The sum of the Kinetic energy and the Potential energy is called mechanical energy
+Potential Energy:
+The energy possessed by an body by virtue of its position or configuration or shape is called potential energy
+The energy is stored in a body when it is at some height from the ground level or it is in a compressed or stretched state
+Examples:
+A stretching arrow has potential energy due to its configuration,
+The water stored in a dam has potential energy due to its position (height)
+Kinetic Energy:
+The energy possessed by a body by virtue of its motion is called the kinetic energy.
+All moving bodies have kinetic energy.
+If an object of mass (m) moving with a velocity (v) then its kinetic energy is
+Ex: A moving car has Kinetic energy due to its motion
+Kinetic energy of a body depends on its mass and the speed with which it is moving.
+If two bodies of different masses are moving with the same velocity, then the body with grater mass will possess more kinetic energy.
+If two bodies of same mass are moving different speeds, then the faster body will have more kinetic energy and hence capable of doing more work.
+Gravitational Potential energy:
+The energy acquired by a body when it is raised at some height from the ground level is known as gravitational potential energy.
+The gravitational potential energy depends on the mass of the body and the height to which it has been lifted. Grater the mass or height of an object, more the potential energy it will have.
+Gravitational potential energy of a body = mgh
+m = mass of the body
+g = acceleration due to gravity
+h = height to which the body is raised above the ground
+Examples:
+A rock situated on a hill,
+a brick kept over the roof top or a ball kept over the table,
+stored water in a dam
+Conversion of Kinetic and Potential Energy
+In a simple pendulum
+At highest point → Maximum Potential Energy (PE), No Kinetic Energy (KE)
+At lowest point → Maximum Kinetic Energy, Minimum. Potential Energy
+Energy keeps converting between PE and KE during swing.
+Some energy is lost as heat to surroundings.
+Law of conservation of energy:
+Statement: Energy can neither be created nor destroyed, but can be transformed from one form to another
+All forms of energy are interconvertible.
+The process of one form of energy into another is called energy transformation
+Some examples of interconversions:
+Ball falling → PE → KE → Sound + Heat
+Photosynthesis → Light energy → Chemical energy
+Fans, motors → Electrical energy → Mechanical energy
+Heaters/geysers → Electrical → Heat
+Bulbs/tubelights → Electrical → Light
+Engines/motors → Chemical/Electrical → Mechanical
+Microphones → Sound → Electrical → Sound (speakers)
+Electromagnets → Electrical → Magnetic
+Battery charging → Electrical → Chemical
+Cells/batteries → Chemical → Electrical
+Coal power plant → Chemical → Heat → Kinetic → Electrical
+Solar cells → Solar → Electrical
+Power:
+The rate at which work is done is known is as power.
+It can also be defined as the rate of consumption of energy
+SI unit: joule/second (J/s)  (or) watt (W)
+CGS unit: erg/second (erg/s)
+Formula: power = work/time</pre>`}]
