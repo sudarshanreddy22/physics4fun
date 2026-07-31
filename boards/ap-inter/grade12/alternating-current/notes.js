@@ -1,0 +1,1 @@
+window.chapterNotes = { title: "Alternating Current", grade: "12", icon: "📚", sections: [{ icon: "📌", heading: "Introduction", content: `<div class="n-callout n-callout-blue"><span class="n-callout-icon">📌</span><span>Notes for <strong>Alternating Current</strong> are being prepared. This is placeholder/template content — replace with real notes.</span></div>` }] };
