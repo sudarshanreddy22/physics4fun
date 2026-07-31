@@ -1,0 +1,2 @@
+/* Mind Map - Dual Nature of Radiation and Matter | Grade 12 — TEMPLATE */
+window.mindmapData = { title: "Dual Nature of Radiation and Matter — Mind Map", root: "DUAL NATURE OF RADIATION AND MATTER", branches: [ { label: "Key Idea 1", children: ["Point A","Point B"] }, { label: "Key Idea 2", children: ["Point C","Point D"] } ] };
