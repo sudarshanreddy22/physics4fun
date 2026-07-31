@@ -1,0 +1,1 @@
+window.chapterNotes = { title: "Motion in a Straight Line", grade: "11", icon: "📚", sections: [{ icon: "📌", heading: "Introduction", content: `<div class="n-callout n-callout-blue"><span class="n-callout-icon">📌</span><span>Notes for <strong>Motion in a Straight Line</strong> are being prepared. This is placeholder/template content — replace with real notes.</span></div>` }] };
