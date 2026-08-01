@@ -14,16 +14,13 @@ icon:"⚡",
       due to the application of an <strong>external force</strong>.
     </p>
 
-    <div class="n-callout n-callout-blue">
-      <span class="n-callout-icon">📌</span>
-      <span>
-        <strong>Conditions for Work to be Done</strong>
-        <ol>
-          <li>A force should be applied on the body.</li>
-          <li>The body should undergo displacement in the direction of the applied force.</li>
-        </ol>
-      </span>
-    </div>
+		<div class="n-law-box">
+          <div class="n-law-title">📌  Conditions for Work to be Done</div>
+          <div class="n-law-item"><span class="n-law-num">I</span><span>A <strong>force</strong>should be applied on the body</span></div>
+          <div class="n-law-item"><span class="n-law-num">II</span><span>The body should undergo <strong>displacement</strong>in the direction of the applied force</span></div>
+        </div>
+
+
 
     <div class="n-callout n-callout-green">
       <span class="n-callout-icon">🧮</span>
@@ -144,7 +141,13 @@ icon:"⚡",
       <span class="n-chip">Heat Energy</span>
       <span class="n-chip">Light Energy</span>
       <span class="n-chip">Sound Energy</span>
-      <span class="n-chip">Electrical Energy</span>
+      <span class="n-chip">Wind Energy</span>
+	  <span class="n-chip">Chemical Energy</span>
+	  <span class="n-chip">Nuclear Energy</span>
+	  <span class="n-chip">Atomic Energy</span>
+	  <span class="n-chip">Solar Energy</span>
+	  <span class="n-chip">Hydro Energy</span>
+									
     </div>
   `
 },
@@ -183,6 +186,326 @@ icon:"⚡",
     </div>
   `
 },
+
+
+
+{
+  icon: "🏔️",
+  heading: "Potential Energy (PE)",
+  content: `
+    <p class="n-def">
+      <strong>Potential Energy</strong> is the energy possessed by a body
+      by virtue of its <strong>position</strong>,
+      <strong>configuration</strong> or <strong>shape</strong>.
+    </p>
+
+    <div class="n-callout n-callout-blue">
+      <span class="n-callout-icon">💡</span>
+      <span>
+        Energy is stored in a body when it is:
+        <ul>
+          <li>At some height above the ground.</li>
+          <li>In a compressed state.</li>
+          <li>In a stretched state.</li>
+        </ul>
+      </span>
+    </div>
+
+    <h4>Examples</h4>
+
+    <div class="n-callout n-callout-green">
+      <span class="n-callout-icon">🏹</span>
+      <span>
+        <ul>
+          <li>A stretched arrow has potential energy due to its configuration.</li>
+          <li>Water stored in a dam has potential energy due to its height.</li>
+        </ul>
+      </span>
+    </div>
+
+    <div class="n-chips-row">
+      <span class="n-chip">Position</span>
+      <span class="n-chip">Configuration</span>
+      <span class="n-chip">Stored Energy</span>
+    </div>
+  `
+},
+
+{
+  icon: "🚗",
+  heading: "Kinetic Energy (KE)",
+  content: `
+    <p class="n-def">
+      <strong>Kinetic Energy</strong> is the energy possessed by a body
+      by virtue of its <strong>motion</strong>.
+    </p>
+
+    <div class="n-callout n-callout-blue">
+      <span class="n-callout-icon">🏃</span>
+      <span>
+        All moving bodies possess kinetic energy.
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-green">
+      <span class="n-callout-icon">📐</span>
+      <span>
+        <strong>Formula</strong><br>
+        KE = ½ mv²
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-yellow">
+      <span class="n-callout-icon">🚘</span>
+      <span>
+        Example:<br>
+        A moving car possesses kinetic energy due to its motion.
+      </span>
+    </div>
+
+    <h4>Factors Affecting Kinetic Energy</h4>
+
+    <ul>
+      <li>Kinetic energy depends upon the <strong>mass</strong> of the body.</li>
+      <li>Kinetic energy depends upon the <strong>speed (velocity)</strong> of the body.</li>
+    </ul>
+
+    <div class="n-callout n-callout-purple">
+      <span class="n-callout-icon">⚖️</span>
+      <span>
+        If two bodies move with the same velocity, the body having
+        <strong>greater mass</strong> possesses more kinetic energy.
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-red">
+      <span class="n-callout-icon">⚡</span>
+      <span>
+        If two bodies have the same mass, the body moving with
+        <strong>greater speed</strong> possesses more kinetic energy
+        and can do more work.
+      </span>
+    </div>
+
+    <div class="n-chips-row">
+      <span class="n-chip">Motion</span>
+      <span class="n-chip">Mass</span>
+      <span class="n-chip">Velocity</span>
+      <span class="n-chip">KE = ½mv²</span>
+    </div>
+  `
+},
+
+{
+  icon: "🌍",
+  heading: "Gravitational Potential Energy (GPE)",
+  content: `
+    <p class="n-def">
+      <strong>Gravitational Potential Energy</strong> is the energy acquired
+      by a body when it is raised to some height above the ground.
+    </p>
+
+    <div class="n-callout n-callout-blue">
+      <span class="n-callout-icon">📈</span>
+      <span>
+        Gravitational potential energy depends on:
+        <ul>
+          <li>Mass of the body</li>
+          <li>Height to which it is raised</li>
+        </ul>
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-green">
+      <span class="n-callout-icon">🧮</span>
+      <span>
+        <strong>Formula</strong><br>
+        GPE = mgh
+      </span>
+    </div>
+
+    <h4>Where,</h4>
+
+    <ul>
+      <li><strong>m</strong> = Mass of the body</li>
+      <li><strong>g</strong> = Acceleration due to gravity</li>
+      <li><strong>h</strong> = Height above the ground</li>
+    </ul>
+
+    <h4>Examples</h4>
+
+    <div class="n-callout n-callout-yellow">
+      <span class="n-callout-icon">🏔️</span>
+      <span>
+        <ul>
+          <li>A rock situated on a hill.</li>
+          <li>A brick kept on a rooftop or a ball kept on a table.</li>
+          <li>Water stored in a dam.</li>
+        </ul>
+      </span>
+    </div>
+
+    <div class="n-chips-row">
+      <span class="n-chip">Mass</span>
+      <span class="n-chip">Height</span>
+      <span class="n-chip">GPE = mgh</span>
+    </div>
+  `
+},
+
+{
+  icon: "🔄",
+  heading: "Conversion of Potential Energy and Kinetic Energy",
+  content: `
+    <p class="n-def">
+      In a <strong>simple pendulum</strong>, energy continuously converts
+      between <strong>Potential Energy</strong> and
+      <strong>Kinetic Energy</strong>.
+    </p>
+
+    <div class="n-callout n-callout-green">
+      <span class="n-callout-icon">⬆️</span>
+      <span>
+        <strong>Highest Point</strong><br>
+        • Maximum Potential Energy<br>
+        • No Kinetic Energy
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-blue">
+      <span class="n-callout-icon">⬇️</span>
+      <span>
+        <strong>Lowest Point</strong><br>
+        • Maximum Kinetic Energy<br>
+        • Minimum Potential Energy
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-yellow">
+      <span class="n-callout-icon">♻️</span>
+      <span>
+        During the swing, Potential Energy continuously converts into
+        Kinetic Energy and vice versa.
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-red">
+      <span class="n-callout-icon">🔥</span>
+      <span>
+        A small amount of energy is lost as heat to the surroundings.
+      </span>
+    </div>
+  `
+},
+
+{
+  icon: "♻️",
+  heading: "Law of Conservation of Energy",
+  content: `
+    <p class="n-def">
+      <strong>Statement:</strong><br>
+      Energy can neither be created nor destroyed,
+      but it can be transformed from one form into another.
+    </p>
+
+    <div class="n-callout n-callout-green">
+      <span class="n-callout-icon">🔁</span>
+      <span>
+        All forms of energy are interconvertible.
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-blue">
+      <span class="n-callout-icon">⚙️</span>
+      <span>
+        The process of converting one form of energy into another is
+        called <strong>Energy Transformation</strong>.
+      </span>
+    </div>
+
+    <h4>Examples of Energy Transformation</h4>
+
+    <ul>
+      <li>Ball falling → PE → KE → Sound + Heat</li>
+      <li>Photosynthesis → Light → Chemical</li>
+      <li>Fans & Motors → Electrical → Mechanical</li>
+      <li>Heaters & Geysers → Electrical → Heat</li>
+      <li>Bulbs & Tube Lights → Electrical → Light</li>
+      <li>Engines → Chemical → Mechanical</li>
+      <li>Microphones → Sound → Electrical → Sound</li>
+      <li>Electromagnets → Electrical → Magnetic</li>
+      <li>Battery Charging → Electrical → Chemical</li>
+      <li>Cells/Batteries → Chemical → Electrical</li>
+      <li>Coal Power Plant → Chemical → Heat → Kinetic → Electrical</li>
+      <li>Solar Cells → Solar → Electrical</li>
+    </ul>
+  `
+},
+
+{
+  icon: "⚡",
+  heading: "Power",
+  content: `
+    <p class="n-def">
+      <strong>Power</strong> is the rate at which work is done.
+    </p>
+
+    <div class="n-callout n-callout-blue">
+      <span class="n-callout-icon">💡</span>
+      <span>
+        Power can also be defined as the
+        <strong>rate of consumption of energy.</strong>
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-green">
+      <span class="n-callout-icon">📐</span>
+      <span>
+        <strong>Formula</strong><br>
+        Power = Work / Time
+      </span>
+    </div>
+
+    <div class="n-callout n-callout-yellow">
+      <span class="n-callout-icon">📏</span>
+      <span>
+        <strong>SI Unit:</strong> Joule/second (J/s) or Watt (W)<br>
+        <strong>CGS Unit:</strong> Erg/second (erg/s)
+      </span>
+    </div>
+
+    <div class="n-chips-row">
+      <span class="n-chip">Power = Work/Time</span>
+      <span class="n-chip">SI Unit → Watt</span>
+      <span class="n-chip">1 W = 1 J/s</span>
+    </div>
+  `
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   ]
 };
