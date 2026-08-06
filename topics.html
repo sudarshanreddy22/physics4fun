@@ -461,7 +461,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .iit-palette::-webkit-scrollbar{display:none;}
 .iit-palette-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;background:var(--card-bg);border:1px solid var(--card-border);color:var(--text-sub);cursor:pointer;transition:all .15s;}
 .iit-palette-num:hover{border-color:#a855f7;color:#a855f7;}
-.iit-palette-num.current{background:rgba(168,85,247,0.16);border-color:#a855f7;color:#a855f7;box-shadow:0 0 0 2px rgba(168,85,247,.25);}
+.iit-palette-num.current{background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:#a855f7;color:#fff;font-weight:800;box-shadow:0 0 0 3px rgba(168,85,247,.3),0 2px 10px rgba(124,58,237,.5);}
 .iit-practice-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:6px;}
 .iit-circle-qno{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .iit-progress-text{font-size:11.5px;font-weight:700;color:var(--text-sub);}
@@ -533,8 +533,8 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
   </div>
 
   <div class="header-right">
-    <a class="icon-btn" id="downloadsBtn" href="https://physics4fun.in/downloads" title="Downloads">📥</a>
     <button class="icon-btn" id="fullscreenBtn" onclick="toggleFullscreen()" title="Enter Fullscreen">⛶</button>
+    <a class="icon-btn" id="downloadsBtn" href="https://physics4fun.in/downloads" title="Downloads">📥</a>
     <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Dark/Light">🌙</button>
     <button class="icon-btn" id="viewToggleBtn" onclick="toggleViewMode()" title="Mobile/Desktop Toggle">📱</button>
   </div>
@@ -891,11 +891,14 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       </div>
 
       <!-- IIT FOUNDATION TABS (only shown when IIT Foundation board is active) -->
-      <div class="sec-btn sec-mcq" id="btn-iit-mcq" style="display:none;" onclick="switchSection('objective',this,'mcq')">
-        <span class="sec-icon-3d">🎯</span>MCQs
+      <div class="sec-btn sec-notes" id="btn-iit-notes" style="display:none;" onclick="switchSection('notes',this)">
+        <span class="sec-icon-3d">📖</span>Notes
       </div>
-      <div class="sec-btn sec-desc" id="btn-iit-numericals" style="display:none;" onclick="switchSection('objective',this,'numericals')">
-        <span class="sec-icon-3d">🧮</span>Numericals
+      <div class="sec-btn sec-ppt" id="btn-iit-ppt" style="display:none;" onclick="switchSection('ppt',this)">
+        <span class="sec-icon-3d">📊</span>PPTs
+      </div>
+      <div class="sec-btn sec-mcq" id="btn-iit-objective" style="display:none;" onclick="switchSection('objective',this,'mcq')">
+        <span class="sec-icon-3d">🎯</span>Objective
       </div>
       <div class="sec-btn sec-notes" id="btn-iit-jeemain" style="display:none;" onclick="switchSection('objective',this,'jeemain')">
         <span class="sec-icon-3d">🚀</span>JEE Main
@@ -1063,7 +1066,7 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 
   if (isIITFoundation()) {
     CUR.iitTab = 'mcq';
-    switchSection('objective', document.getElementById('btn-iit-mcq'), 'mcq');
+    switchSection('objective', document.getElementById('btn-iit-objective'), 'mcq');
   } else {
     switchSection('notes', document.getElementById('btn-notes'));
   }
@@ -1079,7 +1082,7 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 const PYQ_GRADES = ['cbse-g10', 'cbse-g12', 'ap-g10', 'ap-inter-1', 'ap-inter-2'];
 
 const NON_IIT_SECTION_BTN_IDS = ['btn-notes','btn-pyq','btn-desc','btn-objective','btn-ppt','btn-flash','btn-sim','btn-games','btn-mind','btn-gloss'];
-const IIT_SECTION_BTN_IDS = ['btn-iit-mcq','btn-iit-numericals','btn-iit-jeemain','btn-iit-jeeadv','btn-iit-neet','btn-iit-apeapcet','btn-iit-tseapcet'];
+const IIT_SECTION_BTN_IDS = ['btn-iit-notes','btn-iit-ppt','btn-iit-objective','btn-iit-jeemain','btn-iit-jeeadv','btn-iit-neet','btn-iit-apeapcet','btn-iit-tseapcet'];
 
 function updateSectionVisibility() {
   const downloadsBtn = document.getElementById('downloadsBtn');
@@ -1361,8 +1364,13 @@ const IIT_PRACTICE = { index: 0, mode: 'list' };
 function renderIITObjective(data, wrap) {
   const total = data.length;
   if (IIT_PRACTICE.index >= total) IIT_PRACTICE.index = 0;
+  const isObjTab = CUR.iitTab === 'mcq' || CUR.iitTab === 'numericals';
 
-  let html = `
+  let html = isObjTab ? `<div class="desc-tabs" style="margin-bottom:16px;">
+      <div class="pyq-tab t-mcq ${CUR.iitTab==='mcq'?'active':''}" onclick="setIITObjectiveTab('mcq')"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
+      <div class="pyq-tab t-two ${CUR.iitTab==='numericals'?'active':''}" onclick="setIITObjectiveTab('numericals')"><span class="tab-dot" style="background:var(--pyq-two);">N</span>Numericals</div>
+    </div>` : '';
+  html += `
     <div class="iit-view-toggle">
       <button class="iit-view-btn ${IIT_PRACTICE.mode==='list'?'active':''}" id="iitListBtn" onclick="setIITViewMode('list')">☰ List View</button>
       <button class="iit-view-btn ${IIT_PRACTICE.mode==='practice'?'active':''}" id="iitPracticeBtn" onclick="setIITViewMode('practice')">🎯 Practice View</button>
@@ -1375,6 +1383,7 @@ function renderIITObjective(data, wrap) {
     </div>
     <div class="iit-questions" id="iitQuestions">`;
 
+  const showExam = CUR.iitTab !== 'mcq' && CUR.iitTab !== 'numericals';
   html += data.map((q, idx) => {
     const options = q.options || {};
     const optsHtml = Object.entries(options).map(([k,v]) => `<div class="option" data-opt="${k}"><span class="opt-label">${k}</span><span class="opt-text">${v}</span></div>`).join('');
@@ -1383,7 +1392,7 @@ function renderIITObjective(data, wrap) {
       <div class="options" data-answer="${q.answer}">${optsHtml}</div>
       ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${q.explanation}</div>` : ''}
       <div class="mcq-card-badges" style="display:flex;gap:6px;align-items:center;margin-top:8px;">
-        ${q.exam?`<span class="set-badge set-badge-1mark">${q.exam}</span>`:''}${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}${q.marks?`<span class="year-badge set-badge-1mark">${q.marks} Mark${q.marks>1?'s':''}</span>`:''}
+        ${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}${q.paper?`<span class="set-badge set-badge-1mark">${q.paper}</span>`:''}${(showExam && q.exam)?`<span class="set-badge set-badge-1mark">${q.exam}</span>`:''}
       </div>
     </div>`;
   }).join('');
@@ -1437,17 +1446,22 @@ function scrollIITPaletteIntoView() {
 function updateIITPracticeMeta(data) {
   const q = data[IIT_PRACTICE.index]; if (!q) return;
   const total = data.length;
+  const showExam = CUR.iitTab !== 'mcq' && CUR.iitTab !== 'numericals';
   const meta = document.getElementById('iitPracticeMeta');
   if (meta) meta.innerHTML = `
     <span class="iit-circle-qno">${IIT_PRACTICE.index+1}</span>
     <span class="iit-progress-text">${IIT_PRACTICE.index+1} of ${total}</span>
-    ${q.exam?`<span class="set-badge set-badge-1mark">${q.exam}</span>`:''}
     ${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}
-    ${q.marks?`<span class="year-badge set-badge-1mark">${q.marks} Mark${q.marks>1?'s':''}</span>`:''}`;
+    ${q.paper?`<span class="set-badge set-badge-1mark">${q.paper}</span>`:''}
+    ${(showExam && q.exam)?`<span class="set-badge set-badge-1mark">${q.exam}</span>`:''}`;
   const prog = document.getElementById('iitNavProgress');
   if (prog) prog.textContent = `${IIT_PRACTICE.index+1} of ${total}`;
   const prevBtn = document.getElementById('iitPrevBtn'); if (prevBtn) prevBtn.disabled = IIT_PRACTICE.index === 0;
   const nextBtn = document.getElementById('iitNextBtn'); if (nextBtn) nextBtn.disabled = IIT_PRACTICE.index === total-1;
+}
+function setIITObjectiveTab(tab) {
+  CUR.iitTab = tab;
+  loadObjective();
 }
 
 function typeColor(type) {
