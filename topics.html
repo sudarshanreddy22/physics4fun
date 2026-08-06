@@ -369,7 +369,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
  }
  
  
-.mcq-card{display:flex;flex-direction:column;background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:13px 15px;margin-bottom:9px;transition:border-color .2s;cursor:pointer;position:relative;}
+.mcq-card{display:flex;flex-direction:column;background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:10px 12px;margin-bottom:6px;transition:border-color .2s;cursor:pointer;position:relative;}
 .mcq-card:hover{border-color:rgba(124,58,237,.22);}
 .mcq-card-top{display:flex;gap:11px;}
 .mcq-card-badges{display:flex;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--divider);}
@@ -396,7 +396,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .explanation{display:none;margin-top:9px;padding:9px 13px;background:rgba(99,102,241,.06);border-left:2px solid var(--brand);border-radius:8px;font-size:12.5px;line-height:1.75;color:var(--text-sub);}
 .pyq-toggle-all-btn{background:var(--col-pyq);color:white;border:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:15px;transition:all .2s;}
 .pyq-toggle-all-btn:hover{opacity:0.9;transform:translateY(-1px);}
-.pyq-question-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:13px 15px;margin-bottom:9px;transition:all .2s;}
+.pyq-question-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:10px 12px;margin-bottom:6px;transition:all .2s;}
 .pyq-question-item:hover{border-color:rgba(251,146,60,.3);}
 .pyq-question-top{display:flex;gap:11px;align-items:flex-start;}
 .pyq-q-icon{display:inline-block;width:16px;height:16px;margin-left:8px;font-size:12px;font-weight:bold;color:var(--col-pyq);transition:transform .2s;flex-shrink:0;}
@@ -414,7 +414,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .mcq-filter-tab{padding:8px 14px;border-radius:8px;border:1px solid var(--divider);background:var(--card-bg);color:var(--text-sub);cursor:pointer;font-size:12px;font-weight:700;transition:all .15s;user-select:none;}
 .mcq-filter-tab:hover{border-color:var(--brand);color:var(--text);}
 .mcq-filter-tab.active{background:rgba(168,85,247,.12);border-color:#a855f7;color:#a855f7;}
-.mcq-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:15px;margin-bottom:12px;transition:all .2s;}
+.mcq-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:13px;padding:11px;margin-bottom:8px;transition:all .2s;}
 .mcq-card:hover{border-color:rgba(168,85,247,.3);}
 .mcq-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
 .mcq-number{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(168,85,247,.15);color:#a855f7;font-weight:700;font-size:12px;flex-shrink:0;}
@@ -450,6 +450,26 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .explanation{display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);font-size:12.5px;line-height:1.7;}
 .explanation strong{color:var(--col-desc);}
 .options.answered{pointer-events:none;}
+
+/* ══ IIT FOUNDATION: List/Practice View ══ */
+.iit-view-toggle{display:flex;gap:8px;margin-bottom:12px;}
+.iit-view-btn{padding:7px 14px;border-radius:10px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-sub);font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;}
+.iit-view-btn:hover{color:var(--text);}
+.iit-view-btn.active{background:rgba(168,85,247,0.12);border-color:#a855f7;color:#a855f7;}
+.iit-palette-wrap{position:sticky;top:0;z-index:5;background:var(--bg);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--divider);}
+.iit-palette{display:flex;gap:6px;overflow-x:auto;padding:8px 2px;scrollbar-width:none;}
+.iit-palette::-webkit-scrollbar{display:none;}
+.iit-palette-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;background:var(--card-bg);border:1px solid var(--card-border);color:var(--text-sub);cursor:pointer;transition:all .15s;}
+.iit-palette-num:hover{border-color:#a855f7;color:#a855f7;}
+.iit-palette-num.current{background:rgba(168,85,247,0.16);border-color:#a855f7;color:#a855f7;box-shadow:0 0 0 2px rgba(168,85,247,.25);}
+.iit-practice-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:6px;}
+.iit-circle-qno{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.iit-progress-text{font-size:11.5px;font-weight:700;color:var(--text-sub);}
+.iit-practice-nav{position:sticky;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;margin-top:10px;background:var(--header-bg);backdrop-filter:blur(16px);border-top:1px solid var(--divider);border-radius:12px;z-index:5;}
+.iit-nav-btn{padding:9px 18px;border-radius:10px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:700;cursor:pointer;transition:all .15s;}
+.iit-nav-btn:hover:not(:disabled){border-color:#a855f7;color:#a855f7;}
+.iit-nav-btn:disabled{opacity:.4;cursor:not-allowed;}
+.iit-nav-progress{font-size:11.5px;font-weight:700;color:var(--text-sub);}
 
 /* ══ Objective SECTION BUTTON ══ */
 .sec-mcq .sec-icon-3d{background:linear-gradient(135deg,rgba(168,85,247,.4),rgba(168,85,247,.15));box-shadow:0 3px 8px rgba(168,85,247,.35),inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.25);}
@@ -513,8 +533,10 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
   </div>
 
   <div class="header-right">
-    <button class="icon-btn" id="viewToggleBtn" onclick="toggleViewMode()" title="Mobile/Desktop Toggle">📱</button>
+    <a class="icon-btn" id="downloadsBtn" href="https://physics4fun.in/downloads" title="Downloads">📥</a>
+    <button class="icon-btn" id="fullscreenBtn" onclick="toggleFullscreen()" title="Enter Fullscreen">⛶</button>
     <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Dark/Light">🌙</button>
+    <button class="icon-btn" id="viewToggleBtn" onclick="toggleViewMode()" title="Mobile/Desktop Toggle">📱</button>
   </div>
 </header>
 
@@ -567,7 +589,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
         <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">CBSE</span><span class="grade-arrow">▶</span>
       </div>
       <div class="chapter-list" id="cbse-g9">
-        <div class="ch-item" onclick="selectChapter('Motion','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Describing Motion Around Us</span></div>
         <div class="ch-item" onclick="selectChapter('Force and Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">Force &amp; Laws of Motion</span></div>
         <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
       </div>
@@ -623,6 +645,116 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
         <div class="ch-item" onclick="selectChapter('Atoms','12','⚛️',this,true,'atoms')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span><span class="ch-pyq-badge">PYQ</span></div>
         <div class="ch-item" onclick="selectChapter('Nuclei','12','☢️',this,true,'nuclei')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span><span class="ch-pyq-badge">PYQ</span></div>
         <div class="ch-item" onclick="selectChapter('Semiconductor Electronics','12','💻',this,true,'semiconductors')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span><span class="ch-pyq-badge">PYQ</span></div>
+      </div>
+
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 🧠 IIT FOUNDATION BOARD (COLLAPSIBLE - COLLAPSED BY DEFAULT) -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="board-header" onclick="toggleBoard('iit-foundation-board', this)" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(168,85,247,.1));border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(124,58,237,.3);font-size:14px;font-weight:700;user-select:none;">
+        <span class="board-arrow" style="transition:transform .2s;">▶</span>
+        <span>🧠 IIT Foundation</span>
+      </div>
+      <div class="board-content" id="iit-foundation-board" style="display:none;">
+
+      <div class="sb-label">Grades 6 – 10</div>
+
+      <div class="grade-row" onclick="toggleGrade('iit-f-g6',this)">
+        <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">IIT Foundation</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="iit-f-g6">
+        <div class="ch-item" onclick="selectChapter('Physical Quantities and Measurement','6','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion','6','🏃',this,false,'ch2')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Force and Simple Machines','6','⚙️',this,false,'ch3')"><span class="ch-icon">⚙️</span><span class="ch-name">Force &amp; Simple Machines</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('iit-f-g7',this)">
+        <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">IIT Foundation</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="iit-f-g7">
+        <div class="ch-item" onclick="selectChapter('Heat and Temperature','7','🌡️',this,false,'ch1')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat and Temperature</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion and Speed','7','⏱️',this,false,'ch2')"><span class="ch-icon">⏱️</span><span class="ch-name">Motion and Speed</span></div>
+        <div class="ch-item" onclick="selectChapter('Electric Current and Circuits','7','⚡',this,false,'ch3')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Current &amp; Circuits</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('iit-f-g8',this)">
+        <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">IIT Foundation</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="iit-f-g8">
+        <div class="ch-item" onclick="selectChapter('Force and Pressure','8','💪',this,false,'ch1')"><span class="ch-icon">💪</span><span class="ch-name">Force and Pressure</span></div>
+        <div class="ch-item" onclick="selectChapter('Friction','8','🔄',this,false,'ch2')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch3')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('iit-f-g9',this)">
+        <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">IIT Foundation</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="iit-f-g9">
+        <div class="ch-item" onclick="selectChapter('Motion','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Force and Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">Force &amp; Laws of Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('iit-f-g10',this)">
+        <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">IIT Foundation</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="iit-f-g10">
+        <div class="ch-item" onclick="selectChapter('Light – Reflection and Refraction','10','💡',this,false,'ch1')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection &amp; Refraction</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity','10','⚡',this,false,'ch2')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetic Effects of Electric Current','10','🧲',this,false,'ch3')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetic Effects of Current</span></div>
+      </div>
+
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 📕 CISCE CAMBRIDGE BOARD (MOVED HERE FOR BOARD ORDER) -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="board-header" onclick="toggleBoard('cisce-board', this)" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,rgba(239,68,68,.2),rgba(239,68,68,.1));border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(239,68,68,.3);font-size:14px;font-weight:700;user-select:none;">
+        <span class="board-arrow" style="transition:transform .2s;">▶</span>
+        <span>📕 CISCE Cambridge</span>
+      </div>
+      <div class="board-content" id="cisce-board" style="display:none;">
+      
+      <div class="sb-label">Grades 6 – 8</div>
+
+      <div class="grade-row" onclick="toggleGrade('cisce-g6',this)">
+        <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cisce-g6">
+        <div class="ch-item" onclick="selectChapter('Matter','6','🧪',this,false,'ch1')"><span class="ch-icon">🧪</span><span class="ch-name">Matter</span></div>
+        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','6','📏',this,false,'ch2')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Force','6','💪',this,false,'ch3')"><span class="ch-icon">💪</span><span class="ch-name">Force</span></div>
+        <div class="ch-item" onclick="selectChapter('Simple Machines','6','⚙️',this,false,'ch4')"><span class="ch-icon">⚙️</span><span class="ch-name">Simple Machines</span></div>
+        <div class="ch-item" onclick="selectChapter('Light','6','💡',this,false,'ch5')"><span class="ch-icon">💡</span><span class="ch-name">Light</span></div>
+        <div class="ch-item" onclick="selectChapter('Magnetism','6','🧲',this,false,'ch6')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetism</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cisce-g7',this)">
+        <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cisce-g7">
+        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','7','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion','7','🏃',this,false,'ch2')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+        <div class="ch-item" onclick="selectChapter('Energy','7','⚡',this,false,'ch3')"><span class="ch-icon">⚡</span><span class="ch-name">Energy</span></div>
+        <div class="ch-item" onclick="selectChapter('Light Energy','7','💡',this,false,'ch4')"><span class="ch-icon">💡</span><span class="ch-name">Light Energy</span></div>
+        <div class="ch-item" onclick="selectChapter('Heat','7','🌡️',this,false,'ch5')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','7','🔊',this,false,'ch6')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity &amp; Magnetism','7','⚡',this,false,'ch7')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity &amp; Magnetism</span></div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('cisce-g8',this)">
+        <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="cisce-g8">
+        <div class="ch-item" onclick="selectChapter('Matter','8','🧪',this,false,'ch1')"><span class="ch-icon">🧪</span><span class="ch-name">Matter</span></div>
+        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','8','📏',this,false,'ch2')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
+        <div class="ch-item" onclick="selectChapter('Force &amp; Pressure','8','💪',this,false,'ch3')"><span class="ch-icon">💪</span><span class="ch-name">Force &amp; Pressure</span></div>
+        <div class="ch-item" onclick="selectChapter('Energy','8','⚡',this,false,'ch4')"><span class="ch-icon">⚡</span><span class="ch-name">Energy</span></div>
+        <div class="ch-item" onclick="selectChapter('Light','8','💡',this,false,'ch5')"><span class="ch-icon">💡</span><span class="ch-name">Light</span></div>
+        <div class="ch-item" onclick="selectChapter('Heat Transfer','8','🌡️',this,false,'ch6')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat Transfer</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch7')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+        <div class="ch-item" onclick="selectChapter('Electricity','8','⚡',this,false,'ch8')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span></div>
       </div>
 
       </div>
@@ -718,58 +850,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       </div>
       </div>
 
-      <!-- ═══════════════════════════════════════════════════════════════ -->
-      <!-- 📕 CISCE CAMBRIDGE BOARD (COLLAPSIBLE - COLLAPSED BY DEFAULT) -->
-      <!-- ═══════════════════════════════════════════════════════════════ -->
-      <div class="board-header" onclick="toggleBoard('cisce-board', this)" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,rgba(239,68,68,.2),rgba(239,68,68,.1));border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(239,68,68,.3);font-size:14px;font-weight:700;user-select:none;">
-        <span class="board-arrow" style="transition:transform .2s;">▶</span>
-        <span>📕 CISCE Cambridge</span>
-      </div>
-      <div class="board-content" id="cisce-board" style="display:none;">
-      
-      <div class="sb-label">Grades 6 – 8</div>
-
-      <div class="grade-row" onclick="toggleGrade('cisce-g6',this)">
-        <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
-      </div>
-      <div class="chapter-list" id="cisce-g6">
-        <div class="ch-item" onclick="selectChapter('Matter','6','🧪',this,false,'ch1')"><span class="ch-icon">🧪</span><span class="ch-name">Matter</span></div>
-        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','6','📏',this,false,'ch2')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
-        <div class="ch-item" onclick="selectChapter('Force','6','💪',this,false,'ch3')"><span class="ch-icon">💪</span><span class="ch-name">Force</span></div>
-        <div class="ch-item" onclick="selectChapter('Simple Machines','6','⚙️',this,false,'ch4')"><span class="ch-icon">⚙️</span><span class="ch-name">Simple Machines</span></div>
-        <div class="ch-item" onclick="selectChapter('Light','6','💡',this,false,'ch5')"><span class="ch-icon">💡</span><span class="ch-name">Light</span></div>
-        <div class="ch-item" onclick="selectChapter('Magnetism','6','🧲',this,false,'ch6')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetism</span></div>
-      </div>
-
-      <div class="grade-row" onclick="toggleGrade('cisce-g7',this)">
-        <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
-      </div>
-      <div class="chapter-list" id="cisce-g7">
-        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','7','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
-        <div class="ch-item" onclick="selectChapter('Motion','7','🏃',this,false,'ch2')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
-        <div class="ch-item" onclick="selectChapter('Energy','7','⚡',this,false,'ch3')"><span class="ch-icon">⚡</span><span class="ch-name">Energy</span></div>
-        <div class="ch-item" onclick="selectChapter('Light Energy','7','💡',this,false,'ch4')"><span class="ch-icon">💡</span><span class="ch-name">Light Energy</span></div>
-        <div class="ch-item" onclick="selectChapter('Heat','7','🌡️',this,false,'ch5')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat</span></div>
-        <div class="ch-item" onclick="selectChapter('Sound','7','🔊',this,false,'ch6')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
-        <div class="ch-item" onclick="selectChapter('Electricity &amp; Magnetism','7','⚡',this,false,'ch7')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity &amp; Magnetism</span></div>
-      </div>
-
-      <div class="grade-row" onclick="toggleGrade('cisce-g8',this)">
-        <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">CISCE</span><span class="grade-arrow">▶</span>
-      </div>
-      <div class="chapter-list" id="cisce-g8">
-        <div class="ch-item" onclick="selectChapter('Matter','8','🧪',this,false,'ch1')"><span class="ch-icon">🧪</span><span class="ch-name">Matter</span></div>
-        <div class="ch-item" onclick="selectChapter('Physical Quantities &amp; Measurement','8','📏',this,false,'ch2')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities &amp; Measurement</span></div>
-        <div class="ch-item" onclick="selectChapter('Force &amp; Pressure','8','💪',this,false,'ch3')"><span class="ch-icon">💪</span><span class="ch-name">Force &amp; Pressure</span></div>
-        <div class="ch-item" onclick="selectChapter('Energy','8','⚡',this,false,'ch4')"><span class="ch-icon">⚡</span><span class="ch-name">Energy</span></div>
-        <div class="ch-item" onclick="selectChapter('Light','8','💡',this,false,'ch5')"><span class="ch-icon">💡</span><span class="ch-name">Light</span></div>
-        <div class="ch-item" onclick="selectChapter('Heat Transfer','8','🌡️',this,false,'ch6')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat Transfer</span></div>
-        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch7')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
-        <div class="ch-item" onclick="selectChapter('Electricity','8','⚡',this,false,'ch8')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span></div>
-      </div>
-
-      </div>
-
     </div>
   </nav>
 
@@ -808,6 +888,29 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
       </div>
       <div class="sec-btn sec-gloss" id="btn-gloss" onclick="switchSection('gloss',this)">
         <span class="sec-icon-3d">📚</span>Glossary
+      </div>
+
+      <!-- IIT FOUNDATION TABS (only shown when IIT Foundation board is active) -->
+      <div class="sec-btn sec-mcq" id="btn-iit-mcq" style="display:none;" onclick="switchSection('objective',this,'mcq')">
+        <span class="sec-icon-3d">🎯</span>MCQs
+      </div>
+      <div class="sec-btn sec-desc" id="btn-iit-numericals" style="display:none;" onclick="switchSection('objective',this,'numericals')">
+        <span class="sec-icon-3d">🧮</span>Numericals
+      </div>
+      <div class="sec-btn sec-notes" id="btn-iit-jeemain" style="display:none;" onclick="switchSection('objective',this,'jeemain')">
+        <span class="sec-icon-3d">🚀</span>JEE Main
+      </div>
+      <div class="sec-btn sec-ppt" id="btn-iit-jeeadv" style="display:none;" onclick="switchSection('objective',this,'jeeadvanced')">
+        <span class="sec-icon-3d">🏆</span>JEE Advanced
+      </div>
+      <div class="sec-btn sec-sim" id="btn-iit-neet" style="display:none;" onclick="switchSection('objective',this,'neet')">
+        <span class="sec-icon-3d">🩺</span>NEET
+      </div>
+      <div class="sec-btn sec-mind" id="btn-iit-apeapcet" style="display:none;" onclick="switchSection('objective',this,'apeapcet')">
+        <span class="sec-icon-3d">📍</span>AP EAPCET
+      </div>
+      <div class="sec-btn sec-gloss" id="btn-iit-tseapcet" style="display:none;" onclick="switchSection('objective',this,'tseapcet')">
+        <span class="sec-icon-3d">📍</span>TS EAPCET
       </div>
 
     </div>
@@ -958,7 +1061,12 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 
   updateSectionVisibility();
 
-  switchSection('notes', document.getElementById('btn-notes'));
+  if (isIITFoundation()) {
+    CUR.iitTab = 'mcq';
+    switchSection('objective', document.getElementById('btn-iit-mcq'), 'mcq');
+  } else {
+    switchSection('notes', document.getElementById('btn-notes'));
+  }
   document.getElementById('content').scrollTop = 0;
 
   // Mobile: auto-close sidebar
@@ -970,14 +1078,34 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 /* Control visibility of PYQs and Objective based on board-grade */
 const PYQ_GRADES = ['cbse-g10', 'cbse-g12', 'ap-g10', 'ap-inter-1', 'ap-inter-2'];
 
+const NON_IIT_SECTION_BTN_IDS = ['btn-notes','btn-pyq','btn-desc','btn-objective','btn-ppt','btn-flash','btn-sim','btn-games','btn-mind','btn-gloss'];
+const IIT_SECTION_BTN_IDS = ['btn-iit-mcq','btn-iit-numericals','btn-iit-jeemain','btn-iit-jeeadv','btn-iit-neet','btn-iit-apeapcet','btn-iit-tseapcet'];
+
 function updateSectionVisibility() {
+  const downloadsBtn = document.getElementById('downloadsBtn');
+  if (downloadsBtn) downloadsBtn.style.display = isIITFoundation() ? 'none' : 'flex';
+
+  if (isIITFoundation()) {
+    // IIT Foundation: hide Notes/PYQs/Descriptive/PPTs/Simulations/Flashcards/MindMap/Glossary,
+    // show only MCQs/Numericals/JEE Main/JEE Advanced/NEET/AP EAPCET/TS EAPCET
+    NON_IIT_SECTION_BTN_IDS.forEach(id => { const b = document.getElementById(id); if (b) b.style.display = 'none'; });
+    IIT_SECTION_BTN_IDS.forEach(id => { const b = document.getElementById(id); if (b) b.style.display = 'flex'; });
+    return;
+  }
+
+  IIT_SECTION_BTN_IDS.forEach(id => { const b = document.getElementById(id); if (b) b.style.display = 'none'; });
+
   const mcqBtn = document.getElementById('btn-objective');
   const pyqBtn = document.getElementById('btn-pyq');
   const mcqPanel = document.getElementById('panel-objective');
   const pyqPanel = document.getElementById('panel-pyq');
-  
+
+  ['btn-notes','btn-desc','btn-ppt','btn-flash','btn-sim','btn-games','btn-mind','btn-gloss'].forEach(id => {
+    const b = document.getElementById(id); if (b) b.style.display = 'flex';
+  });
+
   if (!mcqBtn || !pyqBtn) return;
-  
+
   const isPyqGrade = PYQ_GRADES.includes(CUR.grade);
   
   // PYQs available only for specific grades
@@ -995,8 +1123,9 @@ function updateSectionVisibility() {
   }
 }
 
-function switchSection(type, el) {
+function switchSection(type, el, sub) {
   CUR.section = type;
+  if (type === 'objective' && isIITFoundation()) CUR.iitTab = sub || 'mcq';
   document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
   ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq'].forEach(p => {
@@ -1039,7 +1168,15 @@ const GRADE_ID_MAP = {
   'cbse-g10':['cbse','10'], 'cbse-g11':['cbse','11'], 'cbse-g12':['cbse','12'],
   'ap-g6':['ap-state','6'], 'ap-g7':['ap-state','7'], 'ap-g8':['ap-state','8'], 'ap-g9':['ap-state','9'], 'ap-g10':['ap-state','10'],
   'ap-inter-1':['ap-inter','11'], 'ap-inter-2':['ap-inter','12'],
-  'cisce-g6':['cisce','6'], 'cisce-g7':['cisce','7'], 'cisce-g8':['cisce','8']
+  'cisce-g6':['cisce','6'], 'cisce-g7':['cisce','7'], 'cisce-g8':['cisce','8'],
+  'iit-f-g6':['iit-foundation','6'], 'iit-f-g7':['iit-foundation','7'], 'iit-f-g8':['iit-foundation','8'],
+  'iit-f-g9':['iit-foundation','9'], 'iit-f-g10':['iit-foundation','10']
+};
+function isIITFoundation() { return !!(CUR.grade && CUR.grade.indexOf('iit-f-') === 0); }
+/* File per IIT Foundation tab; all populate window.objectiveData when loaded */
+const IIT_TAB_FILES = {
+  mcq:'objective.js', numericals:'numericals.js', jeemain:'jeemain.js',
+  jeeadvanced:'jeeadvanced.js', neet:'neet.js', apeapcet:'apeapcet.js', tseapcet:'tseapcet.js'
 };
 function parseGradeId(gradeId) {
   return GRADE_ID_MAP[gradeId] || ['cbse', '6'];
@@ -1156,9 +1293,11 @@ async function loadObjective() {
   if (!CUR.slug) { renderComingSoon(wrap,'🎯','Objective','Objective questions for this chapter are being prepared.'); return; }
   window.objectiveData = undefined;
   document.querySelectorAll('[data-mcqs]').forEach(s=>s.remove());
+  const fileName = isIITFoundation() ? (IIT_TAB_FILES[CUR.iitTab || 'mcq'] || 'objective.js') : 'objective.js';
+  IIT_PRACTICE.index = 0; // reset practice position on new tab/chapter load
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.mcqs = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/objective.js`;
+    s.dataset.mcqs = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/${fileName}`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
   window.objectiveData && window.objectiveData.length
@@ -1167,6 +1306,7 @@ async function loadObjective() {
 }
 
 function renderObjective(data, wrap) {
+  if (isIITFoundation()) { renderIITObjective(data, wrap); return; }
   let html = `<div class="desc-tabs" style="margin-bottom:16px;">
     <div class="pyq-tab t-mcq active" onclick="filterObjective('mcq')"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
     <div class="pyq-tab t-two" onclick="filterObjective('tof')"><span class="tab-dot" style="background:var(--pyq-two);">T</span>True or False</div>
@@ -1213,6 +1353,101 @@ function renderObjective(data, wrap) {
   applyOptionsLayout(wrap);
   filterObjective('mcq');
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+
+/* ══════ IIT FOUNDATION: Objective questions with List/Practice view ══════ */
+const IIT_PRACTICE = { index: 0, mode: 'list' };
+
+function renderIITObjective(data, wrap) {
+  const total = data.length;
+  if (IIT_PRACTICE.index >= total) IIT_PRACTICE.index = 0;
+
+  let html = `
+    <div class="iit-view-toggle">
+      <button class="iit-view-btn ${IIT_PRACTICE.mode==='list'?'active':''}" id="iitListBtn" onclick="setIITViewMode('list')">☰ List View</button>
+      <button class="iit-view-btn ${IIT_PRACTICE.mode==='practice'?'active':''}" id="iitPracticeBtn" onclick="setIITViewMode('practice')">🎯 Practice View</button>
+    </div>
+    <div class="iit-palette-wrap" id="iitPaletteWrap" style="display:${IIT_PRACTICE.mode==='practice'?'block':'none'};">
+      <div class="iit-palette" id="iitPalette">
+        ${data.map((q,i)=>`<div class="iit-palette-num${i===IIT_PRACTICE.index?' current':''}" onclick="jumpToIITQuestion(${i})">${i+1}</div>`).join('')}
+      </div>
+      <div class="iit-practice-meta" id="iitPracticeMeta"></div>
+    </div>
+    <div class="iit-questions" id="iitQuestions">`;
+
+  html += data.map((q, idx) => {
+    const options = q.options || {};
+    const optsHtml = Object.entries(options).map(([k,v]) => `<div class="option" data-opt="${k}"><span class="opt-label">${k}</span><span class="opt-text">${v}</span></div>`).join('');
+    return `<div class="mcq-card iit-q-card" data-qidx="${idx}" style="display:${IIT_PRACTICE.mode==='list' || idx===IIT_PRACTICE.index ? 'flex':'none'};">
+      <div class="mcq-header"><span class="qno mcq">${idx+1}</span><div class="mcq-question" style="margin-bottom:0;">${q.question}</div></div>
+      <div class="options" data-answer="${q.answer}">${optsHtml}</div>
+      ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${q.explanation}</div>` : ''}
+      <div class="mcq-card-badges" style="display:flex;gap:6px;align-items:center;margin-top:8px;">
+        ${q.exam?`<span class="set-badge set-badge-1mark">${q.exam}</span>`:''}${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}${q.marks?`<span class="year-badge set-badge-1mark">${q.marks} Mark${q.marks>1?'s':''}</span>`:''}
+      </div>
+    </div>`;
+  }).join('');
+
+  html += `</div>
+    <div class="iit-practice-nav" id="iitPracticeNav" style="display:${IIT_PRACTICE.mode==='practice'?'flex':'none'};">
+      <button class="iit-nav-btn" id="iitPrevBtn" onclick="prevIITQuestion()">← Previous</button>
+      <span class="iit-nav-progress" id="iitNavProgress"></span>
+      <button class="iit-nav-btn" id="iitNextBtn" onclick="nextIITQuestion()">Next →</button>
+    </div>`;
+
+  wrap.innerHTML = html;
+  applyOptionsLayout(wrap);
+  updateIITPracticeMeta(data);
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+}
+
+function setIITViewMode(mode) {
+  IIT_PRACTICE.mode = mode;
+  document.getElementById('iitListBtn').classList.toggle('active', mode==='list');
+  document.getElementById('iitPracticeBtn').classList.toggle('active', mode==='practice');
+  document.getElementById('iitPaletteWrap').style.display = mode==='practice' ? 'block' : 'none';
+  document.getElementById('iitPracticeNav').style.display = mode==='practice' ? 'flex' : 'none';
+  document.querySelectorAll('.iit-q-card').forEach(card => {
+    const idx = parseInt(card.dataset.qidx, 10);
+    card.style.display = (mode==='list' || idx===IIT_PRACTICE.index) ? 'flex' : 'none';
+  });
+  if (mode === 'practice') scrollIITPaletteIntoView();
+}
+
+function jumpToIITQuestion(idx) {
+  IIT_PRACTICE.index = idx;
+  document.querySelectorAll('.iit-q-card').forEach(card => {
+    const i = parseInt(card.dataset.qidx, 10);
+    card.style.display = (IIT_PRACTICE.mode==='list' || i===idx) ? 'flex' : 'none';
+  });
+  document.querySelectorAll('.iit-palette-num').forEach((el,i) => el.classList.toggle('current', i===idx));
+  updateIITPracticeMeta(window.objectiveData || []);
+  scrollIITPaletteIntoView();
+  document.getElementById('content').scrollTop = 0;
+}
+function prevIITQuestion() { if (IIT_PRACTICE.index > 0) jumpToIITQuestion(IIT_PRACTICE.index - 1); }
+function nextIITQuestion() {
+  const total = (window.objectiveData || []).length;
+  if (IIT_PRACTICE.index < total - 1) jumpToIITQuestion(IIT_PRACTICE.index + 1);
+}
+function scrollIITPaletteIntoView() {
+  const el = document.querySelectorAll('.iit-palette-num')[IIT_PRACTICE.index];
+  if (el) el.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+}
+function updateIITPracticeMeta(data) {
+  const q = data[IIT_PRACTICE.index]; if (!q) return;
+  const total = data.length;
+  const meta = document.getElementById('iitPracticeMeta');
+  if (meta) meta.innerHTML = `
+    <span class="iit-circle-qno">${IIT_PRACTICE.index+1}</span>
+    <span class="iit-progress-text">${IIT_PRACTICE.index+1} of ${total}</span>
+    ${q.exam?`<span class="set-badge set-badge-1mark">${q.exam}</span>`:''}
+    ${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}
+    ${q.marks?`<span class="year-badge set-badge-1mark">${q.marks} Mark${q.marks>1?'s':''}</span>`:''}`;
+  const prog = document.getElementById('iitNavProgress');
+  if (prog) prog.textContent = `${IIT_PRACTICE.index+1} of ${total}`;
+  const prevBtn = document.getElementById('iitPrevBtn'); if (prevBtn) prevBtn.disabled = IIT_PRACTICE.index === 0;
+  const nextBtn = document.getElementById('iitNextBtn'); if (nextBtn) nextBtn.disabled = IIT_PRACTICE.index === total-1;
 }
 
 function typeColor(type) {
@@ -1777,6 +2012,23 @@ function spinnerHTML(icon, msg) {
 function renderComingSoon(wrap, icon, name, msg) {
   wrap.innerHTML = `<div class="no-content-state"><div class="no-content-icon">${icon}</div><h3>${name}</h3><p>${msg}</p><span class="no-content-tag">✨ Coming Soon</span></div>`;
 }
+
+/* ══════ FULLSCREEN ══════ */
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen && document.exitFullscreen();
+  }
+}
+function updateFullscreenBtn() {
+  const btn = document.getElementById('fullscreenBtn');
+  if (!btn) return;
+  const isFs = !!document.fullscreenElement;
+  btn.textContent = isFs ? '🗗' : '⛶';
+  btn.title = isFs ? 'Exit Fullscreen' : 'Enter Fullscreen';
+}
+document.addEventListener('fullscreenchange', updateFullscreenBtn);
 
 /* ══════ THEME ══════ */
 function toggleTheme() {
