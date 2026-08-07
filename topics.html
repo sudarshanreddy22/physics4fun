@@ -366,6 +366,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .year-badge{
    font-size:9px;font-weight:800;padding:3px 9px;border-radius:12px;
    font-family:'JetBrains Mono',monospace;letter-spacing:.5px;transition:all .2s;flex-shrink:0;
+   background:#7c3aed;color:#ffffff;text-align:center;border:1px solid rgba(124,58,237,.6);
  }
  
  
@@ -451,11 +452,21 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .explanation strong{color:var(--col-desc);}
 .options.answered{pointer-events:none;}
 
-/* ══ IIT FOUNDATION: List/Practice View ══ */
+/* ══ IIT FOUNDATION: Multi-Questions/Single Question View ══ */
 .iit-view-toggle{display:flex;gap:8px;margin-bottom:12px;}
 .iit-view-btn{padding:7px 14px;border-radius:10px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-sub);font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;}
 .iit-view-btn:hover{color:var(--text);}
 .iit-view-btn.active{background:rgba(168,85,247,0.12);border-color:#a855f7;color:#a855f7;}
+
+/* ══ IIT FOUNDATION: MCQs \u2014 Concept & Level tabs ══ */
+.iit-concept-tabs{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
+.iit-concept-tab{padding:6px 13px;border-radius:20px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-sub);font-family:'Space Grotesk',sans-serif;font-size:11.5px;font-weight:700;cursor:pointer;transition:all .15s;}
+.iit-concept-tab:hover{color:var(--text);}
+.iit-concept-tab.active{background:linear-gradient(130deg,var(--accent1),var(--accent2));border-color:transparent;color:#fff;}
+.iit-level-tabs{display:flex;gap:8px;margin-bottom:12px;}
+.iit-level-tab{padding:6px 14px;border-radius:10px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-sub);font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:800;letter-spacing:.3px;cursor:pointer;transition:all .15s;}
+.iit-level-tab:hover{color:var(--text);}
+.iit-level-tab.active{background:rgba(168,85,247,0.12);border-color:#a855f7;color:#a855f7;}
 .iit-palette-wrap{position:sticky;top:0;z-index:5;background:var(--bg);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--divider);}
 .iit-palette{display:flex;gap:6px;overflow-x:auto;padding:8px 2px;scrollbar-width:none;}
 .iit-palette::-webkit-scrollbar{display:none;}
@@ -1298,12 +1309,16 @@ async function loadObjective() {
   document.querySelectorAll('[data-mcqs]').forEach(s=>s.remove());
   const fileName = isIITFoundation() ? (IIT_TAB_FILES[CUR.iitTab || 'mcq'] || 'objective.js') : 'objective.js';
   IIT_PRACTICE.index = 0; // reset practice position on new tab/chapter load
+  if (isIITFoundation() && CUR.iitTab === 'mcq') { IIT_MCQ.concept = null; IIT_MCQ.level = 'levelC'; } // reset concept/level on new chapter
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.mcqs = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/${fileName}`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
-  window.objectiveData && window.objectiveData.length
+  const hasData = isIITMCQNested(window.objectiveData)
+    ? Object.keys(window.objectiveData || {}).length > 0
+    : (window.objectiveData && window.objectiveData.length);
+  hasData
     ? renderObjective(window.objectiveData, wrap)
     : renderComingSoon(wrap,'🎯','Objective','Objective questions for this chapter are being added. Add them in <code>objective.js</code>');
 }
@@ -1361,8 +1376,46 @@ function renderObjective(data, wrap) {
 /* ══════ IIT FOUNDATION: Objective questions with List/Practice view ══════ */
 const IIT_PRACTICE = { index: 0, mode: 'list' };
 
+/* ══ IIT Foundation MCQs: Concept + Level (Level-C / Level-O / Level-A) state ══ */
+const IIT_MCQ = { concept: null, level: 'levelC' };
+const IIT_LEVELS = [
+  {id:'levelC', label:'Level-C'},
+  {id:'levelO', label:'Level-O'},
+  {id:'levelA', label:'Level-A'}
+];
+function isIITMCQNested(data) {
+  return CUR.iitTab === 'mcq' && data && !Array.isArray(data) && typeof data === 'object';
+}
+function getIITMCQArray(data) {
+  if (!isIITMCQNested(data)) return data || [];
+  const concepts = Object.keys(data);
+  if (!IIT_MCQ.concept || !data[IIT_MCQ.concept]) IIT_MCQ.concept = concepts[0];
+  const levels = data[IIT_MCQ.concept] || {};
+  if (!levels[IIT_MCQ.level] || !levels[IIT_MCQ.level].length) {
+    const firstNonEmpty = IIT_LEVELS.find(l => levels[l.id] && levels[l.id].length);
+    if (firstNonEmpty) IIT_MCQ.level = firstNonEmpty.id;
+  }
+  return levels[IIT_MCQ.level] || [];
+}
+function currentIITArray() {
+  return isIITMCQNested(window.objectiveData) ? getIITMCQArray(window.objectiveData) : (window.objectiveData || []);
+}
+function setIITConcept(concept) {
+  IIT_MCQ.concept = concept;
+  IIT_MCQ.level = 'levelC';
+  IIT_PRACTICE.index = 0;
+  renderIITObjective(window.objectiveData, document.getElementById('objective-content-wrap'));
+}
+function setIITLevel(level) {
+  IIT_MCQ.level = level;
+  IIT_PRACTICE.index = 0;
+  renderIITObjective(window.objectiveData, document.getElementById('objective-content-wrap'));
+}
+
 function renderIITObjective(data, wrap) {
-  const total = data.length;
+  const nested = isIITMCQNested(data);
+  const qArray = nested ? getIITMCQArray(data) : (data || []);
+  const total = qArray.length;
   if (IIT_PRACTICE.index >= total) IIT_PRACTICE.index = 0;
   const isObjTab = CUR.iitTab === 'mcq' || CUR.iitTab === 'numericals';
 
@@ -1370,21 +1423,32 @@ function renderIITObjective(data, wrap) {
       <div class="pyq-tab t-mcq ${CUR.iitTab==='mcq'?'active':''}" onclick="setIITObjectiveTab('mcq')"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
       <div class="pyq-tab t-two ${CUR.iitTab==='numericals'?'active':''}" onclick="setIITObjectiveTab('numericals')"><span class="tab-dot" style="background:var(--pyq-two);">N</span>Numericals</div>
     </div>` : '';
+
+  if (nested) {
+    const concepts = Object.keys(data);
+    html += `<div class="iit-concept-tabs" id="iitConceptTabs">
+      ${concepts.map(c => `<button class="iit-concept-tab${c===IIT_MCQ.concept?' active':''}" onclick="setIITConcept('${c.replace(/'/g,"\\'")}')">${c}</button>`).join('')}
+    </div>
+    <div class="iit-level-tabs" id="iitLevelTabs">
+      ${IIT_LEVELS.map(l => `<button class="iit-level-tab${l.id===IIT_MCQ.level?' active':''}" onclick="setIITLevel('${l.id}')">${l.label}</button>`).join('')}
+    </div>`;
+  }
+
   html += `
     <div class="iit-view-toggle">
-      <button class="iit-view-btn ${IIT_PRACTICE.mode==='list'?'active':''}" id="iitListBtn" onclick="setIITViewMode('list')">☰ List View</button>
-      <button class="iit-view-btn ${IIT_PRACTICE.mode==='practice'?'active':''}" id="iitPracticeBtn" onclick="setIITViewMode('practice')">🎯 Practice View</button>
+      <button class="iit-view-btn ${IIT_PRACTICE.mode==='list'?'active':''}" id="iitListBtn" title="Multi-Questions view" onclick="setIITViewMode('list')">☰ Multi-Questions</button>
+      <button class="iit-view-btn ${IIT_PRACTICE.mode==='practice'?'active':''}" id="iitPracticeBtn" title="Single Question view" onclick="setIITViewMode('practice')">🎯 Single Question</button>
     </div>
     <div class="iit-palette-wrap" id="iitPaletteWrap" style="display:${IIT_PRACTICE.mode==='practice'?'block':'none'};">
       <div class="iit-palette" id="iitPalette">
-        ${data.map((q,i)=>`<div class="iit-palette-num${i===IIT_PRACTICE.index?' current':''}" onclick="jumpToIITQuestion(${i})">${i+1}</div>`).join('')}
+        ${qArray.map((q,i)=>`<div class="iit-palette-num${i===IIT_PRACTICE.index?' current':''}" onclick="jumpToIITQuestion(${i})">${i+1}</div>`).join('')}
       </div>
       <div class="iit-practice-meta" id="iitPracticeMeta"></div>
     </div>
     <div class="iit-questions" id="iitQuestions">`;
 
   const showExam = CUR.iitTab !== 'mcq' && CUR.iitTab !== 'numericals';
-  html += data.map((q, idx) => {
+  html += total ? qArray.map((q, idx) => {
     const options = q.options || {};
     const optsHtml = Object.entries(options).map(([k,v]) => `<div class="option" data-opt="${k}"><span class="opt-label">${k}</span><span class="opt-text">${v}</span></div>`).join('');
     return `<div class="mcq-card iit-q-card" data-qidx="${idx}" style="display:${IIT_PRACTICE.mode==='list' || idx===IIT_PRACTICE.index ? 'flex':'none'};">
@@ -1395,7 +1459,7 @@ function renderIITObjective(data, wrap) {
         ${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}${q.paper?`<span class="set-badge set-badge-1mark">${q.paper}</span>`:''}${(showExam && q.exam)?`<span class="set-badge set-badge-1mark">${q.exam}</span>`:''}
       </div>
     </div>`;
-  }).join('');
+  }).join('') : (nested ? `<div class="no-content-state"><div class="no-content-icon">🎯</div><h3>No questions yet</h3><p>MCQs for ${IIT_MCQ.concept} · ${(IIT_LEVELS.find(l=>l.id===IIT_MCQ.level)||{}).label||''} are being prepared.</p></div>` : '');
 
   html += `</div>
     <div class="iit-practice-nav" id="iitPracticeNav" style="display:${IIT_PRACTICE.mode==='practice'?'flex':'none'};">
@@ -1406,7 +1470,7 @@ function renderIITObjective(data, wrap) {
 
   wrap.innerHTML = html;
   applyOptionsLayout(wrap);
-  updateIITPracticeMeta(data);
+  updateIITPracticeMeta(qArray);
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
 }
 
@@ -1430,13 +1494,13 @@ function jumpToIITQuestion(idx) {
     card.style.display = (IIT_PRACTICE.mode==='list' || i===idx) ? 'flex' : 'none';
   });
   document.querySelectorAll('.iit-palette-num').forEach((el,i) => el.classList.toggle('current', i===idx));
-  updateIITPracticeMeta(window.objectiveData || []);
+  updateIITPracticeMeta(currentIITArray());
   scrollIITPaletteIntoView();
   document.getElementById('content').scrollTop = 0;
 }
 function prevIITQuestion() { if (IIT_PRACTICE.index > 0) jumpToIITQuestion(IIT_PRACTICE.index - 1); }
 function nextIITQuestion() {
-  const total = (window.objectiveData || []).length;
+  const total = currentIITArray().length;
   if (IIT_PRACTICE.index < total - 1) jumpToIITQuestion(IIT_PRACTICE.index + 1);
 }
 function scrollIITPaletteIntoView() {
