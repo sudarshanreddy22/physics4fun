@@ -388,6 +388,27 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .qno.four{background:linear-gradient(135deg,var(--pyq-four),#0369a1);}
 .qno.five{background:linear-gradient(135deg,var(--pyq-five),#be185d);}
 .qno.desc{background:linear-gradient(135deg,#34d399,#10b981);}
+.qno.qno-accent{background:var(--qc,var(--brand));color:#fff;border:none;box-shadow:0 2px 8px rgba(0,0,0,.25);min-width:30px;height:30px;font-size:14px;}
+
+/* ══ IIT Foundation: 2-column parent/sub-tab nav (Competitive Exams · Premier Institutes · Others) ══ */
+.iit2col{display:flex;border:1px solid var(--card-border);border-radius:14px;background:var(--card-bg);overflow:hidden;margin-bottom:16px;}
+.iit2col-left{width:190px;flex-shrink:0;border-right:1px solid var(--card-border);padding:8px;display:flex;flex-direction:column;gap:2px;background:var(--bg3);}
+.iit2col-right{flex:1;min-width:0;padding:12px 14px;display:flex;flex-direction:column;gap:10px;justify-content:center;}
+.iit-parent-item{padding:9px 11px;border-radius:8px;font-size:12px;font-weight:700;color:var(--text-sub);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-left:3px solid transparent;transition:all .15s;}
+.iit-parent-item:hover{background:var(--item-hover);color:var(--text);}
+.iit-parent-item.active{background:var(--item-hover);color:var(--text);border-left-color:var(--pc,var(--brand));}
+.iit-sub-row{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;padding-bottom:2px;}
+.iit-sub-pill{padding:7px 14px;border-radius:8px;font-size:11.5px;font-weight:700;color:var(--text-sub);background:transparent;border:1px solid var(--card-border);border-bottom:2.5px solid transparent;cursor:pointer;transition:all .15s;white-space:nowrap;}
+.iit-sub-pill:hover{color:var(--text);}
+.iit-sub-pill.active{color:var(--text);background:var(--item-hover);border-bottom-color:var(--sc,var(--brand));}
+.iit-tab-circle{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;border-radius:50%;background:var(--dc,var(--brand));color:#fff;font-size:9.5px;font-weight:800;vertical-align:middle;margin-left:1px;}
+.iit-sub-empty,.iit-sub-note{font-size:11.5px;color:var(--text-muted);font-weight:600;}
+@media(max-width:640px){
+  .iit2col{flex-direction:column;}
+  .iit2col-left{width:100%;flex-direction:row;flex-wrap:wrap;border-right:none;border-bottom:1px solid var(--card-border);}
+  .iit-parent-item{border-left:none;border-bottom:3px solid transparent;}
+  .iit-parent-item.active{border-bottom-color:var(--pc,var(--brand));}
+}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:10px 0 3px;}
 .option{display:flex;align-items:flex-start;gap:7px;padding:7px 11px;border-radius:9px;cursor:pointer;border:1px solid var(--card-border);background:var(--bg3);transition:all .15s;font-size:12.5px;line-height:1.5;}
 .option:hover{border-color:rgba(124,58,237,.4);background:rgba(124,58,237,.07);}
@@ -1371,7 +1392,7 @@ function renderObjective(data, wrap) {
     <div class="pyq-tab t-mcq active" onclick="filterObjective('mcq')"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
     <div class="pyq-tab t-two" onclick="filterObjective('tof')"><span class="tab-dot" style="background:var(--pyq-two);">T</span>True or False</div>
     <div class="pyq-tab t-three" onclick="filterObjective('fib')"><span class="tab-dot" style="background:var(--pyq-three);">F</span>Fill in the Blanks</div>
-    <div class="pyq-tab t-four" onclick="filterObjective('match')"><span class="tab-dot" style="background:var(--pyq-four);">X</span>Matching Type</div>
+    <div class="pyq-tab t-four" onclick="filterObjective('match')"><span class="tab-dot" style="background:var(--pyq-four);">M</span>Matching Type</div>
   </div>`;
   const counters = {};
   html += data.map((q) => {
@@ -1457,12 +1478,13 @@ function setIITLevel(level) {
 function buildQuestionCardsHTML(qArray, opts) {
   opts = opts || {};
   const showExam = !!opts.showExam;
+  const accent = opts.accentColor;
   const total = qArray.length;
   if (IIT_PRACTICE.index >= total) IIT_PRACTICE.index = 0;
   let html = `
     <div class="iit-palette-wrap" id="iitPaletteWrap" style="display:${IIT_PRACTICE.mode==='practice'?'block':'none'};">
       <div class="iit-palette" id="iitPalette">
-        ${qArray.map((q,i)=>`<div class="iit-palette-num${i===IIT_PRACTICE.index?' current':''}" onclick="jumpToIITQuestion(${i})">${i+1}</div>`).join('')}
+        ${qArray.map((q,i)=>`<div class="iit-palette-num${i===IIT_PRACTICE.index?' current':''}" onclick="jumpToIITQuestion(${i})">${q.no||(i+1)}</div>`).join('')}
       </div>
       <div class="iit-practice-meta" id="iitPracticeMeta"></div>
     </div>
@@ -1472,8 +1494,10 @@ function buildQuestionCardsHTML(qArray, opts) {
     const options = q.options || {};
     const optsHtml = Object.entries(options).map(([k,v]) => `<div class="option" data-opt="${k}"><span class="opt-label">${k}</span><span class="opt-text">${v}</span></div>`).join('');
     const badgesHtml = `<div class="qy-badges">${q.paper?`<span class="qy-badge qy-badge-paper">${q.paper}</span>`:''}${(showExam && q.exam)?`<span class="qy-badge qy-badge-paper">${q.exam}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>`;
+    const qnoClass = accent ? 'qno qno-accent' : 'qno mcq';
+    const qnoStyle = accent ? ` style="--qc:${accent};"` : '';
     return `<div class="mcq-card iit-q-card" data-qidx="${idx}" style="display:${IIT_PRACTICE.mode==='list' || idx===IIT_PRACTICE.index ? 'flex':'none'};">
-      <div class="mcq-header"><span class="qno mcq">${idx+1}</span><div class="mcq-question q-text" style="margin-bottom:0;flex:1;">${q.question}</div>${badgesHtml}</div>
+      <div class="mcq-header"><span class="${qnoClass}"${qnoStyle}>${q.no||idx+1}</span><div class="mcq-question q-text" style="margin-bottom:0;flex:1;">${q.question}</div>${badgesHtml}</div>
       <div class="options" data-answer="${q.answer}">${optsHtml}</div>
       ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${q.explanation}</div>` : ''}
     </div>`;
@@ -1578,7 +1602,7 @@ function updateIITPracticeMeta(data) {
   const showExam = CUR.iitTab !== 'mcq' && CUR.iitTab !== 'numericals';
   const meta = document.getElementById('iitPracticeMeta');
   if (meta) meta.innerHTML = `
-    <span class="iit-circle-qno">${IIT_PRACTICE.index+1}</span>
+    <span class="iit-circle-qno">${q.no||IIT_PRACTICE.index+1}</span>
     <span class="iit-progress-text">${IIT_PRACTICE.index+1} of ${total}</span>
     ${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}
     ${q.paper?`<span class="set-badge set-badge-1mark">${q.paper}</span>`:''}
@@ -1597,32 +1621,23 @@ function setIITObjectiveTab(tab) {
 /* 🏫 OTHERS (Institutes) — reuses .pyq-tab component + the shared    */
 /* Multi-Questions/Single-Question viewer (buildQuestionCardsHTML)     */
 /* ══════════════════════════════════════════════════════════════════ */
+/* Reuse existing semantic colors for IIT Foundation parent/sub-tab accents (no new colors introduced) */
+const IIT_COLOR_CYCLE = ['var(--pyq-mcq)','var(--pyq-ar)','var(--pyq-two)','var(--pyq-three)','var(--pyq-four)','var(--pyq-five)','var(--col-desc)'];
+function iitColor(i) { return IIT_COLOR_CYCLE[((i%IIT_COLOR_CYCLE.length)+IIT_COLOR_CYCLE.length)%IIT_COLOR_CYCLE.length]; }
+function iit2colHTML(leftHtml, rightHtml) {
+  return `<div class="iit2col"><div class="iit2col-left">${leftHtml}</div><div class="iit2col-right">${rightHtml || '<span class="iit-sub-empty">—</span>'}</div></div>`;
+}
+function iitLevels(prefix, dot) {
+  return [1,2,3,4,5].map(n => ({ id:'level-'+n, label:'Level '+n, file: prefix+'level-'+n+'.js' }));
+}
 const OTHERS_TREE = {
   'Narayana':  {
       'WS-1': {
         'CUQ': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/cuq.js' },
-        'JEE Main': {
-          'Level-1': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-main/level-1.js' },
-          'Level-2': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-main/level-2.js' },
-          'Level-3': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-main/level-3.js' },
-          'Level-4': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-main/level-4.js' },
-          'Level-5': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-main/level-5.js' }
-        },
+        'JEE Main': { type:'leveled', dot:'var(--pyq-mcq)', levels:iitLevels('boards/others/narayana/synopsis-1/worksheet-01/jee-main/','var(--pyq-mcq)') },
         'JEE Advanced': {
-          'SCQ': {
-            'Level-1': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/scq/level-1.js' },
-            'Level-2': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/scq/level-2.js' },
-            'Level-3': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/scq/level-3.js' },
-            'Level-4': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/scq/level-4.js' },
-            'Level-5': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/scq/level-5.js' }
-          },
-          'MCQ': {
-            'Level-1': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/mcq/level-1.js' },
-            'Level-2': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/mcq/level-2.js' },
-            'Level-3': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/mcq/level-3.js' },
-            'Level-4': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/mcq/level-4.js' },
-            'Level-5': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/mcq/level-5.js' }
-          },
+          'SCQ': { type:'leveled', dot:'var(--pyq-ar)', levels:iitLevels('boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/scq/','var(--pyq-ar)') },
+          'MCQ': { type:'leveled', dot:'var(--pyq-two)', levels:iitLevels('boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/mcq/','var(--pyq-two)') },
           'Matching': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/matching.js' },
           'Statement': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/statement.js' },
           'Comprehension': { type:'mcq', file:'boards/others/narayana/synopsis-1/worksheet-01/jee-advanced/comprehension.js' },
@@ -1648,7 +1663,9 @@ const OTHERS_TREE = {
           'Statement': { type:'mcq', file:'boards/others/sri-chaitanya/concept-1/application-skill-achiever-1/student-task/statement.js' },
           'Matching': { type:'mcq', file:'boards/others/sri-chaitanya/concept-1/application-skill-achiever-1/student-task/matching.js' }
         }
-      }
+      },
+      'JEE Main': { type:'leveled', dot:'var(--pyq-mcq)', levels:iitLevels('boards/others/sri-chaitanya/concept-1/jee-main/','var(--pyq-mcq)') },
+      'JEE Advanced': { type:'leveled', dot:'var(--pyq-ar)', levels:iitLevels('boards/others/sri-chaitanya/concept-1/jee-advanced/','var(--pyq-ar)') }
     }
   },
   'Bhashyam': {
@@ -1781,6 +1798,7 @@ async function loadOthersLeaf(node) {
 /* Reuses OTHERS_TREE + the shared .pyq-tab component + buildQuestionCardsHTML */
 /* ══════════════════════════════════════════════════════════════════ */
 const IIT_INST = { institute:null, path:[] };
+const IIT_LVL = { node:null, levelId:null, arrays:{} };
 
 function renderIITInstitutesView() {
   if (!IIT_INST.institute) IIT_INST.institute = Object.keys(OTHERS_TREE)[0];
@@ -1802,32 +1820,38 @@ function renderIITInstBody() {
   if (!tabsWrap || !bodyWrap) return;
 
   const institutes = Object.keys(OTHERS_TREE);
-  let tabsHtml = `<div class="desc-tabs" style="margin-bottom:10px;">
-    ${institutes.map(name => `<div class="pyq-tab${name===IIT_INST.institute?' active':''}" onclick="selectIITInstitute('${name.replace(/'/g,"\\'")}')"><span class="tab-dot" style="background:#7c3aed;">${(INSTITUTE_ICONS[name]||'🏫')}</span>${name}</div>`).join('')}
-  </div>`;
+  const leftHtml = institutes.map((name,i) => `<div class="iit-parent-item${name===IIT_INST.institute?' active':''}" style="--pc:${iitColor(i)};" onclick="selectIITInstitute('${name.replace(/'/g,"\\'")}')">${(INSTITUTE_ICONS[name]||'🏫')} ${name}</div>`).join('');
 
   let node = OTHERS_TREE[IIT_INST.institute];
   let level = 0;
+  let subHtml = '';
+  let leafAccent = iitColor(institutes.indexOf(IIT_INST.institute));
   while (node && !node.type) {
     const keys = Object.keys(node);
     const selectedKey = (IIT_INST.path[level] !== undefined && node[IIT_INST.path[level]]) ? IIT_INST.path[level] : keys[0];
     IIT_INST.path[level] = selectedKey;
-    tabsHtml += `<div class="desc-tabs" style="margin-bottom:10px;">
-      ${keys.map(k => `<div class="pyq-tab${k===selectedKey?' active':''}" onclick="iitInstNavigate(${level},'${k.replace(/'/g,"\\'")}')"><span class="tab-dot" style="background:#0ea5e9;">•</span>${k}</div>`).join('')}
+    leafAccent = iitColor(keys.indexOf(selectedKey));
+    subHtml += `<div class="iit-sub-row">
+      ${keys.map((k,ki) => `<div class="iit-sub-pill${k===selectedKey?' active':''}" style="--sc:${iitColor(ki)};" onclick="iitInstNavigate(${level},'${k.replace(/'/g,"\\'")}')">${k}</div>`).join('')}
     </div>`;
     node = node[selectedKey];
     level++;
   }
   IIT_INST.path = IIT_INST.path.slice(0, level);
-  tabsWrap.innerHTML = tabsHtml;
+  tabsWrap.innerHTML = iit2colHTML(leftHtml, subHtml);
 
   if (!node) {
     bodyWrap.innerHTML = `<div class="no-content-state"><div class="no-content-icon">🏛️</div><h3>Coming soon</h3><p>This section is being prepared.</p></div>`;
     return;
   }
-  loadIITInstLeaf(node, bodyWrap);
+  if (node.type === 'leveled') {
+    if (IIT_LVL.node !== node) loadIITLeveledNode(node, bodyWrap);
+    else renderIITLevelSection(node, bodyWrap);
+    return;
+  }
+  loadIITInstLeaf(node, bodyWrap, leafAccent);
 }
-async function loadIITInstLeaf(node, bodyWrap) {
+async function loadIITInstLeaf(node, bodyWrap, accentColor) {
   bodyWrap.innerHTML = spinnerHTML('🏛️','Loading…');
   window.othersQuestionData = undefined;
   document.querySelectorAll('[data-iitinstq]').forEach(s=>s.remove());
@@ -1844,9 +1868,48 @@ async function loadIITInstLeaf(node, bodyWrap) {
       ? renderDesc(qArray, bodyWrap)
       : renderComingSoon(bodyWrap,'✏️','Descriptive Questions','Descriptive questions for this section are being added.');
   } else {
-    bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:false});
+    bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:false, accentColor});
     finalizeQuestionCards(bodyWrap, qArray);
   }
+}
+/* Leveled leaf (e.g. Narayana/Sri Chaitanya JEE Main|Advanced → Level 1-5): loads all levels once,
+   assigns CONTINUOUS global question numbers across levels, then filters the display by selected level. */
+async function loadIITLeveledNode(node, bodyWrap) {
+  bodyWrap.innerHTML = spinnerHTML('🏛️','Loading…');
+  document.querySelectorAll('[data-iitlvl]').forEach(s=>s.remove());
+  const arrays = {};
+  let running = 0;
+  for (const lvl of node.levels) {
+    window.othersQuestionData = undefined;
+    await new Promise(res => {
+      const s = document.createElement('script');
+      s.dataset.iitlvl = '1'; s.src = lvl.file;
+      s.onload = s.onerror = res; document.head.appendChild(s);
+    });
+    const arr = window.othersQuestionData || [];
+    arr.forEach(q => { running++; q.no = running; });
+    arrays[lvl.id] = arr;
+  }
+  window.othersQuestionData = undefined;
+  IIT_LVL.node = node;
+  IIT_LVL.arrays = arrays;
+  if (!IIT_LVL.levelId || !arrays[IIT_LVL.levelId]) IIT_LVL.levelId = node.levels[0].id;
+  renderIITLevelSection(node, bodyWrap);
+}
+function selectIITLevel(levelId) {
+  IIT_LVL.levelId = levelId;
+  renderIITLevelSection(IIT_LVL.node, document.getElementById('iitInstBody'));
+}
+function renderIITLevelSection(node, bodyWrap) {
+  const accent = node.dot || 'var(--brand)';
+  const pills = `<div class="iit-sub-row" style="margin-bottom:12px;">
+    ${node.levels.map(l => `<div class="iit-sub-pill${l.id===IIT_LVL.levelId?' active':''}" style="--sc:${accent};" onclick="selectIITLevel('${l.id}')">${l.label}</div>`).join('')}
+  </div>`;
+  const qArray = IIT_LVL.arrays[IIT_LVL.levelId] || [];
+  ACTIVE_QARRAY = qArray;
+  IIT_PRACTICE.index = 0;
+  bodyWrap.innerHTML = pills + buildQuestionCardsHTML(qArray, {showExam:false, accentColor:accent});
+  finalizeQuestionCards(bodyWrap, qArray);
 }
 
 /* ══════════════════════════════════════════════════════════════════ */
@@ -1895,13 +1958,14 @@ function selectCompSub(subId) {
 }
 function renderCompExamTabs() {
   const examIds = Object.keys(COMP_EXAMS);
-  document.getElementById('compExamTabsWrap').innerHTML = `<div class="desc-tabs" style="margin-bottom:10px;">
-    ${examIds.map(id => `<div class="pyq-tab${id===COMP.exam?' active':''}" onclick="selectCompExam('${id}')"><span class="tab-dot" style="background:${COMP_EXAMS[id].dot};">${COMP_EXAMS[id].icon}</span>${COMP_EXAMS[id].label}</div>`).join('')}
-  </div>`;
+  const leftHtml = examIds.map(id => { const e = COMP_EXAMS[id];
+    return `<div class="iit-parent-item${id===COMP.exam?' active':''}" style="--pc:${e.dot};" onclick="selectCompExam('${id}')">${e.icon} ${e.label}</div>`; }).join('');
   const subtabs = COMP_EXAMS[COMP.exam].subtabs;
-  document.getElementById('compSubTabsWrap').innerHTML = subtabs.length > 1 ? `<div class="pyq-tab-bar-like desc-tabs" style="margin-bottom:16px;">
-    ${subtabs.map(s => `<div class="pyq-tab${s.id===COMP.sub?' active':''}" onclick="selectCompSub('${s.id}')"><span class="tab-dot" style="background:${COMP_EXAMS[COMP.exam].dot};">${s.label[0]}</span>${s.label}</div>`).join('')}
-  </div>` : '';
+  const rightHtml = subtabs.length > 1 ? `<div class="iit-sub-row">
+    ${subtabs.map(s => `<div class="iit-sub-pill${s.id===COMP.sub?' active':''}" style="--sc:${COMP_EXAMS[COMP.exam].dot};" onclick="selectCompSub('${s.id}')">${s.label}</div>`).join('')}
+  </div>` : `<span class="iit-sub-note">${subtabs[0].label}</span>`;
+  document.getElementById('compExamTabsWrap').innerHTML = iit2colHTML(leftHtml, rightHtml);
+  document.getElementById('compSubTabsWrap').innerHTML = '';
 }
 async function loadCompExamData() {
   const bodyWrap = document.getElementById('compExamBody');
@@ -1918,7 +1982,7 @@ async function loadCompExamData() {
   });
   const qArray = window.objectiveData || [];
   ACTIVE_QARRAY = qArray;
-  bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:true});
+  bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:true, accentColor:COMP_EXAMS[COMP.exam].dot});
   finalizeQuestionCards(bodyWrap, qArray);
 }
 
@@ -1927,9 +1991,9 @@ async function loadCompExamData() {
 /* Worksheet-N → Core Level / Optimal Level / Achiever Level (MCQs)     */
 /* ══════════════════════════════════════════════════════════════════ */
 const IIT_OTH_LEVELS = [
-  {id:'core',     label:'Core Level',     dot:'#16a34a'},
-  {id:'optimal',  label:'Optimal Level',  dot:'#0ea5e9'},
-  {id:'achiever', label:'Achiever Level', dot:'#dc2626'}
+  {id:'core',     label:'Level-C',     dot:'#16a34a'},
+  {id:'optimal',  label:'Level-O',  dot:'#0ea5e9'},
+  {id:'achiever', label:'Level-A', dot:'#dc2626'}
 ];
 const IITOTH = { worksheetIdx:0, level:'core', worksheets:[] };
 
@@ -1974,12 +2038,15 @@ function selectIITOthLevel(level) {
   renderIITOthLevel();
 }
 function renderIITOthTabs() {
-  document.getElementById('iitOthWorksheetTabsWrap').innerHTML = `<div class="desc-tabs" style="margin-bottom:10px;">
-    ${IITOTH.worksheets.map((w,i) => `<div class="pyq-tab${i===IITOTH.worksheetIdx?' active':''}" onclick="selectIITOthWorksheet(${i})"><span class="tab-dot" style="background:#f59e0b;">${i+1}</span>${w.name}</div>`).join('')}
+  const leftHtml = IITOTH.worksheets.map((w,i) => {
+    const num = (w.name.match(/(\d+)/) || [null, String(i+1)])[1];
+    return `<div class="iit-parent-item${i===IITOTH.worksheetIdx?' active':''}" style="--pc:${iitColor(i)};" onclick="selectIITOthWorksheet(${i})">WS-<span class="iit-tab-circle" style="--dc:${iitColor(i)};">${num}</span></div>`;
+  }).join('');
+  const rightHtml = `<div class="iit-sub-row">
+    ${IIT_OTH_LEVELS.map(l => `<div class="iit-sub-pill${l.id===IITOTH.level?' active':''}" style="--sc:${l.dot};" onclick="selectIITOthLevel('${l.id}')">Level-<span class="iit-tab-circle" style="--dc:${l.dot};">${l.label.split('-')[1]}</span></div>`).join('')}
   </div>`;
-  document.getElementById('iitOthLevelTabsWrap').innerHTML = `<div class="desc-tabs" style="margin-bottom:16px;">
-    ${IIT_OTH_LEVELS.map(l => `<div class="pyq-tab${l.id===IITOTH.level?' active':''}" onclick="selectIITOthLevel('${l.id}')"><span class="tab-dot" style="background:${l.dot};">${l.label[0]}</span>${l.label}</div>`).join('')}
-  </div>`;
+  document.getElementById('iitOthWorksheetTabsWrap').innerHTML = iit2colHTML(leftHtml, rightHtml);
+  document.getElementById('iitOthLevelTabsWrap').innerHTML = '';
 }
 function renderIITOthLevel() {
   const bodyWrap = document.getElementById('iitOthBody');
@@ -1987,7 +2054,8 @@ function renderIITOthLevel() {
   const qArray = worksheet[IITOTH.level] || [];
   ACTIVE_QARRAY = qArray;
   IIT_PRACTICE.index = 0;
-  bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:false});
+  const accent = (IIT_OTH_LEVELS.find(l=>l.id===IITOTH.level)||{}).dot;
+  bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:false, accentColor:accent});
   finalizeQuestionCards(bodyWrap, qArray);
 }
 
