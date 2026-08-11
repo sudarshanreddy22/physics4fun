@@ -441,7 +441,7 @@ window.iitOthersData = {
   {
     "question": "A boy starts from P and reaches S along the path PATHS as shown in the figure. The distance travelled by the boy is",
     "image": "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/ws1laq9.png",
-	"imageWidth": "10px",
+	"imageWidth": "20%",
 	"options": {
       "A": "85 m",
       "B": "60 m",
@@ -456,7 +456,7 @@ window.iitOthersData = {
   {
     "question": "An insect starts from one vertex of a regular hexagon of side 18 m and crawls along the edges. The maximum displacement of the insect is",
     "image": "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/ws1laq10.png",
-		"imageWidth": "0.5px",
+		"imageWidth": "15%",
    "options": {
       "A": "108 m",
       "B": "18 m",
