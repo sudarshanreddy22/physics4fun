@@ -384,8 +384,17 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .question-item:hover{border-color:rgba(99,102,241,.22);}
 .question-item-top{display:flex;gap:11px;}
 .question-item-badges{display:flex;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--divider);}
-.mcq-question-image{display:block;max-width:100%;height:auto;margin-top:8px;border-radius:10px;border:1px solid var(--card-border);}
-.qno{min-width:28px;height:28px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.2);}
+.mcq-question-image{display:block;max-width:280px;width:100%;height:auto;margin-top:8px;border-radius:10px;border:1px solid var(--card-border);}
+/* Adaptive MCQ option layout — picked at render time based on option text length */
+.options.opts-row4{display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;gap:8px;}
+.options.opts-row4 .option{flex:1 1 21%;min-width:110px;}
+.options.opts-grid2{display:grid !important;grid-template-columns:1fr 1fr !important;gap:8px;}
+.options.opts-col1{display:flex !important;flex-direction:column !important;gap:8px;}
+/* Others/Practice Worksheets: larger, more readable question & option text */
+#iitOthBody .mcq-question{font-size:15.5px;line-height:1.85;}
+#iitOthBody .opt-text,#iitOthBody .option{font-size:14.5px;line-height:1.7;}
+#iitOthBody .explanation{font-size:14px;line-height:1.75;}
+.qno{min-width:28px;height:28px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;line-height:1;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.2);}
 .qno.mcq{background:linear-gradient(135deg,var(--pyq-mcq),#5b21b6);}
 .qno.ar{background:linear-gradient(135deg,var(--pyq-ar),#c2410c);}
 .qno.one{background:linear-gradient(135deg,#84cc16,#4d7c0b);}
@@ -1087,6 +1096,16 @@ function mathify(str) {
   return str;
 }
 
+/* ══ Pick a 1x4 / 2x2 / 4x1 option layout based on how long the option text is,
+   so short options sit compactly and long ones each get their own full line. ══ */
+function optionsLayoutClass(options) {
+  const vals = Object.values(options || {}).map(v => String(v).replace(/\s+/g,' ').trim());
+  const maxLen = vals.reduce((m,v) => Math.max(m, v.length), 0);
+  if (maxLen <= 10) return 'opts-row4';
+  if (maxLen <= 24) return 'opts-grid2';
+  return 'opts-col1';
+}
+
 /* ══════ PYQ TYPES ══════ */
 const PYQ_TYPES = [
   {id:'mcq',  file:'msq.js',   varName:'mcqData',      label:'Objective'},
@@ -1535,10 +1554,11 @@ function buildQuestionCardsHTML(qArray, opts) {
     const badgesHtml = `<div class="qy-badges">${q.paper?`<span class="qy-badge qy-badge-paper">${q.paper}</span>`:''}${(showExam && q.exam)?`<span class="qy-badge qy-badge-paper">${q.exam}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>`;
     const qnoClass = accent ? 'qno qno-accent' : 'qno mcq';
     const qnoStyle = accent ? ` style="--qc:${accent};"` : '';
-    const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${q.no||idx+1} figure" loading="lazy">` : '';
+    const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${q.no||idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:${q.imageWidth} !important;max-width:${q.imageWidth} !important;"` : ''}>` : '';
     return `<div class="mcq-card iit-q-card" data-qidx="${idx}" style="display:${IIT_PRACTICE.mode==='list' || idx===IIT_PRACTICE.index ? 'flex':'none'};">
-      <div class="mcq-header"><span class="${qnoClass}"${qnoStyle}>${q.no||idx+1}</span><div style="margin-bottom:0;flex:1;"><div class="mcq-question q-text" style="margin-bottom:0;">${mathify(q.question)}</div>${imageHtml}</div>${badgesHtml}</div>
-      <div class="options" data-answer="${q.answer}">${optsHtml}</div>
+      <div class="mcq-header"><span class="${qnoClass}"${qnoStyle}>${q.no||idx+1}</span><div class="mcq-question q-text" style="margin-bottom:0;flex:1;">${mathify(q.question)}</div>${badgesHtml}</div>
+      ${imageHtml}
+      <div class="options ${optionsLayoutClass(options)}" data-answer="${q.answer}">${optsHtml}</div>
       ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${mathify(q.explanation)}</div>` : ''}
     </div>`;
   }).join('') : `<div class="no-content-state"><div class="no-content-icon">🎯</div><h3>No questions yet</h3><p>Questions for this section are being prepared.</p></div>`;
@@ -2091,7 +2111,8 @@ function selectIITOthLevel(level) {
 function renderIITOthTabs() {
   const parentItems = IITOTH.worksheets.map((w,i) => {
     const num = (w.name.match(/(\d+)/) || [null, String(i+1)])[1];
-    return `<div class="iit-parent-item${i===IITOTH.worksheetIdx?' active':''}" style="--pc:${iitColor(i)};" onclick="selectIITOthWorksheet(${i})">WS-<span class="iit-tab-circle" style="--dc:${iitColor(i)};">${num}</span></div>`;
+    const wc = iitColor(i);
+    return `<div class="iit-parent-item${i===IITOTH.worksheetIdx?' active':''}" style="--pc:${wc};color:${wc};" onclick="selectIITOthWorksheet(${i})">WS-<span class="iit-tab-circle" style="--dc:${wc};">${num}</span></div>`;
   });
   const subHtml = `<div class="iit-sub-row">
     ${IIT_OTH_LEVELS.map(l => `<div class="iit-sub-pill${l.id===IITOTH.level?' active':''}" style="--sc:${l.dot};" onclick="selectIITOthLevel('${l.id}')">Level-<span class="iit-tab-circle" style="--dc:${l.dot};">${l.label.split('-')[1]}</span></div>`).join('')}
@@ -2105,8 +2126,8 @@ function renderIITOthLevel() {
   const qArray = worksheet[IITOTH.level] || [];
   ACTIVE_QARRAY = qArray;
   IIT_PRACTICE.index = 0;
-  /* Question-number circles must match the selected Worksheet tab's own color, not the level color */
-  const accent = iitColor(IITOTH.worksheetIdx);
+  /* Question-number circles match the selected Level's own distinct color */
+  const accent = (IIT_OTH_LEVELS.find(l=>l.id===IITOTH.level)||{}).dot;
   bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:false, accentColor:accent});
   finalizeQuestionCards(bodyWrap, qArray);
 }
