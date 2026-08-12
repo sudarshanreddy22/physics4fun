@@ -2108,26 +2108,37 @@ function selectIITOthLevel(level) {
   renderIITOthTabs();
   renderIITOthLevel();
 }
+function worksheetHasLevels(w) {
+  return !!w && IIT_OTH_LEVELS.some(l => Array.isArray(w[l.id]));
+}
+function worksheetQuestions(w, level) {
+  if (!w) return [];
+  if (worksheetHasLevels(w)) return w[level] || [];
+  return w.questions || w.core || [];
+}
 function renderIITOthTabs() {
   const parentItems = IITOTH.worksheets.map((w,i) => {
     const num = (w.name.match(/(\d+)/) || [null, String(i+1)])[1];
     const wc = iitColor(i);
     return `<div class="iit-parent-item${i===IITOTH.worksheetIdx?' active':''}" style="--pc:${wc};color:${wc};" onclick="selectIITOthWorksheet(${i})">WS-<span class="iit-tab-circle" style="--dc:${wc};">${num}</span></div>`;
   });
-  const subHtml = `<div class="iit-sub-row">
+  const activeWs = IITOTH.worksheets[IITOTH.worksheetIdx];
+  const subHtml = worksheetHasLevels(activeWs) ? `<div class="iit-sub-row">
     ${IIT_OTH_LEVELS.map(l => `<div class="iit-sub-pill${l.id===IITOTH.level?' active':''}" style="--sc:${l.dot};" onclick="selectIITOthLevel('${l.id}')">Level-<span class="iit-tab-circle" style="--dc:${l.dot};">${l.label.split('-')[1]}</span></div>`).join('')}
-  </div>`;
+  </div>` : '';
   document.getElementById('iitOthWorksheetTabsWrap').innerHTML = iitInlineHTML(parentItems, IITOTH.worksheetIdx, subHtml);
   document.getElementById('iitOthLevelTabsWrap').innerHTML = '';
 }
 function renderIITOthLevel() {
   const bodyWrap = document.getElementById('iitOthBody');
   const worksheet = IITOTH.worksheets[IITOTH.worksheetIdx] || {};
-  const qArray = worksheet[IITOTH.level] || [];
+  const hasLevels = worksheetHasLevels(worksheet);
+  const qArray = worksheetQuestions(worksheet, IITOTH.level);
   ACTIVE_QARRAY = qArray;
   IIT_PRACTICE.index = 0;
-  /* Question-number circles match the selected Level's own distinct color */
-  const accent = (IIT_OTH_LEVELS.find(l=>l.id===IITOTH.level)||{}).dot;
+  /* With sub-levels: question-number circles match the selected Level's color.
+     Without sub-levels (e.g. Grade 8): they match the Worksheet's own color. */
+  const accent = hasLevels ? (IIT_OTH_LEVELS.find(l=>l.id===IITOTH.level)||{}).dot : iitColor(IITOTH.worksheetIdx);
   bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:false, accentColor:accent});
   finalizeQuestionCards(bodyWrap, qArray);
 }
