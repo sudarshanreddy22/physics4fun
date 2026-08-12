@@ -1,9 +1,10 @@
-// Worksheet
+// Grade 8 IIT Foundation — flat worksheet structure (NO Level-C/O/A sub-levels).
+// Each worksheet just has a "questions" array directly.
 window.iitOthersData = {
   "worksheets": [
     {
-      "name": "WS-1",
-      "core": [
+      "name": "Worksheet-1",
+      "questions": [
         {
           "question": "A measurable quantity is taken as a ",
           "options": {
@@ -220,7 +221,7 @@ window.iitOthersData = {
 	
 	{
   "name": "WS-2",
-  "core": [
+  "questions": [
     {
       "question": "FPS system is also called",
       "options": {
@@ -438,7 +439,7 @@ window.iitOthersData = {
 
 {
   "name": "WS-3",
-  "core": [
+  "questions": [
     {
       "question": "The prefix <i>‘milli’</i> is used for the sub multiple .....",
       "options": {
@@ -654,7 +655,7 @@ window.iitOthersData = {
 
 {
   "name": "WS-4",
-  "core": [
+  "questions": [
     {
       "question": "1 dyne is equal to ------- newton.",
       "options": {
