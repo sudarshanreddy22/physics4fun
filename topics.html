@@ -232,6 +232,42 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .n-term-label{font-size:11px;font-weight:800;color:var(--brand);margin-bottom:3px;}
 .n-term-desc{font-size:12px;color:var(--text-sub);line-height:1.6;}
 
+/* ══ Notes component library — additions for section labels, highlight cards,
+   key/value term lists, checklists, tip banners and a proper data table ══ */
+.n-section-sub{font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--col-notes);margin:15px 0 8px;padding-left:9px;border-left:3px solid var(--col-notes);}
+.n-example-row{display:flex;flex-direction:column;gap:6px;margin:9px 0;}
+.n-eg-item{font-size:13px;line-height:1.7;padding:9px 12px;background:var(--bg3);border-radius:9px;border:1px solid var(--card-border);}
+
+.n-highlight-card{border-radius:11px;padding:12px 14px;margin:9px 0;border:1px solid transparent;}
+.n-highlight-card.n-card-blue{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(99,102,241,.04));border-color:rgba(99,102,241,.25);}
+.n-highlight-card.n-card-purple{background:linear-gradient(135deg,rgba(167,139,250,.14),rgba(167,139,250,.04));border-color:rgba(167,139,250,.28);}
+.n-hcard-title{font-size:12.5px;font-weight:800;color:var(--brand);margin-bottom:6px;}
+.n-hcard-body{font-size:13.5px;line-height:1.8;color:var(--text);}
+
+.n-term-list{display:flex;flex-direction:column;gap:5px;margin:10px 0;background:var(--bg3);border:1px solid var(--card-border);border-radius:11px;padding:7px;}
+.n-tl-item{display:flex;align-items:center;gap:12px;padding:7px 9px;border-radius:8px;transition:background .12s;}
+.n-tl-item:hover{background:var(--item-hover);}
+.n-tl-key{flex-shrink:0;min-width:28px;text-align:center;font-weight:800;font-size:12.5px;color:#fff;background:linear-gradient(130deg,var(--accent1),var(--accent2));border-radius:7px;padding:3px 9px;font-family:'JetBrains Mono',monospace;}
+.n-tl-val{font-size:13px;color:var(--text-sub);line-height:1.6;}
+
+.n-checklist{display:flex;flex-direction:column;gap:7px;margin:10px 0;}
+.n-check-item{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:var(--bg3);border-radius:9px;border-left:3px solid #34d399;font-size:13px;line-height:1.8;}
+.n-check-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#34d399;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+
+.n-tip-banner{display:flex;align-items:center;gap:9px;background:linear-gradient(90deg,rgba(245,158,11,.18),rgba(245,158,11,.06));border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:10px 14px;margin:13px 0 10px;}
+.n-tip-icon{font-size:17px;}
+.n-tip-title{font-size:13.5px;font-weight:800;color:var(--accent3);letter-spacing:.2px;}
+
+.n-clean-table{width:100%;border-collapse:separate;border-spacing:0;margin:12px 0;font-size:13px;border-radius:11px;overflow:hidden;border:1px solid var(--card-border);box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.n-clean-table thead th{background:linear-gradient(130deg,var(--accent1),var(--accent2));color:#fff;font-weight:800;font-size:12px;text-align:left;padding:10px 14px;letter-spacing:.2px;}
+.n-clean-table tbody td{padding:9px 14px;border-top:1px solid var(--divider);color:var(--text);font-size:13px;line-height:1.6;}
+.n-clean-table tbody tr:nth-child(even){background:var(--bg3);}
+.n-clean-table tbody tr:hover{background:var(--item-hover);}
+@media(max-width:640px){
+  .n-clean-table{display:block;overflow-x:auto;white-space:nowrap;}
+  .n-two-col{grid-template-columns:1fr;}
+}
+
 /* ══ NOTES EXTRAS (Law boxes, Compare grids) ══ */
 .n-law-box{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(6,182,212,.06));border:1px solid rgba(99,102,241,.3);border-radius:12px;padding:14px 18px;margin:10px 0;}
 .n-law-title{font-size:12.5px;font-weight:800;color:var(--brand);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
@@ -384,7 +420,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .question-item:hover{border-color:rgba(99,102,241,.22);}
 .question-item-top{display:flex;gap:11px;}
 .question-item-badges{display:flex;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--divider);}
-.mcq-question-image{display:block;max-width:280px;width:100%;height:auto;margin-top:8px;border-radius:10px;border:1px solid var(--card-border);}
+.mcq-question-image{display:block;max-width:280px;width:100%;height:auto;margin:8px auto 0;border-radius:10px;border:1px solid var(--card-border);}
 /* Adaptive MCQ option layout — picked at render time based on option text length */
 .options.opts-row4{display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;gap:8px;}
 .options.opts-row4 .option{flex:1 1 21%;min-width:110px;}
@@ -450,6 +486,10 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .pyq-question-top{display:flex;gap:11px;align-items:flex-start;}
 .pyq-q-icon{display:inline-block;width:16px;height:16px;margin-left:8px;font-size:12px;font-weight:bold;color:var(--col-pyq);transition:transform .2s;flex-shrink:0;}
 .pyq-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(251,146,60,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-pyq);animation:slideDown .3s ease-out;}
+.pyq-table{border-collapse:collapse;margin:10px auto 4px;font-size:12.5px;}
+.pyq-table-wrap{overflow-x:auto;}
+.pyq-table td{border:1px solid var(--card-border);padding:6px 12px;text-align:center;white-space:nowrap;color:var(--text);}
+.pyq-table td:first-child{font-weight:700;background:var(--bg3);}
 
 /* ══ BOARD HEADERS ══ */
 .board-header{cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(99,102,241,.3);font-size:14px;font-weight:700;user-select:none;transition:all .2s;}
@@ -538,6 +578,13 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .qy-badge{font-size:9px;font-weight:800;padding:3px 9px;border-radius:12px;height:19px;box-sizing:border-box;display:inline-flex;align-items:center;font-family:'JetBrains Mono',monospace;letter-spacing:.5px;color:#fff;flex-shrink:0;white-space:nowrap;}
 .qy-badge-paper{background:#111827;border:1px solid rgba(255,255,255,.14);}
 .qy-badge-year{background:#7c3aed;border:1px solid rgba(124,58,237,.6);}
+.qy-badge-paper.qy-set-mcq{background:#5b21b6;}
+.qy-badge-paper.qy-set-ar{background:#c2410c;}
+.qy-badge-paper.qy-set-one{background:#4d7c0b;}
+.qy-badge-paper.qy-set-two{background:#15803d;}
+.qy-badge-paper.qy-set-three{background:#b91c1c;}
+.qy-badge-paper.qy-set-four{background:#0369a1;}
+.qy-badge-paper.qy-set-five{background:#be185d;}
 
 /* ══ Global Multi-Questions / Single-Question icon toggle (top tab bar) ══ */
 .global-view-toggle{display:flex;align-items:center;gap:6px;margin-left:auto;flex-shrink:0;}
@@ -783,6 +830,409 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       </div>
 
       <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- 🏛️ PREMIER INSTITUTES BOARD (COLLAPSIBLE - COLLAPSED BY DEFAULT) -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="board-header" onclick="toggleBoard('premier-institutes-board', this)" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(168,85,247,.1));border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(124,58,237,.3);font-size:14px;font-weight:700;user-select:none;">
+        <span class="board-arrow" style="transition:transform .2s;">▶</span>
+        <span>🏛️ Premier Institutes</span>
+      </div>
+      <div class="board-content" id="premier-institutes-board" style="display:none;">
+
+      <div class="sb-label">Institutes</div>
+
+      <div class="grade-row" onclick="toggleGrade('pi-allen',this)">
+        <span class="grade-pill">🅰️</span><span class="grade-label">Allen</span><span class="grade-sub">Premier</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="pi-allen">
+        <div class="grade-row" onclick="toggleGrade('pi-allen-g11',this)" style="padding-left:22px;">
+          <span class="grade-pill">11</span><span class="grade-label">Class 11</span><span class="grade-sub">Allen</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-allen-g11">
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Physical World','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Units and Measurements','📏')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Motion in a Straight Line','➡️')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Motion in a Plane','✈️')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Work, Energy and Power','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Gravitation','🌌')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Mechanical Properties of Solids','🪨')"><span class="ch-icon">🪨</span><span class="ch-name">Mechanical Properties of Solids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Mechanical Properties of Fluids','💧')"><span class="ch-icon">💧</span><span class="ch-name">Mechanical Properties of Fluids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Thermal Properties of Matter','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Thermal Properties of Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Thermodynamics','🔥')"><span class="ch-icon">🔥</span><span class="ch-name">Thermodynamics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Kinetic Theory','💨')"><span class="ch-icon">💨</span><span class="ch-name">Kinetic Theory</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Oscillations','🔁')"><span class="ch-icon">🔁</span><span class="ch-name">Oscillations</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','11',this,'Waves','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-allen-g12',this)" style="padding-left:22px;">
+          <span class="grade-pill">12</span><span class="grade-label">Class 12</span><span class="grade-sub">Allen</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-allen-g12">
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Electric Charges and Fields','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Electrostatic Potential and Capacitance','🔋')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential and Capacitance</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Current Electricity','💡')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Moving Charges and Magnetism','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges and Magnetism</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Magnetism and Matter','🔮')"><span class="ch-icon">🔮</span><span class="ch-name">Magnetism and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Electromagnetic Induction','🌀')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Alternating Current','〰️')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Electromagnetic Waves','📡')"><span class="ch-icon">📡</span><span class="ch-name">Electromagnetic Waves</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Ray Optics and Optical Instruments','🔭')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics and Optical Instruments</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Wave Optics','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Wave Optics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Dual Nature of Radiation and Matter','☀️')"><span class="ch-icon">☀️</span><span class="ch-name">Dual Nature of Radiation and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Atoms','⚛️')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Nuclei','☢️')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Allen','12',this,'Semiconductor Electronics','💻')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span></div>
+        </div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('pi-aakash',this)">
+        <span class="grade-pill">🌌</span><span class="grade-label">Aakash</span><span class="grade-sub">Premier</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="pi-aakash">
+        <div class="grade-row" onclick="toggleGrade('pi-aakash-g11',this)" style="padding-left:22px;">
+          <span class="grade-pill">11</span><span class="grade-label">Class 11</span><span class="grade-sub">Aakash</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-aakash-g11">
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Physical World','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Units and Measurements','📏')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Motion in a Straight Line','➡️')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Motion in a Plane','✈️')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Work, Energy and Power','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Gravitation','🌌')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Mechanical Properties of Solids','🪨')"><span class="ch-icon">🪨</span><span class="ch-name">Mechanical Properties of Solids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Mechanical Properties of Fluids','💧')"><span class="ch-icon">💧</span><span class="ch-name">Mechanical Properties of Fluids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Thermal Properties of Matter','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Thermal Properties of Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Thermodynamics','🔥')"><span class="ch-icon">🔥</span><span class="ch-name">Thermodynamics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Kinetic Theory','💨')"><span class="ch-icon">💨</span><span class="ch-name">Kinetic Theory</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Oscillations','🔁')"><span class="ch-icon">🔁</span><span class="ch-name">Oscillations</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','11',this,'Waves','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-aakash-g12',this)" style="padding-left:22px;">
+          <span class="grade-pill">12</span><span class="grade-label">Class 12</span><span class="grade-sub">Aakash</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-aakash-g12">
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Electric Charges and Fields','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Electrostatic Potential and Capacitance','🔋')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential and Capacitance</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Current Electricity','💡')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Moving Charges and Magnetism','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges and Magnetism</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Magnetism and Matter','🔮')"><span class="ch-icon">🔮</span><span class="ch-name">Magnetism and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Electromagnetic Induction','🌀')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Alternating Current','〰️')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Electromagnetic Waves','📡')"><span class="ch-icon">📡</span><span class="ch-name">Electromagnetic Waves</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Ray Optics and Optical Instruments','🔭')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics and Optical Instruments</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Wave Optics','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Wave Optics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Dual Nature of Radiation and Matter','☀️')"><span class="ch-icon">☀️</span><span class="ch-name">Dual Nature of Radiation and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Atoms','⚛️')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Nuclei','☢️')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Aakash','12',this,'Semiconductor Electronics','💻')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span></div>
+        </div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('pi-narayana',this)">
+        <span class="grade-pill">🏛️</span><span class="grade-label">Narayana</span><span class="grade-sub">Premier</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="pi-narayana">
+        <div class="grade-row" onclick="toggleGrade('pi-narayana-g6',this)" style="padding-left:22px;">
+          <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">Narayana</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-narayana-g6">
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','6',this,'Physical Quantities and Measurement','📏')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities and Measurement</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','6',this,'Motion','🏃')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','6',this,'Force and Simple Machines','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Force and Simple Machines</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-narayana-g7',this)" style="padding-left:22px;">
+          <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">Narayana</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-narayana-g7">
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','7',this,'Heat and Temperature','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat and Temperature</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','7',this,'Motion and Speed','⏱️')"><span class="ch-icon">⏱️</span><span class="ch-name">Motion and Speed</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','7',this,'Electric Current and Circuits','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Current and Circuits</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-narayana-g8',this)" style="padding-left:22px;">
+          <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">Narayana</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-narayana-g8">
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','8',this,'Units and Dimensions','💪')"><span class="ch-icon">💪</span><span class="ch-name">Units and Dimensions</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','8',this,'Friction','🔄')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','8',this,'Sound','🔊')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-narayana-g9',this)" style="padding-left:22px;">
+          <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">Narayana</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-narayana-g9">
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','9',this,'Motion in a Straightline','🏃')"><span class="ch-icon">🏃</span><span class="ch-name">Motion in a Straightline</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','9',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','9',this,'Gravitation','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-narayana-g10',this)" style="padding-left:22px;">
+          <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">Narayana</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-narayana-g10">
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','10',this,'Light – Reflection and Refraction','💡')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection and Refraction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','10',this,'Electricity','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','10',this,'Magnetic Effects of Electric Current','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetic Effects of Electric Current</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-narayana-g11',this)" style="padding-left:22px;">
+          <span class="grade-pill">11</span><span class="grade-label">Class 11</span><span class="grade-sub">Narayana</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-narayana-g11">
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Physical World','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Units and Measurements','📏')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Motion in a Straight Line','➡️')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Motion in a Plane','✈️')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Work, Energy and Power','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Gravitation','🌌')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Mechanical Properties of Solids','🪨')"><span class="ch-icon">🪨</span><span class="ch-name">Mechanical Properties of Solids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Mechanical Properties of Fluids','💧')"><span class="ch-icon">💧</span><span class="ch-name">Mechanical Properties of Fluids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Thermal Properties of Matter','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Thermal Properties of Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Thermodynamics','🔥')"><span class="ch-icon">🔥</span><span class="ch-name">Thermodynamics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Kinetic Theory','💨')"><span class="ch-icon">💨</span><span class="ch-name">Kinetic Theory</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Oscillations','🔁')"><span class="ch-icon">🔁</span><span class="ch-name">Oscillations</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','11',this,'Waves','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-narayana-g12',this)" style="padding-left:22px;">
+          <span class="grade-pill">12</span><span class="grade-label">Class 12</span><span class="grade-sub">Narayana</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-narayana-g12">
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Electric Charges and Fields','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Electrostatic Potential and Capacitance','🔋')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential and Capacitance</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Current Electricity','💡')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Moving Charges and Magnetism','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges and Magnetism</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Magnetism and Matter','🔮')"><span class="ch-icon">🔮</span><span class="ch-name">Magnetism and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Electromagnetic Induction','🌀')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Alternating Current','〰️')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Electromagnetic Waves','📡')"><span class="ch-icon">📡</span><span class="ch-name">Electromagnetic Waves</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Ray Optics and Optical Instruments','🔭')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics and Optical Instruments</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Wave Optics','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Wave Optics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Dual Nature of Radiation and Matter','☀️')"><span class="ch-icon">☀️</span><span class="ch-name">Dual Nature of Radiation and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Atoms','⚛️')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Nuclei','☢️')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Narayana','12',this,'Semiconductor Electronics','💻')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span></div>
+        </div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('pi-sri-chaitanya',this)">
+        <span class="grade-pill">🎓</span><span class="grade-label">Sri Chaitanya</span><span class="grade-sub">Premier</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="pi-sri-chaitanya">
+        <div class="grade-row" onclick="toggleGrade('pi-sri-chaitanya-g6',this)" style="padding-left:22px;">
+          <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">Sri Chaitanya</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-sri-chaitanya-g6">
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','6',this,'Physical Quantities and Measurement','📏')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities and Measurement</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','6',this,'Motion','🏃')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','6',this,'Force and Simple Machines','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Force and Simple Machines</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-sri-chaitanya-g7',this)" style="padding-left:22px;">
+          <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">Sri Chaitanya</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-sri-chaitanya-g7">
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','7',this,'Heat and Temperature','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat and Temperature</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','7',this,'Motion and Speed','⏱️')"><span class="ch-icon">⏱️</span><span class="ch-name">Motion and Speed</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','7',this,'Electric Current and Circuits','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Current and Circuits</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-sri-chaitanya-g8',this)" style="padding-left:22px;">
+          <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">Sri Chaitanya</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-sri-chaitanya-g8">
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','8',this,'Units and Dimensions','💪')"><span class="ch-icon">💪</span><span class="ch-name">Units and Dimensions</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','8',this,'Friction','🔄')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','8',this,'Sound','🔊')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-sri-chaitanya-g9',this)" style="padding-left:22px;">
+          <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">Sri Chaitanya</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-sri-chaitanya-g9">
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','9',this,'Motion in a Straightline','🏃')"><span class="ch-icon">🏃</span><span class="ch-name">Motion in a Straightline</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','9',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','9',this,'Gravitation','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-sri-chaitanya-g10',this)" style="padding-left:22px;">
+          <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">Sri Chaitanya</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-sri-chaitanya-g10">
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','10',this,'Light – Reflection and Refraction','💡')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection and Refraction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','10',this,'Electricity','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','10',this,'Magnetic Effects of Electric Current','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetic Effects of Electric Current</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-sri-chaitanya-g11',this)" style="padding-left:22px;">
+          <span class="grade-pill">11</span><span class="grade-label">Class 11</span><span class="grade-sub">Sri Chaitanya</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-sri-chaitanya-g11">
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Physical World','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Units and Measurements','📏')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Motion in a Straight Line','➡️')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Motion in a Plane','✈️')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Work, Energy and Power','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Gravitation','🌌')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Mechanical Properties of Solids','🪨')"><span class="ch-icon">🪨</span><span class="ch-name">Mechanical Properties of Solids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Mechanical Properties of Fluids','💧')"><span class="ch-icon">💧</span><span class="ch-name">Mechanical Properties of Fluids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Thermal Properties of Matter','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Thermal Properties of Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Thermodynamics','🔥')"><span class="ch-icon">🔥</span><span class="ch-name">Thermodynamics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Kinetic Theory','💨')"><span class="ch-icon">💨</span><span class="ch-name">Kinetic Theory</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Oscillations','🔁')"><span class="ch-icon">🔁</span><span class="ch-name">Oscillations</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','11',this,'Waves','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-sri-chaitanya-g12',this)" style="padding-left:22px;">
+          <span class="grade-pill">12</span><span class="grade-label">Class 12</span><span class="grade-sub">Sri Chaitanya</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-sri-chaitanya-g12">
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Electric Charges and Fields','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Electrostatic Potential and Capacitance','🔋')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential and Capacitance</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Current Electricity','💡')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Moving Charges and Magnetism','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges and Magnetism</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Magnetism and Matter','🔮')"><span class="ch-icon">🔮</span><span class="ch-name">Magnetism and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Electromagnetic Induction','🌀')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Alternating Current','〰️')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Electromagnetic Waves','📡')"><span class="ch-icon">📡</span><span class="ch-name">Electromagnetic Waves</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Ray Optics and Optical Instruments','🔭')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics and Optical Instruments</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Wave Optics','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Wave Optics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Dual Nature of Radiation and Matter','☀️')"><span class="ch-icon">☀️</span><span class="ch-name">Dual Nature of Radiation and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Atoms','⚛️')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Nuclei','☢️')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Sri Chaitanya','12',this,'Semiconductor Electronics','💻')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span></div>
+        </div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('pi-bhashyam',this)">
+        <span class="grade-pill">📘</span><span class="grade-label">Bhashyam</span><span class="grade-sub">Premier</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="pi-bhashyam">
+        <div class="grade-row" onclick="toggleGrade('pi-bhashyam-g6',this)" style="padding-left:22px;">
+          <span class="grade-pill">6</span><span class="grade-label">Class 6</span><span class="grade-sub">Bhashyam</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-bhashyam-g6">
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','6',this,'Physical Quantities and Measurement','📏')"><span class="ch-icon">📏</span><span class="ch-name">Physical Quantities and Measurement</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','6',this,'Motion','🏃')"><span class="ch-icon">🏃</span><span class="ch-name">Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','6',this,'Force and Simple Machines','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Force and Simple Machines</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-bhashyam-g7',this)" style="padding-left:22px;">
+          <span class="grade-pill">7</span><span class="grade-label">Class 7</span><span class="grade-sub">Bhashyam</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-bhashyam-g7">
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','7',this,'Heat and Temperature','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Heat and Temperature</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','7',this,'Motion and Speed','⏱️')"><span class="ch-icon">⏱️</span><span class="ch-name">Motion and Speed</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','7',this,'Electric Current and Circuits','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Current and Circuits</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-bhashyam-g8',this)" style="padding-left:22px;">
+          <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">Bhashyam</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-bhashyam-g8">
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','8',this,'Units and Dimensions','💪')"><span class="ch-icon">💪</span><span class="ch-name">Units and Dimensions</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','8',this,'Friction','🔄')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','8',this,'Sound','🔊')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-bhashyam-g9',this)" style="padding-left:22px;">
+          <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">Bhashyam</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-bhashyam-g9">
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','9',this,'Motion in a Straightline','🏃')"><span class="ch-icon">🏃</span><span class="ch-name">Motion in a Straightline</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','9',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','9',this,'Gravitation','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-bhashyam-g10',this)" style="padding-left:22px;">
+          <span class="grade-pill">10</span><span class="grade-label">Class 10</span><span class="grade-sub">Bhashyam</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-bhashyam-g10">
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','10',this,'Light – Reflection and Refraction','💡')"><span class="ch-icon">💡</span><span class="ch-name">Light – Reflection and Refraction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','10',this,'Electricity','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','10',this,'Magnetic Effects of Electric Current','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Magnetic Effects of Electric Current</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-bhashyam-g11',this)" style="padding-left:22px;">
+          <span class="grade-pill">11</span><span class="grade-label">Class 11</span><span class="grade-sub">Bhashyam</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-bhashyam-g11">
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Physical World','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Units and Measurements','📏')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Motion in a Straight Line','➡️')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Motion in a Plane','✈️')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Work, Energy and Power','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Gravitation','🌌')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Mechanical Properties of Solids','🪨')"><span class="ch-icon">🪨</span><span class="ch-name">Mechanical Properties of Solids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Mechanical Properties of Fluids','💧')"><span class="ch-icon">💧</span><span class="ch-name">Mechanical Properties of Fluids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Thermal Properties of Matter','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Thermal Properties of Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Thermodynamics','🔥')"><span class="ch-icon">🔥</span><span class="ch-name">Thermodynamics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Kinetic Theory','💨')"><span class="ch-icon">💨</span><span class="ch-name">Kinetic Theory</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Oscillations','🔁')"><span class="ch-icon">🔁</span><span class="ch-name">Oscillations</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','11',this,'Waves','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-bhashyam-g12',this)" style="padding-left:22px;">
+          <span class="grade-pill">12</span><span class="grade-label">Class 12</span><span class="grade-sub">Bhashyam</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-bhashyam-g12">
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Electric Charges and Fields','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Electrostatic Potential and Capacitance','🔋')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential and Capacitance</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Current Electricity','💡')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Moving Charges and Magnetism','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges and Magnetism</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Magnetism and Matter','🔮')"><span class="ch-icon">🔮</span><span class="ch-name">Magnetism and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Electromagnetic Induction','🌀')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Alternating Current','〰️')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Electromagnetic Waves','📡')"><span class="ch-icon">📡</span><span class="ch-name">Electromagnetic Waves</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Ray Optics and Optical Instruments','🔭')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics and Optical Instruments</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Wave Optics','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Wave Optics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Dual Nature of Radiation and Matter','☀️')"><span class="ch-icon">☀️</span><span class="ch-name">Dual Nature of Radiation and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Atoms','⚛️')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Nuclei','☢️')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Bhashyam','12',this,'Semiconductor Electronics','💻')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span></div>
+        </div>
+      </div>
+
+      <div class="grade-row" onclick="toggleGrade('pi-physics-wallah',this)">
+        <span class="grade-pill">📱</span><span class="grade-label">Physics Wallah</span><span class="grade-sub">Premier</span><span class="grade-arrow">▶</span>
+      </div>
+      <div class="chapter-list" id="pi-physics-wallah">
+        <div class="grade-row" onclick="toggleGrade('pi-physics-wallah-g11',this)" style="padding-left:22px;">
+          <span class="grade-pill">11</span><span class="grade-label">Class 11</span><span class="grade-sub">Physics Wallah</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-physics-wallah-g11">
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Physical World','🌍')"><span class="ch-icon">🌍</span><span class="ch-name">Physical World</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Units and Measurements','📏')"><span class="ch-icon">📏</span><span class="ch-name">Units and Measurements</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Motion in a Straight Line','➡️')"><span class="ch-icon">➡️</span><span class="ch-name">Motion in a Straight Line</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Motion in a Plane','✈️')"><span class="ch-icon">✈️</span><span class="ch-name">Motion in a Plane</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Laws of Motion','⚙️')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Work, Energy and Power','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Power</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Gravitation','🌌')"><span class="ch-icon">🌌</span><span class="ch-name">Gravitation</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Mechanical Properties of Solids','🪨')"><span class="ch-icon">🪨</span><span class="ch-name">Mechanical Properties of Solids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Mechanical Properties of Fluids','💧')"><span class="ch-icon">💧</span><span class="ch-name">Mechanical Properties of Fluids</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Thermal Properties of Matter','🌡️')"><span class="ch-icon">🌡️</span><span class="ch-name">Thermal Properties of Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Thermodynamics','🔥')"><span class="ch-icon">🔥</span><span class="ch-name">Thermodynamics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Kinetic Theory','💨')"><span class="ch-icon">💨</span><span class="ch-name">Kinetic Theory</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Oscillations','🔁')"><span class="ch-icon">🔁</span><span class="ch-name">Oscillations</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','11',this,'Waves','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
+        </div>
+        <div class="grade-row" onclick="toggleGrade('pi-physics-wallah-g12',this)" style="padding-left:22px;">
+          <span class="grade-pill">12</span><span class="grade-label">Class 12</span><span class="grade-sub">Physics Wallah</span><span class="grade-arrow">▶</span>
+        </div>
+        <div class="chapter-list" id="pi-physics-wallah-g12">
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Electric Charges and Fields','⚡')"><span class="ch-icon">⚡</span><span class="ch-name">Electric Charges and Fields</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Electrostatic Potential and Capacitance','🔋')"><span class="ch-icon">🔋</span><span class="ch-name">Electrostatic Potential and Capacitance</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Current Electricity','💡')"><span class="ch-icon">💡</span><span class="ch-name">Current Electricity</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Moving Charges and Magnetism','🧲')"><span class="ch-icon">🧲</span><span class="ch-name">Moving Charges and Magnetism</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Magnetism and Matter','🔮')"><span class="ch-icon">🔮</span><span class="ch-name">Magnetism and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Electromagnetic Induction','🌀')"><span class="ch-icon">🌀</span><span class="ch-name">Electromagnetic Induction</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Alternating Current','〰️')"><span class="ch-icon">〰️</span><span class="ch-name">Alternating Current</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Electromagnetic Waves','📡')"><span class="ch-icon">📡</span><span class="ch-name">Electromagnetic Waves</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Ray Optics and Optical Instruments','🔭')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics and Optical Instruments</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Wave Optics','🌊')"><span class="ch-icon">🌊</span><span class="ch-name">Wave Optics</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Dual Nature of Radiation and Matter','☀️')"><span class="ch-icon">☀️</span><span class="ch-name">Dual Nature of Radiation and Matter</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Atoms','⚛️')"><span class="ch-icon">⚛️</span><span class="ch-name">Atoms</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Nuclei','☢️')"><span class="ch-icon">☢️</span><span class="ch-name">Nuclei</span></div>
+          <div class="ch-item" onclick="selectOthersBoard('Physics Wallah','12',this,'Semiconductor Electronics','💻')"><span class="ch-icon">💻</span><span class="ch-name">Semiconductor Electronics</span></div>
+        </div>
+      </div>
+
+      <div class="grade-row" onclick="selectOthersBoard('Resonance',null,this)" style="cursor:pointer;">
+        <span class="grade-pill">🎯</span><span class="grade-label">Resonance</span><span class="grade-sub">Placeholder</span>
+      </div>
+
+      <div class="grade-row" onclick="selectOthersBoard('Vedantu',null,this)" style="cursor:pointer;">
+        <span class="grade-pill">💡</span><span class="grade-label">Vedantu</span><span class="grade-sub">Placeholder</span>
+      </div>
+      </div>
+      <!-- ═══════════════════════════════════════════════════════════════ -->
       <!-- 📕 CISCE CAMBRIDGE BOARD (MOVED HERE FOR BOARD ORDER) -->
       <!-- ═══════════════════════════════════════════════════════════════ -->
       <div class="board-header" onclick="toggleBoard('cisce-board', this)" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,rgba(239,68,68,.2),rgba(239,68,68,.1));border-radius:10px;margin:20px 0 10px 0;border:1px solid rgba(239,68,68,.3);font-size:14px;font-weight:700;user-select:none;">
@@ -975,9 +1425,6 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="sec-btn sec-mcq" id="btn-iit-compexams" style="display:none;" onclick="switchSection('iitcomp',this)">
         <span class="sec-icon-3d">🏆</span>Competitive Exams
       </div>
-      <div class="sec-btn sec-sim" id="btn-iit-institutes" style="display:none;" onclick="switchSection('iitinst',this)">
-        <span class="sec-icon-3d">🏛️</span>Premier Institutes
-      </div>
       <div class="sec-btn sec-gloss" id="btn-iit-others" style="display:none;" onclick="switchSection('iitoth',this)">
         <span class="sec-icon-3d">📚</span>Others
       </div>
@@ -998,6 +1445,10 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="pyq-tab t-three" onclick="showPyqSec('three',this)"><span class="tab-dot" style="background:#dc2626;">3</span>Marks</div>
       <div class="pyq-tab t-four" onclick="showPyqSec('four',this)"><span class="tab-dot" style="background:#0ea5e9;">4</span>Marks</div>
       <div class="pyq-tab t-five" onclick="showPyqSec('five',this)"><span class="tab-dot" style="background:#ec4899;">5</span>Marks</div>
+      <div class="global-view-toggle" id="pyqViewToggle">
+        <button class="gv-btn active" id="pyqListBtn" title="All Questions" onclick="setPyqViewMode('list')">☰</button>
+        <button class="gv-btn" id="pyqSingleBtn" title="Single Question" onclick="setPyqViewMode('practice')">🎯</button>
+      </div>
     </div>
 
     <!-- DESC TAB BAR (Identical to PYQ) -->
@@ -1054,10 +1505,6 @@ mjx-container[display="true"]{margin:8px 0 !important;}
         <div id="compExamTabsWrap"></div>
         <div id="compSubTabsWrap"></div>
         <div id="compExamBody"></div>
-      </div>
-      <div id="panel-iitinst" style="display:none;">
-        <div id="iitInstTabsWrap"></div>
-        <div id="iitInstBody"></div>
       </div>
       <div id="panel-iitoth" style="display:none;">
         <div id="iitOthWorksheetTabsWrap"></div>
@@ -1156,8 +1603,18 @@ function toggleBoard(boardId, el) {
 /* ══════ SIDEBAR ══════ */
 function toggleGrade(id, row) {
   const list = document.getElementById(id), open = list.classList.contains('open');
-  document.querySelectorAll('.chapter-list').forEach(x => x.classList.remove('open'));
-  document.querySelectorAll('.grade-row').forEach(x => x.classList.remove('open'));
+  /* Keep ancestor chapter-lists/rows open when toggling a NESTED list (e.g. Institute > Grade),
+     otherwise closing all lists globally also hides the parent that contains the clicked row. */
+  const keepLists = new Set(), keepRows = new Set();
+  let anc = list.parentElement ? list.parentElement.closest('.chapter-list') : null;
+  while (anc) {
+    keepLists.add(anc);
+    const prevRow = anc.previousElementSibling;
+    if (prevRow && prevRow.classList.contains('grade-row')) keepRows.add(prevRow);
+    anc = anc.parentElement ? anc.parentElement.closest('.chapter-list') : null;
+  }
+  document.querySelectorAll('.chapter-list').forEach(x => { if (!keepLists.has(x)) x.classList.remove('open'); });
+  document.querySelectorAll('.grade-row').forEach(x => { if (!keepRows.has(x)) x.classList.remove('open'); });
   if (!open) { 
     list.classList.add('open'); 
     row.classList.add('open'); 
@@ -1205,7 +1662,7 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 const PYQ_GRADES = ['cbse-g10', 'cbse-g12', 'ap-g10', 'ap-inter-1', 'ap-inter-2'];
 
 const NON_IIT_SECTION_BTN_IDS = ['btn-notes','btn-pyq','btn-desc','btn-objective','btn-ppt','btn-flash','btn-sim','btn-games','btn-mind','btn-gloss'];
-const IIT_SECTION_BTN_IDS = ['btn-iit-notes','btn-iit-ppt','btn-iit-compexams','btn-iit-institutes','btn-iit-others'];
+const IIT_SECTION_BTN_IDS = ['btn-iit-notes','btn-iit-ppt','btn-iit-compexams','btn-iit-others'];
 
 function updateSectionVisibility() {
   const downloadsBtn = document.getElementById('downloadsBtn');
@@ -1258,7 +1715,7 @@ function switchSection(type, el, sub) {
   if (type === 'objective' && isIITFoundation()) CUR.iitTab = sub || 'mcq';
   document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
   if (el) el.classList.add('active');
-  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitinst','iitoth'].forEach(p => {
+  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitoth'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
@@ -1291,7 +1748,6 @@ function switchSection(type, el, sub) {
       showPyqSec('mcq', document.querySelector('.pyq-tab.t-mcq'));
       break;
     case 'iitcomp': renderCompExamsView(); break;
-    case 'iitinst': renderIITInstitutesView(); break;
     case 'iitoth':  renderIITOthersView(); break;
   }
   document.getElementById('content').scrollTop = 0;
@@ -1336,7 +1792,7 @@ async function loadNotes() {
 function renderNotes(d, wrap) {
   wrap.innerHTML = `<div class="notes-title"><span class="n-sec-icon" style="width:38px;height:38px;font-size:20px;">${d.icon||'📖'}</span>${d.title}<span style="font-size:11px;font-weight:500;color:var(--text-muted);margin-left:4px;">Class ${d.grade}</span></div>`
     + (d.sections||[]).map(s =>
-      `<div class="notes-section"><div class="notes-section-heading"><span class="n-sec-icon">${s.icon||'📌'}</span>${s.heading}</div>${s.content}</div>`
+      `<div class="notes-section"><div class="notes-section-heading"><span class="n-sec-icon">${s.icon||'📌'}</span>${s.heading}</div>${mathify(s.content)}</div>`
     ).join('');
   // Trigger MathJax rendering for formulas in notes
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
@@ -1629,7 +2085,7 @@ function setGlobalViewMode(mode) {
 function updateGlobalToggleAvailability(type) {
   const listBtn = document.getElementById('gvListBtn'), practiceBtn = document.getElementById('gvPracticeBtn');
   if (!listBtn || !practiceBtn) return;
-  const isQuestionSection = ['iitcomp','iitinst','iitoth'].includes(type);
+  const isQuestionSection = ['iitcomp','iitoth'].includes(type);
   listBtn.disabled = !isQuestionSection;
   practiceBtn.disabled = !isQuestionSection;
   listBtn.classList.toggle('active', isQuestionSection && IIT_PRACTICE.mode==='list');
@@ -1749,49 +2205,46 @@ const OTHERS_TREE = {
   'Physics Wallah': { 'Practice Set 1': { type:'mcq', file:'boards/others/physics-wallah/practice-set-1.js' } },
   'Vedantu': { 'Practice Set 1': { type:'mcq', file:'boards/others/vedantu/practice-set-1.js' } }
 };
-/* Icons for the Premier Institutes tab bar (task 3) */
 const INSTITUTE_ICONS = { 'Narayana':'🏛️','Sri Chaitanya':'🎓','Bhashyam':'📘','Allen':'🅰️','Aakash':'🌌','Physics Wallah':'📱','Resonance':'🎯','Vedantu':'💡' };
 
-const OTH = { institute:null, path:[] };
+const OTH = { institute:null, grade:null, chapter:null, path:[] };
 
 function isOthersBoard() { return CUR.grade === 'others-board'; }
 
-function selectOthersBoard(name, el) {
-  document.querySelectorAll('#others-board .ch-item').forEach(i => i.classList.remove('active'));
+function selectOthersBoard(name, grade, el, chapter, icon) {
+  document.querySelectorAll('#premier-institutes-board .ch-item, #premier-institutes-board .grade-row').forEach(i => i.classList.remove('active'));
   if (el) el.classList.add('active');
   CUR.grade = 'others-board';
   CUR.chapter = name;
   CUR.slug = null;
   CUR.hasPyq = false;
 
-  document.getElementById('bc-grade').textContent = 'Others';
-  document.getElementById('bc-chapter').textContent = '🏫 ' + name;
+  document.getElementById('bc-grade').textContent = 'Premier Institutes';
+  document.getElementById('bc-chapter').textContent = (icon||'🏫') + ' ' + name + (grade ? ' · Class ' + grade : '') + (chapter ? ' · ' + chapter : '');
   document.getElementById('breadcrumb').classList.add('visible');
   document.getElementById('welcome').style.display = 'none';
   document.getElementById('sectionBar').classList.remove('visible');
   document.getElementById('pyq-tabbar').classList.remove('visible');
   document.getElementById('desc-tabbar').classList.remove('visible');
 
-  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq'].forEach(p => {
+  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitoth'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
   document.getElementById('panel-others').style.display = 'block';
 
-  selectOthersInstitute(name);
+  selectOthersInstitute(name, grade, chapter, icon);
   document.getElementById('content').scrollTop = 0;
   if (window.innerWidth <= 640) document.getElementById('sidebar').classList.add('hide');
 }
 
-function selectOthersInstitute(name) {
+function selectOthersInstitute(name, grade, chapter, icon) {
   OTH.institute = name;
+  OTH.grade = grade || null;
+  OTH.chapter = chapter || null;
   OTH.path = [];
   const bcChapter = document.getElementById('bc-chapter');
-  if (bcChapter) bcChapter.textContent = '🏫 ' + name;
-  document.querySelectorAll('#others-board .ch-item').forEach(i => {
-    const nameEl = i.querySelector('.ch-name');
-    i.classList.toggle('active', !!nameEl && nameEl.textContent === name);
-  });
+  if (bcChapter) bcChapter.textContent = (icon||'🏫') + ' ' + name + (grade ? ' · Class ' + grade : '') + (chapter ? ' · ' + chapter : '');
   renderOthersView();
 }
 
@@ -1806,17 +2259,13 @@ function renderOthersView() {
   const bodyWrap = document.getElementById('othersBody');
   if (!tabsWrap || !bodyWrap) return;
 
-  const institutes = Object.keys(OTHERS_TREE);
-  let tabsHtml = `<div class="desc-tabs" style="margin-bottom:10px;">
-    ${institutes.map(name => `<div class="pyq-tab${name===OTH.institute?' active':''}" onclick="selectOthersInstitute('${name.replace(/'/g,"\\'")}')">${name}</div>`).join('')}
-  </div>`;
-
   if (!OTH.institute) {
-    tabsWrap.innerHTML = tabsHtml;
-    bodyWrap.innerHTML = `<div class="no-content-state"><div class="no-content-icon">🏫</div><h3>Select an institute</h3><p>Pick an institute above to view its material.</p></div>`;
+    tabsWrap.innerHTML = '';
+    bodyWrap.innerHTML = `<div class="no-content-state"><div class="no-content-icon">🏫</div><h3>Select an institute</h3><p>Pick an institute and grade from the sidebar to view its material.</p></div>`;
     return;
   }
 
+  let tabsHtml = '';
   let node = OTHERS_TREE[OTH.institute];
   let level = 0;
   while (node && !node.type) {
@@ -1834,6 +2283,11 @@ function renderOthersView() {
 
   if (!node) {
     bodyWrap.innerHTML = `<div class="no-content-state"><div class="no-content-icon">🎯</div><h3>Coming soon</h3><p>This section is being prepared.</p></div>`;
+    return;
+  }
+  if (node.type === 'leveled') {
+    if (IIT_LVL.node !== node) loadIITLeveledNode(node, bodyWrap);
+    else renderIITLevelSection(node, bodyWrap);
     return;
   }
   loadOthersLeaf(node);
@@ -1862,88 +2316,9 @@ async function loadOthersLeaf(node) {
   }
 }
 
-/* ══════════════════════════════════════════════════════════════════ */
-/* 🏛️ IIT FOUNDATION — PREMIER INSTITUTES                              */
-/* Reuses OTHERS_TREE + the shared .pyq-tab component + buildQuestionCardsHTML */
-/* ══════════════════════════════════════════════════════════════════ */
-const IIT_INST = { institute:null, path:[] };
-const IIT_LVL = { node:null, levelId:null, arrays:{} };
-
-function renderIITInstitutesView() {
-  if (!IIT_INST.institute) IIT_INST.institute = Object.keys(OTHERS_TREE)[0];
-  renderIITInstBody();
-}
-function selectIITInstitute(name) {
-  IIT_INST.institute = name;
-  IIT_INST.path = [];
-  renderIITInstBody();
-}
-function iitInstNavigate(level, key) {
-  IIT_INST.path = IIT_INST.path.slice(0, level);
-  IIT_INST.path.push(key);
-  renderIITInstBody();
-}
-function renderIITInstBody() {
-  const tabsWrap = document.getElementById('iitInstTabsWrap');
-  const bodyWrap = document.getElementById('iitInstBody');
-  if (!tabsWrap || !bodyWrap) return;
-
-  const institutes = Object.keys(OTHERS_TREE);
-  const activeIdx = institutes.indexOf(IIT_INST.institute);
-  const parentItems = institutes.map((name,i) => `<div class="iit-parent-item${name===IIT_INST.institute?' active':''}" style="--pc:${iitColor(i)};" onclick="selectIITInstitute('${name.replace(/'/g,"\\'")}')">${(INSTITUTE_ICONS[name]||'🏫')} ${name}</div>`);
-
-  let node = OTHERS_TREE[IIT_INST.institute];
-  let level = 0;
-  let subHtml = '';
-  let leafAccent = iitColor(institutes.indexOf(IIT_INST.institute));
-  while (node && !node.type) {
-    const keys = Object.keys(node);
-    const selectedKey = (IIT_INST.path[level] !== undefined && node[IIT_INST.path[level]]) ? IIT_INST.path[level] : keys[0];
-    IIT_INST.path[level] = selectedKey;
-    leafAccent = iitColor(keys.indexOf(selectedKey));
-    subHtml += `<div class="iit-sub-row">
-      ${keys.map((k,ki) => `<div class="iit-sub-pill${k===selectedKey?' active':''}" style="--sc:${iitColor(ki)};" onclick="iitInstNavigate(${level},'${k.replace(/'/g,"\\'")}')">${k}</div>`).join('')}
-    </div>`;
-    node = node[selectedKey];
-    level++;
-  }
-  IIT_INST.path = IIT_INST.path.slice(0, level);
-  tabsWrap.innerHTML = iitInlineHTML(parentItems, activeIdx, subHtml);
-
-  if (!node) {
-    bodyWrap.innerHTML = `<div class="no-content-state"><div class="no-content-icon">🏛️</div><h3>Coming soon</h3><p>This section is being prepared.</p></div>`;
-    return;
-  }
-  if (node.type === 'leveled') {
-    if (IIT_LVL.node !== node) loadIITLeveledNode(node, bodyWrap);
-    else renderIITLevelSection(node, bodyWrap);
-    return;
-  }
-  loadIITInstLeaf(node, bodyWrap, leafAccent);
-}
-async function loadIITInstLeaf(node, bodyWrap, accentColor) {
-  bodyWrap.innerHTML = spinnerHTML('🏛️','Loading…');
-  window.othersQuestionData = undefined;
-  document.querySelectorAll('[data-iitinstq]').forEach(s=>s.remove());
-  IIT_PRACTICE.index = 0;
-  await new Promise(res => {
-    const s = document.createElement('script');
-    s.dataset.iitinstq = '1'; s.src = node.file;
-    s.onload = s.onerror = res; document.head.appendChild(s);
-  });
-  const qArray = window.othersQuestionData || [];
-  ACTIVE_QARRAY = qArray;
-  if (node.type === 'desc') {
-    qArray.length
-      ? renderDesc(qArray, bodyWrap)
-      : renderComingSoon(bodyWrap,'✏️','Descriptive Questions','Descriptive questions for this section are being added.');
-  } else {
-    bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:false, accentColor});
-    finalizeQuestionCards(bodyWrap, qArray);
-  }
-}
 /* Leveled leaf (e.g. Narayana/Sri Chaitanya JEE Main|Advanced → Level 1-5): loads all levels once,
    assigns CONTINUOUS global question numbers across levels, then filters the display by selected level. */
+const IIT_LVL = { node:null, levelId:null, arrays:{} };
 async function loadIITLeveledNode(node, bodyWrap) {
   bodyWrap.innerHTML = spinnerHTML('🏛️','Loading…');
   document.querySelectorAll('[data-iitlvl]').forEach(s=>s.remove());
@@ -1968,7 +2343,7 @@ async function loadIITLeveledNode(node, bodyWrap) {
 }
 function selectIITLevel(levelId) {
   IIT_LVL.levelId = levelId;
-  renderIITLevelSection(IIT_LVL.node, document.getElementById('iitInstBody'));
+  renderIITLevelSection(IIT_LVL.node, document.getElementById('othersBody'));
 }
 function renderIITLevelSection(node, bodyWrap) {
   const accent = node.dot || 'var(--brand)';
@@ -2520,6 +2895,7 @@ function filterGlossary(q) {
 /* ══════ PYQ LOADER ══════ */
 async function loadPYQ() {
   if (!CUR.slug || !CUR.hasPyq) { renderNoPYQ(); return; }
+  PYQ_VIEW.index = {};
   const [board, gradeNum] = parseGradeId(CUR.grade);
   // Clear + show loading
   PYQ_TYPES.forEach(t => {
@@ -2564,6 +2940,59 @@ function applyOptionsLayout(scope) {
   });
 }
 
+/* ══ PYQ ☰ All Questions / 🎯 Single Question view toggle (CBSE PYQ tab bar) ══ */
+const PYQ_VIEW = { mode: 'list', index: {} };
+/* ══ PYQ table field → HTML table (e.g. I–V data tables) ══ */
+function pyqTableHTML(table) {
+  if (!table || !table.headers) return '';
+  const rows = [table.headers, ...(table.rows || [])];
+  return `<div class="pyq-table-wrap"><table class="pyq-table"><tbody>
+    ${rows.map(r => `<tr>${r.map(c => `<td>${mathify(c)}</td>`).join('')}</tr>`).join('')}
+  </tbody></table></div>`;
+}
+function pyqNavHTML(typeId) {
+  return `<div class="iit-practice-nav" id="pyqNav-${typeId}" style="display:none;">
+    <div class="iit-nav-group">
+      <button class="iit-nav-btn" id="pyqPrev-${typeId}" onclick="pyqJump('${typeId}',(PYQ_VIEW.index['${typeId}']||0)-1)">◀ Previous</button>
+      <button class="iit-nav-btn" id="pyqNext-${typeId}" onclick="pyqJump('${typeId}',(PYQ_VIEW.index['${typeId}']||0)+1)">Next ▶</button>
+    </div>
+    <span class="iit-nav-progress" id="pyqProgress-${typeId}"></span>
+  </div>`;
+}
+function applyPyqViewMode(sec) {
+  if (!sec) return;
+  const typeId = sec.id.replace('pyq-', '');
+  const cards = sec.querySelectorAll(`[data-pyq-type="${typeId}"]`);
+  if (!cards.length) return;
+  const total = cards.length;
+  let idx = PYQ_VIEW.index[typeId] || 0;
+  if (idx >= total) idx = total - 1;
+  if (idx < 0) idx = 0;
+  PYQ_VIEW.index[typeId] = idx;
+  cards.forEach((c, i) => { c.style.display = (PYQ_VIEW.mode === 'list' || i === idx) ? '' : 'none'; });
+  const nav = document.getElementById('pyqNav-' + typeId);
+  if (nav) nav.style.display = PYQ_VIEW.mode === 'practice' ? 'flex' : 'none';
+  const prog = document.getElementById('pyqProgress-' + typeId);
+  if (prog) prog.textContent = (idx + 1) + ' of ' + total;
+  const prevBtn = document.getElementById('pyqPrev-' + typeId), nextBtn = document.getElementById('pyqNext-' + typeId);
+  if (prevBtn) prevBtn.disabled = idx === 0;
+  if (nextBtn) nextBtn.disabled = idx === total - 1;
+}
+function pyqJump(typeId, idx) {
+  const sec = document.getElementById('pyq-' + typeId); if (!sec) return;
+  const total = sec.querySelectorAll(`[data-pyq-type="${typeId}"]`).length;
+  if (idx < 0 || idx >= total) return;
+  PYQ_VIEW.index[typeId] = idx;
+  applyPyqViewMode(sec);
+}
+function setPyqViewMode(mode) {
+  PYQ_VIEW.mode = mode;
+  const listBtn = document.getElementById('pyqListBtn'), singleBtn = document.getElementById('pyqSingleBtn');
+  if (listBtn) listBtn.classList.toggle('active', mode === 'list');
+  if (singleBtn) singleBtn.classList.toggle('active', mode === 'practice');
+  document.querySelectorAll('.pyq-section').forEach(applyPyqViewMode);
+}
+
 function badges(q, marksType = '') {
   const setClass = marksType ? `set-badge-${marksType}mark` : 'set-badge';
   return `<div class="mcq-card-badges">
@@ -2573,15 +3002,15 @@ function badges(q, marksType = '') {
 
 function renderObjectiveSection(data, el) {
   data.forEach((q, idx) => {
-    const c = document.createElement('div'); c.className='mcq-card';
+    const c = document.createElement('div'); c.className='mcq-card'; c.dataset.pyqType='mcq';
     c.innerHTML = `<div class="mcq-card-top">
       <div class="qno mcq">${idx+1}</div>
       <div style="flex:1">
         <div class="q-header-row" style="margin-bottom:9px;">
           <div class="q-text" style="font-size:13.5px;line-height:1.8;">${mathify(q.question)}</div>
-          <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
+          <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-mcq">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
         </div>
-        <div class="options" data-answer="${q.answer}">
+        <div class="options ${optionsLayoutClass(q.options)}" data-answer="${q.answer}">
           ${Object.entries(q.options).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${mathify(v)}</div>`).join('')}
         </div>
         <div class="explanation">💡 Explanation will be updated shortly.</div>
@@ -2589,14 +3018,16 @@ function renderObjectiveSection(data, el) {
     </div>`;
     el.appendChild(c);
   });
+  el.insertAdjacentHTML('beforeend', pyqNavHTML('mcq'));
   applyOptionsLayout(el);
+  applyPyqViewMode(el);
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
 }
 
 function renderARSection(data, el) {
   const opts = {A:'Both A & R true; R is correct explanation',B:'Both A & R true; R is not correct explanation',C:'A is true, R is false',D:'A is false, R is true'};
   data.forEach((q, idx) => {
-    const c = document.createElement('div'); c.className='mcq-card';
+    const c = document.createElement('div'); c.className='mcq-card'; c.dataset.pyqType='ar';
     c.innerHTML = `<div class="mcq-card-top">
       <div class="qno ar">${idx+1}</div>
       <div style="flex:1">
@@ -2605,9 +3036,9 @@ function renderARSection(data, el) {
             <div style="font-size:13px;line-height:1.8;margin-bottom:5px;"><strong>Assertion:</strong> ${mathify(q.assertion)}</div>
             <div style="font-size:13px;line-height:1.8;margin-bottom:9px;"><strong>Reason:</strong> ${mathify(q.reason)}</div>
           </div>
-          <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
+          <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-ar">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
         </div>
-        <div class="options" data-answer="${q.answer}">
+        <div class="options ${optionsLayoutClass(opts)}" data-answer="${q.answer}">
           ${Object.entries(opts).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}
         </div>
         <div class="explanation">💡 Explanation will be updated shortly.</div>
@@ -2615,7 +3046,9 @@ function renderARSection(data, el) {
     </div>`;
     el.appendChild(c);
   });
+  el.insertAdjacentHTML('beforeend', pyqNavHTML('ar'));
   applyOptionsLayout(el);
+  applyPyqViewMode(el);
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
 }
 
@@ -2623,20 +3056,31 @@ function renderWrittenSection(data, el, type) {
   const markClass = type === 'one' ? 'set-badge-1mark' : type === 'two' ? 'set-badge-2mark' : type === 'three' ? 'set-badge-3mark' : type === 'four' ? 'set-badge-4mark' : 'set-badge-5mark';
   const typeId = type === 'one' ? 'one' : type === 'two' ? 'two' : type === 'three' ? 'three' : type === 'four' ? 'four' : 'five';
   let html = `<button id="pyq-toggle-all-${typeId}" class="pyq-toggle-all-btn pyq-toggle-${typeId}" onclick="toggleAllPYQ('${typeId}')">Show Answers</button>`;
-  html += data.map((q, idx) => `
+  html += data.map((q, idx) => {
+    const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:${q.imageWidth} !important;max-width:${q.imageWidth} !important;"` : ''}>` : '';
+    let qHtml = mathify(q.question);
+    if (imageHtml) qHtml = qHtml.includes('[[image]]') ? qHtml.replace('[[image]]', imageHtml) : qHtml + imageHtml;
+    const tableHtml = q.table ? pyqTableHTML(q.table) : '';
+    let tableBelow = tableHtml;
+    if (tableHtml && qHtml.includes('[[table]]')) { qHtml = qHtml.replace('[[table]]', tableHtml); tableBelow = ''; }
+    return `
     <div class="pyq-question-item" data-pyq-id="${idx}" data-pyq-type="${typeId}">
       <div class="pyq-question-top" onclick="togglePYQAnswer('${typeId}', ${idx})" style="cursor:pointer;">
         <div class="qno ${type}" style="flex-shrink:0;">${idx+1}</div>
         <div style="flex:1;">
-          <div style="font-size:13.5px;line-height:1.8;">${mathify(q.question)}</div>
+          <div style="font-size:13.5px;line-height:1.8;">${qHtml}</div>
+          ${tableBelow}
         </div>
-        <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
+        <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-${typeId}">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
         <span class="pyq-q-icon" data-icon-id="${typeId}-${idx}">▶</span>
       </div>
       <div class="pyq-answer" id="pyq-ans-${typeId}-${idx}" style="display:none;">${mathify(q.answer)||'Answer will be updated shortly.'}</div>
     </div>
-  `).join('');
+  `;
+  }).join('');
+  html += pyqNavHTML(typeId);
   el.innerHTML = html;
+  applyPyqViewMode(el);
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
 }
 function togglePYQAnswer(typeId, idx) {
