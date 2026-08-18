@@ -268,6 +268,39 @@ mjx-container[display="true"]{margin:8px 0 !important;}
   .n-two-col{grid-template-columns:1fr;}
 }
 
+/* ══ Colourful section palette + 3D quick-jump tabs + collapsible Q&A ══ */
+.n-clr0{background:linear-gradient(135deg,#6366f1,#818cf8);box-shadow:0 3px 10px rgba(99,102,241,.35),inset 0 1px 0 rgba(255,255,255,.15);}
+.n-clr1{background:linear-gradient(135deg,#f97316,#fb923c);box-shadow:0 3px 10px rgba(249,115,22,.35),inset 0 1px 0 rgba(255,255,255,.15);}
+.n-clr2{background:linear-gradient(135deg,#10b981,#34d399);box-shadow:0 3px 10px rgba(16,185,129,.35),inset 0 1px 0 rgba(255,255,255,.15);}
+.n-clr3{background:linear-gradient(135deg,#ec4899,#f472b6);box-shadow:0 3px 10px rgba(236,72,153,.35),inset 0 1px 0 rgba(255,255,255,.15);}
+.n-clr4{background:linear-gradient(135deg,#0ea5e9,#38bdf8);box-shadow:0 3px 10px rgba(14,165,233,.35),inset 0 1px 0 rgba(255,255,255,.15);}
+.n-clr5{background:linear-gradient(135deg,#eab308,#facc15);box-shadow:0 3px 10px rgba(234,179,8,.35),inset 0 1px 0 rgba(255,255,255,.15);}
+.n-clr6{background:linear-gradient(135deg,#a855f7,#c084fc);box-shadow:0 3px 10px rgba(168,85,247,.35),inset 0 1px 0 rgba(255,255,255,.15);}
+.n-clr7{background:linear-gradient(135deg,#ef4444,#f87171);box-shadow:0 3px 10px rgba(239,68,68,.35),inset 0 1px 0 rgba(255,255,255,.15);}
+.notes-section.n-b0{border-left:3px solid #6366f1;}
+.notes-section.n-b1{border-left:3px solid #f97316;}
+.notes-section.n-b2{border-left:3px solid #10b981;}
+.notes-section.n-b3{border-left:3px solid #ec4899;}
+.notes-section.n-b4{border-left:3px solid #0ea5e9;}
+.notes-section.n-b5{border-left:3px solid #eab308;}
+.notes-section.n-b6{border-left:3px solid #a855f7;}
+.notes-section.n-b7{border-left:3px solid #ef4444;}
+
+.notes-quicknav{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 16px;margin-bottom:2px;}
+.notes-quicknav::-webkit-scrollbar{height:4px;}
+.notes-quicknav-btn{width:36px;height:36px;border-radius:11px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17px;cursor:pointer;border:1px solid rgba(255,255,255,.14);transition:transform .15s,box-shadow .15s;}
+.notes-quicknav-btn:hover{transform:translateY(-3px) scale(1.08);}
+.notes-quicknav-btn:active{transform:translateY(-1px) scale(.97);}
+
+.n-qa-card{background:var(--bg3);border:1px solid var(--card-border);border-radius:11px;margin:8px 0;overflow:hidden;transition:border-color .15s;cursor:pointer;}
+.n-qa-card:hover{border-color:rgba(99,102,241,.35);}
+.n-qa-q{display:flex;align-items:center;gap:10px;padding:11px 14px;font-size:13px;font-weight:700;color:var(--text);line-height:1.6;}
+.n-qa-q-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.n-qa-arrow{margin-left:auto;flex-shrink:0;font-size:11px;color:var(--text-muted);transition:transform .2s;}
+.n-qa-card.open .n-qa-arrow{transform:rotate(180deg);}
+.n-qa-answer{display:none;padding:0 14px 13px 46px;font-size:12.5px;line-height:1.85;color:var(--text-sub);border-top:1px dashed var(--divider);}
+.n-qa-card.open .n-qa-answer{display:block;padding-top:10px;margin-top:2px;animation:slideDown .25s ease-out;}
+
 /* ══ NOTES EXTRAS (Law boxes, Compare grids) ══ */
 .n-law-box{background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(6,182,212,.06));border:1px solid rgba(99,102,241,.3);border-radius:12px;padding:14px 18px;margin:10px 0;}
 .n-law-title{font-size:12.5px;font-weight:800;color:var(--brand);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
@@ -488,6 +521,9 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .pyq-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(251,146,60,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-pyq);animation:slideDown .3s ease-out;}
 .pyq-table{border-collapse:collapse;margin:10px auto 4px;font-size:12.5px;}
 .pyq-table-wrap{overflow-x:auto;}
+.q-part{margin-top:8px;}
+.q-part:first-child{margin-top:0;}
+.q-subpart{margin:5px 0 5px 22px;}
 .pyq-table td{border:1px solid var(--card-border);padding:6px 12px;text-align:center;white-space:nowrap;color:var(--text);}
 .pyq-table td:first-child{font-weight:700;background:var(--bg3);}
 
@@ -560,7 +596,24 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .iit-palette::-webkit-scrollbar{display:none;}
 .iit-palette-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;background:var(--card-bg);border:1px solid var(--card-border);color:var(--text-sub);cursor:pointer;transition:all .15s;}
 .iit-palette-num:hover{border-color:#a855f7;color:#a855f7;}
+.pyq-palette-wrap{padding-bottom:4px;margin-bottom:6px;}
+.pyq-palette-wrap .iit-palette{gap:4px;padding:5px 2px;}
+.pyq-palette-wrap .iit-palette-num{width:20px;height:20px;font-size:10px;}
 .iit-palette-num.current{background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:#a855f7;color:#fff;font-weight:800;box-shadow:0 0 0 3px rgba(168,85,247,.3),0 2px 10px rgba(124,58,237,.5);}
+.iit-palette-num.pt-mcq:hover{border-color:#a855f7;color:#a855f7;}
+.iit-palette-num.pt-ar:hover{border-color:#fb923c;color:#fb923c;}
+.iit-palette-num.pt-one:hover{border-color:#84cc16;color:#84cc16;}
+.iit-palette-num.pt-two:hover{border-color:#22c55e;color:#22c55e;}
+.iit-palette-num.pt-three:hover{border-color:#f87171;color:#f87171;}
+.iit-palette-num.pt-four:hover{border-color:#38bdf8;color:#38bdf8;}
+.iit-palette-num.pt-five:hover{border-color:#f472b6;color:#f472b6;}
+.iit-palette-num.current.pt-mcq{background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:#a855f7;box-shadow:0 0 0 3px rgba(168,85,247,.3),0 2px 10px rgba(124,58,237,.5);}
+.iit-palette-num.current.pt-ar{background:linear-gradient(135deg,#f97316,#fb923c);border-color:#fb923c;box-shadow:0 0 0 3px rgba(251,146,60,.3),0 2px 10px rgba(249,115,22,.5);}
+.iit-palette-num.current.pt-one{background:linear-gradient(135deg,#4d7c0b,#84cc16);border-color:#84cc16;box-shadow:0 0 0 3px rgba(132,204,22,.3),0 2px 10px rgba(77,124,11,.5);}
+.iit-palette-num.current.pt-two{background:linear-gradient(135deg,#15803d,#22c55e);border-color:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.3),0 2px 10px rgba(21,128,61,.5);}
+.iit-palette-num.current.pt-three{background:linear-gradient(135deg,#b91c1c,#f87171);border-color:#f87171;box-shadow:0 0 0 3px rgba(248,113,113,.3),0 2px 10px rgba(185,28,28,.5);}
+.iit-palette-num.current.pt-four{background:linear-gradient(135deg,#0369a1,#38bdf8);border-color:#38bdf8;box-shadow:0 0 0 3px rgba(56,189,248,.3),0 2px 10px rgba(3,105,161,.5);}
+.iit-palette-num.current.pt-five{background:linear-gradient(135deg,#be185d,#f472b6);border-color:#f472b6;box-shadow:0 0 0 3px rgba(244,114,182,.3),0 2px 10px rgba(190,24,93,.5);}
 .iit-practice-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:6px;}
 .iit-circle-qno{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .iit-progress-text{font-size:11.5px;font-weight:700;color:var(--text-sub);}
@@ -1448,6 +1501,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="global-view-toggle" id="pyqViewToggle">
         <button class="gv-btn active" id="pyqListBtn" title="All Questions" onclick="setPyqViewMode('list')">☰</button>
         <button class="gv-btn" id="pyqSingleBtn" title="Single Question" onclick="setPyqViewMode('practice')">🎯</button>
+        <button class="gv-btn" id="pyqShowAnsBtn" title="Show Answers" onclick="pyqToggleAnswersActive()" style="display:none;">👁</button>
       </div>
     </div>
 
@@ -1790,13 +1844,21 @@ async function loadNotes() {
 }
 
 function renderNotes(d, wrap) {
+  const secs = d.sections || [];
+  const quicknav = secs.length > 1 ? `<div class="notes-quicknav">${secs.map((s,i)=>`<div class="notes-quicknav-btn n-clr${i%8}" title="${s.heading}" onclick="scrollToNotesSection(${i})">${s.icon||'📌'}</div>`).join('')}</div>` : '';
   wrap.innerHTML = `<div class="notes-title"><span class="n-sec-icon" style="width:38px;height:38px;font-size:20px;">${d.icon||'📖'}</span>${d.title}<span style="font-size:11px;font-weight:500;color:var(--text-muted);margin-left:4px;">Class ${d.grade}</span></div>`
-    + (d.sections||[]).map(s =>
-      `<div class="notes-section"><div class="notes-section-heading"><span class="n-sec-icon">${s.icon||'📌'}</span>${s.heading}</div>${mathify(s.content)}</div>`
+    + quicknav
+    + secs.map((s,i) =>
+      `<div class="notes-section n-b${i%8}" id="notes-sec-${i}"><div class="notes-section-heading"><span class="n-sec-icon n-clr${i%8}">${s.icon||'📌'}</span>${s.heading}</div>${mathify(s.content)}</div>`
     ).join('');
   // Trigger MathJax rendering for formulas in notes
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
 }
+function scrollToNotesSection(i) {
+  const el = document.getElementById('notes-sec-' + i);
+  if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+function toggleNoteQA(el) { el.classList.toggle('open'); }
 
 /* ══════ DESCRIPTIVE ══════ */
 async function loadDesc() {
@@ -2950,6 +3012,12 @@ function pyqTableHTML(table) {
     ${rows.map(r => `<tr>${r.map(c => `<td>${mathify(c)}</td>`).join('')}</tr>`).join('')}
   </tbody></table></div>`;
 }
+function pyqPaletteHTML(typeId, count) {
+  const nums = Array.from({length: count}, (_, i) => `<div class="iit-palette-num pt-${typeId}${i===0?' current':''}" onclick="pyqJump('${typeId}',${i})">${i+1}</div>`).join('');
+  return `<div class="iit-palette-wrap pyq-palette-wrap" id="pyqPalette-${typeId}" style="display:none;">
+    <div class="iit-palette">${nums}</div>
+  </div>`;
+}
 function pyqNavHTML(typeId) {
   return `<div class="iit-practice-nav" id="pyqNav-${typeId}" style="display:none;">
     <div class="iit-nav-group">
@@ -2970,6 +3038,11 @@ function applyPyqViewMode(sec) {
   if (idx < 0) idx = 0;
   PYQ_VIEW.index[typeId] = idx;
   cards.forEach((c, i) => { c.style.display = (PYQ_VIEW.mode === 'list' || i === idx) ? '' : 'none'; });
+  const palette = document.getElementById('pyqPalette-' + typeId);
+  if (palette) {
+    palette.style.display = PYQ_VIEW.mode === 'practice' ? 'block' : 'none';
+    palette.querySelectorAll('.iit-palette-num').forEach((el, i) => el.classList.toggle('current', i === idx));
+  }
   const nav = document.getElementById('pyqNav-' + typeId);
   if (nav) nav.style.display = PYQ_VIEW.mode === 'practice' ? 'flex' : 'none';
   const prog = document.getElementById('pyqProgress-' + typeId);
@@ -3001,6 +3074,7 @@ function badges(q, marksType = '') {
 }
 
 function renderObjectiveSection(data, el) {
+  el.innerHTML = pyqPaletteHTML('mcq', data.length);
   data.forEach((q, idx) => {
     const c = document.createElement('div'); c.className='mcq-card'; c.dataset.pyqType='mcq';
     c.innerHTML = `<div class="mcq-card-top">
@@ -3026,6 +3100,7 @@ function renderObjectiveSection(data, el) {
 
 function renderARSection(data, el) {
   const opts = {A:'Both A & R true; R is correct explanation',B:'Both A & R true; R is not correct explanation',C:'A is true, R is false',D:'A is false, R is true'};
+  el.innerHTML = pyqPaletteHTML('ar', data.length);
   data.forEach((q, idx) => {
     const c = document.createElement('div'); c.className='mcq-card'; c.dataset.pyqType='ar';
     c.innerHTML = `<div class="mcq-card-top">
@@ -3055,7 +3130,7 @@ function renderARSection(data, el) {
 function renderWrittenSection(data, el, type) {
   const markClass = type === 'one' ? 'set-badge-1mark' : type === 'two' ? 'set-badge-2mark' : type === 'three' ? 'set-badge-3mark' : type === 'four' ? 'set-badge-4mark' : 'set-badge-5mark';
   const typeId = type === 'one' ? 'one' : type === 'two' ? 'two' : type === 'three' ? 'three' : type === 'four' ? 'four' : 'five';
-  let html = `<button id="pyq-toggle-all-${typeId}" class="pyq-toggle-all-btn pyq-toggle-${typeId}" onclick="toggleAllPYQ('${typeId}')">Show Answers</button>`;
+  let html = pyqPaletteHTML(typeId, data.length);
   html += data.map((q, idx) => {
     const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:${q.imageWidth} !important;max-width:${q.imageWidth} !important;"` : ''}>` : '';
     let qHtml = mathify(q.question);
@@ -3106,10 +3181,11 @@ function toggleAllPYQ(typeId) {
   updatePYQToggleBtn(typeId);
 }
 function updatePYQToggleBtn(typeId) {
-  const btn = document.getElementById(`pyq-toggle-all-${typeId}`);
+  if (CUR_PYQ_TAB !== typeId) return;
+  const btn = document.getElementById('pyqShowAnsBtn');
   const answers = document.querySelectorAll(`[id^="pyq-ans-${typeId}-"]`);
-  const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
-  if (btn) btn.textContent = allOpen ? 'Hide Answers' : 'Show Answers';
+  const allOpen = answers.length > 0 && Array.from(answers).every(a => a.style.display !== 'none');
+  if (btn) { btn.classList.toggle('active', allOpen); btn.title = allOpen ? 'Hide Answers' : 'Show Answers'; }
 }
 
 function renderNoPYQ() {
@@ -3119,12 +3195,24 @@ function renderNoPYQ() {
   });
 }
 
+let CUR_PYQ_TAB = 'mcq';
 function showPyqSec(id, el) {
   document.querySelectorAll('#pyq-tabbar .pyq-tab').forEach(t=>t.classList.remove('active'));
   if(el) el.classList.add('active');
   document.querySelectorAll('.pyq-section').forEach(s=>s.style.display='none');
   const sec = document.getElementById('pyq-'+id); if(sec) sec.style.display='block';
   document.getElementById('content').scrollTop=0;
+  CUR_PYQ_TAB = id;
+  const ansBtn = document.getElementById('pyqShowAnsBtn');
+  if (ansBtn) {
+    const showable = id !== 'mcq' && id !== 'ar';
+    ansBtn.style.display = showable ? 'inline-flex' : 'none';
+    if (showable) updatePYQToggleBtn(id);
+  }
+}
+function pyqToggleAnswersActive() {
+  if (CUR_PYQ_TAB === 'mcq' || CUR_PYQ_TAB === 'ar') return;
+  toggleAllPYQ(CUR_PYQ_TAB);
 }
 
 /* ══════ Objective CLICK HANDLERS ══════ */
