@@ -121,23 +121,72 @@ window.pyqsData.three = [
   },
   set: "31/2/1",
   year: "2026"
-}
+  },
+  
+  {
+  question: `<div class="q-part">(a) Name a device which is used to:</div>
+  <div class="q-subpart">(i) Maintain a constant potential difference in a circuit</div>
+  <div class="q-subpart">(ii) Change the electric current in an electric circuit.</div>
+  <div class="q-part">(b) When the potential difference between the terminals of an electric heater is 110 V, a current of 5 A flows through it. What will be the value of current flowing through it when the potential difference is increased to 220 V?</div>`,
+  set: "31/3/1",
+  year: "2026"
+  },
+   
+  {
+  question: `<div class="q-part">Consider the given electric circuit:</div>
+  [[image]]
+  <div class="q-part">Calculate the following:</div>
+  <div class="q-subpart">(a) Total resistance of the circuit</div>
+  <div class="q-subpart">(b) The electric current drawn from the battery</div>
+  <div class="q-subpart">(c) Potential difference between points P and Q</div>`,
+  image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/electricity/electricity-2026-31-3-1.png",
+  imageWidth: "35%",
+  set: "31/3/1",
+  year: "2026"
+  },
+  {
+  question: `<div class="q-part">(a) State Ohm’s law and justify that V-I graph for Ohm's law will always be a straight line passing through the origin.</div>
+  <div class="q-part">(b) The figure shows V-I graphs for two identical wires A and B having the same length and area of cross-section, but made of different materials. Which of these wires will be more suitable for making the heating element of an electric heater and why? </div>`,
+  image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/electricity/electricity-2026-31-3-3.png",
+  imageWidth: "30%",
+  set: "31/3/3",
+  year: "2026"
+  },
+  {
+   question: `<div class="q-part">(a) Why does an electric bulb become dim when an electric heater in parallel circuit is switched ON? </div>
+   <div class="q-part">(b) How to connect three resistors each of resistance 8 Ω, so that the equivalent resistance of the combination is 12 Ω? Draw diagram of the combination and justify your answer</div>`,
+   set: "31/5/1",
+   year: "2026"
+  },
+  
 ];
 
 window.pyqsData.four = [
   {
-    question: "Sample 4-mark question for Electricity.",
-    answer: "Sample 4-mark answer.",
-    set: "SET 1",
-    year: "2024"
+    question: `<div class="q-part">Four cells, a thin wire AB, a voltmeter, an ammeter, a plug key and some thick connecting wires are taken. The circuit is set up as shown below.</div>
+[[image]]
+<div class="q-part">The key is inserted into the plug and readings of ammeter (I) and voltmeter (V) are noted. Then the plug key is removed. Now two cells are connected in the circuit in series. Plugging in the key the new values of 'V' and 'I' are noted. The experiment is repeated by connecting three cells in series and then four cells. In each case 'V' and 'I' are noted.</div>
+<div class="q-subpart">(A) Why was the plug key removed after each measurement of 'V' and 'I' and inserted again for the next step?</div>
+<div class="q-subpart">(B) What change takes place in the reading of the voltmeter when a new cell is added in series in the circuit? Give reason.</div>
+<div class="q-subpart">(C) In which case will the readings of voltmeter and ammeter be maximum in the above experiment? What conclusion can be drawn from the straight line graph between 'V' and 'I'?</div>
+<div class="q-part" style="text-align:center;font-weight:700;">OR</div>
+<div class="q-subpart">(C) Suppose this experiment is carried out using only one cell but wires of same length & thickness but made of different materials like nichrome wire, fuse wire, copper wire and iron wire which are replaced one by one. Out of V and I which will change and why?</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/electricity/electricity-4m-2026-31-8-1.png",
+    imageWidth: "35%",
+    set: "31/3/1",
+    year: "2026"
   }
 ];
 
 window.pyqsData.five = [
-  {
-    question: "Sample 5-mark question for Electricity.",
-    answer: "Sample 5-mark answer.",
-    set: "SET 1",
-    year: "2024"
-  }
+{
+  question: `<div class="q-part">A smart home uses energy monitoring system to track electricity usage of appliances. In a month of 30 days, the following devices are used:</div>
+<div class="q-subpart">1. An electric heater of 1500 W used for 4 hours daily.</div>
+<div class="q-subpart">2. A microwave oven rated at 1.5 kW used for 3 hours daily.</div>
+<div class="q-part">(i) Define electric power and write its SI unit.</div>
+<div class="q-part">(ii) Calculate the total energy consumed in joules and kWh in a whole month.</div>
+<div class="q-part">(iii) Find out the total cost of electricity for running both appliances for a month of 30 days if the cost of 1 unit is ₹7.</div>`,
+  set: "31/7/1",
+  year: "2026"
+},
 ];
