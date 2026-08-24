@@ -441,7 +441,7 @@ window.iitOthersData = {
   "name": "WS-3",
   "questions": [
     {
-      "question": "The prefix <i>‘milli’</i> is used for the sub multiple .....",
+      "question": "The prefix <i>‘milli’</i> is used for the sub multiple ________",
       "options": {
         "A": "1/10",
         "B": "1/100",
@@ -455,7 +455,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "The prefix ‘kilo’ is used for the sub multiple.......",
+      "question": "The prefix ‘kilo’ is used for the sub multiple ____________",
       "options": {
         "A": "10²",
         "B": "10³",
@@ -463,13 +463,13 @@ window.iitOthersData = {
         "D": "10⁵"
       },
       "answer": "B",
-      "explanation": "The prefix ‘kilo’ represents 10³.",
+      "explanation": "The prefix ‘kilo’ represents 10³",
       "paper": "WS-3",
       "marks": 1
     },
 
     {
-      "question": "The prefix ‘nano’ is used for the sub multiple .........",
+      "question": "The prefix ‘nano’ is used for the sub multiple _________",
       "options": {
         "A": "10⁻³",
         "B": "10⁻⁹",
@@ -483,7 +483,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "The prefix ‘pico’ is used for the sub multiple ....",
+      "question": "The prefix ‘pico’ is used for the sub multiple _______",
       "options": {
         "A": "10¹²",
         "B": "10⁻¹²",
@@ -491,13 +491,13 @@ window.iitOthersData = {
         "D": "10⁻¹⁸"
       },
       "answer": "B",
-      "explanation": "The prefix ‘pico’ represents 10⁻¹².",
+      "explanation": "The prefix ‘pico’ represents 10⁻¹²",
       "paper": "WS-3",
       "marks": 1
     },
 
     {
-      "question": "The prefix ‘centi’ is used for the sub multiple ....",
+      "question": "The prefix ‘centi’ is used for the sub multiple ________",
       "options": {
         "A": "10⁻²",
         "B": "10²",
@@ -511,7 +511,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "The prefix ‘mega’ is used for the sub multiple .....",
+      "question": "The prefix ‘mega’ is used for the sub multiple ________",
       "options": {
         "A": "10⁻²",
         "B": "10²",
@@ -525,7 +525,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "The prefix ‘micro’ is used for the sub multiple ......",
+      "question": "The prefix ‘micro’ is used for the sub multiple _______",
       "options": {
         "A": "10⁻⁶",
         "B": "10⁶",
@@ -539,7 +539,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "The prefix ‘giga’ is used for the sub multiple ........",
+      "question": "The prefix ‘giga’ is used for the sub multiple ____________",
       "options": {
         "A": "10⁹",
         "B": "10¹²",
@@ -553,7 +553,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "The prefix ‘femto’ is used for the sub multiple .......",
+      "question": "The prefix ‘femto’ is used for the sub multiple __________",
       "options": {
         "A": "10⁻¹⁵",
         "B": "10¹⁵",
@@ -567,7 +567,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "The ratio of one micron to one nano meter .......",
+      "question": "The ratio of one micron to one nano meter ________",
       "options": {
         "A": "10³",
         "B": "10⁻³",
@@ -575,13 +575,13 @@ window.iitOthersData = {
         "D": "10⁻⁹"
       },
       "answer": "C",
-      "explanation": "1 micron = 10⁻⁶ m and 1 nanometer = 10⁻⁹ m. The ratio is 10³.",
+      "explanation": "1 micron = 10⁻⁶ m and 1 nanometer = 10⁻⁹ m. The ratio is 10³",
       "paper": "WS-3",
       "marks": 1
     },
 
     {
-      "question": "The power of a machine is 51.28 × 10⁵ watts which is equal to.....",
+      "question": "The power of a machine is 51.28 × 10⁵ watts which is equal to",
       "options": {
         "A": "51.28 kW",
         "B": "512.8 kW",
@@ -595,7 +595,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "Pressure acting on a body 1660 × 10⁹ Pa which is equal to.......",
+      "question": "Pressure acting on a body 1660 × 10⁹ Pa which is equal to",
       "options": {
         "A": "1.660 GPa",
         "B": "1660 GPa",
@@ -609,7 +609,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "If the capacity of a capacitor of 1.1 × 10⁻¹⁰ farad (F) which is equal to ....",
+      "question": "If the capacity of a capacitor of 1.1 × 10⁻¹⁰ farad (F) which is equal to",
       "options": {
         "A": "110 pF",
         "B": "110 μF",
@@ -623,7 +623,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "Resistance of a conductor 10 MΩ. Which is equal to ....",
+      "question": "Resistance of a conductor 10 MΩ. Which is equal to",
       "options": {
         "A": "1.0 × 10⁶ Ω",
         "B": "1.0 × 10⁷ Ω",
@@ -657,7 +657,7 @@ window.iitOthersData = {
   "name": "WS-4",
   "questions": [
     {
-      "question": "1 dyne is equal to ------- newton.",
+      "question": "1 dyne is equal to _______ newton.",
       "options": {
         "A": "10⁵",
         "B": "10⁻⁵",
@@ -671,7 +671,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "1 erg is equal to ----- joules",
+      "question": "1 erg is equal to ______ joules",
       "options": {
         "A": "10⁵",
         "B": "10⁻⁵",
@@ -685,7 +685,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "1 dyne/cm² = ----- newton/m²",
+      "question": "1 dyne/cm² = _______ newton/m²",
       "options": {
         "A": "10¹",
         "B": "10⁻¹",
@@ -699,7 +699,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "10³ N/m² = ----- dyne/cm²",
+      "question": "10³ N/m² = _____ dyne/cm²",
       "options": {
         "A": "10²",
         "B": "10⁻²",
@@ -783,7 +783,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "Boltzmann constant (K) 1.38 × 10⁻²³ J/K = ----- erg/K",
+      "question": "Boltzmann constant (K) 1.38 × 10⁻²³ J/K = _______ erg/K",
       "options": {
         "A": "1.38 × 10⁻¹⁶",
         "B": "1.38 × 10¹⁶",
@@ -825,7 +825,7 @@ window.iitOthersData = {
     },
 
     {
-      "question": "1 W = ----- erg/s",
+      "question": "1 W = _______ erg/s",
       "options": {
         "A": "10⁷",
         "B": "10⁸",
@@ -866,8 +866,405 @@ window.iitOthersData = {
       "marks": 1
     }
   ]
-}	
-	
+},	
+	// Use your existing others.js file content here.
+// Add the following Worksheet-5 object before the final closing ] };
+
+{
+  "name": "Worksheet-5",
+  "questions": [
+    {
+      "question": "1800 mg = ______ g",
+      "options": {
+        "A": "1.8",
+        "B": "18",
+        "C": "0.18",
+        "D": "180"
+      },
+      "answer": "A",
+      "explanation": "1000 mg = 1 g, so 1800 mg = 1.8 g.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "1000 g = ______ kg",
+      "options": {
+        "A": "1",
+        "B": "10",
+        "C": "100",
+        "D": "1000"
+      },
+      "answer": "A",
+      "explanation": "1000 g = 1 kg.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Convert 650 m to km.",
+      "options": {
+        "A": "6.5",
+        "B": "0.65",
+        "C": "65",
+        "D": "0.065"
+      },
+      "answer": "B",
+      "explanation": "1000 m = 1 km, so 650 m = 0.65 km.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "71 km = ______ m",
+      "options": {
+        "A": "71",
+        "B": "710",
+        "C": "7100",
+        "D": "71000"
+      },
+      "answer": "D",
+      "explanation": "1 km = 1000 m, so 71 km = 71000 m.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "The speed of a bike is 10 m/s. Calculate its speed in km/h.",
+      "options": {
+        "A": "72",
+        "B": "64",
+        "C": "36",
+        "D": "96"
+      },
+      "answer": "C",
+      "explanation": "10 × 3.6 = 36 km/h.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Number of minutes in a year = ______",
+      "options": {
+        "A": "5,25,600",
+        "B": "52560",
+        "C": "3,15,36,000",
+        "D": "Can't be determined."
+      },
+      "answer": "A",
+      "explanation": "365 × 24 × 60 = 5,25,600 minutes.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Convert 9 km into mm.",
+      "options": {
+        "A": "90,00,000",
+        "B": "9 × 10⁶",
+        "C": "90,000",
+        "D": "Both (A) and (B)"
+      },
+      "answer": "D",
+      "explanation": "9 km = 9 × 10⁶ mm = 90,00,000 mm.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "285 kg = ______ g",
+      "options": {
+        "A": "2.85 × 10⁵",
+        "B": "2.85 × 10³",
+        "C": "28500",
+        "D": "2850"
+      },
+      "answer": "A",
+      "explanation": "285 kg = 285000 g = 2.85 × 10⁵ g.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "1.5 hours = ______ min",
+      "options": {
+        "A": "9",
+        "B": "90",
+        "C": "900",
+        "D": "None of these"
+      },
+      "answer": "B",
+      "explanation": "1.5 × 60 = 90 minutes.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "The Metric unit of density is ______.",
+      "options": {
+        "A": "g.cm⁻³",
+        "B": "kg.cm⁻³",
+        "C": "kg.m⁻³",
+        "D": "g.m⁻³"
+      },
+      "answer": "C",
+      "explanation": "The SI unit of density is kg.m⁻³.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "1 cm³ = ______",
+      "options": {
+        "A": "10⁻⁹ m³",
+        "B": "10⁻⁶ m³",
+        "C": "10³ m",
+        "D": "10⁶ m³"
+      },
+      "answer": "B",
+      "explanation": "1 cm³ = (10⁻²)³ m³ = 10⁻⁶ m³.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "1 decimetre = ______ m",
+      "options": {
+        "A": "10⁻¹",
+        "B": "0.1",
+        "C": "1/10",
+        "D": "All of these"
+      },
+      "answer": "D",
+      "explanation": "1 dm = 0.1 m = 10⁻¹ m = 1/10 m.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "1 mm = ______",
+      "options": {
+        "A": "10⁻² m",
+        "B": "10⁻³ cm",
+        "C": "10⁻² dm",
+        "D": "10⁻⁴ km"
+      },
+      "answer": "C",
+      "explanation": "1 mm = 10⁻² dm.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "1 cm² = ______",
+      "options": {
+        "A": "10⁻⁴ m²",
+        "B": "10² mm²",
+        "C": "10⁻² dm²",
+        "D": "All are correct"
+      },
+      "answer": "D",
+      "explanation": "All the given conversions are correct.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "14 mm = ______ m",
+      "options": {
+        "A": "0.014",
+        "B": "0.0014",
+        "C": "0.14",
+        "D": "1400"
+      },
+      "answer": "A",
+      "explanation": "14 mm = 14 × 10⁻³ m = 0.014 m.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Convert 57 ml into litre",
+      "options": {
+        "A": "0.57 l",
+        "B": "0.057 l",
+        "C": "570 l",
+        "D": "5700 l"
+      },
+      "answer": "B",
+      "explanation": "57 ml = 57/1000 l = 0.057 l.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+	{
+      "question": "How many milligrams are there in 11 grams?",
+      "options": {
+        "A": "11",
+        "B": "110",
+        "C": "1,100",
+        "D": "11,000"
+      },
+      "answer": "D",
+      "explanation": "11 g = 11,000 mg.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Aman drinks 14 glasses of water daily. If the capacity of each glass is 300 ml, how many litres of water does Aman drink in a week?",
+      "options": {
+        "A": "24.9 l",
+        "B": "29.4 l",
+        "C": "30.4 l",
+        "D": "28.4 l"
+      },
+      "answer": "B",
+      "explanation": "14 × 300 × 7 = 29400 ml = 29.4 l.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Three-fourth of a meter is equal to",
+      "options": {
+        "A": "25 cm",
+        "B": "50 cm",
+        "C": "75 cm",
+        "D": "100 cm"
+      },
+      "answer": "C",
+      "explanation": "3/4 m = 75 cm.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Nereja studies from 7:00 PM to 8:15 PM. How much duration did she study?",
+      "options": {
+        "A": "45 min",
+        "B": "60 min",
+        "C": "75 min",
+        "D": "115 min"
+      },
+      "answer": "C",
+      "explanation": "The total duration is 75 minutes.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Consider the following statements and identify the correct statements:<br>(i) One meter is one-hundredth of a kilometre<br>(ii) One lakh is equal to one hundred thousand<br>(iii) One milligram is one-thousandth of a kilogram<br>(iv) Hundred meters is one hectometre.",
+      "options": {
+        "A": "(i) and (iv)",
+        "B": "(ii) and (iv)",
+        "C": "(iii) and (iv)",
+        "D": "(ii) and (iii)"
+      },
+      "answer": "B",
+      "explanation": "One lakh = 100,000 and 100 m = 1 hectometre.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Rajesh is carrying 2.5 kg of apples in a bag of 50 g. How much weight is he carrying?",
+      "options": {
+        "A": "250 g",
+        "B": "2505 g",
+        "C": "2550 g",
+        "D": "2500 g"
+      },
+      "answer": "C",
+      "explanation": "2.5 kg = 2500 g; total = 2500 + 50 = 2550 g.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Harish goes to a shop from his school in 45 minutes. From there he reaches home in 1 hour. What is the total time taken by him to reach his house from his school?",
+      "options": {
+        "A": "105 min",
+        "B": "90 min",
+        "C": "100 min",
+        "D": "75 min"
+      },
+      "answer": "A",
+      "explanation": "45 + 60 = 105 minutes.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "The area of a swimming pool is 12 m² and 500 cm². Find total area.",
+      "options": {
+        "A": "12.5 m²",
+        "B": "12.05 m²",
+        "C": "125 m²",
+        "D": "1250 m²"
+      },
+      "answer": "B",
+      "explanation": "500 cm² = 0.05 m². Total = 12.05 m².",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "The volume of a football is 50 cm³. What is its volume in mm³?",
+      "options": {
+        "A": "0.005",
+        "B": "50000",
+        "C": "5000",
+        "D": "0.05"
+      },
+      "answer": "B",
+      "explanation": "1 cm³ = 1000 mm³, so 50 cm³ = 50000 mm³.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Vicky bought 750 g of sweet and his sister bought 500 g of sweet. How much mass of sweet did Vicky and his sister buy together?",
+      "options": {
+        "A": "1 kg",
+        "B": "1.5 kg",
+        "C": "1.25 kg",
+        "D": "1.75 kg"
+      },
+      "answer": "C",
+      "explanation": "750 + 500 = 1250 g = 1.25 kg.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Two lines, one is 30 cm long and the other is 500 mm long. What is the total length of the two lines together (in cm)?",
+      "options": {
+        "A": "530",
+        "B": "5.3",
+        "C": "80",
+        "D": "53"
+      },
+      "answer": "C",
+      "explanation": "500 mm = 50 cm; total = 80 cm.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "The length of a box is 2 m and its width is 40 cm. Find its area in cm².",
+      "options": {
+        "A": "2400",
+        "B": "8000",
+        "C": "24000",
+        "D": "800"
+      },
+      "answer": "B",
+      "explanation": "2 m = 200 cm. Area = 200 × 40 = 8000 cm².",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Kevin has a pole that is 24 m tall. If Kevin sets the pole on a 300 cm stand, how far from the floor will the top of the pole be (in meters)?",
+      "options": {
+        "A": "24.3",
+        "B": "25",
+        "C": "27",
+        "D": "28"
+      },
+      "answer": "C",
+      "explanation": "300 cm = 3 m. Total height = 24 + 3 = 27 m.",
+      "paper": "WS-5",
+      "marks": 1
+    },
+    {
+      "question": "Mark used 15840 grams of metal to make an alloy. Find the metal used (in kg).",
+      "options": {
+        "A": "15.84",
+        "B": "1.584",
+        "C": "158.4",
+        "D": "1584"
+      },
+      "answer": "A",
+      "explanation": "15840 g = 15.84 kg.",
+      "paper": "WS-5",
+      "marks": 1
+    }
+  ]
+}
 	
   ]
 };
