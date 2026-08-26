@@ -4,7 +4,6 @@ window.iitOthersData = {
     {
       "name": "WS-1",
       "core": [
-
       {
         "question": "Out of the following physical quantities, vector is",
         "options": {
@@ -952,6 +951,925 @@ window.iitOthersData = {
 
 
 	}
-
+,
+  {
+  "name": "WS-4",
+  "core": [
+    {
+      "question": "A body is allowed to fall freely. The ratio of its displacements in 1st, 2nd and 3rd seconds is",
+      "options": {
+        "A": "1:2:3",
+        "B": "1:4:9",
+        "C": "1:3:5",
+        "D": "1:9:25"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is allowed to fall freely. The ratio of its displacements in 1, 2 and 3 seconds is",
+      "options": {
+        "A": "1:2:3",
+        "B": "1:4:9",
+        "C": "1:3:5",
+        "D": "1:9:25"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is allowed to fall freely. After 2 seconds another body is also dropped freely. The relative velocity of first body with respect to second body is",
+      "options": {
+        "A": "g",
+        "B": "g/2",
+        "C": "2g",
+        "D": "zero"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body dropped freely from certain height reaches the ground in 't' seconds. The average velocity during its fall is",
+      "options": {
+        "A": "1/2 gt",
+        "B": "gt",
+        "C": "2gt",
+        "D": "gt²"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is dropped freely from a height h. The average velocity during its free fall is",
+      "options": {
+        "A": "√(2gh)",
+        "B": "√(gh)",
+        "C": "√(gh/2)",
+        "D": "Zero"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "The distance travelled by a freely falling body in the first three seconds is equal to the distance travelled in the last second of its free fall. The time of its free fall is",
+      "options": {
+        "A": "3 sec",
+        "B": "4 sec",
+        "C": "5 sec",
+        "D": "6 sec"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "The sum of the distances travelled by a freely falling body in 1st, 3rd and 5th seconds is equal to the distance travelled in the last second of its free fall. The time of its free fall is",
+      "options": {
+        "A": "2 sec",
+        "B": "4 sec",
+        "C": "6 sec",
+        "D": "8 sec"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "The distance travelled by a freely falling body in the last second of its free fall is 7/16th of total displacement. The time of its free fall is",
+      "options": {
+        "A": "2 sec",
+        "B": "4 sec",
+        "C": "5 sec",
+        "D": "6 sec"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A splash is heard 5.35 seconds after a stone is dropped into a well 122.5 m deep. The velocity of sound in air is",
+      "options": {
+        "A": "300 m s⁻¹",
+        "B": "350 m s⁻¹",
+        "C": "330 m s⁻¹",
+        "D": "425 m s⁻¹"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "The average velocity of freely falling body is 7 m s⁻¹. Then it is released from a height of",
+      "options": {
+        "A": "5 m",
+        "B": "10 m",
+        "C": "15 m",
+        "D": "20 m"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "An object is thrown vertically up with velocity 'u' and reaches maximum height. The average velocity during this time is",
+      "options": {
+        "A": "u/2",
+        "B": "2u/g",
+        "C": "u/g",
+        "D": "u²/4g"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "On a planet, a stone thrown vertically up with velocity 10 m/s returns to the ground in 4 seconds. Acceleration due to gravity on the planet is",
+      "options": {
+        "A": "20 m/s²",
+        "B": "10 m/s²",
+        "C": "5 m/s²",
+        "D": "40 m/s²"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body thrown vertically up with some velocity reaches a maximum height of 100 m. If another body of twice the mass of the former is thrown with twice the velocity, the maximum height reached is",
+      "options": {
+        "A": "400 m",
+        "B": "200 m",
+        "C": "100 m",
+        "D": "25 m"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone thrown up with a velocity of 40 m/s from the surface of a planet comes back to the surface after 20 sec. Time taken by the same stone to reach the planet when allowed to fall from a height of 50 m is",
+      "options": {
+        "A": "5 sec",
+        "B": "10 sec",
+        "C": "20 sec",
+        "D": "0.8 sec"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body thrown vertically up reaches a maximum height in 2s. If all the forces are taken into consideration the total time of flight is",
+      "options": {
+        "A": "4 s",
+        "B": "< 4 s",
+        "C": "> 4 s",
+        "D": "2 s"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone thrown vertically up reaches a height of 10 m. If the velocity of projection is tripled, the maximum height reached is",
+      "options": {
+        "A": "90 m",
+        "B": "30 m",
+        "C": "20 m",
+        "D": "45 m"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A ball is thrown up with a velocity 9.8 m/s. After 1 second another ball is thrown up with a velocity of 19.6 m/s. What will be the distance between them 1 sec after the second ball is thrown?",
+      "options": {
+        "A": "4.9 m",
+        "B": "9.8 m",
+        "C": "14.7 m",
+        "D": "19.6 m"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone projected up vertically with a velocity 19.6 m/s reaches certain height in its path at 1 sec. After how many more seconds it reaches the ground?",
+      "options": {
+        "A": "1 sec",
+        "B": "2 sec",
+        "C": "3 sec",
+        "D": "4 sec"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is projected vertically up with u. Its velocity at half of its maximum height is",
+      "options": {
+        "A": "u/2",
+        "B": "u²/2",
+        "C": "√2u",
+        "D": "u/√2"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is thrown vertically up from the top of a tower with a velocity of 2 m/s. Its velocity after two seconds",
+      "options": {
+        "A": "17.6 m/s",
+        "B": "21.6 m/s",
+        "C": "20.6 m/s",
+        "D": "23.6 m/s"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    }
+  ],
+  "optimal": [
+    {
+      "question": "The distance travelled by a freely falling body in the last second of its free fall is equal to half of the total displacement. The time of its free fall is",
+      "options": {
+        "A": "2 sec",
+        "B": "2√2 sec",
+        "C": "(2+√2) sec",
+        "D": "(2−√2) sec"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A freely falling body travels a distance x in the nth second and y in the next second. Then",
+      "options": {
+        "A": "x+y = g",
+        "B": "√(xy) = g",
+        "C": "y−x = g",
+        "D": "(x+y)/2 = g"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body dropped freely from certain height reaches the ground in 't' seconds. The time taken to reach half of the height is",
+      "options": {
+        "A": "t/2",
+        "B": "t/4",
+        "C": "3t/4",
+        "D": "t/√2"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A freely falling body acquires a velocity 'v' in falling through a height h. The distance it has to fall further for its velocity to be doubled is",
+      "options": {
+        "A": "h",
+        "B": "2h",
+        "C": "3h",
+        "D": "4h"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A freely falling body acquires a velocity 'v' when it falls through a height 'h'. The velocity acquired by it in falling further distance h is",
+      "options": {
+        "A": "2v",
+        "B": "v/√2",
+        "C": "√3v",
+        "D": "4v"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "For a freely falling body, if the velocity acquired is numerically equal to the displacement suffered, the velocity acquired by the body is",
+      "options": {
+        "A": "g",
+        "B": "2g",
+        "C": "3g",
+        "D": "g/2"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "Two bodies are dropped freely from two points separated by a distance of 10m, one vertically below the other. After 10 sec of free fall, the distance of their separation is",
+      "options": {
+        "A": "10 m",
+        "B": "40 m",
+        "C": "20 m",
+        "D": "20√2 m"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is dropped freely. After 2 seconds another body is dropped from the same height. The distance of separation between them after 10 more seconds is (g = 10 m/s²)",
+      "options": {
+        "A": "140 m",
+        "B": "100 m",
+        "C": "220 m",
+        "D": "110 m"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body dropped from certain height travels 36% of total distance in the last second of its free fall. Then the time of its free fall is",
+      "options": {
+        "A": "3.6 sec",
+        "B": "2 sec",
+        "C": "4 sec",
+        "D": "5 sec"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "Ratio of the distances covered by a freely falling body in the last second and last but one second of its fall is 4:1. The time of its free fall is",
+      "options": {
+        "A": "11/6 sec",
+        "B": "3 sec",
+        "C": "2 sec",
+        "D": "4 sec"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A magician projects balls vertically upwards with one second interval. If he throws the second ball after the first one has reached the maximum height, the maximum height is",
+      "options": {
+        "A": "4.9 m",
+        "B": "9.8 m",
+        "C": "14.7 m",
+        "D": "19.6 m"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A juggler maintains four balls in motion, making each of them rise to a height of 20 m from his hand. The time interval that he should maintain, for the proper distance between them is (g = 10 m/s²)",
+      "options": {
+        "A": "0.5 s",
+        "B": "1 s",
+        "C": "2 s",
+        "D": "3 s"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone projected up vertically with a velocity 19.6 m/s reaches certain height in its path at 1 sec. After how many more seconds it reaches the ground?",
+      "options": {
+        "A": "1 sec",
+        "B": "2 sec",
+        "C": "3 sec",
+        "D": "4 sec"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A bullet fired vertically up from the ground reaches a height 40 m in its path from the ground and it takes further time 2 seconds to reach the same point during descent. The total time of flight is (g = 10 m/s²)",
+      "options": {
+        "A": "4 s",
+        "B": "6 s",
+        "C": "3 s",
+        "D": "8 s"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is thrown vertically upwards with initial velocity 'u' reaches maximum height in 6 seconds. The ratio of distances travelled by the body in the first second and seventh second is",
+      "options": {
+        "A": "1:1",
+        "B": "11:1",
+        "C": "1:2",
+        "D": "1:11"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "The velocity of a body moving vertically up is 49 m s⁻¹ at half the maximum height. The height to which it could further rise is",
+      "options": {
+        "A": "245 m",
+        "B": "122.5 m",
+        "C": "61.25 m",
+        "D": "none"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is projected vertically up with velocity 98 m s⁻¹. After 2s if the acceleration due to gravity of earth disappears, the velocity of the body at the end of next 3s is",
+      "options": {
+        "A": "49 m s⁻¹",
+        "B": "496 m s⁻¹",
+        "C": "78.4 m s⁻¹",
+        "D": "94.7 m s⁻¹"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone is dropped from the top of a tower of height 490 m. Simultaneously another stone is projected up vertically with velocity 100 m s⁻¹ from the ground. The two stones meet after a time.",
+      "options": {
+        "A": "4.9 s",
+        "B": "9.8 s",
+        "C": "10 s",
+        "D": "they cannot meet in air"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is thrown up on a planet with velocity 24 m s⁻¹ returns to the ground after 4s. The acceleration due to gravity on the planet is",
+      "options": {
+        "A": "6 m s⁻²",
+        "B": "12 m s⁻²",
+        "C": "10 m s⁻²",
+        "D": "8 m s⁻²"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body projected up reaches a point A in its path at the end of 4 second and reaches the ground after 5 seconds from the start. The height of A above the ground is",
+      "options": {
+        "A": "19.6 m",
+        "B": "3.6 m",
+        "C": "11 m",
+        "D": "20 m"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    }
+  ],
+  "achiever": [
+    {
+      "question": "A stone is dropped from the top of a 20 m high tower. One second later another stone is thrown downwards from the top. Both the stones reach the ground simultaneously. The initial speed of the second stone is (g = 10 m s⁻²)",
+      "options": {
+        "A": "10 m s⁻¹",
+        "B": "15 m s⁻¹",
+        "C": "30 m s⁻¹",
+        "D": "60 m s⁻¹"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "The length of path described by a freely falling body in the last second of its motion, and that in the last but one second of its motion are in the ratio of 3:2. The total time taken by the body to reach the ground is",
+      "options": {
+        "A": "1.5 sec",
+        "B": "2.5 sec",
+        "C": "3.5 sec",
+        "D": "4.5 sec"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is allowed to fall from a tower 320 m high. When the ball reaches half the way acceleration due to gravity suddenly disappears. The velocity of the body after two seconds is (g = 10 m s⁻²)",
+      "options": {
+        "A": "80 m s⁻¹",
+        "B": "100 m s⁻¹",
+        "C": "60 m s⁻¹",
+        "D": "56 m s⁻¹"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A freely falling particle falling from a tower of height h covers a distance h/2 in the last second of its motion. The height of the tower is nearly (g = 10 m s⁻²)",
+      "options": {
+        "A": "45 m",
+        "B": "50 m",
+        "C": "55 m",
+        "D": "58 m"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone is dropped into a well 44.1 m deep. After how much time the sound will be heard if the velocity of sound is 330 m s⁻¹?",
+      "options": {
+        "A": "1.56 sec",
+        "B": "3.13 sec",
+        "C": "6.26 sec",
+        "D": "6 sec"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A ball is dropped from a bridge 122.5 m above a river. After the ball has been falling for 2 seconds a second ball is thrown straight down after it. If both hit the water at the same time, the initial velocity of the second ball is",
+      "options": {
+        "A": "9.8 m s⁻¹",
+        "B": "26.1 m s⁻¹",
+        "C": "49 m s⁻¹",
+        "D": "55.5 m s⁻¹"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "One body is dropped while a second body is thrown downward with an initial velocity of 1 m s⁻¹ simultaneously. The separation between these is 18 metre after a time",
+      "options": {
+        "A": "4.5 sec",
+        "B": "9 sec",
+        "C": "18 sec",
+        "D": "36 sec"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone is dropped from a height of 10 cm above the top of a window of 80 cm high (top to bottom of the window). Then time taken by the stone to cross from the top to bottom of the window is",
+      "options": {
+        "A": "1/7 sec",
+        "B": "2/7 sec",
+        "C": "3/7 sec",
+        "D": "4/7 sec"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is falling freely from the top of a tower. The distances travelled during the 3rd and 1st second of its travel will be in the ratio",
+      "options": {
+        "A": "3:1",
+        "B": "1:3",
+        "C": "5:1",
+        "D": "1:5"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "One body is dropped while a second body is thrown downward with an initial velocity of 1 m/s simultaneously from the same height. The separation between them is 18 m after a time",
+      "options": {
+        "A": "18 s",
+        "B": "9 s",
+        "C": "4.5 s",
+        "D": "36 s"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body dropped from a height reaches the ground in 4 sec. The time taken by it to travel half of the distance after starting is",
+      "options": {
+        "A": "2 s",
+        "B": "3 s",
+        "C": "2√2 s",
+        "D": "2.5 s"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A freely falling body covers 7/16 of the total distance during the last second of the journey. The time of the journey is",
+      "options": {
+        "A": "4 s",
+        "B": "3.5 s",
+        "C": "2 s",
+        "D": "4.5 s"
+      },
+      "answer": "A",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body falling for 2s covers a distance 's' which is equal to that covered in next 1 sec. If g = 10 m/s², the distance 's' is",
+      "options": {
+        "A": "30 m",
+        "B": "10 m",
+        "C": "60 m",
+        "D": "20 m"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is projected vertically down from the top of the tower. If it travels a distance 30 m in the first second, the velocity of projection is",
+      "options": {
+        "A": "34.0 m/s",
+        "B": "25.1 m/s",
+        "C": "30 m/s",
+        "D": "zero"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone is projected vertically up from the ground with velocity 40 m s⁻¹. The interval of time between the two instants at which the stone is at a height of 60 m above the ground is (g = 10 m s⁻²)",
+      "options": {
+        "A": "4 s",
+        "B": "6 s",
+        "C": "8 s",
+        "D": "12 s"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is thrown vertically up with certain velocity. If h is the maximum height reached by it, its position when its velocity reduces to 1/3 of its velocity of projection is at",
+      "options": {
+        "A": "8h/9 from the ground",
+        "B": "8h/9 from the top most point",
+        "C": "4h/9 from the ground",
+        "D": "h/3 from the top most point"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone is projected vertically up from the ground with velocity 40 m s⁻¹. The interval of time between the two instants at which the stone is at a height of 60 m above the ground is (g = 10 m s⁻²)",
+      "options": {
+        "A": "4 s",
+        "B": "6 s",
+        "C": "8 s",
+        "D": "12 s"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone is thrown vertically up from a bridge with velocity 3 m s⁻¹. If it strikes the water under the bridge after 2s, the bridge is at a height of (g = 10 m s⁻²)",
+      "options": {
+        "A": "26 m",
+        "B": "14 m",
+        "C": "7 m",
+        "D": "20 m"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "At the maximum height of a body thrown vertically up",
+      "options": {
+        "A": "velocity is not zero but acceleration is zero",
+        "B": "acceleration is not zero but velocity is zero",
+        "C": "both acceleration and velocity are zero",
+        "D": "both acceleration and velocity are not zero"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone is dropped into a well of 20 m deep. Another stone is thrown downwards with velocity v one second later. If both stones reach the water surface in the well simultaneously, v is equal to (g = 10 m s⁻²)",
+      "options": {
+        "A": "30 m s⁻¹",
+        "B": "15 m s⁻¹",
+        "C": "20 m s⁻¹",
+        "D": "10 m s⁻¹"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body thrown vertically up with velocity u reaches the maximum height h after T seconds. Which of the following statements is true?",
+      "options": {
+        "A": "At a height h/2 from the ground its velocity is u/2",
+        "B": "At a time T its velocity is u",
+        "C": "At a time 2T its velocity is u",
+        "D": "none of the above"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "Two bodies with masses in the ratio 1:2 are thrown vertically up with velocities in the ratio 2:1. The maximum heights reached by them will be in the ratio",
+      "options": {
+        "A": "1:1",
+        "B": "4:1",
+        "C": "1:4",
+        "D": "2:1"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "Two bodies projected vertically up reach maximum heights 'a' and 'b'. The velocities of projection will be in the ratio",
+      "options": {
+        "A": "a²:b²",
+        "B": "√b:√a",
+        "C": "a:b",
+        "D": "√a:√b"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is projected from the ground vertically upwards. The body is observed to be at height h above the ground at two times t₁ and t₂ while ascending and descending respectively. Based on the above facts, which statement is correct?",
+      "options": {
+        "A": "The height h in terms of t₁ and t₂ is 1/2(g t₁ t₂)",
+        "B": "The velocity (v) of the body at height h/2 is 1/2(g√(t₁²+t₂²))",
+        "C": "The maximum height (H) reached by the body from the ground is 1/8[g(t₁+t₂)²]",
+        "D": "All the above"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is thrown vertically up from the top of a tower with a velocity of 2 m/s. Its velocity after two seconds",
+      "options": {
+        "A": "17.6 m/s",
+        "B": "21.6 m/s",
+        "C": "20.6 m/s",
+        "D": "23.6 m/s"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A body is released from the top of a tower of height h metres. It takes t seconds to reach the ground. The height of the ball above the ground at time t/2 seconds is",
+      "options": {
+        "A": "h/2 m",
+        "B": "h/4 m",
+        "C": "h/3 m",
+        "D": "3h/4 m"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A stone is projected vertically upwards from the foot of a tower with an initial velocity 2u. On reaching the top its final velocity is found to be half of its initial velocity. The height of tower is",
+      "options": {
+        "A": "u/2g",
+        "B": "3u/2g",
+        "C": "u/4g",
+        "D": "9u/2g"
+      },
+      "answer": "D",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A packet is dropped from a balloon rising up with uniform velocity 9.8 m s⁻¹. If the balloon is at a height of 39.2 m from the ground at the time of dropping the stone, the stone reaches the ground after",
+      "options": {
+        "A": "2 s",
+        "B": "6 s",
+        "C": "4 s",
+        "D": "8 s"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "A food packet is dropped from a helicopter rising up with uniform velocity of 5 m s⁻¹. After 2 s its velocity is",
+      "options": {
+        "A": "19.6 m s⁻¹ downward",
+        "B": "14.6 m s⁻¹ downward",
+        "C": "14.6 m s⁻¹ upward",
+        "D": "5 m s⁻¹ upward"
+      },
+      "answer": "B",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    },
+    {
+      "question": "In the above problem the distance of separation between helicopter and packet 2 s after dropping it is",
+      "options": {
+        "A": "9.6 m",
+        "B": "0.4 m",
+        "C": "19.6 m",
+        "D": "29.6 m"
+      },
+      "answer": "C",
+      "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+      "paper": "WS-4",
+      "marks": 1
+    }
+  ]
+}
   ]
 };
