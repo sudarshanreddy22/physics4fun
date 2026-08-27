@@ -58,7 +58,7 @@ window.pyqsData.two = [
     year: "2026"
   },
   {
-    question: "[[image]]<br>(A) In the given electric circuit of Ohm's law experiment, identify P and X <br>(B) Write the uses of Q and X in the given circuit",
+    question: "[[image]](A) In the given electric circuit of Ohm's law experiment, identify P and X <br>(B) Write the uses of Q and X in the given circuit",
     image: " https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/electricity/electricity-2026-31-8-2.png",
 	imageWidth: "40%",
     set: "31/8/2",
