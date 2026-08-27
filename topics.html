@@ -594,12 +594,12 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .iit-palette-wrap{position:sticky;top:0;z-index:5;background:var(--bg);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--divider);}
 .iit-palette{display:flex;gap:6px;overflow-x:auto;padding:8px 2px;scrollbar-width:none;}
 .iit-palette::-webkit-scrollbar{display:none;}
-.iit-palette-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;background:var(--card-bg);border:1px solid var(--card-border);color:var(--text-sub);cursor:pointer;transition:all .15s;}
-.iit-palette-num:hover{border-color:#a855f7;color:#a855f7;}
+.iit-palette-num{flex-shrink:0;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;background:var(--card-bg);border:1px solid var(--card-border);color:var(--text-sub);cursor:pointer;transition:all .15s;}
+.iit-palette-num:hover{border-color:var(--qc,#a855f7);color:var(--qc,#a855f7);}
 .pyq-palette-wrap{padding-bottom:4px;margin-bottom:6px;}
 .pyq-palette-wrap .iit-palette{gap:4px;padding:5px 2px;}
 .pyq-palette-wrap .iit-palette-num{width:20px;height:20px;font-size:10px;}
-.iit-palette-num.current{background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:#a855f7;color:#fff;font-weight:800;box-shadow:0 0 0 3px rgba(168,85,247,.3),0 2px 10px rgba(124,58,237,.5);}
+.iit-palette-num.current{background:var(--qc,linear-gradient(135deg,#7c3aed,#a855f7));border-color:var(--qc,#a855f7);color:#fff;font-weight:800;box-shadow:0 0 0 2px color-mix(in srgb,var(--qc,#a855f7) 40%,transparent),0 2px 8px rgba(0,0,0,.2);}
 .iit-palette-num.pt-mcq:hover{border-color:#a855f7;color:#a855f7;}
 .iit-palette-num.pt-ar:hover{border-color:#fb923c;color:#fb923c;}
 .iit-palette-num.pt-one:hover{border-color:#84cc16;color:#84cc16;}
@@ -621,8 +621,14 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .iit-nav-btn{padding:9px 18px;border-radius:10px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:700;cursor:pointer;transition:all .15s;}
 .iit-nav-btn:hover:not(:disabled){border-color:#a855f7;color:#a855f7;}
 .iit-nav-btn:disabled{opacity:.4;cursor:not-allowed;}
+.iit-nav-accent{background:var(--qc,#7c3aed);color:#fff;border-color:var(--qc,#7c3aed);}
+.iit-nav-accent:hover:not(:disabled){opacity:.88;color:#fff;border-color:var(--qc,#7c3aed);}
+.iit-nav-accent:disabled{background:var(--card-bg);color:var(--text-sub);border-color:var(--card-border);}
 .iit-nav-progress{font-size:11.5px;font-weight:700;color:var(--text-sub);}
 .iit-nav-group{display:flex;align-items:center;gap:8px;}
+/* IIT Foundation single-question view: Prev/Next grouped at top-left, just above the question card */
+.iit-practice-nav-top{position:static;justify-content:flex-start;margin-top:0;margin-bottom:10px;padding:8px 2px;background:transparent;backdrop-filter:none;border-top:none;border-bottom:1px solid var(--divider);border-radius:0;}
+.iit-practice-nav-top .iit-nav-progress{margin-left:10px;}
 
 /* ══ Question header row: question text + right-aligned Paper Code / Year pills (same line) ══ */
 .q-header-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;}
@@ -1502,6 +1508,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
         <button class="gv-btn active" id="pyqListBtn" title="All Questions" onclick="setPyqViewMode('list')">☰</button>
         <button class="gv-btn" id="pyqSingleBtn" title="Single Question" onclick="setPyqViewMode('practice')">🎯</button>
         <button class="gv-btn" id="pyqShowAnsBtn" title="Show Answers" onclick="pyqToggleAnswersActive()" style="display:none;">👁</button>
+        <button class="gv-btn" id="pyqFullscreenBtn" title="Enter Fullscreen" onclick="toggleFullscreen()">⛶</button>
       </div>
     </div>
 
@@ -2058,11 +2065,17 @@ function buildQuestionCardsHTML(qArray, opts) {
   const total = qArray.length;
   if (IIT_PRACTICE.index >= total) IIT_PRACTICE.index = 0;
   let html = `
-    <div class="iit-palette-wrap" id="iitPaletteWrap" style="display:${IIT_PRACTICE.mode==='practice'?'block':'none'};">
+    <div class="iit-palette-wrap" id="iitPaletteWrap" style="display:${IIT_PRACTICE.mode==='practice'?'block':'none'};${accent?`--qc:${accent};`:''}">
       <div class="iit-palette" id="iitPalette">
-        ${qArray.map((q,i)=>`<div class="iit-palette-num${i===IIT_PRACTICE.index?' current':''}" onclick="jumpToIITQuestion(${i})">${q.no||(i+1)}</div>`).join('')}
+        ${qArray.map((q,i)=>`<div class="iit-palette-num pt-iit${i===IIT_PRACTICE.index?' current':''}" onclick="jumpToIITQuestion(${i})">${q.no||(i+1)}</div>`).join('')}
       </div>
-      <div class="iit-practice-meta" id="iitPracticeMeta"></div>
+    </div>
+    <div class="iit-practice-nav iit-practice-nav-top" id="iitPracticeNav" style="display:${IIT_PRACTICE.mode==='practice'?'flex':'none'};${accent?`--qc:${accent};`:''}">
+      <div class="iit-nav-group">
+        <button class="iit-nav-btn iit-nav-accent" id="iitPrevBtn" onclick="prevIITQuestion()">◀ Previous</button>
+        <button class="iit-nav-btn iit-nav-accent" id="iitNextBtn" onclick="nextIITQuestion()">Next ▶</button>
+      </div>
+      <span class="iit-nav-progress" id="iitNavProgress"></span>
     </div>
     <div class="iit-questions" id="iitQuestions">`;
 
@@ -2081,14 +2094,7 @@ function buildQuestionCardsHTML(qArray, opts) {
     </div>`;
   }).join('') : `<div class="no-content-state"><div class="no-content-icon">🎯</div><h3>No questions yet</h3><p>Questions for this section are being prepared.</p></div>`;
 
-  html += `</div>
-    <div class="iit-practice-nav" id="iitPracticeNav" style="display:${IIT_PRACTICE.mode==='practice'?'flex':'none'};">
-      <div class="iit-nav-group">
-        <button class="iit-nav-btn" id="iitPrevBtn" onclick="prevIITQuestion()">◀ Previous</button>
-        <button class="iit-nav-btn" id="iitNextBtn" onclick="nextIITQuestion()">Next ▶</button>
-      </div>
-      <span class="iit-nav-progress" id="iitNavProgress"></span>
-    </div>`;
+  html += `</div>`;
   return html;
 }
 function finalizeQuestionCards(wrap, qArray) {
@@ -2160,7 +2166,7 @@ function jumpToIITQuestion(idx) {
     const i = parseInt(card.dataset.qidx, 10);
     card.style.display = (IIT_PRACTICE.mode==='list' || i===idx) ? 'flex' : 'none';
   });
-  document.querySelectorAll('.iit-palette-num').forEach((el,i) => el.classList.toggle('current', i===idx));
+  document.querySelectorAll('#iitPalette .iit-palette-num').forEach((el,i) => el.classList.toggle('current', i===idx));
   updateIITPracticeMeta(currentIITArray());
   scrollIITPaletteIntoView();
   document.getElementById('content').scrollTop = 0;
@@ -2171,22 +2177,17 @@ function nextIITQuestion() {
   if (IIT_PRACTICE.index < total - 1) jumpToIITQuestion(IIT_PRACTICE.index + 1);
 }
 function scrollIITPaletteIntoView() {
-  const el = document.querySelectorAll('.iit-palette-num')[IIT_PRACTICE.index];
+  const el = document.querySelectorAll('#iitPalette .iit-palette-num')[IIT_PRACTICE.index];
   if (el) el.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
 }
 function updateIITPracticeMeta(data) {
   const q = data[IIT_PRACTICE.index]; if (!q) return;
   const total = data.length;
-  const showExam = CUR.iitTab !== 'mcq' && CUR.iitTab !== 'numericals';
-  const meta = document.getElementById('iitPracticeMeta');
-  if (meta) meta.innerHTML = `
-    <span class="iit-circle-qno">${q.no||IIT_PRACTICE.index+1}</span>
-    <span class="iit-progress-text">${IIT_PRACTICE.index+1} of ${total}</span>
-    ${q.year?`<span class="year-badge set-badge-1mark">${q.year}</span>`:''}
-    ${q.paper?`<span class="set-badge set-badge-1mark">${q.paper}</span>`:''}
-    ${(showExam && q.exam)?`<span class="set-badge set-badge-1mark">${q.exam}</span>`:''}`;
   const prog = document.getElementById('iitNavProgress');
-  if (prog) prog.textContent = `Question ${IIT_PRACTICE.index+1} of ${total}`;
+  if (prog) {
+    const wsLabel = q.paper || '';
+    prog.textContent = `${IIT_PRACTICE.index+1} of ${total}${wsLabel?' · '+wsLabel:''}`;
+  }
   const prevBtn = document.getElementById('iitPrevBtn'); if (prevBtn) prevBtn.disabled = IIT_PRACTICE.index === 0;
   const nextBtn = document.getElementById('iitNextBtn'); if (nextBtn) nextBtn.disabled = IIT_PRACTICE.index === total-1;
 }
@@ -3248,11 +3249,11 @@ function toggleFullscreen() {
   }
 }
 function updateFullscreenBtn() {
-  const btn = document.getElementById('fullscreenBtn');
-  if (!btn) return;
   const isFs = !!document.fullscreenElement;
-  btn.textContent = isFs ? '🗗' : '⛶';
-  btn.title = isFs ? 'Exit Fullscreen' : 'Enter Fullscreen';
+  const btn = document.getElementById('fullscreenBtn');
+  if (btn) { btn.textContent = isFs ? '🗗' : '⛶'; btn.title = isFs ? 'Exit Fullscreen' : 'Enter Fullscreen'; }
+  const pyqBtn = document.getElementById('pyqFullscreenBtn');
+  if (pyqBtn) { pyqBtn.textContent = isFs ? '🗗' : '⛶'; pyqBtn.title = isFs ? 'Exit Fullscreen' : 'Enter Fullscreen'; }
 }
 document.addEventListener('fullscreenchange', updateFullscreenBtn);
 
