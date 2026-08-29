@@ -131,8 +131,185 @@ window.pyqsData.ar = [
   }
 ];
 
-window.pyqsData.one = [];
-window.pyqsData.two = [];
-window.pyqsData.three = [];
-window.pyqsData.four = [];
+window.pyqsData.two = [
+  {
+    question: "What is meant by scattering of light? <br>How do our observations differ when white light (sun light) is scattered from (i) very fine particles of the medium and (ii) very large particles of the medium?",
+    answer: "",
+    set: "31/8/1",
+    year: "2026C"
+  },
+  {
+    question: "With the help of a ray diagram, explain a phenomenon of formation of spectrum in nature.",
+    answer: "",
+    set: "31/8/1",
+    year: "2026C"
+  },
+  {
+    question: "Name a phenomenon taking place in nature where light rays are dispersed. When, where and how does this phenomenon happen?",
+    answer: "",
+    set: "31(B)",
+    year: "2026C"
+  },
+  {
+    question: "Name the phenomenon due to which a prism splits the incident white light into a band of colours. State the reason of the phenomenon also.",
+    answer: "",
+    set: "31(B)",
+    year: "2026"
+  },
+  {
+    question: "How does the focal length of eye lens change as the distance of the object from the eyes is altered? Explain.",
+    answer: "",
+    set: "31/2/1",
+    year: "2026"
+  },
+  {
+    question: "Why is the concave lens used a corrective lens for a myopic eye?",
+    answer: "",
+    set: "31/2/1",
+    year: "2026"
+  },
+  {
+    question: "What happens when light is scattered from (i) very fine particles and (ii) very large size particles of medium? Justify your answer in each case.",
+    answer: "",
+    set: "31/3/1",
+    year: "2026"
+  },
+  {
+    question: "With the help of a ray diagram, explain any phenomenon of formation of spectrum in nature.",
+    answer: "",
+    set: "31/3/1",
+    year: "2026"
+  },
+  {
+    question: "(i) How does the change in curvature of the eye lens helps us in the process of seeing the nearby objects clearly?<br>(ii) State the range of the power of accommodation of a normal human eye.",
+    answer: "",
+    set: "31/5/1",
+    year: "2026"
+  },
+  {
+    question: "Draw a ray diagram to show the correction of eye defect of an old man who can not see an object placed closer than 1 m from his eye, clearly.",
+    answer: "",
+    set: "31/5/1",
+    year: "2026"
+  }
+
+];
+window.pyqsData.three = [
+  {
+    question: "State the reasons for myopia. With the help of a ray diagram, show:<br>(a) Image formation by myopic eye, and<br>(b) Correction of myopic eye by using an appropriate lens.",
+    answer: "",
+    set: "31/7/1",
+    year: "2026C"
+  },
+  {
+    question: "What is meant by atmospheric refraction of light? Explain the following natural phenomenon by using the concept of atmospheric refraction:<br>(a) Twinkling of stars<br>(b) Flickering of objects seen through a turbulent stream of hot air",
+    answer: "",
+    set: "31/7/1",
+    year: "2026C"
+  },
+  {
+    question: "(a) State the causes of hypermetropia.<br>(b) With the help of ray diagram, show:<br>(i) Image formation by hypermetropic eye, and<br>(ii) Correction of hypermetropia by using an appropriate lens.",
+    answer: "",
+    set: "31/7/2",
+    year: "2026C"
+  },
+  {
+    question: "(A) The elderly people may have both near sightedness and far sightedness. Write the possible solutions proposed for correction of their eye defect.<br>(B) How does the eye control the amount of light entering into it?",
+    answer: "",
+    set: "31/8/1",
+    year: "2026C"
+  },
+  {
+    question: "A person cannot read newspaper placed nearer than 50 cm from his eyes. Name the defect of vision he is suffering from. Draw a ray diagram to illustrate the defect. List two possible causes of this defect also.",
+    answer: "",
+    set: "31/8/2",
+    year: "2026C"
+  },
+  {
+    question: "(A) What is meant by presbyopia? Write the causes of presbyopia also.<br>(B) Draw the ray diagram for correction of presbyopia by using an appropriate lens.",
+    answer: "",
+    set: "31/8/3",
+    year: "2026C"
+  },
+  {
+    question: "Two persons, A and B are using lenses of power +1.5 D and -1.5 D respectively in their spectacles. Write the names of eye defects from which A and B are suffering. Write two causes for each defect of vision.",
+    answer: "",
+    set: "31(B)",
+    year: "2026C"
+  },
+  {
+    question: "(a) Explain the Tyndall effect with the help of one suitable example.<br>(b) What happens when a white light gets scattered from:<br>(i) very fine particles<br>(ii) larger size particles?",
+    answer: "",
+    set: "31(B)",
+    year: "2026"
+  },
+  {
+    question: "A person is unable to read a book placed closer than 1 meter from his eyes. Identify the defect of vision. Draw ray diagrams to show the defect of vision and its correction.",
+    answer: "",
+    set: "31/1/1",
+    year: "2026"
+  },
+  {
+    question: "(a) What is Tyndall effect?<br>(b) What happens when sunlight is scattered from particles of very large size?<br>(c) 'Danger' signals are always red in colour. Why?",
+    answer: "",
+    set: "31/1/1",
+    year: "2026"
+  },
+  {
+    question: "(a) What is hypermetropia?<br>(b) Write any one cause of hypermetropia.<br>(c) With the help of a suitable ray diagram, explain how hypermetropia is corrected?",
+    answer: "",
+    set: "31/1/3",
+    year: "2026"
+  },
+  {
+    question: "Study the given diagram and answer the questions that follow:<br>(a) Write the name of the eye defect shown in the diagram. Where is the image formed in this eye defect with respect to the retina of the eye?<br>(b) List two causes of this eye defect.<br>(c) With the help of a diagram, show how this eye defect of vision is corrected.",
+    image: "",
+    imageWidth: "50%",
+    answer: "",
+    set: "31/3/1",
+    year: "2026"
+  },
+  {
+    question: "Study the given diagram and answer the questions that follow:<br>(a) Write the name of the eye defect shown in the diagram. Where is the image formed in this eye defect with respect to the retina of the eye?<br>(b) List two causes of this eye defect.<br>(c) With the help of a ray diagram, show how this defect of vision is corrected.",
+    image: "",
+    imageWidth: "50%",
+    answer: "",
+    set: "31/3/2",
+    year: "2026"
+  },
+  {
+    question: "Explain the phenomenon of rainbow formation in the sky. Draw the labelled ray diagram in support of your explanation.",
+    answer: "",
+    set: "31/4/1",
+    year: "2026"
+  },
+  {
+    question: "A person is suffering from a defect of vision due to the elongation of his/her eye ball.<br>(a) Write the name of the defect of vision and write the other possible cause of this defect of vision.<br>(b) This defect can be corrected by using a suitable lens. Draw the ray diagram for correction of this defect of vision.",
+    answer: "",
+    set: "31/4/2",
+    year: "2026"
+  },
+  {
+    question: "(a) Draw the ray diagram for refraction of light through a glass prism and mark angle of refraction and angle of deviation.<br>(b) When the path of a light ray refracted through a glass prism is reversed, how will the angle of deviation change? Explain.",
+    answer: "",
+    set: "31/5/1",
+    year: "2026"
+  }
+];
+
+window.pyqsData.four = [
+ {
+    question: `<div class="q-part">Read the following passage and answer the questions that follow:</div>
+    <div class="q-part">Two students, A and B were performing an activity on refraction through glass slab and refraction through prism respectively. Student 'A' observed that the emergent light ray is parallel to the direction of incident ray, while student 'B' observed that the emergent ray is making a certain angle with respect to the direction of the incident ray in the prism, called angle of deviation. He also noted that the angle of deviation is different for different colours of light.</div>
+    <div class="q-subpart">(a) When white light passes through a glass slab, it does not show dispersion, while it shows dispersion when it passes through a glass prism. Why?</div>
+    <div class="q-subpart">(b) Why do we get spectrum when white light passes through tiny water droplets present in air?</div>
+    <div class="q-subpart">(c) (i) For a given pair of mediums, if we change the angle of incidence gradually, will it change the speed of light in that medium? Explain.</div>
+    <div class="q-part" style="text-align:center;font-weight:700;">OR</div>
+    <div class="q-subpart">(c) (ii) Calculate the speed of light in a given medium if angle of incidence in air is 60° and angle of refraction in the medium is 30°. <br>Given that speed of light in air is 3 × 10<sup>8</sup> m/s.</div>`,
+    answer: "",
+    set: "31/7/1",
+    year: "2026"
+  }
+];
+
 window.pyqsData.five = [];
