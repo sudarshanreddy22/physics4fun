@@ -454,6 +454,11 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .question-item-top{display:flex;gap:11px;}
 .question-item-badges{display:flex;gap:4px;margin-top:10px;padding-top:8px;border-top:1px solid var(--divider);}
 .mcq-question-image{display:block;max-width:280px;width:100%;height:auto;margin:8px auto 0;border-radius:10px;border:1px solid var(--card-border);}
+@media(max-width:640px){
+  #iitOthBody .mcq-question-image,.pyq-section .mcq-question-image{max-width:100%!important;width:100%!important;height:auto!important;}
+}
+#panel-pyq:fullscreen,#panel-iitoth:fullscreen,#panel-pyq:-webkit-full-screen,#panel-iitoth:-webkit-full-screen{background:var(--bg);padding:16px;overflow:auto;}
+#panel-pyq:fullscreen .mcq-question-image,#panel-iitoth:fullscreen .mcq-question-image,#panel-pyq:-webkit-full-screen .mcq-question-image,#panel-iitoth:-webkit-full-screen .mcq-question-image{max-width:560px!important;width:100%!important;}
 /* Adaptive MCQ option layout — picked at render time based on option text length */
 .options.opts-row4{display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;gap:8px;}
 .options.opts-row4 .option{flex:1 1 21%;min-width:110px;}
@@ -463,6 +468,14 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 #iitOthBody .mcq-question{font-size:15.5px;line-height:1.85;}
 #iitOthBody .opt-text,#iitOthBody .option{font-size:14.5px;line-height:1.7;}
 #iitOthBody .explanation{font-size:14px;line-height:1.75;}
+/* Others/PYQs: Times New Roman + in-frame font-size control (no browser zoom) */
+#panel-iitoth,#panel-pyq{font-family:'Times New Roman',Times,serif;--qfs:1;}
+#panel-iitoth .mcq-question,#panel-pyq .mcq-question{font-size:calc(13.5px*var(--qfs));}
+#iitOthBody .mcq-question{font-size:calc(15.5px*var(--qfs));}
+#panel-iitoth .option,#panel-pyq .option,#panel-iitoth .opt-text,#panel-pyq .opt-text{font-size:calc(13px*var(--qfs));}
+#iitOthBody .opt-text,#iitOthBody .option{font-size:calc(14.5px*var(--qfs));}
+#panel-iitoth .explanation,#panel-pyq .explanation{font-size:calc(12.5px*var(--qfs));}
+#iitOthBody .explanation{font-size:calc(14px*var(--qfs));}
 .qno{min-width:28px;height:28px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;line-height:1;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.2);}
 .qno.mcq{background:linear-gradient(135deg,var(--pyq-mcq),#5b21b6);}
 .qno.ar{background:linear-gradient(135deg,var(--pyq-ar),#c2410c);}
@@ -1492,6 +1505,9 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="global-view-toggle" id="globalViewToggle" style="display:none;">
         <button class="gv-btn" id="gvListBtn" title="Multi-Questions" onclick="setGlobalViewMode('list')">☰</button>
         <button class="gv-btn" id="gvPracticeBtn" title="Single Question" onclick="setGlobalViewMode('practice')">🎯</button>
+        <button class="gv-btn" title="Decrease font size" onclick="adjustQFontSize('panel-iitoth','iitoth',-0.1)">A-</button>
+        <button class="gv-btn" title="Increase font size" onclick="adjustQFontSize('panel-iitoth','iitoth',0.1)">A+</button>
+        <button class="gv-btn" id="othFullscreenBtn" title="Enter Fullscreen" onclick="toggleFullscreen('panel-iitoth')">⛶</button>
       </div>
 
     </div>
@@ -1508,7 +1524,9 @@ mjx-container[display="true"]{margin:8px 0 !important;}
         <button class="gv-btn active" id="pyqListBtn" title="All Questions" onclick="setPyqViewMode('list')">☰</button>
         <button class="gv-btn" id="pyqSingleBtn" title="Single Question" onclick="setPyqViewMode('practice')">🎯</button>
         <button class="gv-btn" id="pyqShowAnsBtn" title="Show Answers" onclick="pyqToggleAnswersActive()" style="display:none;">👁</button>
-        <button class="gv-btn" id="pyqFullscreenBtn" title="Enter Fullscreen" onclick="toggleFullscreen()">⛶</button>
+        <button class="gv-btn" title="Decrease font size" onclick="adjustQFontSize('panel-pyq','pyq',-0.1)">A-</button>
+        <button class="gv-btn" title="Increase font size" onclick="adjustQFontSize('panel-pyq','pyq',0.1)">A+</button>
+        <button class="gv-btn" id="pyqFullscreenBtn" title="Enter Fullscreen" onclick="toggleFullscreen('panel-pyq')">⛶</button>
       </div>
     </div>
 
@@ -1896,7 +1914,7 @@ function renderDesc(data, wrap) {
       <div class="pyq-question-top" onclick="toggleDescAnswer(${i})" style="cursor:pointer;">
         <div class="qno desc" style="flex-shrink:0; background:linear-gradient(135deg,var(--col-desc),#059669);">${i+1}</div>
         <div style="flex:1;">
-          <div style="font-size:13.5px;line-height:1.8;">${mathify(q.question)}</div>
+          <div style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${mathify(q.question)}</div>
         </div>
         <span class="pyq-q-icon" data-icon-id="desc-${i}" style="color:var(--col-desc);">▶</span>
       </div>
@@ -2085,7 +2103,7 @@ function buildQuestionCardsHTML(qArray, opts) {
     const badgesHtml = `<div class="qy-badges">${q.paper?`<span class="qy-badge qy-badge-paper">${q.paper}</span>`:''}${(showExam && q.exam)?`<span class="qy-badge qy-badge-paper">${q.exam}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>`;
     const qnoClass = accent ? 'qno qno-accent' : 'qno mcq';
     const qnoStyle = accent ? ` style="--qc:${accent};"` : '';
-    const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${q.no||idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:${q.imageWidth} !important;max-width:${q.imageWidth} !important;"` : ''}>` : '';
+    const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${q.no||idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:min(${q.imageWidth},100%) !important;max-width:min(${q.imageWidth},100%) !important;"` : ''}>` : '';
     return `<div class="mcq-card iit-q-card" data-qidx="${idx}" style="display:${IIT_PRACTICE.mode==='list' || idx===IIT_PRACTICE.index ? 'flex':'none'};">
       <div class="mcq-header"><span class="${qnoClass}"${qnoStyle}>${q.no||idx+1}</span><div class="mcq-question q-text" style="margin-bottom:0;flex:1;">${mathify(q.question)}</div>${badgesHtml}</div>
       ${imageHtml}
@@ -3020,7 +3038,7 @@ function pyqPaletteHTML(typeId, count) {
   </div>`;
 }
 function pyqNavHTML(typeId) {
-  return `<div class="iit-practice-nav" id="pyqNav-${typeId}" style="display:none;">
+  return `<div class="iit-practice-nav iit-practice-nav-top" id="pyqNav-${typeId}" style="display:none;">
     <div class="iit-nav-group">
       <button class="iit-nav-btn" id="pyqPrev-${typeId}" onclick="pyqJump('${typeId}',(PYQ_VIEW.index['${typeId}']||0)-1)">◀ Previous</button>
       <button class="iit-nav-btn" id="pyqNext-${typeId}" onclick="pyqJump('${typeId}',(PYQ_VIEW.index['${typeId}']||0)+1)">Next ▶</button>
@@ -3075,14 +3093,14 @@ function badges(q, marksType = '') {
 }
 
 function renderObjectiveSection(data, el) {
-  el.innerHTML = pyqPaletteHTML('mcq', data.length);
+  el.innerHTML = pyqPaletteHTML('mcq', data.length) + pyqNavHTML('mcq');
   data.forEach((q, idx) => {
     const c = document.createElement('div'); c.className='mcq-card'; c.dataset.pyqType='mcq';
     c.innerHTML = `<div class="mcq-card-top">
       <div class="qno mcq">${idx+1}</div>
       <div style="flex:1">
         <div class="q-header-row" style="margin-bottom:9px;">
-          <div class="q-text" style="font-size:13.5px;line-height:1.8;">${mathify(q.question)}</div>
+          <div class="q-text" style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${mathify(q.question)}</div>
           <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-mcq">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
         </div>
         <div class="options ${optionsLayoutClass(q.options)}" data-answer="${q.answer}">
@@ -3093,7 +3111,6 @@ function renderObjectiveSection(data, el) {
     </div>`;
     el.appendChild(c);
   });
-  el.insertAdjacentHTML('beforeend', pyqNavHTML('mcq'));
   applyOptionsLayout(el);
   applyPyqViewMode(el);
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
@@ -3101,7 +3118,7 @@ function renderObjectiveSection(data, el) {
 
 function renderARSection(data, el) {
   const opts = {A:'Both A & R true; R is correct explanation',B:'Both A & R true; R is not correct explanation',C:'A is true, R is false',D:'A is false, R is true'};
-  el.innerHTML = pyqPaletteHTML('ar', data.length);
+  el.innerHTML = pyqPaletteHTML('ar', data.length) + pyqNavHTML('ar');
   data.forEach((q, idx) => {
     const c = document.createElement('div'); c.className='mcq-card'; c.dataset.pyqType='ar';
     c.innerHTML = `<div class="mcq-card-top">
@@ -3109,8 +3126,8 @@ function renderARSection(data, el) {
       <div style="flex:1">
         <div class="q-header-row">
           <div class="q-text">
-            <div style="font-size:13px;line-height:1.8;margin-bottom:5px;"><strong>Assertion:</strong> ${mathify(q.assertion)}</div>
-            <div style="font-size:13px;line-height:1.8;margin-bottom:9px;"><strong>Reason:</strong> ${mathify(q.reason)}</div>
+            <div style="font-size:calc(13px*var(--qfs,1));line-height:1.8;margin-bottom:5px;"><strong>Assertion:</strong> ${mathify(q.assertion)}</div>
+            <div style="font-size:calc(13px*var(--qfs,1));line-height:1.8;margin-bottom:9px;"><strong>Reason:</strong> ${mathify(q.reason)}</div>
           </div>
           <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-ar">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
         </div>
@@ -3122,7 +3139,6 @@ function renderARSection(data, el) {
     </div>`;
     el.appendChild(c);
   });
-  el.insertAdjacentHTML('beforeend', pyqNavHTML('ar'));
   applyOptionsLayout(el);
   applyPyqViewMode(el);
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
@@ -3131,9 +3147,9 @@ function renderARSection(data, el) {
 function renderWrittenSection(data, el, type) {
   const markClass = type === 'one' ? 'set-badge-1mark' : type === 'two' ? 'set-badge-2mark' : type === 'three' ? 'set-badge-3mark' : type === 'four' ? 'set-badge-4mark' : 'set-badge-5mark';
   const typeId = type === 'one' ? 'one' : type === 'two' ? 'two' : type === 'three' ? 'three' : type === 'four' ? 'four' : 'five';
-  let html = pyqPaletteHTML(typeId, data.length);
+  let html = pyqPaletteHTML(typeId, data.length) + pyqNavHTML(typeId);
   html += data.map((q, idx) => {
-    const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:${q.imageWidth} !important;max-width:${q.imageWidth} !important;"` : ''}>` : '';
+    const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:min(${q.imageWidth},100%) !important;max-width:min(${q.imageWidth},100%) !important;"` : ''}>` : '';
     let qHtml = mathify(q.question);
     if (imageHtml) qHtml = qHtml.includes('[[image]]') ? qHtml.replace('[[image]]', imageHtml) : qHtml + imageHtml;
     const tableHtml = q.table ? pyqTableHTML(q.table) : '';
@@ -3144,7 +3160,7 @@ function renderWrittenSection(data, el, type) {
       <div class="pyq-question-top" onclick="togglePYQAnswer('${typeId}', ${idx})" style="cursor:pointer;">
         <div class="qno ${type}" style="flex-shrink:0;">${idx+1}</div>
         <div style="flex:1;">
-          <div style="font-size:13.5px;line-height:1.8;">${qHtml}</div>
+          <div style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${qHtml}</div>
           ${tableBelow}
         </div>
         <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-${typeId}">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
@@ -3154,7 +3170,6 @@ function renderWrittenSection(data, el, type) {
     </div>
   `;
   }).join('');
-  html += pyqNavHTML(typeId);
   el.innerHTML = html;
   applyPyqViewMode(el);
   if (window.MathJax) MathJax.typesetPromise([el]).catch(err => console.log('MathJax error:', err));
@@ -3241,19 +3256,26 @@ function renderComingSoon(wrap, icon, name, msg) {
 }
 
 /* ══════ FULLSCREEN ══════ */
-function toggleFullscreen() {
+const QFS = { iitoth:1, pyq:1 };
+function adjustQFontSize(panelId, key, delta) {
+  QFS[key] = Math.min(1.4, Math.max(0.8, +(QFS[key] + delta).toFixed(2)));
+  const el = document.getElementById(panelId);
+  if (el) el.style.setProperty('--qfs', QFS[key]);
+}
+function toggleFullscreen(targetId) {
   if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+    const el = (targetId && document.getElementById(targetId)) || document.documentElement;
+    el.requestFullscreen && el.requestFullscreen();
   } else {
     document.exitFullscreen && document.exitFullscreen();
   }
 }
 function updateFullscreenBtn() {
   const isFs = !!document.fullscreenElement;
-  const btn = document.getElementById('fullscreenBtn');
-  if (btn) { btn.textContent = isFs ? '🗗' : '⛶'; btn.title = isFs ? 'Exit Fullscreen' : 'Enter Fullscreen'; }
-  const pyqBtn = document.getElementById('pyqFullscreenBtn');
-  if (pyqBtn) { pyqBtn.textContent = isFs ? '🗗' : '⛶'; pyqBtn.title = isFs ? 'Exit Fullscreen' : 'Enter Fullscreen'; }
+  ['fullscreenBtn','pyqFullscreenBtn','othFullscreenBtn'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) { btn.textContent = isFs ? '🗗' : '⛶'; btn.title = isFs ? 'Exit Fullscreen' : 'Enter Fullscreen'; }
+  });
 }
 document.addEventListener('fullscreenchange', updateFullscreenBtn);
 
