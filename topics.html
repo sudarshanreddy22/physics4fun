@@ -648,6 +648,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .q-header-row .q-text{flex:1;min-width:120px;}
 .qy-badges{display:flex;gap:6px;align-items:center;flex-shrink:0;margin-top:1px;}
 .qy-badge{font-size:9px;font-weight:800;padding:3px 9px;border-radius:12px;height:19px;box-sizing:border-box;display:inline-flex;align-items:center;font-family:'JetBrains Mono',monospace;letter-spacing:.5px;color:#fff;flex-shrink:0;white-space:nowrap;}
+.qy-badges-bottom{width:100%;justify-content:flex-end;margin-top:8px;}
 .qy-badge-paper{background:#111827;border:1px solid rgba(255,255,255,.14);}
 .qy-badge-year{background:#7c3aed;border:1px solid rgba(124,58,237,.6);}
 .qy-badge-paper.qy-set-mcq{background:#5b21b6;}
@@ -3099,14 +3100,12 @@ function renderObjectiveSection(data, el) {
     c.innerHTML = `<div class="mcq-card-top">
       <div class="qno mcq">${idx+1}</div>
       <div style="flex:1">
-        <div class="q-header-row" style="margin-bottom:9px;">
-          <div class="q-text" style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${mathify(q.question)}</div>
-          <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-mcq">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
-        </div>
+        <div class="q-text" style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;margin-bottom:9px;">${mathify(q.question)}</div>
         <div class="options ${optionsLayoutClass(q.options)}" data-answer="${q.answer}">
           ${Object.entries(q.options).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${mathify(v)}</div>`).join('')}
         </div>
         <div class="explanation">💡 Explanation will be updated shortly.</div>
+        <div class="qy-badges qy-badges-bottom">${q.set?`<span class="qy-badge qy-badge-paper qy-set-mcq">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
       </div>
     </div>`;
     el.appendChild(c);
@@ -3124,17 +3123,15 @@ function renderARSection(data, el) {
     c.innerHTML = `<div class="mcq-card-top">
       <div class="qno ar">${idx+1}</div>
       <div style="flex:1">
-        <div class="q-header-row">
-          <div class="q-text">
+        <div class="q-text">
             <div style="font-size:calc(13px*var(--qfs,1));line-height:1.8;margin-bottom:5px;"><strong>Assertion:</strong> ${mathify(q.assertion)}</div>
             <div style="font-size:calc(13px*var(--qfs,1));line-height:1.8;margin-bottom:9px;"><strong>Reason:</strong> ${mathify(q.reason)}</div>
-          </div>
-          <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-ar">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
         </div>
         <div class="options ${optionsLayoutClass(opts)}" data-answer="${q.answer}">
           ${Object.entries(opts).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}
         </div>
         <div class="explanation">💡 Explanation will be updated shortly.</div>
+        <div class="qy-badges qy-badges-bottom">${q.set?`<span class="qy-badge qy-badge-paper qy-set-ar">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
       </div>
     </div>`;
     el.appendChild(c);
@@ -3163,10 +3160,10 @@ function renderWrittenSection(data, el, type) {
           <div style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${qHtml}</div>
           ${tableBelow}
         </div>
-        <div class="qy-badges">${q.set?`<span class="qy-badge qy-badge-paper qy-set-${typeId}">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
         <span class="pyq-q-icon" data-icon-id="${typeId}-${idx}">▶</span>
       </div>
       <div class="pyq-answer" id="pyq-ans-${typeId}-${idx}" style="display:none;">${mathify(q.answer)||'Answer will be updated shortly.'}</div>
+      <div class="qy-badges qy-badges-bottom">${q.set?`<span class="qy-badge qy-badge-paper qy-set-${typeId}">${q.set}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>
     </div>
   `;
   }).join('');
