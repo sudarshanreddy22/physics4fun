@@ -147,5 +147,273 @@ window.pyqsData.three = [
 
 
 
-window.pyqsData.four = [];
-window.pyqsData.five = [];
+window.pyqsData.four = [
+  {
+    question: `<div class="q-part">Read the following passage and answer the questions that follow:</div>
+
+    <div class="q-part">Bhoumik was playing with a magnetic compass near a current carrying spring-like device. He observed that the compass needle shows deflection whenever he goes close to the device. After observing it, he started running around the device. Now, he observed that the compass needle is continuously changing its direction and tries to orient itself along the North-South direction of the Earth.</div>
+    <div class="q-subpart">(i) What is the similarity in the behaviour of a freely suspended bar magnet and a magnetic compass?</div>
+    <div class="q-subpart">(ii) How can the magnitude and direction of the magnetic field of a solenoid be changed?</div>
+    <div class="q-subpart">(iii) (a) Compare the magnetic field due to a current-carrying solenoid and a current-carrying straight wire made by stretching a solenoid.</div>
+    <div class="q-part" style="text-align:center;font-weight:700;">OR</div>
+    <div class="q-subpart">(iii) (b) When a moving electron enters in a magnetic field, what will happen to its motion? State the law required to explain your observation of moving electron in a magnetic field</div>`,
+    set: "31(B)",
+    year: "2026C"
+  },
+  {
+    question: `<div class="q-part">Read the following passage and answer the questions that follow:</div>
+
+    <div class="q-part">H.C. Oersted demonstrated that every current-carrying wire produces magnetic field around it. The pattern of the magnetic field depends upon the geometrical structure the current carrying wire is folded into. When a current-carrying wire is kept in a magnetic field, it experiences a force. Magnitude of this force is maximum when direction of magnetic field is at right angles to the current-carrying wire. Some rules to determine the direction of magnetic field and force were given by scientists Maxwell and Fleming. </div>
+    <div class="q-subpart">(a) What is the direction of magnetic field inside and outside a solenoid?</div>
+    <div class="q-subpart">(b) Same electric current is flowing through three identical wires A, B and C. If wires A, B and C are making respectively angles 30°, 60° and 270° with the magnetic field, which of the wires will experience maximum force and why? </div>
+    <div class="q-subpart">(c) (i) Name and state the law which is required to find out the direction of force acting on a current carrying wire, kept in a magnetic field.</div>
+    <div class="q-part" style="text-align:center;font-weight:700;">OR</div>
+    <div class="q-subpart">(c) (ii) Name and state the law which is required to find out the direction of magnetic field around the current carrying straight conductor.</div>`,
+    set: "31(B)",
+    year: "2026"
+  },
+
+];
+
+
+
+
+window.pyqsData.five = [
+
+  {
+    question: `
+      <div class="q-part">(i) State the rule which gives the direction of force acting on a current-carrying conductor placed in a magnetic field.</div>
+      <div class="q-part">(ii) What is a fuse? Why is it called a safety device?</div>
+      <div class="q-part">(iii) Why are electrical appliances with metallic bodies connected to the mains through a three-pin plug, whereas an electric bulb is connected with a two-pin plug?</div>
+      <div class="q-part">(iv) What will be the direction of force experienced by the conductor AB due to the magnetic field, when current flows in the direction shown? Name the law you applied to find the direction.</div>
+    `,
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-2-1-5m.png",
+	imageWidth: "30%",
+    answer: "",
+    set: "31/2/1",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) Draw the pattern of magnetic field lines through and around a current-carrying circular loop.</div>
+      <div class="q-part">(ii) State the rule to find out the direction of the magnetic field inside and around the circular loop.</div>
+      <div class="q-part">(iii) Give reasons:</div>
+      <div class="q-subpart">(I) Why should a burnt-out fuse be replaced by another fuse of identical rating only, in an electric circuit?</div>
+      <div class="q-subpart">(II) Why is soft iron-core used in making an electromagnet?</div>
+    `,
+    answer: "",
+    set: "31/2/1",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) State the rules to determine the following:</div>
+      <div class="q-subpart">(I) Direction of magnetic field produced around a current-carrying straight conductor.</div>
+      <div class="q-subpart">(II) Direction of force experienced by a current-carrying straight conductor placed in a magnetic field which is perpendicular to it.</div>
+      <div class="q-part">(ii) (I) Draw the magnetic field lines due to a current-carrying solenoid.</div>
+      <div class="q-part">(II) Three points A, B and C are marked in the given diagram of the current-carrying solenoid. Out of the three points A, B and C, at which point is the magnetic field strength maximum and at which point is it minimum?</div>
+    `,
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-2-2-5m_1.png",
+	imageWidth: "30%",
+    answer: "",
+    set: "31/2/2",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) (I) In the given circuit diagram, a battery B, a key K, a resistance R and a thick copper wire XY are connected in series and a compass is placed near the wire. What is the purpose of this arrangement?</div>
+      <div class="q-part">(II) What conclusion do you draw from it? [[image]]</div>
+      <div class="q-part">(ii) Give reasons:</div>
+      <div class="q-subpart">(I) There is either a convergence or a divergence of magnetic field lines near the ends of a current-carrying straight solenoid.</div>
+      <div class="q-subpart">(II) The current-carrying solenoid, when suspended freely, aligns along a particular direction.</div>
+      <div class="q-subpart">(III) The burnt-out fuse should be replaced by another fuse of identical rating.</div>
+    `,
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-2-2-5m_2.png",
+	imageWidth: "40%",
+    answer: "",
+    set: "31/2/2",
+    year: "2026"
+  },
+  {
+    question: `[[image]]
+      <div class="q-part">(i) The magnetic field lines due to two bar magnets X and Y are shown in the given diagram. If the magnet X is displaced towards magnet Y, will there be repulsion or attraction between them? Justify.</div>
+      <div class="q-part">(ii) A metallic conductor is suspended perpendicular to the magnetic field of a horseshoe magnet. The conductor gets displaced towards the left when a current is passed through it. What will be the effect on displacement of conductor if the:</div>
+      <div class="q-subpart">(I) Current through the conductor is increased?</div>
+      <div class="q-subpart">(II) Horseshoe magnet is replaced by another stronger horseshoe magnet?</div>
+      <div class="q-subpart">(III) Direction of current through the conductor is reversed?</div>
+    `,
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-2-3-5m.png",
+	imageWidth: "60%",
+    answer: "",
+    set: "31/2/3",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) Draw a schematic diagram of a domestic electric circuit which includes the following devices:</div>
+      <div class="q-subpart">(I) A fuse</div>
+      <div class="q-subpart">(II) A power meter</div>
+      <div class="q-subpart">(III) One light point</div>
+      <div class="q-subpart">(IV) A power plug</div>
+      <div class="q-part">(ii) Why is it necessary to connect an earth wire to the electrical appliances having metallic covers?</div>
+    `,
+    answer: "",
+    set: "31/2/3",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) What is a solenoid? Draw a diagram showing the magnetic field pattern due to a current-carrying solenoid inside and outside.</div>
+      <div class="q-part">(ii) Name any two factors on which the magnitude of the magnetic field due to a current-carrying solenoid depends.</div>
+      <div class="q-part">(iii) A current-carrying solenoid is stretched and converted into a straight wire carrying current. Draw a diagram showing the magnetic field pattern around it and mark the direction of the magnetic field.</div>`,
+    answer: "",
+    set: "31/3/1",
+    year: "2026"
+  },
+
+{
+  question: `
+    <div class="q-part">(i) With the help of a diagram, show that a current-carrying conductor placed in an external magnetic field experiences a force. Indicate the direction of the field, current and force clearly.</div>
+    <div class="q-part">(ii) The diagram given below shows an electron moving in a uniform magnetic field.</div>
+    [[image]]
+    <div class="q-subpart">(I) What will be the direction of the force acting on the electron?</div>
+    <div class="q-subpart">(II) What will happen to the direction of the force acting on the electron, if the direction of the magnetic field as well as the direction of motion of the electron, both are reversed?</div>
+  `,
+  image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-3-1-5m.png",
+  imageWidth: "30%",
+  answer: "",
+  set: "31/3/1",
+  year: "2026"
+},
+
+  {
+    question: `
+      <div class="q-part">(i) Write the name and statement of the rule used to determine the direction of the:</div>
+      <div class="q-subpart">(I) Force experienced by a straight current-carrying conductor placed in a uniform magnetic field perpendicular to the field.</div>
+      <div class="q-subpart">(II) Magnetic field produced around a straight conductor carrying electric current.</div>
+      <div class="q-part">(ii) Differentiate between the magnetic field due to a bar magnet and the magnetic field due to a current-carrying solenoid.</div>
+    `,
+    answer: "",
+    set: "31/3/2",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) With the help of a diagram, describe an activity in brief to show that a current-carrying straight conductor produces a magnetic field around it.</div>
+      <div class="q-part">(ii) Two straight current-carrying conductors (A) and (B) are shown in the figures below: [[image]]</div>
+      <div class="q-subpart">(I) Mark the direction of the magnetic fields around these current-carrying conductors (A) and (B).</div>
+      <div class="q-subpart">(II) Compare the strengths of magnetic fields produced (1) at Points P and Q and at (2) Points Q and R</div>
+    `,
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-3-2-5m.png",
+	imageWidth: "50%",
+    answer: "",
+    set: "31/3/2",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) A person was repairing an electric heater. He observed that there were three different connecting wires of three different colours in the cable attached to the heater.</div>
+      <div class="q-subpart">(I) What are these three different wires called? Name them colourwise.</div>
+      <div class="q-subpart">(II) What is the value of standard potential difference at which electricity is supplied in Indian homes for lighting?</div>
+      <div class="q-part">(ii) What is the role of:</div>
+      <div class="q-subpart">(I) Earthing</div>
+      <div class="q-subpart">(II) Fuse</div>
+      <div class="q-part">in domestic electric circuits?</div>
+    `,
+    answer: "",
+    set: "31/3/3",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) Write the name and statement of the rule used to determine the direction of the:</div>
+      <div class="q-subpart">(I) Force experienced by a straight current-carrying conductor placed in a uniform magnetic field perpendicular to the field.</div>
+      <div class="q-subpart">(II) Magnetic field produced around a straight conductor carrying electric current.</div>
+      <div class="q-part">(ii) Two straight current-carrying conductors (A) and (B) are shown in the figures below: [[image]]</div>
+      <div class="q-subpart">(I) Mark the direction of the magnetic fields around these current-carrying conductors (A) and (B).</div>
+      <div class="q-subpart">(II) Compare the strengths of magnetic fields produced at (1) points P and Q and (2) at points Q and R qualitatively.</div>
+    `,
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-3-3-5m.png",
+	imageWidth: "50%",
+    answer: "",
+    set: "31/3/3",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) Draw a diagram showing the magnetic field lines around a bar magnet. Write any two characteristics of magnetic field lines.</div>
+      <div class="q-part">(ii) Write the statement of Right-Hand Thumb Rule.</div>
+      <div class="q-part">(iii) The concentric circles representing the magnetic field around a current-carrying straight wire become larger and larger as we move away from the wire. How does the magnetic field change on these concentric circles?</div>
+    `,
+    answer: "",
+    set: "31/5/1",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) Draw a diagram showing the magnetic field lines in and around the current-carrying solenoid. Write any two salient features of these lines.</div>
+      <div class="q-part">(ii) What is an electromagnet and how is it made?</div>
+    `,
+    answer: "",
+    set: "31/5/1",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) List any two features of the electric current used in the houses of India.</div>
+      <div class="q-part">(ii) Write any two differences between direct current and alternating current.</div>
+      <div class="q-part">(iii) How will you identify live wire and neutral wire in a domestic electric circuit?</div>
+    `,
+    answer: "",
+    set: "31/5/2",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) Why is a fuse an important component in our electric circuits?</div>
+      <div class="q-part">(ii) Distinguish between overloading and short-circuiting of a circuit.</div>
+      <div class="q-part">(iii) Giving reason, explain what type of materials are used in fuse wires.</div>
+    `,
+    answer: "",
+    set: "31/5/2",
+    year: "2026"
+  },
+
+  {
+    question: `
+      <div class="q-part">(i) State the rule which gives the direction of force acting on a current-carrying conductor placed in a uniform magnetic field.</div>
+      <div class="q-part">(ii) Name any two devices which work on the basis of an interaction between magnetic field and current-carrying conductor.[[image]]</div>
+      <div class="q-part">(iii) Observe the given diagrams. Comment on the magnitude of force on electron in both the cases and give reason for your answer.</div>
+    `,
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-5-3-5m_1.png",
+	imageWidth: "50%",
+    answer: "",
+    set: "31/5/3",
+    year: "2026"
+  },
+  {
+    question: `
+      <div class="q-part">(i) List three possible reasons of short-circuiting in an electric circuit.</div>
+      <div class="q-part">(ii) In case of overload, will the fuse protect the given electric circuit from damage? Justify your answer.</div>
+      <div class="q-part">(iii) For an electric heater rated as 220 V, 2200 W, what should be the minimum rating of fuse used with it?</div>
+    `,
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2026-31-5-3-5m_2.png",
+	imageWidth: "30%",
+    answer: "",
+    set: "31/5/3",
+    year: "2026"
+  }
+
+];
