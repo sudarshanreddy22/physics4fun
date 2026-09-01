@@ -3097,10 +3097,13 @@ function renderObjectiveSection(data, el) {
   el.innerHTML = pyqPaletteHTML('mcq', data.length) + pyqNavHTML('mcq');
   data.forEach((q, idx) => {
     const c = document.createElement('div'); c.className='mcq-card'; c.dataset.pyqType='mcq';
+    const mcqImg = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${idx+1} figure" loading="lazy"${q.imageWidth?` style="width:${q.imageWidth} !important;max-width:${q.imageWidth} !important;"`:''}>` : '';
+    let mcqQ = mathify(q.question);
+    if (mcqImg) mcqQ = mcqQ.includes('[[image]]') ? mcqQ.replace('[[image]]', mcqImg) : mcqQ + mcqImg;
     c.innerHTML = `<div class="mcq-card-top">
       <div class="qno mcq">${idx+1}</div>
       <div style="flex:1">
-        <div class="q-text" style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;margin-bottom:9px;">${mathify(q.question)}</div>
+        <div class="q-text" style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;margin-bottom:9px;">${mcqQ}</div>
         <div class="options ${optionsLayoutClass(q.options)}" data-answer="${q.answer}">
           ${Object.entries(q.options).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${mathify(v)}</div>`).join('')}
         </div>
@@ -3120,12 +3123,14 @@ function renderARSection(data, el) {
   el.innerHTML = pyqPaletteHTML('ar', data.length) + pyqNavHTML('ar');
   data.forEach((q, idx) => {
     const c = document.createElement('div'); c.className='mcq-card'; c.dataset.pyqType='ar';
+    const arImg = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${idx+1} figure" loading="lazy"${q.imageWidth?` style="width:${q.imageWidth} !important;max-width:${q.imageWidth} !important;"`:''}>` : '';
     c.innerHTML = `<div class="mcq-card-top">
       <div class="qno ar">${idx+1}</div>
       <div style="flex:1">
         <div class="q-text">
             <div style="font-size:calc(13px*var(--qfs,1));line-height:1.8;margin-bottom:5px;"><strong>Assertion:</strong> ${mathify(q.assertion)}</div>
             <div style="font-size:calc(13px*var(--qfs,1));line-height:1.8;margin-bottom:9px;"><strong>Reason:</strong> ${mathify(q.reason)}</div>
+            ${arImg}
         </div>
         <div class="options ${optionsLayoutClass(opts)}" data-answer="${q.answer}">
           ${Object.entries(opts).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}
