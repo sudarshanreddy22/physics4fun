@@ -469,7 +469,7 @@ window.pyqsData.two = [
   {
     question: `<div class="q-part">(a) State Fleming's left-hand rule.</div>
 <div class="q-part">(b) An electron enters a magnetic field at right angles to it as shown in the following diagram. Use Fleming's left-hand rule to determine the direction of force on the electron.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2022-2m-magnetic-poles.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023C-2m-magnetic-field.png",
     imageWidth: "30%",
     answer: "",
     set: "2023", year: "2023"
@@ -505,7 +505,7 @@ window.pyqsData.two = [
   {
     question: `<div class="q-part">(a) Name the poles P, Q, R and S of the magnets in the following figures 'a' and 'b'. [[image]]</div>
 <div class="q-part">(b) State the inference drawn about the direction of magnetic field lines on the basis of these diagrams.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2022-poles-pqrs.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2022-2m-magnetic-poles.png",
     imageWidth: "40%",
     answer: "",
     set: "2022", year: "2022"
