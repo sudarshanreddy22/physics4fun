@@ -22,21 +22,21 @@ window.pyqsData.mcq = [
     year: "2025"
   },
   {
-    question: "Which one of the following statements is <u>not true</u> about a bar magnet?",
+    question: "Which one of the following statements is <b><i>not</i></b> true about a bar magnet?",
     options: { A: "It sets itself in north-south direction when suspended freely", B: "It has attractive power for iron filings", C: "It produces magnetic field lines", D: "The direction of magnetic field lines inside a bar magnet is from its north pole to its south pole" },
     answer: "D",
     set: "31/3/1",
     year: "2025"
   },
   {
-    question: "The strength of magnetic field produced inside a long straight current carrying solenoid does <u>not</u> depend upon:",
+    question: "The strength of magnetic field produced inside a long straight current carrying solenoid does <b><i>not</i></b> depend upon:",
     options: { A: "number of turns in the solenoid", B: "direction of current flowing through the solenoid", C: "material of the core filled inside the solenoid", D: "radius of the coil of the solenoid" },
     answer: "B",
     set: "31/3/1",
     year: "2025"
   },
   {
-    question: "The strength of magnetic field produced inside a long straight current carrying solenoid does <u>not</u> depend upon:",
+    question: "The strength of magnetic field produced inside a long straight current carrying solenoid does <b><i>not</i></b> depend upon:",
     options: { A: "Area of cross-section of the tube of the solenoid", B: "Number of turns per unit length in the solenoid", C: "Direction of current flowing through the coil of the solenoid", D: "Material of the core of the solenoid" },
     answer: "A",
     set: "31/3/2",
@@ -81,22 +81,22 @@ window.pyqsData.mcq = [
   },
   {
     question: "The pattern of the magnetic field produced inside a current carrying solenoid is:",
-    options: { A: "concentric circles", B: "parallel straight lines", C: "curved outward lines", D: "radial lines" },
+    options: { A: "a", B: "b", C: "c", D: "d" },
     answer: "B",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024-solenoid-pattern.png",
-    imageWidth: "35%",
+	image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024-mcq-filed_lines.png",
+	imageWidth: "50%",
     set: "2024",
     year: "2024"
   },
   {
-    question: "Strength of magnetic field produced by a current carrying solenoid does <u>NOT</u> depend upon:",
+    question: "Strength of magnetic field produced by a current carrying solenoid <b><u>DOES NOT</u></b> depend upon:",
     options: { A: "number of turns in the solenoid", B: "direction of the current flowing through it", C: "radius of solenoid", D: "material of core of the solenoid" },
     answer: "C",
     set: "2024",
     year: "2024"
   },
   {
-    question: "Study the following statements:<br>(a) A fuse in a circuit prevents damage to the circuit due to overloading.<br>(b) Total resistance in a circuit increases due to overloading.<br>(c) During short circuiting the current in the circuit abruptly increases.<br>(d) In order that each appliance has same current, they are connected in parallel to each other.<br><br>The correct statements are:",
+    question: "Study the following statements:<br>(a) A fuse in a circuit prevents damage to the circuit due to overloading.<br>(b) Total resistance in a circuit increases due to overloading.<br>(c) During short circuiting the current in the circuit abruptly increases.<br>(d) In order that each appliance has same current, they are connected in parallel to each other.<br>The correct statements are:",
     options: { A: "(a) and (b)", B: "(b) and (d)", C: "(a) and (c)", D: "(a), (c) and (d)" },
     answer: "C",
     set: "2024",
@@ -106,8 +106,8 @@ window.pyqsData.mcq = [
     question: "A rectangular loop ABCD carrying a current I is situated near a straight conductor XY, such that the conductor is parallel to the side AB of the loop and is in the plane of the loop. If a steady current I is established in the conductor as shown, the conductor XY will:",
     options: { A: "remain stationary", B: "move towards the side AB of the loop", C: "move away from the side AB of the loop", D: "rotate about its axis" },
     answer: "B",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024-loop-conductor.png",
-    imageWidth: "35%",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024-mcq-current-loop.png",
+    imageWidth: "25%",
     set: "2024",
     year: "2024"
   },
@@ -122,7 +122,7 @@ window.pyqsData.mcq = [
     question: "A uniform magnetic field exists in the plane of paper as shown in the diagram. In this field, an electron (e⁻) and a positron (p⁺) enter as shown. The electron and positron experience forces:",
     options: { A: "both pointing into the plane of the paper", B: "both pointing out of the plane of the paper", C: "pointing into the plane of the paper and out of the plane of the paper respectively", D: "pointing out of the plane of the paper and into the plane of the paper respectively" },
     answer: "D",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024-electron-positron.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024-mcq-electron-positron.png",
     imageWidth: "35%",
     set: "2024",
     year: "2024"
@@ -147,17 +147,17 @@ window.pyqsData.mcq = [
     question: "The resultant magnetic field at point 'P' situated midway between two parallel wires (placed horizontally) each carrying a steady current I is:",
     options: { A: "in the same direction as the current in the wires", B: "in the vertically upward direction", C: "zero", D: "in the vertically downward direction" },
     answer: "C",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-parallel-wires.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-mcq-parallel-wires.png",
     imageWidth: "30%",
     set: "2023",
     year: "2023"
   },
   {
     question: "The correct pattern of magnetic field lines of the field produced by a current carrying circular loop is:",
-    options: { A: "Option A", B: "Option B", C: "Option C", D: "Option D" },
-    answer: "A",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-circular-loop-pattern.png",
-    imageWidth: "50%",
+    options: { A: "(a)", B: "(b)", C: "(c)", D: "(d)" },
+    answer: "C",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-mcq-circular-coil.png",
+    imageWidth: "55%",
     set: "2023",
     year: "2023"
   },
@@ -179,7 +179,7 @@ window.pyqsData.mcq = [
     question: "An alpha particle enters a uniform magnetic field as shown. The direction of force experienced by the alpha particle is:",
     options: { A: "towards right", B: "towards left", C: "into the page", D: "out of the page" },
     answer: "D",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-31-4-2-alpha.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-31-4-3-mcq.png",
     imageWidth: "30%",
     set: "31/4/2",
     year: "2023"
@@ -188,7 +188,7 @@ window.pyqsData.mcq = [
     question: "An alpha particle enters a uniform magnetic field as shown. The direction of motion of the alpha particle is:",
     options: { A: "towards right", B: "towards left", C: "into the page", D: "out of the page" },
     answer: "A",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-31-4-3-alpha.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-31-4-2-mcq.png",
     imageWidth: "30%",
     set: "31/4/3",
     year: "2023"
@@ -197,7 +197,7 @@ window.pyqsData.mcq = [
     question: "A positron enters a uniform magnetic field at right angles to it as shown. The direction of force experienced by the positron will be:",
     options: { A: "to the right", B: "to the left", C: "into the page", D: "out of the page" },
     answer: "C",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-positron.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-mcq-magnetic-field.png",
     imageWidth: "30%",
     set: "2023",
     year: "2023"
@@ -206,8 +206,8 @@ window.pyqsData.mcq = [
     question: "A constant current flows in a horizontal wire in the plane of the paper from east to west as shown in the figure. The direction of the magnetic field will be north to south at a point:",
     options: { A: "directly above the wire", B: "directly below the wire", C: "located in the plane of the paper on the north side of the wire", D: "located in the plane of the paper on the south side of the wire" },
     answer: "B",
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-horizontal-wire.png",
-    imageWidth: "30%",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-mcq-straight-wire.png",
+    imageWidth: "25%",
     set: "2023",
     year: "2023"
   },
@@ -391,9 +391,6 @@ window.pyqsData.ar = [
   }
 ];
 
-/* ─────────────────────────── 1 MARK ─────────────────────────── */
-window.pyqsData.one = [];
-
 /* ─────────────────────────── 2 MARKS ─────────────────────────── */
 window.pyqsData.two = [
 
@@ -472,8 +469,8 @@ window.pyqsData.two = [
   {
     question: `<div class="q-part">(a) State Fleming's left-hand rule.</div>
 <div class="q-part">(b) An electron enters a magnetic field at right angles to it as shown in the following diagram. Use Fleming's left-hand rule to determine the direction of force on the electron.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-electron-field.png",
-    imageWidth: "35%",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2022-2m-magnetic-poles.png",
+    imageWidth: "30%",
     answer: "",
     set: "2023", year: "2023"
   },
@@ -523,7 +520,7 @@ window.pyqsData.two = [
 <div class="q-part">State giving reason:</div>
 <div class="q-subpart">(a) What is observed when a current is passed through the aluminum rod from end B to end A?</div>
 <div class="q-subpart">(b) What change is observed in a situation in which the axis of the rod 'AB' is moved and aligned parallel to the magnetic field and current is passed in the rod?</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2022-aluminium-rod.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2022-2m-foce-on-current-wire.png",
     imageWidth: "35%",
     answer: "",
     set: "2022", year: "2022"
