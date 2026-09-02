@@ -597,15 +597,57 @@ window.pyqsData.three = [
     answer: "", set: "31/4/1", year: "2026"
   },
 
-  /* ── 2025 ── */
+ /* ── 2025 ── */
   {
-    question: `<div class="q-part">(a) The third wire of earth connection is very important in domestic electric appliances." Justify this statement.</div>
+    question: `<div class="q-part">As shown in the figure, a small aluminum rod AB is suspended horizontally between the poles of a strong horseshoe magnet. This rod is also connected with a battery and a key. Study the arrangement shown.</div>
+     [[image]]
+    <div class="q-part">(a) State Fleming's left-hand rule.</div>
+    <div class="q-part">(b) Apply Fleming's left-hand rule to determine:</div>
+    <div class="q-subpart">(i) What is observed when a current is passed from B to A in the rod?</div>
+    <div class="q-subpart">(ii) What is observed when a current is passed from A to B in the rod?</div>
+    <div class="q-subpart">(iii) What is observed when the rod AB is aligned parallel to the magnetic field and current is passed through it from B to A? Justify your answer in this case.</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-31-S-1-3m-aluminium-rod.png",
+    imageWidth: "30%",
+    answer: "",
+    set: "31/S/1",
+    year: "2025"
+  },
+  {
+    question: `<div class="q-part">(a) State the Right-hand thumb rule.</div>
+<div class="q-part">(b) A steady current flows through a horizontal power line from east to west direction as shown in the figure. Apply right-hand thumb rule to determine the direction of magnetic field produced at a point directly above the wire. [[image]]</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-31-S-2-3m-staright-wire.png",
+    imageWidth: "30%",
+    answer: "", set: "2025", year: "2025"
+  },
+  {
+    question: `<div class="q-part">Consider a rectangular cardboard having two holes P and Q through which a current carrying circular loop has been inserted as shown in the diagram. [[image]]</div>
+<div class="q-part">(a) Make this diagram on your answer sheet and draw three magnetic field lines, one each passing through the points 1 (near P), 2 (at the centre of the loop) and 3 (near Q).</div>
+<div class="q-part">(b) List two factors on which the intensity of the magnetic field produced at the centre of the loop depends.</div>
+<div class="q-part">(c) Name the rule you will apply to determine the direction of magnetic field produced due to a current carrying straight conductor.</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-31-3-1-3m-circular-coil.png",
+    imageWidth: "35%",
+    answer: "", set: "31/3/1", year: "2025"
+  },
+  {
+    question: `<div class="q-part">(a) Draw a labelled diagram to show the pattern of magnetic field lines on a horizontal white board due to a straight current carrying conductor passing perpendicular through its centre.</div>
+<div class="q-part">(b) State the right hand thumb rule and check whether the directions marked on the diagram are in accordance with this rule.</div>`,
+    answer: "", set: "31/3/2", year: "2025"
+  },
+  {
+    question: `<div class="q-part">(a) Name and state the rule which determines the force on a current carrying conductor placed in a uniform magnetic field.</div>
+<div class="q-part">(b) Consider the following three diagrams in which the entry of a positive charge (+Q) in a magnetic field is shown. Identify giving reason the case in which the force experienced by the charge is (i) maximum (ii) minimum.</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-positive-charge-cases.png",
+    imageWidth: "45%",
+    answer: "", set: "2025", year: "2025"
+  },
+  {
+    question: `<div class="q-part">(a) "The third wire of earth connection is very important in domestic electric appliances." Justify this statement.</div>
 <div class="q-part">(b) List two precautions to be taken to avoid the overloading of domestic electric circuits.</div>`,
     answer: "", set: "31/5/1", year: "2025"
   },
   {
     question: "What is short circuiting? State its possible causes. What is likely to happen if a domestic circuit gets short circuited? Give reason for the justification of your answer.",
-    answer: "", set: "2025", year: "2025"
+    answer: "", set: "31/5/2", year: "2025"
   },
   {
     question: `<div class="q-part">Name and state the rule to determine the direction of a:</div>
@@ -617,22 +659,22 @@ window.pyqsData.three = [
   /* ── 2024C ── */
   {
     question: `<div class="q-part">(a) State (i) right-hand thumb rule, and (ii) Fleming's left-hand rule.</div>
-<div class="q-part">(b) Using Fleming's left-hand rule determine the direction of force experienced by a proton, which enters vertically downwards in a uniform magnetic field acting horizontally towards the east. [[image]]</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024c-proton-field.png",
+<div class="q-part">(b) Using Fleming's left-hand rule determine the direction of force experienced by a proton, which enters vertically downwards in a uniform magnetic field acting horizontally from west to east. [[image]]</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024C-3m-magnetic-field.png",
+    imageWidth: "30%",
+    answer: "", set: "2024C", year: "2024C"
+  },
+  {
+    question: `<div class="q-part">(a) Draw the pattern of magnetic field lines around a current carrying straight conductor through which current is flowing vertically upward. Mark the direction of the field lines.</div>
+<div class="q-part">(b) An alpha particle enters a uniform magnetic field at right angles to it as shown in the diagram. [[image]]</div>
+<div class="q-subpart">(i) Name the rule which can help in determining the direction of force acting on the alpha particle in this case.</div>
+<div class="q-subpart">(ii) Apply this rule and find the direction of force on the alpha particle.</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024C-3m-magnetic-field2.png",
     imageWidth: "30%",
     answer: "", set: "2024C", year: "2024C"
   },
 
   /* ── 2024 ── */
-  {
-    question: `<div class="q-part">(a) Draw the pattern of magnetic field lines around a current carrying straight conductor through which current is flowing vertically upward. Mark the direction of magnetic field lines.</div>
-<div class="q-part">(b) An alpha particle enters a uniform magnetic field at right angles to it as shown in the diagram. [[image]]</div>
-<div class="q-subpart">(i) Name the rule which can help in determining the direction of force acting on the alpha particle in this case.</div>
-<div class="q-subpart">(ii) Apply this rule and find the direction of force on the alpha particle.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024c-alpha-field.png",
-    imageWidth: "30%",
-    answer: "", set: "2024C", year: "2024C"
-  },
   {
     question: `<div class="q-part">Name and state the rule to determine the direction of a:</div>
 <div class="q-subpart">(i) magnetic field produced around a current carrying straight conductor.</div>
@@ -641,85 +683,88 @@ window.pyqsData.three = [
   },
   {
     question: `<div class="q-part">(i) Name two safety measures commonly used in electric circuits and appliances.</div>
-<div class="q-part">(ii) The power rating of an electric oven is 220 V; 2 kW. If it is used in a domestic electric circuit of current rating of 5 A, what result do you expect? Justify.</div>`,
+<div class="q-part">(ii) The power rating of an electric oven is 220 V; 2 kW. If it is used in a domestic electric circuit of current rating of 5 A, what result do you expect? Justify your answer with calculation.</div>`,
     answer: "", set: "2024", year: "2024"
   },
   {
-    question: `<div class="q-part">(a) State Fleming's left hand rule. Apply this rule to determine the direction of force experienced by a straight current carrying conductor AB placed in a uniform magnetic field. [[image]]</div>
-<div class="q-part">(b) What will happen to an electron which enters in the same field in the same direction in which the current is flowing in the conductor AB? Give reason.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024-flhr-conductor.png",
+    question: "Draw a diagram to show the pattern of magnetic field lines on a horizontal sheet of paper due to a straight conductor passing through its centre and carrying current vertically upward. Mark the direction of the current and the magnetic field lines.",
+    answer: "", set: "2024", year: "2024"
+  },
+  {
+    question: `<div class="q-part">(a) State Fleming's left hand rule. Apply this rule to determine the direction of force experienced by a straight current carrying conductor AB placed in a uniform magnetic field as shown in the figure. [[image]]</div>
+<div class="q-part">(b) What will happen to an electron which enters in the same field in the same direction in which the current is flowing in the conductor AB? Give reason to justify your answer.</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2024-3m-magnetic-field.png",
     imageWidth: "30%",
     answer: "", set: "2024", year: "2024"
   },
   {
-    question: "Define the term solenoid. Draw the pattern of the magnetic field lines in and around a current carrying solenoid. State how this magnetic field can be used to magnetise a piece of steel rod.",
+    question: "Define the term solenoid. Draw the pattern of magnetic field lines around a current carrying solenoid. State how this magnetic field can be used to magnetise a piece of magnetic material.",
     answer: "", set: "2024", year: "2024"
   },
   {
-    question: "Explain in brief the function of an electric fuse in a domestic circuit. An electric heater of current rating 3 kW; 220 V is to be operated in an electric circuit. What should be the minimum rating of the fuse?",
+    question: "Explain in brief the function of an electric fuse in a domestic circuit. An electric heater of current rating 3 kW; 220 V is to be operated in an electric circuit of rating 5 A. What should be the minimum rating of the fuse?",
+    answer: "", set: "2024", year: "2024"
+  },
+  {
+    question: `<div class="q-part">(a) A student fixes a sheet of white paper on a drawing board. He places a bar magnet in the centre of it. He sprinkles some iron filings uniformly around the bar magnet. Then he taps the board gently and observes that the iron filings arrange themselves in a particular pattern.</div>
+<div class="q-subpart">(a) Why do iron filings arrange in a particular pattern?</div>
+<div class="q-subpart">(b) What does the crowding of iron filings at the ends of the magnet indicate?</div>
+<div class="q-subpart">(c) What do the lines, along which the iron filings align, represent?</div>
+<div class="q-subpart">(d) If the student places a cardboard horizontally in a current carrying solenoid and repeats the above activity, in what pattern would the iron filings arrange? State the conclusion drawn from this observation.</div>`,
+    answer: "", set: "2024", year: "2024"
+  },
+  {
+    question: `<div class="q-part">(a) How is a solenoid prepared? Differentiate between a circular coil and a solenoid.</div>
+<div class="q-part">(b) Draw the pattern of the magnetic field lines inside a current carrying solenoid. What does this pattern indicate?</div>`,
+    answer: "", set: "2024", year: "2024"
+  },
+  {
+    question: `<div class="q-part">(a) What happens when a bundle of wires of soft iron is placed inside the coil of a solenoid carrying a steady current? Name the device obtained. Why is it called so?</div>
+<div class="q-part">(b) Draw the magnetic field lines inside a current carrying solenoid. What does this pattern of magnetic field lines indicate?</div>`,
+    answer: "", set: "2024", year: "2024"
+  },
+  {
+    question: `"Earth wire is a safety measure in domestic electric circuits." Justify this statement explaining its role in case of accidental leakage of electric appliances.`,
+    answer: "", set: "2024", year: "2024"
+  },
+  {
+    question: `<div class="q-part">(i) How does an electric fuse prevent the circuit and the appliances from possible damage due to short circuiting or overloading?</div>
+<div class="q-part">(ii) How is the type of current used in household supply different from the one given by dry cells or storage batteries?</div>
+<div class="q-part">(iii) For distant transmission of electric power, an alternating current (AC) is considered to be advantageous over direct current (DC). Why?</div>`,
+    answer: "", set: "2024", year: "2024"
+  },
+  {
+    question: `<div class="q-part">(i) A straight conductor is suspended horizontally with its axis perpendicular to the magnetic field of a strong horseshoe magnet. The conductor gets displaced towards the right when current is passed through it. What will happen to the displacement of the conductor if the:</div>
+<div class="q-subpart">(1) Polarity of the horseshoe magnet is reversed?</div>
+<div class="q-subpart">(2) Direction of current in the conductor is reversed?</div>
+<div class="q-subpart">(3) Current through the conductor is increased?</div>
+<div class="q-part">(ii) Name and state the rule for determining the direction of force on a current carrying conductor placed in a magnetic field.</div>`,
     answer: "", set: "2024", year: "2024"
   },
 
-  /* ── 2025 (31/3/1 and 31/3/2) ── */
+  /* ── 2023C ── */
   {
-    question: `<div class="q-part">(a) Draw a labelled diagram to show the pattern of magnetic field lines on a horizontal white board due to a straight current carrying conductor passing perpendicularly through it.</div>
-<div class="q-part">(b) State the right hand thumb rule and check whether the directions marked on the diagram are in accordance with this rule.</div>`,
-    answer: "", set: "31/3/2", year: "2025"
-  },
-  {
-    question: `<div class="q-part">Consider a rectangular cardboard having two holes P and Q through which a current carrying circular loop has been inserted as shown in the diagram. [[image]]</div>
-<div class="q-subpart">(a) Make this diagram on your answer sheet and draw three magnetic field lines, one each passing through the points 1 (near P), 2 (at the centre of the loop) and 3 (near Q).</div>
-<div class="q-subpart">(b) List two factors on which the intensity of the magnetic field produced at the centre of the loop depends.</div>
-<div class="q-subpart">(c) Name the rule you will apply to determine the direction of magnetic field produced due to a current carrying straight conductor.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-31-3-1-circular-loop.png",
-    imageWidth: "35%",
-    answer: "", set: "31/3/1", year: "2025"
-  },
-  {
-    question: `<div class="q-part">(a) As shown in the figure, a small aluminum rod AB is suspended horizontally between the poles of a strong horseshoe magnet. This rod is also connected with a battery, key and a rheostat. [[image]]</div>
-<div class="q-part">(a) State Fleming's left-hand rule.</div>
-<div class="q-part">(b) Apply Fleming's left-hand rule to determine:</div>
-<div class="q-subpart">(i) What is observed when a current is passed from B to A in the rod?</div>
-<div class="q-subpart">(ii) What is observed when a current is passed from A to B in the rod?</div>
-<div class="q-subpart">(iii) What is observed when the rod AB is aligned parallel to the magnetic field and current is passed through it from B to A? Justify your answer in this case.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-aluminium-rod-horseshoe.png",
-    imageWidth: "35%",
-    answer: "", set: "2025", year: "2025"
+    question: `<div class="q-part">(i) Differentiate between a solenoid and a circular coil.</div>
+<div class="q-part">(ii) Explain how a solenoid can be made in a school laboratory.</div>
+<div class="q-part">(iii) Write one use of the strong magnetic field produced inside a current carrying solenoid.</div>`,
+    answer: "", set: "2023C", year: "2023C"
   },
 
-  /* ── 2023C / 2023 ── */
+  /* ── 2023 ── */
   {
-    question: `<div class="q-part">(a) State the Right-hand thumb rule.</div>
-<div class="q-part">(b) A steady current flows through a horizontal power line from east to west direction. Apply right-hand thumb rule to determine the direction of magnetic field produced at a point directly above the wire. [[image]]</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-rht-rule.png",
-    imageWidth: "30%",
-    answer: "", set: "2025", year: "2025"
-  },
-  {
-    question: `<div class="q-part">(i) A straight cylindrical conductor is suspended with its axis perpendicular to the magnetic field of a horse-shoe magnet. The conductor gets displaced towards the left when current is passed through it. What will happen to the displacement of the conductor if:</div>
-<div class="q-subpart">(1) current through it is increased?</div>
-<div class="q-subpart">(2) horse-shoe magnet is replaced by another stronger horse-shoe magnet?</div>
-<div class="q-subpart">(3) direction of current through it is reversed?</div>
-<div class="q-part">(ii) Name and state the rule for determining the direction of force on a current carrying conductor in a magnetic field.</div>`,
+    question: `<div class="q-part">With the help of a labelled circuit diagram, illustrate the pattern of the magnetic field lines of the magnetic field produced around a straight current carrying conductor. Explain how the strength of magnetic field produced depends upon the current through the conductor.</div>
+<div class="q-part">Based on the following diagrams, identify the case in which the force will be: [[image]]</div>
+<div class="q-subpart">(1) maximum and (2) minimum respectively. Give reason for your answer.</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-force-cases.png",
+    imageWidth: "45%",
     answer: "", set: "2023", year: "2023"
   },
   {
-    question: "Draw the pattern of the magnetic field produced around a vertical current carrying straight conductor passing through a horizontal cardboard. Mark the direction of current in the conductor and the direction of magnetic field lines.",
+    question: "Explain the meaning of overloading of an electrical circuit. List two possible causes due to which overloading may occur in household circuits. Write one preventive measure that should be taken to avoid overloading of circuits.",
     answer: "", set: "2023", year: "2023"
   },
   {
-    question: "What is a solenoid? When does a solenoid behave as a magnet? Draw the pattern of the magnetic field produced inside it showing the directions of the magnetic field lines.",
-    answer: "", set: "2023", year: "2023"
-  },
-  {
-    question: `<div class="q-part">(i) Draw the pattern of magnetic field lines of:</div>
-<div class="q-subpart">(1) a current carrying solenoid</div>
-<div class="q-subpart">(2) a bar magnet</div>
-<div class="q-part">(ii) List two distinguishing features between the two fields.</div>`,
-    answer: "", set: "2023", year: "2023"
-  },
-  {
-    question: "What is a Solenoid? Draw the pattern of the magnetic field lines around a current carrying solenoid. Mark on the pattern the region where the magnetic field is uniform. State two factors on which the strength of magnetic field of a solenoid depends.",
+    question: "What is a solenoid? Draw a diagram to show the pattern of magnetic field around a current carrying solenoid. Name the region of uniform magnetic field.",
     answer: "", set: "2023", year: "2023"
   },
   {
@@ -729,13 +774,46 @@ window.pyqsData.three = [
     answer: "", set: "2023", year: "2023"
   },
   {
-    question: `<div class="q-part">For the current carrying solenoid as shown below, draw magnetic field lines and giving reason explain that out of the three points A, B and C at which point the magnetic field is strongest and at which it is weakest. [[image]]</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-solenoid-abc.png",
+    question: `<div class="q-part">(i) Why is an alternating current (A.C.) considered to be advantageous over direct current (D.C.) for the long distance transmission of electric power?</div>
+<div class="q-part">(ii) How is the type of current used in household supply different from the one given by a battery of dry cells?</div>
+<div class="q-part">(iii) How does an electric fuse prevent the electric circuit and the appliances from a possible damage due to short circuiting or overloading?</div>`,
+    answer: "", set: "2023", year: "2023"
+  },
+  {
+    question: `<div class="q-part">For the current carrying solenoid as shown below, draw magnetic field lines and giving reason explain that out of the three points A, B and C at which point the field strength is maximum and at which it is minimum. [[image]]</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-3m-solenoid.png",
     imageWidth: "35%",
     answer: "", set: "2023", year: "2023"
   },
+  {
+    question: `<div class="q-part">(i) A straight cylindrical conductor is suspended with its axis perpendicular to the magnetic field of a horse-shoe magnet. The conductor gets displaced towards left when a current is passed through it. What will happen to the displacement of the conductor if the:</div>
+<div class="q-subpart">(1) current through it is increased?</div>
+<div class="q-subpart">(2) horse-shoe magnet is replaced by another stronger horse-shoe magnet?</div>
+<div class="q-subpart">(3) direction of current through it is reversed?</div>
+<div class="q-part">(ii) Name and state the rule for determining the direction of force on a current carrying conductor in a magnetic field.</div>`,
+    answer: "", set: "2023", year: "2023"
+  },
+  {
+    question: "Draw the pattern of the magnetic field produced around a vertical current carrying straight conductor passing through a horizontal cardboard. Mark the direction of current and the direction of the magnetic field lines.",
+    answer: "", set: "2023", year: "2023"
+  },
+  {
+    question: "What is a solenoid? When does a solenoid behave as a magnet? Draw the pattern of the magnetic field produced inside it showing the directions of the magnetic field lines.",
+    answer: "", set: "2023", year: "2023"
+  },
+  {
+    question: "What is a solenoid? How does a current carrying solenoid behave when suspended freely and why? Give its one main use.",
+    answer: "", set: "2023", year: "2023"
+  },
+  {
+    question: `<div class="q-part">(i) Draw the pattern of magnetic field lines of:</div>
+<div class="q-subpart">(1) a current carrying solenoid</div>
+<div class="q-subpart">(2) a bar magnet</div>
+<div class="q-part">(ii) List two distinguishing features between the two fields.</div>`,
+    answer: "", set: "2023", year: "2023"
+  },
 
-  /* ── 2022C / 2022 ── */
+  /* ── 2022C ── */
   {
     question: `<div class="q-part">(i) What is a magnetic needle? Why does a magnetic needle get deflected when brought near a current carrying straight conductor?</div>
 <div class="q-part">(ii) State right hand thumb rule.</div>`,
@@ -746,6 +824,12 @@ window.pyqsData.three = [
 <div class="q-part">(ii) Imagine that you are sitting in an examination room with your back to one wall. An electron beam moving horizontally from the back wall towards the front wall is deflected towards your right by a strong magnetic field. Find the direction of the magnetic field.</div>
 <div class="q-part">(iii) State the rule which you have applied in determining the direction of the magnetic field in this case.</div>`,
     answer: "", set: "2022C", year: "2022C"
+  },
+
+  /* ── 2022 ── */
+  {
+    question: "What is a Solenoid? Draw the pattern of the magnetic field lines around a current carrying solenoid. Mark on the pattern the region where the magnetic field is uniform.",
+    answer: "", set: "2022", year: "2022"
   },
   {
     question: `<div class="q-part">(a) Draw the pattern of magnetic field lines around a bar magnet. Mark the position of North Pole, South Pole and the places where the magnetic field is strongest.</div>
@@ -763,15 +847,21 @@ window.pyqsData.three = [
     answer: "", set: "2022", year: "2022"
   },
 
-  /* ── 2020 ── */
+  /* ── 2020C ── */
   {
     question: `<div class="q-part">Study the diagram given below and answer the questions that follow: [[image]]</div>
 <div class="q-subpart">(a) Why do the iron filings arrange in such a pattern?</div>
 <div class="q-subpart">(b) What does this pattern demonstrate?</div>
 <div class="q-subpart">(c) Why do the iron filings near the bar magnet seem to align in the shape of closed curves?</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2020c-iron-filings.png",
-    imageWidth: "40%",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2020C-3m-bar-magnet-field.png",
+    imageWidth: "25%",
     answer: "", set: "2020C", year: "2020C"
+  },
+
+  /* ── 2020 ── */
+  {
+    question: "What is a solenoid? Draw the pattern of magnetic field lines due to a current carrying solenoid. What does the field pattern inside the solenoid indicate? State one use of this field.",
+    answer: "", set: "2020", year: "2020"
   },
   {
     question: `<div class="q-part">Give reasons for the following:</div>
@@ -794,22 +884,32 @@ window.pyqsData.three = [
     answer: "", set: "2020", year: "2020"
   },
 
-  /* ── 2019C / 2019 ── */
+  /* ── 2019C ── */
   {
-    question: `<div class="q-part">Name two safety measures used in electric circuits and appliances. When does an electric short circuit occur and how can it be prevented? State briefly.</div>
-<div class="q-part">[[image]] The following diagram shows two parallel straight conductors carrying same current. Copy the diagram and draw the pattern of the magnetic field lines around the conductors.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2019c-parallel-conductors.png",
-    imageWidth: "35%",
+    question: "Name two safety measures used in electric circuits and appliances. When does an electric short circuit occur and how can it be prevented? State briefly",
     answer: "", set: "2019C", year: "2019C"
   },
   {
-    question: "It is established that an electric current through a conductor produces a magnetic field around it. Is there a similar magnetic field produced around a thin beam of moving charges, e.g. an electron beam inside a TV picture tube? Justify your answer.",
+    question: "The following diagram shows two parallel straight conductors carrying same current. Copy the diagram and draw the pattern of the magnetic field lines around them showing their direction. [[image]]",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2019-3m-parallel-wires.png",
+    imageWidth: "10%",
+	answer: "", set: "2019C", year: "2019C"
+  },
+  
+  
+  {
+    question: "State right-hand thumb rule to determine the direction of magnetic field around a current carrying conductor. Apply this rule to find the direction of magnetic field inside and outside a current-carrying solenoid.",
+    answer: "", set: "2019C", year: "2019C"
+  },
+
+  /* ── 2019 ── */
+  {
+    question: `<div class="q-part">Draw the pattern of the field lines of the magnetic field around a current carrying straight conductor passing through and held perpendicular to a horizontal cardboard. State right-hand thumb rule and use it to mark the direction of the field lines.</div>
+<div class="q-part">Magnetic field lines are shown in the given diagram. A student makes a statement that the magnetic field at 'A' is stronger than at 'B'. Justify this statement. Also redraw the diagram showing the direction of the field at A and B. [[image]]</div>`,
     answer: "", set: "2019", year: "2019"
   },
   {
-    question: `<div class="q-part">A compass needle is placed near a current carrying straight conductor. State your observation for the following cases and give reasons for the same in each case:</div>
-<div class="q-subpart">(a) Magnitude of electric current is increased.</div>
-<div class="q-subpart">(b) The compass needle is displaced away from the conductor.</div>`,
+    question: "We know that an electric current through a metallic conductor produces a magnetic field around it. Explain giving reason whether a similar magnetic field will be produced around a thin beam of moving alpha particles.",
     answer: "", set: "2019", year: "2019"
   },
 
@@ -828,6 +928,13 @@ window.pyqsData.three = [
     question: `<div class="q-part">What are magnetic field lines? Justify the following statements:</div>
 <div class="q-subpart">(a) Two magnetic field lines never intersect each other.</div>
 <div class="q-subpart">(b) Magnetic field lines are closed curves.</div>`,
+    answer: "", set: "2015", year: "2015"
+  },
+  {
+    question: `<div class="q-part">With the help of a diagram of experimental setup describe an activity to show that the force acting on a current carrying conductor placed in a magnetic field increases with increase in current.</div>
+<div class="q-part">(a) An electric fuse of rating 3 A is connected in a circuit in which an electric iron of power 1.5 kW is connected which operates at 220 V. What would happen? Explain.</div>
+<div class="q-part">(b) Which effect of electric current is utilised in the working of an electrical fuse?</div>
+<div class="q-part">(c) Name two safety measures taken in domestic circuits.</div>`,
     answer: "", set: "2015", year: "2015"
   }
 ];
