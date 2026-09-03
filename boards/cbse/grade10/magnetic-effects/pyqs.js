@@ -635,10 +635,10 @@ window.pyqsData.three = [
   },
   {
     question: `<div class="q-part">(a) Name and state the rule which determines the force on a current carrying conductor placed in a uniform magnetic field.</div>
-<div class="q-part">(b) Consider the following three diagrams in which the entry of a positive charge (+Q) in a magnetic field is shown. Identify giving reason the case in which the force experienced by the charge is (i) maximum (ii) minimum.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-positive-charge-cases.png",
-    imageWidth: "45%",
-    answer: "", set: "2025", year: "2025"
+    <div class="q-part">(b) Consider the following three diagrams in which the entry of a positive charge (+Q) in a magnetic field is shown. Identify giving reason the case in which the force experienced by the charge is (i) maximum (ii) minimum.</div>`,
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2025-31-3-3-3m-magnetic-field.PNG",
+    imageWidth: "60%",
+    answer: "", set: "31/3/3", year: "2025"
   },
   {
     question: `<div class="q-part">(a) "The third wire of earth connection is very important in domestic electric appliances." Justify this statement.</div>
@@ -755,7 +755,7 @@ window.pyqsData.three = [
     question: `<div class="q-part">With the help of a labelled circuit diagram, illustrate the pattern of the magnetic field lines of the magnetic field produced around a straight current carrying conductor. Explain how the strength of magnetic field produced depends upon the current through the conductor.</div>
 <div class="q-part">Based on the following diagrams, identify the case in which the force will be: [[image]]</div>
 <div class="q-subpart">(1) maximum and (2) minimum respectively. Give reason for your answer.</div>`,
-    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-force-cases.png",
+    image: "https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/magnetic-effects-2023-3m-magnetic-field.png",
     imageWidth: "45%",
     answer: "", set: "2023", year: "2023"
   },
