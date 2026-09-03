@@ -909,7 +909,9 @@ window.pyqsData.two.push(
   }
 );
 
-window.pyqsData.three = [
+
+/* Additional 3-Mark PYQs — 2018 to 2025 (existing 2026 questions above remain unchanged) */
+window.pyqsData.three.push (
   {
     "question": "Show the arrangement of three resistors of 2 Ω, 3 Ω and 6 Ω which are connected in such a way that the total/equivalent resistance of the combination is (a) 1 Ω, and (b) 4 Ω. Justify your answer in each case.",
     "set": "31/S/1",
@@ -1295,4 +1297,4 @@ window.pyqsData.three = [
     "set": "2018",
     "year": "2018"
   }
-];
+);
