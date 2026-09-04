@@ -16,6 +16,24 @@ window.descriptiveData = [
   },
 
   {
+    question: "Mention one situation for each in your daily life: (a) Where positive work is done. (b) Where zero work is done.",
+    answer: "(a) Positive work: Pushing a trolley and making it move forward.\n\n(b) Zero work: Pushing a wall that does not move.",
+    marks: 2
+  },
+
+  {
+    question: "How high must a hammer of mass 3 kg be raised so that it acquires potential energy of 90 J? (Take g = 10 m/s².)",
+    answer: "Given: PE = 90 J, m = 3 kg, g = 10 m/s²\n\nPE = mgh\n90 = 3 × 10 × h\nh = 90 ÷ 30 = 3 m\n\nTherefore, the hammer must be raised to a height of 3 m.",
+    marks: 2
+  },
+
+  {
+    question: "When will you say that 1 joule of work is done?",
+    answer: "One joule of work is said to be done when a force of 1 newton produces a displacement of 1 metre in the direction of the force.",
+    marks: 2
+  },
+
+  {
     question: "What is energy? Name any four forms of energy.",
     answer: "Energy is the ability of a body to do work.\n\nForms of energy:\n• Mechanical energy\n• Heat energy\n• Light energy\n• Sound energy",
     marks: 2
@@ -85,20 +103,39 @@ window.descriptiveData = [
     marks: 3
   },
 
+  {
+    question: "Explain potential energy and kinetic energy with examples.",
+    answer: "Potential energy is the energy possessed by a body due to its position, configuration or shape. Example: Water stored in a dam.\n\nKinetic energy is the energy possessed by a body due to its motion. Example: A moving car or a flying bird.",
+    marks: 3
+  },
+
+  {
+    question: "What is the kinetic energy gained by a ball of mass 500 g when it moves with a velocity of 20 m/s?",
+    answer: "Given: m = 500 g = 0.5 kg, v = 20 m/s\n\nKE = ½mv²\n= ½ × 0.5 × (20)²\n= 0.25 × 400\n= 100 J\n\nTherefore, the kinetic energy of the ball is 100 J.",
+    marks: 3
+  },
+
   // ===========================
   // CASE-BASED QUESTIONS
   // ===========================
 
   {
-    question: "A student observes a pendulum swinging in the laboratory. At the highest point the bob stops momentarily and then starts moving downward. Answer the following:\n<br>(a) Which form of energy is maximum at the highest point?\n<br>(b) Which form of energy is maximum at the lowest point?\n<br>(c) Which law explains this conversion?",
-    answer: "<br>(a) Potential Energy.\n<br>(b) Kinetic Energy.\n<br>(c) Law of Conservation of Energy. During the swing, potential energy converts into kinetic energy and vice versa.",
+    question: "Energy is the ability to do work and can change from one form into another. Think about an electric toaster. When it is switched on, electrical energy flows into its heating filaments, which glow red hot. Similarly, the chemical energy stored in the food we eat is converted into other forms of energy in our body. Answer the following:\n<br>(a) Name the law which states that energy can neither be created nor destroyed.\n<br>(b) What energy transformation takes place when an electric toaster is switched on?\n<br>(c) What happens to the chemical energy stored in the food you eat when your body digests it?",
+    answer: "(a) Law of Conservation of Energy.\n<br>(b) Electrical energy is converted into thermal (heat) energy and light energy.<br>(c) The chemical energy stored in food is converted mainly into kinetic energy for movement and thermal energy to keep the body warm.",
     marks: 3,
     type: "case"
   },
 
   {
-    question: "A hydroelectric power station stores water in a dam before generating electricity. Answer the following:\n<br>(a) Which energy is stored in the water?\n<br>(b) On which two factors does this energy depend?\n<br>(c) Mention one energy transformation taking place.",
-    answer: "<br>(a) Gravitational Potential Energy.\n<br>(b) Mass of water and height of the dam.\n<br>(c) Potential Energy → Kinetic Energy → Electrical Energy.",
+    question: "A student observes a pendulum swinging in the laboratory. At the highest point the bob stops momentarily and then starts moving downward. Answer the following:<br>(a) Which form of energy is maximum at the highest point?\n<br>(b) Which form of energy is maximum at the lowest point?\n<br>(c) Which law explains this conversion?",
+    answer: "(a) Potential Energy.<br>(b) Kinetic Energy.<br>(c) Law of Conservation of Energy. During the swing, potential energy converts into kinetic energy and vice versa.",
+    marks: 3,
+    type: "case"
+  },
+
+  {
+    question: "A hydroelectric power station stores water in a dam before generating electricity. Answer the following:<br>(a) Which energy is stored in the water?\n<br>(b) On which two factors does this energy depend?\n<br>(c) Mention one energy transformation taking place.",
+    answer: "(a) Gravitational Potential Energy.<br>(b) Mass of water and height of the dam.<br>(c) Potential Energy → Kinetic Energy → Electrical Energy.",
     marks: 3,
     type: "case"
   }
