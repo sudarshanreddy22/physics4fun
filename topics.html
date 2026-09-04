@@ -325,7 +325,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .desc-q-text{font-size:13.5px;line-height:1.8;color:var(--text);display:flex;align-items:flex-start;padding:12px;border-radius:8px;transition:all .2s;user-select:none;}
 .desc-q-text:hover{background:rgba(52,211,153,.05);}
 .desc-q-content{flex:1;}
-.desc-answer{display:none;margin-top:8px;padding:14px;background:rgba(52,211,153,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-desc);animation:slideDown .3s ease-out;}
+.desc-answer{display:none;margin-top:8px;padding:14px;background:rgba(52,211,153,.06);border-radius:8px;font-size:calc(13px*var(--qfs,1));line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-desc);animation:slideDown .3s ease-out;}
 @keyframes slideDown{from{opacity:0;max-height:0;}to{opacity:1;max-height:1000px;}}
 
 /* ══ MOCK TEST ══ */
@@ -459,6 +459,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 }
 #panel-pyq:fullscreen,#panel-iitoth:fullscreen,#panel-pyq:-webkit-full-screen,#panel-iitoth:-webkit-full-screen{background:var(--bg);padding:16px;overflow:auto;}
 #panel-pyq:fullscreen .mcq-question-image,#panel-iitoth:fullscreen .mcq-question-image,#panel-pyq:-webkit-full-screen .mcq-question-image,#panel-iitoth:-webkit-full-screen .mcq-question-image{max-width:560px!important;width:100%!important;}
+#panel-desc:fullscreen,#panel-desc:-webkit-full-screen,#panel-objective:fullscreen,#panel-objective:-webkit-full-screen{background:#fff;padding:16px;overflow:auto;color:#111;}
 /* Adaptive MCQ option layout — picked at render time based on option text length */
 .options.opts-row4{display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;gap:8px;}
 .options.opts-row4 .option{flex:1 1 21%;min-width:110px;}
@@ -470,6 +471,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 #iitOthBody .explanation{font-size:14px;line-height:1.75;}
 /* Others/PYQs: Times New Roman + in-frame font-size control (no browser zoom) */
 #panel-iitoth,#panel-pyq{font-family:'Times New Roman',Times,serif;--qfs:1;}
+#panel-desc,#panel-objective{--qfs:1;}
 #panel-iitoth .mcq-question,#panel-pyq .mcq-question{font-size:calc(13.5px*var(--qfs));}
 #iitOthBody .mcq-question{font-size:calc(15.5px*var(--qfs));}
 #panel-iitoth .option,#panel-pyq .option,#panel-iitoth .opt-text,#panel-pyq .opt-text{font-size:calc(13px*var(--qfs));}
@@ -531,7 +533,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .pyq-question-item:hover{border-color:rgba(251,146,60,.3);}
 .pyq-question-top{display:flex;gap:11px;align-items:flex-start;}
 .pyq-q-icon{display:inline-block;width:16px;height:16px;margin-left:8px;font-size:12px;font-weight:bold;color:var(--col-pyq);transition:transform .2s;flex-shrink:0;}
-.pyq-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(251,146,60,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-pyq);animation:slideDown .3s ease-out;}
+.pyq-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(251,146,60,.06);border-radius:8px;font-size:calc(13px*var(--qfs,1));line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-pyq);animation:slideDown .3s ease-out;}
 .pyq-table{border-collapse:collapse;margin:10px auto 4px;font-size:12.5px;}
 .pyq-table-wrap{overflow-x:auto;}
 .q-part{margin-top:8px;}
@@ -661,6 +663,49 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 
 /* ══ Global Multi-Questions / Single-Question icon toggle (top tab bar) ══ */
 .global-view-toggle{display:flex;align-items:center;gap:6px;margin-left:auto;flex-shrink:0;}
+.objective-tabs-row{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
+.objective-tabs-row .desc-tabs{margin-bottom:0;flex:0 1 auto;}
+.objective-tabs-row .global-view-toggle{margin-bottom:0!important;}
+#panel-objective .mcq-question,
+#panel-objective .mcq-option,
+#panel-objective .explanation,
+#panel-objective .match-question,
+#panel-objective .match-option,
+#panel-objective .fill-question,
+#panel-objective .true-false-question,
+#panel-objective .question-text{
+  font-size:calc(1em * var(--qfs, 1));
+}
+/* Dynamic Objective option layout: JS selects 1x4, 2x2 or 4x1 based on text length. */
+#panel-objective .mcq-options,
+#panel-objective .options{
+  display:grid;
+  gap:8px 10px;
+  width:100%;
+  align-items:stretch;
+}
+#panel-objective .mcq-option,
+#panel-objective .option{
+  min-width:0;
+  width:auto;
+  box-sizing:border-box;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+#panel-objective .mcq-card{
+  font-size:var(--qfs,1em);
+}
+#panel-objective .mcq-card .mcq-question,
+#panel-objective .mcq-card .mcq-option,
+#panel-objective .mcq-card .option{
+  font-size:inherit !important;
+}
+@media (max-width:700px){
+  #panel-objective .mcq-options,
+  #panel-objective .options{
+    grid-template-columns:1fr !important;
+  }
+}
 .gv-btn{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-sub);font-size:15px;cursor:pointer;transition:all .15s;}
 .gv-btn:hover:not(:disabled){color:var(--text);}
 .gv-btn.active{background:rgba(168,85,247,0.12);border-color:#a855f7;color:#a855f7;}
@@ -1537,6 +1582,14 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="pyq-tab t-two" onclick="showDescSec('2marks',this)"><span class="tab-dot" style="background:var(--pyq-two);">2</span>Marks</div>
       <div class="pyq-tab t-three" onclick="showDescSec('3marks',this)"><span class="tab-dot" style="background:var(--pyq-three);">3</span>Marks</div>
       <div class="pyq-tab t-case" onclick="showDescSec('case',this)"><span class="tab-dot" style="background:var(--pyq-four);">C</span>Case-Based</div>
+      <div class="global-view-toggle" id="descViewToggle" style="display:none;">
+        <button class="gv-btn active" id="descListBtn" title="All Questions" onclick="setDescViewMode('list')">☰</button>
+        <button class="gv-btn" id="descSingleBtn" title="Single Question" onclick="setDescViewMode('practice')">🎯</button>
+        <button class="gv-btn" id="descShowAnsBtn" title="Show Answers" onclick="toggleAllDesc()">👁</button>
+        <button class="gv-btn" title="Decrease font size" onclick="adjustQFontSize('panel-desc','desc',-0.1)">A-</button>
+        <button class="gv-btn" title="Increase font size" onclick="adjustQFontSize('panel-desc','desc',0.1)">A+</button>
+        <button class="gv-btn" title="Enter Fullscreen" onclick="toggleFullscreen('panel-desc')">⛶</button>
+      </div>
     </div>
 
     <div id="content">
@@ -1802,6 +1855,8 @@ function switchSection(type, el, sub) {
   
   document.getElementById('pyq-tabbar').classList.toggle('visible', type === 'pyq');
   document.getElementById('desc-tabbar').classList.toggle('visible', type === 'desc');
+  const dvt = document.getElementById('descViewToggle');
+  if (dvt) dvt.style.display = (type==='desc' && isDescObjToggleGrade()) ? 'flex' : 'none';
 
   updateGlobalToggleAvailability(type);
   
@@ -1810,9 +1865,10 @@ function switchSection(type, el, sub) {
 
   switch(type) {
     case 'notes': loadNotes(); break;
-    case 'desc':  
-      loadDesc(); 
-      showDescSec('all', document.querySelector('#desc-tabbar .pyq-tab.t-all'));
+    case 'desc':
+      loadDesc().then(() => {
+        showDescSec('all', document.querySelector('#desc-tabbar .pyq-tab.t-all'));
+      });
       break;
     case 'objective': loadObjective(); break;
     case 'gloss': loadGlossary(); break;
@@ -1844,6 +1900,12 @@ const GRADE_ID_MAP = {
   'iit-f-g9':['iit-foundation','9'], 'iit-f-g10':['iit-foundation','10']
 };
 function isIITFoundation() { return !!(CUR.grade && CUR.grade.indexOf('iit-f-') === 0); }
+function isDescObjToggleGrade() {
+  if (!CUR.grade) return false;
+  const g = CUR.grade;
+  return /^cbse-g[6-9]$/.test(g) || /^cisce-g[6-8]$/.test(g) || /^cambridge-g[6-8]$/.test(g);
+}
+function isCambridgeGrade() { return !!(CUR.grade && /^cambridge-g[6-8]$/.test(CUR.grade)); }
 /* File per IIT Foundation tab; all populate window.objectiveData when loaded */
 const IIT_TAB_FILES = {
   mcq:'objective.js', numericals:'numericals.js', jeemain:'jeemain.js',
@@ -1890,6 +1952,9 @@ function toggleNoteQA(el) { el.classList.toggle('open'); }
 async function loadDesc() {
   const wrap = document.getElementById('desc-content-wrap');
   const [board, gradeNum] = parseGradeId(CUR.grade);
+  DESC_VIEW.index = 0; DESC_VIEW.mode = 'list'; DESC_VIEW.filter = 'all';
+  const lb=document.getElementById('descListBtn'),sb=document.getElementById('descSingleBtn');
+  if(lb){lb.classList.add('active');} if(sb){sb.classList.remove('active');}
   if (!CUR.slug) { renderComingSoon(wrap,'✏️','Descriptive Questions','Questions being prepared.'); return; }
   window.descriptiveData = undefined;
   document.querySelectorAll('[data-descq]').forEach(s=>s.remove());
@@ -1922,21 +1987,28 @@ function renderDesc(data, wrap) {
       <div class="pyq-answer" id="desc-ans-${i}" style="display:none; background:rgba(52,211,153,0.06); border-left-color:var(--col-desc);">${mathify(q.answer)||'Answer coming soon.'}</div>
     </div>`;
   }).join('');
-  wrap.innerHTML = html;
+  const navHtml = isDescObjToggleGrade() ? `<div class="iit-practice-nav" id="descNavWrap" style="display:none;">
+    <div class="iit-nav-group"><button class="iit-nav-btn prev-btn" onclick="descJump(-1)">◀ Previous</button><button class="iit-nav-btn next-btn" onclick="descJump(1)">Next ▶</button></div>
+    <span class="iit-nav-progress"></span></div>` : '';
+  wrap.innerHTML = html + navHtml;
+  if (isDescObjToggleGrade()) applyDescViewMode();
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
 }
 
 function showDescSec(type, el) {
+  DESC_VIEW.filter = type || 'all';
+  DESC_VIEW.index = 0;
+
   document.querySelectorAll('#desc-tabbar .pyq-tab').forEach(t => t.classList.remove('active'));
   if (el) el.classList.add('active');
-  
-  document.querySelectorAll('[data-desc-type]').forEach(item => {
-    if (type === 'all') {
-      item.style.display = 'block';
-    } else {
-      item.style.display = item.dataset.descType === type ? 'block' : 'none';
-    }
+
+  const cards = document.querySelectorAll('#desc-content-wrap [data-desc-type]');
+  cards.forEach(item => {
+    const matches = DESC_VIEW.filter === 'all' || item.dataset.descType === DESC_VIEW.filter;
+    item.style.display = matches ? '' : 'none';
   });
+
+  applyDescViewMode();
   updateToggleAllBtn();
   document.getElementById('content').scrollTop = 0;
 }
@@ -1990,12 +2062,28 @@ async function loadObjective() {
 
 function renderObjective(data, wrap) {
   if (isIITFoundation()) { renderIITObjective(data, wrap); return; }
-  let html = `<div class="desc-tabs" style="margin-bottom:16px;">
+  const showToggle = isDescObjToggleGrade();
+  const isCISCECambridgeGrade = /^cisce-g[6-8]$/.test(CUR.grade || '') || /^cambridge-g[6-8]$/.test(CUR.grade || '');
+
+  const toggleBar = showToggle ? `<div class="global-view-toggle" style="margin-bottom:${isCISCECambridgeGrade ? '0' : '10px'};">
+    <button class="gv-btn active" id="objListBtn" title="All Questions" onclick="setObjViewMode('list')">☰</button>
+    <button class="gv-btn" id="objSingleBtn" title="Single Question" onclick="setObjViewMode('practice')">🎯</button>
+    ${isCambridgeGrade()?`<button class="gv-btn" id="objShowAnsBtn" title="Show Answers" onclick="toggleAllObjAnswers()">👁</button>`:''}
+    <button class="gv-btn" title="Decrease font size" onclick="adjustQFontSize('panel-objective','obj',-0.1)">A-</button>
+    <button class="gv-btn" title="Increase font size" onclick="adjustQFontSize('panel-objective','obj',0.1)">A+</button>
+    <button class="gv-btn" title="Enter Fullscreen" onclick="toggleFullscreen('panel-objective')">⛶</button>
+  </div>` : '';
+
+  const objectiveTabs = `<div class="desc-tabs" style="margin-bottom:${isCISCECambridgeGrade ? '0' : '16px'};">
     <div class="pyq-tab t-mcq active" onclick="filterObjective('mcq')"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
     <div class="pyq-tab t-two" onclick="filterObjective('tof')"><span class="tab-dot" style="background:var(--pyq-two);">T</span>True or False</div>
     <div class="pyq-tab t-three" onclick="filterObjective('fib')"><span class="tab-dot" style="background:var(--pyq-three);">F</span>Fill in the Blanks</div>
     <div class="pyq-tab t-four" onclick="filterObjective('match')"><span class="tab-dot" style="background:var(--pyq-four);">M</span>Matching Type</div>
   </div>`;
+
+  let html = isCISCECambridgeGrade
+    ? `<div class="objective-tabs-row">${objectiveTabs}${toggleBar}</div>`
+    : `${objectiveTabs}${toggleBar}`;
   const counters = {};
   html += data.map((q) => {
     const type = q.type || 'mcq';
@@ -2034,7 +2122,15 @@ function renderObjective(data, wrap) {
   }).join('');
   wrap.innerHTML = html;
   applyOptionsLayout(wrap);
+  requestAnimationFrame(() => adjustObjectiveOptionLayout(document.getElementById('panel-objective')));
   filterObjective('mcq');
+  if (showToggle) {
+    const navEl = document.createElement('div');
+    navEl.className='iit-practice-nav'; navEl.id='objNavWrap'; navEl.style.display='none';
+    navEl.innerHTML='<div class="iit-nav-group"><button class="iit-nav-btn prev-btn" onclick="objJump(-1)">◀ Previous</button><button class="iit-nav-btn next-btn" onclick="objJump(1)">Next ▶</button></div><span class="iit-nav-progress"></span>';
+    wrap.appendChild(navEl);
+    OBJ_VIEW.index=0; OBJ_VIEW.mode='list'; OBJ_VIEW.filter='mcq'; applyObjViewMode();
+  }
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
 }
 
@@ -2648,21 +2744,26 @@ function checkMatch(btn) {
 }
 
 function filterObjective(level) {
+  OBJ_VIEW.filter = level || 'mcq';
+  OBJ_VIEW.index = 0;
+
   document.querySelectorAll('#objective-content-wrap .pyq-tab').forEach(t => t.classList.remove('active'));
   const tabs = document.querySelectorAll('#objective-content-wrap .pyq-tab');
   tabs.forEach(tab => {
     const onclick = tab.getAttribute('onclick');
-    if (onclick && onclick.includes(`'${level}'`)) tab.classList.add('active');
+    if (onclick && onclick.includes(`'${OBJ_VIEW.filter}'`)) tab.classList.add('active');
   });
-  document.querySelectorAll('#objective-content-wrap .mcq-card').forEach(card => {
-    card.style.display = (card.dataset.qtype === level) ? 'block' : 'none';
-  });
+
+  // Respect the selected objective tab and the current List/Single Question mode.
+  applyObjViewMode();
 }
 function updateToggleAllBtn() {
   const btn = document.getElementById('desc-toggle-all');
   const answers = document.querySelectorAll('[id^="desc-ans-"]');
   const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
   if (btn) btn.textContent = allOpen ? 'Hide Answers' : 'Show Answers';
+  const ab = document.getElementById('descShowAnsBtn');
+  if (ab) ab.classList.toggle('active', allOpen);
 }
 
 /* ══════ MOCK TEST ══════ */
@@ -3258,11 +3359,185 @@ function renderComingSoon(wrap, icon, name, msg) {
 }
 
 /* ══════ FULLSCREEN ══════ */
-const QFS = { iitoth:1, pyq:1 };
+const QFS = { iitoth:1, pyq:1, desc:1, obj:1 };
+const DESC_VIEW = { mode:'list', index:0 };
+const OBJ_VIEW  = { mode:'list', index:0, filter:'mcq' };
+function setDescViewMode(mode) {
+  DESC_VIEW.mode = mode;
+  const lb = document.getElementById('descListBtn'), sb = document.getElementById('descSingleBtn');
+  if (lb) lb.classList.toggle('active', mode === 'list');
+  if (sb) sb.classList.toggle('active', mode === 'practice');
+  applyDescViewMode();
+}
+function applyDescViewMode() {
+  const allCards = Array.from(document.querySelectorAll('#desc-content-wrap .pyq-question-item'));
+  const filter = DESC_VIEW.filter || 'all';
+  const cards = allCards.filter(c => filter === 'all' || c.dataset.descType === filter);
+  const total = cards.length;
+
+  allCards.forEach(c => {
+    if (!cards.includes(c)) c.style.display = 'none';
+  });
+
+  if (!total) {
+    const nav = document.getElementById('descNavWrap');
+    if (nav) nav.style.display = 'none';
+    return;
+  }
+
+  let idx = DESC_VIEW.index;
+  if (idx >= total) idx = total - 1;
+  if (idx < 0) idx = 0;
+  DESC_VIEW.index = idx;
+
+  cards.forEach((c, i) => {
+    c.style.display = (DESC_VIEW.mode === 'list' || i === idx) ? '' : 'none';
+  });
+
+  const nav = document.getElementById('descNavWrap');
+  if (nav) {
+    nav.style.display = DESC_VIEW.mode === 'practice' ? 'flex' : 'none';
+    const prog = nav.querySelector('.iit-nav-progress');
+    if (prog) prog.textContent = (idx + 1) + ' of ' + total;
+    const pb = nav.querySelector('.prev-btn'), nb = nav.querySelector('.next-btn');
+    if (pb) pb.disabled = idx === 0;
+    if (nb) nb.disabled = idx === total - 1;
+  }
+}
+function descJump(delta) {
+  const filter = DESC_VIEW.filter || 'all';
+  const cards = Array.from(document.querySelectorAll('#desc-content-wrap .pyq-question-item'))
+    .filter(c => filter === 'all' || c.dataset.descType === filter);
+  const next = DESC_VIEW.index + delta;
+  if (next < 0 || next >= cards.length) return;
+  DESC_VIEW.index = next;
+  applyDescViewMode();
+}
+function setObjViewMode(mode) {
+  OBJ_VIEW.mode = mode;
+  const lb = document.getElementById('objListBtn'), sb = document.getElementById('objSingleBtn');
+  if (lb) lb.classList.toggle('active', mode === 'list');
+  if (sb) sb.classList.toggle('active', mode === 'practice');
+  applyObjViewMode();
+}
+function applyObjViewMode() {
+  const allCards = Array.from(document.querySelectorAll('#objective-content-wrap .mcq-card'));
+  const filter = OBJ_VIEW.filter || 'mcq';
+  const cards = allCards.filter(c => c.dataset.qtype === filter);
+  const total = cards.length;
+
+  // Keep cards from other objective tabs hidden.
+  allCards.forEach(c => {
+    if (!cards.includes(c)) c.style.display = 'none';
+  });
+
+  if (!total) {
+    const nav = document.getElementById('objNavWrap');
+    if (nav) nav.style.display = 'none';
+    return;
+  }
+
+  let idx = OBJ_VIEW.index;
+  if (idx >= total) idx = total - 1;
+  if (idx < 0) idx = 0;
+  OBJ_VIEW.index = idx;
+
+  cards.forEach((c, i) => {
+    c.style.display = (OBJ_VIEW.mode === 'list' || i === idx) ? 'block' : 'none';
+  });
+
+  const nav = document.getElementById('objNavWrap');
+  if (nav) {
+    nav.style.display = OBJ_VIEW.mode === 'practice' ? 'flex' : 'none';
+    const prog = nav.querySelector('.iit-nav-progress');
+    if (prog) prog.textContent = (idx + 1) + ' of ' + total;
+    const pb = nav.querySelector('.prev-btn'), nb = nav.querySelector('.next-btn');
+    if (pb) pb.disabled = idx === 0;
+    if (nb) nb.disabled = idx === total - 1;
+  }
+}
+function objJump(delta) {
+  const filter = OBJ_VIEW.filter || 'mcq';
+  const cards = Array.from(document.querySelectorAll('#objective-content-wrap .mcq-card'))
+    .filter(c => c.dataset.qtype === filter);
+  const next = OBJ_VIEW.index + delta;
+  if (next < 0 || next >= cards.length) return;
+  OBJ_VIEW.index = next;
+  applyObjViewMode();
+}
+function toggleAllObjAnswers() {
+  const answers = document.querySelectorAll('#objective-content-wrap .explanation');
+  const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
+  answers.forEach(a => { a.style.display = allOpen ? 'none' : 'block'; });
+  const btn = document.getElementById('objShowAnsBtn');
+  if (btn) btn.classList.toggle('active', !allOpen);
+}
+function adjustObjectiveOptionLayout(panel) {
+  if (!panel) return;
+
+  panel.querySelectorAll('.mcq-options, .options').forEach(group => {
+    const options = Array.from(group.querySelectorAll('.mcq-option, .option'));
+    if (!options.length) return;
+
+    // Reset previous layout before measuring.
+    group.style.display = 'grid';
+    group.style.gridTemplateColumns = '';
+    group.style.gap = '8px 10px';
+    options.forEach(opt => {
+      opt.style.width = '';
+      opt.style.minWidth = '0';
+      opt.style.whiteSpace = 'normal';
+    });
+
+    // Measure the actual option content. The longest option determines
+    // how many columns can comfortably fit in the available width.
+    const available = Math.max(0, group.clientWidth - 30);
+    const probe = document.createElement('span');
+    probe.style.cssText =
+      'position:absolute;visibility:hidden;pointer-events:none;white-space:nowrap;' +
+      'font:inherit;letter-spacing:inherit;padding:0 20px;box-sizing:border-box;';
+    document.body.appendChild(probe);
+
+    let longest = 0;
+    options.forEach(opt => {
+      probe.textContent = opt.textContent.trim().replace(/\s+/g, ' ');
+      longest = Math.max(longest, probe.getBoundingClientRect().width);
+    });
+    probe.remove();
+
+    // Required priority:
+    // 1x4: all 4 in one row only when all are short enough.
+    // 2x2: when they are medium/long but two columns remain comfortable.
+    // 4x1: when even two columns would make the options cramped.
+    let columns = 1;
+    if (options.length === 4) {
+      if (longest <= available / 4) columns = 4;
+      else if (longest <= available / 2) columns = 2;
+      else columns = 1;
+    } else {
+      if (longest <= available / Math.max(options.length, 1)) columns = options.length;
+      else if (options.length >= 2 && longest <= available / 2) columns = 2;
+      else columns = 1;
+    }
+
+    group.style.gridTemplateColumns = `repeat(${columns}, minmax(0, 1fr))`;
+    group.dataset.optionLayout = columns === 4 ? '1x4' : columns === 2 ? '2x2' : '4x1';
+  });
+}
+
 function adjustQFontSize(panelId, key, delta) {
   QFS[key] = Math.min(1.4, Math.max(0.8, +(QFS[key] + delta).toFixed(2)));
   const el = document.getElementById(panelId);
-  if (el) el.style.setProperty('--qfs', QFS[key]);
+  if (!el) return;
+
+  // Scale each question card as a whole so question and options always change together.
+  el.style.setProperty('--qfs', QFS[key]);
+  el.querySelectorAll('.mcq-card').forEach(card => {
+    card.style.fontSize = QFS[key] + 'em';
+  });
+
+  // Recalculate the option arrangement after every font-size change.
+  requestAnimationFrame(() => adjustObjectiveOptionLayout(el));
 }
 function toggleFullscreen(targetId) {
   if (!document.fullscreenElement) {
@@ -3327,6 +3602,13 @@ function showToast(msg) {
 window.addEventListener('DOMContentLoaded', () => {
   const cbseG10 = document.querySelector('[onclick*="\'cbse-g10\'"]');
   if (cbseG10) toggleGrade('cbse-g10', cbseG10);
+});
+
+window.addEventListener('resize', () => {
+  const panel = document.getElementById('panel-objective');
+  if (panel && typeof adjustObjectiveOptionLayout === 'function') {
+    adjustObjectiveOptionLayout(panel);
+  }
 });
 </script>
 </body>
