@@ -25,19 +25,20 @@ window.MathJax = {
   --sidebar-bg:#070d1a;--sidebar-border:rgba(255,255,255,0.055);
   --header-bg:rgba(7,13,26,0.97);
   --card-bg:rgba(255,255,255,0.04);--card-border:rgba(255,255,255,0.08);
-  --text:#e2e8f0;--text-muted:#4a5568;--text-sub:#718096;
-  --item-hover:rgba(255,255,255,0.05);--item-active:rgba(99,102,241,0.14);
-  --item-active-border:#6366f1;--divider:rgba(255,255,255,0.055);
-  --brand:#818cf8;--accent1:#6366f1;--accent2:#06b6d4;--accent3:#f59e0b;
-  --grade-pill-bg:rgba(99,102,241,0.2);--scrollthumb:#1a2540;
-  --col-notes:#818cf8;--col-desc:#34d399;--col-mock:#fbbf24;
-  --col-ppt:#f87171;--col-flash:#c084fc;--col-sim:#38bdf8;--col-pyq:#fb923c;--col-games:#10b981;
+  --text:#ffffff;--text-muted:#ffffff;--text-sub:#ffffff;
+  --item-hover:rgba(255,255,255,0.05);--item-active:rgba(251,191,36,0.14);
+  --item-active-border:#fbbf24;--divider:rgba(255,255,255,0.055);
+  --brand:#fbbf24;--accent1:#fbbf24;--accent2:#f59e0b;--accent3:#fbbf24;
+  --grade-pill-bg:rgba(251,191,36,0.2);--scrollthumb:#1a2540;
+  --col-notes:#fbbf24;--col-desc:#fbbf24;--col-mock:#fbbf24;
+  --col-ppt:#fbbf24;--col-flash:#fbbf24;--col-sim:#fbbf24;--col-pyq:#fbbf24;--col-games:#fbbf24;
   --sbg-notes:rgba(99,102,241,0.14);--sbg-desc:rgba(52,211,153,0.12);
   --sbg-mock:rgba(251,191,36,0.12);--sbg-ppt:rgba(248,113,113,0.12);
   --sbg-flash:rgba(192,132,252,0.12);--sbg-sim:rgba(56,189,248,0.12);
   --sbg-pyq:rgba(251,146,60,0.12);--sbg-games:rgba(16,185,129,0.12);
   --pyq-mcq:#7c3aed;--pyq-ar:#f97316;--pyq-two:#16a34a;
   --pyq-three:#dc2626;--pyq-four:#0ea5e9;--pyq-five:#ec4899;
+  --desc-two:#16a34a;--desc-three:#ec4899;--desc-case:#0ea5e9;
 }
 body.light{
   --bg:#f0f4fb;--bg2:#ffffff;--bg3:#f4f7fe;
@@ -174,9 +175,9 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 	#pyq-tabbar.visible, #desc-tabbar.visible{display:flex;}
 	/* Desc palette colours */
 	.iit-palette-num.pt-dall:hover,.iit-palette-num.current.pt-dall{border-color:var(--col-desc);}.iit-palette-num.current.pt-dall{background:var(--col-desc);color:#fff;}
-	.iit-palette-num.pt-d2m:hover,.iit-palette-num.current.pt-d2m{border-color:var(--pyq-two);}.iit-palette-num.current.pt-d2m{background:var(--pyq-two);color:#fff;}
-	.iit-palette-num.pt-d3m:hover,.iit-palette-num.current.pt-d3m{border-color:var(--pyq-three);}.iit-palette-num.current.pt-d3m{background:var(--pyq-three);color:#fff;}
-	.iit-palette-num.pt-dcase:hover,.iit-palette-num.current.pt-dcase{border-color:var(--pyq-four);}.iit-palette-num.current.pt-dcase{background:var(--pyq-four);color:#fff;}
+	.iit-palette-num.pt-d2m:hover,.iit-palette-num.current.pt-d2m{border-color:var(--desc-two);}.iit-palette-num.current.pt-d2m{background:var(--desc-two);color:#fff;}
+	.iit-palette-num.pt-d3m:hover,.iit-palette-num.current.pt-d3m{border-color:var(--desc-three);}.iit-palette-num.current.pt-d3m{background:var(--desc-three);color:#fff;}
+	.iit-palette-num.pt-dcase:hover,.iit-palette-num.current.pt-dcase{border-color:var(--desc-case);}.iit-palette-num.current.pt-dcase{background:var(--desc-case);color:#fff;}
 	/* Obj palette colours */
 	.iit-palette-num.pt-omcq:hover,.iit-palette-num.current.pt-omcq{border-color:var(--pyq-mcq);}.iit-palette-num.current.pt-omcq{background:var(--pyq-mcq);color:#fff;}
 	.iit-palette-num.pt-otof:hover,.iit-palette-num.current.pt-otof{border-color:var(--pyq-two);}.iit-palette-num.current.pt-otof{background:var(--pyq-two);color:#fff;}
@@ -198,9 +199,9 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 	
 	/* Descriptive Tabs Active States */
 	#desc-tabbar .pyq-tab.t-all.active{color:var(--col-desc);border-bottom-color:var(--col-desc);}
-	#desc-tabbar .pyq-tab.t-two.active{color:var(--pyq-two);border-bottom-color:var(--pyq-two);}
-	#desc-tabbar .pyq-tab.t-three.active{color:var(--pyq-three);border-bottom-color:var(--pyq-three);}
-	#desc-tabbar .pyq-tab.t-case.active{color:var(--pyq-four);border-bottom-color:var(--pyq-four);}
+	#desc-tabbar .pyq-tab.t-two.active{color:var(--desc-two);border-bottom-color:var(--desc-two);}
+	#desc-tabbar .pyq-tab.t-three.active{color:var(--desc-three);border-bottom-color:var(--desc-three);}
+	#desc-tabbar .pyq-tab.t-case.active{color:var(--desc-case);border-bottom-color:var(--desc-case);}
 
 /* ── CONTENT ── */
 #content{flex:1;overflow-y:auto;padding:18px 20px 32px;}
@@ -1561,10 +1562,10 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 
     <!-- DESC TAB BAR -->
     <div id="desc-tabbar">
-      <div class="pyq-tab t-all active" onclick="showDescSec('all',this)"><span class="tab-dot" style="background:var(--col-desc);">A</span>All</div>
-      <div class="pyq-tab t-two" onclick="showDescSec('2marks',this)"><span class="tab-dot" style="background:var(--pyq-two);">2</span>Marks</div>
-      <div class="pyq-tab t-three" onclick="showDescSec('3marks',this)"><span class="tab-dot" style="background:var(--pyq-three);">3</span>Marks</div>
-      <div class="pyq-tab t-case" onclick="showDescSec('case',this)"><span class="tab-dot" style="background:var(--pyq-four);">C</span>Case-Based</div>
+      <div class="pyq-tab t-all active" id="descTabAll" onclick="showDescSec('all',this)"><span class="tab-dot" style="background:var(--col-desc);">A</span>All</div>
+      <div class="pyq-tab t-two" onclick="showDescSec('2marks',this)"><span class="tab-dot" style="background:var(--desc-two);">2</span>Marks</div>
+      <div class="pyq-tab t-three" onclick="showDescSec('3marks',this)"><span class="tab-dot" style="background:var(--desc-three);">3</span>Marks</div>
+      <div class="pyq-tab t-case" onclick="showDescSec('case',this)"><span class="tab-dot" style="background:var(--desc-case);">C</span>Case-Based</div>
       <div class="global-view-toggle" id="descViewToggle" style="display:none;">
         <button class="gv-btn active" id="descListBtn" title="All Questions" onclick="setDescViewMode('list')">☰</button>
         <button class="gv-btn" id="descSingleBtn" title="Single Question" onclick="setDescViewMode('practice')">🎯</button>
@@ -1868,7 +1869,12 @@ function switchSection(type, el, sub) {
     case 'notes': loadNotes(); break;
     case 'desc':  
       loadDesc(); 
-      showDescSec('all', document.querySelector('#desc-tabbar .pyq-tab.t-all'));
+      {
+        const noAll = isDescNoAllGrade();
+        const allTabEl = document.getElementById('descTabAll');
+        if (allTabEl) allTabEl.style.display = noAll ? 'none' : '';
+        showDescSec(noAll?'2marks':'all', document.querySelector(noAll?'#desc-tabbar .pyq-tab.t-two':'#desc-tabbar .pyq-tab.t-all'));
+      }
       break;
     case 'objective': loadObjective(); break;
     case 'gloss': loadGlossary(); break;
@@ -1902,7 +1908,11 @@ const GRADE_ID_MAP = {
 function isIITFoundation() { return !!(CUR.grade && CUR.grade.indexOf('iit-f-') === 0); }
 function isCisceObjGrade() {
   const g = CUR.grade||'';
-  return /^(cisce|cambridge)-g[6-8]$/.test(g);
+  return /^(cisce|cambridge)-g[6-8]$/.test(g) || /^cbse-g[6-9]$/.test(g);
+}
+function isDescNoAllGrade() {
+  const g = CUR.grade||'';
+  return /^(cisce|cambridge)-g[6-8]$/.test(g) || /^cbse-g[6-9]$/.test(g) || g==='cbse-g11';
 }
 
 /* ── Desc/Obj view-mode state (mirrors PYQ_VIEW pattern) ── */
@@ -1912,7 +1922,7 @@ const OBJ_VIEW  = { mode:'list', index:{}, tab:'mcq' };
 const DESC_PT = { all:'pt-dall', '2marks':'pt-d2m', '3marks':'pt-d3m', case:'pt-dcase' };
 const OBJ_PT  = { mcq:'pt-omcq', tof:'pt-otof', fib:'pt-ofib', match:'pt-omatch' };
 
-const DESC_SV_COLOR = {all:'var(--col-desc)','2marks':'var(--pyq-two)','3marks':'var(--pyq-three)',case:'var(--pyq-four)'};
+const DESC_SV_COLOR = {all:'var(--col-desc)','2marks':'var(--desc-two)','3marks':'var(--desc-three)',case:'var(--desc-case)'};
 function descPaletteHTML(tabId, count) { return ''; }
 function descNavHTML(tabId) {
   const c = DESC_SV_COLOR[tabId]||'var(--col-desc)';
@@ -2095,28 +2105,24 @@ async function loadDesc() {
 
 function renderDesc(data, wrap) {
   const usePalette = isCisceObjGrade();
-  // Group by tab
-  const groups = { all:[], '2marks':[], '3marks':[], case:[] };
-  data.forEach((q,i) => {
-    let type = 'all';
-    if (q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))) type='case';
-    else if (q.marks==2) type='2marks';
-    else if (q.marks==3) type='3marks';
-    groups[type].push({q,i});
-  });
-  const cardHTML = (q,i) => `<div class="pyq-question-item" data-desc-id="${i}" data-desc-type="${q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))?'case':q.marks==2?'2marks':q.marks==3?'3marks':'all'}">
+  const tabs = isDescNoAllGrade() ? ['2marks','3marks','case'] : ['all','2marks','3marks','case'];
+  const cardHTML = (q,i) => {
+    const t = q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))?'case':q.marks==2?'2marks':q.marks==3?'3marks':'all';
+    const c = DESC_SV_COLOR[t]||'var(--col-desc)';
+    return `<div class="pyq-question-item" data-desc-id="${i}" data-desc-type="${t}">
     <div class="pyq-question-top" onclick="toggleDescAnswer(${i})" style="cursor:pointer;">
-      <div class="qno desc" style="flex-shrink:0;background:linear-gradient(135deg,var(--col-desc),#059669);">${i+1}</div>
+      <div class="qno desc" style="flex-shrink:0;background:${c};">${i+1}</div>
       <div style="flex:1;"><div style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${mathify(q.question)}</div></div>
-      <span class="pyq-q-icon" data-icon-id="desc-${i}" style="color:var(--col-desc);">▶</span>
+      <span class="pyq-q-icon" data-icon-id="desc-${i}" style="color:${c};">▶</span>
     </div>
-    <div class="pyq-answer" id="desc-ans-${i}" style="display:none;background:rgba(52,211,153,0.06);border-left-color:var(--col-desc);">${mathify(q.answer)||'Answer coming soon.'}</div>
+    <div class="pyq-answer" id="desc-ans-${i}" style="display:none;font-size:calc(13px*var(--qfs,1));background:color-mix(in srgb,${c} 8%,transparent);border-left-color:${c};">${mathify(q.answer)||'Answer coming soon.'}</div>
   </div>`;
+  };
   if (usePalette) {
     let html = '';
-    ['all','2marks','3marks','case'].forEach(tabId => {
+    tabs.forEach((tabId, tabIdx) => {
       const items = tabId==='all' ? data.map((q,i)=>({q,i})) : data.map((q,i)=>({q,i})).filter(({q})=>{ let t='all'; if(q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based')))t='case'; else if(q.marks==2)t='2marks'; else if(q.marks==3)t='3marks'; return t===tabId; });
-      html += `<div class="desc-section" id="desc-${tabId}" style="${tabId!=='all'?'display:none':''}">`;
+      html += `<div class="desc-section" id="desc-${tabId}" style="${tabIdx!==0?'display:none':''}">`;
       html += descPaletteHTML(tabId, items.length) + descNavHTML(tabId);
       html += items.map(({q,i})=>cardHTML(q,i)).join('');
       html += '</div>';
@@ -3535,12 +3541,6 @@ function renderComingSoon(wrap, icon, name, msg) {
 }
 
 /* ══════ FULLSCREEN ══════ */
-const QFS = { iitoth:1, pyq:1 };
-function adjustQFontSize(panelId, key, delta) {
-  QFS[key] = Math.min(1.4, Math.max(0.8, +(QFS[key] + delta).toFixed(2)));
-  const el = document.getElementById(panelId);
-  if (el) el.style.setProperty('--qfs', QFS[key]);
-}
 function toggleFullscreen() {
   if (!document.fullscreenElement) {
     const el = document.getElementById('contentWrap') || document.documentElement;
