@@ -167,9 +167,23 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 
 /* ── PYQ TABBAR ── */
 	#pyq-tabbar, #desc-tabbar, .desc-tabs{display:none;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
+	#obj-tabbar{display:none;align-items:center;background:var(--bg3);border-bottom:1px solid var(--divider);padding:0 16px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
+	#obj-tabbar.visible{display:flex;}
 	.desc-tabs{display:flex;border-radius:10px;}
-	#pyq-tabbar::-webkit-scrollbar, #desc-tabbar::-webkit-scrollbar{display:none;}
+	#pyq-tabbar::-webkit-scrollbar, #desc-tabbar::-webkit-scrollbar, #obj-tabbar::-webkit-scrollbar{display:none;}
 	#pyq-tabbar.visible, #desc-tabbar.visible{display:flex;}
+	/* Desc palette colours */
+	.iit-palette-num.pt-dall:hover,.iit-palette-num.current.pt-dall{border-color:var(--col-desc);}.iit-palette-num.current.pt-dall{background:var(--col-desc);color:#fff;}
+	.iit-palette-num.pt-d2m:hover,.iit-palette-num.current.pt-d2m{border-color:var(--pyq-two);}.iit-palette-num.current.pt-d2m{background:var(--pyq-two);color:#fff;}
+	.iit-palette-num.pt-d3m:hover,.iit-palette-num.current.pt-d3m{border-color:var(--pyq-three);}.iit-palette-num.current.pt-d3m{background:var(--pyq-three);color:#fff;}
+	.iit-palette-num.pt-dcase:hover,.iit-palette-num.current.pt-dcase{border-color:var(--pyq-four);}.iit-palette-num.current.pt-dcase{background:var(--pyq-four);color:#fff;}
+	/* Obj palette colours */
+	.iit-palette-num.pt-omcq:hover,.iit-palette-num.current.pt-omcq{border-color:var(--pyq-mcq);}.iit-palette-num.current.pt-omcq{background:var(--pyq-mcq);color:#fff;}
+	.iit-palette-num.pt-otof:hover,.iit-palette-num.current.pt-otof{border-color:var(--pyq-two);}.iit-palette-num.current.pt-otof{background:var(--pyq-two);color:#fff;}
+	.iit-palette-num.pt-ofib:hover,.iit-palette-num.current.pt-ofib{border-color:var(--pyq-three);}.iit-palette-num.current.pt-ofib{background:var(--pyq-three);color:#fff;}
+	.iit-palette-num.pt-omatch:hover,.iit-palette-num.current.pt-omatch{border-color:var(--pyq-four);}.iit-palette-num.current.pt-omatch{background:var(--pyq-four);color:#fff;}
+	#panel-desc,#panel-objective{--qfs:1;}
+	#panel-desc:fullscreen,#panel-desc:-webkit-full-screen,#panel-objective:fullscreen,#panel-objective:-webkit-full-screen{background:#fff;color:#111;padding:16px;overflow:auto;}
 	.pyq-tab{display:flex;align-items:center;gap:6px;padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;flex-shrink:0;border-radius:6px 6px 0 0;}
 .pyq-tab:hover{color:var(--text);background:var(--item-hover);}
 .pyq-tab.active{color:var(--brand);border-bottom-color:var(--brand);}
@@ -325,7 +339,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .desc-q-text{font-size:13.5px;line-height:1.8;color:var(--text);display:flex;align-items:flex-start;padding:12px;border-radius:8px;transition:all .2s;user-select:none;}
 .desc-q-text:hover{background:rgba(52,211,153,.05);}
 .desc-q-content{flex:1;}
-.desc-answer{display:none;margin-top:8px;padding:14px;background:rgba(52,211,153,.06);border-radius:8px;font-size:calc(13px*var(--qfs,1));line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-desc);animation:slideDown .3s ease-out;}
+.desc-answer{display:none;margin-top:8px;padding:14px;background:rgba(52,211,153,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-desc);animation:slideDown .3s ease-out;}
 @keyframes slideDown{from{opacity:0;max-height:0;}to{opacity:1;max-height:1000px;}}
 
 /* ══ MOCK TEST ══ */
@@ -459,7 +473,6 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 }
 #panel-pyq:fullscreen,#panel-iitoth:fullscreen,#panel-pyq:-webkit-full-screen,#panel-iitoth:-webkit-full-screen{background:var(--bg);padding:16px;overflow:auto;}
 #panel-pyq:fullscreen .mcq-question-image,#panel-iitoth:fullscreen .mcq-question-image,#panel-pyq:-webkit-full-screen .mcq-question-image,#panel-iitoth:-webkit-full-screen .mcq-question-image{max-width:560px!important;width:100%!important;}
-#panel-desc:fullscreen,#panel-desc:-webkit-full-screen,#panel-objective:fullscreen,#panel-objective:-webkit-full-screen{background:#fff;padding:16px;overflow:auto;color:#111;}
 /* Adaptive MCQ option layout — picked at render time based on option text length */
 .options.opts-row4{display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;gap:8px;}
 .options.opts-row4 .option{flex:1 1 21%;min-width:110px;}
@@ -471,7 +484,6 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 #iitOthBody .explanation{font-size:14px;line-height:1.75;}
 /* Others/PYQs: Times New Roman + in-frame font-size control (no browser zoom) */
 #panel-iitoth,#panel-pyq{font-family:'Times New Roman',Times,serif;--qfs:1;}
-#panel-desc,#panel-objective{--qfs:1;}
 #panel-iitoth .mcq-question,#panel-pyq .mcq-question{font-size:calc(13.5px*var(--qfs));}
 #iitOthBody .mcq-question{font-size:calc(15.5px*var(--qfs));}
 #panel-iitoth .option,#panel-pyq .option,#panel-iitoth .opt-text,#panel-pyq .opt-text{font-size:calc(13px*var(--qfs));}
@@ -533,7 +545,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .pyq-question-item:hover{border-color:rgba(251,146,60,.3);}
 .pyq-question-top{display:flex;gap:11px;align-items:flex-start;}
 .pyq-q-icon{display:inline-block;width:16px;height:16px;margin-left:8px;font-size:12px;font-weight:bold;color:var(--col-pyq);transition:transform .2s;flex-shrink:0;}
-.pyq-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(251,146,60,.06);border-radius:8px;font-size:calc(13px*var(--qfs,1));line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-pyq);animation:slideDown .3s ease-out;}
+.pyq-answer{display:none;margin-top:9px;padding:11px 14px;background:rgba(251,146,60,.06);border-radius:8px;font-size:13px;line-height:1.8;color:var(--text-sub);border-left:3px solid var(--col-pyq);animation:slideDown .3s ease-out;}
 .pyq-table{border-collapse:collapse;margin:10px auto 4px;font-size:12.5px;}
 .pyq-table-wrap{overflow-x:auto;}
 .q-part{margin-top:8px;}
@@ -663,49 +675,6 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 
 /* ══ Global Multi-Questions / Single-Question icon toggle (top tab bar) ══ */
 .global-view-toggle{display:flex;align-items:center;gap:6px;margin-left:auto;flex-shrink:0;}
-.objective-tabs-row{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
-.objective-tabs-row .desc-tabs{margin-bottom:0;flex:0 1 auto;}
-.objective-tabs-row .global-view-toggle{margin-bottom:0!important;}
-#panel-objective .mcq-question,
-#panel-objective .mcq-option,
-#panel-objective .explanation,
-#panel-objective .match-question,
-#panel-objective .match-option,
-#panel-objective .fill-question,
-#panel-objective .true-false-question,
-#panel-objective .question-text{
-  font-size:calc(1em * var(--qfs, 1));
-}
-/* Dynamic Objective option layout: JS selects 1x4, 2x2 or 4x1 based on text length. */
-#panel-objective .mcq-options,
-#panel-objective .options{
-  display:grid;
-  gap:8px 10px;
-  width:100%;
-  align-items:stretch;
-}
-#panel-objective .mcq-option,
-#panel-objective .option{
-  min-width:0;
-  width:auto;
-  box-sizing:border-box;
-  white-space:normal;
-  overflow-wrap:anywhere;
-}
-#panel-objective .mcq-card{
-  font-size:var(--qfs,1em);
-}
-#panel-objective .mcq-card .mcq-question,
-#panel-objective .mcq-card .mcq-option,
-#panel-objective .mcq-card .option{
-  font-size:inherit !important;
-}
-@media (max-width:700px){
-  #panel-objective .mcq-options,
-  #panel-objective .options{
-    grid-template-columns:1fr !important;
-  }
-}
 .gv-btn{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-sub);font-size:15px;cursor:pointer;transition:all .15s;}
 .gv-btn:hover:not(:disabled){color:var(--text);}
 .gv-btn.active{background:rgba(168,85,247,0.12);border-color:#a855f7;color:#a855f7;}
@@ -1576,7 +1545,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       </div>
     </div>
 
-    <!-- DESC TAB BAR (Identical to PYQ) -->
+    <!-- DESC TAB BAR -->
     <div id="desc-tabbar">
       <div class="pyq-tab t-all active" onclick="showDescSec('all',this)"><span class="tab-dot" style="background:var(--col-desc);">A</span>All</div>
       <div class="pyq-tab t-two" onclick="showDescSec('2marks',this)"><span class="tab-dot" style="background:var(--pyq-two);">2</span>Marks</div>
@@ -1586,9 +1555,25 @@ mjx-container[display="true"]{margin:8px 0 !important;}
         <button class="gv-btn active" id="descListBtn" title="All Questions" onclick="setDescViewMode('list')">☰</button>
         <button class="gv-btn" id="descSingleBtn" title="Single Question" onclick="setDescViewMode('practice')">🎯</button>
         <button class="gv-btn" id="descShowAnsBtn" title="Show Answers" onclick="toggleAllDesc()">👁</button>
-        <button class="gv-btn" title="Decrease font size" onclick="adjustQFontSize('panel-desc','desc',-0.1)">A-</button>
-        <button class="gv-btn" title="Increase font size" onclick="adjustQFontSize('panel-desc','desc',0.1)">A+</button>
-        <button class="gv-btn" title="Enter Fullscreen" onclick="toggleFullscreen('panel-desc')">⛶</button>
+        <button class="gv-btn" title="Decrease font" onclick="adjustQFontSize('panel-desc','desc',-0.1)">A-</button>
+        <button class="gv-btn" title="Increase font" onclick="adjustQFontSize('panel-desc','desc',0.1)">A+</button>
+        <button class="gv-btn" title="Fullscreen" onclick="toggleFullscreen('panel-desc')">⛶</button>
+      </div>
+    </div>
+
+    <!-- OBJ TAB BAR -->
+    <div id="obj-tabbar">
+      <div class="pyq-tab t-mcq active" onclick="filterObjSection('mcq',this)"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
+      <div class="pyq-tab t-two" onclick="filterObjSection('tof',this)"><span class="tab-dot" style="background:var(--pyq-two);">T</span>True or False</div>
+      <div class="pyq-tab t-three" onclick="filterObjSection('fib',this)"><span class="tab-dot" style="background:var(--pyq-three);">F</span>Fill in Blanks</div>
+      <div class="pyq-tab t-four" onclick="filterObjSection('match',this)"><span class="tab-dot" style="background:var(--pyq-four);">M</span>Matching</div>
+      <div class="global-view-toggle" id="objViewToggle" style="display:none;">
+        <button class="gv-btn active" id="objListBtn" title="All Questions" onclick="setObjViewMode('list')">☰</button>
+        <button class="gv-btn" id="objSingleBtn" title="Single Question" onclick="setObjViewMode('practice')">🎯</button>
+        <button class="gv-btn" id="objShowAnsBtn" title="Show Answers" onclick="toggleAllObjAnswers()">👁</button>
+        <button class="gv-btn" title="Decrease font" onclick="adjustQFontSize('panel-objective','obj',-0.1)">A-</button>
+        <button class="gv-btn" title="Increase font" onclick="adjustQFontSize('panel-objective','obj',0.1)">A+</button>
+        <button class="gv-btn" title="Fullscreen" onclick="toggleFullscreen('panel-objective')">⛶</button>
       </div>
     </div>
 
@@ -1855,8 +1840,10 @@ function switchSection(type, el, sub) {
   
   document.getElementById('pyq-tabbar').classList.toggle('visible', type === 'pyq');
   document.getElementById('desc-tabbar').classList.toggle('visible', type === 'desc');
-  const dvt = document.getElementById('descViewToggle');
-  if (dvt) dvt.style.display = (type==='desc' && isDescObjToggleGrade()) ? 'flex' : 'none';
+  document.getElementById('obj-tabbar').classList.toggle('visible', type === 'objective');
+  const _dvt=document.getElementById('descViewToggle'), _ovt=document.getElementById('objViewToggle');
+  if(_dvt) _dvt.style.display=(type==='desc'&&isCisceObjGrade())?'flex':'none';
+  if(_ovt) _ovt.style.display=(type==='objective'&&isCisceObjGrade())?'flex':'none';
 
   updateGlobalToggleAvailability(type);
   
@@ -1865,10 +1852,9 @@ function switchSection(type, el, sub) {
 
   switch(type) {
     case 'notes': loadNotes(); break;
-    case 'desc':
-      loadDesc().then(() => {
-        showDescSec('all', document.querySelector('#desc-tabbar .pyq-tab.t-all'));
-      });
+    case 'desc':  
+      loadDesc(); 
+      showDescSec('all', document.querySelector('#desc-tabbar .pyq-tab.t-all'));
       break;
     case 'objective': loadObjective(); break;
     case 'gloss': loadGlossary(); break;
@@ -1900,12 +1886,135 @@ const GRADE_ID_MAP = {
   'iit-f-g9':['iit-foundation','9'], 'iit-f-g10':['iit-foundation','10']
 };
 function isIITFoundation() { return !!(CUR.grade && CUR.grade.indexOf('iit-f-') === 0); }
-function isDescObjToggleGrade() {
-  if (!CUR.grade) return false;
-  const g = CUR.grade;
-  return /^cbse-g[6-9]$/.test(g) || /^cisce-g[6-8]$/.test(g) || /^cambridge-g[6-8]$/.test(g);
+function isCisceObjGrade() {
+  const g = CUR.grade||'';
+  return /^(cisce|cambridge)-g[6-8]$/.test(g);
 }
-function isCambridgeGrade() { return !!(CUR.grade && /^cambridge-g[6-8]$/.test(CUR.grade)); }
+
+/* ── Desc/Obj view-mode state (mirrors PYQ_VIEW pattern) ── */
+const DESC_VIEW = { mode:'list', index:{}, tab:'all' };
+const OBJ_VIEW  = { mode:'list', index:{}, tab:'mcq' };
+
+const DESC_PT = { all:'pt-dall', '2marks':'pt-d2m', '3marks':'pt-d3m', case:'pt-dcase' };
+const OBJ_PT  = { mcq:'pt-omcq', tof:'pt-otof', fib:'pt-ofib', match:'pt-omatch' };
+
+function descPaletteHTML(tabId, count) {
+  const pt = DESC_PT[tabId]||'pt-dall';
+  const nums = Array.from({length:count},(_,i)=>`<div class="iit-palette-num ${pt}${i===0?' current':''}" onclick="descGoTo('${tabId}',${i})">${i+1}</div>`).join('');
+  return `<div class="iit-palette-wrap pyq-palette-wrap" id="descPal-${tabId}" style="display:none;"><div class="iit-palette">${nums}</div></div>`;
+}
+function descNavHTML(tabId) {
+  return `<div class="iit-practice-nav iit-practice-nav-top" id="descNav-${tabId}" style="display:none;">
+    <div class="iit-nav-group">
+      <button class="iit-nav-btn" id="descPrev-${tabId}" onclick="descJump('${tabId}',(DESC_VIEW.index['${tabId}']||0)-1)">◀ Previous</button>
+      <button class="iit-nav-btn" id="descNext-${tabId}" onclick="descJump('${tabId}',(DESC_VIEW.index['${tabId}']||0)+1)">Next ▶</button>
+    </div>
+    <span class="iit-nav-progress" id="descProg-${tabId}"></span>
+  </div>`;
+}
+function objPaletteHTML(tabId, count) {
+  const pt = OBJ_PT[tabId]||'pt-omcq';
+  const nums = Array.from({length:count},(_,i)=>`<div class="iit-palette-num ${pt}${i===0?' current':''}" onclick="objGoTo('${tabId}',${i})">${i+1}</div>`).join('');
+  return `<div class="iit-palette-wrap pyq-palette-wrap" id="objPal-${tabId}" style="display:none;"><div class="iit-palette">${nums}</div></div>`;
+}
+function objNavHTML(tabId) {
+  return `<div class="iit-practice-nav iit-practice-nav-top" id="objNav-${tabId}" style="display:none;">
+    <div class="iit-nav-group">
+      <button class="iit-nav-btn" id="objPrev-${tabId}" onclick="objJump('${tabId}',(OBJ_VIEW.index['${tabId}']||0)-1)">◀ Previous</button>
+      <button class="iit-nav-btn" id="objNext-${tabId}" onclick="objJump('${tabId}',(OBJ_VIEW.index['${tabId}']||0)+1)">Next ▶</button>
+    </div>
+    <span class="iit-nav-progress" id="objProg-${tabId}"></span>
+  </div>`;
+}
+function applyDescViewMode(sec) {
+  if (!sec) return;
+  const tabId = sec.id.replace('desc-','');
+  const cards = sec.querySelectorAll('[data-desc-id]');
+  if (!cards.length) return;
+  const total = cards.length;
+  let idx = DESC_VIEW.index[tabId]||0;
+  if (idx>=total) idx=total-1; if(idx<0) idx=0;
+  DESC_VIEW.index[tabId]=idx;
+  cards.forEach((c,i)=>{ c.style.display=(DESC_VIEW.mode==='list'||i===idx)?'':'none'; });
+  const pal=document.getElementById('descPal-'+tabId);
+  if(pal){
+    pal.style.display=DESC_VIEW.mode==='practice'?'block':'none';
+    pal.querySelectorAll('.iit-palette-num').forEach((n,i)=>n.classList.toggle('current',i===idx));
+  }
+  const nav=document.getElementById('descNav-'+tabId);
+  if(nav){
+    nav.style.display=DESC_VIEW.mode==='practice'?'flex':'none';
+    const prog=document.getElementById('descProg-'+tabId);
+    if(prog) prog.textContent=(idx+1)+' of '+total;
+    const pb=document.getElementById('descPrev-'+tabId),nb=document.getElementById('descNext-'+tabId);
+    if(pb) pb.disabled=idx===0; if(nb) nb.disabled=idx===total-1;
+  }
+}
+function descJump(tabId, idx) {
+  const sec=document.getElementById('desc-'+tabId); if(!sec) return;
+  const total=sec.querySelectorAll('[data-desc-id]').length;
+  if(idx<0||idx>=total) return;
+  DESC_VIEW.index[tabId]=idx; applyDescViewMode(sec);
+}
+function descGoTo(tabId,idx){ DESC_VIEW.index[tabId]=idx; applyDescViewMode(document.getElementById('desc-'+tabId)); }
+function setDescViewMode(mode){
+  DESC_VIEW.mode=mode;
+  const lb=document.getElementById('descListBtn'),sb=document.getElementById('descSingleBtn');
+  if(lb) lb.classList.toggle('active',mode==='list');
+  if(sb) sb.classList.toggle('active',mode==='practice');
+  document.querySelectorAll('.desc-section').forEach(applyDescViewMode);
+}
+function applyObjViewMode(sec) {
+  if (!sec) return;
+  const tabId = sec.id.replace('obj-','');
+  const cards = sec.querySelectorAll('.mcq-card');
+  if (!cards.length) return;
+  const total=cards.length;
+  let idx=OBJ_VIEW.index[tabId]||0;
+  if(idx>=total) idx=total-1; if(idx<0) idx=0;
+  OBJ_VIEW.index[tabId]=idx;
+  cards.forEach((c,i)=>{ c.style.display=(OBJ_VIEW.mode==='list'||i===idx)?'':'none'; });
+  const pal=document.getElementById('objPal-'+tabId);
+  if(pal){
+    pal.style.display=OBJ_VIEW.mode==='practice'?'block':'none';
+    pal.querySelectorAll('.iit-palette-num').forEach((n,i)=>n.classList.toggle('current',i===idx));
+  }
+  const nav=document.getElementById('objNav-'+tabId);
+  if(nav){
+    nav.style.display=OBJ_VIEW.mode==='practice'?'flex':'none';
+    const prog=document.getElementById('objProg-'+tabId);
+    if(prog) prog.textContent=(idx+1)+' of '+total;
+    const pb=document.getElementById('objPrev-'+tabId),nb=document.getElementById('objNext-'+tabId);
+    if(pb) pb.disabled=idx===0; if(nb) nb.disabled=idx===total-1;
+  }
+}
+function objJump(tabId,idx){
+  const sec=document.getElementById('obj-'+tabId); if(!sec) return;
+  const total=sec.querySelectorAll('.mcq-card').length;
+  if(idx<0||idx>=total) return;
+  OBJ_VIEW.index[tabId]=idx; applyObjViewMode(sec);
+}
+function objGoTo(tabId,idx){ OBJ_VIEW.index[tabId]=idx; applyObjViewMode(document.getElementById('obj-'+tabId)); }
+function setObjViewMode(mode){
+  OBJ_VIEW.mode=mode;
+  const lb=document.getElementById('objListBtn'),sb=document.getElementById('objSingleBtn');
+  if(lb) lb.classList.toggle('active',mode==='list');
+  if(sb) sb.classList.toggle('active',mode==='practice');
+  document.querySelectorAll('.obj-section').forEach(applyObjViewMode);
+}
+function toggleAllObjAnswers(){
+  const answers=document.querySelectorAll('#objective-content-wrap .explanation');
+  const allOpen=Array.from(answers).every(a=>a.style.display!=='none');
+  answers.forEach(a=>{a.style.display=allOpen?'none':'block';});
+  const btn=document.getElementById('objShowAnsBtn');
+  if(btn) btn.classList.toggle('active',!allOpen);
+}
+function adjustQFontSize(panelId,key,delta){
+  const QFS_MAP=window._QFS||(window._QFS={});
+  QFS_MAP[key]=Math.min(1.4,Math.max(0.8,+((QFS_MAP[key]||1)+delta).toFixed(2)));
+  const el=document.getElementById(panelId);
+  if(el) el.style.setProperty('--qfs',QFS_MAP[key]);
+}
 /* File per IIT Foundation tab; all populate window.objectiveData when loaded */
 const IIT_TAB_FILES = {
   mcq:'objective.js', numericals:'numericals.js', jeemain:'jeemain.js',
@@ -1952,9 +2061,7 @@ function toggleNoteQA(el) { el.classList.toggle('open'); }
 async function loadDesc() {
   const wrap = document.getElementById('desc-content-wrap');
   const [board, gradeNum] = parseGradeId(CUR.grade);
-  DESC_VIEW.index = 0; DESC_VIEW.mode = 'list'; DESC_VIEW.filter = 'all';
-  const lb=document.getElementById('descListBtn'),sb=document.getElementById('descSingleBtn');
-  if(lb){lb.classList.add('active');} if(sb){sb.classList.remove('active');}
+  DESC_VIEW.index = {}; DESC_VIEW.mode = 'list';
   if (!CUR.slug) { renderComingSoon(wrap,'✏️','Descriptive Questions','Questions being prepared.'); return; }
   window.descriptiveData = undefined;
   document.querySelectorAll('[data-descq]').forEach(s=>s.remove());
@@ -1969,47 +2076,59 @@ async function loadDesc() {
 }
 
 function renderDesc(data, wrap) {
-  let html = `<button id="desc-toggle-all" class="pyq-toggle-all-btn" style="background:var(--col-desc); margin-bottom:15px; margin-top:5px;" onclick="toggleAllDesc()">Show Answers</button>`;
-  html += data.map((q,i) => {
+  const usePalette = isCisceObjGrade();
+  // Group by tab
+  const groups = { all:[], '2marks':[], '3marks':[], case:[] };
+  data.forEach((q,i) => {
     let type = 'all';
-    if (q.type === 'case' || (q.question && q.question.toLowerCase().includes('case-based'))) type = 'case';
-    else if (q.marks == 2) type = '2marks';
-    else if (q.marks == 3) type = '3marks';
-    
-    return `<div class="pyq-question-item" data-desc-id="${i}" data-desc-type="${type}">
-      <div class="pyq-question-top" onclick="toggleDescAnswer(${i})" style="cursor:pointer;">
-        <div class="qno desc" style="flex-shrink:0; background:linear-gradient(135deg,var(--col-desc),#059669);">${i+1}</div>
-        <div style="flex:1;">
-          <div style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${mathify(q.question)}</div>
-        </div>
-        <span class="pyq-q-icon" data-icon-id="desc-${i}" style="color:var(--col-desc);">▶</span>
-      </div>
-      <div class="pyq-answer" id="desc-ans-${i}" style="display:none; background:rgba(52,211,153,0.06); border-left-color:var(--col-desc);">${mathify(q.answer)||'Answer coming soon.'}</div>
-    </div>`;
-  }).join('');
-  const navHtml = isDescObjToggleGrade() ? `<div class="iit-practice-nav" id="descNavWrap" style="display:none;">
-    <div class="iit-nav-group"><button class="iit-nav-btn prev-btn" onclick="descJump(-1)">◀ Previous</button><button class="iit-nav-btn next-btn" onclick="descJump(1)">Next ▶</button></div>
-    <span class="iit-nav-progress"></span></div>` : '';
-  wrap.innerHTML = html + navHtml;
-  if (isDescObjToggleGrade()) applyDescViewMode();
-  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+    if (q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))) type='case';
+    else if (q.marks==2) type='2marks';
+    else if (q.marks==3) type='3marks';
+    groups[type].push({q,i});
+  });
+  const cardHTML = (q,i) => `<div class="pyq-question-item" data-desc-id="${i}" data-desc-type="${q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))?'case':q.marks==2?'2marks':q.marks==3?'3marks':'all'}">
+    <div class="pyq-question-top" onclick="toggleDescAnswer(${i})" style="cursor:pointer;">
+      <div class="qno desc" style="flex-shrink:0;background:linear-gradient(135deg,var(--col-desc),#059669);">${i+1}</div>
+      <div style="flex:1;"><div style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${mathify(q.question)}</div></div>
+      <span class="pyq-q-icon" data-icon-id="desc-${i}" style="color:var(--col-desc);">▶</span>
+    </div>
+    <div class="pyq-answer" id="desc-ans-${i}" style="display:none;background:rgba(52,211,153,0.06);border-left-color:var(--col-desc);">${mathify(q.answer)||'Answer coming soon.'}</div>
+  </div>`;
+  if (usePalette) {
+    let html = '';
+    ['all','2marks','3marks','case'].forEach(tabId => {
+      const items = tabId==='all' ? data.map((q,i)=>({q,i})) : data.map((q,i)=>({q,i})).filter(({q})=>{ let t='all'; if(q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based')))t='case'; else if(q.marks==2)t='2marks'; else if(q.marks==3)t='3marks'; return t===tabId; });
+      html += `<div class="desc-section" id="desc-${tabId}" style="${tabId!=='all'?'display:none':''}">`;
+      html += descPaletteHTML(tabId, items.length) + descNavHTML(tabId);
+      html += items.map(({q,i})=>cardHTML(q,i)).join('');
+      html += '</div>';
+    });
+    wrap.innerHTML = html;
+    document.querySelectorAll('.desc-section').forEach(applyDescViewMode);
+  } else {
+    let html = `<button id="desc-toggle-all" class="pyq-toggle-all-btn" style="background:var(--col-desc);margin-bottom:15px;margin-top:5px;" onclick="toggleAllDesc()">Show Answers</button>`;
+    html += data.map((q,i)=>cardHTML(q,i)).join('');
+    wrap.innerHTML = html;
+  }
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err=>console.log('MathJax error:',err));
 }
 
 function showDescSec(type, el) {
-  DESC_VIEW.filter = type || 'all';
-  DESC_VIEW.index = 0;
-
   document.querySelectorAll('#desc-tabbar .pyq-tab').forEach(t => t.classList.remove('active'));
   if (el) el.classList.add('active');
-
-  const cards = document.querySelectorAll('#desc-content-wrap [data-desc-type]');
-  cards.forEach(item => {
-    const matches = DESC_VIEW.filter === 'all' || item.dataset.descType === DESC_VIEW.filter;
-    item.style.display = matches ? '' : 'none';
-  });
-
-  applyDescViewMode();
-  updateToggleAllBtn();
+  if (isCisceObjGrade()) {
+    ['all','2marks','3marks','case'].forEach(id => {
+      const sec=document.getElementById('desc-'+id);
+      if(sec) sec.style.display = id===type?'':'none';
+    });
+    DESC_VIEW.index[type]=0;
+    applyDescViewMode(document.getElementById('desc-'+type));
+  } else {
+    document.querySelectorAll('[data-desc-type]').forEach(item => {
+      item.style.display = (type==='all'||item.dataset.descType===type) ? 'block' : 'none';
+    });
+    updateToggleAllBtn();
+  }
   document.getElementById('content').scrollTop = 0;
 }
 function toggleDescAnswer(id) {
@@ -2046,6 +2165,7 @@ async function loadObjective() {
   document.querySelectorAll('[data-mcqs]').forEach(s=>s.remove());
   const fileName = isIITFoundation() ? (IIT_TAB_FILES[CUR.iitTab || 'mcq'] || 'objective.js') : 'objective.js';
   IIT_PRACTICE.index = 0; // reset practice position on new tab/chapter load
+  OBJ_VIEW.index = {}; OBJ_VIEW.mode = 'list';
   if (isIITFoundation() && CUR.iitTab === 'mcq') { IIT_MCQ.concept = null; IIT_MCQ.level = 'levelC'; } // reset concept/level on new chapter
   await new Promise(res => {
     const s = document.createElement('script');
@@ -2062,76 +2182,80 @@ async function loadObjective() {
 
 function renderObjective(data, wrap) {
   if (isIITFoundation()) { renderIITObjective(data, wrap); return; }
-  const showToggle = isDescObjToggleGrade();
-  const isCISCECambridgeGrade = /^cisce-g[6-8]$/.test(CUR.grade || '') || /^cambridge-g[6-8]$/.test(CUR.grade || '');
-
-  const toggleBar = showToggle ? `<div class="global-view-toggle" style="margin-bottom:${isCISCECambridgeGrade ? '0' : '10px'};">
-    <button class="gv-btn active" id="objListBtn" title="All Questions" onclick="setObjViewMode('list')">☰</button>
-    <button class="gv-btn" id="objSingleBtn" title="Single Question" onclick="setObjViewMode('practice')">🎯</button>
-    ${isCambridgeGrade()?`<button class="gv-btn" id="objShowAnsBtn" title="Show Answers" onclick="toggleAllObjAnswers()">👁</button>`:''}
-    <button class="gv-btn" title="Decrease font size" onclick="adjustQFontSize('panel-objective','obj',-0.1)">A-</button>
-    <button class="gv-btn" title="Increase font size" onclick="adjustQFontSize('panel-objective','obj',0.1)">A+</button>
-    <button class="gv-btn" title="Enter Fullscreen" onclick="toggleFullscreen('panel-objective')">⛶</button>
-  </div>` : '';
-
-  const objectiveTabs = `<div class="desc-tabs" style="margin-bottom:${isCISCECambridgeGrade ? '0' : '16px'};">
-    <div class="pyq-tab t-mcq active" onclick="filterObjective('mcq')"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
-    <div class="pyq-tab t-two" onclick="filterObjective('tof')"><span class="tab-dot" style="background:var(--pyq-two);">T</span>True or False</div>
-    <div class="pyq-tab t-three" onclick="filterObjective('fib')"><span class="tab-dot" style="background:var(--pyq-three);">F</span>Fill in the Blanks</div>
-    <div class="pyq-tab t-four" onclick="filterObjective('match')"><span class="tab-dot" style="background:var(--pyq-four);">M</span>Matching Type</div>
-  </div>`;
-
-  let html = isCISCECambridgeGrade
-    ? `<div class="objective-tabs-row">${objectiveTabs}${toggleBar}</div>`
-    : `${objectiveTabs}${toggleBar}`;
-  const counters = {};
-  html += data.map((q) => {
-    const type = q.type || 'mcq';
-    counters[type] = (counters[type]||0)+1;
-    const num = counters[type];
-    const badgeClass = {mcq:'mcq',tof:'two',fib:'three',match:'four',ar:'ar'}[type] || 'mcq';
-    let body = '';
-    let questionOverride = null;
-    if (type === 'mcq') {
-      body = `<div class="options" data-answer="${q.answer}">${(q.options||[]).map((opt,idx) => `<div class="option" data-opt="${idx}"><span class="opt-label">${String.fromCharCode(65+idx)}</span><span class="opt-text">${mathify(opt)}</span></div>`).join('')}</div>`;
-    } else if (type === 'tof') {
-      body = `<div class="options options-tof" data-answer="${q.answer}">
-        <div class="option" data-opt="true"><span class="opt-label">T</span><span class="opt-text">True</span></div>
-        <div class="option" data-opt="false"><span class="opt-label">F</span><span class="opt-text">False</span></div>
-      </div>`;
-    } else if (type === 'fib') {
-      const ans = (q.answer||'').replace(/"/g,'&quot;');
-      const blankRe = /_{3,}/;
-      const blankHtml = `<span class="fib-blank" data-answer="${ans}"><button class="fib-toggle-btn" onclick="toggleFibAnswer(this)">Show Answer</button></span>`;
-      questionOverride = blankRe.test(q.question||'')
-        ? mathify(q.question||'').replace(blankRe, blankHtml)
-        : `${mathify(q.question||'')} ${blankHtml}`;
-    } else if (type === 'ar') {
-      const opts = {A:'Both A & R true; R is correct explanation',B:'Both A & R true; R is not correct explanation',C:'A is true, R is false',D:'A is false, R is true'};
-      questionOverride = `<strong>Assertion:</strong> ${mathify(q.assertion)||''}<br><strong>Reason:</strong> ${mathify(q.reason)||''}`;
-      body = `<div class="options" data-answer="${q.answer}">${Object.entries(opts).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}</div>`;
-    } else if (type === 'match') {
-      const pairs = q.pairs || [];
-      const shuffled = pairs.map((p,idx)=>({text:p[1],idx})).sort(()=>Math.random()-0.5);
-      body = `<div class="match-wrap" data-total="${pairs.length}">
-        <div class="match-col">${pairs.map((p,idx)=>`<div class="match-item" data-match-left="${idx}">${mathify(p[0])}</div>`).join('')}</div>
-        <div class="match-col">${shuffled.map(s=>`<div class="match-item match-right" data-match-right="${s.idx}">${mathify(s.text)}</div>`).join('')}</div>
-      </div><div class="match-result"></div><button class="fib-check-btn" onclick="checkMatch(this)">Check Matches</button>`;
+  const usePalette = isCisceObjGrade();
+  const tabs = ['mcq','tof','fib','match'];
+  const makeCard = (q, num) => {
+    const type = q.type||'mcq';
+    const badgeClass = {mcq:'mcq',tof:'two',fib:'three',match:'four',ar:'ar'}[type]||'mcq';
+    let body='', questionOverride=null;
+    if (type==='mcq') {
+      body=`<div class="options" data-answer="${q.answer}">${(q.options||[]).map((opt,idx)=>`<div class="option" data-opt="${idx}"><span class="opt-label">${String.fromCharCode(65+idx)}</span><span class="opt-text">${mathify(opt)}</span></div>`).join('')}</div>`;
+    } else if (type==='tof') {
+      body=`<div class="options options-tof" data-answer="${q.answer}"><div class="option" data-opt="true"><span class="opt-label">T</span><span class="opt-text">True</span></div><div class="option" data-opt="false"><span class="opt-label">F</span><span class="opt-text">False</span></div></div>`;
+    } else if (type==='fib') {
+      const ans=(q.answer||'').replace(/"/g,'&quot;');
+      const blankHtml=`<span class="fib-blank" data-answer="${ans}"><button class="fib-toggle-btn" onclick="toggleFibAnswer(this)">Show Answer</button></span>`;
+      questionOverride=/_{3,}/.test(q.question||'')?mathify(q.question||'').replace(/_{3,}/,blankHtml):`${mathify(q.question||'')} ${blankHtml}`;
+    } else if (type==='ar') {
+      const opts={A:'Both A & R true; R is correct explanation',B:'Both A & R true; R is not correct explanation',C:'A is true, R is false',D:'A is false, R is true'};
+      questionOverride=`<strong>Assertion:</strong> ${mathify(q.assertion)||''}<br><strong>Reason:</strong> ${mathify(q.reason)||''}`;
+      body=`<div class="options" data-answer="${q.answer}">${Object.entries(opts).map(([k,v])=>`<div class="option" data-opt="${k}"><span class="opt-label">${k}</span>${v}</div>`).join('')}</div>`;
+    } else if (type==='match') {
+      const pairs=q.pairs||[];
+      const shuffled=pairs.map((p,idx)=>({text:p[1],idx})).sort(()=>Math.random()-0.5);
+      body=`<div class="match-wrap" data-total="${pairs.length}"><div class="match-col">${pairs.map((p,idx)=>`<div class="match-item" data-match-left="${idx}">${mathify(p[0])}</div>`).join('')}</div><div class="match-col">${shuffled.map(s=>`<div class="match-item match-right" data-match-right="${s.idx}">${mathify(s.text)}</div>`).join('')}</div></div><div class="match-result"></div><button class="fib-check-btn" onclick="checkMatch(this)">Check Matches</button>`;
     }
-    return `<div class="mcq-card" data-qtype="${type}"><div class="mcq-header"><span class="qno ${badgeClass}">${num}</span><div class="mcq-question" style="margin-bottom:0;">${questionOverride !== null ? questionOverride : mathify(q.question)}</div></div>${body}${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${mathify(q.explanation)}</div>` : ''}</div>`;
-  }).join('');
-  wrap.innerHTML = html;
-  applyOptionsLayout(wrap);
-  requestAnimationFrame(() => adjustObjectiveOptionLayout(document.getElementById('panel-objective')));
-  filterObjective('mcq');
-  if (showToggle) {
-    const navEl = document.createElement('div');
-    navEl.className='iit-practice-nav'; navEl.id='objNavWrap'; navEl.style.display='none';
-    navEl.innerHTML='<div class="iit-nav-group"><button class="iit-nav-btn prev-btn" onclick="objJump(-1)">◀ Previous</button><button class="iit-nav-btn next-btn" onclick="objJump(1)">Next ▶</button></div><span class="iit-nav-progress"></span>';
-    wrap.appendChild(navEl);
-    OBJ_VIEW.index=0; OBJ_VIEW.mode='list'; OBJ_VIEW.filter='mcq'; applyObjViewMode();
+    return `<div class="mcq-card" data-qtype="${type}"><div class="mcq-header"><span class="qno ${badgeClass}">${num}</span><div class="mcq-question" style="margin-bottom:0;">${questionOverride!==null?questionOverride:mathify(q.question)}</div></div>${body}${q.explanation?`<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${mathify(q.explanation)}</div>`:''}</div>`;
+  };
+  if (usePalette) {
+    let html = '';
+    tabs.forEach(tabId => {
+      const items = data.filter(q=>(q.type||'mcq')===tabId);
+      html += `<div class="obj-section" id="obj-${tabId}" style="${tabId!=='mcq'?'display:none':''}">`;
+      html += objPaletteHTML(tabId, items.length) + objNavHTML(tabId);
+      let n=0; html += items.map(q=>makeCard(q,++n)).join('');
+      html += '</div>';
+    });
+    wrap.innerHTML = html;
+    applyOptionsLayout(wrap);
+    document.querySelectorAll('.obj-section').forEach(applyObjViewMode);
+  } else {
+    let html = `<div class="desc-tabs" style="margin-bottom:16px;">
+      <div class="pyq-tab t-mcq active" onclick="filterObjective('mcq')"><span class="tab-dot" style="background:var(--pyq-mcq);">M</span>MCQs</div>
+      <div class="pyq-tab t-two" onclick="filterObjective('tof')"><span class="tab-dot" style="background:var(--pyq-two);">T</span>True or False</div>
+      <div class="pyq-tab t-three" onclick="filterObjective('fib')"><span class="tab-dot" style="background:var(--pyq-three);">F</span>Fill in the Blanks</div>
+      <div class="pyq-tab t-four" onclick="filterObjective('match')"><span class="tab-dot" style="background:var(--pyq-four);">M</span>Matching Type</div>
+    </div>`;
+    const counters={};
+    html += data.map(q=>{ counters[q.type||'mcq']=(counters[q.type||'mcq']||0)+1; return makeCard(q,counters[q.type||'mcq']); }).join('');
+    wrap.innerHTML = html;
+    applyOptionsLayout(wrap);
+    filterObjective('mcq');
   }
-  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err=>console.log('MathJax error:',err));
+}
+
+function filterObjSection(level, el) {
+  document.querySelectorAll('#obj-tabbar .pyq-tab').forEach(t=>t.classList.remove('active'));
+  if(el) el.classList.add('active');
+  if (isCisceObjGrade()) {
+    ['mcq','tof','fib','match'].forEach(id=>{
+      const sec=document.getElementById('obj-'+id);
+      if(sec) sec.style.display=id===level?'':'none';
+    });
+    OBJ_VIEW.index[level]=0;
+    applyObjViewMode(document.getElementById('obj-'+level));
+  } else {
+    filterObjective(level);
+  }
+}
+function filterObjective(level) {
+  document.querySelectorAll('#objective-content-wrap .mcq-card').forEach(card=>{
+    card.style.display=card.dataset.qtype===level?'block':'none';
+  });
+  document.querySelectorAll('#objective-content-wrap .desc-tabs .pyq-tab').forEach(t=>{
+    t.classList.toggle('active',(t.getAttribute('onclick')||'').includes(`'${level}'`));
+  });
 }
 
 /* ══════ IIT FOUNDATION: Objective questions with List/Practice view ══════ */
@@ -2744,26 +2868,22 @@ function checkMatch(btn) {
 }
 
 function filterObjective(level) {
-  OBJ_VIEW.filter = level || 'mcq';
-  OBJ_VIEW.index = 0;
-
   document.querySelectorAll('#objective-content-wrap .pyq-tab').forEach(t => t.classList.remove('active'));
   const tabs = document.querySelectorAll('#objective-content-wrap .pyq-tab');
   tabs.forEach(tab => {
     const onclick = tab.getAttribute('onclick');
-    if (onclick && onclick.includes(`'${OBJ_VIEW.filter}'`)) tab.classList.add('active');
+    if (onclick && onclick.includes(`'${level}'`)) tab.classList.add('active');
   });
-
-  // Respect the selected objective tab and the current List/Single Question mode.
-  applyObjViewMode();
+  document.querySelectorAll('#objective-content-wrap .mcq-card').forEach(card => {
+    card.style.display = (card.dataset.qtype === level) ? 'block' : 'none';
+  });
 }
 function updateToggleAllBtn() {
   const btn = document.getElementById('desc-toggle-all');
   const answers = document.querySelectorAll('[id^="desc-ans-"]');
   const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
   if (btn) btn.textContent = allOpen ? 'Hide Answers' : 'Show Answers';
-  const ab = document.getElementById('descShowAnsBtn');
-  if (ab) ab.classList.toggle('active', allOpen);
+  const ab=document.getElementById('descShowAnsBtn'); if(ab) ab.classList.toggle('active',allOpen);
 }
 
 /* ══════ MOCK TEST ══════ */
@@ -3359,185 +3479,11 @@ function renderComingSoon(wrap, icon, name, msg) {
 }
 
 /* ══════ FULLSCREEN ══════ */
-const QFS = { iitoth:1, pyq:1, desc:1, obj:1 };
-const DESC_VIEW = { mode:'list', index:0 };
-const OBJ_VIEW  = { mode:'list', index:0, filter:'mcq' };
-function setDescViewMode(mode) {
-  DESC_VIEW.mode = mode;
-  const lb = document.getElementById('descListBtn'), sb = document.getElementById('descSingleBtn');
-  if (lb) lb.classList.toggle('active', mode === 'list');
-  if (sb) sb.classList.toggle('active', mode === 'practice');
-  applyDescViewMode();
-}
-function applyDescViewMode() {
-  const allCards = Array.from(document.querySelectorAll('#desc-content-wrap .pyq-question-item'));
-  const filter = DESC_VIEW.filter || 'all';
-  const cards = allCards.filter(c => filter === 'all' || c.dataset.descType === filter);
-  const total = cards.length;
-
-  allCards.forEach(c => {
-    if (!cards.includes(c)) c.style.display = 'none';
-  });
-
-  if (!total) {
-    const nav = document.getElementById('descNavWrap');
-    if (nav) nav.style.display = 'none';
-    return;
-  }
-
-  let idx = DESC_VIEW.index;
-  if (idx >= total) idx = total - 1;
-  if (idx < 0) idx = 0;
-  DESC_VIEW.index = idx;
-
-  cards.forEach((c, i) => {
-    c.style.display = (DESC_VIEW.mode === 'list' || i === idx) ? '' : 'none';
-  });
-
-  const nav = document.getElementById('descNavWrap');
-  if (nav) {
-    nav.style.display = DESC_VIEW.mode === 'practice' ? 'flex' : 'none';
-    const prog = nav.querySelector('.iit-nav-progress');
-    if (prog) prog.textContent = (idx + 1) + ' of ' + total;
-    const pb = nav.querySelector('.prev-btn'), nb = nav.querySelector('.next-btn');
-    if (pb) pb.disabled = idx === 0;
-    if (nb) nb.disabled = idx === total - 1;
-  }
-}
-function descJump(delta) {
-  const filter = DESC_VIEW.filter || 'all';
-  const cards = Array.from(document.querySelectorAll('#desc-content-wrap .pyq-question-item'))
-    .filter(c => filter === 'all' || c.dataset.descType === filter);
-  const next = DESC_VIEW.index + delta;
-  if (next < 0 || next >= cards.length) return;
-  DESC_VIEW.index = next;
-  applyDescViewMode();
-}
-function setObjViewMode(mode) {
-  OBJ_VIEW.mode = mode;
-  const lb = document.getElementById('objListBtn'), sb = document.getElementById('objSingleBtn');
-  if (lb) lb.classList.toggle('active', mode === 'list');
-  if (sb) sb.classList.toggle('active', mode === 'practice');
-  applyObjViewMode();
-}
-function applyObjViewMode() {
-  const allCards = Array.from(document.querySelectorAll('#objective-content-wrap .mcq-card'));
-  const filter = OBJ_VIEW.filter || 'mcq';
-  const cards = allCards.filter(c => c.dataset.qtype === filter);
-  const total = cards.length;
-
-  // Keep cards from other objective tabs hidden.
-  allCards.forEach(c => {
-    if (!cards.includes(c)) c.style.display = 'none';
-  });
-
-  if (!total) {
-    const nav = document.getElementById('objNavWrap');
-    if (nav) nav.style.display = 'none';
-    return;
-  }
-
-  let idx = OBJ_VIEW.index;
-  if (idx >= total) idx = total - 1;
-  if (idx < 0) idx = 0;
-  OBJ_VIEW.index = idx;
-
-  cards.forEach((c, i) => {
-    c.style.display = (OBJ_VIEW.mode === 'list' || i === idx) ? 'block' : 'none';
-  });
-
-  const nav = document.getElementById('objNavWrap');
-  if (nav) {
-    nav.style.display = OBJ_VIEW.mode === 'practice' ? 'flex' : 'none';
-    const prog = nav.querySelector('.iit-nav-progress');
-    if (prog) prog.textContent = (idx + 1) + ' of ' + total;
-    const pb = nav.querySelector('.prev-btn'), nb = nav.querySelector('.next-btn');
-    if (pb) pb.disabled = idx === 0;
-    if (nb) nb.disabled = idx === total - 1;
-  }
-}
-function objJump(delta) {
-  const filter = OBJ_VIEW.filter || 'mcq';
-  const cards = Array.from(document.querySelectorAll('#objective-content-wrap .mcq-card'))
-    .filter(c => c.dataset.qtype === filter);
-  const next = OBJ_VIEW.index + delta;
-  if (next < 0 || next >= cards.length) return;
-  OBJ_VIEW.index = next;
-  applyObjViewMode();
-}
-function toggleAllObjAnswers() {
-  const answers = document.querySelectorAll('#objective-content-wrap .explanation');
-  const allOpen = Array.from(answers).every(a => a.style.display !== 'none');
-  answers.forEach(a => { a.style.display = allOpen ? 'none' : 'block'; });
-  const btn = document.getElementById('objShowAnsBtn');
-  if (btn) btn.classList.toggle('active', !allOpen);
-}
-function adjustObjectiveOptionLayout(panel) {
-  if (!panel) return;
-
-  panel.querySelectorAll('.mcq-options, .options').forEach(group => {
-    const options = Array.from(group.querySelectorAll('.mcq-option, .option'));
-    if (!options.length) return;
-
-    // Reset previous layout before measuring.
-    group.style.display = 'grid';
-    group.style.gridTemplateColumns = '';
-    group.style.gap = '8px 10px';
-    options.forEach(opt => {
-      opt.style.width = '';
-      opt.style.minWidth = '0';
-      opt.style.whiteSpace = 'normal';
-    });
-
-    // Measure the actual option content. The longest option determines
-    // how many columns can comfortably fit in the available width.
-    const available = Math.max(0, group.clientWidth - 30);
-    const probe = document.createElement('span');
-    probe.style.cssText =
-      'position:absolute;visibility:hidden;pointer-events:none;white-space:nowrap;' +
-      'font:inherit;letter-spacing:inherit;padding:0 20px;box-sizing:border-box;';
-    document.body.appendChild(probe);
-
-    let longest = 0;
-    options.forEach(opt => {
-      probe.textContent = opt.textContent.trim().replace(/\s+/g, ' ');
-      longest = Math.max(longest, probe.getBoundingClientRect().width);
-    });
-    probe.remove();
-
-    // Required priority:
-    // 1x4: all 4 in one row only when all are short enough.
-    // 2x2: when they are medium/long but two columns remain comfortable.
-    // 4x1: when even two columns would make the options cramped.
-    let columns = 1;
-    if (options.length === 4) {
-      if (longest <= available / 4) columns = 4;
-      else if (longest <= available / 2) columns = 2;
-      else columns = 1;
-    } else {
-      if (longest <= available / Math.max(options.length, 1)) columns = options.length;
-      else if (options.length >= 2 && longest <= available / 2) columns = 2;
-      else columns = 1;
-    }
-
-    group.style.gridTemplateColumns = `repeat(${columns}, minmax(0, 1fr))`;
-    group.dataset.optionLayout = columns === 4 ? '1x4' : columns === 2 ? '2x2' : '4x1';
-  });
-}
-
+const QFS = { iitoth:1, pyq:1 };
 function adjustQFontSize(panelId, key, delta) {
   QFS[key] = Math.min(1.4, Math.max(0.8, +(QFS[key] + delta).toFixed(2)));
   const el = document.getElementById(panelId);
-  if (!el) return;
-
-  // Scale each question card as a whole so question and options always change together.
-  el.style.setProperty('--qfs', QFS[key]);
-  el.querySelectorAll('.mcq-card').forEach(card => {
-    card.style.fontSize = QFS[key] + 'em';
-  });
-
-  // Recalculate the option arrangement after every font-size change.
-  requestAnimationFrame(() => adjustObjectiveOptionLayout(el));
+  if (el) el.style.setProperty('--qfs', QFS[key]);
 }
 function toggleFullscreen(targetId) {
   if (!document.fullscreenElement) {
@@ -3602,13 +3548,6 @@ function showToast(msg) {
 window.addEventListener('DOMContentLoaded', () => {
   const cbseG10 = document.querySelector('[onclick*="\'cbse-g10\'"]');
   if (cbseG10) toggleGrade('cbse-g10', cbseG10);
-});
-
-window.addEventListener('resize', () => {
-  const panel = document.getElementById('panel-objective');
-  if (panel && typeof adjustObjectiveOptionLayout === 'function') {
-    adjustObjectiveOptionLayout(panel);
-  }
 });
 </script>
 </body>
