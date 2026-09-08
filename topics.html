@@ -183,7 +183,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 	.iit-palette-num.pt-ofib:hover,.iit-palette-num.current.pt-ofib{border-color:var(--pyq-three);}.iit-palette-num.current.pt-ofib{background:var(--pyq-three);color:#fff;}
 	.iit-palette-num.pt-omatch:hover,.iit-palette-num.current.pt-omatch{border-color:var(--pyq-four);}.iit-palette-num.current.pt-omatch{background:var(--pyq-four);color:#fff;}
 	#panel-desc,#panel-objective{--qfs:1;}
-	#panel-desc:fullscreen,#panel-desc:-webkit-full-screen,#panel-objective:fullscreen,#panel-objective:-webkit-full-screen{background:#fff;color:#111;padding:16px;overflow:auto;}
+	#contentWrap:fullscreen,#contentWrap:-webkit-full-screen{background:var(--bg);padding:16px;overflow:auto;}
 	.pyq-tab{display:flex;align-items:center;gap:6px;padding:10px 14px;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--text-muted);border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;flex-shrink:0;border-radius:6px 6px 0 0;}
 .pyq-tab:hover{color:var(--text);background:var(--item-hover);}
 .pyq-tab.active{color:var(--brand);border-bottom-color:var(--brand);}
@@ -471,8 +471,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 @media(max-width:640px){
   #iitOthBody .mcq-question-image,.pyq-section .mcq-question-image{max-width:100%!important;width:100%!important;height:auto!important;}
 }
-#panel-pyq:fullscreen,#panel-iitoth:fullscreen,#panel-pyq:-webkit-full-screen,#panel-iitoth:-webkit-full-screen{background:var(--bg);padding:16px;overflow:auto;}
-#panel-pyq:fullscreen .mcq-question-image,#panel-iitoth:fullscreen .mcq-question-image,#panel-pyq:-webkit-full-screen .mcq-question-image,#panel-iitoth:-webkit-full-screen .mcq-question-image{max-width:560px!important;width:100%!important;}
+#contentWrap:fullscreen .mcq-question-image,#contentWrap:-webkit-full-screen .mcq-question-image{max-width:560px!important;width:100%!important;}
 /* Adaptive MCQ option layout — picked at render time based on option text length */
 .options.opts-row4{display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;gap:8px;}
 .options.opts-row4 .option{flex:1 1 21%;min-width:110px;}
@@ -656,6 +655,17 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 /* IIT Foundation single-question view: Prev/Next grouped at top-left, just above the question card */
 .iit-practice-nav-top{position:static;justify-content:flex-start;margin-top:0;margin-bottom:10px;padding:8px 2px;background:transparent;backdrop-filter:none;border-top:none;border-bottom:1px solid var(--divider);border-radius:0;}
 .iit-practice-nav-top .iit-nav-progress{margin-left:10px;}
+/* Single-view combined nav row: Prev | Next | scrollable circles — used by PYQ/Desc/Obj */
+.sv-nav-row{display:none;align-items:center;gap:6px;padding:7px 0 7px;margin-bottom:10px;border-bottom:1px solid var(--divider);}
+.sv-nav-row.visible{display:flex;}
+.sv-nav-btn{padding:4px 10px;border-radius:8px;border:1px solid var(--sv-c,var(--brand));background:var(--sv-c,var(--brand));color:#fff;font-family:'Space Grotesk',sans-serif;font-size:10.5px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s;}
+.sv-nav-btn:hover:not(:disabled){opacity:.82;}
+.sv-nav-btn:disabled{background:var(--card-bg);color:var(--text-sub);border-color:var(--card-border);cursor:not-allowed;}
+.sv-circles{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;flex:1;padding:2px 0;}
+.sv-circles::-webkit-scrollbar{display:none;}
+.sv-circle{width:21px;height:21px;border-radius:50%;border:2px solid var(--sv-c,var(--brand));background:transparent;color:var(--sv-c,var(--brand));font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .12s;}
+.sv-circle.current{background:var(--sv-c,var(--brand));color:#fff;box-shadow:0 0 0 3px color-mix(in srgb,var(--sv-c,var(--brand)) 30%,transparent);}
+.sv-progress{font-size:11px;font-weight:700;color:var(--text-muted);flex-shrink:0;white-space:nowrap;}
 
 /* ══ Question header row: question text + right-aligned Paper Code / Year pills (same line) ══ */
 .q-header-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;}
@@ -1898,32 +1908,26 @@ const OBJ_VIEW  = { mode:'list', index:{}, tab:'mcq' };
 const DESC_PT = { all:'pt-dall', '2marks':'pt-d2m', '3marks':'pt-d3m', case:'pt-dcase' };
 const OBJ_PT  = { mcq:'pt-omcq', tof:'pt-otof', fib:'pt-ofib', match:'pt-omatch' };
 
-function descPaletteHTML(tabId, count) {
-  const pt = DESC_PT[tabId]||'pt-dall';
-  const nums = Array.from({length:count},(_,i)=>`<div class="iit-palette-num ${pt}${i===0?' current':''}" onclick="descGoTo('${tabId}',${i})">${i+1}</div>`).join('');
-  return `<div class="iit-palette-wrap pyq-palette-wrap" id="descPal-${tabId}" style="display:none;"><div class="iit-palette">${nums}</div></div>`;
-}
+const DESC_SV_COLOR = {all:'var(--col-desc)','2marks':'var(--pyq-two)','3marks':'var(--pyq-three)',case:'var(--pyq-four)'};
+function descPaletteHTML(tabId, count) { return ''; }
 function descNavHTML(tabId) {
-  return `<div class="iit-practice-nav iit-practice-nav-top" id="descNav-${tabId}" style="display:none;">
-    <div class="iit-nav-group">
-      <button class="iit-nav-btn" id="descPrev-${tabId}" onclick="descJump('${tabId}',(DESC_VIEW.index['${tabId}']||0)-1)">◀ Previous</button>
-      <button class="iit-nav-btn" id="descNext-${tabId}" onclick="descJump('${tabId}',(DESC_VIEW.index['${tabId}']||0)+1)">Next ▶</button>
-    </div>
-    <span class="iit-nav-progress" id="descProg-${tabId}"></span>
+  const c = DESC_SV_COLOR[tabId]||'var(--col-desc)';
+  return `<div class="sv-nav-row" id="descNav-${tabId}" style="--sv-c:${c};">
+    <button class="sv-nav-btn" id="descPrev-${tabId}" onclick="descJump('${tabId}',(DESC_VIEW.index['${tabId}']||0)-1)">◀ Prev</button>
+    <button class="sv-nav-btn" id="descNext-${tabId}" onclick="descJump('${tabId}',(DESC_VIEW.index['${tabId}']||0)+1)">Next ▶</button>
+    <div class="sv-circles" id="descCircles-${tabId}"></div>
+    <span class="sv-progress" id="descProg-${tabId}"></span>
   </div>`;
 }
-function objPaletteHTML(tabId, count) {
-  const pt = OBJ_PT[tabId]||'pt-omcq';
-  const nums = Array.from({length:count},(_,i)=>`<div class="iit-palette-num ${pt}${i===0?' current':''}" onclick="objGoTo('${tabId}',${i})">${i+1}</div>`).join('');
-  return `<div class="iit-palette-wrap pyq-palette-wrap" id="objPal-${tabId}" style="display:none;"><div class="iit-palette">${nums}</div></div>`;
-}
+const OBJ_SV_COLOR = {mcq:'var(--pyq-mcq)',tof:'var(--pyq-two)',fib:'var(--pyq-three)',match:'var(--pyq-four)'};
+function objPaletteHTML(tabId, count) { return ''; }
 function objNavHTML(tabId) {
-  return `<div class="iit-practice-nav iit-practice-nav-top" id="objNav-${tabId}" style="display:none;">
-    <div class="iit-nav-group">
-      <button class="iit-nav-btn" id="objPrev-${tabId}" onclick="objJump('${tabId}',(OBJ_VIEW.index['${tabId}']||0)-1)">◀ Previous</button>
-      <button class="iit-nav-btn" id="objNext-${tabId}" onclick="objJump('${tabId}',(OBJ_VIEW.index['${tabId}']||0)+1)">Next ▶</button>
-    </div>
-    <span class="iit-nav-progress" id="objProg-${tabId}"></span>
+  const c = OBJ_SV_COLOR[tabId]||'var(--pyq-mcq)';
+  return `<div class="sv-nav-row" id="objNav-${tabId}" style="--sv-c:${c};">
+    <button class="sv-nav-btn" id="objPrev-${tabId}" onclick="objJump('${tabId}',(OBJ_VIEW.index['${tabId}']||0)-1)">◀ Prev</button>
+    <button class="sv-nav-btn" id="objNext-${tabId}" onclick="objJump('${tabId}',(OBJ_VIEW.index['${tabId}']||0)+1)">Next ▶</button>
+    <div class="sv-circles" id="objCircles-${tabId}"></div>
+    <span class="sv-progress" id="objProg-${tabId}"></span>
   </div>`;
 }
 function applyDescViewMode(sec) {
@@ -1935,17 +1939,22 @@ function applyDescViewMode(sec) {
   let idx = DESC_VIEW.index[tabId]||0;
   if (idx>=total) idx=total-1; if(idx<0) idx=0;
   DESC_VIEW.index[tabId]=idx;
-  cards.forEach((c,i)=>{ c.style.display=(DESC_VIEW.mode==='list'||i===idx)?'':'none'; });
-  const pal=document.getElementById('descPal-'+tabId);
-  if(pal){
-    pal.style.display=DESC_VIEW.mode==='practice'?'block':'none';
-    pal.querySelectorAll('.iit-palette-num').forEach((n,i)=>n.classList.toggle('current',i===idx));
-  }
+  const isPractice = DESC_VIEW.mode==='practice';
+  cards.forEach((c,i)=>{ c.style.display=(!isPractice||i===idx)?'':'none'; });
   const nav=document.getElementById('descNav-'+tabId);
   if(nav){
-    nav.style.display=DESC_VIEW.mode==='practice'?'flex':'none';
+    nav.classList.toggle('visible',isPractice);
+    if(isPractice){
+      const cc=document.getElementById('descCircles-'+tabId);
+      if(cc && cc.children.length!==total){
+        cc.innerHTML=Array.from({length:total},(_,i)=>`<div class="sv-circle${i===idx?' current':''}" onclick="descGoTo('${tabId}',${i})">${i+1}</div>`).join('');
+      } else if(cc){
+        cc.querySelectorAll('.sv-circle').forEach((el,i)=>el.classList.toggle('current',i===idx));
+        const cur=cc.children[idx]; if(cur) cur.scrollIntoView({block:'nearest',inline:'center'});
+      }
+    }
     const prog=document.getElementById('descProg-'+tabId);
-    if(prog) prog.textContent=(idx+1)+' of '+total;
+    if(prog) prog.textContent=(idx+1)+' / '+total;
     const pb=document.getElementById('descPrev-'+tabId),nb=document.getElementById('descNext-'+tabId);
     if(pb) pb.disabled=idx===0; if(nb) nb.disabled=idx===total-1;
   }
@@ -1973,17 +1982,22 @@ function applyObjViewMode(sec) {
   let idx=OBJ_VIEW.index[tabId]||0;
   if(idx>=total) idx=total-1; if(idx<0) idx=0;
   OBJ_VIEW.index[tabId]=idx;
-  cards.forEach((c,i)=>{ c.style.display=(OBJ_VIEW.mode==='list'||i===idx)?'':'none'; });
-  const pal=document.getElementById('objPal-'+tabId);
-  if(pal){
-    pal.style.display=OBJ_VIEW.mode==='practice'?'block':'none';
-    pal.querySelectorAll('.iit-palette-num').forEach((n,i)=>n.classList.toggle('current',i===idx));
-  }
+  const isPractice=OBJ_VIEW.mode==='practice';
+  cards.forEach((c,i)=>{ c.style.display=(!isPractice||i===idx)?'':'none'; });
   const nav=document.getElementById('objNav-'+tabId);
   if(nav){
-    nav.style.display=OBJ_VIEW.mode==='practice'?'flex':'none';
+    nav.classList.toggle('visible',isPractice);
+    if(isPractice){
+      const cc=document.getElementById('objCircles-'+tabId);
+      if(cc && cc.children.length!==total){
+        cc.innerHTML=Array.from({length:total},(_,i)=>`<div class="sv-circle${i===idx?' current':''}" onclick="objGoTo('${tabId}',${i})">${i+1}</div>`).join('');
+      } else if(cc){
+        cc.querySelectorAll('.sv-circle').forEach((el,i)=>el.classList.toggle('current',i===idx));
+        const cur=cc.children[idx]; if(cur) cur.scrollIntoView({block:'nearest',inline:'center'});
+      }
+    }
     const prog=document.getElementById('objProg-'+tabId);
-    if(prog) prog.textContent=(idx+1)+' of '+total;
+    if(prog) prog.textContent=(idx+1)+' / '+total;
     const pb=document.getElementById('objPrev-'+tabId),nb=document.getElementById('objNext-'+tabId);
     if(pb) pb.disabled=idx===0; if(nb) nb.disabled=idx===total-1;
   }
@@ -2745,6 +2759,12 @@ const IIT_OTH_LEVELS = [
 ];
 const IITOTH = { worksheetIdx:0, level:'core', worksheets:[] };
 
+/* Grade 8 gets 5 flat worksheets (no sub-levels); grades 9+ get 5 worksheets with Level-C/O/A.
+   IIT_OTH_WS_COUNT maps gradeNum → expected total worksheet count. */
+const IIT_OTH_WS_COUNT = { '6':3, '7':3, '8':5, '9':5, '10':5 };
+/* Grades that should NOT show Level-C/O/A sub-levels (flat worksheets only) */
+const IIT_OTH_FLAT_GRADES = new Set(['6','7','8']);
+
 async function renderIITOthersView() {
   const tabsWrap = document.getElementById('iitOthWorksheetTabsWrap');
   const levelWrap = document.getElementById('iitOthLevelTabsWrap');
@@ -2763,7 +2783,28 @@ async function renderIITOthersView() {
     s.dataset.iitoth = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/others.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
-  const worksheets = (window.iitOthersData && window.iitOthersData.worksheets) || [];
+  const loaded = (window.iitOthersData && window.iitOthersData.worksheets) || [];
+  /* Build a lookup by worksheet number so we can fill gaps */
+  const wsMap = {};
+  loaded.forEach(w => {
+    const m = w.name.match(/(\d+)/);
+    if (m) wsMap[parseInt(m[1])] = w;
+  });
+  const total = IIT_OTH_WS_COUNT[gradeNum] || loaded.length;
+  const isFlat = IIT_OTH_FLAT_GRADES.has(gradeNum);
+  /* Build the canonical worksheets array, inserting placeholders for missing numbers */
+  const worksheets = [];
+  for (let n = 1; n <= total; n++) {
+    if (wsMap[n]) {
+      const w = wsMap[n];
+      /* For flat grades, strip any level keys so worksheetHasLevels() returns false */
+      if (isFlat) worksheets.push({ name: w.name, questions: w.questions || w.core || w.questions || [] });
+      else worksheets.push(w);
+    } else {
+      /* Placeholder — no questions yet */
+      worksheets.push({ name: `Worksheet ${n}`, questions: [] });
+    }
+  }
   IITOTH.worksheets = worksheets;
   if (!worksheets.length) {
     tabsWrap.innerHTML = ''; levelWrap.innerHTML = '';
@@ -3253,19 +3294,15 @@ function pyqTableHTML(table) {
     ${rows.map(r => `<tr>${r.map(c => `<td>${mathify(c)}</td>`).join('')}</tr>`).join('')}
   </tbody></table></div>`;
 }
-function pyqPaletteHTML(typeId, count) {
-  const nums = Array.from({length: count}, (_, i) => `<div class="iit-palette-num pt-${typeId}${i===0?' current':''}" onclick="pyqJump('${typeId}',${i})">${i+1}</div>`).join('');
-  return `<div class="iit-palette-wrap pyq-palette-wrap" id="pyqPalette-${typeId}" style="display:none;">
-    <div class="iit-palette">${nums}</div>
-  </div>`;
-}
+const PYQ_SV_COLOR = {mcq:'#7c3aed',ar:'#f97316',one:'#4d7c0b',two:'#15803d',three:'#b91c1c',four:'#0369a1',five:'#be185d'};
+function pyqPaletteHTML(typeId, count) { return ''; } // circles now inside sv-nav-row
 function pyqNavHTML(typeId) {
-  return `<div class="iit-practice-nav iit-practice-nav-top" id="pyqNav-${typeId}" style="display:none;">
-    <div class="iit-nav-group">
-      <button class="iit-nav-btn" id="pyqPrev-${typeId}" onclick="pyqJump('${typeId}',(PYQ_VIEW.index['${typeId}']||0)-1)">◀ Previous</button>
-      <button class="iit-nav-btn" id="pyqNext-${typeId}" onclick="pyqJump('${typeId}',(PYQ_VIEW.index['${typeId}']||0)+1)">Next ▶</button>
-    </div>
-    <span class="iit-nav-progress" id="pyqProgress-${typeId}"></span>
+  const c = PYQ_SV_COLOR[typeId]||'var(--brand)';
+  return `<div class="sv-nav-row" id="pyqNav-${typeId}" style="--sv-c:${c};">
+    <button class="sv-nav-btn" id="pyqPrev-${typeId}" onclick="pyqJump('${typeId}',(PYQ_VIEW.index['${typeId}']||0)-1)">◀ Prev</button>
+    <button class="sv-nav-btn" id="pyqNext-${typeId}" onclick="pyqJump('${typeId}',(PYQ_VIEW.index['${typeId}']||0)+1)">Next ▶</button>
+    <div class="sv-circles" id="pyqCircles-${typeId}"></div>
+    <span class="sv-progress" id="pyqProgress-${typeId}"></span>
   </div>`;
 }
 function applyPyqViewMode(sec) {
@@ -3278,19 +3315,28 @@ function applyPyqViewMode(sec) {
   if (idx >= total) idx = total - 1;
   if (idx < 0) idx = 0;
   PYQ_VIEW.index[typeId] = idx;
-  cards.forEach((c, i) => { c.style.display = (PYQ_VIEW.mode === 'list' || i === idx) ? '' : 'none'; });
-  const palette = document.getElementById('pyqPalette-' + typeId);
-  if (palette) {
-    palette.style.display = PYQ_VIEW.mode === 'practice' ? 'block' : 'none';
-    palette.querySelectorAll('.iit-palette-num').forEach((el, i) => el.classList.toggle('current', i === idx));
-  }
+  const isPractice = PYQ_VIEW.mode === 'practice';
+  cards.forEach((c, i) => { c.style.display = (!isPractice || i === idx) ? '' : 'none'; });
   const nav = document.getElementById('pyqNav-' + typeId);
-  if (nav) nav.style.display = PYQ_VIEW.mode === 'practice' ? 'flex' : 'none';
-  const prog = document.getElementById('pyqProgress-' + typeId);
-  if (prog) prog.textContent = (idx + 1) + ' of ' + total;
-  const prevBtn = document.getElementById('pyqPrev-' + typeId), nextBtn = document.getElementById('pyqNext-' + typeId);
-  if (prevBtn) prevBtn.disabled = idx === 0;
-  if (nextBtn) nextBtn.disabled = idx === total - 1;
+  if (nav) {
+    nav.classList.toggle('visible', isPractice);
+    if (isPractice) {
+      // build circles if needed
+      const cc = document.getElementById('pyqCircles-' + typeId);
+      if (cc && cc.children.length !== total) {
+        cc.innerHTML = Array.from({length:total},(_,i)=>`<div class="sv-circle${i===idx?' current':''}" onclick="pyqJump('${typeId}',${i})">${i+1}</div>`).join('');
+      } else if (cc) {
+        cc.querySelectorAll('.sv-circle').forEach((el,i)=>{el.classList.toggle('current',i===idx);});
+        // scroll current into view
+        const cur=cc.children[idx]; if(cur) cur.scrollIntoView({block:'nearest',inline:'center'});
+      }
+    }
+    const prog = document.getElementById('pyqProgress-' + typeId);
+    if (prog) prog.textContent = (idx+1)+' / '+total;
+    const prevBtn = document.getElementById('pyqPrev-' + typeId), nextBtn = document.getElementById('pyqNext-' + typeId);
+    if (prevBtn) prevBtn.disabled = idx === 0;
+    if (nextBtn) nextBtn.disabled = idx === total - 1;
+  }
 }
 function pyqJump(typeId, idx) {
   const sec = document.getElementById('pyq-' + typeId); if (!sec) return;
@@ -3298,6 +3344,7 @@ function pyqJump(typeId, idx) {
   if (idx < 0 || idx >= total) return;
   PYQ_VIEW.index[typeId] = idx;
   applyPyqViewMode(sec);
+  document.getElementById('content').scrollTop = 0;
 }
 function setPyqViewMode(mode) {
   PYQ_VIEW.mode = mode;
@@ -3485,9 +3532,9 @@ function adjustQFontSize(panelId, key, delta) {
   const el = document.getElementById(panelId);
   if (el) el.style.setProperty('--qfs', QFS[key]);
 }
-function toggleFullscreen(targetId) {
+function toggleFullscreen() {
   if (!document.fullscreenElement) {
-    const el = (targetId && document.getElementById(targetId)) || document.documentElement;
+    const el = document.getElementById('contentWrap') || document.documentElement;
     el.requestFullscreen && el.requestFullscreen();
   } else {
     document.exitFullscreen && document.exitFullscreen();
