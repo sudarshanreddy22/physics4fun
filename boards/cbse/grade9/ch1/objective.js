@@ -1,37 +1,58 @@
-/* Objective Questions - Motion | CBSE Grade 9 */
+/* Objective Questions - Motion Graphs | CBSE Grade 9 */
 window.objectiveData = [
-  { question: "What is the SI unit of velocity?", options: ["m/s", "m/s²", "kg/m", "N/m"], answer: 0, type: "mcq", explanation: "Velocity = displacement/time, so its SI unit is metre per second (m/s)." },
-  { question: "Which equation of motion relates displacement directly to velocity and acceleration (without time)?", options: ["v = u + at", "s = ut + ½at²", "v² = u² + 2as", "a = (v-u)/t"], answer: 2, type: "mcq", explanation: "v² = u² + 2as connects final velocity, initial velocity, acceleration and displacement without involving time." },
-  { question: "The area under a velocity-time graph represents:", options: ["Acceleration", "Displacement", "Speed", "Force"], answer: 1, type: "mcq", explanation: "The area enclosed between the v-t graph and the time axis gives the displacement of the object." },
-  { question: "A body moving in a circle at constant speed has:", options: ["Zero acceleration", "Constant velocity", "Acceleration directed towards the centre", "No force acting on it"], answer: 2, type: "mcq", explanation: "Even at constant speed, the changing direction in circular motion produces acceleration directed toward the centre (centripetal acceleration)." },
-  { question: "The slope of a distance-time graph gives:", options: ["Displacement", "Acceleration", "Speed", "Force"], answer: 2, type: "mcq", explanation: "Slope of a distance-time graph = distance/time = speed." },
+  // ==================== 30 MCQs ====================
+  { question: "What does the slope of a distance-time graph represent?", options: ["Acceleration", "Speed", "Displacement", "Force"], answer: 1, type: "mcq", explanation: "Slope of a distance-time graph = change in distance / change in time, which gives speed." },
+  { question: "A horizontal line on a distance-time graph indicates that the object is:", options: ["Moving with uniform speed", "Accelerating", "At rest", "Moving with increasing speed"], answer: 2, type: "mcq", explanation: "A horizontal distance-time graph has zero slope, so distance does not change with time. The object is at rest." },
+  { question: "A straight line with a constant positive slope on a distance-time graph represents:", options: ["Uniform speed", "Zero speed", "Uniform acceleration", "Decreasing speed"], answer: 0, type: "mcq", explanation: "A constant slope on a distance-time graph means constant speed." },
+  { question: "If the slope of a distance-time graph becomes steeper with time, the object's speed is:", options: ["Constant", "Decreasing", "Increasing", "Zero"], answer: 2, type: "mcq", explanation: "A steeper slope means a greater distance is covered per unit time, so speed is increasing." },
+  { question: "The slope of a speed-time graph represents:", options: ["Distance", "Acceleration", "Speed", "Displacement"], answer: 1, type: "mcq", explanation: "Slope of a speed-time graph = change in speed / time, representing acceleration when speed is changing uniformly." },
+  { question: "A horizontal line above the time axis on a speed-time graph represents:", options: ["Uniform speed", "Zero speed", "Uniform acceleration", "Increasing speed"], answer: 0, type: "mcq", explanation: "A horizontal speed-time graph has constant speed and therefore zero acceleration." },
+  { question: "A speed-time graph is a straight line sloping upward. This indicates:", options: ["Uniformly increasing speed", "Object at rest", "Uniformly decreasing speed", "Constant distance"], answer: 0, type: "mcq", explanation: "A straight line with positive slope on a speed-time graph indicates uniform acceleration and increasing speed." },
+  { question: "A straight line sloping downward on a speed-time graph represents:", options: ["Uniform acceleration", "Uniform deceleration", "Constant distance", "Zero time"], answer: 1, type: "mcq", explanation: "A constant negative slope indicates a constant decrease in speed, i.e. uniform deceleration." },
+  { question: "The area under a speed-time graph represents:", options: ["Distance travelled", "Acceleration", "Velocity", "Force"], answer: 0, type: "mcq", explanation: "For a speed-time graph, area = speed × time, which gives distance travelled." },
+  { question: "If an object moves at 5 m/s for 4 s, the area under its speed-time graph is:", options: ["9 m", "20 m", "1.25 m", "25 m"], answer: 1, type: "mcq", explanation: "Distance = speed × time = 5 × 4 = 20 m." },
+  { question: "A speed-time graph lies along the time axis. The object's speed is:", options: ["1 m/s", "Increasing", "Zero", "Constant at 10 m/s"], answer: 2, type: "mcq", explanation: "On the time axis, speed is zero." },
+  { question: "For a uniformly accelerating object, the speed-time graph is:", options: ["A straight line", "A circle", "A horizontal distance-time curve", "Always vertical"], answer: 0, type: "mcq", explanation: "Uniform acceleration means speed changes by equal amounts in equal time intervals, producing a straight line on a speed-time graph." },
+  { question: "The slope of an acceleration-time graph represents:", options: ["Speed", "Distance", "Rate of change of acceleration", "Displacement"], answer: 2, type: "mcq", explanation: "Slope of an acceleration-time graph is change in acceleration divided by time, i.e. rate of change of acceleration (jerk)." },
+  { question: "The area under an acceleration-time graph represents:", options: ["Change in velocity", "Distance", "Speed", "Force"], answer: 0, type: "mcq", explanation: "Area = acceleration × time, which gives the change in velocity." },
+  { question: "An acceleration-time graph is a horizontal line above the time axis. This means:", options: ["Acceleration is constant and positive", "Speed is zero", "Acceleration is increasing", "The object is necessarily at rest"], answer: 0, type: "mcq", explanation: "A horizontal line above the time axis indicates a constant positive acceleration." },
+  { question: "An acceleration-time graph lies on the time axis. The acceleration is:", options: ["Negative", "Constant positive", "Zero", "Increasing"], answer: 2, type: "mcq", explanation: "The time axis corresponds to acceleration = 0." },
+  { question: "If an acceleration-time graph has acceleration 2 m/s² for 5 s, the change in velocity is:", options: ["2.5 m/s", "7 m/s", "10 m/s", "25 m/s"], answer: 2, type: "mcq", explanation: "Change in velocity = acceleration × time = 2 × 5 = 10 m/s." },
+  { question: "A negative slope on a speed-time graph generally indicates:", options: ["Increasing speed", "Decreasing speed", "Zero distance", "Constant acceleration of zero"], answer: 1, type: "mcq", explanation: "A negative slope means speed decreases with time, indicating deceleration." },
+  { question: "Which graph is most useful for finding acceleration from its slope?", options: ["Distance-time graph", "Speed-time graph", "Acceleration-time graph", "Distance graph without time"], answer: 1, type: "mcq", explanation: "The slope of a speed-time graph gives acceleration for one-dimensional motion with speed changing uniformly." },
+  { question: "Which graph is used to determine distance travelled from the area under the graph?", options: ["Speed-time graph", "Acceleration-time graph", "Distance-time graph", "Mass-time graph"], answer: 0, type: "mcq", explanation: "The area under a speed-time graph gives distance travelled." },
+  { question: "Which graph is used to determine change in velocity from the area under the graph?", options: ["Distance-time graph", "Speed-time graph", "Acceleration-time graph", "Mass-time graph"], answer: 2, type: "mcq", explanation: "The area under an acceleration-time graph gives change in velocity." },
+  { question: "A distance-time graph curves upward and becomes progressively steeper. What does this show?", options: ["Speed is increasing", "Speed is zero", "Speed is constant", "Distance is decreasing"], answer: 0, type: "mcq", explanation: "The increasing slope means the speed is increasing with time." },
+  { question: "Two straight lines on distance-time graphs have slopes 3 m/s and 6 m/s. Which object has greater speed?", options: ["The object with slope 3 m/s", "The object with slope 6 m/s", "Both have the same speed", "Neither object is moving"], answer: 1, type: "mcq", explanation: "Speed equals the slope of a distance-time graph, so 6 m/s is greater than 3 m/s." },
+  { question: "A speed-time graph forms a triangle with base 6 s and height 4 m/s. What distance is travelled?", options: ["10 m", "12 m", "24 m", "3 m"], answer: 1, type: "mcq", explanation: "Distance = area of triangle = ½ × 6 × 4 = 12 m." },
+  { question: "A speed-time graph forms a rectangle of width 8 s and height 3 m/s. What is the distance travelled?", options: ["11 m", "24 m", "5 m", "48 m"], answer: 1, type: "mcq", explanation: "Distance = area of rectangle = 8 × 3 = 24 m." },
+  { question: "An acceleration-time graph forms a rectangle of width 7 s and height 3 m/s². What is the change in velocity?", options: ["10 m/s", "21 m/s", "4 m/s", "1/3 m/s"], answer: 1, type: "mcq", explanation: "Change in velocity = area = 7 × 3 = 21 m/s." },
+  { question: "If the slope of a distance-time graph is 0, the object's speed is:", options: ["Zero", "1 m/s", "Increasing", "Negative"], answer: 0, type: "mcq", explanation: "Zero slope means zero change in distance with time, so speed is zero." },
+  { question: "On a speed-time graph, the slope changes from positive to zero. What happens to the motion?", options: ["Speed starts increasing", "Speed becomes constant after increasing", "Speed becomes zero immediately", "Distance becomes zero"], answer: 1, type: "mcq", explanation: "A positive slope means speed was increasing; zero slope afterward means the speed becomes constant." },
+  { question: "If the acceleration-time graph shows a constant negative acceleration, the velocity of the object:", options: ["Must increase uniformly", "Decreases uniformly", "Must remain zero", "Cannot change"], answer: 1, type: "mcq", explanation: "Constant negative acceleration causes velocity to decrease uniformly with time, provided the chosen positive direction remains fixed." },
+  { question: "Which statement about graph slope is correct?", options: ["Slope always means area", "Slope means vertical change divided by horizontal change", "Slope is always zero", "Slope is equal to area"], answer: 1, type: "mcq", explanation: "Slope of any graph is change in the vertical quantity divided by change in the horizontal quantity." },
 
-  { question: "Velocity is a scalar quantity.", answer: false, type: "tof", explanation: "Velocity is a vector quantity — it has both magnitude and direction, unlike speed which is scalar." },
-  { question: "Acceleration can have a negative value.", answer: true, type: "tof", explanation: "Negative acceleration (retardation/deceleration) occurs when velocity decreases with time." },
-  { question: "For an object in uniform motion, the distance-time graph is always a straight line.", answer: true, type: "tof", explanation: "Uniform motion means equal distances in equal time intervals, which produces a straight-line distance-time graph." },
-  { question: "Displacement can never be greater than distance.", answer: true, type: "tof", explanation: "Displacement is the shortest path between two points, so it can never exceed the actual distance travelled." },
-  { question: "An object moving with uniform velocity has non-zero acceleration.", answer: false, type: "tof", explanation: "Uniform velocity means constant speed and direction, so the change in velocity is zero — hence acceleration is zero." },
+  // ==================== 10 Fill in the Blanks ====================
+  { question: "The slope of a distance-time graph gives ___.", answer: "speed", type: "fib", explanation: "Speed is equal to change in distance divided by change in time." },
+  { question: "The slope of a speed-time graph gives ___.", answer: "acceleration", type: "fib", explanation: "Acceleration is the rate of change of speed with time." },
+  { question: "The area under a speed-time graph gives the ___ travelled.", answer: "distance", type: "fib", explanation: "Area under a speed-time graph is speed × time, which gives distance travelled." },
+  { question: "The area under an acceleration-time graph gives the change in ___.", answer: "velocity", type: "fib", explanation: "Acceleration × time gives change in velocity." },
+  { question: "A horizontal distance-time graph indicates that the object is at ___.", answer: "rest", type: "fib", explanation: "A horizontal line means distance remains constant with time, so the object is at rest." },
+  { question: "A horizontal speed-time graph above the time axis represents ___ speed.", answer: "constant", type: "fib", explanation: "A horizontal line means speed does not change with time." },
+  { question: "The SI unit of speed is ___.", answer: "m/s", type: "fib", explanation: "Speed is distance divided by time, so its SI unit is metre per second." },
+  { question: "The SI unit of acceleration is ___.", answer: "m/s²", type: "fib", explanation: "Acceleration is change in velocity per unit time, giving the unit m/s²." },
+  { question: "The area of a rectangle on a speed-time graph is calculated as ___ × height.", answer: "base", type: "fib", explanation: "Area of a rectangle = base × height." },
+  { question: "The slope of a graph is calculated as change in vertical quantity divided by change in ___ quantity.", answer: "horizontal", type: "fib", explanation: "Slope = change in vertical quantity / change in horizontal quantity." },
 
-  { question: "The rate of change of velocity with time is called ___.", answer: "acceleration", type: "fib", explanation: "By definition, acceleration = (change in velocity) / time." },
-  { question: "The SI unit of acceleration is ___.", answer: "m/s²", type: "fib", explanation: "Since acceleration = velocity/time, its unit is (m/s)/s = m/s²." },
-  { question: "In the equation v = u + at, the term 'u' represents the ___ velocity.", answer: "initial", type: "fib", explanation: "u denotes the initial (starting) velocity of the object before acceleration acts over time t." },
-  { question: "A motion in which an object moves in a circular path at constant speed is called ___ circular motion.", answer: "uniform", type: "fib", explanation: "This is called uniform circular motion, since the speed remains constant throughout the path." },
-  { question: "The shortest distance between the initial and final position of an object is called ___.", answer: "displacement", type: "fib", explanation: "Displacement is defined precisely as this shortest, directed distance." },
-
-  { question: "Match the physics term with its correct formula or description", type: "match",
-    pairs: [
-      ["Speed", "Distance / Time"],
-      ["Velocity", "Displacement / Time"],
-      ["Acceleration", "(v − u) / t"],
-      ["Displacement (eqn.)", "ut + ½at²"]
-    ]
-  },
-  { question: "Match the motion graph feature with what it represents", type: "match",
-    pairs: [
-      ["Slope of distance-time graph", "Speed"],
-      ["Slope of velocity-time graph", "Acceleration"],
-      ["Area under velocity-time graph", "Displacement"],
-      ["Horizontal line on distance-time graph", "Object at rest"]
-    ]
-  }
+  // ==================== 10 True / False ====================
+  { question: "The slope of a distance-time graph gives speed.", answer: true, type: "tof", explanation: "True. Slope = change in distance / change in time = speed." },
+  { question: "The area under a speed-time graph gives acceleration.", answer: false, type: "tof", explanation: "False. The area under a speed-time graph gives distance travelled." },
+  { question: "A horizontal distance-time graph represents an object at rest.", answer: true, type: "tof", explanation: "True. Distance remains unchanged with time, so the object is at rest." },
+  { question: "A horizontal speed-time graph represents constant speed.", answer: true, type: "tof", explanation: "True. The speed has the same value at all times shown." },
+  { question: "The slope of a speed-time graph can represent acceleration.", answer: true, type: "tof", explanation: "True. Slope = change in speed / time, which represents acceleration when speed changes uniformly." },
+  { question: "The area under an acceleration-time graph represents change in velocity.", answer: true, type: "tof", explanation: "True. The area equals acceleration × time and therefore gives change in velocity." },
+  { question: "A steeper distance-time graph represents lower speed.", answer: false, type: "tof", explanation: "False. A steeper distance-time graph has a greater slope and therefore represents greater speed." },
+  { question: "A speed-time graph with a negative slope shows decreasing speed.", answer: true, type: "tof", explanation: "True. Negative slope means speed decreases as time increases." },
+  { question: "If the acceleration-time graph lies on the time axis, acceleration is zero.", answer: true, type: "tof", explanation: "True. The time axis corresponds to an acceleration value of zero." },
+  { question: "The slope of an acceleration-time graph directly gives distance travelled.", answer: false, type: "tof", explanation: "False. The slope gives the rate of change of acceleration; it does not directly give distance travelled." }
 ];
