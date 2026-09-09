@@ -1,0 +1,17 @@
+[
+  {
+    "question": "Define inertia with an example.",
+    "answer": "Inertia is the property of a body to resist a change in its state of rest or motion.",
+    "marks": 2
+  },
+  {
+    "question": "State and explain Newton's Second Law of Motion with a derivation.",
+    "answer": "F = ma. Full derivation: ...",
+    "marks": 3
+  },
+  {
+    "question": "Case-Based: A ball is thrown upward from a moving train...",
+    "type": "case",
+    "answer": "Full case-based solution here..."
+  }
+]

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics4Fun — Teacher Admin</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" class="login-wrap">
+  <form id="loginForm" class="login-card">
+    <h1>Teacher Login</h1>
+    <input type="text" id="loginUsername" placeholder="Username" autocomplete="username" required>
+    <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required>
+    <button type="submit">Log In</button>
+    <p id="loginError" class="error-text"></p>
+  </form>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="dashboard hidden">
+  <header class="topbar">
+    <h1>Physics4Fun Admin</h1>
+    <div class="who">
+      <span id="whoami"></span>
+      <button id="logoutBtn">Log Out</button>
+    </div>
+  </header>
+
+  <section class="filters card">
+    <h2>Select Content</h2>
+    <div class="grid">
+      <label>Board
+        <select id="fBoard">
+          <option value="cbse">CBSE</option>
+          <option value="ap-state">AP State</option>
+          <option value="ap-inter">AP Inter</option>
+          <option value="cisce">CISCE</option>
+          <option value="cambridge">Cambridge</option>
+          <option value="iit-foundation">IIT Foundation</option>
+          <option value="others">Others</option>
+        </select>
+      </label>
+      <label>Grade
+        <input type="text" id="fGrade" placeholder="e.g. 10">
+      </label>
+      <label>Chapter Slug
+        <input type="text" id="fChapterSlug" placeholder="e.g. laws-of-motion">
+      </label>
+      <label>Chapter Name (optional)
+        <input type="text" id="fChapterName" placeholder="e.g. Laws of Motion">
+      </label>
+      <label>Section
+        <select id="fSection">
+          <option value="descriptive">Descriptive</option>
+          <option value="objective">Objective</option>
+          <option value="pyq">PYQ</option>
+        </select>
+      </label>
+      <label>Subtype
+        <select id="fSubtype"></select>
+      </label>
+    </div>
+    <button id="loadBtn">Load Questions</button>
+  </section>
+
+  <section class="card">
+    <div class="section-head">
+      <h2>Questions <span id="countLabel"></span></h2>
+      <button id="bulkDeleteBtn" class="danger">Delete All In This Filter</button>
+    </div>
+    <div id="qList" class="q-list"></div>
+  </section>
+
+  <section class="card">
+    <h2>Add Single Question</h2>
+    <form id="singleForm" class="grid">
+      <label class="full">Question
+        <textarea id="qQuestion" rows="2" required></textarea>
+      </label>
+      <label>Option A<input type="text" id="qOptA"></label>
+      <label>Option B<input type="text" id="qOptB"></label>
+      <label>Option C<input type="text" id="qOptC"></label>
+      <label>Option D<input type="text" id="qOptD"></label>
+      <label>Answer<input type="text" id="qAnswer"></label>
+      <label>Marks<input type="number" id="qMarks"></label>
+      <label class="full">Explanation / Full Answer
+        <textarea id="qExplanation" rows="2"></textarea>
+      </label>
+      <label>Assertion (AR type only)<input type="text" id="qAssertion"></label>
+      <label>Reason (AR type only)<input type="text" id="qReason"></label>
+      <button type="submit" class="full">Add Question</button>
+    </form>
+    <p id="singleMsg" class="msg"></p>
+  </section>
+
+  <section class="card">
+    <h2>Bulk Import (Excel / CSV / JSON)</h2>
+    <p class="hint">
+      Columns recognised: board, grade, chapterSlug, chapterName, section, subtype (or "type"),
+      question, optionA, optionB, optionC, optionD, answer, explanation, marks, assertion, reason, order.
+      Any column left blank in the file falls back to the defaults selected above.
+    </p>
+    <input type="file" id="bulkFile" accept=".xlsx,.xls,.csv,.json">
+    <button id="bulkUploadBtn">Upload &amp; Import</button>
+    <pre id="bulkResult" class="result-box"></pre>
+  </section>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
