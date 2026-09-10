@@ -38,7 +38,7 @@ window.MathJax = {
   --sbg-pyq:rgba(251,146,60,0.12);--sbg-games:rgba(16,185,129,0.12);
   --pyq-mcq:#7c3aed;--pyq-ar:#f97316;--pyq-two:#16a34a;
   --pyq-three:#dc2626;--pyq-four:#0ea5e9;--pyq-five:#ec4899;
-  --desc-two:#16a34a;--desc-three:#ec4899;--desc-case:#0ea5e9;
+  --desc-two:#16a34a;--desc-three:#ec4899;--desc-case:#0ea5e9;--desc-revise:#8b5cf6;
 }
 body.light{
   --bg:#f0f4fb;--bg2:#ffffff;--bg3:#f4f7fe;
@@ -202,6 +202,8 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 	#desc-tabbar .pyq-tab.t-two.active{color:var(--desc-two);border-bottom-color:var(--desc-two);}
 	#desc-tabbar .pyq-tab.t-three.active{color:var(--desc-three);border-bottom-color:var(--desc-three);}
 	#desc-tabbar .pyq-tab.t-case.active{color:var(--desc-case);border-bottom-color:var(--desc-case);}
+	#desc-tabbar .pyq-tab.t-revise.active{color:var(--desc-revise);border-bottom-color:var(--desc-revise);}
+	.iit-palette-num.pt-drevise:hover,.iit-palette-num.current.pt-drevise{border-color:var(--desc-revise);}.iit-palette-num.current.pt-drevise{background:var(--desc-revise);color:#fff;}
 
 /* ── CONTENT ── */
 #content{flex:1;overflow-y:auto;padding:18px 20px 32px;}
@@ -1566,6 +1568,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="pyq-tab t-two" onclick="showDescSec('2marks',this)"><span class="tab-dot" style="background:var(--desc-two);">2</span>Marks</div>
       <div class="pyq-tab t-three" onclick="showDescSec('3marks',this)"><span class="tab-dot" style="background:var(--desc-three);">3</span>Marks</div>
       <div class="pyq-tab t-case" onclick="showDescSec('case',this)"><span class="tab-dot" style="background:var(--desc-case);">C</span>Case-Based</div>
+      <div class="pyq-tab t-revise" id="descTabRevise" onclick="showDescSec('revise',this)" style="display:none;"><span class="tab-dot" style="background:var(--desc-revise);">R</span>Revise, Reflect, Refine</div>
       <div class="global-view-toggle" id="descViewToggle" style="display:none;">
         <button class="gv-btn active" id="descListBtn" title="All Questions" onclick="setDescViewMode('list')">☰</button>
         <button class="gv-btn" id="descSingleBtn" title="Single Question" onclick="setDescViewMode('practice')">🎯</button>
@@ -1873,6 +1876,9 @@ function switchSection(type, el, sub) {
         const noAll = isDescNoAllGrade();
         const allTabEl = document.getElementById('descTabAll');
         if (allTabEl) allTabEl.style.display = noAll ? 'none' : '';
+        const isCbse69 = /^cbse-g[6-9]$/.test(CUR.grade||'');
+        const reviseTabEl = document.getElementById('descTabRevise');
+        if (reviseTabEl) reviseTabEl.style.display = isCbse69 ? '' : 'none';
         showDescSec(noAll?'2marks':'all', document.querySelector(noAll?'#desc-tabbar .pyq-tab.t-two':'#desc-tabbar .pyq-tab.t-all'));
       }
       break;
@@ -1919,10 +1925,10 @@ function isDescNoAllGrade() {
 const DESC_VIEW = { mode:'list', index:{}, tab:'all' };
 const OBJ_VIEW  = { mode:'list', index:{}, tab:'mcq' };
 
-const DESC_PT = { all:'pt-dall', '2marks':'pt-d2m', '3marks':'pt-d3m', case:'pt-dcase' };
+const DESC_PT = { all:'pt-dall', '2marks':'pt-d2m', '3marks':'pt-d3m', case:'pt-dcase', revise:'pt-drevise' };
 const OBJ_PT  = { mcq:'pt-omcq', tof:'pt-otof', fib:'pt-ofib', match:'pt-omatch' };
 
-const DESC_SV_COLOR = {all:'var(--col-desc)','2marks':'var(--desc-two)','3marks':'var(--desc-three)',case:'var(--desc-case)'};
+const DESC_SV_COLOR = {all:'var(--col-desc)','2marks':'var(--desc-two)','3marks':'var(--desc-three)',case:'var(--desc-case)',revise:'var(--desc-revise)'};
 function descPaletteHTML(tabId, count) { return ''; }
 function descNavHTML(tabId) {
   const c = DESC_SV_COLOR[tabId]||'var(--col-desc)';
@@ -2086,32 +2092,56 @@ function scrollToNotesSection(i) {
 function toggleNoteQA(el) { el.classList.toggle('open'); }
 
 /* ══════ DESCRIPTIVE ══════ */
+/*
+ * Descriptive data separation:
+ * - window.descriptiveData = regular 2-Marks / 3-Marks / Case-Based data
+ * - window.reviseReflectRefineData = dedicated "Revise, Reflect, Refine" data
+ * RRR items are explicitly classified as "revise" before marks are checked,
+ * so they cannot leak into the 2-Marks or 3-Marks tabs.
+ */
 async function loadDesc() {
   const wrap = document.getElementById('desc-content-wrap');
   const [board, gradeNum] = parseGradeId(CUR.grade);
   DESC_VIEW.index = {}; DESC_VIEW.mode = 'list';
   if (!CUR.slug) { renderComingSoon(wrap,'✏️','Descriptive Questions','Questions being prepared.'); return; }
   window.descriptiveData = undefined;
+  window.reviseReflectRefineData = undefined;
   document.querySelectorAll('[data-descq]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.descq = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/descriptive.js`;
     s.onload = s.onerror = res; document.head.appendChild(s);
   });
-  window.descriptiveData && window.descriptiveData.length
-    ? renderDesc(window.descriptiveData, wrap)
+
+  const normalDescData = Array.isArray(window.descriptiveData) ? window.descriptiveData : [];
+  const rrrDescData = Array.isArray(window.reviseReflectRefineData) ? window.reviseReflectRefineData : [];
+  const allDescData = normalDescData.concat(rrrDescData);
+
+  allDescData.length
+    ? renderDesc(allDescData, wrap)
     : renderComingSoon(wrap,'✏️','Descriptive Questions','Long-answer questions for this chapter are being added. Add them in <code>descriptive.js</code>');
 }
 
 function renderDesc(data, wrap) {
   const usePalette = isCisceObjGrade();
-  const tabs = isDescNoAllGrade() ? ['2marks','3marks','case'] : ['all','2marks','3marks','case'];
+  const isCbse69 = /^cbse-g[6-9]$/.test(CUR.grade||'');
+  // Show/hide Revise tab
+  const hasRRR = data.some(q => q.type==='revise'||q.type==='revise-reflect-refine');
+  const reviseTabEl = document.getElementById('descTabRevise');
+  if (reviseTabEl) reviseTabEl.style.display = hasRRR ? '' : 'none';
+  const baseTabs = isDescNoAllGrade() ? ['2marks','3marks','case'] : ['all','2marks','3marks','case'];
+  const tabs = hasRRR ? [...baseTabs, 'revise'] : baseTabs;
   const cardHTML = (q,i) => {
-    const t = q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))?'case':q.marks==2?'2marks':q.marks==3?'3marks':'all';
+    const t = (q.type==='revise'||q.type==='revise-reflect-refine')?'revise':q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))?'case':q.marks==2?'2marks':q.marks==3?'3marks':'all';
     const c = DESC_SV_COLOR[t]||'var(--col-desc)';
+    // Number questions independently inside each section.
+    const sectionNo = data.slice(0,i+1).filter(x => {
+      const xt = (x.type==='revise'||x.type==='revise-reflect-refine')?'revise':x.type==='case'||(x.question&&x.question.toLowerCase().includes('case-based'))?'case':x.marks==2?'2marks':x.marks==3?'3marks':'all';
+      return xt === t;
+    }).length;
     return `<div class="pyq-question-item" data-desc-id="${i}" data-desc-type="${t}">
     <div class="pyq-question-top" onclick="toggleDescAnswer(${i})" style="cursor:pointer;">
-      <div class="qno desc" style="flex-shrink:0;background:${c};">${i+1}</div>
+      <div class="qno desc" style="flex-shrink:0;background:${c};">${sectionNo}</div>
       <div style="flex:1;"><div style="font-size:calc(13.5px*var(--qfs,1));line-height:1.8;">${mathify(q.question)}</div></div>
       <span class="pyq-q-icon" data-icon-id="desc-${i}" style="color:${c};">▶</span>
     </div>
@@ -2121,7 +2151,7 @@ function renderDesc(data, wrap) {
   if (usePalette) {
     let html = '';
     tabs.forEach((tabId, tabIdx) => {
-      const items = tabId==='all' ? data.map((q,i)=>({q,i})) : data.map((q,i)=>({q,i})).filter(({q})=>{ let t='all'; if(q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based')))t='case'; else if(q.marks==2)t='2marks'; else if(q.marks==3)t='3marks'; return t===tabId; });
+      const items = tabId==='all' ? data.map((q,i)=>({q,i})) : data.map((q,i)=>({q,i})).filter(({q})=>{ let t='all'; if(q.type==='revise'||q.type==='revise-reflect-refine')t='revise'; else if(q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based')))t='case'; else if(q.marks==2)t='2marks'; else if(q.marks==3)t='3marks'; return t===tabId; });
       html += `<div class="desc-section" id="desc-${tabId}" style="${tabIdx!==0?'display:none':''}">`;
       html += descPaletteHTML(tabId, items.length) + descNavHTML(tabId);
       html += items.map(({q,i})=>cardHTML(q,i)).join('');
@@ -2141,7 +2171,7 @@ function showDescSec(type, el) {
   document.querySelectorAll('#desc-tabbar .pyq-tab').forEach(t => t.classList.remove('active'));
   if (el) el.classList.add('active');
   if (isCisceObjGrade()) {
-    ['all','2marks','3marks','case'].forEach(id => {
+    ['all','2marks','3marks','case','revise'].forEach(id => {
       const sec=document.getElementById('desc-'+id);
       if(sec) sec.style.display = id===type?'':'none';
     });
