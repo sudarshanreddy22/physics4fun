@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 490" role="img" aria-label="Velocity against time straight line from 10 metres per second at 0 seconds to 30 metres per second at 8 seconds">
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#196bd0"/></marker>
+ <marker id="redarrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#e45557"/></marker>
+ <pattern id="graphgrid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#dbe8f6" stroke-width="1"/></pattern>
+ <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d0f4ff"/><stop offset="1" stop-color="#83d3f4"/></linearGradient>
+</defs>
+<style>text{font-family:Inter,'Segoe UI',Arial,sans-serif;fill:#213650}.heading{font-size:23px;font-weight:750}.caption{font-size:16px}.axis{font-size:16px;font-weight:650}.small{font-size:14px}.panel{fill:#f8fbff;stroke:#c4d9f1;stroke-width:2}</style>
+
+<rect x="4" y="4" width="752" height="482" rx="16" fill="#f8fbff" stroke="#c9daef"/>
+<text x="380" y="42" text-anchor="middle" class="heading">Velocity–time graph (Fig. 6.41)</text>
+<rect x="130" y="81" width="510" height="332" fill="url(#graphgrid)" stroke="#c5dcf2"/>
+<path d="M130 412H671M130 412V70" stroke="#304f70" stroke-width="3" marker-end="url(#arrow)"/>
+<g font-size="18" text-anchor="middle"><text x="130" y="438">0</text><text x="385" y="438">4</text><text x="640" y="438">8</text></g>
+<g font-size="18" text-anchor="end"><text x="115" y="416">0</text><text x="115" y="312">10</text><text x="115" y="208">20</text><text x="115" y="104">30</text></g>
+<path d="M130 308L640 100" stroke="#1587cd" stroke-width="4.5" fill="none"/>
+<path d="M385 204V412M130 204H385M640 100V412M130 100H640" stroke="#617993" stroke-dasharray="7 7" stroke-width="2"/>
+<circle cx="130" cy="308" r="6" fill="#1587cd"/><circle cx="385" cy="204" r="6" fill="#1587cd"/><circle cx="640" cy="100" r="6" fill="#1587cd"/>
+<text x="390" y="477" text-anchor="middle" class="axis">Time (s)</text><text x="34" y="246" text-anchor="middle" transform="rotate(-90 34 246)" class="axis">Velocity (m/s)</text>
+</svg>

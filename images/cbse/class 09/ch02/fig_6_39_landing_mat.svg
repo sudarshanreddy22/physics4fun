@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" role="img" aria-label="Athlete falling onto a compressible landing mat which increases stopping time">
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#196bd0"/></marker>
+ <marker id="redarrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#e45557"/></marker>
+ <pattern id="graphgrid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#dbe8f6" stroke-width="1"/></pattern>
+ <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d0f4ff"/><stop offset="1" stop-color="#83d3f4"/></linearGradient>
+</defs>
+<style>text{font-family:Inter,'Segoe UI',Arial,sans-serif;fill:#213650}.heading{font-size:23px;font-weight:750}.caption{font-size:16px}.axis{font-size:16px;font-weight:650}.small{font-size:14px}.panel{fill:#f8fbff;stroke:#c4d9f1;stroke-width:2}</style>
+
+<rect x="4" y="4" width="812" height="312" rx="16" fill="#f7fbff" stroke="#c9daef"/>
+<text x="410" y="39" text-anchor="middle" class="heading">Soft landing increases stopping time</text>
+<path d="M58 273H763" stroke="#68829c" stroke-width="4"/>
+<rect x="186" y="230" width="460" height="42" rx="18" fill="#89cfe9" stroke="#2485ac" stroke-width="3"/>
+<path d="M218 244Q247 258 279 245T341 245T404 245T467 245T529 245T591 245" fill="none" stroke="#c6f0fa" stroke-width="5"/>
+<circle cx="387" cy="74" r="20" fill="#e7b291" stroke="#ac7e67" stroke-width="2"/>
+<path d="M388 97L397 148L370 184M395 148L449 188M390 119L349 143M394 121L437 132" stroke="#355b83" stroke-width="15" stroke-linecap="round" fill="none"/>
+<path d="M511 89V200" stroke="#196bd0" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="532" y="142" class="caption">Downward motion</text>
+<text x="418" y="302" text-anchor="middle" font-size="18" font-weight="750">Landing mat / sand bed</text>
+</svg>

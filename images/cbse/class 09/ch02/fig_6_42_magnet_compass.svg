@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 810 320" role="img" aria-label="A bar magnet close to a pivoted magnetic compass needle">
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#196bd0"/></marker>
+ <marker id="redarrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#e45557"/></marker>
+ <pattern id="graphgrid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#dbe8f6" stroke-width="1"/></pattern>
+ <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d0f4ff"/><stop offset="1" stop-color="#83d3f4"/></linearGradient>
+</defs>
+<style>text{font-family:Inter,'Segoe UI',Arial,sans-serif;fill:#213650}.heading{font-size:23px;font-weight:750}.caption{font-size:16px}.axis{font-size:16px;font-weight:650}.small{font-size:14px}.panel{fill:#f8fbff;stroke:#c4d9f1;stroke-width:2}</style>
+
+<rect x="4" y="4" width="802" height="312" rx="16" fill="#f8fbff" stroke="#c9daef"/>
+<text x="404" y="39" text-anchor="middle" class="heading">Bar magnet near a compass</text>
+<rect x="57" y="123" width="180" height="66" rx="7" fill="#4b8bd0" stroke="#375875" stroke-width="3"/>
+<path d="M147 123H237V189H147Z" fill="#ed6864" stroke="#375875" stroke-width="3"/>
+<text x="102" y="167" font-size="30" font-weight="750" fill="#fff">S</text><text x="182" y="167" font-size="30" font-weight="750" fill="#fff">N</text>
+<circle cx="546" cy="155" r="104" fill="white" stroke="#7fa7c8" stroke-width="6"/>
+<circle cx="546" cy="155" r="86" fill="none" stroke="#d4e4f2" stroke-width="2"/>
+<text x="546" y="78" text-anchor="middle" font-size="18" font-weight="750">N</text><text x="546" y="251" text-anchor="middle" font-size="18" font-weight="750">S</text><text x="460" y="161" text-anchor="middle" font-size="18" font-weight="750">W</text><text x="631" y="161" text-anchor="middle" font-size="18" font-weight="750">E</text>
+<path d="M477 196L546 154L611 111L564 169Z" fill="#ed6864" stroke="#4e6179" stroke-width="2"/><path d="M477 196L546 154L564 169L524 183Z" fill="#4b8bd0" stroke="#4e6179" stroke-width="2"/>
+<circle cx="546" cy="155" r="7" fill="#253e59"/>
+<text x="147" y="224" text-anchor="middle" class="caption">Bar magnet</text><text x="547" y="288" text-anchor="middle" class="caption">Pivoted compass needle</text>
+</svg>

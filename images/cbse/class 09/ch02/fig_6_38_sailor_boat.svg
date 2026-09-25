@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 310" role="img" aria-label="Sailor jumps left toward shore and boat recoils right">
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#196bd0"/></marker>
+ <marker id="redarrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#e45557"/></marker>
+ <pattern id="graphgrid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#dbe8f6" stroke-width="1"/></pattern>
+ <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d0f4ff"/><stop offset="1" stop-color="#83d3f4"/></linearGradient>
+</defs>
+<style>text{font-family:Inter,'Segoe UI',Arial,sans-serif;fill:#213650}.heading{font-size:23px;font-weight:750}.caption{font-size:16px}.axis{font-size:16px;font-weight:650}.small{font-size:14px}.panel{fill:#f8fbff;stroke:#c4d9f1;stroke-width:2}</style>
+
+<rect x="4" y="4" width="812" height="302" rx="16" fill="#f8fbff" stroke="#c9daef"/>
+<text x="412" y="35" text-anchor="middle" class="heading">Sailor jumps from a boat</text>
+<path d="M0 212Q44 202 87 214T174 214T260 212T350 214T450 214T540 214T630 214T730 214T820 214V298H0Z" fill="url(#sea)"/>
+<path d="M0 163H171V215H0Z" fill="#bb7a61" stroke="#8d4e40" stroke-width="3"/>
+<path d="M0 188H171M52 163V188M105 188V215" stroke="#e1b5a5" stroke-width="3"/>
+<text x="84" y="151" text-anchor="middle" class="caption">Shore</text>
+<path d="M340 197Q520 239 686 197L656 234Q519 270 373 236Z" fill="#dca66d" stroke="#965b38" stroke-width="4"/>
+<path d="M460 175L448 118L415 100" fill="none" stroke="#2a5376" stroke-width="12" stroke-linecap="round"/>
+<circle cx="420" cy="77" r="18" fill="#e5ad8f" stroke="#a8785c" stroke-width="2"/>
+<path d="M417 101L377 149L349 177M445 118L475 156L512 168" stroke="#2a5376" stroke-width="13" stroke-linecap="round"/>
+<path d="M394 116L352 91L321 106" stroke="#e5ad8f" stroke-width="11" fill="none" stroke-linecap="round"/>
+<path d="M384 56H225" stroke="#e45557" stroke-width="4" marker-end="url(#redarrow)"/><text x="288" y="83" text-anchor="middle" font-weight="750" font-size="17" fill="#d6464c">Jump toward shore</text>
+<path d="M486 283H689" stroke="#196bd0" stroke-width="4" marker-end="url(#arrow)"/><text x="592" y="277" text-anchor="middle" font-weight="750" font-size="18" fill="#196bd0">Boat recoils</text>
+</svg>

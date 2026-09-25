@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 490" role="img" aria-label="Acceleration in metres per second squared versus mass in kilograms, data follows a=10/m">
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#196bd0"/></marker>
+ <marker id="redarrow" viewBox="0 0 10 10" refX="8.7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#e45557"/></marker>
+ <pattern id="graphgrid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#dbe8f6" stroke-width="1"/></pattern>
+ <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d0f4ff"/><stop offset="1" stop-color="#83d3f4"/></linearGradient>
+</defs>
+<style>text{font-family:Inter,'Segoe UI',Arial,sans-serif;fill:#213650}.heading{font-size:23px;font-weight:750}.caption{font-size:16px}.axis{font-size:16px;font-weight:650}.small{font-size:14px}.panel{fill:#f8fbff;stroke:#c4d9f1;stroke-width:2}</style>
+
+<rect x="4" y="4" width="752" height="482" rx="16" fill="#f8fbff" stroke="#c9daef"/>
+<text x="380" y="42" text-anchor="middle" class="heading">Acceleration–mass graph (Fig. 6.40)</text>
+<rect x="130" y="81" width="510" height="332" fill="url(#graphgrid)" stroke="#c5dcf2"/>
+<path d="M130 412H671M130 412V70" stroke="#304f70" stroke-width="3" marker-end="url(#arrow)"/>
+<g font-size="17" text-anchor="middle"><text x="130" y="438">0</text><text x="232" y="438">1</text><text x="334" y="438">2</text><text x="436" y="438">3</text><text x="538" y="438">4</text><text x="640" y="438">5</text></g>
+<g font-size="17" text-anchor="end"><text x="115" y="416">0</text><text x="115" y="347">2.5</text><text x="115" y="281">5.0</text><text x="115" y="215">7.5</text><text x="115" y="149">10.0</text></g>
+<path d="M232 148C250 230 284 270 334 280C390 322 494 342 640 359" fill="none" stroke="#177fca" stroke-width="4"/>
+<g fill="#177fca"><circle cx="232" cy="148" r="5"/><circle cx="334" cy="280" r="5"/><circle cx="436" cy="324" r="5"/><circle cx="538" cy="346" r="5"/><circle cx="640" cy="359" r="5"/></g>
+<path d="M640 359V412M130 359H640" stroke="#476783" stroke-dasharray="8 7" stroke-width="2"/>
+<text x="385" y="477" text-anchor="middle" class="axis">Mass (kg)</text>
+<text x="35" y="248" text-anchor="middle" transform="rotate(-90 35 248)" class="axis">Acceleration (m/s²)</text>
+</svg>
