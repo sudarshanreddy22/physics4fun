@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="315" viewBox="0 0 540 315" role="img" aria-label="Increasing concave-down curve with positive nonzero slope at x naught">
+<rect width="540" height="315" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#343f52"/></marker></defs>
+<path d="M75 245V40 M55 231H476" stroke="#343f52" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<text x="479" y="251" font-family="sans-serif" font-size="21">x</text><text x="58" y="39" font-family="sans-serif" font-size="21">y</text>
+<path d="M115 180 C153 94 225 75 291 75 C335 75 368 78 390 83" fill="none" stroke="#1864aa" stroke-width="5" stroke-linecap="round"/>
+<path d="M227 108V231" stroke="#7c8592" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="215" y="259" font-family="sans-serif" font-size="23" fill="#183153">x₀</text>
+<circle cx="227" cy="91" r="4" fill="#d9480f"/>
+</svg>

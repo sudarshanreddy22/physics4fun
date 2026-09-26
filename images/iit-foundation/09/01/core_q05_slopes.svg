@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="315" viewBox="0 0 540 315" role="img" aria-label="Decreasing curve with slope increasing from A through B to C">
+<rect width="540" height="315" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#343f52"/></marker></defs>
+<path d="M65 245V35 M45 233H485" stroke="#343f52" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<text x="485" y="259" font-size="21" font-family="sans-serif" fill="#343f52">x</text><text x="48" y="32" font-size="21" font-family="sans-serif" fill="#343f52">y</text>
+<path d="M108 62 C111 112 149 169 209 199 C253 221 327 224 383 222" fill="none" stroke="#1864aa" stroke-width="5" stroke-linecap="round"/>
+<g fill="#d9480f" stroke="white" stroke-width="2"><circle cx="109" cy="66" r="7"/><circle cx="166" cy="174" r="7"/><circle cx="358" cy="223" r="7"/></g>
+<g font-family="sans-serif" font-size="22" font-weight="bold" fill="#183153"><text x="123" y="72">A</text><text x="180" y="167">B</text><text x="370" y="215">C</text></g>
+</svg>
