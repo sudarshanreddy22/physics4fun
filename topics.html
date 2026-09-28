@@ -4,21 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Physics4Fun</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<!-- MathJax for LaTeX formula rendering -->
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<!-- MathJax: configure first, then load -->
 <script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']],
-    processEscapes: true
-  },
-  svg: {
-    fontCache: 'global'
-  }
+window.MathJax={
+ tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]'],['$$','$$']],processEscapes:true},
+ options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']},
+ startup:{typeset:true}
 };
 </script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --bg:#070d1a;--bg2:#0d1526;--bg3:#0f1a2e;
@@ -484,13 +480,19 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 #iitOthBody .mcq-question{font-size:15.5px;line-height:1.85;}
 #iitOthBody .opt-text,#iitOthBody .option{font-size:14.5px;line-height:1.7;}
 #iitOthBody .explanation{font-size:14px;line-height:1.75;}
+/* Examples: Worksheet-style controls, descriptive question format */
+#iitExamplesBody .mcq-question{font-size:calc(15.5px*var(--qfs));line-height:1.85;}
+#iitExamplesBody .iit-answer-box{font-size:calc(14px*var(--qfs));line-height:1.75;}
+#iitExamplesBody .mcq-card{cursor:pointer;}
+#iitExamplesBody .mcq-card:hover{border-color:rgba(245,158,11,.45);}
+#iitExamplesBody .options:empty{display:none!important;}
 /* Worksheets/PYQs: Times New Roman + in-frame font-size control (no browser zoom) */
-#panel-iitoth,#panel-pyq{font-family:'Times New Roman',Times,serif;--qfs:1;}
-#panel-iitoth .mcq-question,#panel-pyq .mcq-question{font-size:calc(13.5px*var(--qfs));}
+#panel-iitoth,#panel-iitexamples,#panel-pyq{font-family:'Times New Roman',Times,serif;--qfs:1;}
+#panel-iitoth .mcq-question,#panel-iitexamples .mcq-question,#panel-pyq .mcq-question{font-size:calc(13.5px*var(--qfs));}
 #iitOthBody .mcq-question{font-size:calc(15.5px*var(--qfs));}
-#panel-iitoth .option,#panel-pyq .option,#panel-iitoth .opt-text,#panel-pyq .opt-text{font-size:calc(13px*var(--qfs));}
+#panel-iitoth .option,#panel-iitexamples .option,#panel-pyq .option,#panel-iitoth .opt-text,#panel-iitexamples .opt-text,#panel-pyq .opt-text{font-size:calc(13px*var(--qfs));}
 #iitOthBody .opt-text,#iitOthBody .option{font-size:calc(14.5px*var(--qfs));}
-#panel-iitoth .explanation,#panel-pyq .explanation{font-size:calc(12.5px*var(--qfs));}
+#panel-iitoth .explanation,#panel-iitexamples .explanation,#panel-pyq .explanation{font-size:calc(12.5px*var(--qfs));}
 #iitOthBody .explanation{font-size:calc(14px*var(--qfs));}
 .qno{min-width:28px;height:28px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;line-height:1;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.2);}
 .qno.mcq{background:linear-gradient(135deg,var(--pyq-mcq),#5b21b6);}
@@ -738,6 +740,148 @@ mjx-container[display="true"]{margin:8px 0 !important;}
   #content{padding:14px 12px 24px;}
   .brand-tag{display:none;}
 }
+
+/* IIT Examples — descriptive mathematics */
+#panel-iitexamples{--qfs:1;}
+#iitExamplesBody .options:empty{display:none!important;}
+#iitExamplesBody .mcq-question{
+  font-size:calc(15px * var(--qfs));
+  line-height:1.58;
+}
+#iitExamplesBody .iit-answer-box{
+  font-size:calc(14px * var(--qfs));
+  line-height:1.62;
+}
+#iitExamplesBody .ex-subparts{
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:wrap!important;
+  align-items:baseline!important;
+  gap:7px 24px!important;
+  margin:8px 0 3px!important;
+}
+#iitExamplesBody .ex-sub{
+  display:inline-flex!important;
+  align-items:baseline!important;
+  width:auto!important;
+  gap:5px!important;
+  white-space:nowrap!important;
+}
+#iitExamplesBody .ex-subno{
+  min-width:26px!important;
+  text-align:right!important;
+  font-weight:700!important;
+}
+#iitExamplesBody .ex-subtext{
+  display:inline-block!important;
+  white-space:nowrap!important;
+}
+#iitExamplesBody .ex-sub mjx-container{
+  display:inline-block!important;
+  margin:0!important;
+}
+
+
+/* FINAL IIT Examples mathematical layout */
+#panel-iitexamples{--qfs:1;}
+#iitExamplesBody .options:empty{display:none!important;}
+#iitExamplesBody .mcq-question{font-size:calc(15px*var(--qfs));line-height:1.62!important;}
+#iitExamplesBody .iit-answer-box{font-size:calc(14px*var(--qfs));line-height:1.65!important;}
+#iitExamplesBody .ex-subparts{
+ display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+ align-items:baseline!important;gap:8px 28px!important;margin:8px 0 3px!important;padding:0!important;
+}
+#iitExamplesBody .ex-sub{
+ display:inline-flex!important;flex:0 0 auto!important;width:auto!important;max-width:100%!important;
+ align-items:baseline!important;gap:6px!important;margin:0!important;padding:0!important;white-space:nowrap!important;
+}
+#iitExamplesBody .ex-subno{
+ display:inline-block!important;min-width:27px!important;width:auto!important;text-align:right!important;
+ padding:0!important;font-weight:700!important;line-height:1.55!important;white-space:nowrap!important;
+}
+#iitExamplesBody .ex-subtext{
+ display:inline-block!important;width:auto!important;min-width:0!important;line-height:1.55!important;white-space:nowrap!important;
+}
+#iitExamplesBody .ex-sub mjx-container,#iitExamplesBody mjx-container:not([display="true"]){
+ display:inline-block!important;margin:0!important;vertical-align:-.08em!important;overflow:visible!important;
+}
+
+
+/* Examples: Worksheet-style tap question -> reveal solution; no Answer button */
+#iitExamplesBody .iit-answer-btn{display:none!important;}
+#iitExamplesBody .iit-answer-wrap{margin-top:0!important;}
+#iitExamplesBody .iit-answer-box{
+ display:none;
+ margin-top:10px;
+ padding:11px 13px;
+ border-radius:8px;
+ background:var(--sbg-desc);
+ border-left:3px solid var(--col-desc);
+}
+#iitExamplesBody .iit-answer-box.show{display:block!important;}
+#iitExamplesBody .iit-example-card{cursor:pointer;}
+
+
+/* Pure mathematical rendering for Examples */
+#iitExamplesBody mjx-container{
+ color:inherit!important;
+ max-width:100%;
+}
+#iitExamplesBody mjx-container:not([display="true"]){
+ display:inline-block!important;
+ margin:0 .04em!important;
+ vertical-align:-.08em!important;
+}
+#iitExamplesBody .ex-subparts{
+ display:flex!important;
+ flex-flow:row wrap!important;
+ align-items:baseline!important;
+ gap:8px 26px!important;
+ margin:8px 0 3px!important;
+}
+#iitExamplesBody .ex-sub{
+ display:inline-flex!important;
+ flex:0 0 auto!important;
+ align-items:baseline!important;
+ gap:5px!important;
+ width:auto!important;
+ max-width:100%!important;
+ white-space:nowrap!important;
+}
+#iitExamplesBody .ex-subno{
+ min-width:27px!important;
+ text-align:right!important;
+ font-weight:700!important;
+ white-space:nowrap!important;
+}
+#iitExamplesBody .ex-subtext{
+ display:inline!important;
+ width:auto!important;
+ white-space:nowrap!important;
+}
+
+
+/* === IIT EXAMPLES FULL REVAMP === */
+#iitExamplesBody .iit-example-card{display:flex;flex-direction:column;align-items:stretch;cursor:pointer;}
+#iitExamplesBody .iit-example-question{flex:1;margin:0;line-height:1.62;font-size:calc(15px*var(--qfs));}
+#iitExamplesBody .iit-example-solution{display:none;margin-top:11px;padding:12px 14px;border-radius:8px;background:var(--sbg-desc);border-left:3px solid var(--col-desc);line-height:1.65;font-size:calc(14px*var(--qfs));cursor:default;}
+#iitExamplesBody .iit-example-solution.show{display:block!important;}
+#iitExamplesBody .ex-subparts{display:flex!important;flex-flow:row wrap!important;align-items:baseline!important;gap:8px 28px!important;margin:8px 0 2px!important;}
+#iitExamplesBody .ex-sub{display:inline-flex!important;flex:0 0 auto!important;align-items:baseline!important;gap:6px!important;white-space:nowrap!important;}
+#iitExamplesBody .ex-subno{min-width:27px!important;text-align:right!important;font-weight:700!important;}
+#iitExamplesBody .ex-solgrid{display:flex;flex-direction:column;gap:8px;margin-top:8px;}
+#iitExamplesBody .ex-solgrid>div{display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;align-items:start;}
+#iitExamplesBody mjx-container[display="true"]{margin:.55em 0!important;overflow-x:auto;overflow-y:hidden;max-width:100%;}
+#iitExamplesBody mjx-container:not([display="true"]){display:inline-block!important;margin:0 .03em!important;vertical-align:-.08em!important;}
+#iitExamplesBody .iit-answer-btn,#iitExamplesBody .iit-answer-wrap,#iitExamplesBody .iit-answer-box{display:none!important;}
+
+
+#iitExamplesBody .sol-title{font-weight:800;font-size:1.05em;margin:0 0 8px;}
+#iitExamplesBody .sol-steps{display:flex;flex-direction:column;gap:9px;margin-top:8px;}
+#iitExamplesBody .sol-steps>div{display:grid;grid-template-columns:34px minmax(0,1fr);gap:9px;align-items:start;}
+#iitExamplesBody .sol-steps>div>b{text-align:right;}
+#iitExamplesBody .sol-note{margin-top:9px;padding:7px 9px;border-radius:6px;font-size:.92em;opacity:.9;}
+
 </style>
 </head>
 <body class="light">
@@ -1543,9 +1687,9 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="global-view-toggle" id="globalViewToggle" style="display:none;">
         <button class="gv-btn" id="gvListBtn" title="Multi-Questions" onclick="setGlobalViewMode('list')">☰</button>
         <button class="gv-btn" id="gvPracticeBtn" title="Single Question" onclick="setGlobalViewMode('practice')">🎯</button>
-        <button class="gv-btn" title="Decrease font size" onclick="adjustQFontSize('panel-iitoth','iitoth',-0.1)">A-</button>
-        <button class="gv-btn" title="Increase font size" onclick="adjustQFontSize('panel-iitoth','iitoth',0.1)">A+</button>
-        <button class="gv-btn" id="othFullscreenBtn" title="Enter Fullscreen" onclick="toggleFullscreen('panel-iitoth')">⛶</button>
+        <button class="gv-btn" title="Decrease font size" onclick="adjustActiveIITFont(-0.1)">A-</button>
+        <button class="gv-btn" title="Increase font size" onclick="adjustActiveIITFont(0.1)">A+</button>
+        <button class="gv-btn" id="othFullscreenBtn" title="Enter Fullscreen" onclick="toggleActiveIITFullscreen()">⛶</button>
       </div>
 
     </div>
@@ -2059,6 +2203,20 @@ function adjustQFontSize(panelId,key,delta){
   const el=document.getElementById(panelId);
   if(el) el.style.setProperty('--qfs',QFS_MAP[key]);
 }
+function activeIITQuestionPanel(){
+  if(CUR.section==='iitexamples') return {panel:'panel-iitexamples',key:'iitexamples'};
+  if(CUR.section==='iitoth') return {panel:'panel-iitoth',key:'iitoth'};
+  if(CUR.section==='iitcomp') return {panel:'panel-iitcomp',key:'iitcomp'};
+  return null;
+}
+function adjustActiveIITFont(delta){
+  const target=activeIITQuestionPanel();
+  if(target) adjustQFontSize(target.panel,target.key,delta);
+}
+function toggleActiveIITFullscreen(){
+  const target=activeIITQuestionPanel();
+  if(target) toggleFullscreen(target.panel);
+}
 /* File per IIT Foundation tab; all populate window.objectiveData when loaded */
 const IIT_TAB_FILES = {
   mcq:'objective.js', numericals:'numericals.js', jeemain:'jeemain.js',
@@ -2364,6 +2522,8 @@ function setIITLevel(level) {
 function buildQuestionCardsHTML(qArray, opts) {
   opts = opts || {};
   const showExam = !!opts.showExam;
+  const showAnswerButton = !!opts.showAnswerButton;
+  const tapCardForAnswer = !!opts.tapCardForAnswer;
   const accent = opts.accentColor;
   const total = qArray.length;
   if (IIT_PRACTICE.index >= total) IIT_PRACTICE.index = 0;
@@ -2395,10 +2555,11 @@ function buildQuestionCardsHTML(qArray, opts) {
     const qnoClass = accent ? 'qno qno-accent' : 'qno mcq';
     const qnoStyle = accent ? ` style="--qc:${accent};"` : '';
     const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${q.no||idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:min(${q.imageWidth},100%) !important;max-width:min(${q.imageWidth},100%) !important;"` : ''}>` : '';
-    return `<div class="mcq-card iit-q-card" data-qidx="${idx}" style="display:${IIT_PRACTICE.mode==='list' || idx===IIT_PRACTICE.index ? 'flex':'none'};">
+    return `<div class="mcq-card iit-q-card${tapCardForAnswer?' iit-example-card':''}" data-qidx="${idx}" ${tapCardForAnswer && q.answer ? 'onclick="toggleIITCardAnswer(event,this)"' : ''} style="display:${IIT_PRACTICE.mode==='list' || idx===IIT_PRACTICE.index ? 'flex':'none'};">
       <div class="mcq-header"><span class="${qnoClass}"${qnoStyle}>${q.no||idx+1}</span><div class="mcq-question q-text" style="margin-bottom:0;flex:1;">${mathify(q.question)}</div>${badgesHtml}</div>
       ${imageHtml}
       <div class="options ${optionsLayoutClass(options)}" data-answer="${q.answer}">${optsHtml}</div>
+      ${showAnswerButton && q.answer ? `<div class="iit-answer-wrap"><div class="iit-answer-box">${mathify(q.answer)}</div></div>` : ''}
       ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${mathify(q.explanation)}</div>` : ''}
     </div>`;
   }).join('') : `<div class="no-content-state"><div class="no-content-icon">🎯</div><h3>No questions yet</h3><p>Questions for this section are being prepared.</p></div>`;
@@ -2406,6 +2567,24 @@ function buildQuestionCardsHTML(qArray, opts) {
   html += `</div>`;
   return html;
 }
+function toggleIITAnswer(btn) {
+  const box = btn.nextElementSibling;
+  if (!box) return;
+  const open = box.style.display === 'block';
+  box.style.display = open ? 'none' : 'block';
+  btn.textContent = open ? 'Answer' : 'Hide Solution';
+  if (!open) typesetMathSafe(box);
+}
+
+function toggleIITCardAnswer(event, card) {
+  if (event && event.target && event.target.closest('a,button,.option,input,label')) return;
+  const box = card.querySelector('.iit-answer-box');
+  if (!box) return;
+  const open = box.classList.toggle('show');
+  box.style.display = open ? 'block' : 'none';
+  if (open) typesetMathSafe(box);
+}
+
 function finalizeQuestionCards(wrap, qArray) {
   applyOptionsLayout(wrap);
   updateIITPracticeMeta(qArray);
@@ -2462,7 +2641,7 @@ function setGlobalViewMode(mode) {
 function updateGlobalToggleAvailability(type) {
   const listBtn = document.getElementById('gvListBtn'), practiceBtn = document.getElementById('gvPracticeBtn');
   if (!listBtn || !practiceBtn) return;
-  const isQuestionSection = ['iitcomp','iitoth'].includes(type);
+  const isQuestionSection = ['iitcomp','iitexamples','iitoth'].includes(type);
   listBtn.disabled = !isQuestionSection;
   practiceBtn.disabled = !isQuestionSection;
   listBtn.classList.toggle('active', isQuestionSection && IIT_PRACTICE.mode==='list');
@@ -2809,6 +2988,55 @@ async function loadCompExamData() {
 /* Loads boards/iit-foundation/gradeN/<chapter>/examples.js          */
 /* Supported arrays: window.iitExamplesData or window.examplesData    */
 /* ══════════════════════════════════════════════════════════════════ */
+
+function typesetMathSafe(target){
+ const el=(typeof target==='string')?document.querySelector(target):target;
+ if(!el)return;
+ let tries=0;
+ const run=()=>{
+  tries++;
+  if(window.MathJax && MathJax.startup && MathJax.startup.promise && typeof MathJax.typesetPromise==='function'){
+   MathJax.startup.promise.then(()=>{
+    try{if(typeof MathJax.typesetClear==='function')MathJax.typesetClear([el]);}catch(e){}
+    MathJax.typesetPromise([el]).catch(err=>console.log('MathJax error:',err));
+   });
+   return;
+  }
+  if(tries<60)setTimeout(run,100);
+ };
+ run();
+}
+
+
+function buildIITExamplesHTML(qArray){
+  const total=qArray.length;
+  if(IIT_PRACTICE.index>=total) IIT_PRACTICE.index=0;
+  const palette=qArray.map((q,i)=>`<div class="iit-palette-num pt-iit${i===IIT_PRACTICE.index?' current':''}" onclick="event.stopPropagation();jumpToIITQuestion(${i})">${q.no||(i+1)}</div>`).join('');
+  const nav=`<div class="iit-practice-nav iit-practice-nav-combined" id="iitPracticeNav" style="display:${IIT_PRACTICE.mode==='practice'?'flex':'none'};--qc:#f59e0b;">
+    <button class="iit-nav-btn iit-nav-accent" id="iitPrevBtn" onclick="event.stopPropagation();prevIITQuestion()">◀ Prev</button>
+    <button class="iit-nav-btn iit-nav-accent" id="iitNextBtn" onclick="event.stopPropagation();nextIITQuestion()">Next ▶</button>
+    <div class="iit-palette" id="iitPalette">${palette}</div>
+    <span class="iit-nav-progress" id="iitNavProgress"></span>
+  </div>`;
+  const cards=qArray.map((q,idx)=>`<div class="mcq-card iit-q-card iit-example-card" data-qidx="${idx}" onclick="toggleIITExampleSolution(event,this)" style="display:${IIT_PRACTICE.mode==='list'||idx===IIT_PRACTICE.index?'flex':'none'};">
+    <div class="mcq-header">
+      <span class="qno qno-accent" style="--qc:#f59e0b;">${q.no||(idx+1)}</span>
+      <div class="mcq-question q-text iit-example-question">${q.question||''}</div>
+    </div>
+    <div class="iit-example-solution" aria-hidden="true">${q.answer||''}</div>
+  </div>`).join('');
+  return nav+`<div class="iit-questions" id="iitQuestions">${cards}</div>`;
+}
+function toggleIITExampleSolution(event,card){
+  if(event && event.target && event.target.closest('button,a,.iit-palette-num')) return;
+  const box=card.querySelector('.iit-example-solution');
+  if(!box)return;
+  const open=!box.classList.contains('show');
+  box.classList.toggle('show',open);
+  box.setAttribute('aria-hidden',open?'false':'true');
+  if(open)typesetMathSafe(box);
+}
+
 async function renderIITExamplesView() {
   const bodyWrap = document.getElementById('iitExamplesBody');
   if (!bodyWrap) return;
@@ -2843,8 +3071,10 @@ async function renderIITExamplesView() {
 
   ACTIVE_QARRAY = data;
   IIT_PRACTICE.index = 0;
-  bodyWrap.innerHTML = buildQuestionCardsHTML(data, {showExam:false, accentColor:'#f59e0b', combinedNav:true});
-  finalizeQuestionCards(bodyWrap, data);
+  bodyWrap.innerHTML = buildIITExamplesHTML(data);
+  updateIITPracticeMeta(data);
+  typesetMathSafe(bodyWrap);
+  updateGlobalToggleAvailability('iitexamples');
 }
 
 /* ══════════════════════════════════════════════════════════════════ */
