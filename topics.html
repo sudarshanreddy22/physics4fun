@@ -38,7 +38,7 @@ window.MathJax = {
   --sbg-pyq:rgba(251,146,60,0.12);--sbg-games:rgba(16,185,129,0.12);
   --pyq-mcq:#7c3aed;--pyq-ar:#f97316;--pyq-two:#16a34a;
   --pyq-three:#dc2626;--pyq-four:#0ea5e9;--pyq-five:#ec4899;
-  --desc-two:#16a34a;--desc-three:#ec4899;--desc-case:#0ea5e9;--desc-revise:#8b5cf6;--desc-pause:#f59e0b;--desc-example:#0284c7;
+  --desc-two:#16a34a;--desc-three:#ec4899;--desc-case:#0ea5e9;--desc-revise:#8b5cf6;
 }
 body.light{
   --bg:#f0f4fb;--bg2:#ffffff;--bg3:#f4f7fe;
@@ -203,8 +203,6 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 	#desc-tabbar .pyq-tab.t-three.active{color:var(--desc-three);border-bottom-color:var(--desc-three);}
 	#desc-tabbar .pyq-tab.t-case.active{color:var(--desc-case);border-bottom-color:var(--desc-case);}
 	#desc-tabbar .pyq-tab.t-revise.active{color:var(--desc-revise);border-bottom-color:var(--desc-revise);}
-	#desc-tabbar .pyq-tab.t-pause.active{color:var(--desc-pause);border-bottom-color:var(--desc-pause);}
-	#desc-tabbar .pyq-tab.t-example.active{color:var(--desc-example);border-bottom-color:var(--desc-example);}
 	.iit-palette-num.pt-drevise:hover,.iit-palette-num.current.pt-drevise{border-color:var(--desc-revise);}.iit-palette-num.current.pt-drevise{background:var(--desc-revise);color:#fff;}
 
 /* ── CONTENT ── */
@@ -482,11 +480,11 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .options.opts-row4 .option{flex:1 1 21%;min-width:110px;}
 .options.opts-grid2{display:grid !important;grid-template-columns:1fr 1fr !important;gap:8px;}
 .options.opts-col1{display:flex !important;flex-direction:column !important;gap:8px;}
-/* Others/Practice Worksheets: larger, more readable question & option text */
+/* Worksheets/Practice Worksheets: larger, more readable question & option text */
 #iitOthBody .mcq-question{font-size:15.5px;line-height:1.85;}
 #iitOthBody .opt-text,#iitOthBody .option{font-size:14.5px;line-height:1.7;}
 #iitOthBody .explanation{font-size:14px;line-height:1.75;}
-/* Others/PYQs: Times New Roman + in-frame font-size control (no browser zoom) */
+/* Worksheets/PYQs: Times New Roman + in-frame font-size control (no browser zoom) */
 #panel-iitoth,#panel-pyq{font-family:'Times New Roman',Times,serif;--qfs:1;}
 #panel-iitoth .mcq-question,#panel-pyq .mcq-question{font-size:calc(13.5px*var(--qfs));}
 #iitOthBody .mcq-question{font-size:calc(15.5px*var(--qfs));}
@@ -505,7 +503,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .qno.desc{background:linear-gradient(135deg,#34d399,#10b981);}
 .qno.qno-accent{background:var(--qc,var(--brand));color:#fff;border:none;box-shadow:0 2px 8px rgba(0,0,0,.25);min-width:30px;height:30px;font-size:14px;}
 
-/* ══ IIT Foundation: 2-column parent/sub-tab nav (Competitive Exams · Premier Institutes · Others) ══ */
+/* ══ IIT Foundation: 2-column parent/sub-tab nav (Competitive Exams · Examples · Worksheets) ══ */
 .iit2col{display:flex;border:1px solid var(--card-border);border-radius:14px;background:var(--card-bg);overflow:hidden;margin-bottom:16px;}
 .iit2col-left{width:190px;flex-shrink:0;border-right:1px solid var(--card-border);padding:8px;display:flex;flex-direction:column;gap:2px;background:var(--bg3);}
 .iit2col-right{flex:1;min-width:0;padding:12px 14px;display:flex;flex-direction:column;gap:10px;justify-content:center;}
@@ -1534,8 +1532,11 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="sec-btn sec-mcq" id="btn-iit-compexams" style="display:none;" onclick="switchSection('iitcomp',this)">
         <span class="sec-icon-3d">🏆</span>Competitive Exams
       </div>
-      <div class="sec-btn sec-gloss" id="btn-iit-others" style="display:none;" onclick="switchSection('iitoth',this)">
-        <span class="sec-icon-3d">📚</span>Others
+      <div class="sec-btn sec-desc" id="btn-iit-examples" style="display:none;" onclick="switchSection('iitexamples',this)">
+        <span class="sec-icon-3d">💡</span>Examples
+      </div>
+      <div class="sec-btn sec-gloss" id="btn-iit-worksheets" style="display:none;" onclick="switchSection('iitoth',this)">
+        <span class="sec-icon-3d">📚</span>Worksheets
       </div>
 
       <!-- GLOBAL Multi-Questions / Single-Question VIEW TOGGLE (IIT Foundation only) -->
@@ -1573,8 +1574,6 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="pyq-tab t-two" onclick="showDescSec('2marks',this)"><span class="tab-dot" style="background:var(--desc-two);">2</span>Marks</div>
       <div class="pyq-tab t-three" onclick="showDescSec('3marks',this)"><span class="tab-dot" style="background:var(--desc-three);">3</span>Marks</div>
       <div class="pyq-tab t-case" onclick="showDescSec('case',this)"><span class="tab-dot" style="background:var(--desc-case);">C</span>Case-Based</div>
-      <div class="pyq-tab t-pause" id="descTabPause" onclick="showDescSec('pause',this)" style="display:none;"><span class="tab-dot" style="background:var(--desc-pause);">P</span>Pause and Ponder</div>
-      <div class="pyq-tab t-example" id="descTabExamples" onclick="showDescSec('example',this)" style="display:none;"><span class="tab-dot" style="background:var(--desc-example);">E</span>Examples</div>
       <div class="pyq-tab t-revise" id="descTabRevise" onclick="showDescSec('revise',this)" style="display:none;"><span class="tab-dot" style="background:var(--desc-revise);">R</span>Revise, Reflect, Refine</div>
       <div class="global-view-toggle" id="descViewToggle" style="display:none;">
         <button class="gv-btn active" id="descListBtn" title="All Questions" onclick="setDescViewMode('list')">☰</button>
@@ -1648,6 +1647,9 @@ mjx-container[display="true"]{margin:8px 0 !important;}
         <div id="compExamTabsWrap"></div>
         <div id="compSubTabsWrap"></div>
         <div id="compExamBody"></div>
+      </div>
+      <div id="panel-iitexamples" style="display:none;">
+        <div id="iitExamplesBody"></div>
       </div>
       <div id="panel-iitoth" style="display:none;">
         <div id="iitOthWorksheetTabsWrap"></div>
@@ -1805,7 +1807,7 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 const PYQ_GRADES = ['cbse-g10', 'cbse-g12', 'ap-g10', 'ap-inter-1', 'ap-inter-2'];
 
 const NON_IIT_SECTION_BTN_IDS = ['btn-notes','btn-pyq','btn-desc','btn-objective','btn-ppt','btn-flash','btn-sim','btn-games','btn-mind','btn-gloss'];
-const IIT_SECTION_BTN_IDS = ['btn-iit-notes','btn-iit-ppt','btn-iit-compexams','btn-iit-others'];
+const IIT_SECTION_BTN_IDS = ['btn-iit-notes','btn-iit-ppt','btn-iit-compexams','btn-iit-examples','btn-iit-worksheets'];
 
 function updateSectionVisibility() {
   const downloadsBtn = document.getElementById('downloadsBtn');
@@ -1815,7 +1817,7 @@ function updateSectionVisibility() {
 
   if (isIITFoundation()) {
     // IIT Foundation: hide Notes/PYQs/Descriptive/PPTs/Simulations/Flashcards/MindMap/Glossary,
-    // show only Notes/PPTs/Competitive Exams/Premier Institutes/Others + global view toggle
+    // show only Notes/PPTs/Competitive Exams/Examples/Worksheets + global view toggle
     NON_IIT_SECTION_BTN_IDS.forEach(id => { const b = document.getElementById(id); if (b) b.style.display = 'none'; });
     IIT_SECTION_BTN_IDS.forEach(id => { const b = document.getElementById(id); if (b) b.style.display = 'flex'; });
     if (globalToggle) globalToggle.style.display = 'flex';
@@ -1858,7 +1860,7 @@ function switchSection(type, el, sub) {
   if (type === 'objective' && isIITFoundation()) CUR.iitTab = sub || 'mcq';
   document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
   if (el) el.classList.add('active');
-  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitoth'].forEach(p => {
+  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitexamples','iitoth'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
@@ -1884,11 +1886,6 @@ function switchSection(type, el, sub) {
         const allTabEl = document.getElementById('descTabAll');
         if (allTabEl) allTabEl.style.display = noAll ? 'none' : '';
         const isCbse69 = /^cbse-g[6-9]$/.test(CUR.grade||'');
-        const isCbse810 = /^cbse-g(?:8|9|10)$/.test(CUR.grade||'');
-        const pauseTabEl = document.getElementById('descTabPause');
-        const examplesTabEl = document.getElementById('descTabExamples');
-        if (pauseTabEl) pauseTabEl.style.display = isCbse810 ? '' : 'none';
-        if (examplesTabEl) examplesTabEl.style.display = isCbse810 ? '' : 'none';
         const reviseTabEl = document.getElementById('descTabRevise');
         if (reviseTabEl) reviseTabEl.style.display = isCbse69 ? '' : 'none';
         showDescSec(noAll?'2marks':'all', document.querySelector(noAll?'#desc-tabbar .pyq-tab.t-two':'#desc-tabbar .pyq-tab.t-all'));
@@ -1908,6 +1905,7 @@ function switchSection(type, el, sub) {
       showPyqSec('mcq', document.querySelector('.pyq-tab.t-mcq'));
       break;
     case 'iitcomp': renderCompExamsView(); break;
+    case 'iitexamples': renderIITExamplesView(); break;
     case 'iitoth':  renderIITOthersView(); break;
   }
   document.getElementById('content').scrollTop = 0;
@@ -1940,7 +1938,7 @@ const OBJ_VIEW  = { mode:'list', index:{}, tab:'mcq' };
 const DESC_PT = { all:'pt-dall', '2marks':'pt-d2m', '3marks':'pt-d3m', case:'pt-dcase', revise:'pt-drevise' };
 const OBJ_PT  = { mcq:'pt-omcq', tof:'pt-otof', fib:'pt-ofib', match:'pt-omatch' };
 
-const DESC_SV_COLOR = {all:'var(--col-desc)','2marks':'var(--desc-two)','3marks':'var(--desc-three)',case:'var(--desc-case)',revise:'var(--desc-revise)',pause:'var(--desc-pause)',example:'var(--desc-example)'};
+const DESC_SV_COLOR = {all:'var(--col-desc)','2marks':'var(--desc-two)','3marks':'var(--desc-three)',case:'var(--desc-case)',revise:'var(--desc-revise)'};
 function descPaletteHTML(tabId, count) { return ''; }
 function descNavHTML(tabId) {
   const c = DESC_SV_COLOR[tabId]||'var(--col-desc)';
@@ -2118,8 +2116,6 @@ async function loadDesc() {
   if (!CUR.slug) { renderComingSoon(wrap,'✏️','Descriptive Questions','Questions being prepared.'); return; }
   window.descriptiveData = undefined;
   window.reviseReflectRefineData = undefined;
-  window.pauseAndPonderData = undefined;
-  window.examplesData = undefined;
   document.querySelectorAll('[data-descq]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
@@ -2129,9 +2125,7 @@ async function loadDesc() {
 
   const normalDescData = Array.isArray(window.descriptiveData) ? window.descriptiveData : [];
   const rrrDescData = Array.isArray(window.reviseReflectRefineData) ? window.reviseReflectRefineData : [];
-  const pauseDescData = Array.isArray(window.pauseAndPonderData) ? window.pauseAndPonderData : [];
-  const examplesDescData = Array.isArray(window.examplesData) ? window.examplesData : [];
-  const allDescData = normalDescData.concat(rrrDescData, pauseDescData, examplesDescData);
+  const allDescData = normalDescData.concat(rrrDescData);
 
   allDescData.length
     ? renderDesc(allDescData, wrap)
@@ -2143,24 +2137,16 @@ function renderDesc(data, wrap) {
   const isCbse69 = /^cbse-g[6-9]$/.test(CUR.grade||'');
   // Show/hide Revise tab
   const hasRRR = data.some(q => q.type==='revise'||q.type==='revise-reflect-refine');
-  const hasPause = data.some(q => q.type==='pause'||q.type==='pause-and-ponder');
-  const hasExamples = data.some(q => q.type==='example'||q.type==='examples');
   const reviseTabEl = document.getElementById('descTabRevise');
   if (reviseTabEl) reviseTabEl.style.display = hasRRR ? '' : 'none';
-  const pauseTabEl = document.getElementById('descTabPause');
-  const examplesTabEl = document.getElementById('descTabExamples');
-  if (pauseTabEl) pauseTabEl.style.display = hasPause ? '' : 'none';
-  if (examplesTabEl) examplesTabEl.style.display = hasExamples ? '' : 'none';
   const baseTabs = isDescNoAllGrade() ? ['2marks','3marks','case'] : ['all','2marks','3marks','case'];
-  let tabs = hasRRR ? [...baseTabs, 'revise'] : [...baseTabs];
-  if (hasPause) tabs.push('pause');
-  if (hasExamples) tabs.push('example');
+  const tabs = hasRRR ? [...baseTabs, 'revise'] : baseTabs;
   const cardHTML = (q,i) => {
-    const t = (q.type==='pause'||q.type==='pause-and-ponder')?'pause':(q.type==='example'||q.type==='examples')?'example':(q.type==='revise'||q.type==='revise-reflect-refine')?'revise':q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))?'case':q.marks==2?'2marks':q.marks==3?'3marks':'all';
+    const t = (q.type==='revise'||q.type==='revise-reflect-refine')?'revise':q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based'))?'case':q.marks==2?'2marks':q.marks==3?'3marks':'all';
     const c = DESC_SV_COLOR[t]||'var(--col-desc)';
     // Number questions independently inside each section.
     const sectionNo = data.slice(0,i+1).filter(x => {
-      const xt = (x.type==='pause'||x.type==='pause-and-ponder')?'pause':(x.type==='example'||x.type==='examples')?'example':(x.type==='revise'||x.type==='revise-reflect-refine')?'revise':x.type==='case'||(x.question&&x.question.toLowerCase().includes('case-based'))?'case':x.marks==2?'2marks':x.marks==3?'3marks':'all';
+      const xt = (x.type==='revise'||x.type==='revise-reflect-refine')?'revise':x.type==='case'||(x.question&&x.question.toLowerCase().includes('case-based'))?'case':x.marks==2?'2marks':x.marks==3?'3marks':'all';
       return xt === t;
     }).length;
     return `<div class="pyq-question-item" data-desc-id="${i}" data-desc-type="${t}">
@@ -2175,7 +2161,7 @@ function renderDesc(data, wrap) {
   if (usePalette) {
     let html = '';
     tabs.forEach((tabId, tabIdx) => {
-      const items = tabId==='all' ? data.map((q,i)=>({q,i})) : data.map((q,i)=>({q,i})).filter(({q})=>{ let t='all'; if(q.type==='pause'||q.type==='pause-and-ponder')t='pause'; else if(q.type==='example'||q.type==='examples')t='example'; else if(q.type==='revise'||q.type==='revise-reflect-refine')t='revise'; else if(q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based')))t='case'; else if(q.marks==2)t='2marks'; else if(q.marks==3)t='3marks'; return t===tabId; });
+      const items = tabId==='all' ? data.map((q,i)=>({q,i})) : data.map((q,i)=>({q,i})).filter(({q})=>{ let t='all'; if(q.type==='revise'||q.type==='revise-reflect-refine')t='revise'; else if(q.type==='case'||(q.question&&q.question.toLowerCase().includes('case-based')))t='case'; else if(q.marks==2)t='2marks'; else if(q.marks==3)t='3marks'; return t===tabId; });
       html += `<div class="desc-section" id="desc-${tabId}" style="${tabIdx!==0?'display:none':''}">`;
       html += descPaletteHTML(tabId, items.length) + descNavHTML(tabId);
       html += items.map(({q,i})=>cardHTML(q,i)).join('');
@@ -2195,7 +2181,7 @@ function showDescSec(type, el) {
   document.querySelectorAll('#desc-tabbar .pyq-tab').forEach(t => t.classList.remove('active'));
   if (el) el.classList.add('active');
   if (isCisceObjGrade()) {
-    ['all','2marks','3marks','case','revise','pause','example'].forEach(id => {
+    ['all','2marks','3marks','case','revise'].forEach(id => {
       const sec=document.getElementById('desc-'+id);
       if(sec) sec.style.display = id===type?'':'none';
     });
@@ -2613,7 +2599,7 @@ function selectOthersBoard(name, grade, el, chapter, icon) {
   document.getElementById('pyq-tabbar').classList.remove('visible');
   document.getElementById('desc-tabbar').classList.remove('visible');
 
-  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitoth'].forEach(p => {
+  ['notes','desc','objective','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitexamples','iitoth'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
@@ -2819,117 +2805,200 @@ async function loadCompExamData() {
 }
 
 /* ══════════════════════════════════════════════════════════════════ */
-/* 📚 IIT FOUNDATION — OTHERS (dynamic per-chapter Worksheets)          */
-/* Worksheet-N → Core Level / Optimal Level / Achiever Level (MCQs)     */
+/* 💡 IIT FOUNDATION — EXAMPLES                                      */
+/* Loads boards/iit-foundation/gradeN/<chapter>/examples.js          */
+/* Supported arrays: window.iitExamplesData or window.examplesData    */
+/* ══════════════════════════════════════════════════════════════════ */
+async function renderIITExamplesView() {
+  const bodyWrap = document.getElementById('iitExamplesBody');
+  if (!bodyWrap) return;
+  if (!CUR.slug) {
+    renderComingSoon(bodyWrap,'💡','Examples','Select a chapter to view Examples.');
+    return;
+  }
+
+  bodyWrap.innerHTML = spinnerHTML('💡','Loading examples…');
+  const [board, gradeNum] = parseGradeId(CUR.grade);
+
+  window.iitExamplesData = undefined;
+  window.examplesData = undefined;
+  document.querySelectorAll('[data-iitexamples]').forEach(s=>s.remove());
+
+  await new Promise(res => {
+    const sc = document.createElement('script');
+    sc.dataset.iitexamples = '1';
+    sc.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/examples.js`;
+    sc.onload = sc.onerror = res;
+    document.head.appendChild(sc);
+  });
+
+  const data = Array.isArray(window.iitExamplesData)
+    ? window.iitExamplesData
+    : (Array.isArray(window.examplesData) ? window.examplesData : []);
+
+  if (!data.length) {
+    renderComingSoon(bodyWrap,'💡','Examples','Examples for this chapter are being prepared. Add them in <code>examples.js</code>');
+    return;
+  }
+
+  ACTIVE_QARRAY = data;
+  IIT_PRACTICE.index = 0;
+  bodyWrap.innerHTML = buildQuestionCardsHTML(data, {showExam:false, accentColor:'#f59e0b', combinedNav:true});
+  finalizeQuestionCards(bodyWrap, data);
+}
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* 📚 IIT FOUNDATION — WORKSHEETS (fully driven by others.js)        */
+/* - Number of worksheets = exactly what exists in JS                 */
+/* - Worksheet title = exact w.name from JS                           */
+/* - Level-C / Level-O / Level-A shown only when present in that WS   */
 /* ══════════════════════════════════════════════════════════════════ */
 const IIT_OTH_LEVELS = [
-  {id:'core',     label:'Level-C',     dot:'#16a34a'},
-  {id:'optimal',  label:'Level-O',  dot:'#0ea5e9'},
+  {id:'core',     label:'Level-C', dot:'#16a34a'},
+  {id:'optimal',  label:'Level-O', dot:'#0ea5e9'},
   {id:'achiever', label:'Level-A', dot:'#dc2626'}
 ];
 const IITOTH = { worksheetIdx:0, level:'core', worksheets:[] };
-
-/* Grade 8 gets 5 flat worksheets (no sub-levels); grades 9+ get 5 worksheets with Level-C/O/A.
-   IIT_OTH_WS_COUNT maps gradeNum → expected total worksheet count. */
-const IIT_OTH_WS_COUNT = { '6':3, '7':3, '8':5, '9':5, '10':5 };
-/* Grades that should NOT show Level-C/O/A sub-levels (flat worksheets only) */
-const IIT_OTH_FLAT_GRADES = new Set(['6','7','8']);
 
 async function renderIITOthersView() {
   const tabsWrap = document.getElementById('iitOthWorksheetTabsWrap');
   const levelWrap = document.getElementById('iitOthLevelTabsWrap');
   const bodyWrap = document.getElementById('iitOthBody');
+
   if (!CUR.slug) {
-    tabsWrap.innerHTML = ''; levelWrap.innerHTML = '';
-    renderComingSoon(bodyWrap,'📚','Others','Select a chapter to view its Worksheets.');
+    tabsWrap.innerHTML = '';
+    levelWrap.innerHTML = '';
+    renderComingSoon(bodyWrap,'📚','Worksheets','Select a chapter to view its Worksheets.');
     return;
   }
+
   bodyWrap.innerHTML = spinnerHTML('📚','Loading worksheets…');
   const [board, gradeNum] = parseGradeId(CUR.grade);
+
   window.iitOthersData = undefined;
-  document.querySelectorAll('[data-iitoth]').forEach(s=>s.remove());
+  document.querySelectorAll('[data-iitoth]').forEach(sc=>sc.remove());
+
   await new Promise(res => {
-    const s = document.createElement('script');
-    s.dataset.iitoth = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/others.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    const sc = document.createElement('script');
+    sc.dataset.iitoth = '1';
+    sc.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/others.js`;
+    sc.onload = sc.onerror = res;
+    document.head.appendChild(sc);
   });
-  const loaded = (window.iitOthersData && window.iitOthersData.worksheets) || [];
-  /* Build a lookup by worksheet number so we can fill gaps */
-  const wsMap = {};
-  loaded.forEach(w => {
-    const m = w.name.match(/(\d+)/);
-    if (m) wsMap[parseInt(m[1])] = w;
-  });
-  const total = IIT_OTH_WS_COUNT[gradeNum] || loaded.length;
-  const isFlat = IIT_OTH_FLAT_GRADES.has(gradeNum);
-  /* Build the canonical worksheets array, inserting placeholders for missing numbers */
-  const worksheets = [];
-  for (let n = 1; n <= total; n++) {
-    if (wsMap[n]) {
-      const w = wsMap[n];
-      /* For flat grades, strip any level keys so worksheetHasLevels() returns false */
-      if (isFlat) worksheets.push({ name: w.name, questions: w.questions || w.core || w.questions || [] });
-      else worksheets.push(w);
-    } else {
-      /* Placeholder — no questions yet */
-      worksheets.push({ name: `Worksheet ${n}`, questions: [] });
-    }
-  }
-  IITOTH.worksheets = worksheets;
-  if (!worksheets.length) {
-    tabsWrap.innerHTML = ''; levelWrap.innerHTML = '';
-    renderComingSoon(bodyWrap,'📚','Others','Worksheets for this chapter are being prepared. Add them in <code>others.js</code>');
+
+  /* IMPORTANT: do not invent worksheet counts or placeholder worksheets.
+     Display exactly the worksheets supplied by the chapter's others.js. */
+  const loaded = (window.iitOthersData && Array.isArray(window.iitOthersData.worksheets))
+    ? window.iitOthersData.worksheets
+    : [];
+
+  IITOTH.worksheets = loaded;
+
+  if (!loaded.length) {
+    tabsWrap.innerHTML = '';
+    levelWrap.innerHTML = '';
+    renderComingSoon(bodyWrap,'📚','Worksheets','Worksheets for this chapter are being prepared. Add them in <code>others.js</code>');
     return;
   }
-  if (IITOTH.worksheetIdx >= worksheets.length) IITOTH.worksheetIdx = 0;
+
+  if (IITOTH.worksheetIdx >= loaded.length) IITOTH.worksheetIdx = 0;
+
+  const current = loaded[IITOTH.worksheetIdx];
+  const available = availableWorksheetLevels(current);
+  if (available.length && !available.some(l => l.id === IITOTH.level)) {
+    IITOTH.level = available[0].id;
+  }
+
   renderIITOthTabs();
   renderIITOthLevel();
 }
+
 function selectIITOthWorksheet(idx) {
   IITOTH.worksheetIdx = idx;
-  IITOTH.level = 'core';
+  const worksheet = IITOTH.worksheets[idx];
+  const available = availableWorksheetLevels(worksheet);
+  IITOTH.level = available.length ? available[0].id : 'core';
   renderIITOthTabs();
   renderIITOthLevel();
 }
+
 function selectIITOthLevel(level) {
   IITOTH.level = level;
   renderIITOthTabs();
   renderIITOthLevel();
 }
-function worksheetHasLevels(w) {
-  return !!w && IIT_OTH_LEVELS.some(l => Array.isArray(w[l.id]));
+
+function availableWorksheetLevels(w) {
+  if (!w) return [];
+  return IIT_OTH_LEVELS.filter(l => Array.isArray(w[l.id]));
 }
+
+function worksheetHasLevels(w) {
+  return availableWorksheetLevels(w).length > 0;
+}
+
 function worksheetQuestions(w, level) {
   if (!w) return [];
-  if (worksheetHasLevels(w)) return w[level] || [];
-  return w.questions || w.core || [];
+  if (worksheetHasLevels(w)) return Array.isArray(w[level]) ? w[level] : [];
+  return Array.isArray(w.questions) ? w.questions : [];
 }
+
 function renderIITOthTabs() {
-  const parentItems = IITOTH.worksheets.map((w,i) => {
-    const num = (w.name.match(/(\d+)/) || [null, String(i+1)])[1];
-    const wc = iitColor(i);
-    return `<div class="iit-parent-item${i===IITOTH.worksheetIdx?' active':''}" style="--pc:${wc};color:${wc};" onclick="selectIITOthWorksheet(${i})">WS-<span class="iit-tab-circle" style="--dc:${wc};">${num}</span></div>`;
-  });
   const activeWs = IITOTH.worksheets[IITOTH.worksheetIdx];
-  const subHtml = worksheetHasLevels(activeWs) ? `<div class="iit-sub-row">
-    ${IIT_OTH_LEVELS.map(l => `<div class="iit-sub-pill${l.id===IITOTH.level?' active':''}" style="--sc:${l.dot};" onclick="selectIITOthLevel('${l.id}')">Level-<span class="iit-tab-circle" style="--dc:${l.dot};">${l.label.split('-')[1]}</span></div>`).join('')}
+  const available = availableWorksheetLevels(activeWs);
+
+  /* Preserve the worksheet name exactly as written in others.js.
+     Example: "Worksheet-1", "Worksheet 1", "Practice Worksheet", etc. */
+  const parentItems = IITOTH.worksheets.map((w,i) => {
+    const wc = iitColor(i);
+    const title = (w && w.name != null && String(w.name).trim())
+      ? String(w.name)
+      : `Worksheet ${i+1}`;
+    return `<div class="iit-parent-item${i===IITOTH.worksheetIdx?' active':''}" style="--pc:${wc};color:${wc};" onclick="selectIITOthWorksheet(${i})">${title}</div>`;
+  });
+
+  const subHtml = available.length ? `<div class="iit-sub-row">
+    ${available.map(l => `<div class="iit-sub-pill${l.id===IITOTH.level?' active':''}" style="--sc:${l.dot};" onclick="selectIITOthLevel('${l.id}')">${l.label}</div>`).join('')}
   </div>` : '';
-  document.getElementById('iitOthWorksheetTabsWrap').innerHTML = iitInlineHTML(parentItems, IITOTH.worksheetIdx, subHtml);
+
+  document.getElementById('iitOthWorksheetTabsWrap').innerHTML =
+    iitInlineHTML(parentItems, IITOTH.worksheetIdx, subHtml);
   document.getElementById('iitOthLevelTabsWrap').innerHTML = '';
 }
+
 function renderIITOthLevel() {
   const bodyWrap = document.getElementById('iitOthBody');
   const worksheet = IITOTH.worksheets[IITOTH.worksheetIdx] || {};
-  const hasLevels = worksheetHasLevels(worksheet);
+  const available = availableWorksheetLevels(worksheet);
+  const hasLevels = available.length > 0;
+
+  if (hasLevels && !available.some(l => l.id === IITOTH.level)) {
+    IITOTH.level = available[0].id;
+  }
+
   const qArray = worksheetQuestions(worksheet, IITOTH.level);
   ACTIVE_QARRAY = qArray;
   IIT_PRACTICE.index = 0;
-  /* With sub-levels: question-number circles match the selected Level's color.
-     Without sub-levels (e.g. Grade 8): they match the Worksheet's own color. */
-  const accent = hasLevels ? (IIT_OTH_LEVELS.find(l=>l.id===IITOTH.level)||{}).dot : iitColor(IITOTH.worksheetIdx);
-  bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {showExam:false, accentColor:accent, combinedNav:true});
+
+  const selectedLevel = IIT_OTH_LEVELS.find(l => l.id === IITOTH.level);
+  const accent = hasLevels && selectedLevel
+    ? selectedLevel.dot
+    : iitColor(IITOTH.worksheetIdx);
+
+  if (!qArray.length) {
+    const wsName = worksheet.name || `Worksheet ${IITOTH.worksheetIdx+1}`;
+    renderComingSoon(bodyWrap,'📚',wsName,'No questions have been added to this worksheet/level yet.');
+    return;
+  }
+
+  bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {
+    showExam:false,
+    accentColor:accent,
+    combinedNav:true
+  });
   finalizeQuestionCards(bodyWrap, qArray);
 }
+
 function typeColor(type) {
   return { mcq:'#7c3aed', tof:'#16a34a', fib:'#dc2626', match:'#0ea5e9' }[type] || '#f59e0b';
 }
