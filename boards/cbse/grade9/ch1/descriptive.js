@@ -315,3 +315,82 @@ directed from 12 o'clock position towards 6 o'clock position.`,
     diagramUrl: `https://physics4fun.in/images/cbse/class%2009/ch01/fig_4_32_clock_minute_hand.svg`
   }
 ];
+
+/* ══════════════════════════════════════════════════════════
+   EXAMPLES — Describing Motion Around Us
+   Rendered separately under the Examples tab.
+══════════════════════════════════════════════════════════ */
+window.examplesData = [
+{
+  type:'example', marks:0,
+  question:`Consider two postmen. They start walking towards each other from a distance of 210 yojanas. One travels 9 yojanas per day and the other covers 5 yojanas per day. In how many days will they meet each other?`,
+  answer:`Distance covered together in one day $=9+5=14$ yojanas.<br>Time taken to cover 210 yojanas together:<br>$$t=\\frac{210}{14}=15\\;\\text{days}$$<br>Therefore, both postmen meet after $15$ days.<br>In 15 days, the first postman covers $135$ yojanas and the second covers $75$ yojanas.`
+},
+{
+  type:'example', marks:0,
+  question:`Sarang takes 50 s to swim from one end to the other end and back in a swimming pool of length 25 m. Find his average speed and average velocity during the 50 s interval.`,
+  answer:`Total distance travelled $=25+25=50\\;\\text{m}$<br>Displacement after returning to the starting point $=0\\;\\text{m}$<br>$$\\text{Average speed}=\\frac{\\text{total distance}}{\\text{time}}=\\frac{50}{50}=1\\;\\text{m s}^{-1}$$<br>$$\\text{Average velocity}=\\frac{\\text{displacement}}{\\text{time}}=\\frac{0}{50}=0\\;\\text{m s}^{-1}$$`
+},
+{
+  type:'example', marks:0,
+  question:`A bus is moving on a long straight highway with a velocity of $36\\;\\text{km h}^{-1}$. The driver presses the accelerator for 10 s and the velocity increases to $54\\;\\text{km h}^{-1}$. Later, the driver applies the brakes and the bus comes to rest in 5 s. Find the average acceleration (i) while the accelerator is pressed and (ii) while the brakes are pressed.`,
+  answer:`(i) While accelerating:<br>$u=36\\;\\text{km h}^{-1}=10\\;\\text{m s}^{-1}$, $v=54\\;\\text{km h}^{-1}=15\\;\\text{m s}^{-1}$, $t=10\\;\\text{s}$<br>$$a=\\frac{v-u}{t}=\\frac{15-10}{10}=0.5\\;\\text{m s}^{-2}$$<br>(ii) While braking:<br>$u=15\\;\\text{m s}^{-1}$, $v=0$, $t=5\\;\\text{s}$<br>$$a=\\frac{0-15}{5}=-3\\;\\text{m s}^{-2}$$<br>The negative sign shows that acceleration acts opposite to the direction of velocity.`
+},
+{
+  type:'example', marks:0,
+  question:`An object is dropped from a height. Its velocity increases as it falls. Find the magnitude of its average acceleration in every successive interval of one second using velocities $0$, $9.8$, $19.6$, $29.4$ and $39.2\\;\\text{m s}^{-1}$ at $0$, $1$, $2$, $3$ and $4$ s respectively. Is the average acceleration constant? What is its direction?`,
+  answer:`For each successive 1 s interval:<br>$$a=\\frac{\\Delta v}{\\Delta t}=\\frac{9.8}{1}=9.8\\;\\text{m s}^{-2}$$<br>The same value is obtained for $1$–$2$ s, $2$–$3$ s and $3$–$4$ s because the velocity increases by $9.8\\;\\text{m s}^{-1}$ every second.<br>Therefore, the average acceleration is constant at $9.8\\;\\text{m s}^{-2}$ and acts vertically downward.`
+},
+{
+  type:'example', marks:0,
+  question:`For a vehicle starting from rest and speeding up, the positions at times $0$, $2$, $4$, $6$, $8$, $10$ and $12$ s are $0$, $1$, $4$, $9$, $16$, $25$ and $36$ m respectively. Plot the corresponding position-time graph and describe its nature.`,
+  answer:`Plot time on the X-axis and position on the Y-axis using the points $(0,0)$, $(2,1)$, $(4,4)$, $(6,9)$, $(8,16)$, $(10,25)$ and $(12,36)$.<br>The plotted points do not lie on a straight line. They form a curve whose slope increases with time.<br>Hence, the vehicle is moving with increasing velocity.`
+},
+{
+  type:'example', marks:0,
+  question:`What does a position-time graph that is a horizontal straight line at a position of 40 m indicate about the nature of motion of the vehicle?`,
+  answer:`The position of the vehicle remains $40\\;\\text{m}$ from the origin and does not change with time.<br>Therefore, the vehicle is at rest at $40\\;\\text{m}$ from the origin.<br>A horizontal line on a position-time graph represents a stationary object.`
+},
+{
+  type:'example', marks:0,
+  question:`The position-time graphs of two objects A and B are straight lines. Line B is steeper than line A. The magnitude of average velocity of which object is higher?`,
+  answer:`The slope of a position-time graph represents velocity.<br>For the same time interval, object B has a greater displacement than object A. Therefore, line B has a greater slope.<br>Hence, the magnitude of average velocity of object B is higher than that of object A.`
+},
+{
+  type:'example', marks:0,
+  question:`A car moving on a highway is brought to rest with an acceleration of $-4\\;\\text{m s}^{-2}$. Find the distance travelled before stopping when its initial velocity is (i) $54\\;\\text{km h}^{-1}$ and (ii) $108\\;\\text{km h}^{-1}$.`,
+  answer:`Given $a=-4\\;\\text{m s}^{-2}$ and $v=0$. Using<br>$$v^2=u^2+2as$$<br>$$s=\\frac{u^2}{8}$$<br>(i) $u=54\\;\\text{km h}^{-1}=15\\;\\text{m s}^{-1}$<br>$$s=\\frac{15^2}{8}=28.125\\;\\text{m}\\approx28.1\\;\\text{m}$$<br>(ii) $u=108\\;\\text{km h}^{-1}=30\\;\\text{m s}^{-1}$<br>$$s=\\frac{30^2}{8}=112.5\\;\\text{m}$$`
+}
+];
+
+/* ══════════════════════════════════════════════════════════
+   PAUSE AND PONDER — Describing Motion Around Us
+══════════════════════════════════════════════════════════ */
+window.pauseAndPonderData = [
+{
+  type:'pause', marks:0,
+  question:`In the example of an athlete running back and forth on a straight track, when will the displacement of the athlete be zero? What will be the total distance travelled in that case?`,
+  answer:`The displacement becomes zero when the athlete returns to the starting point because the final position is the same as the initial position.<br>The total distance is not zero; it is the complete path length travelled by the athlete while going away from and returning to the starting point.`
+},
+{
+  type:'pause', marks:0,
+  question:`Fuel used up in a vehicle depends on which of the following? Justify your answer.<br>(i) Total distance travelled<br>(ii) Displacement`,
+  answer:`Fuel used depends on the total distance travelled, not on displacement.<br>A vehicle consumes fuel throughout the actual path it travels. Even when it returns to its starting point and its displacement becomes zero, fuel has still been consumed.`
+},
+{
+  type:'pause', marks:0,
+  question:`A ball rolls down a straight inclined track from O to D. Can its motion be represented along a horizontal line by taking O as the origin? Are the total distance travelled and the magnitude of displacement from O equal or different at positions A, B, C and D?`,
+  answer:`Yes. Since the ball moves along a straight line, its position can be represented on a horizontal one-dimensional line with O as the origin.<br>Because the ball moves only in one direction along the straight track without reversing, the total distance travelled from O is equal to the magnitude of its displacement at A, B, C and D.`
+},
+{
+  type:'pause', marks:0,
+  question:`During a family road trip, you drive 200 km north in 3 h and then 200 km south in 2 h. Find the average speed and average velocity for the entire trip.`,
+  answer:`Total distance $=200+200=400\\;\\text{km}$<br>Total time $=3+2=5\\;\\text{h}$<br>$$\\text{Average speed}=\\frac{400}{5}=80\\;\\text{km h}^{-1}$$<br>The final position is the starting point, so displacement $=0$.<br>$$\\text{Average velocity}=\\frac{0}{5}=0\\;\\text{km h}^{-1}$$`
+},
+{
+  type:'pause', marks:0,
+  question:`Under what condition(s) is<br>(i) the magnitude of average velocity of an object equal to its average speed?<br>(ii) the magnitude of average velocity zero while its average speed is not zero?`,
+  answer:`(i) The magnitude of average velocity equals average speed when the distance travelled is equal to the magnitude of displacement, such as motion along a straight line without changing direction.<br>(ii) The magnitude of average velocity is zero while average speed is non-zero when the object returns to its starting point. Its displacement is then zero, although it has travelled a non-zero distance.`
+}
+];
+
