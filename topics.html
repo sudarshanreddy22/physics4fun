@@ -2178,7 +2178,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
     <!-- CISCE CAMBRIDGE RUN-THROUGH TAB BAR -->
     <div id="runthrough-tabbar">
       <div class="pyq-tab rt-mcq active" onclick="showRunThroughSec('mcq',this)"><span class="tab-dot">M</span>MCQs</div>
-      <div class="pyq-tab rt-fib" onclick="showRunThroughSec('fib',this)"><span class="tab-dot">F</span>Fill in Blanks</div>
+      <div class="pyq-tab rt-fib" onclick="showRunThroughSec('fib',this)"><span class="tab-dot">F</span>Fill in the Blanks</div>
       <div class="pyq-tab rt-match" onclick="showRunThroughSec('match',this)"><span class="tab-dot">M</span>Matching</div>
       <div class="pyq-tab rt-tof" onclick="showRunThroughSec('tof',this)"><span class="tab-dot">T</span>True/False</div>
       <div class="pyq-tab rt-define" onclick="showRunThroughSec('define',this)"><span class="tab-dot">D</span>Define</div>
@@ -3666,19 +3666,42 @@ function renderIITObjective(data, wrap) {
 /* Global ☰ Multi-Questions / 🎯 Single Question toggle — lives once in the top tab bar,
    persists across Notes/PPTs/Competitive Exams/Premier Institutes/Others/Worksheets/Levels/Institutes. */
 function setGlobalViewMode(mode) {
+  mode = (mode === 'practice') ? 'practice' : 'list';
   IIT_PRACTICE.mode = mode;
-  const listBtn = document.getElementById('gvListBtn'), practiceBtn = document.getElementById('gvPracticeBtn');
-  if (listBtn) listBtn.classList.toggle('active', mode==='list');
-  if (practiceBtn) practiceBtn.classList.toggle('active', mode==='practice');
-  const paletteWrap = document.getElementById('iitPaletteWrap');
-  const practiceNav = document.getElementById('iitPracticeNav');
-  if (paletteWrap) paletteWrap.style.display = mode==='practice' ? 'block' : 'none';
-  if (practiceNav) practiceNav.style.display = mode==='practice' ? 'flex' : 'none';
-  document.querySelectorAll('.iit-q-card').forEach(card => {
+
+  const activePanel = document.getElementById('panel-' + (CUR.section || '')) || document.getElementById('content');
+  const cards = activePanel ? activePanel.querySelectorAll('.iit-q-card') : document.querySelectorAll('.iit-q-card');
+
+  if (IIT_PRACTICE.index >= cards.length) IIT_PRACTICE.index = 0;
+
+  cards.forEach(card => {
     const idx = parseInt(card.dataset.qidx, 10);
-    card.style.display = (mode==='list' || idx===IIT_PRACTICE.index) ? 'flex' : 'none';
+    card.style.display = (mode === 'list' || idx === IIT_PRACTICE.index) ? 'flex' : 'none';
   });
-  if (mode === 'practice') scrollIITPaletteIntoView();
+
+  const practiceNav = activePanel ? activePanel.querySelector('#iitPracticeNav') : document.getElementById('iitPracticeNav');
+  const paletteWrap = activePanel ? activePanel.querySelector('#iitPaletteWrap') : document.getElementById('iitPaletteWrap');
+
+  if (practiceNav) practiceNav.style.display = mode === 'practice' ? 'flex' : 'none';
+  if (paletteWrap) paletteWrap.style.display = mode === 'practice' ? 'block' : 'none';
+
+  const listBtn = document.getElementById('gvListBtn');
+  const practiceBtn = document.getElementById('gvPracticeBtn');
+  if (listBtn) listBtn.classList.toggle('active', mode === 'list');
+  if (practiceBtn) practiceBtn.classList.toggle('active', mode === 'practice');
+
+  if (activePanel) {
+    activePanel.querySelectorAll('.iit-rendered-utility .gv-btn').forEach(btn => {
+      const title = (btn.getAttribute('title') || '').toLowerCase();
+      if (title === 'multi view') btn.classList.toggle('active', mode === 'list');
+      if (title === 'single view') btn.classList.toggle('active', mode === 'practice');
+    });
+  }
+
+  if (mode === 'practice') {
+    updateIITPracticeMeta(currentIITArray());
+    scrollIITPaletteIntoView();
+  }
 }
 /* Enable/disable the global toggle per section: active for question sections, inactive (visible but disabled) on Notes/PPTs */
 function updateGlobalToggleAvailability(type) {
@@ -3692,15 +3715,28 @@ function updateGlobalToggleAvailability(type) {
 }
 
 function jumpToIITQuestion(idx) {
-  IIT_PRACTICE.index = idx;
-  document.querySelectorAll('.iit-q-card').forEach(card => {
-    const i = parseInt(card.dataset.qidx, 10);
-    card.style.display = (IIT_PRACTICE.mode==='list' || i===idx) ? 'flex' : 'none';
+  const data=currentIITArray();
+  if(!Array.isArray(data) || !data.length) return;
+
+  idx=Math.max(0,Math.min(idx,data.length-1));
+  IIT_PRACTICE.index=idx;
+
+  const activePanel=document.getElementById('panel-'+(CUR.section||'')) || document.getElementById('content');
+  const cards=activePanel ? activePanel.querySelectorAll('.iit-q-card') : [];
+  cards.forEach(card=>{
+    const i=parseInt(card.dataset.qidx,10);
+    card.style.display=(IIT_PRACTICE.mode==='list' || i===idx)?'flex':'none';
   });
-  document.querySelectorAll('#iitPalette .iit-palette-num').forEach((el,i) => el.classList.toggle('current', i===idx));
-  updateIITPracticeMeta(currentIITArray());
-  scrollIITPaletteIntoView();
-  document.getElementById('content').scrollTop = 0;
+
+  const palette=activePanel ? activePanel.querySelectorAll('#iitPalette .iit-palette-num') : [];
+  palette.forEach((el,i)=>el.classList.toggle('current',i===idx));
+
+  updateIITPracticeMeta(data);
+  const dot=palette[idx];
+  if(dot) dot.scrollIntoView({behavior:'auto',block:'nearest',inline:'center'});
+
+  const content=document.getElementById('content');
+  if(content) content.scrollTop=0;
 }
 function prevIITQuestion() { if (IIT_PRACTICE.index > 0) jumpToIITQuestion(IIT_PRACTICE.index - 1); }
 function nextIITQuestion() {
@@ -4054,8 +4090,8 @@ function typesetMathSafe(target){
 
 function iitRenderedUtilityHTML(){
   return `<div class="iit-rendered-utility">
-    <button class="gv-btn" onclick="event.stopPropagation();setGlobalViewMode('list')" title="Multi View">☰</button>
-    <button class="gv-btn" onclick="event.stopPropagation();setGlobalViewMode('practice')" title="Single View">🎯</button>
+    <button class="gv-btn${IIT_PRACTICE.mode==='list'?' active':''}" onclick="event.stopPropagation();setGlobalViewMode('list')" title="Multi View">☰</button>
+    <button class="gv-btn${IIT_PRACTICE.mode==='practice'?' active':''}" onclick="event.stopPropagation();setGlobalViewMode('practice')" title="Single View">🎯</button>
     <button class="gv-btn" onclick="event.stopPropagation();adjustActiveIITFont(-0.1)" title="Font Smaller">A-</button>
     <button class="gv-btn" onclick="event.stopPropagation();adjustActiveIITFont(0.1)" title="Font Larger">A+</button>
     <button class="gv-btn" onclick="event.stopPropagation();toggleTheme()" title="Theme">◐</button>
@@ -5068,48 +5104,59 @@ function ensureIITExampleWorksheetControls(){
   const sec = (CUR && CUR.section) ? CUR.section : '';
   if(sec !== 'iitexamples' && sec !== 'iitoth') return;
 
-  const old = document.getElementById('subsectionUtilityControls');
-  if(old) old.remove();
-
-  let host = null;
-
+  /* Examples already contains its own rendered utility toolbar.
+     Do not remove/reinsert another toolbar on every DOM mutation. */
   if(sec === 'iitexamples'){
-    host =
-      document.querySelector('#iitExamplesTabs') ||
-      document.querySelector('#iit-examples-tabs') ||
-      document.querySelector('.iit-examples-tabs') ||
-      document.querySelector('#iitExamplesContent .iit-practice-nav-combined') ||
-      document.querySelector('#iitExamplesContent .iit-practice-nav') ||
-      document.querySelector('#iitexamples .iit-practice-nav-combined') ||
-      document.querySelector('#iitexamples .iit-practice-nav');
-  } else {
-    host =
-      document.querySelector('#iitWorksheetsTabs') ||
-      document.querySelector('#iit-worksheets-tabs') ||
-      document.querySelector('.iit-worksheets-tabs') ||
-      document.querySelector('#iitOthersContent .iit-practice-nav-combined') ||
-      document.querySelector('#iitOthersContent .iit-practice-nav') ||
-      document.querySelector('#iitoth .iit-practice-nav-combined') ||
-      document.querySelector('#iitoth .iit-practice-nav');
+    const rendered = document.querySelector('#panel-iitexamples .iit-rendered-utility');
+    if(rendered){
+      rendered.style.display='flex';
+      rendered.style.visibility='visible';
+      rendered.style.opacity='1';
+      rendered.style.pointerEvents='auto';
+    }
+    const duplicate=document.getElementById('subsectionUtilityControls');
+    if(duplicate) duplicate.remove();
+    return;
   }
 
-  /* Fallback: use the first visible IIT subsection/nav row inside content. */
+  let host =
+    document.querySelector('#iitWorksheetsTabs') ||
+    document.querySelector('#iit-worksheets-tabs') ||
+    document.querySelector('.iit-worksheets-tabs') ||
+    document.querySelector('#iitOthersContent .iit-practice-nav-combined') ||
+    document.querySelector('#iitOthersContent .iit-practice-nav') ||
+    document.querySelector('#iitoth .iit-practice-nav-combined') ||
+    document.querySelector('#iitoth .iit-practice-nav');
+
   if(!host){
-    host = Array.from(document.querySelectorAll(
-      '#content .iit-practice-nav-combined,#content .iit-practice-nav,#content .iit-subtabs,#content .sub-tabs'
-    )).find(el => getComputedStyle(el).display !== 'none');
+    host=Array.from(document.querySelectorAll(
+      '#panel-iitoth .iit-practice-nav-combined,#panel-iitoth .iit-practice-nav,#panel-iitoth .iit-subtabs,#panel-iitoth .sub-tabs'
+    )).find(el=>getComputedStyle(el).display!=='none');
   }
   if(!host) return;
 
-  host.insertAdjacentHTML('beforeend', subsectionUtilityHTML());
+  const existing=document.getElementById('subsectionUtilityControls');
 
-  const ctl = document.getElementById('subsectionUtilityControls');
+  /* Anti-loop guard: MutationObserver must not cause another DOM mutation
+     when the toolbar is already in the correct place. */
+  if(existing && host.contains(existing)){
+    existing.style.display='flex';
+    existing.style.visibility='visible';
+    existing.style.opacity='1';
+    existing.style.pointerEvents='auto';
+    return;
+  }
+
+  if(existing) existing.remove();
+  host.insertAdjacentHTML('beforeend',subsectionUtilityHTML());
+
+  const ctl=document.getElementById('subsectionUtilityControls');
   if(ctl){
-    ctl.style.display = 'flex';
-    ctl.style.marginLeft = 'auto';
-    ctl.style.visibility = 'visible';
-    ctl.style.opacity = '1';
-    ctl.style.pointerEvents = 'auto';
+    ctl.style.display='flex';
+    ctl.style.marginLeft='auto';
+    ctl.style.visibility='visible';
+    ctl.style.opacity='1';
+    ctl.style.pointerEvents='auto';
   }
 }
 
@@ -5117,9 +5164,7 @@ function ensureIITExampleWorksheetControls(){
    existing implementation, then route the global buttons through it. */
 function setIITRequestedView(single){
   if(typeof setGlobalViewMode !== 'function') return false;
-
-  /* Existing IIT UI convention in this file uses multi/single. */
-  setGlobalViewMode(single ? 'single' : 'multi');
+  setGlobalViewMode(single ? 'practice' : 'list');
   return true;
 }
 
@@ -5311,13 +5356,17 @@ document.addEventListener('DOMContentLoaded', function () {
   applyExactSubsectionUnderlineColors();
   const content = document.getElementById('content');
   if (content) {
+    let _contentUiTimer=null;
     new MutationObserver(function () {
-      removeDuplicateSectionControls();
-      placeControlsBesideSubsections();
-      ensureIITExampleWorksheetControls();
-      syncAllCbseSubTabColors();
-      applyExactSubsectionUnderlineColors();
-    }).observe(content, { childList: true, subtree: true });
+      clearTimeout(_contentUiTimer);
+      _contentUiTimer=setTimeout(function(){
+        removeDuplicateSectionControls();
+        placeControlsBesideSubsections();
+        ensureIITExampleWorksheetControls();
+        syncAllCbseSubTabColors();
+        applyExactSubsectionUnderlineColors();
+      },40);
+    }).observe(content,{childList:true,subtree:true});
   }
 });
 
@@ -5325,9 +5374,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('click', function(e){
   const b = e.target.closest && e.target.closest('#tab-iitexamples,#tab-iitoth');
   if(b){
-    setTimeout(ensureIITExampleWorksheetControls, 0);
-    setTimeout(ensureIITExampleWorksheetControls, 150);
-    setTimeout(ensureIITExampleWorksheetControls, 500);
+    setTimeout(ensureIITExampleWorksheetControls,0);
   }
 });
 
