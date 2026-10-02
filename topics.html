@@ -215,7 +215,88 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 
 /* ══ NOTES ══ */
 .notes-content{padding-bottom:30px;}
-.notes-title{font-size:20px;font-weight:800;margin-bottom:16px;padding:16px 20px;background:linear-gradient(130deg,rgba(99,102,241,.18),rgba(6,182,212,.10));border:1px solid rgba(99,102,241,.25);border-radius:16px;display:flex;align-items:center;gap:13px;box-shadow:0 4px 20px rgba(99,102,241,.1);}
+.notes-sticky-header{
+  position:fixed !important;
+  z-index:120;
+  margin:0;
+  padding:5px 10px 5px;
+  background:var(--bg);
+  border-bottom:1px solid var(--divider);
+  box-shadow:0 5px 14px rgba(0,0,0,.12);
+  box-sizing:border-box;
+}
+.notes-title{
+  font-size:15px;
+  font-weight:800;
+  margin:0;
+  padding:5px 7px;
+  background:linear-gradient(130deg,rgba(99,102,241,.16),rgba(6,182,212,.08));
+  border:1px solid rgba(99,102,241,.22);
+  border-radius:9px;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  box-shadow:0 2px 10px rgba(99,102,241,.08);
+  min-height:36px;
+  width:100%;
+}
+.notes-title-main{display:flex;align-items:center;gap:6px;min-width:0;flex:1 1 auto;overflow:hidden;}
+.notes-title-text{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:15px;line-height:1.15;}
+.notes-title-class{font-size:9.5px;font-weight:600;color:var(--text-muted);margin-left:2px;white-space:nowrap;}
+#notes-content-wrap{--notes-base-size:13.2px;max-width:100%;overflow-x:hidden;position:relative;}
+.notes-font-controls{
+  margin-left:auto;
+  display:flex !important;
+  align-items:center;
+  justify-content:flex-end;
+  gap:3px;
+  flex:0 0 auto;
+  min-width:max-content;
+}
+.notes-font-btn{
+  min-width:29px;
+  width:29px;
+  height:27px;
+  padding:0;
+  border-radius:7px;
+  border:1px solid var(--divider);
+  background:var(--card-bg);
+  color:var(--text);
+  font-weight:800;
+  font-size:10.5px;
+  cursor:pointer;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  transition:all .15s;
+  flex:0 0 29px;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+.notes-font-btn:hover{border-color:var(--brand);background:var(--item-hover);transform:translateY(-1px);}
+.notes-font-btn.notes-fs{
+  font-size:15px;
+  line-height:1;
+  display:inline-flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+#notes-content-wrap .notes-section{max-width:100%;overflow-x:hidden;scroll-margin-top:98px;}
+#notes-content-wrap .notes-section p,#notes-content-wrap .notes-section li{font-size:var(--notes-base-size)!important;}
+#notes-content-wrap .notes-section-heading{font-size:calc(var(--notes-base-size) + 0.8px)!important;}
+#notes-content-wrap table,#notes-content-wrap img,#notes-content-wrap svg{max-width:100%;}
+#notes-content-wrap table{overflow-wrap:anywhere;}
+@media(max-width:600px){
+  .notes-sticky-header{padding:4px 5px 4px;}
+  .notes-title{padding:4px 5px;gap:4px;min-height:32px;border-radius:8px;}
+  .notes-title .n-sec-icon{width:25px!important;height:25px!important;font-size:13px!important;border-radius:7px!important;}
+  .notes-title-text{font-size:12.5px;}
+  .notes-title-class{display:none}
+  .notes-font-controls{gap:2px}
+  .notes-font-btn{min-width:26px;width:26px;height:25px;flex-basis:26px;font-size:9.5px}
+  .notes-font-btn.notes-fs{font-size:14px}
+  #notes-content-wrap .notes-section{scroll-margin-top:90px;}
+}
 .notes-section{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:17px 19px;margin-bottom:12px;transition:all .2s;}
 .notes-section:hover{border-color:rgba(99,102,241,.3);box-shadow:0 4px 20px rgba(99,102,241,.1);transform:translateY(-1px);}
 .notes-section-heading{font-size:14px;font-weight:800;color:var(--brand);margin-bottom:12px;display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:1px solid var(--divider);}
@@ -299,11 +380,14 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .notes-section.n-b6{border-left:3px solid #a855f7;}
 .notes-section.n-b7{border-left:3px solid #ef4444;}
 
-.notes-quicknav{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 16px;margin-bottom:2px;}
+.notes-quicknav{display:flex;gap:4px;overflow-x:auto;padding:4px 1px 0;margin:0;scrollbar-width:thin;scroll-behavior:smooth;}
 .notes-quicknav::-webkit-scrollbar{height:4px;}
-.notes-quicknav-btn{width:36px;height:36px;border-radius:11px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17px;cursor:pointer;border:1px solid rgba(255,255,255,.14);transition:transform .15s,box-shadow .15s;}
-.notes-quicknav-btn:hover{transform:translateY(-3px) scale(1.08);}
-.notes-quicknav-btn:active{transform:translateY(-1px) scale(.97);}
+.notes-quicknav-btn{height:28px;border-radius:7px;flex-shrink:0;display:flex;align-items:center;gap:4px;padding:0 8px;font-size:9.8px;font-weight:800;color:#fff;cursor:pointer;border:2px solid transparent;transition:transform .15s,box-shadow .15s,border-color .15s;white-space:nowrap;max-width:190px;}
+.notes-tab-icon{font-size:14px;line-height:1;flex:0 0 auto}.notes-tab-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.notes-quicknav-btn:hover{transform:translateY(-2px);filter:brightness(1.05);}
+.notes-quicknav-btn:active{transform:translateY(0) scale(.98);}
+.notes-quicknav-btn.active{border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.2),0 4px 12px rgba(0,0,0,.18);}
+@media(max-width:600px){.notes-quicknav{gap:3px;padding-top:3px}.notes-quicknav-btn{height:26px;padding:0 7px;font-size:9px;max-width:145px}.notes-tab-icon{font-size:11px;}}
 
 .n-qa-card{background:var(--bg3);border:1px solid var(--card-border);border-radius:11px;margin:8px 0;overflow:hidden;transition:border-color .15s;cursor:pointer;}
 .n-qa-card:hover{border-color:rgba(99,102,241,.35);}
@@ -1326,6 +1410,190 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 @media(max-width:700px){
   #panel-desc .iit-nav-btn,#panel-objective .iit-nav-btn,#panel-runthrough .iit-nav-btn{padding:5px 8px !important;font-size:9px !important;}
 }
+
+/* ===== Human Eye Notes: original HTML section appearance ===== */
+#notes-content-wrap .notes-section{
+  background:transparent !important;
+  border:0 !important;
+  border-left:0 !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  margin:0 0 9px !important;
+  box-shadow:none !important;
+  transform:none !important;
+  overflow:visible !important;
+}
+#notes-content-wrap .notes-section:hover{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+#notes-content-wrap .notes-section-heading{
+  position:relative;
+  z-index:4;
+  display:inline-flex !important;
+  align-items:center;
+  gap:6px;
+  width:auto !important;
+  max-width:calc(100% - 24px);
+  margin:0 0 -5px 13px !important;
+  padding:5px 10px !important;
+  border:0 !important;
+  border-bottom:0 !important;
+  border-radius:6px !important;
+  color:#fff !important;
+  font-family:"Segoe UI",Arial,sans-serif !important;
+  font-weight:800 !important;
+  line-height:1.1 !important;
+  box-shadow:none !important;
+}
+#notes-content-wrap .notes-section-heading .n-sec-icon{
+  width:22px !important;
+  height:22px !important;
+  min-width:22px !important;
+  border-radius:5px !important;
+  border:0 !important;
+  background:rgba(255,255,255,.22) !important;
+  box-shadow:none !important;
+  color:#fff !important;
+  font-size:12px !important;
+}
+#notes-content-wrap .notes-section .human-eye-v17{
+  margin:0 !important;
+}
+#notes-content-wrap .notes-section .he-card{
+  border-radius:8px !important;
+  overflow:hidden !important;
+  box-shadow:none !important;
+}
+
+/* exact v17 section-label colours, assigned after render by JS */
+#notes-content-wrap .notes-section-heading.he-head-blue{background:#49b6d2 !important;}
+#notes-content-wrap .notes-section-heading.he-head-pink{background:#a74d9f !important;}
+#notes-content-wrap .notes-section-heading.he-head-green{background:#68b64e !important;}
+#notes-content-wrap .notes-section-heading.he-head-yellow{background:#d89a1f !important;}
+#notes-content-wrap .notes-section-heading.he-head-peach{background:#e17a54 !important;}
+
+/* Notes fullscreen must be a complete, self-contained reading surface */
+#panel-notes:fullscreen,
+#panel-notes:-webkit-full-screen{
+  display:block !important;
+  width:100vw !important;
+  height:100vh !important;
+  max-width:none !important;
+  background:var(--bg) !important;
+  overflow:auto !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+#panel-notes:fullscreen #notes-content-wrap,
+#panel-notes:-webkit-full-screen #notes-content-wrap{
+  width:100% !important;
+  max-width:1200px !important;
+  margin:0 auto !important;
+  padding-left:18px !important;
+  padding-right:18px !important;
+  padding-bottom:28px !important;
+  overflow:visible !important;
+}
+#panel-notes:fullscreen .notes-sticky-header,
+#panel-notes:-webkit-full-screen .notes-sticky-header{
+  z-index:2147483000 !important;
+}
+@media(max-width:600px){
+  #notes-content-wrap .notes-section-heading{
+    margin-left:8px !important;
+    padding:4px 7px !important;
+    gap:4px;
+    max-width:calc(100% - 16px);
+  }
+  #notes-content-wrap .notes-section-heading .n-sec-icon{
+    width:19px !important;height:19px !important;min-width:19px !important;font-size:10px !important;
+  }
+  #panel-notes:fullscreen #notes-content-wrap,
+  #panel-notes:-webkit-full-screen #notes-content-wrap{
+    padding-left:8px !important;
+    padding-right:8px !important;
+  }
+}
+
+
+/* Exact HTML notes mode: do not restyle original note pages */
+#exact-notes-stage{width:100%;overflow-x:auto;}
+#exact-notes-stage .he-original-shell{font-size:inherit;}
+#exact-notes-stage .notes-section,
+#exact-notes-stage .notes-section-heading{all:unset;}
+#exact-notes-stage .page{scroll-margin-top:92px;}
+#notes-content-wrap:has(#exact-notes-stage){padding-left:0!important;padding-right:0!important;}
+
+
+/* ===== Human Eye continuous notes navigation ===== */
+#notes-content-wrap:has(#exact-notes-stage) .notes-quicknav{
+  display:flex !important;
+  align-items:center;
+  gap:5px;
+  width:100%;
+  overflow-x:auto !important;
+  overflow-y:hidden;
+  scrollbar-width:thin;
+  padding:4px 1px 1px;
+  white-space:nowrap;
+  scroll-behavior:smooth;
+}
+#notes-content-wrap:has(#exact-notes-stage) .notes-quicknav-btn{
+  display:inline-flex !important;
+  flex:0 0 auto;
+  align-items:center;
+  gap:5px;
+  min-height:28px;
+  padding:0 9px;
+  border-radius:8px;
+  border:2px solid transparent;
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+  cursor:pointer;
+}
+#notes-content-wrap:has(#exact-notes-stage) .notes-quicknav-btn.active{
+  border-color:#fff !important;
+  box-shadow:0 0 0 2px rgba(15,23,42,.28),0 3px 8px rgba(0,0,0,.18);
+  transform:translateY(-1px);
+}
+#notes-content-wrap:has(#exact-notes-stage) #exact-notes-stage{
+  width:100%;
+  overflow-x:hidden;
+}
+#notes-content-wrap:has(#exact-notes-stage) .he-continuous-shell{
+  min-height:100%;
+}
+
+
+/* ===== Full-width Human Eye Notes panel ===== */
+#panel-notes,
+#notes-content-wrap,
+#exact-notes-stage,
+#exact-notes-stage .he-continuous-shell,
+#exact-notes-stage .he-continuous-notes{
+  width:100% !important;
+  max-width:none !important;
+  min-width:0 !important;
+}
+#notes-content-wrap:has(#exact-notes-stage){
+  padding-left:6px !important;
+  padding-right:6px !important;
+}
+#exact-notes-stage{
+  margin:0 !important;
+  padding:0 !important;
+}
+@media(max-width:700px){
+  #notes-content-wrap:has(#exact-notes-stage){
+    padding-left:3px !important;
+    padding-right:3px !important;
+  }
+}
+
 </style>
 </head>
 <body class="light">
@@ -2739,20 +3007,239 @@ async function loadNotes() {
     : renderComingSoon(wrap,'📖','Notes','Notes for this chapter are being prepared.');
 }
 
+
+function renderExactHtmlNotes(d, wrap){
+  const secs=d.sections||[];
+  const tabs=secs.map((s,i)=>
+    `<button class="notes-quicknav-btn n-clr${i%8}" data-note-tab="${i}" onclick="jumpExactNote('${s.target}',this)" title="${s.heading}">
+      <span class="notes-tab-icon">📌</span><span class="notes-tab-label">${s.heading}</span>
+    </button>`
+  ).join('');
+
+  wrap.innerHTML=`
+    <style>${d.exactStyle||''}</style>
+    <div class="notes-sticky-header" id="notesStickyHeader">
+      <div class="notes-title">
+        <div class="notes-title-main">
+          <span class="n-sec-icon" style="width:25px;height:25px;font-size:13px;">${d.icon||'📖'}</span>
+          <span class="notes-title-text">${d.title}</span>
+          <span class="notes-title-class">Class ${d.grade}</span>
+        </div>
+        <div class="notes-font-controls">
+          <button class="notes-font-btn" title="Decrease Notes font size" onclick="adjustExactNotesScale(-0.05)">A−</button>
+          <button class="notes-font-btn" title="Increase Notes font size" onclick="adjustExactNotesScale(0.05)">A+</button>
+          <button class="notes-font-btn notes-fs" id="notesFullscreenBtn" aria-label="Fullscreen Notes" title="Enter Fullscreen" onclick="toggleNotesFullscreen()">⛶</button>
+        </div>
+      </div>
+      <div class="notes-quicknav">${tabs}</div>
+    </div>
+    <div id="exact-notes-stage">${d.rawHtml||''}</div>
+  `;
+
+  pinNotesHeader();
+  setTimeout(pinNotesHeader,80);
+  setTimeout(pinNotesHeader,250);
+  setupExactNotesObserver();
+  if(window.MathJax) MathJax.typesetPromise([wrap]).catch(()=>{});
+}
+function jumpExactNote(target,btn){
+  const el=document.getElementById(target);
+  if(!el) return;
+
+  const header=document.getElementById('notesStickyHeader');
+  const hh=(header?.offsetHeight||78)+10;
+  el.style.scrollMarginTop=hh+'px';
+  el.scrollIntoView({behavior:'smooth',block:'start'});
+
+  document.querySelectorAll('.notes-quicknav-btn').forEach(x=>x.classList.remove('active'));
+  btn?.classList.add('active');
+  btn?.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+}
+function adjustExactNotesScale(delta){
+  const stage=document.getElementById('exact-notes-stage');
+  if(!stage) return;
+
+  let scale=parseFloat(stage.dataset.fontScale||'1');
+  scale=Math.max(.80,Math.min(1.30,+(scale+delta).toFixed(2)));
+  stage.dataset.fontScale=scale;
+
+  const targets=stage.querySelectorAll(
+    '.block .head,.block .body,.block p,.block li,.block td,.block th,'+
+    '.callout,.note-box,.rule-pill,.rule-pill em,.figcap,.vibgyor span,'+
+    '.sequence div,.qbox,.number-chip,.defect-name-card,.col-title,.row-head,'+
+    '.cell,.part-card,.rainbow-seq-head,.conditions-head,.seq-box,.condition-item,'+
+    '.atm-app,.tyndall-examples-title,.example-cap,.pres-box,.pres-part'
+  );
+
+  targets.forEach(el=>{
+    if(!el.dataset.heBaseFont){
+      const px=parseFloat(getComputedStyle(el).fontSize);
+      if(Number.isFinite(px)) el.dataset.heBaseFont=px.toFixed(3);
+    }
+    const base=parseFloat(el.dataset.heBaseFont||'0');
+    if(base>0) el.style.fontSize=(base*scale).toFixed(2)+'px';
+  });
+
+  // Recalculate fixed header spacing after text reflow.
+  setTimeout(pinNotesHeader,20);
+}
+function setupExactNotesObserver(){
+  const buttons=[...document.querySelectorAll('.notes-quicknav-btn')];
+  const secs=buttons.map(b=>document.getElementById((window.chapterNotes.sections[+b.dataset.noteTab]||{}).target)).filter(Boolean);
+  if(!secs.length) return;
+  const header=document.getElementById('notesStickyHeader');
+  const offset=(header?.offsetHeight||80)+10;
+  const obs=new IntersectionObserver(entries=>{
+    const vis=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];
+    if(!vis) return;
+    const idx=secs.indexOf(vis.target);
+    buttons.forEach(b=>b.classList.remove('active'));
+    if(buttons[idx]) buttons[idx].classList.add('active');
+  },{root:null,rootMargin:`-${offset}px 0px -65% 0px`,threshold:[0,.05,.15]});
+  secs.forEach(s=>obs.observe(s));
+}
+
 function renderNotes(d, wrap) {
+  if(d && d.exactHtmlMode){
+    renderExactHtmlNotes(d, wrap);
+    return;
+  }
   const secs = d.sections || [];
-  const quicknav = secs.length > 1 ? `<div class="notes-quicknav">${secs.map((s,i)=>`<div class="notes-quicknav-btn n-clr${i%8}" title="${s.heading}" onclick="scrollToNotesSection(${i})">${s.icon||'📌'}</div>`).join('')}</div>` : '';
-  wrap.innerHTML = `<div class="notes-title"><span class="n-sec-icon" style="width:38px;height:38px;font-size:20px;">${d.icon||'📖'}</span>${d.title}<span style="font-size:11px;font-weight:500;color:var(--text-muted);margin-left:4px;">Class ${d.grade}</span></div>`
-    + quicknav
+  const quicknav = secs.length > 1 ? `<div class="notes-quicknav" id="notesQuicknav">${secs.map((s,i)=>`<button class="notes-quicknav-btn n-clr${i%8}${i===0?' active':''}" id="notes-tab-${i}" title="${s.heading}" onclick="scrollToNotesSection(${i})"><span class="notes-tab-icon">${s.icon||'📌'}</span><span class="notes-tab-text">${s.heading}</span></button>`).join('')}</div>` : '';
+  wrap.innerHTML = `<div class="notes-sticky-header" id="notesStickyHeader"><div class="notes-title"><div class="notes-title-main"><span class="n-sec-icon" style="width:38px;height:38px;font-size:20px;">${d.icon||'📖'}</span><span class="notes-title-text">${d.title}</span><span class="notes-title-class">Class ${d.grade}</span></div><div class="notes-font-controls" aria-label="Notes controls"><button class="notes-font-btn" title="Decrease notes font size" onclick="adjustNotesFont(-1)">A−</button><button class="notes-font-btn" title="Increase notes font size" onclick="adjustNotesFont(1)">A+</button><button class="notes-font-btn notes-fs" id="notesFullscreenBtn" aria-label="Fullscreen Notes" title="Enter Fullscreen" onclick="toggleNotesFullscreen()">⛶</button></div></div>${quicknav}</div>`
     + secs.map((s,i) =>
       `<div class="notes-section n-b${i%8}" id="notes-sec-${i}"><div class="notes-section-heading"><span class="n-sec-icon n-clr${i%8}">${s.icon||'📌'}</span>${s.heading}</div>${mathify(s.content)}</div>`
     ).join('');
+  applyNotesFontSize();
+  syncHumanEyeSectionHeadingColours();
+  setupNotesSectionTracking();
+  pinNotesHeader();
+  setTimeout(pinNotesHeader,80);
+  setTimeout(pinNotesHeader,260);
   // Trigger MathJax rendering for formulas in notes
   if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
 }
+
+function pinNotesHeader(){
+  const panel=document.getElementById('panel-notes');
+  const wrap=document.getElementById('notes-content-wrap');
+  const header=document.getElementById('notesStickyHeader');
+  if(!panel || !wrap || !header) return;
+
+  const isFs = document.fullscreenElement === panel || document.webkitFullscreenElement === panel;
+  const r = panel.getBoundingClientRect();
+
+  header.style.left = (isFs ? 0 : Math.round(r.left)) + 'px';
+  header.style.top  = (isFs ? 0 : Math.round(r.top)) + 'px';
+  header.style.width = (isFs ? window.innerWidth : Math.round(r.width)) + 'px';
+
+  requestAnimationFrame(()=>{
+    const h=header.offsetHeight||0;
+    wrap.style.paddingTop=(h+8)+'px';
+    wrap.style.setProperty('--notes-fixed-header-height',h+'px');
+    document.querySelectorAll('#notes-content-wrap .notes-section').forEach(sec=>{
+      sec.style.scrollMarginTop=(h+10)+'px';
+    });
+  });
+}
+async function toggleNotesFullscreen(){
+  const panel=document.getElementById('panel-notes');
+  if(!panel) return;
+
+  try{
+    const current=document.fullscreenElement || document.webkitFullscreenElement;
+    if(!current){
+      if(panel.requestFullscreen){
+        await panel.requestFullscreen();
+      }else if(panel.webkitRequestFullscreen){
+        panel.webkitRequestFullscreen();
+      }
+    }else{
+      if(document.exitFullscreen){
+        await document.exitFullscreen();
+      }else if(document.webkitExitFullscreen){
+        document.webkitExitFullscreen();
+      }
+    }
+  }catch(err){
+    console.log('Notes fullscreen error:',err);
+  }finally{
+    setTimeout(pinNotesHeader,50);
+    setTimeout(pinNotesHeader,220);
+  }
+}
+
+function applyNotesFontSize(){
+  const wrap=document.getElementById('notes-content-wrap');
+  if(!wrap) return;
+  let size=parseFloat(wrap.dataset.notesFontSize||'13.2');
+  size=Math.max(11.0,Math.min(16.2,size));
+  wrap.dataset.notesFontSize=size.toFixed(1);
+  wrap.style.setProperty('--notes-base-size',size.toFixed(1)+'px');
+  const v=document.getElementById('notesFontValue');
+  if(v) v.textContent=Math.round(size/13.2*100)+'%';
+}
+function adjustNotesFont(delta){
+  const wrap=document.getElementById('notes-content-wrap');
+  if(!wrap) return;
+  let size=parseFloat(wrap.dataset.notesFontSize||'13.2');
+  size=Math.max(11.0,Math.min(16.2,size+delta));
+  wrap.dataset.notesFontSize=size.toFixed(1);
+  applyNotesFontSize();
+  if(window.MathJax) MathJax.typesetPromise([wrap]).catch(()=>{});
+}
+function setActiveNotesTab(i){
+  document.querySelectorAll('.notes-quicknav-btn').forEach((b,n)=>b.classList.toggle('active',n===i));
+  const tab=document.getElementById('notes-tab-'+i);
+  if(tab) tab.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
 function scrollToNotesSection(i) {
-  const el = document.getElementById('notes-sec-' + i);
-  if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+  const el=document.getElementById('notes-sec-'+i);
+  const scroller=document.getElementById('content');
+  const header=document.getElementById('notesStickyHeader');
+  if(!el||!scroller) return;
+  setActiveNotesTab(i);
+  const sr=scroller.getBoundingClientRect(), er=el.getBoundingClientRect();
+  const hh=header?header.offsetHeight:0;
+  const target=scroller.scrollTop+(er.top-sr.top)-hh-10;
+  scroller.scrollTo({top:Math.max(0,target),behavior:'smooth'});
+}
+
+function syncHumanEyeSectionHeadingColours(){
+  const map={
+    blue:'he-head-blue',
+    pink:'he-head-pink',
+    green:'he-head-green',
+    yellow:'he-head-yellow',
+    peach:'he-head-peach'
+  };
+  document.querySelectorAll('#notes-content-wrap .notes-section').forEach(sec=>{
+    const card=sec.querySelector('.he-card');
+    const head=sec.querySelector('.notes-section-heading');
+    if(!card || !head) return;
+    Object.values(map).forEach(c=>head.classList.remove(c));
+    for(const key of Object.keys(map)){
+      if(card.classList.contains(key)){
+        head.classList.add(map[key]);
+        break;
+      }
+    }
+  });
+}
+
+function setupNotesSectionTracking(){
+  const scroller=document.getElementById('content');
+  if(!scroller) return;
+  if(window._notesScrollHandler) scroller.removeEventListener('scroll',window._notesScrollHandler);
+  window._notesScrollHandler=()=>{
+    const header=document.getElementById('notesStickyHeader');
+    const cutoff=(header?header.getBoundingClientRect().bottom:0)+18;
+    const secs=[...document.querySelectorAll('#notes-content-wrap .notes-section')];
+    let active=0;
+    for(let i=0;i<secs.length;i++){if(secs[i].getBoundingClientRect().top<=cutoff) active=i; else break;}
+    document.querySelectorAll('.notes-quicknav-btn').forEach((b,n)=>b.classList.toggle('active',n===active));
+  };
+  scroller.addEventListener('scroll',window._notesScrollHandler,{passive:true});
 }
 function toggleNoteQA(el) { el.classList.toggle('open'); }
 
@@ -5272,8 +5759,12 @@ function globalAdjustFont(delta){
     adjustQFontSize('panel-objective','obj',delta);
     return;
   }
+  if (sec === 'notes' && typeof adjustNotesFont === 'function') {
+    adjustNotesFont(delta > 0 ? 1 : -1);
+    return;
+  }
 
-  // Notes/PPT/other sections: scale the active panel text without changing layout structure.
+  // PPT/other sections: scale the active panel text without changing layout structure.
   const panel = document.getElementById('panel-' + sec);
   if (!panel) return;
   let fs = parseFloat(panel.dataset.globalFontScale || '1');
@@ -5292,12 +5783,37 @@ function toggleFullscreen() {
 }
 function updateFullscreenBtn() {
   const isFs = !!document.fullscreenElement;
-  ['fullscreenBtn','pyqFullscreenBtn','othFullscreenBtn'].forEach(id => {
+  ['fullscreenBtn','pyqFullscreenBtn','othFullscreenBtn','notesFullscreenBtn'].forEach(id => {
     const btn = document.getElementById(id);
     if (btn) { btn.textContent = isFs ? '🗗' : '⛶'; btn.title = isFs ? 'Exit Fullscreen' : 'Enter Fullscreen'; }
   });
 }
-document.addEventListener('fullscreenchange', updateFullscreenBtn);
+document.addEventListener('fullscreenchange',()=>{
+  updateFullscreenBtn();
+  const btn=document.getElementById('notesFullscreenBtn');
+  const panel=document.getElementById('panel-notes');
+  if(btn && panel){
+    const on=document.fullscreenElement===panel || document.webkitFullscreenElement===panel;
+    btn.textContent=on?'⛶':'⛶';
+    btn.title=on?'Exit Fullscreen':'Enter Fullscreen';
+    btn.setAttribute('aria-label',on?'Exit Fullscreen Notes':'Fullscreen Notes');
+  }
+  setTimeout(pinNotesHeader,50);
+  setTimeout(pinNotesHeader,220);
+});
+
+document.addEventListener('webkitfullscreenchange',()=>{
+  updateFullscreenBtn();
+  setTimeout(pinNotesHeader,50);
+  setTimeout(pinNotesHeader,220);
+});
+
+window.addEventListener('resize',()=>{ if(document.getElementById('notesStickyHeader')) pinNotesHeader(); });
+document.addEventListener('transitionend',(e)=>{
+  if(document.getElementById('notesStickyHeader') && (e.target?.classList?.contains('sidebar') || e.target?.classList?.contains('content-wrap'))) {
+    pinNotesHeader();
+  }
+});
 
 /* ══════ THEME ══════ */
 function toggleTheme() {
