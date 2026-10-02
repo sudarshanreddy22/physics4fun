@@ -1,20 +1,16 @@
-/* Objective Questions - Light | Grade 8 | 50 MCQs */
+/* Objective Questions - Light | Grade 8 | 40 General MCQs + 10 Assertion–Reason MCQs */
 window.objectiveData = [
-  // =========================
-  // MCQs
-  // =========================
-
   {
-    "question": "If the angle of incidence is 35°, the angle of reflection is:",
+    "question": "If the angle of incidence is 30°, the angle of reflection is:",
     "options": [
-      "35°",
-      "55°",
-      "70°",
+      "15°",
+      "30°",
+      "60°",
       "90°"
     ],
-    "answer": 0,
+    "answer": 1,
     "type": "mcq",
-    "explanation": "By the law of reflection, angle of reflection equals angle of incidence."
+    "explanation": "Angle of reflection equals angle of incidence."
   },
 
   {
@@ -27,81 +23,43 @@ window.objectiveData = [
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "P denotes the pole."
+    "explanation": "P represents the pole."
   },
 
   {
-    "question": "Which term refers to the point where rays parallel to the principal axis meet or appear to diverge from after reflection?",
+    "question": "Assertion (A): A plane mirror forms an image of the same size as the object.<br>Reason (R): The image formed by a plane mirror is virtual and erect.",
     "options": [
-      "Pole",
-      "Focus",
-      "Centre of curvature",
-      "Normal"
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "That point is the focus."
+    "subtype": "assertion_reason",
+    "explanation": "Both A and R are true, but R does not explain the image size."
   },
 
   {
-    "question": "If the angle of reflection is 48°, the angle of incidence is:",
+    "question": "If the angle of reflection is 45°, the angle of incidence is:",
     "options": [
-      "24°",
-      "42°",
-      "48°",
-      "96°"
-    ],
-    "answer": 2,
-    "type": "mcq",
-    "explanation": "The angle of incidence equals the angle of reflection."
-  },
-
-  {
-    "question": "The angle between the incident ray and the normal is called:",
-    "options": [
-      "Angle of reflection",
-      "Angle of deviation",
-      "Angle of incidence",
-      "Angle of refraction"
-    ],
-    "answer": 2,
-    "type": "mcq",
-    "explanation": "The angle of incidence is measured between the incident ray and the normal."
-  },
-
-  {
-    "question": "The incident ray, reflected ray and normal at the point of incidence lie:",
-    "options": [
-      "In different planes",
-      "In the same plane",
-      "Only on the mirror",
-      "At right angles to one another"
+      "22.5°",
+      "45°",
+      "60°",
+      "90°"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "The incident ray, normal and reflected ray lie in the same plane."
+    "explanation": "Angle of incidence equals angle of reflection."
   },
 
   {
-    "question": "Which type of image can be obtained on a screen?",
+    "question": "A plane mirror forms an image that is ________ the object.",
     "options": [
-      "Virtual image",
-      "Real image",
-      "Both real and virtual images",
-      "Neither real nor virtual image"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "A real image can be obtained on a screen, whereas a virtual image cannot."
-  },
-
-  {
-    "question": "The size of the image formed by a plane mirror is:",
-    "options": [
-      "Larger than the object",
-      "Smaller than the object",
-      "Same as the object",
-      "Zero"
+      "larger than",
+      "smaller than",
+      "the same size as",
+      "twice the size of"
     ],
     "answer": 2,
     "type": "mcq",
@@ -109,319 +67,46 @@ window.objectiveData = [
   },
 
   {
-    "question": "Which statement correctly describes the image formed by a plane mirror?",
+    "question": "What is the centre of curvature of a spherical mirror?",
     "options": [
-      "Real, inverted and enlarged",
-      "Virtual, erect, laterally inverted and same size",
-      "Virtual, inverted and diminished",
-      "Real, erect and same size"
+      "The geometric centre of the mirror",
+      "The centre of the sphere of which the mirror is a part",
+      "The point where the mirror ends",
+      "The point where the image is formed"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "A plane mirror forms a virtual, erect, laterally inverted image of the same size."
+    "explanation": "The centre of curvature is the centre of the sphere of which the mirror is a part."
   },
 
   {
-    "question": "Which statement correctly compares real and virtual images?",
-    "options": [
-      "Both can be obtained on a screen",
-      "Only a virtual image can be obtained on a screen",
-      "Only a real image can be obtained on a screen",
-      "Neither can be obtained on a screen"
-    ],
-    "answer": 2,
-    "type": "mcq",
-    "explanation": "A real image can be obtained on a screen; a virtual image cannot."
-  },
-
-  {
-    "question": "The normal at the point of incidence is drawn:",
-    "options": [
-      "Parallel to the mirror",
-      "Perpendicular to the reflecting surface",
-      "Along the incident ray",
-      "Along the reflected ray"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "The normal is an imaginary line perpendicular to the reflecting surface at the point of incidence."
-  },
-
-  {
-    "question": "Which statement is true for a virtual image?",
-    "options": [
-      "Light rays actually meet",
-      "Light rays appear to meet when extended backward",
-      "It is always obtained on a screen",
-      "It is always inverted"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "A virtual image forms where rays only appear to meet."
-  },
-
-  {
-    "question": "The laws of reflection are applicable to:",
-    "options": [
-      "Plane mirrors only",
-      "Concave mirrors only",
-      "Convex mirrors only",
-      "Both plane and spherical mirrors"
-    ],
-    "answer": 3,
-    "type": "mcq",
-    "explanation": "The laws of reflection apply to plane as well as spherical mirrors."
-  },
-
-  {
-    "question": "Which description matches a concave mirror?",
-    "options": [
-      "Reflecting surface bulges outward",
-      "Reflecting surface curves inward",
-      "Reflecting surface is plane",
-      "It has no focus"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "A concave mirror has an inward-curving reflecting surface."
-  },
-
-  {
-    "question": "Which description matches a convex mirror?",
-    "options": [
-      "Reflecting surface curves inward",
-      "Reflecting surface bulges outward",
-      "Reflecting surface is plane",
-      "It has no reflecting surface"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "A convex mirror has an outward-bulging reflecting surface."
-  },
-
-  {
-    "question": "A virtual image is formed when light rays:",
-    "options": [
-      "Actually meet",
-      "Appear to meet when extended backward",
-      "Stop at the mirror",
-      "Become perpendicular"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "A virtual image is formed when rays only appear to meet when extended backward."
-  },
-
-  {
-    "question": "Which one is a property of light listed in the chapter?",
-    "options": [
-      "Rectilinear propagation",
-      "Evaporation",
-      "Condensation",
-      "Diffusion"
-    ],
-    "answer": 0,
-    "type": "mcq",
-    "explanation": "Rectilinear propagation is a property of light."
-  },
-
-  {
-    "question": "Which of the following is NOT a property of light mentioned in this chapter?",
-    "options": [
-      "Rectilinear propagation",
-      "Reflection",
-      "Refraction",
-      "Evaporation"
-    ],
-    "answer": 3,
-    "type": "mcq",
-    "explanation": "Rectilinear propagation, reflection and refraction are properties of light."
-  },
-
-  {
-    "question": "The principal axis of a spherical mirror is the line joining:",
-    "options": [
-      "Focus and object",
-      "Pole and centre of curvature",
-      "Pole and image",
-      "Focus and image"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "The principal axis passes through the pole (P) and centre of curvature (C)."
-  },
-
-  {
-    "question": "The focal length of a spherical mirror is measured from the pole to the:",
-    "options": [
-      "Centre of curvature",
-      "Focus",
-      "Object",
-      "Edge of mirror"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "Focal length is the distance between the pole and focus."
-  },
-
-  {
-    "question": "We are able to see most objects around us because they:",
-    "options": [
-      "Produce sound",
-      "Reflect light",
-      "Absorb all light",
-      "Produce heat"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "Objects become visible when light reflected from them enters our eyes."
-  },
-
-  {
-    "question": "The geometric centre of a spherical mirror is called its:",
-    "options": [
-      "Focus",
-      "Centre of curvature",
-      "Pole",
-      "Principal axis"
-    ],
-    "answer": 2,
-    "type": "mcq",
-    "explanation": "The pole (P) is the geometric centre of the spherical mirror."
-  },
-
-  {
-    "question": "The centre of the sphere of which a spherical mirror forms a part is called:",
-    "options": [
-      "Pole",
-      "Centre of curvature",
-      "Focus",
-      "Aperture"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "The centre of curvature (C) is the centre of the sphere of which the mirror is a part."
-  },
-
-  {
-    "question": "A ray of light that bounces back from a reflecting surface is called the:",
-    "options": [
-      "Incident ray",
-      "Reflected ray",
-      "Normal",
-      "Principal ray"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "The ray that returns after striking a reflecting surface is the reflected ray."
-  },
-
-  {
-    "question": "At the point where a ray strikes a mirror, the perpendicular line is called the:",
-    "options": [
-      "Principal axis",
-      "Normal",
-      "Reflected ray",
-      "Focus"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "The normal is drawn perpendicular to the surface at the point of incidence."
-  },
-
-  {
-    "question": "Which of the following is NOT a feature of a plane-mirror image?",
-    "options": [
-      "Virtual",
-      "Erect",
-      "Same size",
-      "Can be obtained on a screen"
-    ],
-    "answer": 3,
-    "type": "mcq",
-    "explanation": "A plane-mirror image is virtual and cannot be obtained on a screen."
-  },
-
-  {
-    "question": "The bouncing back of light into the same medium is called:",
-    "options": [
-      "Refraction",
-      "Reflection",
-      "Dispersion",
-      "Absorption"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "Reflection is the bouncing back of light into the same medium."
-  },
-
-  {
-    "question": "Which quantity is measured between the incident ray and the normal?",
+    "question": "The angle between the reflected ray and the normal is called:",
     "options": [
       "Angle of incidence",
-      "Focal length",
-      "Radius of curvature",
-      "Image size"
-    ],
-    "answer": 0,
-    "type": "mcq",
-    "explanation": "The angle of incidence is measured between the incident ray and the normal."
-  },
-
-  {
-    "question": "Which point is represented by C in a spherical mirror?",
-    "options": [
-      "Centre of curvature",
-      "Pole",
-      "Focus",
-      "Normal"
-    ],
-    "answer": 0,
-    "type": "mcq",
-    "explanation": "C denotes the centre of curvature."
-  },
-
-  {
-    "question": "The speed of light in vacuum is approximately:",
-    "options": [
-      "3 × 10⁶ m/s",
-      "3 × 10⁷ m/s",
-      "3 × 10⁸ m/s",
-      "3 × 10⁹ m/s"
-    ],
-    "answer": 2,
-    "type": "mcq",
-    "explanation": "The speed of light in vacuum is about 3 × 10⁸ m/s."
-  },
-
-  {
-    "question": "A real image is generally:",
-    "options": [
-      "Erect",
-      "Inverted",
-      "Laterally inverted only",
-      "Always magnified"
+      "Angle of reflection",
+      "Angle of refraction",
+      "Angle of deviation"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "Real images are inverted."
+    "explanation": "The angle between the reflected ray and the normal is the angle of reflection."
   },
 
   {
-    "question": "A concave mirror has a reflecting surface that:",
+    "question": "Which statement is true about a real image?",
     "options": [
-      "Bulges outward",
-      "Curves inward",
-      "Is perfectly flat",
-      "Has no reflecting surface"
+      "It is always erect",
+      "It can be obtained on a screen",
+      "It is always virtual",
+      "It cannot be projected"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "The reflecting surface of a concave mirror curves inward."
+    "explanation": "A real image can be obtained on a screen."
   },
 
   {
-    "question": "The image formed by a plane mirror is:",
+    "question": "A plane mirror forms an image that is:",
     "options": [
       "Real and inverted",
       "Virtual and erect",
@@ -434,16 +119,335 @@ window.objectiveData = [
   },
 
   {
-    "question": "A real image is formed when reflected or refracted light rays:",
+    "question": "Assertion (A): A real image is generally inverted.<br>Reason (R): A real image is formed when light rays actually meet.",
     "options": [
-      "Actually meet",
-      "Appear to meet",
-      "Never meet",
-      "Become parallel"
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "subtype": "assertion_reason",
+    "explanation": "Both statements are true, but R does not directly explain the orientation."
+  },
+
+  {
+    "question": "Which type of image can be obtained on a screen?",
+    "options": [
+      "Virtual image",
+      "Real image",
+      "Upright image",
+      "Laterally inverted image"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "A real image can be obtained on a screen."
+  },
+
+  {
+    "question": "Assertion (A): The angle of incidence is equal to the angle of reflection.<br>Reason (R): The incident ray, normal and reflected ray lie in the same plane.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "subtype": "assertion_reason",
+    "explanation": "Both are true laws of reflection, but R does not explain the equality of the angles."
+  },
+
+  {
+    "question": "What is the focal length of a spherical mirror?",
+    "options": [
+      "Distance between C and R",
+      "Distance between P and C",
+      "Distance between P and F",
+      "Distance between F and C"
+    ],
+    "answer": 2,
+    "type": "mcq",
+    "explanation": "Focal length is the distance between the pole P and focus F."
+  },
+
+  {
+    "question": "Assertion (A): The normal is perpendicular to the reflecting surface at the point of incidence.<br>Reason (R): The angle of incidence is measured between the incident ray and the normal.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "subtype": "assertion_reason",
+    "explanation": "Both statements are true, but R does not explain why the normal is perpendicular."
+  },
+
+  {
+    "question": "Assertion (A): A concave mirror has a reflecting surface that curves inward.<br>Reason (R): A convex mirror has a reflecting surface that bulges outward.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "subtype": "assertion_reason",
+    "explanation": "Both statements are true, but R is not the explanation of A."
+  },
+
+  {
+    "question": "The normal at the point of incidence is drawn:",
+    "options": [
+      "Parallel to the mirror",
+      "Perpendicular to the reflecting surface",
+      "Along the incident ray",
+      "Along the reflected ray"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "The normal is perpendicular to the reflecting surface at the point of incidence."
+  },
+
+  {
+    "question": "Assertion (A): The focal length is the distance between the pole and focus of a spherical mirror.<br>Reason (R): The centre of curvature is the centre of the sphere of which the mirror is a part.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "subtype": "assertion_reason",
+    "explanation": "Both statements are true, but R does not explain the definition of focal length."
+  },
+
+  {
+    "question": "Which property of light means that it travels in a straight line?",
+    "options": [
+      "Reflection",
+      "Refraction",
+      "Rectilinear propagation",
+      "Dispersion"
+    ],
+    "answer": 2,
+    "type": "mcq",
+    "explanation": "Rectilinear propagation means that light travels in a straight line."
+  },
+
+  {
+    "question": "The principal axis of a spherical mirror is the line joining:",
+    "options": [
+      "Focus and object",
+      "Pole and centre of curvature",
+      "Pole and image",
+      "Focus and image"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "The principal axis passes through the pole and centre of curvature."
+  },
+
+  {
+    "question": "Assertion (A): A plane mirror forms a laterally inverted image.<br>Reason (R): In lateral inversion, the left and right sides appear interchanged.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
     ],
     "answer": 0,
     "type": "mcq",
-    "explanation": "A real image is formed when the light rays actually meet."
+    "subtype": "assertion_reason",
+    "explanation": "Both A and R are true, and R correctly explains A."
+  },
+
+  {
+    "question": "The ray of light that falls on a reflecting surface is called the ________.",
+    "options": [
+      "reflected ray",
+      "normal",
+      "incident ray",
+      "principal axis"
+    ],
+    "answer": 2,
+    "type": "mcq",
+    "explanation": "The incident ray is the ray that falls on the reflecting surface."
+  },
+
+  {
+    "question": "A convex mirror has a reflecting surface that:",
+    "options": [
+      "Curves inward",
+      "Bulges outward",
+      "Is perfectly flat",
+      "Has no curvature"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "A convex mirror has an outward-bulging reflecting surface."
+  },
+
+  {
+    "question": "The geometric centre of a spherical mirror is called the:",
+    "options": [
+      "Focus",
+      "Pole",
+      "Centre of curvature",
+      "Principal axis"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "The pole is the geometric centre of a spherical mirror."
+  },
+
+  {
+    "question": "According to the law of reflection, the angle of incidence is ________ the angle of reflection.",
+    "options": [
+      "greater than",
+      "less than",
+      "twice",
+      "equal to"
+    ],
+    "answer": 3,
+    "type": "mcq",
+    "explanation": "According to the law of reflection, angle of incidence = angle of reflection."
+  },
+
+  {
+    "question": "Assertion (A): A real image can be obtained on a screen.<br>Reason (R): A real image is formed when reflected or refracted light rays actually meet.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 0,
+    "type": "mcq",
+    "subtype": "assertion_reason",
+    "explanation": "Both A and R are true, and R correctly explains A."
+  },
+
+  {
+    "question": "The focus is the point where rays parallel to the principal axis:",
+    "options": [
+      "Meet or appear to diverge from after reflection",
+      "Always stop",
+      "Become absorbed",
+      "Turn into sound"
+    ],
+    "answer": 0,
+    "type": "mcq",
+    "explanation": "The focus is the point where parallel rays meet or appear to diverge from after reflection."
+  },
+
+  {
+    "question": "What is reflection of light?",
+    "options": [
+      "Bending of light",
+      "Bouncing back of light",
+      "Splitting of light",
+      "Stopping of light"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "Reflection is the bouncing back of light into the same medium."
+  },
+
+  {
+    "question": "The laws of reflection apply to:",
+    "options": [
+      "Plane mirrors only",
+      "Spherical mirrors only",
+      "Both plane and spherical mirrors",
+      "Only concave mirrors"
+    ],
+    "answer": 2,
+    "type": "mcq",
+    "explanation": "The laws of reflection apply to both plane and spherical mirrors."
+  },
+
+  {
+    "question": "Which point is represented by C in a spherical mirror?",
+    "options": [
+      "Centre of curvature",
+      "Pole",
+      "Focus",
+      "Normal"
+    ],
+    "answer": 0,
+    "type": "mcq",
+    "explanation": "C represents the centre of curvature."
+  },
+
+  {
+    "question": "What is the speed of light in a vacuum?",
+    "options": [
+      "3 × 10⁶ m/s",
+      "3 × 10⁷ m/s",
+      "3 × 10⁸ m/s",
+      "3 × 10⁹ m/s"
+    ],
+    "answer": 2,
+    "type": "mcq",
+    "explanation": "The speed of light in vacuum is 3 × 10⁸ m/s."
+  },
+
+  {
+    "question": "The incident ray, normal and reflected ray at the point of incidence lie:",
+    "options": [
+      "In different planes",
+      "In the same plane",
+      "Only on the mirror",
+      "At right angles to one another"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "The incident ray, normal and reflected ray lie in the same plane."
+  },
+
+  {
+    "question": "A mirror with a spherical reflecting surface is called a:",
+    "options": [
+      "Plane mirror",
+      "Spherical mirror",
+      "Glass slab",
+      "Prism"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "A spherical mirror has a reflecting surface that forms part of a sphere."
+  },
+
+  {
+    "question": "A virtual image is formed when light rays:",
+    "options": [
+      "Actually meet",
+      "Appear to meet when extended backward",
+      "Stop at the mirror",
+      "Become perpendicular"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "A virtual image is formed when rays appear to meet when extended backward."
+  },
+
+  {
+    "question": "The ray that bounces back from a reflecting surface is called the:",
+    "options": [
+      "Incident ray",
+      "Reflected ray",
+      "Normal",
+      "Principal axis"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "The reflected ray is the ray that bounces back from a reflecting surface."
   },
 
   {
@@ -451,25 +455,25 @@ window.objectiveData = [
     "options": [
       "Distance between P and F",
       "Radius of the sphere of which the mirror is a part",
-      "Diameter of the mirror",
-      "Length of the principal axis"
+      "Width of the mirror",
+      "Distance between object and image"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "The radius of curvature (R) is the radius of the sphere of which the mirror is a part."
+    "explanation": "Radius of curvature is the radius of the sphere of which the mirror is a part."
   },
 
   {
-    "question": "Light is a form of energy that produces the sensation of:",
+    "question": "Light is a form of energy that helps us to have the sensation of ________.",
     "options": [
-      "Hearing",
-      "Vision",
-      "Smell",
-      "Taste"
+      "sound",
+      "vision",
+      "smell",
+      "taste"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "Light is a form of energy that produces the sensation of vision in our eyes."
+    "explanation": "Light produces the sensation of vision in our eyes."
   },
 
   {
@@ -482,7 +486,7 @@ window.objectiveData = [
     ],
     "answer": 2,
     "type": "mcq",
-    "explanation": "F denotes the focus."
+    "explanation": "F represents the focus."
   },
 
   {
@@ -495,98 +499,86 @@ window.objectiveData = [
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "The focus or focal point lies on the principal axis."
+    "explanation": "The focus lies on the principal axis."
   },
 
   {
-    "question": "A virtual image is generally:",
+    "question": "A real image is formed when reflected or refracted rays:",
     "options": [
-      "Inverted",
-      "Erect",
-      "Always smaller",
-      "Always real"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "Virtual images are upright or erect."
-  },
-
-  {
-    "question": "In a plane mirror, the image is formed:",
-    "options": [
-      "At the mirror surface",
-      "As far behind the mirror as the object is in front",
-      "Twice as far behind the mirror",
-      "At the focus"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "Image distance behind a plane mirror equals object distance in front of it."
-  },
-
-  {
-    "question": "The focal length of a spherical mirror is the distance between:",
-    "options": [
-      "Pole and centre of curvature",
-      "Pole and focus",
-      "Focus and centre of curvature",
-      "Object and image"
-    ],
-    "answer": 1,
-    "type": "mcq",
-    "explanation": "The focal length (f) is the distance between the pole (P) and focus (F)."
-  },
-
-  {
-    "question": "Which statement is true for a real image?",
-    "options": [
-      "Light rays actually meet",
-      "Light rays only appear to meet",
-      "It is always erect",
-      "It cannot be obtained on a screen"
+      "Actually meet",
+      "Appear to meet",
+      "Never meet",
+      "Become parallel"
     ],
     "answer": 0,
     "type": "mcq",
-    "explanation": "A real image forms where light rays actually meet."
+    "explanation": "A real image is formed when light rays actually meet."
   },
 
   {
-    "question": "A ray of light that falls on a reflecting surface is called the:",
+    "question": "Which statement is true about a virtual image?",
     "options": [
-      "Normal ray",
-      "Reflected ray",
-      "Incident ray",
-      "Refracted ray"
-    ],
-    "answer": 2,
-    "type": "mcq",
-    "explanation": "The incident ray is the ray that falls on the reflecting surface."
-  },
-
-  {
-    "question": "A mirror having a spherical reflecting surface is called a:",
-    "options": [
-      "Plane mirror",
-      "Spherical mirror",
-      "Glass slab",
-      "Prism"
+      "It can always be obtained on a screen",
+      "It is generally erect",
+      "It is always inverted",
+      "It is formed by actual meeting of rays"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "A spherical mirror has a reflecting surface that is part of a sphere."
+    "explanation": "A virtual image is generally erect and cannot be obtained on a screen."
   },
 
   {
-    "question": "A convex mirror has a reflecting surface that:",
+    "question": "Which statement correctly describes a plane-mirror image?",
     "options": [
-      "Curves inward",
-      "Bulges outward",
-      "Is flat",
-      "Forms a hollow surface inward"
+      "Real, inverted and enlarged",
+      "Virtual, erect, laterally inverted and same size",
+      "Virtual, inverted and diminished",
+      "Real, erect and same size"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "The reflecting surface of a convex mirror bulges outward."
+    "explanation": "A plane mirror forms a virtual, erect, laterally inverted image of the same size."
+  },
+
+  {
+    "question": "Assertion (A): A convex mirror has a reflecting surface that bulges outward.<br>Reason (R): The principal axis is the line joining the pole and the centre of curvature.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "subtype": "assertion_reason",
+    "explanation": "Both A and R are true, but R does not explain A."
+  },
+
+  {
+    "question": "What is the angle of incidence?",
+    "options": [
+      "The angle between the reflected ray and the surface",
+      "The angle between the incident ray and the normal",
+      "The angle between the normal and the surface",
+      "The angle between the incident and reflected rays"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "The angle of incidence is measured between the incident ray and the normal."
+  },
+
+  {
+    "question": "Which feature of a plane-mirror image is called lateral inversion?",
+    "options": [
+      "Top and bottom are interchanged",
+      "Left and right are interchanged",
+      "Image becomes smaller",
+      "Image becomes real"
+    ],
+    "answer": 1,
+    "type": "mcq",
+    "explanation": "Lateral inversion means the left and right sides appear interchanged."
   },
 
   {
@@ -595,63 +587,77 @@ window.objectiveData = [
       "Plane and curved",
       "Concave and convex",
       "Real and virtual",
-      "Rough and smooth"
+      "Smooth and rough"
     ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "Spherical mirrors are of two types: concave and convex."
+    "explanation": "The two types of spherical mirrors are concave and convex mirrors."
   },
 
   {
-    "question": "A student stands 2 m in front of a plane mirror. The image is formed:",
+    "question": "If an object is 3 m in front of a plane mirror, its image is formed:",
     "options": [
-      "2 m behind the mirror",
-      "1 m behind the mirror",
-      "4 m behind the mirror",
+      "1.5 m behind the mirror",
+      "3 m behind the mirror",
+      "6 m behind the mirror",
       "On the mirror surface"
     ],
-    "answer": 0,
-    "type": "mcq",
-    "explanation": "For a plane mirror, image distance equals object distance."
-  },
-
-  {
-    "question": "The angle between the reflected ray and the normal is called:",
-    "options": [
-      "Angle of incidence",
-      "Angle of reflection",
-      "Angle of refraction",
-      "Right angle"
-    ],
     "answer": 1,
     "type": "mcq",
-    "explanation": "The angle of reflection is measured between the reflected ray and the normal."
+    "explanation": "The image is formed as far behind the mirror as the object is in front."
   },
 
   {
-    "question": "Which combination is correct for a plane mirror?",
+    "question": "Which of the following is NOT a property of a plane-mirror image?",
     "options": [
-      "Same-size image and equal object/image distances from the mirror",
-      "Enlarged image and unequal distances",
-      "Real image and equal distances",
-      "Inverted image and unequal distances"
+      "Virtual",
+      "Erect",
+      "Same size",
+      "Can be obtained on a screen"
     ],
-    "answer": 0,
+    "answer": 3,
     "type": "mcq",
-    "explanation": "A plane mirror gives a same-size image at an equal distance behind the mirror."
+    "explanation": "A plane-mirror image is virtual and cannot be obtained on a screen."
   },
 
   {
-    "question": "According to the first law of reflection, the angle of incidence is:",
+    "question": "In a plane mirror, the image is formed ________ the mirror as the object is in front of it.",
     "options": [
-      "Greater than the angle of reflection",
-      "Less than the angle of reflection",
-      "Equal to the angle of reflection",
-      "Always 90°"
+      "twice as far behind",
+      "half as far behind",
+      "at the same distance behind",
+      "very close to"
     ],
     "answer": 2,
     "type": "mcq",
-    "explanation": "For reflection, angle of incidence = angle of reflection."
+    "explanation": "For a plane mirror, image distance behind the mirror equals object distance in front."
+  },
+
+  {
+    "question": "Assertion (A): A virtual image cannot be obtained on a screen.<br>Reason (R): In a virtual image, light rays only appear to meet when extended backward.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "answer": 0,
+    "type": "mcq",
+    "subtype": "assertion_reason",
+    "explanation": "Both A and R are true, and R correctly explains A."
+  },
+
+  {
+    "question": "Which spherical mirror has a reflecting surface that curves inward?",
+    "options": [
+      "Plane mirror",
+      "Convex mirror",
+      "Concave mirror",
+      "Flat mirror"
+    ],
+    "answer": 2,
+    "type": "mcq",
+    "explanation": "A concave mirror has an inward-curved reflecting surface."
   }
 
 ];
