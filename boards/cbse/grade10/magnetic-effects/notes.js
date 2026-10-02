@@ -467,7 +467,7 @@ p{line-height:1.38;}
 <li>The end pointing towards north is called <b>north seeking or north pole</b>. The end pointing towards south is called <b>south seeking or south pole</b>.</li>
 <li><b>Like poles repel</b>, while <b>unlike poles</b> of magnets attract each other.</li>
 </ul>
-<div class="figure"><img alt="Magnetic Compass" class="img-compass" src="/images/cbse/class%2010/magnetic-effects/top_view_magnetic_compass.svg"/><div class="figcap"></div></div>
+<div class="figure"><img alt="Magnetic Compass" class="img-compass" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/top_view_magnetic_compass.svg"/><div class="figcap"></div></div>
 </div>
 </div><div class="block blue" id="mag-topic-2">
 <div class="head">Magnetic Field</div>
@@ -492,7 +492,7 @@ p{line-height:1.38;}
 <li><b>No two field-lines are found to cross each other.</b><div class="callout">If two field-lines crossed each other, then at the point of intersection the compass needle would point towards two directions, which is not possible.</div></li>
 </ol>
 </div>
-<div class="figure"><img alt="Field lines around a bar magnet" class="img-field" src="/images/cbse/class%2010/magnetic-effects/barmagnet.png"/><div class="figcap"></div></div>
+<div class="figure"><img alt="Field lines around a bar magnet" class="img-field" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/barmagnet.png"/><div class="figcap"></div></div>
 </div>
 </div><div class="block yellow" id="mag-topic-4">
 <div class="head">Right-Hand Thumb Rule (Maxwell’s Corkscrew Rule)</div>
@@ -510,7 +510,7 @@ p{line-height:1.38;}
 </div>
 </div>
 <div class="figure thumb-diagram">
-<img alt="Right-Hand Thumb Rule" class="img-thumb" src="/images/cbse/class%2010/magnetic-effects/right-hand-thumb-rule1.png"/>
+<img alt="Right-Hand Thumb Rule" class="img-thumb" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/right-hand-thumb-rule1.png"/>
 </div>
 </div>
 </div>
@@ -522,7 +522,7 @@ p{line-height:1.38;}
 <li>The magnetic field produced by a current-carrying wire at a given point depends directly on the <b>current</b>.</li>
 <li>The magnetic field produced by a given current in the conductor <b>decreases as the distance from it increases</b>.</li>
 </ul>
-<div class="figure"><img alt="Magnetic field due to straight current-carrying conductor" class="img-wire" src="/images/cbse/class%2010/magnetic-effects/filed-due-to-current-carrying-wire.png"/></div>
+<div class="figure"><img alt="Magnetic field due to straight current-carrying conductor" class="img-wire" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/filed-due-to-current-carrying-wire.png"/></div>
 </div>
 </div><div class="block green stack-wide" id="mag-topic-6">
 <div class="head">Magnetic Field due to a current through a circular Loop</div>
@@ -533,7 +533,7 @@ p{line-height:1.38;}
 <li>Every point on the wire carrying current would give rise to the magnetic field appearing as straight lines at the center of the loop.</li>
 <li>By applying the right-hand thumb rule, it is easy to check that every section of the wire contributes to the magnetic field lines in the <b>same direction within the loop</b>.</li>
 </ul>
-<div class="figure"><img alt="Magnetic field due to current through circular loop" class="img-loop" src="/images/cbse/class%2010/magnetic-effects/field-due-to-current-carrying-circular-loop1.png"/></div>
+<div class="figure"><img alt="Magnetic field due to current through circular loop" class="img-loop" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/field-due-to-current-carrying-circular-loop1.png"/></div>
 </div>
 </div><div class="block green stack-wide" id="mag-topic-7">
 <div class="head">Solenoid &amp; Magnetic Field due to a Current in a Solenoid</div>
@@ -545,7 +545,7 @@ p{line-height:1.38;}
 <li>The field lines inside the solenoid are in the form of <b>parallel straight lines</b>.</li>
 <li>This indicates that the magnetic field is the same at all points inside the solenoid. That is, the field is <b>uniform inside the solenoid</b>.</li>
 </ul>
-<div class="figure"><img alt="Solenoid magnetic field" class="img-solenoid" src="/images/cbse/class%2010/magnetic-effects/solenoid1.png"/></div>
+<div class="figure"><img alt="Solenoid magnetic field" class="img-solenoid" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/solenoid1.png"/></div>
 </div>
 </div><div class="block pink" id="mag-topic-8">
 <div class="head">Electromagnet</div>
@@ -562,7 +562,7 @@ p{line-height:1.38;}
 </ol>
 </div>
 <div class="rule-feature fleming-feature">
-<div class="figure"><img alt="Fleming's Left Hand Rule" class="img-fleming" src="/images/cbse/class%2010/magnetic-effects/fleming-left-hand-rule.png"/></div>
+<div class="figure"><img alt="Fleming's Left Hand Rule" class="img-fleming" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/fleming-left-hand-rule.png"/></div>
 <div class="rule-cards three">
 <div class="rule-card cyan">
 <div class="rule-card-head">Forefinger</div>
@@ -587,7 +587,7 @@ p{line-height:1.38;}
 <li>A current-carrying rod experiences a force perpendicular to its length and the magnetic field.</li>
 <li>When current flows through an aluminium rod placed between poles of a magnet, it experiences a force due to magnetic field and gets displaced towards <b>left</b>.</li>
 </ul>
-<div class="figure"><img alt="Force on current-carrying conductor" class="img-force" src="/images/cbse/class%2010/magnetic-effects/force-on-current-carrying-wire-placed-in-field1.png"/><div class="figcap"></div></div>
+<div class="figure"><img alt="Force on current-carrying conductor" class="img-force" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/force-on-current-carrying-wire-placed-in-field1.png"/><div class="figcap"></div></div>
 <table class="force-table">
 <tr><th>Point</th><th>Condition</th><th>Effect / Direction</th></tr>
 <tr><td class="group">The direction of force depends</td><td>1. Direction of current<br/>2. Direction of magnetic field</td><td>Changing either one changes the force direction.</td></tr>
@@ -613,7 +613,7 @@ p{line-height:1.38;}
 <li>Through the <b>main switch</b>, it is connected to the line wires that supply the separate circuits in the house.</li>
 </ul>
 </div>
-<div class="figure"><img alt="Domestic electric circuit" class="img-domestic" src="/images/cbse/class%2010/magnetic-effects/domestic-circuits1.png"/><div class="figcap">Common domestic electric circuit.</div></div>
+<div class="figure"><img alt="Domestic electric circuit" class="img-domestic" src="https://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/mainhttps://raw.githubusercontent.com/sudarshanreddy22/physics4fun/refs/heads/main/images/cbse/class%2010/magnetic-effects/domestic-circuits1.png"/><div class="figcap">Common domestic electric circuit.</div></div>
 </div>
 </div><div class="block blue" id="mag-topic-13">
 <div class="head">Wires - 3 wires</div>
