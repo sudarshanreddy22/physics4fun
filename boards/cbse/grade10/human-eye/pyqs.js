@@ -136,7 +136,7 @@ window.pyqsData.mcq = [
     "year": "2025"
   },
   {
-    "question": "In the given figure the angle of incidence and the angle of deviation respectively are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram--q03.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) 1 and 5 ( B) 7 and 6 ( C) 7 and 4 ( D) 1 and 6",
+    "question": "In the given figure the angle of incidence and the angle of deviation respectively are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2025-q03.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) 1 and 5 ( B) 7 and 6 ( C) 7 and 4 ( D) 1 and 6",
     "options": {
       "A": "",
       "B": "",
@@ -208,7 +208,7 @@ window.pyqsData.mcq = [
     "year": "2025"
   },
   {
-    "question": "Consider the following ray diagram:<div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram--q09.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>Here, the angle of incidence and angle of deviation respectively are (A) a and e ( B) b and d ( C) b and e ( D) a and f",
+    "question": "Consider the following ray diagram:<div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2025-q09.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>Here, the angle of incidence and angle of deviation respectively are (A) a and e ( B) b and d ( C) b and e ( D) a and f",
     "options": {
       "A": "",
       "B": "",
@@ -292,7 +292,7 @@ window.pyqsData.mcq = [
     "year": "2021C"
   },
   {
-    "question": "In the given diagram showing refraction of a narrow beam of a monochromatic light through a glass prism, the angles marked ∠ 1 and ∠ 2 respectively are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-c-q16.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) angle of incidence and angle of refraction ( b) angle of incidence and angle of emergence (c) angle of emergence and angle of refraction ( d) angle of emergence and angle of deviation",
+    "question": "In the given diagram showing refraction of a narrow beam of a monochromatic light through a glass prism, the angles marked ∠ 1 and ∠ 2 respectively are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2021c-q16.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) angle of incidence and angle of refraction ( b) angle of incidence and angle of emergence (c) angle of emergence and angle of refraction ( d) angle of emergence and angle of deviation",
     "options": {
       "A": "",
       "B": "",
@@ -352,7 +352,7 @@ window.pyqsData.mcq = [
     "year": "2021"
   },
   {
-    "question": "In the diagram given below, X and Y are the end colours of the spectrum of white light. The colour of 'Y' represents the <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-dispersion-spectrum--q21.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
+    "question": "In the diagram given below, X and Y are the end colours of the spectrum of white light. The colour of 'Y' represents the <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-dispersion-spectrum-2021-q21.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
       "A": "colour of sky as seen from earth during the day.",
       "B": "colour of the sky as seen from the moon.",
@@ -424,7 +424,7 @@ window.pyqsData.mcq = [
     "year": "2017C"
   },
   {
-    "question": "Select the diagram in which the path of a ray passing through a glass prism is correctly drawn <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-ray-diagram-c-q27.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) A ( b) B ( c) C ( d) D",
+    "question": "Select the diagram in which the path of a ray passing through a glass prism is correctly drawn <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-ray-diagram-2017c-q27.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) A ( b) B ( c) C ( d) D",
     "options": {
       "A": "",
       "B": "",
@@ -436,7 +436,7 @@ window.pyqsData.mcq = [
     "year": "2017C"
   },
   {
-    "question": "Study the following diagram and select the option having correctly marked angles <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-c-q28.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ i, ∠ A, ∠ D ( b) ∠ i, ∠ r, ∠ D ( c) ∠ i, ∠ e, ∠ A ( d) ∠ r, ∠ e, ∠ D",
+    "question": "Study the following diagram and select the option having correctly marked angles <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017c-q28.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ i, ∠ A, ∠ D ( b) ∠ i, ∠ r, ∠ D ( c) ∠ i, ∠ e, ∠ A ( d) ∠ r, ∠ e, ∠ D",
     "options": {
       "A": "",
       "B": "",
@@ -484,7 +484,7 @@ window.pyqsData.mcq = [
     "year": "2017"
   },
   {
-    "question": "Study the following ray diagram: In this diagram, the angle of incidence, the angle of emergence and the angle of deviation respectively have been represented by <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram--q32.gif\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) y, p, z ( b) x, q, z ( c) p, y, z ( d) p, z, y",
+    "question": "Study the following ray diagram: In this diagram, the angle of incidence, the angle of emergence and the angle of deviation respectively have been represented by <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q32.gif\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) y, p, z ( b) x, q, z ( c) p, y, z ( d) p, z, y",
     "options": {
       "A": "",
       "B": "",
@@ -508,7 +508,7 @@ window.pyqsData.mcq = [
     "year": "2017"
   },
   {
-    "question": "In the following diagram the correctly marked angles are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram--q34.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ A and ∠ e ( b) ∠ i, ∠ A and ∠ D ( c) ∠ A, ∠ r and ∠ e ( d) ∠ A, ∠ r and ∠ D",
+    "question": "In the following diagram the correctly marked angles are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q34.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ A and ∠ e ( b) ∠ i, ∠ A and ∠ D ( c) ∠ A, ∠ r and ∠ e ( d) ∠ A, ∠ r and ∠ D",
     "options": {
       "A": "",
       "B": "",
@@ -520,7 +520,7 @@ window.pyqsData.mcq = [
     "year": "2017"
   },
   {
-    "question": "In the following diagram, the correctly marked angles are <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram--q35.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) All ( B) Only ∠ i and ∠ A ( C) ∠ i, ∠ r and ∠ A ( D) ∠ i, ∠ A and ∠ D",
+    "question": "In the following diagram, the correctly marked angles are <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q35.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) All ( B) Only ∠ i and ∠ A ( C) ∠ i, ∠ r and ∠ A ( D) ∠ i, ∠ A and ∠ D",
     "options": {
       "A": "",
       "B": "",
@@ -532,7 +532,7 @@ window.pyqsData.mcq = [
     "year": "2017"
   },
   {
-    "question": "In which of the following diagrams is the path of a ray of light passing through a glass prism shown correctly? ) <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-ray-diagram--q36.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) I ( B) II ( C) III ( D) IV",
+    "question": "In which of the following diagrams is the path of a ray of light passing through a glass prism shown correctly? ) <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-ray-diagram-2017-q36.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) I ( B) II ( C) III ( D) IV",
     "options": {
       "A": "",
       "B": "",
@@ -556,7 +556,7 @@ window.pyqsData.mcq = [
     "year": "2016"
   },
   {
-    "question": "In the following ray diagram the correctly marked angle are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram--q38.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ i and ∠ e ( b) ∠ A and ∠ D ( c) ∠ i, ∠ e and ∠ D ( d) ∠r, ∠A and ∠D",
+    "question": "In the following ray diagram the correctly marked angle are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2016-q38.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ i and ∠ e ( b) ∠ A and ∠ D ( c) ∠ i, ∠ e and ∠ D ( d) ∠r, ∠A and ∠D",
     "options": {
       "A": "",
       "B": "",
@@ -580,7 +580,7 @@ window.pyqsData.mcq = [
     "year": "2016"
   },
   {
-    "question": "Study the following figure in which a student has marked the angle of incidence ( ∠ i), angle of refraction ( ∠ r), angle of emergence ( ∠ e), angle of prism ( ∠ A) and the angle of deviation ( ∠ D). The correctly marked angles are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram--q40.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ A and ∠ i ( b) ∠ A, ∠ i and ∠ r ( c) ∠ A, ∠ i, ∠ e and ∠ D ( d) ∠ A, ∠ i, ∠ r and ∠ D",
+    "question": "Study the following figure in which a student has marked the angle of incidence ( ∠ i), angle of refraction ( ∠ r), angle of emergence ( ∠ e), angle of prism ( ∠ A) and the angle of deviation ( ∠ D). The correctly marked angles are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2016-q40.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ A and ∠ i ( b) ∠ A, ∠ i and ∠ r ( c) ∠ A, ∠ i, ∠ e and ∠ D ( d) ∠ A, ∠ i, ∠ r and ∠ D",
     "options": {
       "A": "",
       "B": "",
@@ -616,7 +616,7 @@ window.pyqsData.mcq = [
     "year": "2016"
   },
   {
-    "question": "After tracing the path of a ray of light through a glass prism a student marked the angle of incidence ( ∠ i), angle of refraction ( ∠ r), angle of emergence ( ∠ e) and the angle of deviation ( ∠ D) as shown in the diagram. The correctly marked angles are: ( <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram--q43-1.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div><div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram--q43-2.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) ∠ i and ∠ r ( B) ∠ i and ∠ e ( C) ∠ i, ∠ e and ∠ D ( D) ∠ i, ∠ r and ∠ e",
+    "question": "After tracing the path of a ray of light through a glass prism a student marked the angle of incidence ( ∠ i), angle of refraction ( ∠ r), angle of emergence ( ∠ e) and the angle of deviation ( ∠ D) as shown in the diagram. The correctly marked angles are: ( <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2015-q43-1.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div><div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2015-q43-2.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) ∠ i and ∠ r ( B) ∠ i and ∠ e ( C) ∠ i, ∠ e and ∠ D ( D) ∠ i, ∠ r and ∠ e",
     "options": {
       "A": "",
       "B": "",
@@ -748,7 +748,7 @@ window.pyqsData.mcq = [
     "year": "2023C"
   },
   {
-    "question": "In the following diagram showing dispersion of white light by a glass prism, the colours ‘P’ and ‘Q’ respectively are – <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-dispersion-spectrum--q54.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>Red and Violet ( b) Violet and Red ( c) Red and Blue ( d) Orange and Green",
+    "question": "In the following diagram showing dispersion of white light by a glass prism, the colours ‘P’ and ‘Q’ respectively are – <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-dispersion-spectrum-2023-q54.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>Red and Violet ( b) Violet and Red ( c) Red and Blue ( d) Orange and Green",
     "options": {
       "A": "",
       "B": "",
@@ -1423,7 +1423,7 @@ window.pyqsData.three = [
     "year": "2024C"
   },
   {
-    "question": "(a) Study the following ray diagram and name the angles given below. <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/three-question-diagram-2024c-q08.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(b) In this diagram, if, what is the value of ? Give reason to justify your answer",
+    "question": "(a) Study the following ray diagram and name the angles given below.<br><div style=\"text-align:center;margin:2px 0 0 0;\">∠PEN, ∠FEN′, ∠SFM and ∠FGH</div><div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/three-question-diagram-2024c-q08.png\" alt=\"Prism ray diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(b) In this diagram, if <span style=\"display:inline-block;vertical-align:middle;text-align:center;line-height:1.05;margin:0 3px;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 4px;\">sin ∠PEN</span><span style=\"display:block;padding:0 4px;\">sin ∠FEN′</span></span> = <span style=\"display:inline-block;vertical-align:middle;text-align:center;line-height:1.05;margin:0 3px;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 4px;\">3</span><span style=\"display:block;padding:0 4px;\">2</span></span>, what is the value of <span style=\"display:inline-block;vertical-align:middle;text-align:center;line-height:1.05;margin:0 3px;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 4px;\">sin ∠SFM</span><span style=\"display:block;padding:0 4px;\">sin ∠EFM′</span></span>? Give reason to justify your answer.",
     "answer": "",
     "set": "",
     "year": "2024C"
