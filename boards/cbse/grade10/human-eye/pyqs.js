@@ -51,8 +51,7 @@ window.pyqsData.mcq = [
     "year": "2026"
   },
   {
-    "question": "Observe the given ray diagram showing refraction through a prism and choose the correct option for colour of rays 1 and 2:",
-    "imageWidth": "42%",
+    "question": "Observe the given ray diagram showing refraction through a prism and choose the correct option for colour of rays 1 and 2:<div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-colour-rays-2026-q07.png\" alt=\"Dispersion of white light through a prism showing rays 1 and 2\" style=\"display:block;max-width:40%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
       "A": "Ray 1: Blue | Ray 2: Red",
       "B": "Ray 1: Green | Ray 2: Yellow",
@@ -112,60 +111,60 @@ window.pyqsData.mcq = [
     "year": "2026"
   },
   {
-    "question": "An old person is suffering from an eye defect caused by weakening of ciliary muscles and diminishing flexibility of the eye lens. If the defect of vision is 'a' which can be corrected by lens 'b', then 'a' and 'b' respectively are: (A) hypermetropia and convex lens ( B) presbyopia and bifocal lens (C) myopia and concave lens ( D) myopia and bifocal lens",
+    "question": "An old person is suffering from an eye defect caused by weakening of ciliary muscles and diminishing flexibility of the eye lens. If the defect of vision is 'a' which can be corrected by lens 'b', then 'a' and 'b' respectively are:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "hypermetropia and convex lens",
+      "B": "presbyopia and bifocal lens",
+      "C": "myopia and concave lens",
+      "D": "myopia and bifocal lens"
     },
     "answer": "",
     "set": "31/1/1",
     "year": "2025"
   },
   {
-    "question": "The phenomenon responsible for making the smoke particles visible when a beam of sunlight enters a smoke filled room through a narrow hole is: (A) scattering of light ( B) dispersion of light (C) reflection of light ( D) internal reflection of light",
+    "question": "The phenomenon responsible for making the smoke particles visible when a beam of sunlight enters a smoke filled room through a narrow hole is:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "scattering of light",
+      "B": "dispersion of light",
+      "C": "reflection of light",
+      "D": "internal reflection of light"
     },
     "answer": "",
     "set": "31/1/3",
     "year": "2025"
   },
   {
-    "question": "In the given figure the angle of incidence and the angle of deviation respectively are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2025-q03.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) 1 and 5 ( B) 7 and 6 ( C) 7 and 4 ( D) 1 and 6",
+    "question": "In the given figure the angle of incidence and the angle of deviation respectively are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2025-q03.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "1 and 5",
+      "B": "7 and 6",
+      "C": "7 and 4",
+      "D": "1 and 6"
     },
     "answer": "",
     "set": "31/2/1",
     "year": "2025"
   },
   {
-    "question": "The part of the human eye which can modify the curvature of the eye lens to some extent is: (A) Pupil ( B) Cornea ( C) Ciliary muscles ( D) Aqueous humour",
+    "question": "The part of the human eye which can modify the curvature of the eye lens to some extent is:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Pupil",
+      "B": "Cornea",
+      "C": "Ciliary muscles",
+      "D": "Aqueous humour"
     },
     "answer": "",
     "set": "31/2/3",
     "year": "2025"
   },
   {
-    "question": "When a beam of white light passes through a region of very fine dust particles, the colour of light that scatters the most in that region is: (A) red ( B) orange ( C) blue ( D) yellow",
+    "question": "When a beam of white light passes through a region of very fine dust particles, the colour of light that scatters the most in that region is:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "red",
+      "B": "orange",
+      "C": "blue",
+      "D": "yellow"
     },
     "answer": "",
     "set": "31/3/1",
@@ -184,72 +183,72 @@ window.pyqsData.mcq = [
     "year": "2025"
   },
   {
-    "question": "The possible way to restore clear vision of those people whose eyeball has elongated is the use of suitable (A) bifocal lens ( B) concave lens ( C) converging lens ( D) convex lens",
+    "question": "The possible way to restore clear vision of those people whose eyeball has elongated is the use of suitable",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "bifocal lens",
+      "B": "concave lens",
+      "C": "converging lens",
+      "D": "convex lens"
     },
     "answer": "",
     "set": "31/5/1",
     "year": "2025"
   },
   {
-    "question": "A boy while reading a book, keeps it much beyond 25 cm from his eyes. This defect of vision has arised because of (A) excessive curvature of the eye lens ( B) the focal length of the eye lens has increased (C) the eye ball has elongated ( D) the focal length of the eye lens has too small",
+    "question": "A boy while reading a book, keeps it much beyond 25 cm from his eyes. This defect of vision has arised because of",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "excessive curvature of the eye lens",
+      "B": "the focal length of the eye lens has increased",
+      "C": "the eye ball has elongated",
+      "D": "the focal length of the eye lens has too small"
     },
     "answer": "",
     "set": "31/5/2",
     "year": "2025"
   },
   {
-    "question": "Consider the following ray diagram:<div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2025-q09.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>Here, the angle of incidence and angle of deviation respectively are (A) a and e ( B) b and d ( C) b and e ( D) a and f",
+    "question": "Consider the following ray diagram:<div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2025-q09.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>Here, the angle of incidence and angle of deviation respectively are",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "a and e",
+      "B": "b and d",
+      "C": "b and e",
+      "D": "a and f"
     },
     "answer": "",
     "set": "31/5/3",
     "year": "2025"
   },
   {
-    "question": "The part of human eye which controls the amount of light entering into it. (A) Iris ( B) Cornea ( C) Ciliary muscles ( D) Pupil",
+    "question": "The part of human eye which controls the amount of light entering into it.",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Iris",
+      "B": "Cornea",
+      "C": "Ciliary muscles",
+      "D": "Pupil"
     },
     "answer": "",
     "set": "31/6/1",
     "year": "2025"
   },
   {
-    "question": "Most of the refraction for the light rays entering the eye occurs at (A) Iris ( B) Pupil ( C) Crystalline lens ( D) Outer surface of Cornea",
+    "question": "Most of the refraction for the light rays entering the eye occurs at",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Iris",
+      "B": "Pupil",
+      "C": "Crystalline lens",
+      "D": "Outer surface of Cornea"
     },
     "answer": "",
     "set": "31/6/2",
     "year": ""
   },
   {
-    "question": "The curvature of eye lens of human eye (A) is fixed ( B) can be increased (C) can be decreased ( D) increases or decreases as the case may be",
+    "question": "The curvature of eye lens of human eye",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "is fixed",
+      "B": "can be increased",
+      "C": "can be decreased",
+      "D": "increases or decreases as the case may be"
     },
     "answer": "",
     "set": "31/6/3",
@@ -268,12 +267,12 @@ window.pyqsData.mcq = [
     "year": "2025"
   },
   {
-    "question": "Which one of the following is the correct reason for twinkling of stars? (a) Atmospheric reflection of starlight ( b) Atmospheric refraction of starlight (c) Scattering of starlight ( d) Dispersion of starlight",
+    "question": "Which one of the following is the correct reason for twinkling of stars?",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Atmospheric reflection of starlight",
+      "B": "Atmospheric refraction of starlight",
+      "C": "Scattering of starlight",
+      "D": "Dispersion of starlight"
     },
     "answer": "",
     "set": "",
@@ -292,60 +291,60 @@ window.pyqsData.mcq = [
     "year": "2021C"
   },
   {
-    "question": "In the given diagram showing refraction of a narrow beam of a monochromatic light through a glass prism, the angles marked ∠ 1 and ∠ 2 respectively are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2021c-q16.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) angle of incidence and angle of refraction ( b) angle of incidence and angle of emergence (c) angle of emergence and angle of refraction ( d) angle of emergence and angle of deviation",
+    "question": "In the given diagram showing refraction of a narrow beam of a monochromatic light through a glass prism, the angles marked ∠ 1 and ∠ 2 respectively are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2021c-q16.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "angle of incidence and angle of refraction",
+      "B": "angle of incidence and angle of emergence",
+      "C": "angle of emergence and angle of refraction",
+      "D": "angle of emergence and angle of deviation"
     },
     "answer": "",
     "set": "",
     "year": "2021C"
   },
   {
-    "question": "Blue colour of clear sky is due to: (a) Refraction of light ( b) Reflection of light (c) Absorption of light ( d) Scattering of light",
+    "question": "Blue colour of clear sky is due to:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Refraction of light",
+      "B": "Reflection of light",
+      "C": "Absorption of light",
+      "D": "Scattering of light"
     },
     "answer": "",
     "set": "",
     "year": "2021C"
   },
   {
-    "question": "The apparent flattening of the Sun's disc at sunrise and sunset is due to (a) Dispersion of light ( b) Scattering of light (c) Atmospheric refraction of light ( d) Tyndall effect",
+    "question": "The apparent flattening of the Sun's disc at sunrise and sunset is due to",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Dispersion of light",
+      "B": "Scattering of light",
+      "C": "Atmospheric refraction of light",
+      "D": "Tyndall effect"
     },
     "answer": "",
     "set": "",
     "year": "2021C"
   },
   {
-    "question": "Consider the following statements. Very fine particles scatter mainly blue light. Advance sunrise and delayed sunset are due to atmospheric refraction. Violet light bends the least while red light bends the most when a beam of white light passes through a glass prism. The correct statement(s) is/ are: I only ( b) III only ( c) I and II ( d) II and III",
+    "question": "Consider the following statements:<br>I. Very fine particles scatter mainly blue light.<br>II. Advance sunrise and delayed sunset are due to atmospheric refraction.<br>III. Violet light bends the least while red light bends the most when a beam of white light passes through a glass prism.<br>The correct statement(s) is/are:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "I only",
+      "B": "III only",
+      "C": "I and II",
+      "D": "II and III"
     },
     "answer": "",
     "set": "",
     "year": "2021C"
   },
   {
-    "question": "Which of the following statements is not true for scattering of light? Colour of the scattered light depends on the size of particles of the atmosphere. Red light is least scattered in the atmosphere. Scattering of light takes place as various colours of white light travel with different speed in air. The fine particles in the atmospheric air scatter the blue light more strongly than red. So the scattered blue light enters our eyes.",
+    "question": "Which of the following statements is not true for scattering of light?",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Colour of the scattered light depends on the size of particles of the atmosphere.",
+      "B": "Red light is least scattered in the atmosphere.",
+      "C": "Scattering of light takes place as various colours of white light travel with different speed in air.",
+      "D": "The fine particles in the atmospheric air scatter the blue light more strongly than red. So the scattered blue light enters our eyes."
     },
     "answer": "",
     "set": "",
@@ -364,24 +363,24 @@ window.pyqsData.mcq = [
     "year": "2021"
   },
   {
-    "question": "Consider the following reasons for the reddish appearance of the sun at the sunrise or the sunset: A. Light from the sun near the horizon passes through thinner layers of air. B. Light from the sun covers larger distance of the earth’s atmosphere before reaching our eyes. C. Near the horizon, most of the blue light and shorter wavelengths are scattered away by the particles. D. Light from the sun near the horizon passes through thicker layers of air. The correct reasons are (a) A and C only ( b) B, C and D ( c) A and B only ( d) C and D only",
+    "question": "Consider the following reasons for the reddish appearance of the sun at the sunrise or the sunset: A. Light from the sun near the horizon passes through thinner layers of air. B. Light from the sun covers larger distance of the earth’s atmosphere before reaching our eyes. C. Near the horizon, most of the blue light and shorter wavelengths are scattered away by the particles. D. Light from the sun near the horizon passes through thicker layers of air. The correct reasons are",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "A and C only",
+      "B": "B, C and D",
+      "C": "A and B only",
+      "D": "C and D only"
     },
     "answer": "",
     "set": "",
     "year": "2020"
   },
   {
-    "question": "Person suffering from cataract has (a) elongated eyeball ( b) excessive curvature of eye lens (c) weakened ciliary muscles ( d) opaque eye lens",
+    "question": "Person suffering from cataract has",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "elongated eyeball",
+      "B": "excessive curvature of eye lens",
+      "C": "weakened ciliary muscles",
+      "D": "opaque eye lens"
     },
     "answer": "",
     "set": "",
@@ -400,48 +399,48 @@ window.pyqsData.mcq = [
     "year": "2020"
   },
   {
-    "question": "The image distance from the eye lens in the normal eye when we increase the distance of an object from the eye (A) increases ( B) decreases ( C) remains unchanged ( D) depends on the size of the eyeball",
+    "question": "The image distance from the eye lens in the normal eye when we increase the distance of an object from the eye",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "increases",
+      "B": "decreases",
+      "C": "remains unchanged",
+      "D": "depends on the size of the eyeball"
     },
     "answer": "",
     "set": "",
     "year": "2020"
   },
   {
-    "question": "A student traces the path of a ray of light through a glass prism for different angles of incidence. He analysis each diagram and draws the following conclusion: I. On entering prism, the light ray bends towards its base. II. Light ray suffers refraction at the point of incidence and point of emergence while passing through the prism. III. Emergent ray bends at certain angle to the direction of the incident ray. IV. While emerging from the prism, the light ray bends towards the vertex of the prism. Out of the above inferences, the correct ones are: (a) I, II and III ( b) I, III and IV ( c) II, III and IV ( d) I and IV",
+    "question": "A student traces the path of a ray of light through a glass prism for different angles of incidence. He analysis each diagram and draws the following conclusion: I. On entering prism, the light ray bends towards its base. II. Light ray suffers refraction at the point of incidence and point of emergence while passing through the prism. III. Emergent ray bends at certain angle to the direction of the incident ray. IV. While emerging from the prism, the light ray bends towards the vertex of the prism. Out of the above inferences, the correct ones are:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "I, II and III",
+      "B": "I, III and IV",
+      "C": "II, III and IV",
+      "D": "I and IV"
     },
     "answer": "",
     "set": "",
     "year": "2017C"
   },
   {
-    "question": "Select the diagram in which the path of a ray passing through a glass prism is correctly drawn <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-ray-diagram-2017c-q27.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) A ( b) B ( c) C ( d) D",
+    "question": "Select the diagram in which the path of a ray passing through a glass prism is correctly drawn <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-ray-diagram-2017c-q27.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
     },
     "answer": "",
     "set": "",
     "year": "2017C"
   },
   {
-    "question": "Study the following diagram and select the option having correctly marked angles <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017c-q28.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ i, ∠ A, ∠ D ( b) ∠ i, ∠ r, ∠ D ( c) ∠ i, ∠ e, ∠ A ( d) ∠ r, ∠ e, ∠ D",
+    "question": "Study the following diagram and select the option having correctly marked angles <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017c-q28.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "∠ i, ∠ A, ∠ D",
+      "B": "∠ i, ∠ r, ∠ D",
+      "C": "∠ i, ∠ e, ∠ A",
+      "D": "∠ r, ∠ e, ∠ D"
     },
     "answer": "",
     "set": "",
@@ -472,120 +471,120 @@ window.pyqsData.mcq = [
     "year": "2017C"
   },
   {
-    "question": "A student very cautiously traces the path of a ray through a glass slab for different values of the angle of incidence ( i). He then measures the corresponding values of the angle of refraction ( r) and the angle of emergence ( e) for every value of the angle of incidence. On analyzing these measurements of angles, his conclusion would be (2 017) (a) ( b) ( c) ( d)",
+    "question": "A student very cautiously traces the path of a ray through a glass slab for different values of the angle of incidence (∠i). He then measures the corresponding values of the angle of refraction (∠r) and the angle of emergence (∠e) for every value of the angle of incidence. On analysing these measurements of angles, his conclusion would be:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "∠i > ∠r > ∠e",
+      "B": "∠i = ∠e > ∠r",
+      "C": "∠i < ∠r < ∠e",
+      "D": "∠i = ∠e < ∠r"
     },
     "answer": "",
     "set": "",
     "year": "2017"
   },
   {
-    "question": "Study the following ray diagram: In this diagram, the angle of incidence, the angle of emergence and the angle of deviation respectively have been represented by <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q32.gif\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) y, p, z ( b) x, q, z ( c) p, y, z ( d) p, z, y",
+    "question": "Study the following ray diagram: In this diagram, the angle of incidence, the angle of emergence and the angle of deviation respectively have been represented by <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q32.gif\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "y, p, z",
+      "B": "x, q, z",
+      "C": "p, y, z",
+      "D": "p, z, y"
     },
     "answer": "",
     "set": "",
     "year": "2017"
   },
   {
-    "question": "After tracing the path of a ray of light through a glass prism for four different values of i, every ray diagram was analysed and the following conclusions were drawn: I. On entering the prism, the ray bends towards its base. II. While emerging from the prism the ray further bends towards its base. III. The emergent ray bends at a certain angle to the direction of the incident ray. The correct conclusions are (A) I and II only ( B) II and III only ( C) I and III only ( D) I, II and III",
+    "question": "After tracing the path of a ray of light through a glass prism for four different values of i, every ray diagram was analysed and the following conclusions were drawn: I. On entering the prism, the ray bends towards its base. II. While emerging from the prism the ray further bends towards its base. III. The emergent ray bends at a certain angle to the direction of the incident ray. The correct conclusions are",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "I and II only",
+      "B": "II and III only",
+      "C": "I and III only",
+      "D": "I, II and III"
     },
     "answer": "",
     "set": "",
     "year": "2017"
   },
   {
-    "question": "In the following diagram the correctly marked angles are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q34.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ A and ∠ e ( b) ∠ i, ∠ A and ∠ D ( c) ∠ A, ∠ r and ∠ e ( d) ∠ A, ∠ r and ∠ D",
+    "question": "In the following diagram the correctly marked angles are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q34.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "∠ A and ∠ e",
+      "B": "∠ i, ∠ A and ∠ D",
+      "C": "∠ A, ∠ r and ∠ e",
+      "D": "∠ A, ∠ r and ∠ D"
     },
     "answer": "",
     "set": "",
     "year": "2017"
   },
   {
-    "question": "In the following diagram, the correctly marked angles are <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q35.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) All ( B) Only ∠ i and ∠ A ( C) ∠ i, ∠ r and ∠ A ( D) ∠ i, ∠ A and ∠ D",
+    "question": "In the following diagram, the correctly marked angles are <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2017-q35.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "All",
+      "B": "Only ∠ i and ∠ A",
+      "C": "∠ i, ∠ r and ∠ A",
+      "D": "∠ i, ∠ A and ∠ D"
     },
     "answer": "",
     "set": "",
     "year": "2017"
   },
   {
-    "question": "In which of the following diagrams is the path of a ray of light passing through a glass prism shown correctly? ) <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-ray-diagram-2017-q36.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) I ( B) II ( C) III ( D) IV",
+    "question": "In which of the following diagrams is the path of a ray of light passing through a glass prism shown correctly? ) <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-ray-diagram-2017-q36.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "I",
+      "B": "II",
+      "C": "III",
+      "D": "IV"
     },
     "answer": "",
     "set": "",
     "year": "2017"
   },
   {
-    "question": "In your laboratory you trace the path of light rays through a glass slab for different values of angle of incidence ( ∠ i) and in each case measure the values of the corresponding angle of refraction ( ∠ r) and angle of emergence ( ∠ e). On the basis of your observations your correct conclusion is: ) (a) ∠ i is more than ∠ r, but nearly equal to ∠ e ( b) ∠ i is less than ur, but nearly equal to ∠ e (c) ∠ i is more than ∠ e, but nearly equal to ∠ r ( d) ∠ i is less than ∠ e, but nearly equal to ∠ r",
+    "question": "In your laboratory you trace the path of light rays through a glass slab for different values of angle of incidence ( ∠ i) and in each case measure the values of the corresponding angle of refraction ( ∠ r) and angle of emergence ( ∠ e). On the basis of your observations your correct conclusion is: )",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "∠ i is more than ∠ r, but nearly equal to ∠ e",
+      "B": "∠ i is less than ur, but nearly equal to ∠ e",
+      "C": "∠ i is more than ∠ e, but nearly equal to ∠ r",
+      "D": "∠ i is less than ∠ e, but nearly equal to ∠ r"
     },
     "answer": "",
     "set": "",
     "year": "2016"
   },
   {
-    "question": "In the following ray diagram the correctly marked angle are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2016-q38.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ i and ∠ e ( b) ∠ A and ∠ D ( c) ∠ i, ∠ e and ∠ D ( d) ∠r, ∠A and ∠D",
+    "question": "In the following ray diagram the correctly marked angle are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-question-diagram-2016-q38.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "∠ i and ∠ e",
+      "B": "∠ A and ∠ D",
+      "C": "∠ i, ∠ e and ∠ D",
+      "D": "∠r, ∠A and ∠D"
     },
     "answer": "",
     "set": "",
     "year": "2016"
   },
   {
-    "question": "While doing the experiment to trace the path of a ray of light through a glass prism, students were advised by the subject teacher to first draw the outer boundary of the prism on the drawing sheet. This helps the students to: (a) find out the size of the prism ( b) find out the angle of incidence (c) find out the angle of deviation (d) readjust the prism to the same position in case it gets displaced during the experiment",
+    "question": "While doing the experiment to trace the path of a ray of light through a glass prism, students were advised by the subject teacher to first draw the outer boundary of the prism on the drawing sheet. This helps the students to:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "find out the size of the prism",
+      "B": "find out the angle of incidence",
+      "C": "find out the angle of deviation",
+      "D": "readjust the prism to the same position in case it gets displaced during the experiment"
     },
     "answer": "",
     "set": "",
     "year": "2016"
   },
   {
-    "question": "Study the following figure in which a student has marked the angle of incidence ( ∠ i), angle of refraction ( ∠ r), angle of emergence ( ∠ e), angle of prism ( ∠ A) and the angle of deviation ( ∠ D). The correctly marked angles are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2016-q40.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(a) ∠ A and ∠ i ( b) ∠ A, ∠ i and ∠ r ( c) ∠ A, ∠ i, ∠ e and ∠ D ( d) ∠ A, ∠ i, ∠ r and ∠ D",
+    "question": "Study the following figure in which a student has marked the angle of incidence ( ∠ i), angle of refraction ( ∠ r), angle of emergence ( ∠ e), angle of prism ( ∠ A) and the angle of deviation ( ∠ D). The correctly marked angles are: <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2016-q40.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "∠ A and ∠ i",
+      "B": "∠ A, ∠ i and ∠ r",
+      "C": "∠ A, ∠ i, ∠ e and ∠ D",
+      "D": "∠ A, ∠ i, ∠ r and ∠ D"
     },
     "answer": "",
     "set": "",
@@ -604,36 +603,36 @@ window.pyqsData.mcq = [
     "year": "2016"
   },
   {
-    "question": "During the experiment, to trace the path of ray of light through the glass prism, students reported the following observations: (i) The ray of light from air to glass at the first refracting surface bends away from the normal after refraction. (ii) At the second refracting surface, light rays entered from air to glass. (iii) Light ray suffers two refractions on passing through a prism and in each refraction it bends towards the base of the prism. (iv) Light ray suffers two refractions on passing through a prism. In first refraction it bends away from the normal while in the second refraction it bends towards the normal. The correct observation(s) is/ are: (a) (i) and (ii) only ( b) (iii) only ( c) (ii) and (iv) only ( d) (i) and (iv) only",
+    "question": "During the experiment, to trace the path of ray of light through the glass prism, students reported the following observations: (i) The ray of light from air to glass at the first refracting surface bends away from the normal after refraction. (ii) At the second refracting surface, light rays entered from air to glass. (iii) Light ray suffers two refractions on passing through a prism and in each refraction it bends towards the base of the prism. (iv) Light ray suffers two refractions on passing through a prism. In first refraction it bends away from the normal while in the second refraction it bends towards the normal. The correct observation(s) is/ are:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "(i) and (ii) only",
+      "B": "(iii) only",
+      "C": "(ii) and (iv) only",
+      "D": "(i) and (iv) only"
     },
     "answer": "",
     "set": "",
     "year": "2016"
   },
   {
-    "question": "After tracing the path of a ray of light through a glass prism a student marked the angle of incidence ( ∠ i), angle of refraction ( ∠ r), angle of emergence ( ∠ e) and the angle of deviation ( ∠ D) as shown in the diagram. The correctly marked angles are: ( <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2015-q43-1.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div><div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2015-q43-2.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>(A) ∠ i and ∠ r ( B) ∠ i and ∠ e ( C) ∠ i, ∠ e and ∠ D ( D) ∠ i, ∠ r and ∠ e",
+    "question": "After tracing the path of a ray of light through a glass prism a student marked the angle of incidence ( ∠ i), angle of refraction ( ∠ r), angle of emergence ( ∠ e) and the angle of deviation ( ∠ D) as shown in the diagram. The correctly marked angles are: ( <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2015-q43-1.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div><div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-angles-ray-diagram-2015-q43-2.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "∠ i and ∠ r",
+      "B": "∠ i and ∠ e",
+      "C": "∠ i, ∠ e and ∠ D",
+      "D": "∠ i, ∠ r and ∠ e"
     },
     "answer": "",
     "set": "",
     "year": "2015"
   },
   {
-    "question": "In which of the following four diagrams is the correct path of a ray of light passing through a glass prism shown ?",
+    "question": "In which of the following four diagrams is the correct path of a ray of light passing through a glass prism shown?",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Diagram A",
+      "B": "Diagram B",
+      "C": "Diagram C",
+      "D": "Diagram D"
     },
     "answer": "",
     "set": "",
@@ -664,48 +663,48 @@ window.pyqsData.mcq = [
     "year": "2024"
   },
   {
-    "question": "Consider the following statements: Ciliary muscles adjust for changing the intensity of light entering the eye. Myopic eye can be corrected by converging lenses of suitable power. The function of the pupil is to regulate the quantity of light entering the eye. When ciliary muscles are completely relaxed, the focal length of the eye lens is maximum. The correct statements are: ( i, ii and iv ( b) i, ii and iii ( c) iii and iv ( d) ii and iv",
+    "question": "Consider the following statements:<br>i. Ciliary muscles adjust for changing the intensity of light entering the eye.<br>ii. Myopic eye can be corrected by converging lenses of suitable power.<br>iii. The function of the pupil is to regulate the quantity of light entering the eye.<br>iv. When ciliary muscles are completely relaxed, the focal length of the eye lens is maximum.<br>The correct statements are:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "i, ii and iv",
+      "B": "i, ii and iii",
+      "C": "iii and iv",
+      "D": "ii and iv"
     },
     "answer": "",
     "set": "",
     "year": "2024"
   },
   {
-    "question": "The lens system of human eye forms an image on a light sensitive screen, which is called as (a) Cornea ( b) Ciliary muscles ( c) Optic nerves ( d) Retina",
+    "question": "The lens system of human eye forms an image on a light sensitive screen, which is called as",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Cornea",
+      "B": "Ciliary muscles",
+      "C": "Optic nerves",
+      "D": "Retina"
     },
     "answer": "",
     "set": "",
     "year": "2024"
   },
   {
-    "question": "In human eye the part which allows light to enter into the eye is – (a) Retina ( b) Pupil ( c) Eye lens ( d) Cornea",
+    "question": "In human eye the part which allows light to enter into the eye is –",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Retina",
+      "B": "Pupil",
+      "C": "Eye lens",
+      "D": "Cornea"
     },
     "answer": "",
     "set": "",
     "year": "2023"
   },
   {
-    "question": "The change in focal length of an eye lens in human beings is caused by the action of (a) optic nerves ( b) ciliary muscles ( c) retina ( d) cornea",
+    "question": "The change in focal length of an eye lens in human beings is caused by the action of",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "optic nerves",
+      "B": "ciliary muscles",
+      "C": "retina",
+      "D": "cornea"
     },
     "answer": "",
     "set": "",
@@ -736,84 +735,84 @@ window.pyqsData.mcq = [
     "year": "2024"
   },
   {
-    "question": "When a narrow beam of white light passes through a glass prism it splits into its component colours. This phenomenon is called (a) Diffusion of light ( b) Total reflection of light ( c) Scattering of light ( d) Dispersion of light",
+    "question": "When a narrow beam of white light passes through a glass prism it splits into its component colours. This phenomenon is called",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Diffusion of light",
+      "B": "Total reflection of light",
+      "C": "Scattering of light",
+      "D": "Dispersion of light"
     },
     "answer": "",
     "set": "",
     "year": "2023C"
   },
   {
-    "question": "In the following diagram showing dispersion of white light by a glass prism, the colours ‘P’ and ‘Q’ respectively are – <div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-dispersion-spectrum-2023-q54.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>Red and Violet ( b) Violet and Red ( c) Red and Blue ( d) Orange and Green",
+    "question": "In the following diagram showing dispersion of white light by a glass prism, the colours ‘P’ and ‘Q’ respectively are –<div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/mcq-prism-dispersion-spectrum-2023-q54.png\" alt=\"Question diagram\" style=\"display:block;max-width:42%;height:auto;margin:0 auto;padding:0;\"></div>",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Red and Violet",
+      "B": "Violet and Red",
+      "C": "Red and Blue",
+      "D": "Orange and Green"
     },
     "answer": "",
     "set": "",
     "year": "2023"
   },
   {
-    "question": "The colour of light for which the refractive index of glass is minimum, is: (a) Red ( b) Yellow ( c) Green ( d) Violet",
+    "question": "The colour of light for which the refractive index of glass is minimum, is:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Red",
+      "B": "Yellow",
+      "C": "Green",
+      "D": "Violet"
     },
     "answer": "",
     "set": "",
     "year": "2024"
   },
   {
-    "question": "The Phenomena of light involved in the formation of a rainbow in the sky are (a) Refraction, dispersion and reflection ( b) Refraction, dispersion and total internal reflection (c) Dispersion, scattering and reflection ( d) Dispersion, refraction and internal reflection",
+    "question": "The Phenomena of light involved in the formation of a rainbow in the sky are",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Refraction, dispersion and reflection",
+      "B": "Refraction, dispersion and total internal reflection",
+      "C": "Dispersion, scattering and reflection",
+      "D": "Dispersion, refraction and internal reflection"
     },
     "answer": "",
     "set": "",
     "year": "2024"
   },
   {
-    "question": "The phenomena of light involved in the formation of rainbow are ( (a) Refraction, dispersion and scattering ( b) Refraction, reflection and dispersion (c) Refraction, dispersion and internal reflection ( d) Reflection, dispersion and total internal reflection",
+    "question": "The phenomena of light involved in the formation of rainbow are (",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Refraction, dispersion and scattering",
+      "B": "Refraction, reflection and dispersion",
+      "C": "Refraction, dispersion and internal reflection",
+      "D": "Reflection, dispersion and total internal reflection"
     },
     "answer": "",
     "set": "",
     "year": "2023"
   },
   {
-    "question": "When a ray of light passes through a glass prism it suffers two refractions. During these refractions the ray bends: (a) Away from the base in both cases ( b) Towards the base in both cases (c) Towards the base in first case and away from the base in second case (d) Away from the base in first case and towards the base in second case",
+    "question": "When a ray of light passes through a glass prism it suffers two refractions. During these refractions the ray bends:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Away from the base in both cases",
+      "B": "Towards the base in both cases",
+      "C": "Towards the base in first case and away from the base in second case",
+      "D": "Away from the base in first case and towards the base in second case"
     },
     "answer": "",
     "set": "",
     "year": ""
   },
   {
-    "question": "In the formation of rainbow, the role of water droplet presents in water fountains is to act as a (a) glass slab ( b) convex lens ( c) concave lens ( d) prism",
+    "question": "In the formation of rainbow, the role of water droplet presents in water fountains is to act as a",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "glass slab",
+      "B": "convex lens",
+      "C": "concave lens",
+      "D": "prism"
     },
     "answer": "",
     "set": "",
@@ -832,48 +831,48 @@ window.pyqsData.mcq = [
     "year": ""
   },
   {
-    "question": "When a beam of white light passes through a region having very fine dust particles, the colour of light mainly scattered in that region is: (a) Red ( b) Orange ( c) Blue ( d) Yellow",
+    "question": "When a beam of white light passes through a region having very fine dust particles, the colour of light mainly scattered in that region is:",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Red",
+      "B": "Orange",
+      "C": "Blue",
+      "D": "Yellow"
     },
     "answer": "",
     "set": "",
     "year": "2024"
   },
   {
-    "question": "To an astronaut the sky on the moon appear dark because (a) there is no light on the moon ( b) there is no atmosphere on the surface of the moon (c) moon is non-luminous object ( d) the surface of the moon absorbs all the sunlights",
+    "question": "To an astronaut the sky on the moon appear dark because",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "there is no light on the moon",
+      "B": "there is no atmosphere on the surface of the moon",
+      "C": "moon is non-luminous object",
+      "D": "the surface of the moon absorbs all the sunlights"
     },
     "answer": "",
     "set": "",
     "year": ""
   },
   {
-    "question": "Which one of the following is the correct reason for twinkling of stars? (a) Atmospheric reflection of starlight ( b) Atmospheric refraction of starlight (c) Scattering of starlight ( d) Dispersion of starlight",
+    "question": "Which one of the following is the correct reason for twinkling of stars?",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "Atmospheric reflection of starlight",
+      "B": "Atmospheric refraction of starlight",
+      "C": "Scattering of starlight",
+      "D": "Dispersion of starlight"
     },
     "answer": "",
     "set": "",
     "year": ""
   },
   {
-    "question": "At noon, the sun appears white as (a) light is least scattered ( b) all the colours of the white light are scattered away (c) blue colour is scattered the most ( d) red colour is scattered the most.",
+    "question": "At noon, the sun appears white as",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "light is least scattered",
+      "B": "all the colours of the white light are scattered away",
+      "C": "blue colour is scattered the most",
+      "D": "red colour is scattered the most."
     },
     "answer": "",
     "set": "",
@@ -1011,6 +1010,12 @@ window.pyqsData.two = [
   },
   {
     "question": "Name a phenomenon taking place in nature where light rays are dispersed. When, where and how does this phenomenon happen?",
+    "answer": "",
+    "set": "31(B)",
+    "year": "2026C"
+  },
+  {
+    "question": "Match the items given in Column I with the correct option given in Column II:\n  <div style=\"width:100%;overflow-x:auto;margin:2px 0 0 0;padding:0;\">\n    <table style=\"border-collapse:collapse;margin:0 auto;font-family:inherit;font-size:inherit;line-height:1.15;min-width:62%;\">\n      <thead>\n        <tr>\n          <th style=\"border:1px solid currentColor;padding:4px 8px;text-align:center;font-family:inherit;font-size:inherit;font-weight:600;\">S.No.</th>\n          <th style=\"border:1px solid currentColor;padding:4px 8px;text-align:left;font-family:inherit;font-size:inherit;font-weight:600;\">Column I</th>\n          <th style=\"border:1px solid currentColor;padding:4px 8px;text-align:left;font-family:inherit;font-size:inherit;font-weight:600;\">Column II</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr><td style=\"border:1px solid currentColor;padding:4px 8px;text-align:center;\">1</td><td style=\"border:1px solid currentColor;padding:4px 8px;\">Mirror</td><td style=\"border:1px solid currentColor;padding:4px 8px;\">Refraction of light</td></tr>\n        <tr><td style=\"border:1px solid currentColor;padding:4px 8px;text-align:center;\">2</td><td style=\"border:1px solid currentColor;padding:4px 8px;\">Lens</td><td style=\"border:1px solid currentColor;padding:4px 8px;\">Dispersion of light</td></tr>\n        <tr><td style=\"border:1px solid currentColor;padding:4px 8px;text-align:center;\">3</td><td style=\"border:1px solid currentColor;padding:4px 8px;\">Prism</td><td style=\"border:1px solid currentColor;padding:4px 8px;\">Tyndall effect</td></tr>\n        <tr><td style=\"border:1px solid currentColor;padding:4px 8px;text-align:center;\">4</td><td style=\"border:1px solid currentColor;padding:4px 8px;\">Scattering of light</td><td style=\"border:1px solid currentColor;padding:4px 8px;\">Reflection of light</td></tr>\n      </tbody>\n    </table>\n  </div>",
     "answer": "",
     "set": "31(B)",
     "year": "2026C"
@@ -1349,15 +1354,13 @@ window.pyqsData.three = [
     "year": "2026"
   },
   {
-    "question": "Study the given diagram and answer the questions that follow:<br>(a) Write the name of the eye defect shown in the diagram. Where is the image formed in this eye defect with respect to the retina of the eye?<br>(b) List two causes of this eye defect.<br>(c) With the help of a diagram, show how this eye defect of vision is corrected.",
-    "imageWidth": "42%",
+    "question": "Study the given diagram and answer the questions that follow:<div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/three-hypermetropia-eye-defect-2026-q34.png\" alt=\"Hypermetropia eye defect ray diagram\" style=\"display:block;max-width:40%;height:auto;margin:0 auto;padding:0;\"></div>(a) Write the name of the eye defect shown in the diagram. Where is the image formed in this eye defect with respect to the retina of the eye?<br>(b) List two causes of this eye defect.<br>(c) With the help of a diagram, show how this eye defect of vision is corrected.",
     "answer": "",
     "set": "31/3/1",
     "year": "2026"
   },
   {
-    "question": "Study the given diagram and answer the questions that follow:<br>(a) Write the name of the eye defect shown in the diagram. Where is the image formed in this eye defect with respect to the retina of the eye?<br>(b) List two causes of this eye defect.<br>(c) With the help of a ray diagram, show how this defect of vision is corrected.",
-    "imageWidth": "42%",
+    "question": "Study the given diagram and answer the questions that follow:<div class=\"q-image\" style=\"margin:0;padding:0;text-align:center;line-height:0;\"><img src=\"images/cbse/class 10/human-eye/three-myopia-eye-defect-2026-q35.png\" alt=\"Myopia eye defect ray diagram\" style=\"display:block;max-width:40%;height:auto;margin:0 auto;padding:0;\"></div>(a) Write the name of the eye defect shown in the diagram. Where is the image formed in this eye defect with respect to the retina of the eye?<br>(b) List two causes of this eye defect.<br>(c) With the help of a ray diagram, show how this defect of vision is corrected.",
     "answer": "",
     "set": "31/3/2",
     "year": "2026"
@@ -1978,7 +1981,7 @@ window.pyqsData.three = [
 
 window.pyqsData.four = [
   {
-    "question": "<div class=\"q-part\">Read the following passage and answer the questions that follow:</div>\n    <div class=\"q-part\">Two students, A and B were performing an activity on refraction through glass slab and refraction through prism respectively. Student 'A' observed that the emergent light ray is parallel to the direction of incident ray, while student 'B' observed that the emergent ray is making a certain angle with respect to the direction of the incident ray in the prism, called angle of deviation. He also noted that the angle of deviation is different for different colours of light.</div>\n    <div class=\"q-subpart\">(a) When white light passes through a glass slab, it does not show dispersion, while it shows dispersion when it passes through a glass prism. Why?</div>\n    <div class=\"q-subpart\">(b) Why do we get spectrum when white light passes through tiny water droplets present in air?</div>\n    <div class=\"q-subpart\">(c) (i) For a given pair of mediums, if we change the angle of incidence gradually, will it change the speed of light in that medium? Explain.</div>\n    <div class=\"q-part\" style=\"text-align:center;font-weight:700;\">OR</div>\n    <div class=\"q-subpart\">(c) (ii) Calculate the speed of light in a given medium if angle of incidence in air is 60° and angle of refraction in the medium is 30°. <br>Given that speed of light in air is 3 × 10<sup>8</sup> m/s.</div>",
+    "question": "<div class=\"q-part\">Read the following passage and answer the questions that follow:</div>\n<div class=\"q-part\">Two students, A and B were performing an activity on refraction through glass slab and refraction through prism respectively. Student 'A' observed that the emergent light ray is parallel to the direction of incident ray, while student 'B' observed that the emergent ray is making a certain angle with respect to the direction of the incident ray in the prism, called angle of deviation. He also noted that the angle of deviation is different for different colours of light.</div>\n<div class=\"q-subpart\">(a) When white light passes through a glass slab, it does not show dispersion, while it shows dispersion when it passes through a glass prism. Why?</div>\n<div class=\"q-subpart\">(b) Why do we get spectrum when white light passes through tiny water droplets present in air?</div>\n<div class=\"q-subpart\">(c) (i) For a given pair of mediums, if we change the angle of incidence gradually, will it change the speed of light in that medium? Explain.</div>\n<div class=\"q-part\" style=\"text-align:center;font-weight:700;font-family:inherit;font-size:inherit;\">OR</div>\n<div class=\"q-subpart\">(c) (ii) Calculate the speed of light in a given medium if angle of incidence in air is 60° and angle of refraction in the medium is 30°.<br>Given that speed of light in air is 3 × 10<sup>8</sup> m/s.</div>",
     "answer": "",
     "set": "31/7/1",
     "year": "2026"
@@ -2209,3 +2212,4 @@ window.pyqsData.five = [
     "year": "2013"
   }
 ];
+
