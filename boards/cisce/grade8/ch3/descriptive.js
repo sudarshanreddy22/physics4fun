@@ -5,25 +5,19 @@ window.descriptiveData = [
   // ===========================
   {
     "question": "Define force. Write its formula and SI unit.",
-    "answer": "Force is a push or pull that can change or tend to change the motion, direction or shape of an object.<br>Formula: F = ma; SI unit: newton (N).",
+    "answer": "1. Force is a push or pull that can change or tend to change the motion, direction or shape of an object.<br>2. Formula: F = ma; SI unit: newton (N).",
     "marks": 2
   },
 
   {
     "question": "Write any four effects of force on an object.",
-    "answer": "A force can:<br>1. Start or stop motion.<br>2. Change speed.<br>3. Change direction.<br>4. Change shape or size.",
-    "marks": 2
-  },
-
-  {
-    "question": "What are contact forces and non-contact forces? Give two examples of each.",
-    "answer": "Contact forces act only when two bodies are in physical contact. Examples: muscular force and frictional force.<br>Non-contact forces act without physical contact. Examples: gravitational force and magnetic force.",
+    "answer": "1. A force can start or stop motion.<br>2. It can change speed.<br>3. It can change direction.<br>4. It can change shape or size.",
     "marks": 2
   },
 
   {
     "question": "Define torque (moment of force). Give its formula and SI unit.",
-    "answer": "Torque is the turning effect of a force about a pivot.<br>Torque = Force × perpendicular distance from pivot; SI unit: N·m.",
+    "answer": "1. Torque is the turning effect of a force about a pivot.<br>2. Torque = Force × perpendicular distance from pivot; SI unit: N·m.",
     "marks": 2
   },
 
@@ -35,37 +29,37 @@ window.descriptiveData = [
 
   {
     "question": "Define thrust. State its SI unit.",
-    "answer": "Thrust is the force acting normally, i.e., perpendicularly, on a surface.<br>SI unit of thrust: newton (N).",
+    "answer": "1. Thrust is the force acting normally, i.e., perpendicularly, on a surface.<br>2. SI unit of thrust: newton (N).",
     "marks": 2
   },
 
   {
     "question": "Define pressure. Write its formula and SI unit.",
-    "answer": "Pressure is the normal force acting per unit area.<br>P = F/A; SI unit: pascal (Pa), where 1 Pa = 1 N/m².",
+    "answer": "1. Pressure is the normal force acting per unit area of a surface.<br>2. Formula: P = F/A.<br>3. Relations: P ∝ F and P ∝ 1/A.<br>4. SI unit: pascal (Pa), where 1 Pa = 1 N/m².",
     "marks": 2
   },
 
   {
     "question": "How does pressure depend on force and area of contact?",
-    "answer": "Pressure increases with applied force.<br>For the same force, pressure decreases when the area of contact increases.",
+    "answer": "1. Pressure is directly proportional to force: P ∝ F.<br>2. Pressure is inversely proportional to area of contact: P ∝ 1/A.<br>3. Therefore, greater force increases pressure, while greater area decreases pressure.",
     "marks": 2
   },
 
   {
     "question": "Why do heavy lorries use many or broad tyres?",
-    "answer": "Broad or many tyres increase the area of contact with the road.<br>Larger area reduces pressure, helping prevent sinking or road damage.",
+    "answer": "1. Broad or many tyres increase the area of contact with the road.<br>2. Since P ∝ 1/A, increasing area decreases pressure.<br>3. Therefore, the vehicle is less likely to sink into or damage the road.",
     "marks": 2
   },
 
   {
     "question": "Why does a sharp knife cut more easily than a blunt knife?",
-    "answer": "A sharp knife has a smaller contact area.<br>For the same force, smaller area produces greater pressure, so it cuts more easily.",
+    "answer": "1. A sharp knife has a smaller area of contact.<br>2. Since P ∝ 1/A, a smaller area produces greater pressure for the same force.<br>3. Therefore, a sharp knife cuts more easily.",
     "marks": 2
   },
 
   {
     "question": "What is liquid pressure? Write the formula for pressure at the bottom of a liquid column.",
-    "answer": "Liquid pressure is the pressure exerted by a liquid on the surfaces of its container.<br>At depth h: P = ρhg.",
+    "answer": "1. Liquid pressure is the pressure exerted by a liquid on the surfaces of its container.<br>2. At depth h: P = ρhg.",
     "marks": 2
   },
 
@@ -77,25 +71,25 @@ window.descriptiveData = [
 
   {
     "question": "State Pascal’s law.",
-    "answer": "Pressure applied at any point to a liquid enclosed in a closed container is transmitted equally in all directions.",
+    "answer": "1. Pressure applied at any point to a liquid enclosed in a closed container is transmitted equally in all directions.<br>2. This statement is known as Pascal’s law.",
     "marks": 2
   },
 
   {
     "question": "Why are the walls of a dam made thicker at the bottom?",
-    "answer": "Liquid pressure increases with depth.<br>The bottom experiences greater pressure, so it is made thicker for strength and safety.",
+    "answer": "1. Liquid pressure increases with depth.<br>2. The bottom experiences greater pressure, so it is made thicker for strength and safety.",
     "marks": 2
   },
 
   {
     "question": "What do a manometer and a barometer measure?",
-    "answer": "A manometer measures the pressure exerted by a liquid or gas.<br>A barometer measures atmospheric pressure.",
+    "answer": "1. A manometer measures the pressure exerted by a liquid or gas.<br>2. A barometer measures atmospheric pressure.",
     "marks": 2
   },
 
   {
     "question": "Define atmospheric pressure. State its approximate value at sea level.",
-    "answer": "Atmospheric pressure is the pressure exerted by the weight of air on objects and surfaces.<br>At sea level it is about 101.3 kPa.",
+    "answer": "1. Atmospheric pressure is the pressure exerted by the weight of air on objects and surfaces.<br>2. At sea level it is about 101.3 kPa.",
     "marks": 2
   },
 
@@ -104,12 +98,6 @@ window.descriptiveData = [
   // 3 MARK QUESTIONS
   // ===========================
   {
-    "question": "Explain the classification of forces based on interaction with suitable examples.",
-    "answer": "1. Contact forces act only when bodies touch; examples: muscular force, friction, normal force and tension.<br>2. Non-contact forces act without physical contact; examples: gravitational, magnetic and electrostatic forces.<br>3. The classification depends on whether physical contact is required.",
-    "marks": 3
-  },
-
-  {
     "question": "Explain torque and the three factors that affect it.",
     "answer": "1. Torque is the turning effect of a force about a pivot.<br>2. It increases with the magnitude of force and with the lever arm.<br>3. It also depends on the angle between the lever arm and applied force; SI unit is N·m.",
     "marks": 3
@@ -117,13 +105,13 @@ window.descriptiveData = [
 
   {
     "question": "A force of 50 N acts normally on an area of 0.5 m². Calculate the pressure.",
-    "answer": "1. Given: F = 50 N, A = 0.5 m².<br>2. P = F/A = 50/0.5.<br>3. P = 100 Pa.",
+    "answer": "1. Given: F = 50 N, A = 0.5 m².<br>2. Formula: P = F/A.<br>3. Substitution: P = 50/0.5.<br>4. Calculation: P = 100 N/m² = 100 Pa.<br>5. Therefore, pressure = 100 Pa.<br>Relations: P ∝ F and P ∝ 1/A.",
     "marks": 3
   },
 
   {
     "question": "Explain how pressure changes with force and area. Give one example for each relationship.",
-    "answer": "1. Pressure increases with force for the same area.<br>2. Pressure decreases when area increases for the same force.<br>3. Example: pressing a pin harder increases pressure, while broad bag straps reduce pressure.",
+    "answer": "1. Pressure is directly proportional to force: P ∝ F.<br>2. Pressure is inversely proportional to area: P ∝ 1/A.<br>3. Increasing force increases pressure; pressing a drawing pin harder is an example.<br>4. Increasing area decreases pressure; broad school-bag straps reduce pressure on the shoulders.",
     "marks": 3
   },
 
@@ -159,7 +147,7 @@ window.descriptiveData = [
 
   {
     "question": "Differentiate between thrust and pressure.",
-    "answer": "1. Thrust is the normal force acting on a surface; SI unit: newton (N).<br>2. Pressure is thrust per unit area; P = F/A.<br>3. SI unit of pressure: pascal (Pa).",
+    "answer": "1. Thrust is the force acting normally on a surface; its SI unit is newton (N).<br>2. Pressure is thrust per unit area; P = F/A.<br>3. Pressure follows P ∝ F and P ∝ 1/A.<br>4. SI unit of pressure is pascal (Pa).",
     "marks": 3
   },
 
@@ -176,7 +164,7 @@ window.descriptiveData = [
 
   {
     "question": "A student presses a drawing pin into a notice board using a small force. The pointed end of the pin enters the board easily.<br>(a) Which physical quantity explains this effect? (1M)<br>(b) Is the area of contact at the pointed end large or small? (1M)<br>(c) Explain why the pointed end enters the board easily. (2M)",
-    "answer": "(a) Pressure.<br>(b) The area of contact is very small.<br>(c) Pressure is inversely proportional to area. A very small area produces greater pressure for the same force, so the pin enters the board easily.",
+    "answer": "(a) Pressure.<br>(b) The contact area is very small.<br>(c) 1. Pressure is inversely proportional to area: P ∝ 1/A.<br>2. Therefore, the small pointed area produces greater pressure for the same force.",
     "marks": 4,
     "type": "case"
   },
