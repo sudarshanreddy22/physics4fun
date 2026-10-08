@@ -1,7 +1,6 @@
 /* CBSE Grade 9 Physics | Revision Club: Motion Graphs & Equations of Motion
    30 general MCQs + 10 Assertion–Reason MCQs in shuffled order.
    Covers distance/displacement/velocity-time graphs and equations of uniformly accelerated motion.
-   Retains original 10 fill-in-the-blanks + 10 true/false from template.
    answer is a zero-based index for four-option MCQs. */
 window.objectiveData = [
   {"question": "Which equation of uniformly accelerated motion does not contain time?", "options": ["v = u + at", "s = ut + ½at²", "v² = u² + 2as", "s = (u + v)t/2"], "answer": 2, "type": "mcq", "explanation": "v² = u² + 2as connects velocity, acceleration and displacement without time."} ,
@@ -43,29 +42,5 @@ window.objectiveData = [
   {"question": "What is the speed of an object whose distance increases from 20 m to 80 m in 12 s?", "options": ["4 m/s", "5 m/s", "6 m/s", "12 m/s"], "answer": 1, "type": "mcq", "explanation": "Speed = change in distance/change in time = (80 − 20)/12 = 5 m/s."} ,
   {"question": "A body initially at rest attains 10 m/s over a displacement of 25 m with constant acceleration. Find acceleration.", "options": ["1 m/s²", "2 m/s²", "4 m/s²", "5 m/s²"], "answer": 1, "type": "mcq", "explanation": "v² − u² = 2as; a = 100/(2×25) = 2 m/s²."} ,
   {"question": "A vehicle moves at constant velocity 12 m/s for 6 s. Which equation gives its displacement?", "options": ["s = 12/6", "s = 12×6", "s = 6/12", "s = 12 + 6"], "answer": 1, "type": "mcq", "explanation": "For zero acceleration, displacement s = vt = 12×6 = 72 m."} ,
-  {"question": "Assertion (A): The distance travelled always equals the magnitude of displacement. Reason (R): Distance is the total length of the path travelled.", "options": ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."], "answer": 3, "type": "mcq", "explanation": "Assertion false when direction reverses; Reason correctly defines distance."} ,
-
-  // ==================== 10 Fill in the Blanks ====================
-  { question: "The slope of a distance-time graph gives ___.", answer: "speed", type: "fib", explanation: "Speed is equal to change in distance divided by change in time." },
-  { question: "The slope of a speed-time graph gives ___.", answer: "acceleration", type: "fib", explanation: "Acceleration is the rate of change of speed with time." },
-  { question: "The area under a speed-time graph gives the ___ travelled.", answer: "distance", type: "fib", explanation: "Area under a speed-time graph is speed × time, which gives distance travelled." },
-  { question: "The area under an acceleration-time graph gives the change in ___.", answer: "velocity", type: "fib", explanation: "Acceleration × time gives change in velocity." },
-  { question: "A horizontal distance-time graph indicates that the object is at ___.", answer: "rest", type: "fib", explanation: "A horizontal line means distance remains constant with time, so the object is at rest." },
-  { question: "A horizontal speed-time graph above the time axis represents ___ speed.", answer: "constant", type: "fib", explanation: "A horizontal line means speed does not change with time." },
-  { question: "The SI unit of speed is ___.", answer: "m/s", type: "fib", explanation: "Speed is distance divided by time, so its SI unit is metre per second." },
-  { question: "The SI unit of acceleration is ___.", answer: "m/s²", type: "fib", explanation: "Acceleration is change in velocity per unit time, giving the unit m/s²." },
-  { question: "The area of a rectangle on a speed-time graph is calculated as ___ × height.", answer: "base", type: "fib", explanation: "Area of a rectangle = base × height." },
-  { question: "The slope of a graph is calculated as change in vertical quantity divided by change in ___ quantity.", answer: "horizontal", type: "fib", explanation: "Slope = change in vertical quantity / change in horizontal quantity." },
-
-  // ==================== 10 True / False ====================
-  { question: "The slope of a distance-time graph gives speed.", answer: true, type: "tof", explanation: "True. Slope = change in distance / change in time = speed." },
-  { question: "The area under a speed-time graph gives acceleration.", answer: false, type: "tof", explanation: "False. The area under a speed-time graph gives distance travelled." },
-  { question: "A horizontal distance-time graph represents an object at rest.", answer: true, type: "tof", explanation: "True. Distance remains unchanged with time, so the object is at rest." },
-  { question: "A horizontal speed-time graph represents constant speed.", answer: true, type: "tof", explanation: "True. The speed has the same value at all times shown." },
-  { question: "The slope of a speed-time graph can represent acceleration.", answer: true, type: "tof", explanation: "True. Slope = change in speed / time, which represents acceleration when speed changes uniformly." },
-  { question: "The area under an acceleration-time graph represents change in velocity.", answer: true, type: "tof", explanation: "True. The area equals acceleration × time and therefore gives change in velocity." },
-  { question: "A steeper distance-time graph represents lower speed.", answer: false, type: "tof", explanation: "False. A steeper distance-time graph has a greater slope and therefore represents greater speed." },
-  { question: "A speed-time graph with a negative slope shows decreasing speed.", answer: true, type: "tof", explanation: "True. Negative slope means speed decreases as time increases." },
-  { question: "If the acceleration-time graph lies on the time axis, acceleration is zero.", answer: true, type: "tof", explanation: "True. The time axis corresponds to an acceleration value of zero." },
-  { question: "The slope of an acceleration-time graph directly gives distance travelled.", answer: false, type: "tof", explanation: "False. The slope gives the rate of change of acceleration; it does not directly give distance travelled." }
+  {"question": "Assertion (A): The distance travelled always equals the magnitude of displacement. Reason (R): Distance is the total length of the path travelled.", "options": ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."], "answer": 3, "type": "mcq", "explanation": "Assertion false when direction reverses; Reason correctly defines distance."}
 ];
