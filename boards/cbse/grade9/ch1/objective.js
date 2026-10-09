@@ -1,6 +1,6 @@
 /* Grade 9 Physics — Revision Club | Motion Graphs & Equations of Motion
    Exactly 40 questions: 30 general MCQs and 10 Assertion–Reason MCQs.
-   Questions are mixed (not grouped by type).
+   Ordering: 30 general MCQs first, followed by 10 Assertion–Reason MCQs.
    Compatibility: window.objectiveData; type: "mcq"; options: four choices;
    answer: zero-based index (0=A, 1=B, 2=C, 3=D).
    HTML <br> puts Assertion (A) and Reason (R) on separate lines and also
@@ -21,13 +21,6 @@ window.objectiveData = [
     answer: 2,
     type: "mcq",
     explanation: "Distance is the total path length, irrespective of direction.<br>First part = |+4 × 3| = 12 m.<br>Second part = |−2 × 3| = 6 m.<br>Total distance = 12 + 6 = 18 m."
-  },
-  {
-    question: "Assertion (A): A horizontal velocity–time graph above the time axis represents zero acceleration.<br>Reason (R): The velocity of the body remains constant over time.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 0,
-    type: "mcq",
-    explanation: "Assertion: True. A horizontal velocity–time line has zero slope.<br>Reason: True. Its velocity remains constant.<br>Since acceleration = change in velocity ÷ time = 0, the Reason correctly explains the Assertion."
   },
   {
     question: "An object has uniform acceleration. Which statement is correct about its velocity–time graph?",
@@ -51,13 +44,6 @@ window.objectiveData = [
     explanation: "The graph stays at +6 m/s for every instant shown.<br>Velocity is therefore constant and positive, and its slope (acceleration) is zero."
   },
   {
-    question: "Assertion (A): An object can have zero displacement but nonzero distance travelled.<br>Reason (R): The object may return to its starting position after moving along a path.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 0,
-    type: "mcq",
-    explanation: "Assertion: True. Distance can be positive even when final displacement is zero.<br>Reason: True. Returning to the starting point makes final position equal to initial position.<br>The Reason correctly explains the Assertion."
-  },
-  {
     question: "A car starts from rest with uniform acceleration 2 m/s². What distance does it cover in 5 s?",
     options: ["10 m", "20 m", "25 m", "50 m"],
     answer: 2,
@@ -72,46 +58,11 @@ window.objectiveData = [
     explanation: "For a distance–time graph, slope = change in distance ÷ change in time.<br>A straight line with a constant positive slope means the same distance is covered in each equal time interval: uniform speed."
   },
   {
-    question: "Assertion (A): A steeper distance–time graph represents a greater speed.<br>Reason (R): Speed is numerically equal to the slope of a distance–time graph.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 0,
-    type: "mcq",
-    explanation: "Assertion: True. A steeper distance–time graph means greater speed.<br>Reason: True. Speed equals the slope of this graph.<br>The Reason correctly explains the Assertion."
-  },
-  {
-    question: "Assertion (A): A body moving with negative velocity must have negative acceleration.<br>Reason (R): The sign of acceleration depends on how velocity changes with time.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 3,
-    type: "mcq",
-    explanation: "Assertion: False. Negative velocity can occur with negative, positive or zero acceleration.<br>Reason: True. Acceleration depends on the change in velocity, not merely on its sign.<br>Example: velocity changes from −8 m/s to −4 m/s in 2 s; a = [−4 − (−8)]/2 = +2 m/s², despite negative velocity."
-  },
-  {
-    question: "Assertion (A): The equation v² = u² + 2as can be used without knowing the time of motion.<br>Reason (R): It contains initial velocity, final velocity, acceleration and displacement.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 0,
-    type: "mcq",
-    explanation: "Assertion: True. The equation v² = u² + 2as does not require time.<br>Reason: True. It relates initial and final velocities (u, v), acceleration (a) and displacement (s), with no t term.<br>The Reason correctly explains the Assertion."
-  },
-  {
-    question: "Assertion (A): The equation v = u + at is applicable to motion with uniform acceleration.<br>Reason (R): Uniform acceleration means equal changes in velocity in equal time intervals.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 0,
-    type: "mcq",
-    explanation: "Assertion: True. v = u + at applies when acceleration is constant.<br>Reason: True. Uniform acceleration means equal velocity changes in equal time intervals.<br>Using a = (v − u)/t gives v = u + at. The Reason correctly explains the Assertion."
-  },
-  {
     question: "A ball moving at 15 m/s stops uniformly after travelling 45 m. What is its acceleration?",
     options: ["−2.5 m/s²", "−5 m/s²", "+2.5 m/s²", "+5 m/s²"],
     answer: 0,
     type: "mcq",
     explanation: "Given: u = 15 m/s, v = 0 m/s, s = 45 m.<br>Formula: v² = u² + 2as.<br>Substitute: 0² = 15² + 2 × a × 45.<br>So 90a = −225, giving a = −225/90 = −2.5 m/s².<br>Answer: −2.5 m/s² (retardation)."
-  },
-  {
-    question: "Assertion (A): The area under a velocity–time graph gives displacement.<br>Reason (R): Multiplying velocity by a time interval gives displacement when velocity is constant.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 0,
-    type: "mcq",
-    explanation: "Assertion: True. The signed area between a velocity–time graph and the time axis gives displacement.<br>Reason: True. For constant velocity, displacement = velocity × time (rectangular area).<br>For changing velocity, adding the signed areas of small time intervals gives total displacement; therefore the Reason explains the Assertion."
   },
   {
     question: "Which quantity is obtained from the slope of a velocity–time graph?",
@@ -226,20 +177,6 @@ window.objectiveData = [
     explanation: "Displacement = signed area under the velocity–time graph.<br>First part: (+4) × 3 = +12 m.<br>Second part: (−2) × 3 = −6 m.<br>Net displacement = +12 − 6 = +6 m."
   },
   {
-    question: "Assertion (A): The slope of a distance–time graph gives speed.<br>Reason (R): Slope represents change in distance divided by the corresponding change in time.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 0,
-    type: "mcq",
-    explanation: "Assertion: True. Slope of a distance–time graph represents speed.<br>Reason: True. Slope = change in distance ÷ change in time, which is the definition of speed.<br>The Reason correctly explains the Assertion."
-  },
-  {
-    question: "Assertion (A): A negative slope of a displacement–time graph indicates motion in the negative direction.<br>Reason (R): The slope of a displacement–time graph gives velocity.",
-    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
-    answer: 0,
-    type: "mcq",
-    explanation: "Assertion: True. Negative slope on a displacement–time graph means negative velocity.<br>Reason: True. The slope of this graph represents velocity.<br>The Reason correctly explains the Assertion."
-  },
-  {
     question: "A horizontal distance–time graph represents an object that is:",
     options: ["Accelerating", "At rest", "Moving backwards", "Moving at constant nonzero speed"],
     answer: 1,
@@ -280,6 +217,69 @@ window.objectiveData = [
     answer: 1,
     type: "mcq",
     explanation: "Given: constant velocity v = 12 m/s and time t = 6 s.<br>Formula: s = vt (because a = 0).<br>Substitute: s = 12 × 6.<br>Answer: displacement = 72 m."
+  },
+  {
+    question: "Assertion (A): A horizontal velocity–time graph above the time axis represents zero acceleration.<br>Reason (R): The velocity of the body remains constant over time.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 0,
+    type: "mcq",
+    explanation: "Assertion: True. A horizontal velocity–time line has zero slope.<br>Reason: True. Its velocity remains constant.<br>Since acceleration = change in velocity ÷ time = 0, the Reason correctly explains the Assertion."
+  },
+  {
+    question: "Assertion (A): An object can have zero displacement but nonzero distance travelled.<br>Reason (R): The object may return to its starting position after moving along a path.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 0,
+    type: "mcq",
+    explanation: "Assertion: True. Distance can be positive even when final displacement is zero.<br>Reason: True. Returning to the starting point makes final position equal to initial position.<br>The Reason correctly explains the Assertion."
+  },
+  {
+    question: "Assertion (A): A steeper distance–time graph represents a greater speed.<br>Reason (R): Speed is numerically equal to the slope of a distance–time graph.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 0,
+    type: "mcq",
+    explanation: "Assertion: True. A steeper distance–time graph means greater speed.<br>Reason: True. Speed equals the slope of this graph.<br>The Reason correctly explains the Assertion."
+  },
+  {
+    question: "Assertion (A): A body moving with negative velocity must have negative acceleration.<br>Reason (R): The sign of acceleration depends on how velocity changes with time.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 3,
+    type: "mcq",
+    explanation: "Assertion: False. Negative velocity can occur with negative, positive or zero acceleration.<br>Reason: True. Acceleration depends on the change in velocity, not merely on its sign.<br>Example: velocity changes from −8 m/s to −4 m/s in 2 s; a = [−4 − (−8)]/2 = +2 m/s², despite negative velocity."
+  },
+  {
+    question: "Assertion (A): The equation v² = u² + 2as can be used without knowing the time of motion.<br>Reason (R): It contains initial velocity, final velocity, acceleration and displacement.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 0,
+    type: "mcq",
+    explanation: "Assertion: True. The equation v² = u² + 2as does not require time.<br>Reason: True. It relates initial and final velocities (u, v), acceleration (a) and displacement (s), with no t term.<br>The Reason correctly explains the Assertion."
+  },
+  {
+    question: "Assertion (A): The equation v = u + at is applicable to motion with uniform acceleration.<br>Reason (R): Uniform acceleration means equal changes in velocity in equal time intervals.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 0,
+    type: "mcq",
+    explanation: "Assertion: True. v = u + at applies when acceleration is constant.<br>Reason: True. Uniform acceleration means equal velocity changes in equal time intervals.<br>Using a = (v − u)/t gives v = u + at. The Reason correctly explains the Assertion."
+  },
+  {
+    question: "Assertion (A): The area under a velocity–time graph gives displacement.<br>Reason (R): Multiplying velocity by a time interval gives displacement when velocity is constant.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 0,
+    type: "mcq",
+    explanation: "Assertion: True. The signed area between a velocity–time graph and the time axis gives displacement.<br>Reason: True. For constant velocity, displacement = velocity × time (rectangular area).<br>For changing velocity, adding the signed areas of small time intervals gives total displacement; therefore the Reason explains the Assertion."
+  },
+  {
+    question: "Assertion (A): The slope of a distance–time graph gives speed.<br>Reason (R): Slope represents change in distance divided by the corresponding change in time.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 0,
+    type: "mcq",
+    explanation: "Assertion: True. Slope of a distance–time graph represents speed.<br>Reason: True. Slope = change in distance ÷ change in time, which is the definition of speed.<br>The Reason correctly explains the Assertion."
+  },
+  {
+    question: "Assertion (A): A negative slope of a displacement–time graph indicates motion in the negative direction.<br>Reason (R): The slope of a displacement–time graph gives velocity.",
+    options: ["Both Assertion and Reason are true, and Reason correctly explains Assertion.", "Both Assertion and Reason are true, but Reason does not correctly explain Assertion.", "Assertion is true, but Reason is false.", "Assertion is false, but Reason is true."],
+    answer: 0,
+    type: "mcq",
+    explanation: "Assertion: True. Negative slope on a displacement–time graph means negative velocity.<br>Reason: True. The slope of this graph represents velocity.<br>The Reason correctly explains the Assertion."
   },
   {
     question: "Assertion (A): The distance travelled always equals the magnitude of displacement.<br>Reason (R): Distance is the total length of the path travelled.",
