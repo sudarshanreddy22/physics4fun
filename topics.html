@@ -1594,6 +1594,76 @@ mjx-container[display="true"]{margin:8px 0 !important;}
   }
 }
 
+
+/* Magnetic Effects continuous full-width notes */
+#exact-notes-stage .magnetic-effects-continuous,
+#exact-notes-stage .magnetic-effects-continuous .he-continuous-notes{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+}
+
+
+/* ══ CBSE Objective Font Controls (Grade 9 fix) ══
+   A+/A− sets --qfs on #panel-objective. Apply it to the actual rendered
+   content, not only the panel container. Shared with other objective grades. */
+#panel-objective .mcq-question{
+  font-size:calc(13.5px * var(--qfs, 1));
+  line-height:1.75;
+  min-width:0;
+  overflow-wrap:break-word;
+}
+#panel-objective .option{
+  font-size:calc(13px * var(--qfs, 1)) !important;
+  line-height:1.6;
+  min-width:0;
+  overflow-wrap:break-word;
+}
+#panel-objective .opt-text{
+  font-size:calc(13px * var(--qfs, 1));
+  line-height:inherit;
+  min-width:0;
+  overflow-wrap:break-word;
+}
+#panel-objective .explanation{
+  font-size:calc(12.5px * var(--qfs, 1));
+  line-height:1.75;
+  min-width:0;
+  overflow-wrap:break-word;
+}
+#panel-objective .match-item,#panel-objective .match-result,
+#panel-objective .fib-result,#panel-objective .fib-answer-text,
+#panel-objective .fib-input{
+  font-size:calc(12.5px * var(--qfs, 1));
+  line-height:1.6;
+}
+#panel-objective .mcq-card,#panel-objective .options{
+  min-width:0;
+}
+#panel-objective .qno{
+  font-size:calc(12px * var(--qfs, 1));
+  min-width:calc(28px * var(--qfs, 1));
+  height:calc(28px * var(--qfs, 1));
+}
+#panel-objective .opt-label{
+  font-size:calc(11px * var(--qfs, 1));
+  width:calc(24px * var(--qfs, 1));
+  height:calc(24px * var(--qfs, 1));
+  flex-shrink:0;
+}
+#panel-objective .options.opts-grid2,
+#panel-objective .options.options-grid2,
+#panel-objective .options.options-tof{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+}
+@media(max-width:600px){
+  #panel-objective .options.opts-grid2,
+  #panel-objective .options.options-grid2,
+  #panel-objective .options.options-tof{
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+}
+
 </style>
 </head>
 <body class="light">
@@ -2964,7 +3034,9 @@ function toggleAllObjAnswers(){
 }
 function adjustQFontSize(panelId,key,delta){
   const QFS_MAP=window._QFS||(window._QFS={});
-  QFS_MAP[key]=Math.min(1.4,Math.max(0.8,+((QFS_MAP[key]||1)+delta).toFixed(2)));
+  const isGrade9CBSE = (CUR.grade === 'cbse-g9' && (panelId === 'panel-objective' || panelId === 'panel-desc'));
+  const maxScale = isGrade9CBSE ? 1.8 : 1.4;
+  QFS_MAP[key]=Math.min(maxScale,Math.max(0.8,+((QFS_MAP[key]||1)+delta).toFixed(2)));
   const el=document.getElementById(panelId);
   if(el) el.style.setProperty('--qfs',QFS_MAP[key]);
 }
@@ -3068,7 +3140,11 @@ function adjustExactNotesScale(delta){
     '.callout,.note-box,.rule-pill,.rule-pill em,.figcap,.vibgyor span,'+
     '.sequence div,.qbox,.number-chip,.defect-name-card,.col-title,.row-head,'+
     '.cell,.part-card,.rainbow-seq-head,.conditions-head,.seq-box,.condition-item,'+
-    '.atm-app,.tyndall-examples-title,.example-cap,.pres-box,.pres-part'
+    '.atm-app,.tyndall-examples-title,.example-cap,.pres-box,.pres-part,'+
+    '.formula,.formula span,.chip,.chip span,.domestic-sub,.domestic-sub h3,'+
+    '.wire-card,.wire-card b,.wire-card span,.domestic-note,.domestic-label,'+
+    '.rule-card-head,.rule-card-body,.fleming-note,.force-table,.field-compare,'+
+    '.thumb-statement,.fleming-statement'
   );
 
   targets.forEach(el=>{
