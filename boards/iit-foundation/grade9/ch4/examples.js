@@ -329,3 +329,11 @@ x=(3-3)^2=\boxed{0\,\mathrm m}.
   }
 ];
 window.examplesData = window.iitExamplesData;
+
+// Four independent Calculus tabs. Original supplied questions are retained unchanged.
+window.calculusExamplesData = {
+  "illustrations-1": window.iitExamplesData,
+  "examples-1": [],
+  "illustrations-2": [],
+  "examples-2": []
+};
