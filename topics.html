@@ -1664,6 +1664,47 @@ mjx-container[display="true"]{margin:8px 0 !important;}
   }
 }
 
+
+/* One shared toolbar beside the subsection tabs, aligned to their far right. */
+#universalToolbar{margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:4px;flex-shrink:0;white-space:nowrap;z-index:20;position:sticky;right:0;background:var(--bg2);padding-left:8px}
+#universalToolbar .gv-btn{display:inline-flex!important;align-items:center;justify-content:center;min-width:32px;min-height:32px}
+#universalToolbar #universalMulti{font-size:17px}
+#pyqViewToggle,#objViewToggle,#descViewToggle,#globalViewToggle,
+.cisce-section-tools,.iit-rendered-utility,.subsection-utility-controls,
+.notes-font-controls,#othViewToggle,.view-toggle,.view-mode-toggle{display:none!important}
+#runthrough-tabbar{padding-top:0!important;margin-top:0!important;gap:0!important}
+#runthrough-tabbar.visible{margin-top:0!important}
+#btn-runthrough{margin-left:0!important}
+@media(max-width:680px){#universalToolbar{gap:1px}#universalToolbar .gv-btn{min-width:27px;padding:5px 3px;font-size:12px}.header-center{min-width:0}}
+
+/* v6 — enforce a single visible toolbar beside the section tabs. */
+#subsectionUtilityControls,.subsection-utility-controls,.iit-rendered-utility,
+.cisce-section-tools,.notes-font-controls,.font-controls,.font-size-controls,
+#pyqViewToggle,#objViewToggle,#descViewToggle,#globalViewToggle,#othViewToggle,
+.view-toggle,.view-mode-toggle{display:none!important;visibility:hidden!important}
+#universalToolbar{display:flex!important;visibility:visible!important}
+/* v5 — compact universal controls and CISCE/Cambridge subsection tabs */
+#universalToolbar{gap:2px!important;padding-left:5px!important}
+#universalToolbar .gv-btn{min-width:26px!important;min-height:26px!important;height:26px!important;padding:2px 4px!important;font-size:11px!important;line-height:1!important;border-radius:7px!important}
+#universalToolbar #universalMulti{font-size:14px!important}
+@media(max-width:680px){#universalToolbar{gap:1px!important;padding-left:3px!important}#universalToolbar .gv-btn{min-width:23px!important;min-height:23px!important;height:23px!important;padding:1px 2px!important;font-size:10px!important}#universalToolbar #universalMulti{font-size:12px!important}}
+/* Run-through is available only on CISCE/Cambridge; use its visible tab as a board-specific selector. */
+#sectionBar:has(#btn-runthrough:not([style*="display:none"]):not([style*="display: none"])) .sec-btn{padding:5px 9px;gap:4px;font-size:11px;border-radius:9px}
+#sectionBar:has(#btn-runthrough:not([style*="display:none"]):not([style*="display: none"])) .sec-icon-3d{width:21px;height:21px;font-size:12px}
+#sectionBar:has(#btn-runthrough:not([style*="display:none"]):not([style*="display: none"])) {gap:3px;padding-top:7px;padding-bottom:7px}
+#runthrough-tabbar .pyq-tab{padding-left:9px!important;padding-right:9px!important;gap:4px!important}
+#panel-iitformulas{font-family:system-ui,Arial,sans-serif;padding:14px;}
+.iit-formulas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;}
+.iit-formula-group{border:1px solid #cbd5e1;border-radius:14px;padding:16px;background:var(--card-bg,#fff);box-shadow:0 3px 12px #0000000c;}
+.iit-formula-group h3{margin:0 0 12px;color:#4f46e5;font-size:1.12rem;}
+.iit-formula-item{padding:10px 0;border-top:1px solid #e2e8f0;line-height:1.6;}
+.iit-formula-math{padding:8px 0;font-size:1.15em;overflow-x:auto;}
+.iit-formula-item small{display:block;opacity:.75;}
+</style>
+<style>
+.calculus-examples-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:8px 0;border-bottom:1px solid var(--border,#dfe5ef)}
+.calculus-example-tab{border:1px solid #cbd5e1;border-radius:9px;padding:9px 14px;background:var(--card,#fff);color:inherit;font-weight:700;cursor:pointer}
+.calculus-example-tab.active{border-color:#8b5cf6;background:rgba(139,92,246,.12);color:#7c3aed}
 </style>
 </head>
 <body class="light">
@@ -1671,8 +1712,8 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 <!-- HEADER -->
 <header class="header">
   <div style="display:flex;align-items:center;gap:8px;">
-    <button class="icon-btn" id="sidebarToggleBtn" onclick="toggleSidebar()" title="Show/Hide Boards & Grades">☰</button>
-    <span class="brand">Physics4Fun</span>
+    
+    <span class="brand" title="Show / Hide Boards and Grades" onclick="toggleSidebar()" style="cursor:pointer">Physics4Fun</span>
     <span class="brand-tag">CBSE</span>
   </div>
 
@@ -1684,7 +1725,6 @@ mjx-container[display="true"]{margin:8px 0 !important;}
     </div>
   </div>
 
-  
 </header>
 
 <!-- MAIN -->
@@ -1738,7 +1778,8 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="chapter-list" id="cbse-g9">
         <div class="ch-item" onclick="selectChapter('Motion','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Describing Motion Around Us</span></div>
         <div class="ch-item" onclick="selectChapter('Force and Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">How Forces Affect Motion</span></div>
-        <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+        <div class="ch-item" onclick="selectChapter('Work, Energy and Simple Machines','9','⚡',this,false,'work-energy-simple-machines')"><span class="ch-icon">⚡</span><span class="ch-name">Work, Energy and Simple Machines</span></div>
+        <div class="ch-item" onclick="selectChapter('Sound Waves - Characteristics and Applications','9','🔊',this,false,'sound-waves-characteristics-and-applications')"><span class="ch-icon">🔊</span><span class="ch-name">Sound Waves - Characteristics and Applications</span></div>
       </div>
 
       <div class="grade-row" onclick="toggleGrade('cbse-g10',this)">
@@ -1829,16 +1870,20 @@ mjx-container[display="true"]{margin:8px 0 !important;}
         <span class="grade-pill">8</span><span class="grade-label">Class 8</span><span class="grade-sub">IIT Foundation</span><span class="grade-arrow">▶</span>
       </div>
       <div class="chapter-list" id="iit-f-g8">
-        <div class="ch-item" onclick="selectChapter('Units and Dimensions','8','💪',this,false,'ch1')"><span class="ch-icon">💪</span><span class="ch-name">Units and Dimensions</span></div>
-        <div class="ch-item" onclick="selectChapter('Friction','8','🔄',this,false,'ch2')"><span class="ch-icon">🔄</span><span class="ch-name">Friction</span></div>
-        <div class="ch-item" onclick="selectChapter('Sound','8','🔊',this,false,'ch3')"><span class="ch-icon">🔊</span><span class="ch-name">Sound</span></div>
+        <div class="ch-item" onclick="selectChapter('Units and Dimensions','8','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Units and Dimensions</span></div>
+        <div class="ch-item" onclick="selectChapter('Units and Measurements','8','📐',this,false,'units-and-measurements')"><span class="ch-icon">📐</span><span class="ch-name">Units and Measurements</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion In a Starlight Line','8','🏃',this,false,'motion-in-a-starlight-line')"><span class="ch-icon">🏃</span><span class="ch-name">Motion In a Starlight Line</span></div>
+        <div class="ch-item" onclick="selectChapter('Mechanical Properties of Solids','8','🧱',this,false,'mechanical-properties-of-solids')"><span class="ch-icon">🧱</span><span class="ch-name">Mechanical Properties of Solids</span></div>
+        <div class="ch-item" onclick="selectChapter('Mechanical Properties of Fluids','8','💧',this,false,'mechanical-properties-of-fluids')"><span class="ch-icon">💧</span><span class="ch-name">Mechanical Properties of Fluids</span></div>
+        <div class="ch-item" onclick="selectChapter('Ray Optics and Optical Instruments','8','🔭',this,false,'ray-optics-and-optical-instruments')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics and Optical Instruments</span></div>
+        <div class="ch-item" onclick="selectChapter('Waves','8','🌊',this,false,'waves')"><span class="ch-icon">🌊</span><span class="ch-name">Waves</span></div>
       </div>
 
       <div class="grade-row" onclick="toggleGrade('iit-f-g9',this)">
         <span class="grade-pill">9</span><span class="grade-label">Class 9</span><span class="grade-sub">IIT Foundation</span><span class="grade-arrow">▶</span>
       </div>
       <div class="chapter-list" id="iit-f-g9">
-        <div class="ch-item" onclick="selectChapter('Basic Mathematics','9','📐',this,false,'ch4')"><span class="ch-icon">📐</span><span class="ch-name">Basic Mathematics</span></div>
+        <div class="ch-item" onclick="selectChapter('Calculus','9','📐',this,false,'ch4')"><span class="ch-icon">📐</span><span class="ch-name">Calculus</span></div>
         <div class="ch-item" onclick="selectChapter('Motion in a Straightline','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Motion in a Straightline</span></div>
         <div class="ch-item" onclick="selectChapter('Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
         <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
@@ -2459,10 +2504,19 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="sec-btn sec-desc" id="btn-iit-examples" style="display:none;" onclick="switchSection('iitexamples',this)">
         <span class="sec-icon-3d">💡</span>Examples
       </div>
+      <div class="sec-btn sec-desc" id="btn-iit-formulas" style="display:none;" onclick="switchSection('iitformulas',this)"><span class="sec-icon-3d">🧮</span>Formulas</div>
       <div class="sec-btn sec-gloss" id="btn-iit-worksheets" style="display:none;" onclick="switchSection('iitoth',this)">
         <span class="sec-icon-3d">📚</span>Worksheets
       </div>
 
+  <div class="header-right" id="universalToolbar" aria-label="Universal display controls">
+    <button class="gv-btn" id="universalMulti" title="Show all questions" onclick="universalSetView('multi')">☰</button>
+    <button class="gv-btn" id="universalSingle" title="Show one question" onclick="universalSetView('single')">🎯</button>
+    <button class="gv-btn" title="Decrease text size" onclick="globalAdjustFont(-0.1)">A-</button>
+    <button class="gv-btn" title="Increase text size" onclick="globalAdjustFont(0.1)">A+</button>
+    <button class="gv-btn" id="themeBtn" title="Switch light / dark mode" onclick="toggleTheme()">◐</button>
+    <button class="gv-btn" id="fullscreenBtn" title="Toggle fullscreen" onclick="toggleFullscreen()">⛶</button>
+  </div>
 
     </div>
 
@@ -2583,6 +2637,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div id="panel-iitexamples" style="display:none;">
         <div id="iitExamplesBody"></div>
       </div>
+      <div id="panel-iitformulas" style="display:none;"><div id="iitFormulasBody"></div></div>
       <div id="panel-iitoth" style="display:none;">
         <div id="iitOthWorksheetTabsWrap"></div>
         <div id="iitOthLevelTabsWrap"></div>
@@ -2642,14 +2697,23 @@ const PYQ_TYPES = [
 ];
 
 /* ══════ SCRIPT LOADER ══════ */
+const _resourcePromises = new Map();
 function loadScript(url) {
-  return new Promise(res => {
-    if (document.querySelector(`script[data-src="${url}"]`)) { res(); return; }
+  if (_resourcePromises.has(url)) return _resourcePromises.get(url);
+  const promise = new Promise(resolve => {
+    const existing = [...document.scripts].find(s => s.dataset.src === url);
+    if (existing && existing.dataset.loaded === 'true') { resolve(true); return; }
+    if (existing) existing.remove();
     const s = document.createElement('script');
-    s.dataset.src = url; s.src = url;
-    s.onload = s.onerror = () => res();
+    s.dataset.src = url;
+    s.src = url;
+    s.async = true;
+    s.onload = () => { s.dataset.loaded = 'true'; resolve(true); };
+    s.onerror = () => { s.remove(); _resourcePromises.delete(url); console.warn('Missing chapter resource:', url); resolve(false); };
     document.head.appendChild(s);
   });
+  _resourcePromises.set(url, promise);
+  return promise;
 }
 
 /* ══════ BOARD TOGGLE ══════ */
@@ -2721,6 +2785,7 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
   updateSectionVisibility();
 
   if (isIITFoundation()) {
+    CALCULUS_EXAMPLE_TAB = 'illustrations-1';
     COMP.exam = null; COMP.sub = null;      // reset Competitive Exams selection for the new chapter
     IITOTH.worksheetIdx = 0; IITOTH.level = 'core'; // reset Others (Worksheets) selection for the new chapter
     switchSection('notes', document.getElementById('btn-iit-notes'));
@@ -2739,7 +2804,7 @@ function selectChapter(name, grade, icon, el, hasPyq, slug) {
 const PYQ_GRADES = ['cbse-g10', 'cbse-g12', 'ap-g10', 'ap-inter-1', 'ap-inter-2'];
 
 const NON_IIT_SECTION_BTN_IDS = ['btn-notes','btn-pyq','btn-desc','btn-objective','btn-runthrough','btn-ppt','btn-flash','btn-sim','btn-games','btn-mind','btn-gloss'];
-const IIT_SECTION_BTN_IDS = ['btn-iit-notes','btn-iit-ppt','btn-iit-compexams','btn-iit-examples','btn-iit-worksheets'];
+const IIT_SECTION_BTN_IDS = ['btn-iit-notes','btn-iit-ppt','btn-iit-compexams','btn-iit-examples','btn-iit-formulas','btn-iit-worksheets'];
 
 function updateSectionVisibility() {
   const downloadsBtn = document.getElementById('downloadsBtn');
@@ -2795,7 +2860,7 @@ function switchSection(type, el, sub) {
   if (type === 'objective' && isIITFoundation()) CUR.iitTab = sub || 'mcq';
   document.querySelectorAll('.sec-btn').forEach(b => b.classList.remove('active'));
   if (el) el.classList.add('active');
-  ['notes','desc','objective','runthrough','playlearn','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitexamples','iitoth'].forEach(p => {
+  ['notes','desc','objective','runthrough','playlearn','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitexamples','iitformulas','iitoth'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
@@ -2840,6 +2905,7 @@ function switchSection(type, el, sub) {
       break;
     case 'iitcomp': renderCompExamsView(); break;
     case 'iitexamples': renderIITExamplesView(); break;
+    case 'iitformulas': renderIITFormulasView(); break;
     case 'iitoth':  renderIITOthersView(); break;
   }
   document.getElementById('content').scrollTop = 0;
@@ -3073,7 +3139,7 @@ async function loadNotes() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.note = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/notes.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   window.chapterNotes ? renderNotes(window.chapterNotes, wrap)
     : renderComingSoon(wrap,'📖','Notes','Notes for this chapter are being prepared.');
@@ -3193,7 +3259,9 @@ function renderNotes(d, wrap) {
   setTimeout(pinNotesHeader,80);
   setTimeout(pinNotesHeader,260);
   // Trigger MathJax rendering for formulas in notes
-  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+  if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+    MathJax.typesetPromise([wrap]).catch(err => console.warn('MathJax typesetting skipped:', err));
+  }
 }
 
 function pinNotesHeader(){
@@ -3782,7 +3850,7 @@ async function loadObjective() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.mcqs = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/${fileName}`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   const hasData = isIITMCQNested(window.objectiveData)
     ? Object.keys(window.objectiveData || {}).length > 0
@@ -3928,13 +3996,6 @@ function cisceToolbarHTML(){
 }
 function placeCISCETools(){
   document.querySelectorAll('.cisce-section-tools').forEach(x=>x.remove());
-  if(!isCISCECambridge()) return;
-  const map={desc:'desc-tabbar',objective:'obj-tabbar',runthrough:'runthrough-tabbar'};
-  const id=map[CUR.section];
-  const bar=id&&document.getElementById(id);
-  if(bar){
-    bar.insertAdjacentHTML('beforeend',cisceToolbarHTML());
-  }
 }
 function cisceSetView(mode){
   const sec=CUR.section;
@@ -4194,7 +4255,9 @@ function toggleIITCardAnswer(event, card) {
 function finalizeQuestionCards(wrap, qArray) {
   applyOptionsLayout(wrap);
   updateIITPracticeMeta(qArray);
-  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+  if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+    MathJax.typesetPromise([wrap]).catch(err => console.warn('MathJax typesetting skipped:', err));
+  }
 }
 
 function renderIITObjective(data, wrap) {
@@ -4228,19 +4291,87 @@ function renderIITObjective(data, wrap) {
 
 /* Global ☰ Multi-Questions / 🎯 Single Question toggle — lives once in the top tab bar,
    persists across Notes/PPTs/Competitive Exams/Premier Institutes/Others/Worksheets/Levels/Institutes. */
+/* v9: Scope navigation to the rendered worksheet rather than a stale panel.
+   Force the selected card visible even if a theme/section CSS rule overrides display. */
+function activeQuestionCardsRoot() {
+  if (CUR.section === 'iitoth') return document.getElementById('iitOthBody');
+  if (CUR.section === 'iitexamples') return document.getElementById('iitExamplesBody');
+  const candidates = [
+    document.getElementById('iitOthBody'),
+    document.getElementById('iitExamplesBody'),
+    document.getElementById('panel-' + (CUR.section || '')),
+    document.getElementById('content')
+  ];
+  for (const node of candidates) {
+    if (node && node.querySelector('.iit-q-card') && node.getClientRects().length) return node;
+  }
+  return candidates.find(node => node && node.querySelector('.iit-q-card')) || document.getElementById('content');
+}
+function revealActiveQuestionCard(root, index, mode) {
+  if (!root) return;
+  const cards = [...root.querySelectorAll('.iit-q-card')];
+  if (!cards.length) return;
+  if (index < 0 || index >= cards.length) index = 0;
+  cards.forEach((card, pos) => {
+    const show = mode === 'list' || pos === index;
+    card.style.setProperty('display', show ? 'flex' : 'none', 'important');
+    card.hidden = false;
+    if (show) {
+      card.style.removeProperty('visibility');
+      card.style.removeProperty('opacity');
+    }
+  });
+  const questions = cards[0].closest('.iit-questions');
+  if (questions) {
+    questions.hidden = false;
+    questions.style.setProperty('display', 'block', 'important');
+    questions.style.removeProperty('visibility');
+    questions.style.removeProperty('opacity');
+  }
+}
+/* v10: A dedicated single-question viewport avoids conflicts with card-level
+   visibility rules and asynchronous question rendering. */
+function syncIITSingleViewport(root) {
+  if (!root) return;
+  const container = root.querySelector('.iit-questions');
+  if (!container) return;
+  const cards = Array.from(container.querySelectorAll('.iit-q-card'));
+  if (!cards.length) return;
+  let host = root.querySelector('.iit-single-viewport');
+  if (!host) {
+    host = document.createElement('div');
+    host.className = 'iit-single-viewport';
+    container.insertAdjacentElement('afterend', host);
+  }
+  if (IIT_PRACTICE.mode !== 'practice') {
+    host.replaceChildren();
+    host.style.display = 'none';
+    container.style.setProperty('display', 'block', 'important');
+    return;
+  }
+  const idx = Math.max(0, Math.min(IIT_PRACTICE.index, cards.length - 1));
+  const selected = cards[idx];
+  host.replaceChildren(selected.cloneNode(true));
+  const visible = host.firstElementChild;
+  host.style.setProperty('display', 'block', 'important');
+  host.style.setProperty('visibility', 'visible', 'important');
+  visible.hidden = false;
+  visible.style.setProperty('display', 'flex', 'important');
+  visible.style.setProperty('visibility', 'visible', 'important');
+  visible.style.setProperty('opacity', '1', 'important');
+  container.style.setProperty('display', 'none', 'important');
+}
 function setGlobalViewMode(mode) {
   mode = (mode === 'practice') ? 'practice' : 'list';
   IIT_PRACTICE.mode = mode;
 
-  const activePanel = document.getElementById('panel-' + (CUR.section || '')) || document.getElementById('content');
-  const cards = activePanel ? activePanel.querySelectorAll('.iit-q-card') : document.querySelectorAll('.iit-q-card');
+  const activePanel = activeQuestionCardsRoot();
+  const cards = activePanel ? activePanel.querySelectorAll('.iit-q-card') : [];
 
-  if (IIT_PRACTICE.index >= cards.length) IIT_PRACTICE.index = 0;
+  if (IIT_PRACTICE.index >= cards.length || IIT_PRACTICE.index < 0) IIT_PRACTICE.index = 0;
 
-  cards.forEach(card => {
-    const idx = parseInt(card.dataset.qidx, 10);
-    card.style.display = (mode === 'list' || idx === IIT_PRACTICE.index) ? 'flex' : 'none';
-  });
+  revealActiveQuestionCard(activePanel, IIT_PRACTICE.index, mode);
+  syncIITSingleViewport(activePanel);
 
   const practiceNav = activePanel ? activePanel.querySelector('#iitPracticeNav') : document.getElementById('iitPracticeNav');
   const paletteWrap = activePanel ? activePanel.querySelector('#iitPaletteWrap') : document.getElementById('iitPaletteWrap');
@@ -4284,12 +4415,9 @@ function jumpToIITQuestion(idx) {
   idx=Math.max(0,Math.min(idx,data.length-1));
   IIT_PRACTICE.index=idx;
 
-  const activePanel=document.getElementById('panel-'+(CUR.section||'')) || document.getElementById('content');
-  const cards=activePanel ? activePanel.querySelectorAll('.iit-q-card') : [];
-  cards.forEach(card=>{
-    const i=parseInt(card.dataset.qidx,10);
-    card.style.display=(IIT_PRACTICE.mode==='list' || i===idx)?'flex':'none';
-  });
+  const activePanel=activeQuestionCardsRoot();
+  revealActiveQuestionCard(activePanel, idx, IIT_PRACTICE.mode);
+  syncIITSingleViewport(activePanel);
 
   const palette=activePanel ? activePanel.querySelectorAll('#iitPalette .iit-palette-num') : [];
   palette.forEach((el,i)=>el.classList.toggle('current',i===idx));
@@ -4306,20 +4434,25 @@ function nextIITQuestion() {
   const total = currentIITArray().length;
   if (IIT_PRACTICE.index < total - 1) jumpToIITQuestion(IIT_PRACTICE.index + 1);
 }
+function activeIITQuestionPanel() {
+  return activeQuestionCardsRoot();
+}
 function scrollIITPaletteIntoView() {
-  const el = document.querySelectorAll('#iitPalette .iit-palette-num')[IIT_PRACTICE.index];
+  const panel = activeIITQuestionPanel();
+  const el = panel?.querySelectorAll('#iitPalette .iit-palette-num')[IIT_PRACTICE.index];
   if (el) el.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
 }
 function updateIITPracticeMeta(data) {
   const q = data[IIT_PRACTICE.index]; if (!q) return;
   const total = data.length;
-  const prog = document.getElementById('iitNavProgress');
+  const panel = activeIITQuestionPanel();
+  const prog = panel?.querySelector('#iitNavProgress');
   if (prog) {
     const wsLabel = q.paper || '';
     prog.textContent = `${IIT_PRACTICE.index+1} of ${total}${wsLabel?' · '+wsLabel:''}`;
   }
-  const prevBtn = document.getElementById('iitPrevBtn'); if (prevBtn) prevBtn.disabled = IIT_PRACTICE.index === 0;
-  const nextBtn = document.getElementById('iitNextBtn'); if (nextBtn) nextBtn.disabled = IIT_PRACTICE.index === total-1;
+  const prevBtn = panel?.querySelector('#iitPrevBtn'); if (prevBtn) prevBtn.disabled = IIT_PRACTICE.index === 0;
+  const nextBtn = panel?.querySelector('#iitNextBtn'); if (nextBtn) nextBtn.disabled = IIT_PRACTICE.index === total-1;
 }
 function setIITObjectiveTab(tab) {
   CUR.iitTab = tab;
@@ -4420,7 +4553,7 @@ function selectOthersBoard(name, grade, el, chapter, icon) {
   document.getElementById('pyq-tabbar').classList.remove('visible');
   document.getElementById('desc-tabbar').classList.remove('visible');
 
-  ['notes','desc','objective','runthrough','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitexamples','iitoth'].forEach(p => {
+  ['notes','desc','objective','runthrough','mock','ppt','flash','gloss','mind','sim','games','pyq','iitcomp','iitexamples','iitformulas','iitoth'].forEach(p => {
     const panel = document.getElementById('panel-'+p);
     if (panel) panel.style.display = 'none';
   });
@@ -4495,7 +4628,7 @@ async function loadOthersLeaf(node) {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.othersq = '1'; s.src = node.file;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   const qArray = window.othersQuestionData || [];
   ACTIVE_QARRAY = qArray;
@@ -4522,7 +4655,7 @@ async function loadIITLeveledNode(node, bodyWrap) {
     await new Promise(res => {
       const s = document.createElement('script');
       s.dataset.iitlvl = '1'; s.src = lvl.file;
-      s.onload = s.onerror = res; document.head.appendChild(s);
+      s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
     });
     const arr = window.othersQuestionData || [];
     arr.forEach(q => { running++; q.no = running; });
@@ -4617,7 +4750,7 @@ async function loadCompExamData() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.compexam = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/${subtab.file}`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   const qArray = window.objectiveData || [];
   ACTIVE_QARRAY = qArray;
@@ -4662,6 +4795,16 @@ function iitRenderedUtilityHTML(){
   </div>`;
 }
 
+let CALCULUS_EXAMPLE_TAB = 'illustrations-1';
+function setCalculusExampleTab(tab){
+  if(!['illustrations-1','examples-1','illustrations-2','examples-2'].includes(tab)) return;
+  CALCULUS_EXAMPLE_TAB=tab;
+  renderIITExamplesView();
+}
+function calculusExamplesTabs(){
+  const tabs=[['illustrations-1','Illustrations-1 · Differentiation'],['examples-1','Examples-1 · Differentiation'],['illustrations-2','Illustrations-2 · Integration'],['examples-2','Examples-2 · Integration']];
+  return `<div class="calculus-examples-tabs" role="tablist" aria-label="Calculus illustrations and examples">${tabs.map(([key,label])=>`<button type="button" class="calculus-example-tab${CALCULUS_EXAMPLE_TAB===key?' active':''}" onclick="setCalculusExampleTab('${key}')">${label}</button>`).join('')}</div>`;
+}
 function buildIITExamplesHTML(qArray){
   const total=qArray.length;
   if(IIT_PRACTICE.index>=total) IIT_PRACTICE.index=0;
@@ -4704,33 +4847,54 @@ async function renderIITExamplesView() {
 
   window.iitExamplesData = undefined;
   window.examplesData = undefined;
+  window.calculusExamplesData = undefined;
   document.querySelectorAll('[data-iitexamples]').forEach(s=>s.remove());
 
-  await new Promise(res => {
-    const sc = document.createElement('script');
-    sc.dataset.iitexamples = '1';
-    sc.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/examples.js`;
-    sc.onload = sc.onerror = res;
-    document.head.appendChild(sc);
+  const calculus = board === 'iit-foundation' && gradeNum === '9' && CUR.slug === 'ch4';
+  const tabAtStart = CALCULUS_EXAMPLE_TAB;
+  const chapterAtStart = CUR.slug;
+  // Calculus uses the supplied examples.js as a four-tab data source.
+  // Other chapters continue loading examples.js exactly as before.
+  const filename = 'examples.js';
+  await new Promise(resolve => {
+    const sc=document.createElement('script'); sc.dataset.iitexamples='1';
+    sc.src=`boards/${board}/grade${gradeNum}/${CUR.slug}/${filename}`;
+    sc.onload=sc.onerror=()=>resolve(); document.head.appendChild(sc);
   });
-
-  const data = Array.isArray(window.iitExamplesData)
-    ? window.iitExamplesData
-    : (Array.isArray(window.examplesData) ? window.examplesData : []);
-
-  if (!data.length) {
-    renderComingSoon(bodyWrap,'💡','Examples','Examples for this chapter are being prepared. Add them in <code>examples.js</code>');
+  if(CUR.slug!==chapterAtStart || (calculus && CALCULUS_EXAMPLE_TAB!==tabAtStart)) return;
+  const allData=Array.isArray(window.iitExamplesData)?window.iitExamplesData:(Array.isArray(window.examplesData)?window.examplesData:(calculus?window.P4F_CALCULUS_ORIGINAL_BUNDLED:[]));
+  const grouped=(calculus && (!window.calculusExamplesData || !Object.keys(window.calculusExamplesData).length)) ? window.P4F_CALCULUS_EXAMPLES_BUNDLED : window.calculusExamplesData;
+  const examplesForTab=calculus ? ((grouped && Array.isArray(grouped[tabAtStart])) ? grouped[tabAtStart] : (tabAtStart==='illustrations-1'?allData:[])) : allData;
+  if (!examplesForTab.length) {
+    bodyWrap.innerHTML = (calculus ? calculusExamplesTabs() : '') +
+      `<div class="iit-empty">No ${calculus ? tabAtStart : 'example'} questions have been added yet.</div>`;
+    updateGlobalToggleAvailability('iitexamples');
     return;
   }
 
-  ACTIVE_QARRAY = data;
+  ACTIVE_QARRAY = examplesForTab;
   IIT_PRACTICE.index = 0;
-  bodyWrap.innerHTML = buildIITExamplesHTML(data);
-  updateIITPracticeMeta(data);
+  bodyWrap.innerHTML = (calculus ? calculusExamplesTabs() : '') + buildIITExamplesHTML(examplesForTab);
+  updateIITPracticeMeta(examplesForTab);
   typesetMathSafe(bodyWrap);
   updateGlobalToggleAvailability('iitexamples');
 }
 
+/* IIT Foundation formula reference: chapter-local formulas.js with a built-in fallback. */
+async function renderIITFormulasView(){
+  const el=document.getElementById('iitFormulasBody'); if(!el)return;
+  if(!CUR.slug){renderComingSoon(el,'🧮','Formulas','Select a chapter to view formulas.');return;}
+  const [board,gradeNum]=parseGradeId(CUR.grade), slug=CUR.slug;
+  el.innerHTML=spinnerHTML('🧮','Loading formulas…');
+  window.iitFormulasData=undefined;
+  document.querySelectorAll('[data-iitformulas]').forEach(sc=>sc.remove());
+  await new Promise(resolve=>{const sc=document.createElement('script');sc.dataset.iitformulas='1';sc.src=`boards/${board}/grade${gradeNum}/${slug}/formulas.js`;sc.onload=sc.onerror=()=>resolve();document.head.appendChild(sc);});
+  if(CUR.slug!==slug||CUR.section!=='iitformulas')return;
+  const groups=Array.isArray(window.iitFormulasData)?window.iitFormulasData:((board==='iit-foundation' && gradeNum==='9' && slug==='ch4')?window.P4F_CALCULUS_FORMULAS_BUNDLED:[]);
+  if(!groups.length){el.innerHTML='<div class="iit-empty">Formulas are not yet available for this chapter. Add a chapter-specific <code>formulas.js</code>.</div>';return;}
+  el.innerHTML='<div class="iit-formulas-grid">'+groups.map(g=>`<section class="iit-formula-group"><h3>${g.title}</h3>${(g.items||[]).map(f=>`<div class="iit-formula-item"><strong>${f.name}</strong><div class="iit-formula-math">\\(${f.formula}\\)</div>${f.note?`<small>${f.note}</small>`:''}</div>`).join('')}</section>`).join('')+'</div>';
+  typesetMathSafe(el);
+}
 /* ══════════════════════════════════════════════════════════════════ */
 /* 📚 IIT FOUNDATION — WORKSHEETS (fully driven by others.js)        */
 /* - Number of worksheets = exactly what exists in JS                 */
@@ -4744,7 +4908,10 @@ const IIT_OTH_LEVELS = [
 ];
 const IITOTH = { worksheetIdx:0, level:'core', worksheets:[] };
 
+let iitWorksheetLoadToken = 0;
 async function renderIITOthersView() {
+  const loadToken = ++iitWorksheetLoadToken;
+  const requestedSlug = CUR.slug;
   const tabsWrap = document.getElementById('iitOthWorksheetTabsWrap');
   const levelWrap = document.getElementById('iitOthLevelTabsWrap');
   const bodyWrap = document.getElementById('iitOthBody');
@@ -4766,9 +4933,12 @@ async function renderIITOthersView() {
     const sc = document.createElement('script');
     sc.dataset.iitoth = '1';
     sc.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/others.js`;
-    sc.onload = sc.onerror = res;
+    sc.onload = res;
+    sc.onerror = () => { console.warn('Worksheet data failed to load:', sc.src); sc.remove(); res(); };
     document.head.appendChild(sc);
   });
+
+  if (loadToken !== iitWorksheetLoadToken || requestedSlug !== CUR.slug || CUR.section !== 'iitoth') return;
 
   /* IMPORTANT: do not invent worksheet counts or placeholder worksheets.
      Display exactly the worksheets supplied by the chapter's others.js. */
@@ -4785,7 +4955,7 @@ async function renderIITOthersView() {
     return;
   }
 
-  if (IITOTH.worksheetIdx >= loaded.length) IITOTH.worksheetIdx = 0;
+  if (IITOTH.worksheetIdx >= loaded.length || IITOTH.worksheetIdx < 0) IITOTH.worksheetIdx = 0;
 
   const current = loaded[IITOTH.worksheetIdx];
   const available = availableWorksheetLevels(current);
@@ -4798,6 +4968,7 @@ async function renderIITOthersView() {
 }
 
 function selectIITOthWorksheet(idx) {
+  if (!Number.isInteger(idx) || idx < 0 || idx >= IITOTH.worksheets.length) return;
   IITOTH.worksheetIdx = idx;
   const worksheet = IITOTH.worksheets[idx];
   const available = availableWorksheetLevels(worksheet);
@@ -4807,6 +4978,8 @@ function selectIITOthWorksheet(idx) {
 }
 
 function selectIITOthLevel(level) {
+  const ws = IITOTH.worksheets[IITOTH.worksheetIdx];
+  if (!availableWorksheetLevels(ws).some(item => item.id === level)) return;
   IITOTH.level = level;
   renderIITOthTabs();
   renderIITOthLevel();
@@ -4880,7 +5053,14 @@ function renderIITOthLevel() {
     accentColor:accent,
     combinedNav:true
   });
-  finalizeQuestionCards(bodyWrap, qArray);
+  // Set the question visibility independently of asynchronous MathJax loading.
+  // Every worksheet question must remain reachable in Single View.
+  try { finalizeQuestionCards(bodyWrap, qArray); }
+  catch (err) { console.warn('Worksheet formatting failed; navigation retained:', err); }
+  setGlobalViewMode(IIT_PRACTICE.mode);
+  revealActiveQuestionCard(bodyWrap, IIT_PRACTICE.index, IIT_PRACTICE.mode);
+  syncIITSingleViewport(bodyWrap);
+  updateIITPracticeMeta(qArray);
 }
 
 function typeColor(type) {
@@ -4959,7 +5139,7 @@ async function loadMock() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.mock = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/mocktest.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   window.mockTestData
     ? renderMock(window.mockTestData, wrap)
@@ -4977,7 +5157,9 @@ function renderMock(d, wrap) {
   ).join('');
   html += `<button id="mock-submit" onclick="submitMock(${d.questions.length},${d.totalMarks})">✅ Submit Test</button><div id="mock-score"></div>`;
   wrap.innerHTML = html;
-  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+  if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+    MathJax.typesetPromise([wrap]).catch(err => console.warn('MathJax typesetting skipped:', err));
+  }
 }
 
 function pickMockOpt(opt) {
@@ -5014,14 +5196,16 @@ async function loadPPT() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.ppt = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/ppts.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   if (window.pptsData && window.pptsData.length) {
     wrap.innerHTML = `<div class="ppt-grid">${window.pptsData.map(p=>`<div class="ppt-card ${p.source || 'onedrive'}" onclick="window.open('${p.url}','_blank')"><div class="ppt-thumb">${p.icon || '📊'}<div class="ppt-source-badge ${p.source || 'onedrive'}">${p.source === 'canva' ? '🎨 Canva' : '☁️ OneDrive'}</div></div><div class="ppt-name">${p.title}</div><div class="ppt-slides">${p.slides || '?'} slides</div></div>`).join('')}</div>`;
   } else {
     renderComingSoon(wrap,'📊','PPTs / Slides','Chapter slide decks are being prepared. Add PPT links in <code>ppts.js</code>');
   }
-  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(err => console.log('MathJax error:', err));
+  if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+    MathJax.typesetPromise([wrap]).catch(err => console.warn('MathJax typesetting skipped:', err));
+  }
 }
 
 /* ══════ FLASH CARDS ══════ */
@@ -5034,7 +5218,7 @@ async function loadFlash() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.flash = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/flashcards.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   window.flashcardsData && window.flashcardsData.length
     ? renderFlash(window.flashcardsData, wrap)
@@ -5078,7 +5262,7 @@ async function loadSim() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.sim = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/simulation.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   window.simulationData && window.simulationData.length
     ? renderSim(window.simulationData, wrap)
@@ -5144,7 +5328,7 @@ async function loadGames() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.games = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/games.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   window.gamesData && window.gamesData.length
     ? renderGames(window.gamesData, wrap)
@@ -5219,7 +5403,7 @@ async function loadMindMap() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.mindmap = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/mindmap.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   if (window.mindmapData && window.mindmapData.branches) {
     const d = window.mindmapData;
@@ -5241,7 +5425,7 @@ async function loadGlossary() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.glossary = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/glossary.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   if (window.glossaryData && window.glossaryData.terms && window.glossaryData.terms.length) {
     const d = window.glossaryData;
@@ -5275,7 +5459,7 @@ async function loadPYQ() {
   await new Promise(res => {
     const s = document.createElement('script');
     s.dataset.pyq = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/pyqs.js`;
-    s.onload = s.onerror = res; document.head.appendChild(s);
+    s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   const data = window.pyqsData || {};
   PYQ_TYPES.forEach(t => { window[t.varName] = data[t.id] || []; });
@@ -5600,43 +5784,14 @@ function subsectionUtilityHTML(){
     <button class="gv-btn" id="globalSingleViewBtn" title="Single-Question View" onclick="globalSingleView()">🎯</button>
     <button class="gv-btn" title="Decrease font size" onclick="globalAdjustFont(-0.1)">A-</button>
     <button class="gv-btn" title="Increase font size" onclick="globalAdjustFont(0.1)">A+</button>
-    <button class="gv-btn" id="themeBtn" title="Dark / Light Mode" onclick="toggleTheme()">◐</button>
-    <button class="gv-btn" id="fullscreenBtn" title="Fullscreen" onclick="toggleFullscreen()">⛶</button>
+    <button class="gv-btn" title="Dark / Light Mode" onclick="toggleTheme()">◐</button>
+    <button class="gv-btn" title="Fullscreen" onclick="toggleFullscreen()">⛶</button>
   </div>`;
 }
 
 function placeControlsBesideSubsections(){
-  const old=document.getElementById('subsectionUtilityControls');
-  if(old) old.remove();
-
-  const sec=(CUR && CUR.section) ? CUR.section : '';
-  let selectors=[];
-
-  // CBSE Grades 6–9: Descriptive + Objective subsection rows
-  if(/^cbse-g[6-9]$/.test((CUR&&CUR.grade)||'')){
-    if(sec==='desc') selectors=['#desc-tabbar','.desc-tabbar','.desc-tabs'];
-    if(sec==='objective') selectors=['#obj-tabbar','.obj-tabbar','.objective-tabs'];
-  }
-
-  // CBSE Grade 10: PYQ subsection row (also retain support if Desc/Objective used)
-  if(((CUR&&CUR.grade)||'')==='cbse-g10'){
-    if(sec==='pyq') selectors=['#pyq-tabbar','.pyq-tabbar','.pyq-tabs'];
-    if(sec==='desc') selectors=['#desc-tabbar','.desc-tabbar','.desc-tabs'];
-    if(sec==='objective') selectors=['#obj-tabbar','.obj-tabbar','.objective-tabs'];
-  }
-
-
-  let row=null;
-  for(const sel of selectors){
-    row=document.querySelector(sel);
-    if(row) break;
-  }
-  if(!row) return;
-
-  row.insertAdjacentHTML('beforeend',subsectionUtilityHTML());
+  document.querySelectorAll('.subsection-utility-controls').forEach(x=>x.remove());
 }
-
-
 function removeDuplicateSectionControls(){
   const global = document.getElementById('subsectionUtilityControls');
   const selectors = [
@@ -5662,65 +5817,14 @@ function removeDuplicateSectionControls(){
 
 /* ══ IIT FOUNDATION: utility controls for Examples + Worksheets ══ */
 function ensureIITExampleWorksheetControls(){
-  if(!(typeof isIITFoundation === 'function' && isIITFoundation())) return;
-
-  const sec = (CUR && CUR.section) ? CUR.section : '';
-  if(sec !== 'iitexamples' && sec !== 'iitoth') return;
-
-  /* Examples already contains its own rendered utility toolbar.
-     Do not remove/reinsert another toolbar on every DOM mutation. */
-  if(sec === 'iitexamples'){
-    const rendered = document.querySelector('#panel-iitexamples .iit-rendered-utility');
-    if(rendered){
-      rendered.style.display='flex';
-      rendered.style.visibility='visible';
-      rendered.style.opacity='1';
-      rendered.style.pointerEvents='auto';
-    }
-    const duplicate=document.getElementById('subsectionUtilityControls');
-    if(duplicate) duplicate.remove();
-    return;
-  }
-
-  let host =
-    document.querySelector('#iitWorksheetsTabs') ||
-    document.querySelector('#iit-worksheets-tabs') ||
-    document.querySelector('.iit-worksheets-tabs') ||
-    document.querySelector('#iitOthersContent .iit-practice-nav-combined') ||
-    document.querySelector('#iitOthersContent .iit-practice-nav') ||
-    document.querySelector('#iitoth .iit-practice-nav-combined') ||
-    document.querySelector('#iitoth .iit-practice-nav');
-
-  if(!host){
-    host=Array.from(document.querySelectorAll(
-      '#panel-iitoth .iit-practice-nav-combined,#panel-iitoth .iit-practice-nav,#panel-iitoth .iit-subtabs,#panel-iitoth .sub-tabs'
-    )).find(el=>getComputedStyle(el).display!=='none');
-  }
-  if(!host) return;
-
-  const existing=document.getElementById('subsectionUtilityControls');
-
-  /* Anti-loop guard: MutationObserver must not cause another DOM mutation
-     when the toolbar is already in the correct place. */
-  if(existing && host.contains(existing)){
-    existing.style.display='flex';
-    existing.style.visibility='visible';
-    existing.style.opacity='1';
-    existing.style.pointerEvents='auto';
-    return;
-  }
-
-  if(existing) existing.remove();
-  host.insertAdjacentHTML('beforeend',subsectionUtilityHTML());
-
-  const ctl=document.getElementById('subsectionUtilityControls');
-  if(ctl){
-    ctl.style.display='flex';
-    ctl.style.marginLeft='auto';
-    ctl.style.visibility='visible';
-    ctl.style.opacity='1';
-    ctl.style.pointerEvents='auto';
-  }
+  // v6: The universal toolbar is the sole visible control group.
+  // Legacy IIT controls are kept in the DOM only for internal event/state compatibility.
+  document.querySelectorAll('.subsection-utility-controls').forEach(el => el.remove());
+  document.querySelectorAll('.iit-rendered-utility').forEach(el => {
+    el.style.setProperty('display','none','important');
+    el.style.setProperty('visibility','hidden','important');
+    el.style.setProperty('pointer-events','none','important');
+  });
 }
 
 /* IIT uses its own view-state API. Resolve the mode names supported by the
@@ -5814,6 +5918,30 @@ function globalSingleView(){
   else if(sec === 'pyq' && typeof setPyqViewMode === 'function') setPyqViewMode('practice');
 }
 
+function universalSetView(mode){
+  const single=mode==='single';
+  const sec=(CUR&&CUR.section)||'notes';
+  if(typeof isCISCECambridge==='function' && isCISCECambridge() && ['desc','objective','runthrough'].includes(sec)){
+    cisceSetView(single?'single':'multi');
+  }else if(sec==='runthrough' && typeof setCISCERunThroughView==='function'){
+    setCISCERunThroughView(single?'single':'multi');
+  }else if(typeof isIITFoundation==='function' && isIITFoundation() && ['iitcomp','iitexamples','iitoth'].includes(sec)){
+    if(typeof setIITRequestedView==='function') setIITRequestedView(single);
+  }else if(sec==='desc' && typeof setCbseDescView==='function' && /^cbse-g/.test(CUR.grade||'')){
+    setCbseDescView(single?'single':'multi');
+  }else if(sec==='objective' && typeof setObjViewMode==='function'){
+    setObjViewMode(single?'practice':'list');
+  }else if(sec==='pyq' && typeof setPyqViewMode==='function'){
+    setPyqViewMode(single?'practice':'list');
+  }else if(sec==='desc' && typeof setDescViewMode==='function'){
+    setDescViewMode(single?'practice':'list');
+  }else if(typeof setGlobalViewMode==='function' && ['iitcomp','iitexamples','iitoth'].includes(sec)){
+    setGlobalViewMode(single?'practice':'list');
+  }
+  document.getElementById('universalMulti')?.classList.toggle('active',!single);
+  document.getElementById('universalSingle')?.classList.toggle('active',single);
+}
+
 function globalAdjustFont(delta){
   const sec = CUR.section || 'notes';
 
@@ -5894,7 +6022,7 @@ document.addEventListener('transitionend',(e)=>{
 /* ══════ THEME ══════ */
 function toggleTheme() {
   document.body.classList.toggle('light');
-  document.getElementById('themeBtn').textContent = document.body.classList.contains('light')?'🌙':'☀️';
+  const btn=document.getElementById('themeBtn'); if(btn) btn.textContent='◐';
 }
 
 /* ══════ MOBILE / DESKTOP VIEW TOGGLE ══════ */
@@ -5989,5 +6117,405 @@ document.addEventListener('click', function(e){
 
 
 
+
+<script id="p4f-calculus-bundled-data">
+(function(){
+window.iitExamplesData = [
+  {
+    no: 1,
+    question: String.raw`Differentiate the following with respect to \(x\):
+<div class="ex-subparts">
+  <div class="ex-sub"><span class="ex-subno">(i)</span><span class="ex-subtext">\( 2020\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(ii)</span><span class="ex-subtext">\( \pi^2\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iii)</span><span class="ex-subtext">\( \pi e\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iv)</span><span class="ex-subtext">\( e^{-5}\)</span></div>
+</div>`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+A constant does not change with \(x\), so its derivative is zero.
+<div class="sol-steps">
+<div><b>(i)</b><span>\(\frac{d}{dx}(2020)=\boxed{0}\)</span></div>
+<div><b>(ii)</b><span>\(\frac{d}{dx}(\pi^2)=\boxed{0}\)</span></div>
+<div><b>(iii)</b><span>\(\frac{d}{dx}(\pi e)=\boxed{0}\)</span></div>
+<div><b>(iv)</b><span>\(\frac{d}{dx}(e^{-5})=\boxed{0}\)</span></div>
+</div>`
+  },
+  {
+    no: 2,
+    question: String.raw`Differentiate the following with respect to \(x\):
+<div class="ex-subparts">
+  <div class="ex-sub"><span class="ex-subno">(i)</span><span class="ex-subtext">\( 16x^8\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(ii)</span><span class="ex-subtext">\( x^{-4}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iii)</span><span class="ex-subtext">\( x^{5/2}\)</span></div>
+</div>`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Use the power rule:
+\[
+\frac{d}{dx}(x^n)=nx^{n-1}.
+\]
+<div class="sol-steps">
+<div><b>(i)</b><span>\(\frac{d}{dx}(16x^8)=16(8x^7)=\boxed{128x^7}\)</span></div>
+<div><b>(ii)</b><span>\(\frac{d}{dx}(x^{-4})=-4x^{-5}=\boxed{-\frac4{x^5}}\)</span></div>
+<div><b>(iii)</b><span>\(\frac{d}{dx}(x^{5/2})=\boxed{\frac52x^{3/2}}\)</span></div>
+</div>`
+  },
+  {
+    no: 3,
+    question: String.raw`Differentiate the following with respect to \(x\):
+<div class="ex-subparts">
+  <div class="ex-sub"><span class="ex-subno">(i)</span><span class="ex-subtext">\( 4x^3-10-6x^2\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(ii)</span><span class="ex-subtext">\( x^2+3x+\frac{3}{x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iii)</span><span class="ex-subtext">\( \tan(3x+1)\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iv)</span><span class="ex-subtext">\( \cos 3x\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(v)</span><span class="ex-subtext">\( \sqrt{\sin x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(vi)</span><span class="ex-subtext">\( 3x^2+12x-\frac{11}{x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(vii)</span><span class="ex-subtext">\( \tan x+2\sin x+3\cos x-\frac{1}{2}\log x-e^x\)</span></div>
+</div>`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Differentiate each term separately.
+<div class="sol-steps">
+<div><b>(i)</b><span>\(12x^2-12x=\boxed{12x^2-12x}\)</span></div>
+<div><b>(ii)</b><span>\(2x+3-\frac3{x^2}=\boxed{2x+3-\frac3{x^2}}\)</span></div>
+<div><b>(iii)</b><span>Let \(u=3x+1\). Then \(u'=3\). Hence \(\frac{d}{dx}(\tan u)=\sec^2u\,u'=\boxed{3\sec^2(3x+1)}\).</span></div>
+<div><b>(iv)</b><span>\(\frac{d}{dx}(\cos3x)=-3\sin3x=\boxed{-3\sin3x}\)</span></div>
+<div><b>(v)</b><span>\(\frac{d}{dx}(\sin x)^{1/2}=\frac12(\sin x)^{-1/2}\cos x=\boxed{\frac{\cos x}{2\sqrt{\sin x}}}\)</span></div>
+<div><b>(vi)</b><span>\(6x+12+\frac{11}{x^2}=\boxed{6x+12+\frac{11}{x^2}}\)</span></div>
+<div><b>(vii)</b><span>\(\boxed{\sec^2x+2\cos x-3\sin x-\frac1{2x}-e^x}\)</span></div>
+</div>`
+  },
+  {
+    no: 4,
+    question: String.raw`Differentiate with respect to \(x\) using the product rule:
+<div class="ex-subparts">
+  <div class="ex-sub"><span class="ex-subno">(i)</span><span class="ex-subtext">\( (5x+2)(4-3x)\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(ii)</span><span class="ex-subtext">\( \sqrt{x}\,\sec x\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iii)</span><span class="ex-subtext">\( (ax^2+bx+c)(x-d)\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iv)</span><span class="ex-subtext">\( x^3\sin x\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(v)</span><span class="ex-subtext">\( x\sin x\log x\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(vi)</span><span class="ex-subtext">\( (1+2\tan x)(5+4\cos x)\)</span></div>
+</div>`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Use the product rule:
+\[
+(uv)'=u'v+uv'.
+\]
+<div class="sol-steps">
+<div><b>(i)</b><span>\(5(4-3x)-3(5x+2)=\boxed{14-30x}\)</span></div>
+<div><b>(ii)</b><span>\(\frac{\sec x}{2\sqrt{x}}+\sqrt{x}\sec x\tan x=\boxed{\frac{\sec x(1+2x\tan x)}{2\sqrt{x}}}\)</span></div>
+<div><b>(iii)</b><span>\((2ax+b)(x-d)+(ax^2+bx+c)=\boxed{3ax^2+2(b-ad)x+c-bd}\)</span></div>
+<div><b>(iv)</b><span>\(3x^2\sin x+x^3\cos x=\boxed{x^2(3\sin x+x\cos x)}\)</span></div>
+<div><b>(v)</b><span>\(\sin x\log x+x\cos x\log x+\sin x=\boxed{\sin x(1+\log x)+x\log x\cos x}\)</span></div>
+<div><b>(vi)</b><span>\(2\sec^2x(5+4\cos x)-4\sin x(1+2\tan x)\)</span></div>
+</div>`
+  },
+  {
+    no: 5,
+    question: String.raw`Differentiate with respect to \(x\) using the quotient rule:
+<div class="ex-subparts">
+  <div class="ex-sub"><span class="ex-subno">(i)</span><span class="ex-subtext">\( \frac{e^x}{x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(ii)</span><span class="ex-subtext">\( \frac{x^3+3x+1}{x^2-x+1}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iii)</span><span class="ex-subtext">\( \frac{x^4+1}{x^2-1}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iv)</span><span class="ex-subtext">\( \frac{x}{1+\tan x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(v)</span><span class="ex-subtext">\( \frac{\log x}{x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(vi)</span><span class="ex-subtext">\( \frac{\sec x-1}{\sec x+1}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(vii)</span><span class="ex-subtext">\( \frac{\sin x+\cos x}{\sin x-\cos x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(viii)</span><span class="ex-subtext">\( \frac{ax^2+bx+c}{px^2+qx+r}\)</span></div>
+</div>`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Use the quotient rule:
+\[
+\left(\frac uv\right)'=\frac{vu'-uv'}{v^2}.
+\]
+<div class="sol-steps">
+<div><b>(i)</b><span>\(\frac{xe^x-e^x}{x^2}=\boxed{\frac{e^x(x-1)}{x^2}}\)</span></div>
+<div><b>(ii)</b><span>\(\boxed{\frac{(3x^2+3)(x^2-x+1)-(x^3+3x+1)(2x-1)}{(x^2-x+1)^2}}\)</span></div>
+<div><b>(iii)</b><span>\(\boxed{\frac{2x(x^4-2x^2-1)}{(x^2-1)^2}}\)</span></div>
+<div><b>(iv)</b><span>\(\boxed{\frac{1+\tan x-x\sec^2x}{(1+\tan x)^2}}\)</span></div>
+<div><b>(v)</b><span>\(\frac{1-\log x}{x^2}\)</span></div>
+<div><b>(vi)</b><span>\(\frac{2\sec x\tan x}{(\sec x+1)^2}\)</span></div>
+<div><b>(vii)</b><span>\(-\frac2{(\sin x-\cos x)^2}\)</span></div>
+<div><b>(viii)</b><span>\(\frac{(2ax+b)(px^2+qx+r)-(ax^2+bx+c)(2px+q)}{(px^2+qx+r)^2}\)</span></div>
+</div>`
+  },
+  {
+    no: 6,
+    question: String.raw`Differentiate with respect to \(x\):
+<div class="ex-subparts">
+  <div class="ex-sub"><span class="ex-subno">(i)</span><span class="ex-subtext">\( (x\sin x)^3\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(ii)</span><span class="ex-subtext">\( \sqrt{5-6x^2}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iii)</span><span class="ex-subtext">\( \tan\sqrt{x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(iv)</span><span class="ex-subtext">\( \sec(\sec x)\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(v)</span><span class="ex-subtext">\( \frac{1-\cos x}{1+\cos x}\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(vi)</span><span class="ex-subtext">\( e^x\log(\sin 2x)\)</span></div>
+</div>`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Apply the chain rule where one function occurs inside another.
+<div class="sol-steps">
+<div><b>(i)</b><span>Let \(u=x\sin x\). Then \(u'=\sin x+x\cos x\). Hence \(\boxed{3(x\sin x)^2(\sin x+x\cos x)}\).</span></div>
+<div><b>(ii)</b><span>\(\frac12(5-6x^2)^{-1/2}(-12x)=\boxed{-\frac{6x}{\sqrt{5-6x^2}}}\)</span></div>
+<div><b>(iii)</b><span>\(\sec^2\sqrt{x}\cdot\frac1{2\sqrt{x}}=\boxed{\frac{\sec^2\sqrt{x}}{2\sqrt{x}}}\)</span></div>
+<div><b>(iv)</b><span>\(\boxed{\sec(\sec x)\tan(\sec x)\sec x\tan x}\)</span></div>
+<div><b>(v)</b><span>By quotient rule, \(\boxed{\frac{2\sin x}{(1+\cos x)^2}}\).</span></div>
+<div><b>(vi)</b><span>By product and chain rules, \(\boxed{e^x[\log(\sin2x)+2\cot2x]}\).</span></div>
+</div>`
+  },
+  {
+    no: 7,
+    question: String.raw`Find the velocity of a particle moving on a line at \(t=3\,\mathrm{s}\), if its position \(s\) is measured in metres:
+<div class="ex-subparts">
+  <div class="ex-sub"><span class="ex-subno">(i)</span><span class="ex-subtext">\( s=\log t\)</span></div>
+  <div class="ex-sub"><span class="ex-subno">(ii)</span><span class="ex-subtext">\( s=\sin\!\left(\frac{t}{9}\right)\)</span></div>
+</div>`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Velocity is
+\[
+v=\frac{ds}{dt}.
+\]
+<div class="sol-steps">
+<div><b>(i)</b><span>\(v=\frac1t\). At \(t=3\,\mathrm s\), \(\boxed{v=\frac13\,\mathrm{m\,s^{-1}}}\).</span></div>
+<div><b>(ii)</b><span>\(v=\frac19\cos(\frac t9)\). At \(t=3\,\mathrm s\), \(\boxed{v=\frac{\cos(1/3)}9\,\mathrm{m\,s^{-1}}}\).</span></div>
+</div>`
+  },
+  {
+    no: 8,
+    question: String.raw`At time \(t\), the displacement of a particle moving in a straight line is given by\( x=-4t^2+2t\)
+Find the velocity and acceleration when \( t=\frac{1}{2}\,\text{s}\).`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Given \(x=-4t^2+2t\).
+\[
+v=\frac{dx}{dt}=-8t+2.
+\]
+At \(t=\frac12\,\mathrm s\),
+\[
+v=-8\left(\frac12\right)+2=\boxed{-2\,\mathrm{m\,s^{-1}}}.
+\]
+Also,
+\[
+a=\frac{dv}{dt}=\boxed{-8\,\mathrm{m\,s^{-2}}}.
+\]`
+  },
+  {
+    no: 9,
+    question: String.raw`A car is running on a straight road. The distance travelled \(s\) and time \(t\) are connected by\( s=t^2-2t\)
+where \(t\) is measured in hours and \(s\) in kilometres. When the odometer reading is \(15\,\text{km}\), what is the speedometer reading?<br>
+[Odometer measures \(s\) and the speedometer measures velocity.]`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+The odometer gives \(s=15\,\mathrm{km}\):
+\[
+15=t^2-2t\Rightarrow t^2-2t-15=0
+\Rightarrow(t-5)(t+3)=0.
+\]
+For positive time, \(t=5\,\mathrm h\).
+\[
+v=\frac{ds}{dt}=2t-2=2(5)-2=\boxed{8\,\mathrm{km\,h^{-1}}}.
+\]`
+  },
+  {
+    no: 10,
+    question: String.raw`The side of a square sheet of metal is increasing at \(3\,\text{cm min}^{-1}\). At what rate is the area increasing when the side is \(10\,\text{cm}\) long?`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+For a square, \(A=x^2\). Therefore,
+\[
+\frac{dA}{dt}=2x\frac{dx}{dt}.
+\]
+Using \(x=10\,\mathrm{cm}\) and \(\frac{dx}{dt}=3\,\mathrm{cm\,min^{-1}}\),
+\[
+\frac{dA}{dt}=2(10)(3)=\boxed{60\,\mathrm{cm^2\,min^{-1}}}.
+\]`
+  },
+  {
+    no: 11,
+    question: String.raw`A stone is dropped into a quiet pond and waves move in circles at a speed of \(4\,\text{cm s}^{-1}\). At the instant when the radius of the circular wave is \(10\,\text{cm}\), how fast is the enclosed area increasing?`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+For the circular wave, \(A=\pi r^2\). Hence,
+\[
+\frac{dA}{dt}=2\pi r\frac{dr}{dt}.
+\]
+At \(r=10\,\mathrm{cm}\) and \(\frac{dr}{dt}=4\,\mathrm{cm\,s^{-1}}\),
+\[
+\frac{dA}{dt}=2\pi(10)(4)=\boxed{80\pi\,\mathrm{cm^2\,s^{-1}}}.
+\]`
+  },
+  {
+    no: 12,
+    question: String.raw`A particle starts rotating from rest according to the formula\( \theta=\frac{3t^2}{20}-\frac{t^2}{3}\)
+Find the angular velocity and the acceleration at the end of \(5\,\text{s}\).`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Using the equation visible in the supplied source,
+\[
+\theta=\frac{3t^2}{20}-\frac{t^2}{3}.
+\]
+\[
+\omega=\frac{d\theta}{dt}=\frac{3t}{10}-\frac{2t}{3}.
+\]
+At \(t=5\,\mathrm s\),
+\[
+\omega=\frac32-\frac{10}{3}=\boxed{-\frac{11}{6}\,\mathrm{rad\,s^{-1}}}.
+\]
+\[
+\alpha=\frac{d\omega}{dt}=\frac3{10}-\frac23=\boxed{-\frac{11}{30}\,\mathrm{rad\,s^{-2}}}.
+\]
+<div class="sol-note">The printed answer visible in the supplied photograph does not agree with the visible equation; this solution follows the displayed equation.</div>`
+  },
+  {
+    no: 13,
+    question: String.raw`The area \(A\) of a dot of ink, in \(\text{cm}^2\), is growing such that\( A=3t^2+\frac{t}{5}+7\)
+Calculate the rate of increase of area after \(5\,\text{s}\).`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Given
+\[
+A=3t^2+\frac t5+7.
+\]
+Therefore,
+\[
+\frac{dA}{dt}=6t+\frac15.
+\]
+At \(t=5\,\mathrm s\),
+\[
+\frac{dA}{dt}=30+\frac15=\boxed{30.2\,\mathrm{cm^2\,s^{-1}}}.
+\]`
+  },
+  {
+    no: 14,
+    question: String.raw`A particle starts rotating from rest according to the formula\( \theta=\frac{t^2}{64}-\frac{t}{8}\)
+where \(\theta\) is the angle in radians and \(t\) is in seconds. Find the angular velocity and angular acceleration at the end of \(4\,\text{s}\).`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Using the equation visible in the supplied source,
+\[
+\theta=\frac{t^2}{64}-\frac t8.
+\]
+\[
+\omega=\frac{d\theta}{dt}=\frac t{32}-\frac18.
+\]
+At \(t=4\,\mathrm s\), \(\boxed{\omega=0}\).
+\[
+\alpha=\frac{d\omega}{dt}=\boxed{\frac1{32}\,\mathrm{rad\,s^{-2}}}.
+\]
+<div class="sol-note">The printed answer visible in the supplied photograph does not agree with the visible equation; this solution follows the displayed equation.</div>`
+  },
+  {
+    no: 16,
+    question: String.raw`The displacement \(x\) of a particle varies with time \(t\) as\( x=4t^2-15t+25\)
+Find:<div class="ex-subparts"><div class="ex-sub"><span class="ex-subno">(i)</span><span class="ex-subtext">the position, velocity and acceleration of the particle at \(t=0\),</span></div><div class="ex-sub"><span class="ex-subno">(ii)</span><span class="ex-subtext">when the velocity of the particle becomes zero, and</span></div><div class="ex-sub"><span class="ex-subno">(iii)</span><span class="ex-subtext">whether the motion has uniform acceleration.</span></div></div>`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Given
+\[
+x=4t^2-15t+25.
+\]
+Thus,
+\[
+v=8t-15,\qquad a=8.
+\]
+<div class="sol-steps">
+<div><b>(i)</b><span>At \(t=0\): \(x=25\,\mathrm m,\;v=-15\,\mathrm{m\,s^{-1}},\;a=8\,\mathrm{m\,s^{-2}}\).</span></div>
+<div><b>(ii)</b><span>\(v=0\Rightarrow8t-15=0\Rightarrow\boxed{t=\frac{15}{8}=1.875\,\mathrm s}\).</span></div>
+<div><b>(iii)</b><span>Since \(a=8\,\mathrm{m\,s^{-2}}\) is constant, the acceleration is uniform.</span></div>
+</div>`
+  },
+  {
+    no: 17,
+    question: String.raw`The distance \(x\) of a particle moving in one dimension, under the action of a constant force, is related to time \(t\) by\( t=\sqrt{x}+3\)
+where \(x\) is in metres and \(t\) is in seconds. Find the displacement of the particle when its velocity is zero.`,
+    options: {},
+    answer: String.raw`<div class="sol-title">Solution</div>
+Given
+\[
+t=\sqrt{x}+3.
+\]
+So \(\sqrt{x}=t-3\), and
+\[
+x=(t-3)^2.
+\]
+Therefore,
+\[
+v=\frac{dx}{dt}=2(t-3).
+\]
+For \(v=0\), \(t=3\,\mathrm s\). Hence,
+\[
+x=(3-3)^2=\boxed{0\,\mathrm m}.
+\]`
+  }
+];
+window.examplesData = window.iitExamplesData;
+
+// Four independent Calculus tabs. Original supplied questions are retained unchanged.
+window.calculusExamplesData = {
+  "illustrations-1": window.iitExamplesData,
+  "examples-1": [],
+  "illustrations-2": [],
+  "examples-2": []
+};
+
+window.P4F_CALCULUS_EXAMPLES_BUNDLED = window.calculusExamplesData;
+window.P4F_CALCULUS_ORIGINAL_BUNDLED = window.iitExamplesData;
+window.iitFormulasData = [
+ {title:'Differentiation — Fundamental Rules',items:[
+  {name:'Definition of derivative',formula:String.raw`f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}`},
+  {name:'Constant',formula:String.raw`\frac{d}{dx}(c)=0`},
+  {name:'Power rule',formula:String.raw`\frac{d}{dx}(x^n)=nx^{n-1}`},
+  {name:'Constant multiple',formula:String.raw`\frac{d}{dx}[cf(x)]=cf'(x)`},
+  {name:'Sum / difference',formula:String.raw`\frac{d}{dx}[u\pm v]=u'\pm v'`},
+  {name:'Product rule',formula:String.raw`(uv)'=u'v+uv'`},
+  {name:'Quotient rule',formula:String.raw`\left(\frac uv\right)'=\frac{vu'-uv'}{v^2}`},
+  {name:'Chain rule',formula:String.raw`\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}`}]},
+ {title:'Differentiation — Standard Functions',items:[
+  {name:'Exponential',formula:String.raw`\frac{d}{dx}(e^x)=e^x`},
+  {name:'General exponential',formula:String.raw`\frac{d}{dx}(a^x)=a^x\ln a`},
+  {name:'Natural logarithm',formula:String.raw`\frac{d}{dx}(\ln|x|)=\frac1x`},
+  {name:'Sine and cosine',formula:String.raw`\frac{d}{dx}(\sin x)=\cos x,\quad\frac{d}{dx}(\cos x)=-\sin x`},
+  {name:'Tangent',formula:String.raw`\frac{d}{dx}(\tan x)=\sec^2x`},
+  {name:'Second derivative',formula:String.raw`f''(x)=\frac{d^2y}{dx^2}`}]},
+ {title:'Integration — Basic Rules',items:[
+  {name:'Power rule',formula:String.raw`\int x^n\,dx=\frac{x^{n+1}}{n+1}+C`,note:'For n ≠ −1'},
+  {name:'Constant',formula:String.raw`\int k\,dx=kx+C`},
+  {name:'Linearity',formula:String.raw`\int(af+bg)\,dx=a\int f\,dx+b\int g\,dx`},
+  {name:'Reciprocal',formula:String.raw`\int\frac1x\,dx=\ln|x|+C`},
+  {name:'Exponential',formula:String.raw`\int e^x\,dx=e^x+C`},
+  {name:'General exponential',formula:String.raw`\int a^x\,dx=\frac{a^x}{\ln a}+C`,note:'a > 0, a ≠ 1'}]},
+ {title:'Integration — Trigonometric and Definite Integrals',items:[
+  {name:'Sine',formula:String.raw`\int\sin x\,dx=-\cos x+C`},
+  {name:'Cosine',formula:String.raw`\int\cos x\,dx=\sin x+C`},
+  {name:'Secant squared',formula:String.raw`\int\sec^2x\,dx=\tan x+C`},
+  {name:'Definite integral',formula:String.raw`\int_a^b f(x)\,dx=F(b)-F(a)`,note:'Where F′(x) = f(x)'},
+  {name:'Area under velocity–time graph',formula:String.raw`\Delta x=\int_{t_1}^{t_2}v(t)\,dt`},
+  {name:'Velocity and acceleration',formula:String.raw`v=\frac{dx}{dt},\qquad a=\frac{dv}{dt}`}]}
+];
+
+window.P4F_CALCULUS_FORMULAS_BUNDLED = window.iitFormulasData;
+})();
+</script>
+<script>
+(function(){
+  let attempts=0;
+  const timer=setInterval(function(){
+    attempts++;
+    if(window.MathJax && typeof MathJax.typesetPromise==='function'){
+      clearInterval(timer);
+      MathJax.typesetPromise([document.body]).catch(e=>console.warn('Math rendering:',e));
+    } else if(attempts>=40) clearInterval(timer);
+  },250);
+  window.addEventListener('error',function(e){
+    if(e.target && e.target.tagName==='IMG'){
+      e.target.alt=e.target.alt||'Image unavailable: check image file path';
+      e.target.classList.add('missing-resource-image');
+    }
+  },true);
+})();
+</script>
+<style>.missing-resource-image{min-height:50px;outline:1px dashed #e6a23c;object-fit:contain}</style>
 </body>
 </html>
