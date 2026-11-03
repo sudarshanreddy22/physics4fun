@@ -5964,17 +5964,18 @@ function globalAdjustFont(delta){
     return;
   }
   if (sec === 'notes' && typeof adjustNotesFont === 'function') {
-    adjustNotesFont(delta > 0 ? 1 : -1);
+    adjustNotesFont(delta * 5);
     return;
   }
 
-  // PPT/other sections: scale the active panel text without changing layout structure.
+  // Formulas and other sections have fixed pixel/rem font sizes. Use zoom so all nested text responds.
   const panel = document.getElementById('panel-' + sec);
   if (!panel) return;
   let fs = parseFloat(panel.dataset.globalFontScale || '1');
   fs = Math.max(.75, Math.min(1.5, fs + delta));
   panel.dataset.globalFontScale = fs.toFixed(2);
   panel.style.fontSize = (fs * 100) + '%';
+  panel.style.zoom = fs.toFixed(2);
 }
 
 function toggleFullscreen() {
