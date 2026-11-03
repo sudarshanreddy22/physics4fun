@@ -1,4 +1,5 @@
-// Core Level - C | IIT Foundation | Class 9 | Motion in a Straight Line | Distance & Displacement
+// IIT Foundation | Grade 09 | Motion in a Straight Line
+// Worksheets 2 and 4 are not present in the supplied source files.
 window.objectiveData = {
   "Worksheet-1": {
     "levelC": [
@@ -510,6 +511,312 @@ window.objectiveData = {
         },
         "answer": "B",
         "explanation": "Distance = 20 m. The official answer key marks Option B.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      }
+    ]
+  },
+  "Worksheet-3": {
+    "levelA": [
+      {
+        "question": "The speed of a body moving along a straight path changes from 5 m/s to 10 m/s in 5 s. Find the acceleration of the body.",
+        "options": {
+          "A": "0.5 m/s²",
+          "B": "1 m/s²",
+          "C": "1.5 m/s²",
+          "D": "2 m/s²"
+        },
+        "answer": "B",
+        "explanation": "a = (10 − 5)/5 = 1 m/s².",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "The speed of a body moving along a straight path decreases from 10 m/s to 5 m/s in 2 s. Find the deceleration.",
+        "options": {
+          "A": "1.5 m/s²",
+          "B": "2 m/s²",
+          "C": "2.5 m/s²",
+          "D": "3.5 m/s²"
+        },
+        "answer": "C",
+        "explanation": "Magnitude of deceleration = (10 − 5)/2 = 2.5 m/s².",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "A vehicle is moving on a straight level road with a constant speed of 10 m/s. Due to application of brakes, it comes to rest in 5 s. Find the deceleration.",
+        "options": {
+          "A": "8 m/s²",
+          "B": "6 m/s²",
+          "C": "4 m/s²",
+          "D": "2 m/s²"
+        },
+        "answer": "D",
+        "explanation": "Deceleration = 10/5 = 2 m/s².",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "The velocity of a car changes from 7 m/s to 19 m/s in 3 s. If the car is uniformly accelerated, find the acceleration of the car.",
+        "options": {
+          "A": "2 m/s²",
+          "B": "4 m/s²",
+          "C": "6 m/s²",
+          "D": "8 m/s²"
+        },
+        "answer": "B",
+        "explanation": "a = (19 − 7)/3 = 4 m/s².",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "An Ostrich can acquire a velocity of 144 km/h in 2 s while a Leopard can acquire a velocity of 108 km/h in 3 s. Find the ratio of their accelerations.",
+        "options": {
+          "A": "2 : 1",
+          "B": "2 : 3",
+          "C": "4 : 1",
+          "D": "4 : 3"
+        },
+        "answer": "A",
+        "explanation": "144 km/h = 40 m/s; 108 km/h = 30 m/s. Accelerations 20 and 10 m/s², ratio 2:1.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "A bus is moving with a constant speed of 75 km/h. The driver observes the red signal and applies the brakes. If the speed of the bus reduces uniformly to 21 km/h in 3 s, find the retardation produced in the bus.",
+        "options": {
+          "A": "3 m/s²",
+          "B": "4 m/s²",
+          "C": "5 m/s²",
+          "D": "6 m/s²"
+        },
+        "answer": "C",
+        "explanation": "Speed change = 54 km/h = 15 m/s; retardation = 15/3 = 5 m/s².",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "The speed of a body moving with constant acceleration changes from 5 m/s to 15 m/s in 5 s. Find the displacement of the body.",
+        "options": {
+          "A": "50 m",
+          "B": "100 m",
+          "C": "150 m",
+          "D": "200 m"
+        },
+        "answer": "B",
+        "explanation": "s = [(u + v)/2]t = 10 × 5 = 50 m. PDF key gives option 2, inconsistent with calculation.",
+        "exam": "Foundation MCQ",
+        "marks": 1,
+        "sourceNote": "Source PDF has an inconsistency or incomplete wording; see explanation."
+      },
+      {
+        "question": "A body moving with acceleration covers a displacement of 5 m in 2 s. Find the velocity after 2 s if its initial velocity is 1 m/s.",
+        "options": {
+          "A": "2 m/s",
+          "B": "3 m/s",
+          "C": "4 m/s",
+          "D": "5 m/s"
+        },
+        "answer": "C",
+        "explanation": "s = [(u + v)/2]t, hence 5 = 1 + v, v = 4 m/s.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "A cyclist moving with an initial velocity of 4 m/s is uniformly accelerated at ___ m/s². Find the distance travelled by the cyclist in 6 s.",
+        "options": {
+          "A": "78 m",
+          "B": "58 m",
+          "C": "38 m",
+          "D": "98 m"
+        },
+        "answer": "A",
+        "explanation": "The acceleration value is missing in the source PDF; the answer key gives option 1.",
+        "exam": "Foundation MCQ",
+        "marks": 1,
+        "sourceNote": "Source PDF has an inconsistency or incomplete wording; see explanation."
+      },
+      {
+        "question": "The brakes of an automobile can produce a constant deceleration of 2 m/s². After application of brakes the vehicle comes to rest in 9 s. Find the stopping distance.",
+        "options": {
+          "A": "27 m",
+          "B": "45 m",
+          "C": "63 m",
+          "D": "81 m"
+        },
+        "answer": "D",
+        "explanation": "u = 2 × 9 = 18 m/s; s = (18 + 0) × 9/2 = 81 m.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Due to application of brakes which produce a uniform deceleration of 4 m/s² a car comes to rest in 50 m. The initial speed of the car is",
+        "options": {
+          "A": "5 m/s",
+          "B": "10 m/s",
+          "C": "15 m/s",
+          "D": "20 m/s"
+        },
+        "answer": "D",
+        "explanation": "u² = 2as = 400, so u = 20 m/s.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "A bullet moving at 35 m/s penetrates 2.8 m in a wooden plank and comes to rest. Assuming uniform retardation, find the time of penetration of the bullet.",
+        "options": {
+          "A": "0.16 s",
+          "B": "1.6 s",
+          "C": "0.08 s",
+          "D": "0.8 s"
+        },
+        "answer": "A",
+        "explanation": "t = 2s/(u+v) = 5.6/35 = 0.16 s.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Two cars started off the race with accelerations 3 m/s² and 8 m/s². Find the time after which the separation between them is 36 km.",
+        "options": {
+          "A": "20 s",
+          "B": "10 s",
+          "C": "60 s",
+          "D": "120 s"
+        },
+        "answer": "D",
+        "explanation": "Assuming both start from rest: 36000 = (1/2)(8−3)t²; t = 120 s.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "A bullet is fired into wood. The bullet penetrates for 7 s to come to rest. Find the distance travelled by the bullet in the wood if the retardation offered by the wood is 0.4 m/s².",
+        "options": {
+          "A": "2.8 m",
+          "B": "6.8 m",
+          "C": "5.6 m",
+          "D": "9.8 m"
+        },
+        "answer": "D",
+        "explanation": "Initial speed = 0.4 × 7 = 2.8 m/s; s = (2.8/2) × 7 = 9.8 m.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "A deer is running at constant speed. It watches a lion and increases its speed by 5 m/s each second. If after watching the lion it travels 400 m in 10 s, find its velocity before it watches the lion.",
+        "options": {
+          "A": "25 m/s",
+          "B": "10 m/s",
+          "C": "65 m/s",
+          "D": "15 m/s"
+        },
+        "answer": "D",
+        "explanation": "400 = 10u + 0.5 × 5 × 100; u = 15 m/s.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Ref Q.14: The deer running at that speed (speed after 10 s) observes a hunter and accelerates. It covers 240 m in 3 s. Find the acceleration of the deer.",
+        "options": {
+          "A": "10 m/s²",
+          "B": "5 m/s²",
+          "C": "2.5 m/s²",
+          "D": "7.5 m/s²"
+        },
+        "answer": "A",
+        "explanation": "The source incorrectly references Q14; using deer in Q15, speed after 10 s = 65 m/s, so a = 10 m/s².",
+        "exam": "Foundation MCQ",
+        "marks": 1,
+        "sourceNote": "Source PDF has an inconsistency or incomplete wording; see explanation."
+      },
+      {
+        "question": "The seconds hand of a clock is 14 cm long. The average speed of the tip of the seconds hand in 15 s is _____ cm/s.",
+        "options": {
+          "A": "22/15",
+          "B": "11/15",
+          "C": "11/30",
+          "D": "28/30"
+        },
+        "answer": "A",
+        "explanation": "Arc in 15 s = (15/60) × 2π × 14 = 7π cm. Average speed = 7π/15 ≈ 22/15 cm/s.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Statement I: In circular motion the displacement of a body at any time is zero. Statement II: Displacement is the length between initial and final points.",
+        "options": {
+          "A": "Both statements are true",
+          "B": "Both statements are false",
+          "C": "Only Statement I is true",
+          "D": "Only Statement II is true"
+        },
+        "answer": "D",
+        "explanation": "Statement I is false for general circular motion; Statement II describes magnitude of displacement.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Assertion (A): The displacement of a body may be zero when distance travelled by it is not zero. Reason (R): The displacement is the longest distance between initial and final position.",
+        "options": {
+          "A": "Both A and R are correct; R explains A",
+          "B": "Both A and R are correct; R does not explain A",
+          "C": "A is true; R is false",
+          "D": "A is false; R is true"
+        },
+        "answer": "C",
+        "explanation": "A is true for a round trip; displacement is shortest straight-line separation, not longest.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Assertion (A): The average and instantaneous velocities have same value in uniform motion. Reason (R): In uniform motion, the velocity of an object increases enormously.",
+        "options": {
+          "A": "Both A and R are correct; R explains A",
+          "B": "Both A and R are correct; R does not explain A",
+          "C": "A is true; R is false",
+          "D": "A is false; R is true"
+        },
+        "answer": "C",
+        "explanation": "For uniform velocity, instantaneous and average velocities match; velocity does not increase.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Assertion (A): The speedometer of an automobile measures the average speed of the automobile. Reason (R): Average velocity is equal to total displacement divided by total time taken.",
+        "options": {
+          "A": "Both A and R are correct; R explains A",
+          "B": "Both A and R are correct; R does not explain A",
+          "C": "A is true; R is false",
+          "D": "A is false; R is true"
+        },
+        "answer": "D",
+        "explanation": "A speedometer measures instantaneous speed; the reason is true.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Assertion (A): An object can have constant speed but variable velocity. Reason (R): Speed is scalar but velocity is vector.",
+        "options": {
+          "A": "Both A and R are correct; R explains A",
+          "B": "Both A and R are correct; R does not explain A",
+          "C": "A is true; R is false",
+          "D": "A is false; R is true"
+        },
+        "answer": "A",
+        "explanation": "Changing direction can change velocity without changing speed.",
+        "exam": "Foundation MCQ",
+        "marks": 1
+      },
+      {
+        "question": "Assertion (A): A body is momentarily at rest when it reverses the direction. Reason (R): A body cannot have acceleration if its velocity is zero at a given instant of time.",
+        "options": {
+          "A": "Both A and R are correct; R explains A",
+          "B": "Both A and R are correct; R does not explain A",
+          "C": "A is true; R is false",
+          "D": "A is false; R is true"
+        },
+        "answer": "C",
+        "explanation": "At a turning point velocity may be zero while acceleration is nonzero.",
         "exam": "Foundation MCQ",
         "marks": 1
       }
