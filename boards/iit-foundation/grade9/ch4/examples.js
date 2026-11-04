@@ -512,3 +512,23 @@ window.calculusExamplesData["examples-2"] = [
     }
   }
 })();
+
+
+/* v30 — visibly pair every Differentiation Example sub-question with its solution.
+   Question wording, answer maths, and all other tabs are unchanged. */
+(function(){
+  'use strict';
+  if(typeof document==='undefined')return;
+  const id='p4f-differentiation-subpart-solutions-v30';
+  if(document.getElementById(id))return;
+  const style=document.createElement('style');style.id=id;
+  style.textContent=`
+    #iitExamplesBody .sol-steps {display:flex!important;flex-direction:column!important;gap:10px!important;text-align:left!important;}
+    #iitExamplesBody .sol-steps > div {display:grid!important;grid-template-columns:42px minmax(0,1fr)!important;align-items:start!important;gap:10px!important;width:100%!important;text-align:left!important;margin:0!important;}
+    #iitExamplesBody .sol-steps > div > b {display:block!important;position:static!important;visibility:visible!important;opacity:1!important;flex:none!important;min-width:0!important;width:auto!important;padding:6px 3px!important;text-align:center!important;font-size:1em!important;font-weight:800!important;line-height:1.3!important;color:#1d4ed8!important;background:#dbeafe!important;border:1px solid #93c5fd!important;border-radius:7px!important;}
+    #iitExamplesBody .sol-steps > div > span {display:block!important;min-width:0!important;flex:none!important;width:auto!important;overflow-wrap:anywhere!important;text-align:left!important;line-height:1.7!important;padding:4px 0!important;}
+    #iitExamplesBody .sol-steps mjx-container[display=true] {text-align:left!important;margin:7px 0!important;}
+    #iitExamplesBody .ex-subparts .ex-subno {font-weight:800!important;}
+  `;
+  (document.head||document.documentElement).appendChild(style);
+})();
