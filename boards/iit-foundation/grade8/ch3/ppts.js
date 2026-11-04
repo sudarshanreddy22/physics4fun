@@ -1,5 +1,5 @@
-/* PPTs - Sound | IIT Foundation Class 8 — placeholder */
+/* PPTs - Motion | IIT Foundation Class 9 — placeholder */
 window.pptsData = [
-  { title: "Sound — Foundation Concepts", url: "#", slides: 15, source: "onedrive", icon: "🔊" },
-  { title: "Sound — Olympiad Problem Solving", url: "#", slides: 12, source: "canva", icon: "🏆" }
+  { title: "Motion in a Straightline", url: "https://canva.link/urw1h8elkfk88h9", slides: 15, source: "onedrive", icon: "🏃" },
+  { title: "Numericals", url: "#", slides: 12, source: "canva", icon: "🏆" }
 ];
