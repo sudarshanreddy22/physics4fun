@@ -1742,6 +1742,68 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 .calculus-example-tab{border:1px solid #cbd5e1;border-radius:9px;padding:9px 14px;background:var(--card,#fff);color:inherit;font-weight:700;cursor:pointer}
 .calculus-example-tab.active{border-color:#8b5cf6;background:rgba(139,92,246,.12);color:#7c3aed}
 </style>
+
+<style id="p4f-calculus-example-tabs-v25">
+/* Calculus examples tabs — compact, colourful, independent of A+/A− */
+#iitExamplesBody > .calculus-examples-tabs {
+ display:flex!important;flex-wrap:wrap!important;gap:6px!important;
+ padding:5px 6px!important;margin:0 0 9px!important;
+ border:1px solid var(--card-border,#dbe4ef)!important;border-radius:12px!important;
+ background:var(--card-bg,#fff)!important;align-items:center!important;
+ font-size:13px!important;line-height:1.15!important;
+}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab {
+ flex:0 0 auto!important;min-height:29px!important;
+ padding:6px 11px!important;border-radius:9px!important;
+ font-family:inherit!important;font-size:12px!important;font-weight:800!important;
+ line-height:1.2!important;letter-spacing:.005em!important;
+ transform:none!important;transition:filter .16s,box-shadow .16s!important;
+}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:nth-child(1){
+ background:#ede9fe!important;color:#6d28d9!important;border:1px solid #c4b5fd!important;
+}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:nth-child(2){
+ background:#dbeafe!important;color:#1d4ed8!important;border:1px solid #93c5fd!important;
+}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:nth-child(3){
+ background:#dcfce7!important;color:#15803d!important;border:1px solid #86efac!important;
+}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:nth-child(4){
+ background:#ffedd5!important;color:#c2410c!important;border:1px solid #fdba74!important;
+}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab.active{
+ color:#fff!important;box-shadow:0 2px 9px #0f172a25!important;
+}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:nth-child(1).active{background:#7c3aed!important;border-color:#7c3aed!important}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:nth-child(2).active{background:#2563eb!important;border-color:#2563eb!important}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:nth-child(3).active{background:#16a34a!important;border-color:#16a34a!important}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:nth-child(4).active{background:#ea580c!important;border-color:#ea580c!important}
+#iitExamplesBody > .calculus-examples-tabs > .calculus-example-tab:hover{filter:brightness(.95)}
+</style>
+
+<style id="p4f-sticky-question-nav-v26">
+/* Single-question mode: navigation stays visible while question content scrolls. */
+#content .iit-practice-nav-combined,
+#content .iit-practice-nav-top,
+#content .sv-nav-row.visible {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 120 !important;
+  background: var(--card-bg, #fff) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--divider, #dce3ed) !important;
+  box-shadow: 0 3px 9px rgba(15,23,42,.08);
+  isolation: isolate;
+}
+#content .iit-practice-nav-combined .iit-palette,
+#content .sv-nav-row .sv-circles {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+/* The question cards, not the horizontal navigation, follow the page scroll. */
+#content .iit-single-viewport { position: relative; z-index: 0; }
+</style>
 </head>
 <body class="light">
 
@@ -6510,7 +6572,28 @@ window.examplesData = window.iitExamplesData;
 // Four independent Calculus tabs. Original supplied questions are retained unchanged.
 window.calculusExamplesData = {
   "illustrations-1": window.iitExamplesData,
-  "examples-1": [],
+  "examples-1": [
+{no:1,question:String.raw`Differentiate: \(y=9\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=0\]`},
+{no:2,question:String.raw`Differentiate: \(y=5x^4\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=20x^3\]`},
+{no:3,question:String.raw`Differentiate: \(y=3x^5-4x^2+7\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=15x^4-8x\]`},
+{no:4,question:String.raw`Differentiate: \(y=\frac1{x^4}\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=-\frac4{x^5}\]`},
+{no:5,question:String.raw`Differentiate: \(y=\sqrt{x}+\frac1{\sqrt{x}}\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=\frac1{2\sqrt{x}}-\frac1{2x^{3/2}}\]`},
+{no:6,question:String.raw`Differentiate: \(y=2x^3-5x+4,\quad x=2\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\left.\frac{dy}{dx}\right|_{x=2}=6(2)^2-5=19\]`},
+{no:7,question:String.raw`Differentiate: \(y=x^2\sin x\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=2x\sin x+x^2\cos x\]`},
+{no:8,question:String.raw`Differentiate: \(y=(x^2+1)(x^3-2)\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=5x^4+3x^2-4x\]`},
+{no:9,question:String.raw`Differentiate: \(y=x\cos x\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=\cos x-x\sin x\]`},
+{no:10,question:String.raw`Differentiate: \(y=(x+1)(x^2+2x),\quad x=1\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\left.\frac{dy}{dx}\right|_{x=1}=11\]`},
+{no:11,question:String.raw`Differentiate: \(y=\frac{x^2+1}{x}\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=1-\frac1{x^2}\]`},
+{no:12,question:String.raw`Differentiate: \(y=\frac{x+2}{x-2}\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=-\frac4{(x-2)^2}\]`},
+{no:13,question:String.raw`Differentiate: \(y=\frac{x^2}{x+1}\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=\frac{x^2+2x}{(x+1)^2}\]`},
+{no:14,question:String.raw`Differentiate: \(y=\frac{\sin x}{x}\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=\frac{x\cos x-\sin x}{x^2}\]`},
+{no:15,question:String.raw`Differentiate: \(y=\frac{x^2-1}{x+1},\quad x=2\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\left.\frac{dy}{dx}\right|_{x=2}=1\]`},
+{no:16,question:String.raw`Differentiate: \(y=\sin x+\cos x\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=\cos x-\sin x\]`},
+{no:17,question:String.raw`Differentiate: \(y=3\sin x-2\cos x\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=3\cos x+2\sin x\]`},
+{no:18,question:String.raw`Differentiate: \(y=\tan x\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=\sec^2x\]`},
+{no:19,question:String.raw`Differentiate: \(y=\sin x\cos x\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=\cos^2x-\sin^2x\]`},
+{no:20,question:String.raw`Differentiate: \(y=x\sin x+\frac{\cos x}{x}\)`,options:{},answer:String.raw`<div class="sol-title">Solution</div>\[\frac{dy}{dx}=\sin x+x\cos x-\frac{x\sin x+\cos x}{x^2}\]`}
+  ],
   "illustrations-2": [],
   "examples-2": []
 };
@@ -8775,7 +8858,7 @@ window.P4F_GRADE8_MOTION_SOURCE = {
 
 window.P4F_GRADE8_MOTION_WORKSHEETS = window.P4F_GRADE8_MOTION_SOURCE.worksheets;
 </script>
-<script id="p4f-universal-font-v24">
+<script id="p4f-universal-font-v27">
 /* Physics4Fun v21: unified, board-independent A+/A- handler.
    Important: v20 inserted a literal backslash-n after a script closing tag, which prevents
    the browser from recognising this script as an executable script element. */
@@ -8792,7 +8875,10 @@ window.P4F_GRADE8_MOTION_WORKSHEETS = window.P4F_GRADE8_MOTION_SOURCE.worksheets
   };
   const storageKey=(p)=>{
     const c=window.CUR||{};
-    return ['physics4fun','font-v21',c.board||'',c.grade||'',c.slug||'',p.id].join(':');
+    const isIITMediumDefault=(c.board==='iit-foundation' && (p.id==='panel-iitexamples'||p.id==='panel-iitoth'));
+    // Fresh, medium (100%) initial scale for IIT Examples and Worksheets only.
+    // Other boards/sections retain their existing saved A+/A− preferences.
+    return ['physics4fun',isIITMediumDefault?'font-iit-medium-v27':'font-v21',c.board||'',c.grade||'',c.slug||'',p.id].join(':');
   };
   const scale=(p)=>{
     const k=storageKey(p);
