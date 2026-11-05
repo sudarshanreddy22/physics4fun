@@ -5,7 +5,7 @@ window.pptsData = [
     slides: 24,
     icon: "📖",
     source: "canva",
-    url: "https://www.canva.com/d/ziDvPHEjBFLoRa8"
+    url: "https://www.canva.com/d/IskSUUw8jtK6MUY"
   },
   {
     title: "Examples",
