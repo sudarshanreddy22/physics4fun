@@ -2,10 +2,10 @@
 window.pptsData = [
   {
     title: "Chapter Notes",
-    slides: 24,
+    slides: 32,
     icon: "📖",
     source: "canva",
-    url: "https://www.canva.com/d/IskSUUw8jtK6MUY"
+    url: "https://www.canva.com/d/iMrlgqoLx6eTAvP"
   },
   {
     title: "Examples",
