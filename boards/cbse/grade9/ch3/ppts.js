@@ -1,6 +1,13 @@
 /* PPTs - Chapter 7: Work, Energy, and Simple Machines | Grade 9 */
 window.pptsData = [
   {
+    title: "Chapter Notes",
+    slides: 24,
+    icon: "📖",
+    source: "canva",
+    url: "https://www.canva.com/d/dnPtfg3oCzvQRj_"
+  },
+  {
     title: "Examples",
     slides: 13,
     icon: "📘",
