@@ -12,20 +12,20 @@ window.pptsData = [
     slides: 13,
     icon: "📘",
     source: "canva",
-    url: "https://www.canva.com/d/xVYdDuz6qh2tS6z"
+    url: "https://canva.link/b5s7u1lgifpjtg2"
   },
   {
     title: "Pause and Ponder",
     slides: 13,
     icon: "💡",
     source: "canva",
-    url: "https://www.canva.com/d/Y8Rt-Z8fZ-y8ovi"
+    url: "https://canva.link/roi7o2x0xe6vq2a"
   },
   {
     title: "Revise, Reflect, Refine",
     slides: 15,
     icon: "🔄",
     source: "canva",
-    url: "https://www.canva.com/d/86C9UHY7McAaxiD"
+    url: "https://canva.link/yjoem7g7ev2nu1s"
   }
 ];
