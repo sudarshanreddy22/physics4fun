@@ -4,8 +4,8 @@ window.pptsData = [
     title: "Chapter Notes",
     slides: 32,
     icon: "📖",
-    source: "canva",
-    url: "https://www.canva.com/d/iMrlgqoLx6eTAvP"
+    source: "html",
+    url: "https://physics4fun.in/boards/cbse/grade9/ch3/work_energy_simple_machines_notes.html"
   },
   {
     title: "Examples",
