@@ -2,7 +2,7 @@
 window.pptsData = [
   {
     title: "Chapter Notes",
-    slides: 31,
+    slides: 30,
     icon: "📖",
     source: "html",
     url: "https://physics4fun.in/boards/cbse/grade9/ch3/work_energy_simple_machines_notes.html"
