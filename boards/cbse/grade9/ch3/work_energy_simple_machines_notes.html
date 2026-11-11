@@ -294,6 +294,74 @@ th,td{font-size:calc(19px*var(--text-mult))}
 .toolbar button:hover,.toolbar select:hover{background:#284981!important;}
 .toolbar select option{color:#172947;background:#fff;}
 @media print{.slide .footer{background:var(--deck-chrome)!important;color:white!important}}
+
+/* v11 — independent mobile and desktop presentation modes */
+.toolbar .view-toggle{display:inline-flex!important;align-items:center;justify-content:center;line-height:1!important;padding:0 6px!important;min-width:31px!important}
+.toolbar .view-toggle svg{height:16px;width:16px;display:block;pointer-events:none}
+.toolbar .view-toggle[aria-pressed="true"]{background:#ffffff!important;color:var(--deck-chrome)!important;border-color:#fff!important}
+.toolbar button:focus-visible,.toolbar select:focus-visible{outline:2px solid #f7cf6f;outline-offset:2px}
+/* In portrait mode, a slide is a naturally scrolling page, not a tiny widescreen image. */
+html[data-view="mobile"],html[data-view="mobile"] body{height:100%;overflow:hidden!important}
+html[data-view="mobile"] #stage{display:block!important;position:fixed!important;inset:0!important;height:100dvh!important;width:100vw!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior:contain;scrollbar-gutter:stable}
+html[data-view="mobile"] .slide,html[data-view="mobile"] .slide.active{position:relative!important;left:auto!important;top:auto!important;margin:0!important;transform:none!important;transform-origin:initial!important;width:100%!important;max-width:none!important;height:auto!important;min-height:100%!important;box-shadow:none!important;overflow:visible!important;display:none!important;padding:12px 12px 92px!important;background:#fff!important}
+html[data-view="mobile"] .slide.active{display:flex!important;flex-direction:column!important;gap:12px!important}
+html[data-view="mobile"] .slide .masthead,html[data-view="mobile"] .slide.cover .masthead,html[data-view="mobile"] .slide:not(.cover) .masthead{position:relative!important;inset:auto!important;margin:0!important;width:100%!important;min-width:0!important;max-width:100%!important;height:auto!important;min-height:66px!important;padding:13px 15px!important;border-radius:12px!important;display:flex!important;align-items:flex-start!important;justify-content:center!important}
+html[data-view="mobile"] .slide .masthead h1,html[data-view="mobile"] .slide:not(.cover) .masthead h1,html[data-view="mobile"] .cover .masthead h1{font-size:clamp(23px,6vw,33px)!important;line-height:1.15!important;overflow-wrap:anywhere!important;white-space:normal!important}
+html[data-view="mobile"] .slide .content,html[data-view="mobile"] .slide:not(.cover) .content,html[data-view="mobile"] .cover .content{position:static!important;top:auto!important;bottom:auto!important;left:auto!important;right:auto!important;width:100%!important;height:auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;align-content:stretch!important;align-items:stretch!important;gap:12px!important;flex-wrap:nowrap!important;margin:0!important;overflow:visible!important}
+html[data-view="mobile"] .slide .content>.panel,html[data-view="mobile"] .slide .content>.thirds,html[data-view="mobile"] .slide .thirds>.panel{width:100%!important;min-width:0!important;max-width:100%!important;height:auto!important;flex:none!important;min-height:0!important}
+html[data-view="mobile"] .slide .thirds{display:flex!important;flex-direction:column!important;width:100%!important;gap:12px!important}
+html[data-view="mobile"] .slide .panel{overflow:visible!important;min-height:0!important;flex:none!important}
+html[data-view="mobile"] .slide .panel-body{height:auto!important;min-height:0!important;display:block!important;padding:13px 15px 18px!important;font-size:calc(17px * var(--text-mult))!important;line-height:1.44!important;overflow:visible!important;flex:none!important}
+html[data-view="mobile"] .slide .panel h2{font-size:calc(19px * var(--text-mult))!important;line-height:1.24!important;margin:0 0 0 12px!important;padding:8px 12px!important;max-width:calc(100% - 24px)!important;overflow-wrap:break-word!important}
+html[data-view="mobile"] .slide .panel-body ul{padding-left:22px!important}
+html[data-view="mobile"] .slide .panel-body li{margin-bottom:8px!important}
+html[data-view="mobile"] .slide .formula{font-size:calc(22px * var(--text-mult))!important;min-width:0!important;max-width:100%!important;overflow-wrap:anywhere!important;padding:10px!important;margin:9px auto!important}
+html[data-view="mobile"] .slide .formula small{font-size:13px!important}
+html[data-view="mobile"] .slide .subcards,html[data-view="mobile"] .slide .energy-grid,html[data-view="mobile"] .slide .fall-grid,html[data-view="mobile"] .slide .revision-grid,html[data-view="mobile"] .slide .v8-energy-sub,html[data-view="mobile"] .slide .v8-machine-list,html[data-view="mobile"] .slide .zero-cases{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:auto!important;gap:10px!important;width:100%!important;height:auto!important;min-height:0!important;flex:none!important}
+html[data-view="mobile"] .slide .subcard,html[data-view="mobile"] .slide .case-box{min-height:0!important;height:auto!important;flex:none!important}
+html[data-view="mobile"] .slide .v8-energy-sub .subcard{padding:12px!important}
+html[data-view="mobile"] .slide .v8-energy-sub .subcard p{font-size:16px!important;line-height:1.4!important}
+html[data-view="mobile"] .slide .v8-energy-sub .subcard h3{font-size:18px!important;line-height:1.3!important}
+html[data-view="mobile"] .slide .v8-mini,html[data-view="mobile"] .slide .v8-mini-stat{grid-template-columns:minmax(0,1fr)!important}
+html[data-view="mobile"] .slide .v8-proof,html[data-view="mobile"] .slide .proof-math{width:100%!important;max-width:100%!important;overflow-x:auto!important}
+html[data-view="mobile"] .slide .eq-row{font-size:16px!important;grid-template-columns:68px 16px minmax(0,1fr)!important}
+html[data-view="mobile"] .slide .revision-grid>div{height:auto!important;min-height:56px!important;font-size:16px!important;padding:12px!important}
+html[data-view="mobile"] .slide .revision-grid strong{font-size:20px!important}
+html[data-view="mobile"] .slide .cover-grid{display:grid!important;grid-template-columns:1fr!important;height:auto!important;gap:12px!important}
+html[data-view="mobile"] .slide .hero-work{min-height:118px!important;padding:15px!important}
+html[data-view="mobile"] .slide .hero-icon{width:55px!important;height:55px!important;font-size:32px!important}
+html[data-view="mobile"] .slide .cover-formulas{display:flex!important;flex-direction:column!important;gap:7px!important;margin:10px 0!important}
+html[data-view="mobile"] .slide .cover-formulas .formula{width:100%!important}
+html[data-view="mobile"] .slide .slide-diagram,html[data-view="mobile"] .slide .textbook-image,html[data-view="mobile"] .slide img{max-width:100%!important;width:auto!important;height:auto!important;max-height:320px!important;object-fit:contain!important;margin-left:auto!important;margin-right:auto!important}
+html[data-view="mobile"] .slide svg:not(.topic-icon svg){max-width:100%!important;height:auto!important}
+html[data-view="mobile"] .slide table{width:100%!important;font-size:14px!important}
+html[data-view="mobile"] .slide th,html[data-view="mobile"] .slide td{font-size:14px!important;padding:7px!important;line-height:1.35!important}
+html[data-view="mobile"] .slide .v8-proof-table{table-layout:fixed!important}
+html[data-view="mobile"] .slide .footer{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;width:calc(100% + 24px)!important;margin:10px -12px -92px!important;min-height:45px!important;height:auto!important;padding:8px 14px!important;font-size:11px!important;gap:10px!important;flex:none!important}
+html[data-view="mobile"] .slide .footer .page-number{flex:none!important}
+html[data-view="mobile"] .slide .bottom-note{font-size:14px!important}
+html[data-view="mobile"] .slide .v8-machine-list>div{font-size:18px!important}
+html[data-view="mobile"] .slide .steps>div{font-size:16px!important;line-height:1.4!important}
+html[data-view="mobile"] .slide .formula-stack{display:flex!important;flex-wrap:wrap!important}
+html[data-view="mobile"] .slide .formula-stack .formula{flex:1 1 100%!important}
+html[data-view="mobile"] .toolbar{bottom:7px!important;left:50%!important;width:max-content!important;max-width:calc(100vw - 12px)!important;transform:translateX(-50%)!important;display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:3px!important;padding:5px!important;z-index:100!important;border-radius:15px!important}
+html[data-view="mobile"] .toolbar button,html[data-view="mobile"] .toolbar select,html[data-view="mobile"] .toolbar .count{height:30px!important;font-size:11px!important}
+html[data-view="mobile"] .toolbar button{padding:0 6px!important;min-width:30px!important}
+html[data-view="mobile"] .toolbar select{width:clamp(90px,24vw,155px)!important;max-width:155px!important;min-width:0!important}
+html[data-view="mobile"] .toolbar .count{min-width:44px!important;padding:0 4px!important}
+@media(max-width:390px){html[data-view="mobile"] .toolbar{max-width:100vw!important}html[data-view="mobile"] .toolbar select{width:95px!important}}
+@media print {html[data-view="mobile"] .slide,html[data-view="mobile"] .slide.active{display:block!important;position:relative!important;page-break-after:always!important}}
+
+html[data-view="mobile"] .slide .unit-grid,html[data-view="mobile"] .slide .units-grid,html[data-view="mobile"] .slide .power-units{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+html[data-view="mobile"] .slide .unit-tile{width:100%!important;min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
+html[data-view="mobile"] .slide .derivation,html[data-view="mobile"] .slide .derivation-lines,html[data-view="mobile"] .slide .math-derivation{max-width:100%!important;min-width:0!important;overflow-x:auto!important}
+html[data-view="mobile"] .slide .dline{width:100%!important;min-width:0!important;max-width:100%!important;grid-template-columns:minmax(0,1fr) 20px minmax(0,1.4fr)!important;gap:5px!important;font-size:17px!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important}
+html[data-view="mobile"] .slide .dline>*{min-width:0!important;max-width:100%!important}
+html[data-view="mobile"] .slide .dline .lhs,html[data-view="mobile"] .slide .dline .rhs{overflow-wrap:anywhere!important}
+html[data-view="mobile"] .slide .panel-body>.unit-grid{grid-template-columns:1fr!important}
+
+html[data-view="mobile"] .slide .unit-three{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;width:100%!important;min-width:0!important}
+html[data-view="mobile"] .slide .unit-three>.unit-tile{width:100%!important;max-width:100%!important}
 </style></head><body><main aria-label="Work, Energy and Power slide presentation" id="stage"><article aria-label="Slide 1: WORK, ENERGY AND SIMPLE MACHINES" class="slide cover active enhanced-slide" data-slide="1"><header class="masthead"><h1>WORK, ENERGY AND SIMPLE MACHINES</h1></header><div class="content"><div class="cover-grid"><div class="hero-work"><div class="hero-icon">W</div><strong>WORK</strong><span>Force × displacement</span></div><div class="hero-work"><div class="hero-icon">E</div><strong>ENERGY</strong><span>Capacity to do work</span></div><div class="hero-work"><div class="hero-icon">P</div><strong>POWER</strong><span>Rate of doing work</span></div></div><div class="cover-formulas"><div class="formula math-highlight"><div>W = Fs cos θ</div></div><div class="formula math-highlight"><div>K = ½mv²</div></div><div class="formula math-highlight"><div>P = W/t</div></div></div></div><footer class="footer"><span>Work, Energy and Simple Machines · Class IX Physics</span><span class="page-number">1</span></footer></article><article aria-label="Slide 2: Work (W)" class="slide enhanced-slide" data-slide="2"><header class="masthead"><h1>Work (W)</h1></header><div class="content ratio-3-1"><section class="panel pink cyan-card"><h2><span aria-hidden="true" class="topic-icon">📖</span>Definition</h2><div class="panel-body"><ul><li>Work is said to be done when an object is <b>displaced by a force</b>.</li><li>Work is a <b>scalar quantity</b>.</li><li>When force and displacement are in the same direction, work is the product of force and displacement.</li></ul></div></section><section class="panel blue mint-card"><h2><span aria-hidden="true" class="topic-icon">🧮</span>Formula (mathematical relation)</h2><div class="panel-body"><div class="formula math-highlight"><div>W = F × s</div><small>Force and displacement in the same direction</small></div><div class="formula math-highlight"><div>W = Fs cos θ</div><small>θ is the angle between the force and displacement</small></div></div></section><div class="bottom-note">Symbols: W = work done   ·   F = applied force   ·   s = displacement</div></div><footer class="footer"><span>Work, Energy and Simple Machines · Class IX Physics</span><span class="page-number">2</span></footer></article><article aria-label="Slide 3: Units of Work · Joule and Erg" class="slide enhanced-slide" data-slide="3"><header class="masthead"><h1>Units of Work · Joule and Erg</h1></header><div class="content v8-units">
 <section class="panel blue cyan-card"><h2><span class="topic-icon">📏</span> Absolute units</h2><div class="panel-body"><div class="v8-mini"><b>SI</b><span>joule (J) or newton-metre (N·m)</span><b>CGS</b><span>erg or dyne-centimetre (dyne·cm)</span></div><div class="v8-term"><strong>1 joule</strong><p>A force of <b>1 N</b> displaces an object by <b>1 m</b> along the force.</p><div class="formula">1 J = 1 N × 1 m = 1 N·m</div></div><div class="v8-term"><strong>1 erg</strong><p>A force of <b>1 dyne</b> displaces an object by <b>1 cm</b> along the force.</p><div class="formula">1 erg = 1 dyne × 1 cm</div></div></div></section>
 <section class="panel yellow amber-card"><h2><span class="topic-icon">⚖️</span> Gravitational units</h2><div class="panel-body"><div class="v8-mini"><b>SI</b><span>kgwt·m</span><b>CGS</b><span>gwt·cm</span></div><div class="v8-math-row"><div class="formula">1 kgwt·m = 9.81 J</div><div class="formula">1 gwt·cm = 981 erg</div></div><div class="v8-relationship"><h3>Relationship between joule and erg</h3><div class="formula">1 J = 10<sup>7</sup> erg</div><div class="formula">1 erg = 10<sup>−7</sup> J</div></div></div></section>
@@ -320,13 +388,24 @@ th,td{font-size:calc(19px*var(--text-mult))}
 <div><span>Mechanical advantage</span><strong>MA = <span class="frac"><span>L</span><span>E</span></span></strong></div><div><span>Pulley (ideal)</span><strong>MA = 1</strong></div>
 <div><span>Inclined plane (ideal)</span><strong>MA = <span class="frac"><span>L</span><span>h</span></span></strong></div><div><span>Lever principle</span><strong>F₁d₁ = F₂d₂</strong></div>
 <div><span>Lever mechanical advantage</span><strong>MA = <span class="frac"><span>Effort arm</span><span>Load arm</span></span></strong></div><div><span>Beam balance</span><strong>n₁L₁ = n₂L₂</strong></div>
-</div></div></section></div><footer class="footer"><span>Work, Energy and Simple Machines · Class IX Physics</span><span class="page-number">29</span></footer></article></main><nav aria-label="Slide controls" class="toolbar"><button aria-label="Previous slide" id="prev" type="button">◀</button><button aria-label="Next slide" id="next" type="button">▶</button><select aria-label="Go to slide" id="slidePicker"><option value="1">WORK, ENERGY AND SIMPLE MACHINES</option><option value="2">Work (W)</option><option value="3">Units of Work · Joule and Erg</option><option value="4">Three Types of Work</option><option value="5">Energy</option><option value="6">Potential Energy and Kinetic Energy</option><option value="7">Mechanical Energy</option><option value="8">Work–Energy Theorem</option><option value="9">Law of Conservation of Energy</option><option value="10">Conservation of Mechanical Energy – Free Fall</option><option value="11">Conservation of Mechanical Energy – Simple Pendulum</option><option value="12">Power (P)</option><option value="13">Electrical Energy and Electric Power</option><option value="14">Simple Machines · Introduction and Terms</option><option value="15">Pulley</option><option value="16">Pulley – Mechanical Advantage</option><option value="17">Inclined Plane</option><option value="18">Inclined Plane – Derivation</option><option value="19">Inclined Plane – Conclusions</option><option value="20">Inclined Plane – Example 7.12</option><option value="21">Activity 7.3 – Inclined Plane</option><option value="22">Lever</option><option value="23">Lever – Principle and Derivation</option><option value="24">Lever – Mechanical Advantage</option><option value="25">Lever – Classes of Levers</option><option value="26">Activity 7.4 – Lever</option><option value="27">Activity 7.5 – Beam Balance</option><option value="28">Example 7.13 – Seesaw</option><option value="29">Quick Formula Revision · Complete Chapter</option></select><span class="count" id="count">1 / 29</span><button aria-label="Fullscreen" id="fullscreen" type="button">⛶</button><button aria-label="Decrease font size" id="fontSmaller" type="button">A-</button><button aria-label="Increase font size" id="fontLarger" type="button">A+</button></nav><script>
+</div></div></section></div><footer class="footer"><span>Work, Energy and Simple Machines · Class IX Physics</span><span class="page-number">29</span></footer></article></main><nav aria-label="Slide controls" class="toolbar"><button aria-label="Previous slide" id="prev" type="button">◀</button><button aria-label="Next slide" id="next" type="button">▶</button><select aria-label="Go to slide" id="slidePicker"><option value="1">WORK, ENERGY AND SIMPLE MACHINES</option><option value="2">Work (W)</option><option value="3">Units of Work · Joule and Erg</option><option value="4">Three Types of Work</option><option value="5">Energy</option><option value="6">Potential Energy and Kinetic Energy</option><option value="7">Mechanical Energy</option><option value="8">Work–Energy Theorem</option><option value="9">Law of Conservation of Energy</option><option value="10">Conservation of Mechanical Energy – Free Fall</option><option value="11">Conservation of Mechanical Energy – Simple Pendulum</option><option value="12">Power (P)</option><option value="13">Electrical Energy and Electric Power</option><option value="14">Simple Machines · Introduction and Terms</option><option value="15">Pulley</option><option value="16">Pulley – Mechanical Advantage</option><option value="17">Inclined Plane</option><option value="18">Inclined Plane – Derivation</option><option value="19">Inclined Plane – Conclusions</option><option value="20">Inclined Plane – Example 7.12</option><option value="21">Activity 7.3 – Inclined Plane</option><option value="22">Lever</option><option value="23">Lever – Principle and Derivation</option><option value="24">Lever – Mechanical Advantage</option><option value="25">Lever – Classes of Levers</option><option value="26">Activity 7.4 – Lever</option><option value="27">Activity 7.5 – Beam Balance</option><option value="28">Example 7.13 – Seesaw</option><option value="29">Quick Formula Revision · Complete Chapter</option></select><span class="count" id="count">1 / 29</span><button aria-label="Mobile view" aria-pressed="false" class="view-toggle" id="view-mobile" title="Mobile view" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M11 18h2"></path></svg></button><button aria-label="Desktop view" aria-pressed="false" class="view-toggle" id="view-desktop" title="Desktop view" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><path d="M8 21h8M12 17v4"></path></svg></button><button aria-label="Fullscreen" id="fullscreen" type="button">⛶</button><button aria-label="Decrease font size" id="fontSmaller" type="button">A-</button><button aria-label="Increase font size" id="fontLarger" type="button">A+</button></nav><script>
 (()=>{
   const slides=[...document.querySelectorAll('.slide')];
   const count=document.getElementById('count');
   const picker=document.getElementById('slidePicker');
   let at=0;
   let textScale=1;
+  let viewMode = (window.matchMedia('(max-width: 760px) and (orientation: portrait)').matches ? 'mobile' : 'desktop');
+  const viewButtons={mobile:document.getElementById('view-mobile'),desktop:document.getElementById('view-desktop')};
+  function setView(mode){
+    viewMode=mode;
+    document.documentElement.setAttribute('data-view',mode);
+    for(const k of Object.keys(viewButtons)){viewButtons[k].setAttribute('aria-pressed',String(k===mode));}
+    if(mode==='mobile'){document.getElementById('stage').scrollTop=0;}
+    fit();
+  }
+  viewButtons.mobile.onclick=()=>setView('mobile');
+  viewButtons.desktop.onclick=()=>setView('desktop');
   function fit(){
     document.documentElement.style.setProperty('--scale-x',innerWidth/1280);
     document.documentElement.style.setProperty('--scale-y',innerHeight/720);
@@ -343,6 +422,7 @@ th,td{font-size:calc(19px*var(--text-mult))}
     if(picker) picker.value=String(at+1);
     document.getElementById('prev').disabled=at===0;
     document.getElementById('next').disabled=at===slides.length-1;
+    if(viewMode==='mobile') document.getElementById('stage').scrollTop=0;
     location.hash='slide-'+(at+1);
   }
   document.getElementById('prev').onclick=()=>show(at-1);
@@ -360,7 +440,7 @@ th,td{font-size:calc(19px*var(--text-mult))}
     else if(e.key==='-'){textScale-=0.05;applyTextScale()}
   });
   window.addEventListener('resize',fit);
-  fit();
+  setView(viewMode);
   applyTextScale();
   const n=Number((location.hash.match(/slide-(\d+)/)||[])[1]);
   show(n?n-1:0);
