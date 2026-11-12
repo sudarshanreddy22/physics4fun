@@ -1804,6 +1804,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 /* The question cards, not the horizontal navigation, follow the page scroll. */
 #content .iit-single-viewport { position: relative; z-index: 0; }
 </style>
+<style id="p4f-account-style">.p4f-auth{margin-left:auto;position:relative;display:flex;align-items:center;font:600 12px system-ui,sans-serif}.p4f-auth [hidden]{display:none!important}.p4f-auth a,.p4f-auth button{font:inherit;padding:7px 10px;border:1px solid var(--divider,#bbb);border-radius:8px;background:var(--card-bg,#fff);color:var(--text,#222);cursor:pointer;text-decoration:none}.p4f-auth-user{display:flex;align-items:center;gap:5px;max-width:170px}.p4f-auth-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.p4f-auth-menu{position:absolute;right:0;top:calc(100% + 6px);padding:6px;background:var(--card-bg,#fff);border:1px solid var(--divider,#bbb);border-radius:9px;box-shadow:0 8px 24px #0003;z-index:1000;min-width:130px}.p4f-auth-menu button{width:100%;text-align:left;border:0}@media(max-width:600px){.p4f-auth-user{max-width:110px}.p4f-auth-name{max-width:70px}}</style>
 </head>
 <body class="light">
 
@@ -1815,6 +1816,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
     <span class="brand-tag">CBSE</span>
   </div>
 
+  <div class="p4f-auth" id="p4fAuth"><a href="signin.html" id="p4fSignIn">🔐 Sign in</a><button type="button" class="p4f-auth-user" id="p4fUserButton" hidden aria-expanded="false"><span>👤</span><span class="p4f-auth-name" id="p4fUsername"></span><span>▾</span></button><div class="p4f-auth-menu" id="p4fAuthMenu" hidden><button type="button" id="p4fSignOut">Sign out</button></div></div>
   <div class="header-center">
     <div class="breadcrumb" id="breadcrumb">
       <span class="bc-chip" id="bc-grade">—</span>
@@ -8972,6 +8974,20 @@ window.P4F_GRADE8_MOTION_WORKSHEETS = window.P4F_GRADE8_MOTION_SOURCE.worksheets
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
+</script>
+<script type="module" id="p4f-firebase-account">
+const config={apiKey:"AIzaSyA_aey0TuHl3aAOnt820wnp-Hzf4vardB4",authDomain:"physics4fun-eea28.firebaseapp.com",projectId:"physics4fun-eea28",appId:"1:614636504026:web:7d7ede9c97276a8fe336e3"};
+const root=document.getElementById('p4fAuth'),link=document.getElementById('p4fSignIn'),userButton=document.getElementById('p4fUserButton'),username=document.getElementById('p4fUsername'),menu=document.getElementById('p4fAuthMenu'),logout=document.getElementById('p4fSignOut');
+function closeMenu(){menu.hidden=true;userButton.setAttribute('aria-expanded','false')}
+userButton.addEventListener('click',()=>{menu.hidden=!menu.hidden;userButton.setAttribute('aria-expanded',String(!menu.hidden))});
+document.addEventListener('click',e=>{if(!root.contains(e.target))closeMenu()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+try{
+const [{initializeApp,getApps,getApp},{getAuth,onAuthStateChanged,signOut}]=await Promise.all([import('https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js'),import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js')]);
+const app=getApps().length?getApp():initializeApp(config),auth=getAuth(app);
+onAuthStateChanged(auth,user=>{if(user){username.textContent=user.displayName||user.email?.split('@')[0]||'My account';userButton.hidden=false;link.hidden=true}else{userButton.hidden=true;link.hidden=false;closeMenu()}},err=>console.error('Physics4Fun auth state:',err));
+logout.addEventListener('click',async()=>{logout.disabled=true;try{await signOut(auth);closeMenu()}catch(err){alert('Sign out failed: '+err.message)}finally{logout.disabled=false}});
+}catch(err){console.error('Physics4Fun Firebase loading failed:',err)}
 </script>
 </body>
 </html>
