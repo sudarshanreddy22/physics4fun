@@ -186,7 +186,8 @@
       nav { padding: 0.8rem 1.2rem; }
       .nav-links { display: none; }
     }
-  </style>
+  .p4f-auth-actions{display:flex;align-items:center;gap:8px;margin-left:auto}.p4f-auth-actions a,.p4f-auth-actions button{font:600 13px 'DM Sans',sans-serif;text-decoration:none;border-radius:16px;padding:9px 12px;white-space:nowrap;cursor:pointer}.p4f-signin{color:var(--navy);border:1px solid #b9c9dd}.p4f-register{background:var(--sky);color:white}.p4f-google{background:white;color:#23334a;border:1px solid #b9c9dd}.p4f-account-menu{position:relative}.p4f-account-menu>button{border:1px solid #b9c9dd;background:white;color:var(--navy);max-width:150px;overflow:hidden;text-overflow:ellipsis}.p4f-account-dropdown{position:absolute;right:0;top:100%;padding:8px;background:white;box-shadow:0 5px 20px #0002;border-radius:10px;z-index:200}.p4f-account-dropdown button{border:0;background:transparent}.p4f-auth-actions [hidden]{display:none!important}@media(max-width:640px){.p4f-auth-actions{gap:4px}.p4f-auth-actions a,.p4f-auth-actions button{padding:7px;font-size:11px}.p4f-google{max-width:90px;overflow:hidden;text-overflow:ellipsis}}
+</style>
 </head>
 <body>
 
@@ -197,6 +198,7 @@
 	<li><a href="https://physics4fun.in/downloads">Downloads</a></li>
 	<li><a href="https://physics4fun.in/quiz">Quiz</a></li>
   </ul>
+<div class="p4f-auth-actions" id="p4fHomeAuth"><a class="p4f-signin" href="signin.html" id="p4fHomeSignIn">Sign in</a><a class="p4f-register" href="signin.html?mode=register" id="p4fHomeRegister">Register</a><a class="p4f-google" href="signin.html?provider=google" id="p4fHomeGoogle">Continue with Google</a><div class="p4f-account-menu" id="p4fHomeAccount" hidden><button type="button" id="p4fHomeName" aria-expanded="false"></button><div class="p4f-account-dropdown" id="p4fHomeDropdown" hidden><button type="button" id="p4fHomeLogout">Sign out</button></div></div></div>
   <a href="https://physics4fun.in/topics"> <button class="btn-primary">Start Exploring →</button></a>
 
 </nav>
@@ -355,6 +357,10 @@ new IntersectionObserver((entries, obs) => {
     obs.disconnect();
   }
 }, { threshold: 0.4 }).observe(document.querySelector('.stats-section'));
+</script>
+<script type="module" id="p4f-home-firebase">
+const config={apiKey:"AIzaSyA_aey0TuHl3aAOnt820wnp-Hzf4vardB4",authDomain:"physics4fun-eea28.firebaseapp.com",projectId:"physics4fun-eea28",appId:"1:614636504026:web:7d7ede9c97276a8fe336e3"};
+try{const [{initializeApp,getApps,getApp},{getAuth,onAuthStateChanged,signOut}]=await Promise.all([import('https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js'),import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js')]);const app=getApps().length?getApp():initializeApp(config),auth=getAuth(app),account=document.getElementById('p4fHomeAccount'),dropdown=document.getElementById('p4fHomeDropdown'),name=document.getElementById('p4fHomeName');onAuthStateChanged(auth,user=>{for(const id of ['p4fHomeSignIn','p4fHomeRegister','p4fHomeGoogle'])document.getElementById(id).hidden=!!user;account.hidden=!user;if(user)name.textContent='👤 '+(user.displayName||user.email?.split('@')[0]||'Account')+' ▾';else dropdown.hidden=true});name.addEventListener('click',()=>{dropdown.hidden=!dropdown.hidden;name.setAttribute('aria-expanded',String(!dropdown.hidden))});document.addEventListener('click',e=>{if(!account.contains(e.target))dropdown.hidden=true});document.getElementById('p4fHomeLogout').addEventListener('click',async()=>{try{await signOut(auth)}catch(e){alert(e.message)}})}catch(e){console.error('Physics4Fun homepage auth:',e)}
 </script>
 </body>
 </html>
