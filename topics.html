@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Physics4Fun</title>
+<style id="p4f-access-gate">html:not(.p4f-access-allowed) body{visibility:hidden!important}</style>
+<script>document.documentElement.classList.remove('p4f-access-allowed');</script>
+
 <!-- MathJax: configure first, then load -->
 <script>
 window.MathJax={
@@ -8978,16 +8981,31 @@ window.P4F_GRADE8_MOTION_WORKSHEETS = window.P4F_GRADE8_MOTION_SOURCE.worksheets
 <script type="module" id="p4f-firebase-account">
 const config={apiKey:"AIzaSyA_aey0TuHl3aAOnt820wnp-Hzf4vardB4",authDomain:"physics4fun-eea28.firebaseapp.com",projectId:"physics4fun-eea28",appId:"1:614636504026:web:7d7ede9c97276a8fe336e3"};
 const root=document.getElementById('p4fAuth'),link=document.getElementById('p4fSignIn'),userButton=document.getElementById('p4fUserButton'),username=document.getElementById('p4fUsername'),menu=document.getElementById('p4fAuthMenu'),logout=document.getElementById('p4fSignOut');
+const home=reason=>{const url=new URL('index.html',location.href);url.searchParams.set('mode','signin');if(reason)url.searchParams.set('notice',reason);location.replace(url.href)};
 function closeMenu(){menu.hidden=true;userButton.setAttribute('aria-expanded','false')}
 userButton.addEventListener('click',()=>{menu.hidden=!menu.hidden;userButton.setAttribute('aria-expanded',String(!menu.hidden))});
 document.addEventListener('click',e=>{if(!root.contains(e.target))closeMenu()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 try{
-const [{initializeApp,getApps,getApp},{getAuth,onAuthStateChanged,signOut}]=await Promise.all([import('https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js'),import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js')]);
-const app=getApps().length?getApp():initializeApp(config),auth=getAuth(app);
-onAuthStateChanged(auth,user=>{if(user){username.textContent=user.displayName||user.email?.split('@')[0]||'My account';userButton.hidden=false;link.hidden=true}else{userButton.hidden=true;link.hidden=false;closeMenu()}},err=>console.error('Physics4Fun auth state:',err));
-logout.addEventListener('click',async()=>{logout.disabled=true;try{await signOut(auth);closeMenu()}catch(err){alert('Sign out failed: '+err.message)}finally{logout.disabled=false}});
-}catch(err){console.error('Physics4Fun Firebase loading failed:',err)}
+const [{initializeApp,getApps,getApp},{getAuth,onAuthStateChanged,signOut},{getFirestore,doc,getDoc}]=await Promise.all([import('https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js'),import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js'),import('https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js')]);
+const app=getApps().length?getApp():initializeApp(config),auth=getAuth(app),db=getFirestore(app);
+onAuthStateChanged(auth,async user=>{
+ if(!user){home('signin-required');return}
+ try{
+  const token=await user.getIdTokenResult();
+  if(token.claims.admin===true){location.replace(new URL('admin.html',location.href).href);return}
+  const snapshot=await getDoc(doc(db,'users',user.uid));
+  if(!snapshot.exists()){home('profile-missing');return}
+  const profile=snapshot.data();
+  if(profile.status==='disabled'||(profile.role==='teacher'&&profile.status!=='active')){home('access-pending');return}
+  if(profile.status!=='active'||!['student','teacher'].includes(profile.role)){home('access-denied');return}
+  username.textContent=user.displayName||profile.name||user.email?.split('@')[0]||'My account';
+  userButton.hidden=false;link.hidden=true;
+  document.documentElement.classList.add('p4f-access-allowed');
+ }catch(err){console.error('Physics4Fun profile access check failed:',err);home('access-error')}
+},err=>{console.error('Physics4Fun auth state:',err);home('auth-error')});
+logout.addEventListener('click',async()=>{logout.disabled=true;try{await signOut(auth);closeMenu();home()}catch(err){alert('Sign out failed: '+err.message)}finally{logout.disabled=false}});
+}catch(err){console.error('Physics4Fun Firebase loading failed:',err);home('firebase-error')}
 </script>
 </body>
 </html>
