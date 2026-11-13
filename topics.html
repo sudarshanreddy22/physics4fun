@@ -8993,7 +8993,7 @@ onAuthStateChanged(auth,async user=>{
  if(!user){home('signin-required');return}
  try{
   const token=await user.getIdTokenResult();
-  if(token.claims.admin===true){location.replace(new URL('admin.html',location.href).href);return}
+  if(token.claims.admin===true){username.textContent=user.displayName||user.email?.split('@')[0]||'Super Admin';userButton.hidden=false;link.hidden=true;document.documentElement.classList.add('p4f-access-allowed');return}
   const snapshot=await getDoc(doc(db,'users',user.uid));
   if(!snapshot.exists()){home('profile-missing');return}
   const profile=snapshot.data();
