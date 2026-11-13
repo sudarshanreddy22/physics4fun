@@ -4,7 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Physics4Fun</title>
-<style id="p4f-access-gate">html:not(.p4f-access-allowed) body{visibility:hidden!important}</style>
+<style id="p4f-access-gate">html:not(.p4f-access-allowed) body{visibility:hidden!important}
+/* Electric Charges and Fields: preserve multi-line numerical expressions and options. */
+#panel-iitoth .mcq-question,
+#panel-iitoth .opt-text,
+#panel-iitoth .explanation,
+#panel-iitexamples .mcq-question,
+#panel-iitexamples .opt-text,
+#panel-iitexamples .iit-answer-box {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
+#panel-iitoth .mcq-question mjx-container,
+#panel-iitexamples .mcq-question mjx-container {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+</style>
 <script>document.documentElement.classList.remove('p4f-access-allowed');</script>
 
 <!-- MathJax: configure first, then load -->
