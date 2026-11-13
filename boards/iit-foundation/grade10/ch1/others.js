@@ -1,8 +1,7 @@
 // Grade 10 IIT Foundation — Electric Charges and Fields.
-// Worksheet labels WS-1, WS-2, ... are assigned in source appearance order;
-// the PDF itself does not number worksheets. Only levels with actual questions
-// are included. Original source question numbers are preserved.
-// Source: Electric Charges and Fields.pdf. No empty level tabs.
+// WS-1 through WS-4 follow PDF appearance order; source question numbering is retained.
+// WS-2–4 transcribed from PDF text layer, including line-broken formula glyphs.
+// Some diagram-dependent items require original PDF images for complete visual fidelity.
 window.iitOthersData = {
   "worksheets": [
     {
@@ -860,6 +859,1677 @@ window.iitOthersData = {
           "marks": 1,
           "sourcePage": 15,
           "sourceQuestion": 29
+        }
+      ]
+    },
+    {
+      "name": "WS-2",
+      "core": [
+        {
+          "sourceNumber": 1,
+          "question": "Cou lom b’s law for t h e for ce bet ween el ect r i c ch ar ges m ost closel y r esem bels wi t h :\n1) law of con ser vat ion of en er gy           2) Newt on ’s l aw of gr avi t at ion           [       ]\n3) Newt on ’s 3 r d law of m ot ion             4) t h e law of con ser vat ion of ch ar ge",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 2,
+          "question": "Wh ich of t h efollowin g st at em en t s is in cor r ect abou t Cou lom b’s law?                  [    ]\n1) It obeys Newt on ’s t h ir d law.                 2) It is a cen t r al for ce.\n3) It obeys t h e su per posit ion pr in ciple\n4) Coulomb force is constant with respect to the medium",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 3,
+          "question": "A ch ar ge q 1 exerts some force on a second charge q2. If the third charge q3 is brought\nnear, the force of q1 exerted on                                                  [   ]\n1) decreases           2) increases       3) remains unchanged        4) none",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 4,
+          "question": "There are two charges 1 C and 5C . The ratio of the two forces acting on them will be\n1) 1:5              2) 1:1               3) 5:1                4) 1:25           [    ]",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 5,
+          "question": "What is the Coulomb’s force between two  -particles separated by a distance of 3.2 x 10-15 m ?\n1) 90 N              2) 45 N               3) 60 N                4) 75 N             [     ]",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 6,
+          "question": "When the distance between the charged particles is halved, the force between them\nbecomes                                                                    [   ]\n1) One - fourth   2) half            3) double            4) four times",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 7,
+          "question": "Two charges of equal magnitudes and at a distance r exert a force F on each other. If the\ncharges are halved and distance between them is doubled, then the new force acting on\neach charge is                                                                  [     ]\n1) F/8              2) F/4              3) 4F                 4) F/16",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 8,
+          "question": "The charges q1, q2 are placed in vaccum at a distance d and the force acting between\nthem is F. If the charges are immersed in a medium of dielectric constant k = 9, the force\nof interaction becomes.                                                           [    ]\nF                    F\n1) 9F                 2) 3F               3)                   4)\n3                        9",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 9,
+          "question": "Fg and Fe represents gravitational and electrostatic force respectively between electrons\nsituated at a distance 0.1m. The ratio of Fg/Fe is of the order of ----          [    ]\n1) 10  -41\n2) 10 -45\n3) 10 40\n4) 10 -42",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 30
+        },
+        {
+          "sourceNumber": 10,
+          "question": "Two charges each of 1 coulomb are at a distance 1km apart, the force between them is\n1) 9  103 N        2) 9 103 N        3) 1.1 10 4 N     4) 104 N          [   ]",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 11,
+          "question": "+2C and +6C two charges are repelling each other with a force of 12N. If each charge is\ngiven -2C of charge, then the value of the force will be                       [    ]\n1) 4N (attractive)   2) 4N (repulsive)    3) 8N (Repulsive)  4) Zero",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 12,
+          "question": "An electron is moving round the nucleus of a hydrogen atom in a circular orbit of radius r.\n\nThe coulomb force F between the two is (Where K= 4 )                             [   ]\ne2                  e2                  e2 \n1)  K      r         2) K       r        3)  K      r                 4) none\nr3                   r3                   r3",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 13,
+          "question": "Dielectric constant of pure water is 81. Its permittivity will be                             [    ]\n10                                       12\n1) 7.17  10  MKS units                   2) 8.86  10          MKS units\n3) 1.02  10 MKS units\n4) Cannot be calculated",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 14,
+          "question": "With the rise in temperature, the dielectric constant Kof a liquid           [    ]\n1) increases        2) decreases          3) remains unchanged 4) Charges erratically",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 15,
+          "question": "The ratio of the forces between two small spheres with constant charge (a) in air (b) in a\nmedium of dielectric constant K is                                               [     ]\n1) 1:k                2) K:1              3) 1:k2\n4) k :1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 16,
+          "question": "Two point charges placed at a distance r in air experience a certain force. Then the distance\nat which they will experience the same force in a medium of dielectric constat K is [     ]\nr\n1) r/K                2) Kr               3)                            4) r K\nK",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 17,
+          "question": "Two charges are at a distance d apart. If a copper plate (conducting medium) of thickness\nd/2 is placed between them, the effective force will be                           [   ]\n1) 2F                2) F/2                3) 0                 4) 2F",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 18,
+          "question": "The spherical conductors B and C having equal radii and carrying equal charges in them\nrepel each other with a force F when kept apart at some distance. a third spherical\nconductor having same radius as that of B but uncharged is brought in conatact with B,\nthen brought in contact with C and finally removed away from both. The new force of\nrepulsion between B and C is                                                   [    ]\n1) F/4                2) 3F/4             3) F/8                        4) 3F/8",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 19,
+          "question": "Two identical simple pendulums, A and B, are suspended from the same point. The\nbobs are given positive charges, with A having more charge than B. They diverge and\nreach equilibrium, with A and B making angles θ1 and θ 2 with the vertical respectively.\nWhich of the follwoing is correct ?                                            [    ]\n1) θ1 > θ 2                               2) θ1 < θ 2\n3) θ1 = θ 2                               4) The tension in A is greater than that in B",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 20,
+          "question": "Two charges q1and q2are placed in vacuum at a distance d and the force acting between\nthem is F. If a medium of dielectric constant 4 is introduced around them, the force now\nwill be                                                                          [    ]\n1) 4F                2) 2F                 3) F/2               4) F/4",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 31
+        },
+        {
+          "sourceNumber": 21,
+          "question": "Two similar spheres having +q and -q charge are kept at a certain distance. ‘F’ force acts\nbetween the two. If in the middle of two spheres, another similar sphere having +q\ncharge is kept, then it experience a force in magnitude and direction as          [    ]\n1) Zero having no direction               2) 8F towards +q charge\n3) 8F towards -q charge                   4) 4F towards +q charge",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 22,
+          "question": "Two point charges +3µC and +8µC repel each other with a force of 40N. If a charge of -\n5µCis added to each of them, then the force between them will become          [   ]\n1) -10N             2) +10N             3) +20N            4) -20N",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 23,
+          "question": "Two small conducting spheres of equal radius have charges +10µC and -20µC respectively\nand placed at a distance R from each other experience force F1. If they are brought in\ncontact and separated to the same distance, they experience force F2. The ratio of F1 to\nF2 is                                                                           [    ]\n1) 1:8              2) -8:1              3) 1:2              4) -2:1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 24,
+          "question": "Two particles of equal mass m and charge q are placed at a distance of 16 cm. They do not\nexperience any force. The value of q/m is                                        [    ]\n 0                  G\n1) 1                  2)                  3)                   4) 4 0G\nG           0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 25,
+          "question": "Two point charges placed at a certain distance r in air exert a force F on each other. The\ndistance r' at which these charges will exert the same force in a medium of dielectric\nconstant k is given by                                                            [    ]\n1) r                 2) r/k               3) r/ K                4) r K",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 26,
+          "question": "Each of two point charges are doubled and their distance is halved. Force of interaction\nbecomes n times, where n is                                                     [    ]\n1) 4                2) 1                3)18                 4) 16",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 27,
+          "question": "Let  0  denote the dimension formula of the permittivity of vacuum. If M = mass,\nL = length, T = time, and A = electric current, then                              [                    ]\n1)  0    M L T A                    2)  0    M L T A \n1 3    2   1                             1 3   4   2\n3)  0    M L T A                    4)  0    M L T A \n1 2    1   2                             1 2 1 1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 28,
+          "question": "Three charges +Q, q, +Q are placed respectively, at distance 0, d/2 and d from the orgin,\non the x -axis. If the net force experienced by +Q, placed at x =0, is zero, then value of q\nis                                                                                  [    ]\n1) +Q/2                   2) -Q/2           3) -Q/4                   4) +Q/4",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 29,
+          "question": "If two charges q1 and q2 are separated with distance 'd' and placed in a medium of dielectric\nconstant K. What will be the equivalent distance between charges in air for the same\nelectrostatic force?                                                                [    ]\n1) d K                          2) 1.5d K   3) K d                       4)                   K 2d",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 30,
+          "question": "When air is replaced by a dielectric medium of dielectric constant K, The maximum\nforce of attraction between two charges sepearted by a distance            [   ]\n1) decreases K times                     2) remains unchanged\n3) increses by K times                   4) decreases K2 times",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 31,
+          "question": "Two point charges A and B, having charges +Q and -Q respectively, are placed at certain\ndistance apart and force acting between them is F. If 25% charge of A is transferred to B,\nthen force between the charges becomes                                            [    ]\n9F                              16F         4F\n1)                              2)          3)                           4) F\n16                               9           3",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 32
+        },
+        {
+          "sourceNumber": 32,
+          "question": "Suppose the charge of a proton and an electron differ slightly. One of them is -e, the\nother (e + e ). If the net of electrostatic force and gravitational force between two hydrogen\natoms placed at a distance d (much greater than atomic size) apart is zero, then e is of\nthe order of [ Given mass of hydrogen mh  1.67  10 27 kg ]                           [   ]\n1) 10-20 C               2) 10-23 C             3) 10-37 C             4) 10-47 C",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 33,
+          "question": "Electric charges of 1 µC, -1 µC and 2 µC are placed in air at the corners A, B and C\nrespectively of an equilateral triangle ABC having length of each side 10 cm. The result-\nant force on the charge at C is                                                  [   ]\n1) 0.9 N             2) 1.8 N              3) 2.7 N             4) 3.6 N",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 34,
+          "question": "Three charges each of magnitude q are placed at the corners of an equilateral triangle,\nthe electrostatic force on the charge placed at the centre is (each side of triangle is L)\n1 q2                  1 3q 2                 1 q2\n(1) Zero             2)                    3)                    4)                       [    ]\n4 0 L2              4 0 L2              12 0 L2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 35,
+          "question": "Three equal charges are placed on the three corners of a square. If the force between q1\nand q2is F12 and that between q1and q3 is F13, the ratio of magnitudes F12 is    [   ]\nF13\n1) 1/2               2) 2                3) 1/ 2               4) 2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 36,
+          "question": "Three charges +4q, Q and q are placed in a straight line of length l at points 0, l/2 and l\nrespectively.What should be Q in order to make the net force on q to be zero?      [    ]\n1) - q               2) -2q               3) -q/2              4) 4q",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 37,
+          "question": "Two charges +4e and +e are at a distance x apart. At what distance, a charge q must\nbe placed from charge +e so that it is in equilibrium?                      [   ]\n(1) x/2            (2) 2x/3              (3) x/3           (4) x/6",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 38,
+          "question": "A charge q is placed at the center of the line joining two equal charges Q. The system of\nthree charges will be in equilibrium if q is equal to                             [   ]\nQ                  Q                                           Q\n1)                  2)                   3) -4Q                4) \n2                  4                                           2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 39,
+          "question": "Four charges are arranged at the corners of a square ABCD as shown in figure. The force\non the charge kept at the center O is                                          [    ]\n1) zero                                    2) along the diagonal AC\n3) along the diagonal BD                   4) perpendicular to side AB",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 40,
+          "question": "Charges 4Q, q are Q are placed along x-axis at positions x = 0, x = l/2 and x = l, respec-\ntively. Find the value of q so that force on charge Q is zero.                    [    ]\n1) Q                  2) Q/2                3) -Q/2            4) -Q",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 41,
+          "question": "Three equal charges are placed on the three corners of a square. If the force between q1,\nand q2 is F12 and that between q1, and q3 is F13, then the ratio of magnitudes (F12/F13) is\n1                                          1\n1)                   2) 2                  3)                    4)     2                 [    ]\n2                                          2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 33
+        },
+        {
+          "sourceNumber": 42,
+          "question": "Electric charges of 1C, 1C and 2C are placed in airat the corners A, B and C, respec-\ntively, of an equilateral triangle ABC having length of each side 10 cm. The resultant\nforce on the charge is                                                           [    ]\n1) 0.9N               2) 1,8N              3) 2.7N              4) 3.6N",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 43,
+          "question": "Three charges each of magnitude q are placed at the corners of an equilateral triangle.\nthe electrostatic force on the charge placed at the centre is (each side of triangle is L)\n1 q2                1 3q 2                 1 q2\n1) Zero                2)                  3)                    4)                   [  ]\n4 0 L2            4 0 L2              12 0 L2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 44,
+          "question": "Equal charges q are placed at the four corners A,B,C,D of a square of length a. The\nmagnitude of the force on the charge at B will be                                     [  ]\n3q  2\nq 2\nq 2\n 1 2 2       q 2\n    1 \n1)                     2)                  3) 4 a 2  2       4)        2 \n2   \n4 0 a 2\n4 0 a 2\n0               4 0 a       2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 45,
+          "question": "Charges Q, -q, Q, -q are placed at the corners A, B, C, D of a square respectively. If the\nresulatant force on the charge Q is zero due to other charges, what is the relation\nbetween Q and q?                                                                 [     ]\n1) Q  2 2q          2) Q  2q            3) Q  2q            4) 2 2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        }
+      ],
+      "optimal": [
+        {
+          "sourceNumber": 1,
+          "question": "Two points charges +3  C and +8  C repel eachother with a force of 40 N. If a\ncharge of -5  C is added to each of them, then the force between them will become\n1) -10N                2) +10 N                  3) +20 N                   4) -20N                [   ]",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 2,
+          "question": "A force F acts between sodium and chlorine ions of salt (sodium chloride) when put 1cm apart in air.\nThe permittivity of air and dielectric constant of water are  0 and K respectively. When a piece of salt\nis put in water electrical force acting between sodium and chlorine ions 1cm apart is             [    ]\nF                      FK                         F                         F 0\n1)                     2)                        3)                         4)\nK                      0                        K0                         K",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 3,
+          "question": "Force of attraction between two point charges Q and - Q separated by d metre is Fe . When these\ncharges are placed on two identical spheres of radius R = 0.3d whose centres are d metre apart, the\nforce of attraction between them is                                                         [     ]\n1) Greater than Fe     2) Equal to Fe            3) Less than Fe            4) none",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 4,
+          "question": "The force between two charges 0.06m apart is 5N. If each charge is moved towards the\nother by 0.01m, then the force between them will become                        [   ]\n1) 7.20 N          2) 11.25N            3) 22.50N             4) 45.00N",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 5,
+          "question": "Two spherical conductors B and C having equal radii and carrying equal charges in them repel each\nother with a force F when kept apart at some distance. A third spherical conductor having same\nradius as that of B but uncharged is brought in contact with B, then brought in contact with C and\nfinally removed away from both. The new force of repulsion between B and C is                [   ]\n1) F/4                 2) 3F/4                3) F/8                    4) 3F/8",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 6,
+          "question": "A charge Q is divided into two parts of q and (Q-q). If the coulomb repulsion between them when\nthey are separated is to be maximum, the ratio of Q/q should be                            [  ]\n1) 2                   2) 1/2                 3) 4                     4) 1/4",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 34
+        },
+        {
+          "sourceNumber": 7,
+          "question": "Two copper balls, each weighing 10g are kept in air 10 cm apart. If one electron from every 106 atoms\nis transferred from one ball to the other, the coulomb force between them is (atomic weight of copper\nis 63.5)                                                                                        [   ]\n1) 2.0  1010 N        2) 2.0  10 4 N            3) 2.0  10 8 N          4) 2.0  10 6 N",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 8,
+          "question": "Two metalic spheres of radii 1 cm and 3 cm are given charges of -1  10-2 C and 5  10-2 C, respectively.\nIf these are connected by a conducting wire, the final charge on the bigger sphere is -            [   ]\n1) 3  10 C\n-2\n2) 4  10 C\n-2\n3) 1  10 C\n-2\n4) 2  10 C\n-2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 9,
+          "question": "Two positive ions, each carrying a charge q, are seperated by a distance d. If F is the force of repulsion\nbetween the ions, the number of electrons missing from each ion will be ( e being the charge of an\nelectron) ...                                                                                       [    ]\n4 0 Fe 2                     4 0 Fd 2                   4 0 Fd 2\n1) 4 0 Fd\n2)                            3)                             4)\ne2                              d2                              e2                           q2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 10,
+          "question": "An infinite number of charges, each of charge 1C , are placedon the x- axis with coordinates\nx  1, 2, 4,8............. . If a charge of 1C is kept at the origin, then what is the net force acting on 1C\ncharge?                                                                                                  [   ]\n1) 9000N                         2) 12000N               3) 24000N                 4) 36000N",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 11,
+          "question": "Four charges are arranged at the corners of a square ABCD, as shown in the figure. The force on a\npositive charge kept at the centre O is                                                     [   ]\n1) Zero                                          2) Along the diagnol AC\n3) Along thye diagonal BD                        4) Perpendicular to side AD",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 12,
+          "question": "Three charges are placed at thje vertices of an equilateral triangle of side ‘a’ as shown in the following\nfigure. The force experienced by the charge placed at the vertex A in a direction normal to BC is []\n1) Q /  4 0 a                       3 Q 2 /  4 0 a 2 \n2              2\n2)\n4) Q /  2 0 a \n2            2\n3) Zero",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 13,
+          "question": "Four charges equal to -Q are placed at the four corners of a square and a charge q is at its centre. if\nthe system is in equilibirium the value of q is                                                 [    ]\n1) \nQ\n\n1 2 2                   2)\nQ\n\n1 2 2                3) \nQ\n\n1 2 2               4)\nQ\n\n1 2 2      ",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 14,
+          "question": "Two small spheres each having the charge +Q are suspended by insulating threads of\nlength L from a hook. This arrangement is taken to a space where there is no gravitational\neffect, then the angle between the two suspensions and the tension in each will be\n0           1           Q2        0         1 Q2                          1   Q2                         Q2\n1) 180 ,\n2) 90 ,\n3) 180 ,                       4) 180 ,               [   ]\n4 0  2 L 2                   4 0 L2                     4 0 2 L2                 4 0 L2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 15,
+          "question": "A total charge Q is broken in two parts Q1 and Q2 and they are placed at a distance R from each other.\nThe maximum force of repulsion between them will occur, when                                    [   ]\nQ            Q                                                 Q            2Q\n1) Q2           , Q1  Q                                       2) Q2         , Q1  Q \nR            R                                                 4             3\nQ        3Q                                              Q        Q\n3) Q2        , Q1                                  4) Q2            , Q1 \n4         4                                              2        2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 35
+        },
+        {
+          "sourceNumber": 16,
+          "question": "Two identical conducting speres having unequal positive charges q1 and q2 separated\nby distance r. They are made to touch each other and then separated again to the\nsame distance. The electrostatic force between the spheres in this case will be\n(neglect induction of charges)                                                  [ ]\n1) less than before                     2) same as before\n3) more than before                     4) zero",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 36
+        },
+        {
+          "sourceNumber": 17,
+          "question": "Force of attraction between two point electric charges placed at a distance d in a medium\nis F. What distance apart should these be kept in the same medium so that force between\nthem becomes F/3 ?                                                                                                [   ]\n1) 2 3 d                         2) 3d               3) 9d                                  4)   3d",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 36
+        },
+        {
+          "sourceNumber": 18,
+          "question": "Two point charges +9e and +e are kept 16 cm apart from each other. Where should a third\ncharge q be placed between them so that the system is in equilibrium state?                                       [   ]\n1) 6 cm form +9e                 2) 12 cm form +9e   3) 6 cm form +e                        4) 12 cm form +e",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 36
+        },
+        {
+          "sourceNumber": 19,
+          "question": "Two small balls having equal positive charge Q(coulomb) on each are suspended by two\ninsulated string of equal length L meter, from a hook fixed to a stand. The whole set up is\ntaken in satellite into space where there is no gravity (state of weightlessness). Then the\nangle between the string and tension in the string is                                                             [   ]\n1         Q2                                  0          Q2\n1) 180 ,0\n.                               2) 90 ,          .\n 4 0   2 L 2                                4 0  L2\n0        1      Q2                                         0       1       QL\n3) 180 ,             .                               4) 180 , 4              .\n 4 0  2 L2                                                  0  4L",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 36
+        },
+        {
+          "sourceNumber": 20,
+          "question": "Two equally charged, identical metal spheres A and B repel each other with a force ‘F’.\nThe spheres are kept fixed with a distance ‘r’ between them. a third identical, but un-\ncharged sphere C is brought in contact with A and them placed at the mid-point of the\nline joining A and B. The magnitude of the net electric force on C is                                             [   ]\n1) F                             2) 3F/4             3) F/2                                 4) F/4",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 36
+        },
+        {
+          "sourceNumber": 21,
+          "question": "A positive point charge 50C is located in the plane xy at the point with radius vector\n                          \nr 0  2 i  3 j , where i and j are the unit vectors of the x and y axes. The elctrostatic\n\nforce\n                                                                                            \nF and its      magnitude on a charge of 2C placed at the point with radius vector r  8 i  5 j is\n       \n(Here r 0 and r are expressed in meter)\n1) 3N                            2) 9mN              3) 9  N                               4) 3mN",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 36
+        },
+        {
+          "sourceNumber": 22,
+          "question": "Two similar spheres having +Q and -Q charge are kept at a certain distance. The force\nacts between the two is F. If in the middle of two spheres, another similar sphere having\n+Q charge is kept, then it experiences a force in magnitude and direction as\n(1) Zero having no direction                            (2) 8F towards +Q charge\n(3) 8F towards -Q charge                                (4) 4F towards +Q charge",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 36
+        },
+        {
+          "sourceNumber": 23,
+          "question": "Two identical balls having like charges and placed at a certain distance apart repel each\nother with a certain force. They are brought in contact and then moved apart to a dis-\ntance equal to half their initial separation. The force of repulsion between them in-\ncreases 4.5 times in comparison with the initial value. The ratio of the initial charges of\nthe balls is                                                                                                     [   ]\n(1) 2:1                      (2) 3:1                    (3) 4:1                            (4) 6:1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 37
+        },
+        {
+          "sourceNumber": 24,
+          "question": "Two small spherical balls each carrying a charge Q =10 µC (10 micro-coulomb) are sus-\npended by two insulating threads of equal lengths 1m each, from a point fixed in the\nceiling. It is found that in equilibrium threads are separated by an angle 60° between\nthem, as shown in the figure. What is the tension in the threads?                                                [   ]\n(Given:                9 109 Nm/C2 )\n 4 0 \n1) 18N                       2) 1.8N\n3) 0.18N                     4) 180N",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 37
+        },
+        {
+          "sourceNumber": 25,
+          "question": "The acceleration of an electron due to the mutual attraction between the electron and a proton where\nthey are 1.6 A0 apart is....... ( me  9 1031 kg , e  1.6  10 19 C , take            9  109 Nm 2C 2 )    [   ]\n4 0\n1) 1025ms-2                  2) 1024ms-2                3) 1023ms-2                        4) 1022 ms-2\nPART-03\nELECTRIC FIELD\nINTRODUCTION:\n Coulomb’s law states that whenever two charges are kept at some distance, they ex-\nert an attractive or repulsive force on each other. A natural question arises: is it neces-\nsary to have two charges to repel or attract a charge, or how is electrical force exerted\nwhen charged particles are separated (i.e., they do not touch each other)?\n    This action-at-a-distance force can be explained using the concept of an electricfield.\n     Electric Field:\n    It is the space surrounding an electric charge (q) in which another charge experiences an\nelectrostatic force of attraction or repulsion.\n    So an electric field is an electric property associated with each point in space when\ncharge is present in any form.\n    The electric field is a vector quantity. The magnitude and direction of the electric field\n\nare expressed by the value of E , also called electric field strength, electric intensity,\nor simply electric field.",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-2",
+          "marks": 1,
+          "sourcePage": 37
+        }
+      ]
+    },
+    {
+      "name": "WS-3",
+      "core": [
+        {
+          "sourceNumber": 3,
+          "question": "Calculate the electric field due to an electric field due to an electric diopole length\n10 cm having charges of 1 C at an equatorial point 12 cm from the centre of the dipole.\nAns: 4.096  105 NC 1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 50
+        },
+        {
+          "sourceNumber": 4,
+          "question": "Two charges 10  C are placed 5.00 mm apart. Determine the electric field at\n(a)     A point P, on the axis of the dipole15 cm away from its centre O on the side of\nthe positive charge\n(b)  A point Q, 15 cm away from O on a line passing through O and normal to the\naxis of the dipole.\n                              \nAns: (a) 2.66  105 NC 1 , along AB   (b) 1.33  105 NC 1 , along BA\n1 7",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 50
+        },
+        {
+          "sourceNumber": 5,
+          "question": "An electric dipole consists of two opposite charges of magnitude  10 C seperated by\n2 cm. The dipole is placed in an external field of 3  107 NC 1 . What maximum torque\ndoes the electric field exert on the dipole?\nAns: 0.02 Nm.",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 50
+        },
+        {
+          "sourceNumber": 6,
+          "question": "An electric dipole is placed at an angle of 600 with an elctric field of magnitude\n4  105 NC 1 . It experiences a torque of 8 3NC 1 . If the length of the dipole is 4 cm,\ndetermine the magnitude of either charge of the dipole.\nAns: 1 mC",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 50
+        }
+      ],
+      "optimal": [
+        {
+          "sourceNumber": 1,
+          "question": "Choose the correct statement about the electric field.                                   [    ]\n1) It is produced by positive charges only.\n2) It can exist only in the matrial medium.\n3) An electron moves in the dirtection of electric field.\n4) It is conservative field.",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 50
+        },
+        {
+          "sourceNumber": 2,
+          "question": "Identify the incoorect statement about the electric field.                               [    ]\n1) Charge is the source of the electric field.\n2) Electric filed exerts force on every charge.\n3) Energy is stored in electric field.\n4) Electric field is the zone of influence of a charge.",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 50
+        },
+        {
+          "sourceNumber": 3,
+          "question": "The electric field at a point in a space is equal in magnitude to:                       [    ]\n1) the potential difference there\n2) the electric charge there\n3) the force, a unit charge would experience there\n4) the force, an electron would experience there",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 50
+        },
+        {
+          "sourceNumber": 4,
+          "question": "you are travelling in a car during a thunder storm, in order to protect yourself from\nlightining would you prefer to:                                                   [   ]\n1) remain in the car                         2) take shelter under a tree\n3) get out and be flat on the ground         4) touch the nearest electrical pole.",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 50
+        },
+        {
+          "sourceNumber": 5,
+          "question": "How does a free electron at rest move in an electric field ?                         [   ]\n1) It will move along the direction of electric field\n2) It will move in a direction opposite to the direction of electric field\n3) It will move in a perpendicular direction to the direction of electric field\n4) both (1) and (3)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 6,
+          "question": "The electric force experienced by a charge of 1.0 × 10–6C is 1.5 × 10–3 N. Find the magnitude\nof the electric field at the position of the charge.                                 [   ]\n1) 0.8 × 10 N/C\n2) 2.1 × 10 N/C\n3) 1.5 × 10 N/C\n4) 3.2 × 10 N/C",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 7,
+          "question": "The magnitude of electric field intensity E, such that an electron placed in the field\nwould experience an electrical force equal to its weight is [me = 9×10–31 kg, qe = 1.6 ×\n10–19 C, g = 10 m/s2]                                                                [   ]\n1) 5.6  107 NC 1   2) 5.6  108 NC 1   3) 5.6  1010 NC 1   4) 5.6  1011 NC 1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 8,
+          "question": "The magnitude of the electric field required to just balance in air a             2  104 kg liquid drop\ncarrying a charge of 9.8102 C is                                                              [   ]\n1) 10 4 NC 1       2) 2  104 NC 1      3) 4  104 NC 1   4) 5  10 4 NC 1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 9,
+          "question": "A point charge q produces an electric field of magnitude 2NC–1 at a point distantce 0.25 m\nfrom it. The value of charge is                                                    [   ]\n4) 1.39  10 C\n1) 1.39  10 11 C 2) 1.39  1011 C      3) 13.9  10 11 C",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 10,
+          "question": "Four charges +q,+q,–q,–q are placed respectively at the four corners of a square of side\n‘a’. The magnitude of the electric field at the centre of the square is         [   ]\n1 6 2q                1 8 2q                1 2 2q                 1 4 2q\n1)                    2)                    3)                     4)\n4 0 a 2             4 0 a 2             4 0 a 2              4 0 a 2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 11,
+          "question": "Two similar charges of the same magnitude ‘q’ are placed at a distance ‘d’ apart. The\nintensity of the electric field at a point mid - way between the charges is  [    ]\n1 q                   1 4q                                         1 2q\n1) 4  r2            2) 4  r2            3) zero                4) 4  r2\n0                     0                                               0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 12,
+          "question": "Three particles, each having a charge ‘Q’ are placed on the three vertices A,B,C of a\nsquare of side ‘a’. The electric field at the centre of the square is        [   ]\nA                   D\n4    Q                                     1     Q\n1) 4  . a 2 along OB                      2) 4  . a 2 along OD       Q\n0                                           0\n1     Q                                     1     2Q\n3) 4  . a 2 along OB                      4) 4  . a 2 along OD        B                  C\n0                                             0                   Q          a       Q",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 13,
+          "question": "Two point charges +4q and +q are placed 30cm apart. At what point on the line joining\nthere is the electric field is zero ?                                        [   ]\n1) 15 cm from charge 4q               2) 20 cm from charge 4q\n3) 7.5 cm from charge q               4) 5 cm from charge q",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 14,
+          "question": "Charge 2Q and -Q are placed as shown in figure. The point at which electric field\nintensity is zero will be:                                         [    ]\n1) some where between -Q and -2Q\n2) some where on the left of -Q\n3) some where on the right of 2Q\n4) some where on the right bisector of line joining -Q and 2Q",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 51
+        },
+        {
+          "sourceNumber": 15,
+          "question": "Study following statements about the electric lines of force.                                  [   ]\n(A) Two field lines cannot intersect each other.\n(B) The path traced by a positive charge is a field line.\n(C) Field lines are continuous in a medium\n(D) A field line cannot intersect itself.\nChoose the correct statements\n1) Only (A), (B) and (C)                         2) Only (A), (C) and (D)\n3) Only (B) and (D)                              4) Only (B) and (C)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 52
+        },
+        {
+          "sourceNumber": 16,
+          "question": "Electric lines of force around a negative point charge are                                     [   ]\n1) circular, anticlockwise                       2) circular, clockwise\n3) radial, inward                                4) radial, outwards",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 52
+        },
+        {
+          "sourceNumber": 17,
+          "question": "Figure shown the electric lines of force emerging from a charged body. If the electric\nfield at A and B are EA and EB respectively and if the displacement between A and B is\nr, then                                                                             [ ]\n1) EA > EB            2) EA < EB\n3) EA = EB            4) nothing can be said",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 52
+        },
+        {
+          "sourceNumber": 18,
+          "question": "The field pattern which is not possible is given by                                            [   ]\n1)                    2)                         3)                    4)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 52
+        },
+        {
+          "sourceNumber": 19,
+          "question": "The field pattern(s) which is/are not possible:                                                [   ]\n1)                    2)                         3)                    4)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 52
+        },
+        {
+          "sourceNumber": 20,
+          "question": "A point positive charge is broght near an isolated conducting sphere. The electric field\nlines are best represented by                                                                [   ]\n1)                                               2)\n3)                                               4)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 52
+        },
+        {
+          "sourceNumber": 21,
+          "question": "The given figure gives electric lines of force due to two charges q1 and q2. What are the\nsignes of the two charges?                                                                   [   ]\n1) Both are negative                               2) Both are positive\n3) q1 is positive but q2 is negativ                4) q1 is negative but q2 is positive",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 53
+        },
+        {
+          "sourceNumber": 22,
+          "question": "Consider the four fiel patterns shown. Assuming there are no charges in the regions\nshown, which of the patterns represents a possible electrostatic field?                      [   ]\n1)                     2)                3)                       4)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 53
+        },
+        {
+          "sourceNumber": 23,
+          "question": "Which of the following figures correctly shows the top view sketch of the electric field\nlines for a uniformly charged hollow cylinder as shown in figure?                            [   ]\n1)                     2)\n3)                     4)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 53
+        },
+        {
+          "sourceNumber": 24,
+          "question": "Figure shown the electric field lines around three point charges A, B and C. Which of the\nfollowing charges are positive?\n1) Only A              2) Only C\n3) Both A and C        4) Both B and C",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 53
+        },
+        {
+          "sourceNumber": 25,
+          "question": "The figure shown some of the electric field lines corresponding to an electric field. The\nfigure suggests.\n1) EA > EB > EC\n2) EA = EB = EC\n3) EA = EC > EB\n4) EA = EC < EB",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 53
+        },
+        {
+          "sourceNumber": 26,
+          "question": "In a region with uniform electric field, the number of lines of force per unit area is E. If a\nspherical metallic conductor is placed in this region, the number of lines of force per unit\narea inside the conductor will be                                                                       [   ]\n(1) E                      (2) more than E             (3) less than E            (4) zero.",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 53
+        },
+        {
+          "sourceNumber": 27,
+          "question": "A charge particle is free to move in an electric field. It will travel                                    [   ]\n(1) Always along a line of force\n(2) Along a line of force, if its initial velocity is zero\n(3) Along a line of force, if it has some initial velocity in the direction of an acute angle\nwith the line of force\n(4) None of the above",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 28,
+          "question": "In the electric field shown in figure, the electric field lines on the left have twice the\nseparation as that between those on the right. If the magnitude of the field at point A is\n40 NC-1, calculate the force experienced by a proton placed at point A. Also find the\nmagnitude of electric field at the point B.                                                             [   ]\n(1) 64 x 10   -18\nN, 15 NC\n-1\n(2) 6.4 x 10-18\nN, 20 NC-1\n(3) 64 x 10   -18\nN, 25 NC   -1\n(4) 6.4 x 10    -18\nN, 30 NC-1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 29,
+          "question": "An electron and a proton are at a distance of 1 Å. The moment of this dipole will be (Cm)\n(1) 16 x 1019              (2) 1.6 × 10-29             (3) 3.2 × 1019             (4) 3.2 × 1029        [   ]",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 30,
+          "question": "Study following statements about dipole moment.\n(A) The dimensions of dipole moment is [L TA].\n(B) The unit of dipole moment is Cm.\n(C) Dipole moment is a vector quantity and directed from negative to positive charge.\n(D) Dipole moment is a scalar quantity and has magnitude equal to the potential energy\nof the system of charges.\nChoose the correct statements.                                                                          [   ]\n(1) Only (A), (B) and (C)                              (2) Only (A), (B) and (D)\n(3) Only (B) and (C)                                   (4) Only (A) and (C)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 31,
+          "question": "Electric charges q,q,-2q are placed at the corners of an equilateral triangle ABC of side l.\nThe magnitude of electric dipole moment of the system is                                                [   ]\n(1) q                      (2) 2ql                     (3)         3ql            (4) 4ql",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 32,
+          "question": "An electric dipole is kept in non-uniform electric field. It experiences                                  [   ]\n(1) A force and a torque                               (2) A force but not a torque\n(3) A torque but not a force                           (4) Neither a force nor a torque",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 33,
+          "question": "What is the angle between the electric dipole moment and the electric field strength due\nto it on the equatorial line                                                                            [   ]\n(1) 0°                     (2) 90°                     (3) 180°                   (4) 120°",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 34,
+          "question": "An electric dipole in a uniform electric field experiences (When it is placed at an angle θ\nwith the field)                                                                                         [   ]\n(1) Force and torque both                              (2) Force but no torque\n(3) Torque but no force                                (4) No force and no torque",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 35,
+          "question": "An electric dipole is placed in an electric field generated by a point charge                             [   ]\n(1) The net electric force on the dipole must be zero\n(2) The net electric force on the dipole may be zero\n(3) The torque on the dipole due to the field must be zero\n(4) The torque on the dipole due to the field may be zero",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 54
+        },
+        {
+          "sourceNumber": 36,
+          "question": "The distance between the two charges +q and -q of a dipole is r. On the axial line at a\ndistance d from the centre of dipole, the intensity is proportional to                              [   ]\nq               qr                     q                  qr\n1)                      2)               3) 3               4) 3\nd2              d 2\nd                   d\n                                     ",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 37,
+          "question": "When an electric dipole P is placed in a uniform electric field E then at what angle\n     \nbetween P and E the value of torque will be maximum                            [   ]\n(1) 90°                 (2) 0°                    (3) 180°                    (4) 45°",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 38,
+          "question": "The electric field at a point on equatorial line of a dipole and direction of the dipole\nmoment                                                                                              [   ]\n(1) Will be parallel                              (2) Will be in opposite direction\n(3) Will be perpendicular                         (4) Are not related",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 39,
+          "question": "If Ea, be the electric field strength of a short dipole at a point on its axial line and Ee, that\non the equatorial line at the same distance, then                                                   [   ]\n(1) Ee = 2Ea            (2) Ea = 2Ee              (3) Ea = Ee                 (4) None of the above",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 40,
+          "question": "The ratio of electric fields on the axis and at equator of an electric dipole will be                 [   ]\n(1) 1:1                 (2) 2:1                   (3) 4:1                     (4) 1:2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 41,
+          "question": "If the magnitude of intensity of electric field at a distance x on axial line and at a\ndistance y on equatorial line on a given dipole are equal, then x : y is                            [   ]\n(1) 1 : 1          (2) 1 : 2               (3) 1 : 2        (4) 3 2 : 1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 42,
+          "question": "A given charge is situated at a certain distance from an electric dipole in the end-on\nposition experiences a force F. If the distance of the charge is doubled, the force acting on\nthe charge will be                                                                                  [   ]\n(1) 2F                  (2) F/2                   (3) F/4                     (4) F/8",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 43,
+          "question": "An electric dipole consisting of two opposite charges of 2 x 10 C each separated by a distance\n-6\nof 3 cm is placed in an electric field of 2 x 105 N/C. The maximum torque on the dipole will be\n(1) 12 × 10-1 Nm        (2) 12 × 10-3 Nm          (3) 24 × 10-1 Nm            (4) 24 × 10-3 Nm      [   ]",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 44,
+          "question": "For a dipole q =2 × 10 C and d = 0.01m. Calculate the maximum torque for this\n-6\ndipole if E = 5 ×10 5 N/C                                                                           [   ]\n1) 1 x 10 Nm  -3   -1\n2) 10 x 10 Nm\n-3   -1\n3) 10 x 10 Nm -3\n4) 1 x 10 Nm\n-2   2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 45,
+          "question": "The electric field due to an electric dipole at a distance r from its centre in axial position\nis E. If the dipole is rotated through an angle of 90° about its perpendicular axis, the\nelectric field at the same point will be                                                            [   ]\n(1) E                   (2) E/4                   (3) E/2                     (4) 2E",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 46,
+          "question": "A neutral water molecule (H 2O) in its vapour state has an electric dipole moment of\nmagnitude 6.4 x 10-30 C-m. How far apart are the molecules centres of positive and\nnegative charge                                                                                     [   ]\n(1) 4 nm                (2) 4 A                   (3) 4 μ m                   (4) 4 pm",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 55
+        },
+        {
+          "sourceNumber": 47,
+          "question": "An electric dipole consists of two equal and opposite charges placed 2 cm apart. When the\ndipole is placed in a uniform electric field of strength 105 NC-1, it experiences a maximum\ntorque of 0.2 x 10-3 Nm. Find the magnitude of each charge.                                                     [       ]\n(1) 20 µC               (2) 0.1 µe                       (3) 15 µC                   (4) 10 µC",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 56
+        },
+        {
+          "sourceNumber": 48,
+          "question": "Two electric dipoles of moment P and 64 P are placed in opposite direction on a line at a\ndistance of 25 cm. The electric field will be zero at point between the dipoles whose\ndistance from the dipole of moment P is                                                                         [       ]\n1) 5 cm                 2) 25/9 cm                       3) 10 cm                    4) 4/13 cm",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 56
+        },
+        {
+          "sourceNumber": 1,
+          "question": "The distance between two fixed positive charges ‘4e’ and ‘e’ is ‘L’. A third charge ‘q’ is\nplaced at a distance x, on the line joining the two, to remain in equilibrium, from the first\ncharge, in between the charges. Then the value of x is                              [   ]\n4e    x\nq            e\nL\nL                      2L                                   3L                            3L\n1)                     2)                                 3)                          4)\n3                       3                                    2                             4",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 56
+        },
+        {
+          "sourceNumber": 2,
+          "question": "Two spheres A and B are charged with the charges of +10 and +20 coulomb respectively\nand seperated bt a distance of 80cm. The electric field at a point on the line joining the\ncentres of the two spheres will be zero at a distance from the sphere A :          [  ]\n1) 20 cm               2) 33 cm                    3) 45 cm               4) 60 cm",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 56
+        },
+        {
+          "sourceNumber": 3,
+          "question": "An infinite number of electric charges each equal to 5nC (magnitude) are placed along X\n- axis at x =1cm, x = 2cm, x = 4 cm, x = 8cm and so on. In the set up if the consectuive\n( 4  9  10 )\ncharges have opposite sign, then the electric field in N/C at x =0 is\n1) 12  104            2) 24  104                 3) 36  104                4) 48  104                   [       ]",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 56
+        },
+        {
+          "sourceNumber": 4,
+          "question": "Three charges each of 4  C , are placed at the corners B,C, D of a square ABCD of side\n1m. The elctric field at the center O of the square is                          [    ]\n1) 7.2  104 N towards A                          2) 7.2  104 N towards C\n3) 3.6  10 4 N towards A                          4) 3.6  10 4 N towards C",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 56
+        },
+        {
+          "sourceNumber": 5,
+          "question": "Two point charges q1  4  C and q2  4 C are placed 20 cm apart. The electric field due to\nthem will be zero on the line joining them at distance of                            [   ]\n80                                 80\n1) 8 cm from q1        2) 8 cm from q2             3)      cm cm from q1              4)      cm cm from q2\n13                                 13",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 56
+        },
+        {
+          "sourceNumber": 6,
+          "question": "Five point charges (+q each) are placed at the five vertices aregular hexagon of\nside 2a. What is the magnitude of the net electric field at the centre of the\nhexagon?                                                                 [ ]\n1       q               q                           2q                       5q\n1) 4 a 2             2) 16 a 2                 3) 4  a 2                4) 16 a 2\n0                       0                       0                             0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 56
+        },
+        {
+          "sourceNumber": 7,
+          "question": "Three point charges, each +q, are placed at the corners of an equilateral triangle\nof side r. The elctric field at the circumcetre will be ( k  4 )                          [       ]\n3kq                  kq                    3kq\n1)                   2)                    3)                     4) Zero\nr2                  r2                    2r 2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 57
+        },
+        {
+          "sourceNumber": 8,
+          "question": "Two point charges (+Q) and (-2Q) are fixed on the x -axis at positions a and 2a\nfrom orgin repectively. At what positions on the axis, the resultant electric field is\nzero.                                                                        [ ]\n3a\n1) Only x  2a        2) Only x   2a      3) both x   2a       4) Only x ",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 57
+        },
+        {
+          "sourceNumber": 9,
+          "question": "Two point charges Q and -3Q are placed at some distance apart. If the electric\nfield at the location of Q is E then at the locality of -3Q, it is    [ ]\nE                                              E\n1) -E                 2)                    3) -3E                 4) \n3                                              3",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 57
+        },
+        {
+          "sourceNumber": 10,
+          "question": "112. Three charges of (+2q), (q) and (-9) are placed at the corners A, B and C of an\nequilateral triangle of side a as shown in the adjoining figure. Then the dipole moment of\nthis combination is                                                                          [       ]\n1) qa                 2) zero\n3) qa 3               4)        qa",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 57
+        },
+        {
+          "sourceNumber": 11,
+          "question": "The electric intensity due to a dipole of length 10 cm and having a charge of 500 μ C, at a\npoint on the axis at a distance 20 cm from one of the charges as shown in the figure in air, is\n[       ]\n(1) 6.25 × 107 N/C     (2) 9.28 × 107 N/C          (3) 13.1 × 1111 N/C (4) 20.5 × 107 N/C\n          p",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 57
+        },
+        {
+          "sourceNumber": 12,
+          "question": "Two short dipoles p k and       k are located at (0,0,0) and (1 m, 0, 2 m) respectively. The\nresultant electric field due to the two dipoles at the point (1m, 0, 0) is             [   ]\n9p                   7 p                        7p \n1)          k          2)          k               3)          k          4) none of these\n32   0               32   0                    32   0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 57
+        },
+        {
+          "sourceNumber": 13,
+          "question": "An electtric dipole is situated in an electric field of uniform intensity E whose dipole\nmoment is P and moment of inertia is I. If the dipole is displaced slightly from the equilib-\nrium position, then the angular frequency of its oxcillations is\n1/ 2                     3/ 2                   1/ 2                  1/ 2\n pE                   pE                        I                    p\n1)                   2)                        3)                   4)     \n I                    I                         pE                   IE ",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-3",
+          "marks": 1,
+          "sourcePage": 57
+        }
+      ]
+    },
+    {
+      "name": "WS-4",
+      "core": [
+        {
+          "sourceNumber": 1,
+          "question": "Study the statements related to flux.\n1) Flux is defined for the electric and magnetic fields.\n2) Flux is defined for any vector field\n3) Flux is a vector quantity.\n4) Flux is defined for gravitational field also.\nChoose the correct statements.                                                                  [   ]\n(1) Only (A), (B) and (D)                          (2) Only (A), (C) and (D)\n(3) Only (B) and (C)                               (4) Only (A) and (C)",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 69
+        },
+        {
+          "sourceNumber": 2,
+          "question": "The SI unit of electric flux is\n(1) NC-1 m2             (2) NCm2                   (3) NC-2 m2           (4) NC-1 m-2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 69
+        },
+        {
+          "sourceNumber": 3,
+          "question": "The dimensional formula of electric flux is                                                     [   ]\n(1) [M1L1T-2]           (2) [M1L3T-3A-1]           (3) [M2L2T -2A-2]     (4) [M1L-3T3A1]",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 69
+        },
+        {
+          "sourceNumber": 4,
+          "question": "Choose the correct statement about the Gauss Law.                                               [   ]\n \n(1) The quantity \n E .ds is affected by the charges lying outside the gaussian surface.\n \n(2) The quantity \n E .ds depends on the charge distribution inside the gaussian surface.\n \n3) The quantity  E .ds is independent of the charge distribution inside the gaussian\nsurface.\n \n(4) The quantity    E .ds depends on the shape of the gaussian surface.",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 69
+        },
+        {
+          "sourceNumber": 5,
+          "question": "Shown below is a distribution of charges. The flux of electric field due to these charges\nthrough the surface S is                                                                        [   ]\n1) 3q /  0          2) 2q /  0              3) q /  0          4) zero",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 69
+        },
+        {
+          "sourceNumber": 6,
+          "question": "Consider the charge configuration and spherical Gaussian surface as shown in the fig-\nure. When calculating the flux of the electric field over the spherical surface the electric\nfield will be due to                                                                  [    ]\n1) q2                                              2) Only the positive charges\n3) All the charges                                 4) +q1, and -q1",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 69
+        },
+        {
+          "sourceNumber": 7,
+          "question": "The electric flux through the surface                                                                     [   ]\n(1) in figure (iv) is the largest\n(2) in figure (iii) is the least\n(3) in figure (ii) is same as in figure (iii) but\nis smaller than figure (iv)\n(4) is the same for all the figures.",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 70
+        },
+        {
+          "sourceNumber": 8,
+          "question": "Electric charge is uniformly distributed along a long straight wire of radius 1 mm. The\ncharge per centimetre length of the wire is Q coulomb. Another cylindrical surface of\nradius 50 cm and length 1 m symmetrically encloses the wire as shown in Fig. The total\nelectric flux passing through the cylindrical surface is                                                  [   ]\nQ                       100Q\n1)                      2)\n0                          0\n10Q                     100Q\n3)                      4)\n 0                     0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 70
+        },
+        {
+          "sourceNumber": 9,
+          "question": "A cylinder of radius r and length l is placed in an uniform electric field in such a way that\nthe axis of the cylinder is parallel to the field. The flux of the field through the cylindrical\nsurface is                                                                                                [   ]\n2rl                     l                           2 rl\n1)                      2)                          3)                            4) zero\n0                      0                           0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 70
+        },
+        {
+          "sourceNumber": 10,
+          "question": "What is the electric flux linked with closed surface S1?                                                    [   ]\n(1) 1011 N-m2/C         (2) 1012 N-m2/C             (3) 1010 N-m2/C               (4) 8.86 x 1013 N-m2/C",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 70
+        },
+        {
+          "sourceNumber": 11,
+          "question": "If the electric flux entering and leaving an enclosed surface respectively is 1 and 2 the\nelectric charge inside the surface will be                                            [   ]\n1) 1  2   0       2) 1  2   0           3) 1  2  /  0           4) 1  2  /  0\n",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 70
+        },
+        {
+          "sourceNumber": 12,
+          "question": "A cube of side / is placed in a uniform field E, where E  E i . The net electric flux through\nthe cube is                                                                               [  ]\n(1) Zero               (2) l2E                  (3) 4l2 E           (4) 6l2 E",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 70
+        },
+        {
+          "sourceNumber": 13,
+          "question": "A charge q is placed at the centre of a cube. Then the flux passing through one face of\ncube will be                                                                                              [   ]\nq                        q                           q                             q\n1)                      2)                          3)                            4)\n0                      2 0                        4 0                          6 0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 70
+        },
+        {
+          "sourceNumber": 14,
+          "question": "Eight dipoles of charges of magnitude e are placed inside a cube. The total electric flux\ncoming out of the cube will be                                                                  [   ]\n8e                       16e                      e                    2q\n1)                       2)                       3)                   4)\n0                       0                       0                   0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 71
+        },
+        {
+          "sourceNumber": 15,
+          "question": "A charge q is placed at the centre of the open end of cylindrical vessel. The flux of the\nelectric field through the surface of the vessel is                                             [   ]\nq                         q                   2q\n(1) Zero                 2)                       3)                   4)\n0                       2 0                 0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 71
+        },
+        {
+          "sourceNumber": 16,
+          "question": "It is not convenient to use a spherical Gaussian surface to find the electric field due to an\nelectric dipole using Gauss's theorem because                                                   [   ]\n(1) Gauss's law fails in this case\n(2) This problem does not have spherical symmetry\n(3) Coulomb's law is more fundamental than Gauss's law\n(4) Spherical Gaussian surface will alter the dipole moment",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 71
+        },
+        {
+          "sourceNumber": 17,
+          "question": "Electric field intensity at a point in between two parallel sheets with like charges of same\nsurface charge densities  is                                                                   [   ]\n                                                                    2\n1)                       2)                       3) zero              4)\n2 0                     0                                            0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 71
+        },
+        {
+          "sourceNumber": 18,
+          "question": "A sphere of radius R has a uniform distribution of electric charge in its volume. At a\ndistance x from its centre, for x < R, the electric field is directly proportional to           [   ]\n1                        1\n1)                       2)                       3) x                 4) x2\nx2                       x",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 71
+        },
+        {
+          "sourceNumber": 19,
+          "question": "Electric field at a point varies as r0 for                                                        [   ]\n(1) An electric dipole                            (2) A point charge\n(3) A plane infinite sheet of charge              (4) A line charge of infinite length",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 71
+        },
+        {
+          "sourceNumber": 20,
+          "question": "A point charge q is placed at a distance a/2 directly above the centre of a square of side a.\nThe electric flux through the square is                                                         [   ]\nq                         q                        q                    q\n1)                       2)                       3)                   4)\n0                        0                     4 0                 6 0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 71
+        },
+        {
+          "sourceNumber": 21,
+          "question": "Three infinitely long charge sheets are placed as shown in figure. The electric field at\npoint P is                                                                                      [   ]\n2                            2                4                  4 \n1)    k                  2)         k            3)    k              4)    k\n0                            0                  0                   0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 71
+        }
+      ],
+      "optimal": [
+        {
+          "sourceNumber": 1,
+          "question": "Th e elect r ic flu x for Gau ssian su r face A that enclose the charged particles in free space\nis (given q1 = -14 nC, q2 = -78.85 nC, q3 = -56 nC) (  = 8.85 x 10-12C2/Nm2)                       [   ]\n(1) 103 Nm2 C-1                                     (2) 103 CN-1 m-2\n(3) 6.32 x 103 Nm2 C-1                     (4) 6.32 x 103 CN-1 m-2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 72
+        },
+        {
+          "sourceNumber": 2,
+          "question": "A charge q is enclosed by an imaginary Gaussian surface.                                            [   ]\ndr\nIf radius of surface is increasing at a rate        K , then\ndt\nd\n(1) flux linked with surface is increasing at a rate           K\ndt\nd\n(2) flux linked with surface is decreasing at a rate             K\ndt\nd 1\n(3) flux linked with surface is decreasing at a rate           \ndt K\nq\n(4) flux linked with surface is\n0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 72
+        },
+        {
+          "sourceNumber": 3,
+          "question": "The inward and outward electric flux for a closed surface in units of N-m2/C are respectively\n8 x 103 and 4 x 103. Then the total charge inside the surface is [where  0 = permittivity\nconstant                                                                                            [   ]\n 4 10 \n1) 4 x 103 C          2) -4 x 103 C                 3)                C       4) -4 x 103  0 C\n0",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 72
+        },
+        {
+          "sourceNumber": 4,
+          "question": "A square surface of side L meters is in the plane of the paper. A uniform electric field E (in\nV/m), also in the plane of the paper, is limited only to the lower half of the square\nsurface, as shown in figure. The electric flux in SI units associated with the surface is\ngiven as :\n[   ]\n(1) zero              (2) EL2                      (3) EL2 / 2 0        (4) EL2/2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 72
+        },
+        {
+          "sourceNumber": 5,
+          "question": "In Figure (a) given, in a cubical surface of side L/2, a uniformly charged rod of length L\nmoves towards left at a constant speed v. At t = 0, the left end of the rod just touches the\ncentre of the face of the cube as shown. Which of the graphs shown in the figure (b)\nrepresents the electric flux through the cube as the rod passes through it:                     [   ]\n1) I                  2) II                        3) III               4) IV",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 73
+        },
+        {
+          "sourceNumber": 6,
+          "question": "A solid metallic sphere has a charge +3Q. Concentric with this sphere is a conducting\nspherical shell having charge -Q. The radius of the sphere is a and that of the spherical\nshell is b(b> a). What is the electric field at a distance R(a < R < b) from the centre. [          ]\nQ                      3Q                          3Q                   4Q\n1)                    2)                           3)                   4)\n2 0 R               2 0 R                      4 0 R 2            4 0 R 2",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 73
+        },
+        {
+          "sourceNumber": 7,
+          "question": "Two infinitely long parallel conducting plates having surface charge densities +  and -\n respectively, are separated by a small distance. The medium between the plates is\nvacuum. If  0 is the dielectric permittivity of vacuum, then the electric field in the region\nbetween the plates is                                                                           [   ]\n                                            2\n1) 0 volts/meter      2)        volts/meter        3)      volts/meter 4)\n2 0                         0                 0 volts/meter",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 73
+        },
+        {
+          "sourceNumber": 8,
+          "question": "At a point 20 cm from the centre of a uniformly charged dielectric sphere of radius 10 cm,\nthe electric field is 100 V/m. The electric field at 3 cm from the centre of the sphere will\nbe                                                                                              [   ]\n1) 150 V/m            2) 125 V/m                   3) 120 V/m           4) Zero",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 73
+        },
+        {
+          "sourceNumber": 9,
+          "question": "In a region of space the electric field is in the x-direction and proportional to x, i.e.,\n       \nE  E0 x i . Consider an imaginary cubical volume of edge a with its edges parallel to the\naxes of coordinates. The charge inside this volume will be                                      [   ]\n1    3               1\n2)  0 E0 a                  3)  E0 a                    0 E0 a 3\n(1) zero                                                                4)\n0                   6",
+          "options": {},
+          "answer": "",
+          "explanation": "",
+          "paper": "WS-4",
+          "marks": 1,
+          "sourcePage": 73
         }
       ]
     }
