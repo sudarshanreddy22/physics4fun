@@ -15,5 +15,13 @@ window.iitExamplesData = [
     options: {},
     answer: "Sol : 1) 2000 electrons are transferred from A to B\nCharge On A: QA = +ne; QA = +2000 e\nCharge on B: QB = -ne; QB = -2000 e\n2) 1500 electrons are transferred from B to A\nQA1 = -1500e; QB1 = +1500e\nNet charge on A = QA = +2000 e-1500e = + 500e = 500 × 1.602 × 10⁻¹⁹ C = 8.01 × 10⁻¹⁷ C\nNet Charge on B =-2000 e + 1500e = -500e = -500 × 1.602 × 10⁻¹⁹ C = -8.01 × 10⁻¹⁷ C\nCharge difference between A and B QAB = QA - QB\nQAB = 1.602 × 10⁻¹⁷ C",
     sourcePage: 4
+  },
+  {
+    no: 3,
+    question: "If you place an electric dipole ( a pair of equal and opposite charges, +q and -q ) inside a closed sphere, the ney charged enclosed is:",
+    options: {},
+    answer: "q(enclosed) = +q + (-q) = 0. Therefore, the net flux through the sphere is zero . All the electric field lines that originate from the positive charge will terminate on the negative charge right inside the surface, meaning no net lines cross the outer boundary.",
+    sourcePage: 61,
+    sourceType: "Illustrative example"
   }
-];
+];\n
