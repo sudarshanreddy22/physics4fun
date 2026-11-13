@@ -8998,6 +8998,7 @@ onAuthStateChanged(auth,async user=>{
   if(!snapshot.exists()){home('profile-missing');return}
   const profile=snapshot.data();
   if(profile.status==='disabled'||(profile.role==='teacher'&&profile.status!=='active')){home('access-pending');return}
+  if(profile.role==='student'&&(!['CBSE','ICSE','State Board'].includes(profile.board)||!Array.from({length:12},(_,i)=>String(i+1)).includes(String(profile.grade)))){home('profile-missing');return}
   if(profile.status!=='active'||!['student','teacher'].includes(profile.role)){home('access-denied');return}
   username.textContent=user.displayName||profile.name||user.email?.split('@')[0]||'My account';
   userButton.hidden=false;link.hidden=true;
