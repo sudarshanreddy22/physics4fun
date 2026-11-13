@@ -369,6 +369,7 @@ function mode(register){registerMode=register;$('p4fAuthTitle').textContent=regi
 function open(register=false){mode(register);$('p4fAuthOverlay').hidden=false;$('p4fEmail').focus()}
 function close(){$('p4fAuthOverlay').hidden=true;clearError()}
 $('p4fHomeSignIn').addEventListener('click',()=>open(false));
+if(new URLSearchParams(location.search).get('mode')==='signin'){open(false);const notice=new URLSearchParams(location.search).get('notice');if(notice==='access-pending')error('Your teacher account is awaiting approval or has been disabled.');else if(notice==='profile-missing'||notice==='access-error')error('Your account profile could not be verified. Please contact the administrator.');else if(notice==='signin-required')$('p4fAuthIntro').textContent='Please sign in to access Physics4Fun topics.';}
 $('p4fHomeRegister').addEventListener('click',()=>open(true));
 $('p4fHomeGoogle').addEventListener('click',()=>{open(false);googleLogin()});
 $('p4fModalGoogle').addEventListener('click',()=>googleLogin());
