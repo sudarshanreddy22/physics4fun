@@ -1,14 +1,8 @@
-// Grade 10 IIT Foundation — Electric Charges and Fields, Worksheet-1.
-// Source: Electric Charges and Fields.pdf, printed pages 9–15.
-// Same window.iitOthersData / worksheets / core / optimal / achiever format as the provided Grade 9 others.js.
-// The requested pages contain 27 CORE and 29 OPTIMAL questions; there is no ACHIEVER section on these pages.
-// Original PDF figures for Optimal Q24, Q25 and Q26 are embedded as data URLs (no image folder required).
-// Editorial notes about defective source wording are retained in sourceNote:
-//   CORE Q19 & Q27: scope/sign ambiguity clarified.
-//   OPTIMAL Q7: source repeats “9 electrons in excess”; option D corrected to “in short”.
-//   OPTIMAL Q17: ambiguous statement A preserved; answer uses the three unambiguous statements.
-//   OPTIMAL Q28: charge exponent in source is inconsistent with its answer choices; -7 restored.
-// Answers and explanations are derived solutions; the selected pages contain no printed answer key.
+// Grade 10 IIT Foundation — Electric Charges and Fields.
+// Worksheet labels WS-1, WS-2, ... are assigned in source appearance order;
+// the PDF itself does not number worksheets. Only levels with actual questions
+// are included. Original source question numbers are preserved.
+// Source: Electric Charges and Fields.pdf. No empty level tabs.
 window.iitOthersData = {
   "worksheets": [
     {
@@ -867,8 +861,7 @@ window.iitOthersData = {
           "sourcePage": 15,
           "sourceQuestion": 29
         }
-      ],
-      "achiever": []
+      ]
     }
   ]
 };
