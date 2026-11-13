@@ -1919,7 +1919,7 @@ window.iitOthersData = {
     },
     {
       "name": "WS-3",
-      "core": [
+      "core": [{"question": "Two charges, one +5 μC and another −5 μC, are placed 1 mm apart. Calculate the dipole moment.", "options": {}, "answer": "5 × 10⁻⁹ C m", "explanation": "", "paper": "WS-3", "marks": 1, "sourcePage": 49, "sourceNumber": 1}, {"question": "Two point charges, each of 5 μC but opposite in sign, are placed 4 cm apart. Calculate the electric field intensity at a point 4 cm from the midpoint on the axial line of the dipole.", "options": {}, "answer": "10⁸ NC⁻¹", "explanation": "", "paper": "WS-3", "marks": 1, "sourcePage": 49, "sourceNumber": 2},
         {
           "sourceNumber": 3,
           "question": "Calculate the electric field due to an electric field due to an electric diopole length\n10 cm having charges of 1μ C at an equatorial point 12 cm from the centre of the dipole.\nAns: 4.096 × 105 NC −1",
@@ -2851,7 +2851,7 @@ window.iitOthersData = {
           "marks": 1,
           "sourcePage": 57,
           "sourceQuestion": 13
-        }
+        },{"question": "An electric dipole is placed perpendicular to an infinite line of charge at some distance, as shown in the figure. Identify the correct statement:", "options": {"A": "The dipole is attracted towards the line charge", "B": "The dipole is repelled away from the line charge", "C": "The dipole does not experience a force", "D": "The dipole experiences a force as well as a torque"}, "answer": "", "explanation": "", "paper": "WS-3", "marks": 1, "sourcePage": 58, "sourceQuestion": 14}
       ]
     },
     {
