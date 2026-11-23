@@ -5351,11 +5351,12 @@ async function loadPPT() {
   document.querySelectorAll('[data-ppt]').forEach(s=>s.remove());
   await new Promise(res => {
     const s = document.createElement('script');
-    s.dataset.ppt = '1'; s.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/ppts.js`;
+    s.dataset.ppt = '1'; const pptSlug = board === 'cbse' && gradeNum === '6' && CUR.slug === 'ch3' ? 'ch7' : CUR.slug;
+    s.src = `boards/${board}/grade${gradeNum}/${pptSlug}/ppts.js`;
     s.onload = () => res(true); s.onerror = () => { console.warn('Unable to load chapter resource:', s.src); s.remove(); res(false); }; document.head.appendChild(s);
   });
   if (window.pptsData && window.pptsData.length) {
-    wrap.innerHTML = `<div class="ppt-grid">${window.pptsData.map(p=>`<div class="ppt-card ${p.source || 'onedrive'}" onclick="window.open('${p.url}','_blank')"><div class="ppt-thumb">${p.icon || '📊'}<div class="ppt-source-badge ${p.source || 'onedrive'}">${p.source === 'canva' ? '🎨 Canva' : '☁️ OneDrive'}</div></div><div class="ppt-name">${p.title}</div><div class="ppt-slides">${p.slides || '?'} slides</div></div>`).join('')}</div>`;
+    wrap.innerHTML = `<div class="ppt-grid">${window.pptsData.map(p=>`<div class="ppt-card ${p.source || 'onedrive'}" onclick="window.open('${p.url}','_blank')"><div class="ppt-thumb">${p.icon || '📊'}<div class="ppt-source-badge ${p.source || 'onedrive'}">${p.source === 'canva' ? '🎨 Canva' : p.source === 'html' ? '🖥️ HTML Slides' : '☁️ OneDrive'}</div></div><div class="ppt-name">${p.title}</div><div class="ppt-slides">${p.slides || '?'} slides</div></div>`).join('')}</div>`;
   } else {
     renderComingSoon(wrap,'📊','PPTs / Slides','Chapter slide decks are being prepared. Add PPT links in <code>ppts.js</code>');
   }
