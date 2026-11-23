@@ -1,1 +1,1 @@
-window.pptsData = [{title:"Notes",slides:28,icon:"📖",source:"html",url:"https://physics4fun.in/boards/cbse/grade6/ch7/temperature_measurement_notes.html"}];
+window.pptsData = [{title:"Notes",slides:12,icon:"📖",source:"html",url:"https://physics4fun.in/boards/cbse/grade6/ch7/temperature_measurement_notes.html"}];
