@@ -1,0 +1,28 @@
+[
+  {
+    "chapter": 4,
+    "title": "Exploring Magnets",
+    "pdf": "https://ncert.nic.in/textbook/pdf/fecu104.pdf"
+  },
+  {
+    "chapter": 5,
+    "title": "Measurement of Length and Motion",
+    "pdf": "https://ncert.nic.in/textbook/pdf/fecu105.pdf"
+  },
+  {
+    "chapter": 7,
+    "title": "Temperature and its Measurement",
+    "pdf": "https://ncert.nic.in/textbook/pdf/fecu107.pdf",
+    "ppts": "ch7/ppts.js"
+  },
+  {
+    "chapter": 8,
+    "title": "A Journey through States of Water",
+    "pdf": "https://ncert.nic.in/textbook/pdf/fecu108.pdf"
+  },
+  {
+    "chapter": 12,
+    "title": "Beyond Earth",
+    "pdf": "https://ncert.nic.in/textbook/pdf/fecu112.pdf"
+  }
+]
