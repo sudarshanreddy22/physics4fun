@@ -740,6 +740,20 @@ math,.light-block .math-box math,.light-block .pure-math math,.light-block .form
 .slide .light-block .body .media img{max-height:340px}
 .slide .light-block .body .rules-table img{max-height:130px}
 .slide .light-block .body .case-box{padding:10px}
+
+/* Consistent fullscreen reading layout — overrides A4 page-specific typography. */
+.slide .light-block .body{font-size:27px;line-height:1.26;overflow:hidden!important;display:block!important}
+.slide .light-block .body p,.slide .light-block .body li{font-size:inherit!important;line-height:inherit!important}
+.slide .light-block .body .callout,.slide .light-block .body .glossary,.slide .light-block .body .prop-desc,.slide .light-block .body .term,.slide .light-block .body .case-info{font-size:inherit!important;line-height:1.25!important}
+.slide .light-block .body .figure img,.slide .light-block .body .media img,.slide .light-block .body .case-box img{max-height:340px!important;object-fit:contain}
+.slide .light-block .body .rules-table img{max-height:140px!important}
+.slide .light-block .body .cases-grid,.slide .light-block .body .prop-boxes,.slide .light-block .body .optical-type-grid,.slide .light-block .body .plane-feature-grid{height:auto!important;min-height:0!important;display:flex!important;flex-wrap:wrap!important;gap:12px!important}
+.slide .light-block .body .cases-grid>*{flex:1 1 48%;min-width:0}
+.slide .light-block .body table{font-size:22px!important;table-layout:auto;max-width:100%}
+.slide .light-block .body table td,.slide .light-block .body table th{font-size:inherit!important;line-height:1.18!important;padding:6px 9px!important}
+.slide .light-block .body .head,.slide .light-block .body h3{font-size:25px!important}
+.slide .light-block .body .figcap{font-size:19px!important}
+.slide .light-block .body .figure,.slide .light-block .body .media{margin:8px 0!important}
 </style></head><body><main aria-label="CBSE X Light – Reflection and Refraction presentation" id="stage"><article class="slide active" data-slide="1" id="slide-1"><header class="masthead"><div class="eyebrow">CBSE • CLASS X • PHYSICS</div><h1>Light - Introduction</h1></header><div class="content"><div class="light-block block pink"><div class="head">Light - Introduction</div><div class="body"><ul class="clean"><li>Light is a form of energy, which causes a <b>sensation of vision</b> in our eyes.</li><li>Light can travel in vacuum with a speed of <b>3 × 10<sup>8</sup> m/s</b>.</li><li><b>Properties of Light</b> are given below.</li></ul><div class="prop-boxes properties-balanced"><div class="prop-box property-equal"><div class="prop-label"><b>Rectilinear Propagation</b></div><div class="prop-desc">Light travels in a straight line.</div></div><div class="prop-box property-equal"><div class="prop-label"><b>Reflection</b></div><div class="prop-desc">Light bounces back from a surface.</div></div><div class="prop-box property-equal"><div class="prop-label"><b>Refraction</b></div><div class="prop-desc">Light bends on entering another medium.</div></div><div class="prop-box property-equal"><div class="prop-label"><b>Dispersion</b></div><div class="prop-desc">White light splits into colours.</div></div><div class="prop-box property-equal"><div class="prop-label"><b>Scattering</b></div><div class="prop-desc">Light spreads in many directions.</div></div><div class="prop-box property-equal"><div class="prop-label"><b>Interference</b></div><div class="prop-desc">Light waves overlap and combine.</div></div><div class="prop-box property-equal"><div class="prop-label"><b>Polarization</b></div><div class="prop-desc">Vibrations are restricted to one plane.</div></div><div class="prop-box property-equal"><div class="prop-label"><b>Diffraction</b></div><div class="prop-desc">Light bends around edges/openings.</div></div></div></div></div></div><footer class="footer"><span>CBSE X Physics | Light – Reflection and Refraction</span><span class="page-number">1</span></footer></article>
 <article class="slide" data-slide="2" id="slide-2"><header class="masthead"><div class="eyebrow">CBSE • CLASS X • PHYSICS</div><h1>Reflection of Light</h1></header><div class="content"><div class="light-block block blue"><div class="head">Reflection of Light</div><div class="body"><div class="callout reflection-lead">The <b>bouncing back of light into the same medium</b> is called reflection of light.</div><p class="reflection-note">Due to reflection, objects in our surroundings become visible to us.</p>
 <div class="glossary reflection-terms"><div class="callout definition-stack">
@@ -826,80 +840,86 @@ math,.light-block .math-box math,.light-block .pure-math math,.light-block .form
 <article class="slide" data-slide="52" id="slide-52"><header class="masthead"><div class="eyebrow">CBSE • CLASS X • PHYSICS</div><h1>Summary of Formulae</h1></header><div class="content"><div class="light-block block blue"><div class="head">Summary of Formulae</div><div class="body"><table class="formula-summary-table"><tr><th>Topic</th><th>Formula</th><th>Use / Meaning</th></tr><tr><td>Laws of reflection</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mo>=</mo><mi>r</mi></math></div></td><td>Angle of incidence equals angle of reflection.</td></tr><tr><td>Spherical mirrors</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi><mo>=</mo><mn>2</mn><mi>f</mi></math></div></td><td>Radius of curvature is twice the focal length.</td></tr><tr><td>Spherical mirrors</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo>=</mo><mfrac><mi>R</mi><mn>2</mn></mfrac></math></div></td><td>Focal length is half of radius of curvature.</td></tr><tr><td>Mirror formula</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mi>f</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>u</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><mi>v</mi></mfrac></math></div></td><td>Relationship among object distance, image distance and focal length for mirrors.</td></tr><tr><td>Magnification (mirrors)</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi><mo>=</mo><mfrac><msub><mi>h</mi><mi>i</mi></msub><msub><mi>h</mi><mi>o</mi></msub></mfrac><mo>=</mo><mo>−</mo><mfrac><mi>v</mi><mi>u</mi></mfrac></math></div></td><td>For spherical mirrors.</td></tr><tr><td>Refractive index</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><mfrac><mi>c</mi><mi>v</mi></mfrac></math></div></td><td>n = refractive index, c = speed of light in vacuum, v = speed in medium.</td></tr><tr><td>Snell’s law</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>21</mn></msub><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>i</mi></mrow><mrow><mi>sin</mi><mi>r</mi></mrow></mfrac></math></div></td><td>For refraction from one medium to another.</td></tr><tr><td>Lens formula</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mi>f</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>v</mi></mfrac><mo>−</mo><mfrac><mn>1</mn><mi>u</mi></mfrac></math></div></td><td>Relationship among object distance, image distance and focal length for lenses.</td></tr><tr><td>Magnification (lenses)</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi><mo>=</mo><mfrac><msub><mi>h</mi><mi>i</mi></msub><msub><mi>h</mi><mi>o</mi></msub></mfrac><mo>=</mo><mfrac><mi>v</mi><mi>u</mi></mfrac></math></div></td><td>For spherical lenses.</td></tr><tr><td>Power of lens</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mo>=</mo><mfrac><mn>1</mn><mi>f</mi></mfrac><mspace width=".4em"></mspace><mo>(</mo><mi>f</mi><mtext> in m</mtext><mo>)</mo></math></div></td><td>If f is in metres, power is in dioptre.</td></tr><tr><td>Power of lens</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mo>=</mo><mfrac><mn>100</mn><mi>f</mi></mfrac><mspace width=".4em"></mspace><mo>(</mo><mi>f</mi><mtext> in cm</mtext><mo>)</mo></math></div></td><td>If f is in centimetres.</td></tr><tr><td>Dioptre</td><td class="pure-math-cell"><div class="pure-math"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mi>D</mi><mo>=</mo><mn>1</mn><msup><mi>m</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math></div></td><td>Unit of power of a lens.</td></tr></table></div></div></div><footer class="footer"><span>CBSE X Physics | Light – Reflection and Refraction</span><span class="page-number">52</span></footer></article>
 <article class="slide" data-slide="53" id="slide-53"><header class="masthead"><div class="eyebrow">CBSE • CLASS X • PHYSICS</div><h1>Sign Convention for Solving Numericals</h1></header><div class="content"><div class="light-block block blue"><div class="head">Sign Convention for Solving Numericals</div><div class="body"><div class="sign-simple-wrap"><div class="sign-simple-row"><div class="sign-row-label"><span class="fixed-label">Always fixed</span><span class="fixed-subline">(in any mirror/lens case)</span></div><div class="sign-flow-box"><div class="sfb-title">Object distance</div><div class="sfb-expr">u → <div class="sign-mini-token minus">−</div></div></div><div class="sign-flow-arrow">→</div><div class="sign-flow-box"><div class="sfb-title">Object height</div><div class="sfb-expr">hₒ → <div class="sign-mini-token plus">+</div></div></div></div><div class="sign-simple-row"><div class="sign-row-label">If image type is...</div><div class="sign-flow-box"><div class="sfb-title">Virtual image</div><div class="sfb-expr">m, hᵢ → <div class="sign-mini-token plus">+</div></div><div class="sfb-note">m and hᵢ are positive (+)</div></div><div class="sign-flow-arrow">→</div><div class="sign-flow-box"><div class="sfb-title">Real image</div><div class="sfb-expr">m, hᵢ → <div class="sign-mini-token minus">−</div></div><div class="sfb-note">m and hᵢ are negative (−)</div></div></div><div class="sign-simple-row"><div class="sign-row-label">For device type...</div><div class="sign-flow-box"><div class="sfb-title">Convex mirror / lens</div><div class="sfb-expr">f, R, P → <div class="sign-mini-token plus">+</div></div><div class="sfb-note">f, R and P are positive (+)</div></div><div class="sign-flow-arrow">→</div><div class="sign-flow-box"><div class="sfb-title">Concave mirror / lens</div><div class="sfb-expr">f, R, P → <div class="sign-mini-token minus">−</div></div><div class="sfb-note">f, R and P are negative (−)</div></div></div><div class="sign-simple-row bottom-row"><div class="sign-row-label">For image distance (v)...</div><div class="sign-v-panel mirrors"><div class="svp-head">MIRRORS</div><div class="svp-line">Virtual → <div class="sign-mini-token plus">+</div></div><div class="svp-line">Real → <div class="sign-mini-token minus">−</div></div></div><div class="sign-flow-arrow">→</div><div class="sign-v-panel lenses"><div class="svp-head">LENSES</div><div class="svp-line">Real → <div class="sign-mini-token plus">+</div></div><div class="svp-line">Virtual → <div class="sign-mini-token minus">−</div></div></div></div></div></div></div></div><footer class="footer"><span>CBSE X Physics | Light – Reflection and Refraction</span><span class="page-number">53</span></footer></article></main><nav aria-label="Slide controls" class="toolbar"><button aria-label="Previous slide" id="prev" type="button">◀</button><button aria-label="Next slide" id="next" type="button">▶</button><select aria-label="Go to slide" id="slidePicker"><option value="1">Light - Introduction</option><option value="2">Reflection of Light</option><option value="3">Laws of Reflection</option><option value="4">Real Image vs Virtual Image</option><option value="5">Characteristics of Image formed by a Plane Mirror</option><option value="6">Spherical Mirrors</option><option value="7">Terms related to Spherical Mirrors</option><option value="8">Rules for Drawing Ray Diagrams — Spherical Mirrors</option><option value="9">Spherical Mirror Rules — Quick Reference</option><option value="10">Formation of Images by Concave Mirror — 1</option><option value="11">Formation of Images by Concave Mirror — 2</option><option value="12">Formation of Images by Concave Mirror — 3</option><option value="13">Formation of Images by Concave Mirror — 4</option><option value="14">Formation of Images by Concave Mirror — 5</option><option value="15">Formation of Images by Concave Mirror — 6</option><option value="16">Formation of Images by Convex Mirror — 1</option><option value="17">Formation of Images by Convex Mirror — 2</option><option value="18">Image Formation Summary — Spherical Mirrors</option><option value="19">Daily-life Applications of Mirrors</option><option value="20">Important Points about Mirrors</option><option value="21">Sign Convention for Reflection by Spherical Mirrors</option><option value="22">Mirror Formula</option><option value="23">Magnification (m) — Mirrors</option><option value="24">Refraction of Light — 1</option><option value="25">Refraction of Light — 2</option><option value="26">Refraction of Light — 3</option><option value="27">Refraction of Light — 4</option><option value="28">General Terms related to Refraction</option><option value="29">Optically Rarer &amp;amp; Optically Denser Medium</option><option value="30">Refractive Index — Meaning &amp;amp; Key Points — 1</option><option value="31">Refractive Index — Meaning &amp;amp; Key Points — 2</option><option value="32">Laws of Refraction</option><option value="33">Refraction through Glass Slab</option><option value="34">Applications of Refraction in Daily Life</option><option value="35">Lens</option><option value="36">Terms related to Lenses</option><option value="37">Rules for Images formed by Lenses</option><option value="38">Applications of Convex Lens and Concave Lens</option><option value="39">Formation of Images by Convex Lens — 1</option><option value="40">Formation of Images by Convex Lens — 2</option><option value="41">Formation of Images by Convex Lens — 3</option><option value="42">Formation of Images by Convex Lens — 4</option><option value="43">Formation of Images by Convex Lens — 5</option><option value="44">Formation of Images by Convex Lens — 6</option><option value="45">Formation of Images by Concave Lens — 1</option><option value="46">Formation of Images by Concave Lens — 2</option><option value="47">Image Formation Summary — Lenses — 1</option><option value="48">Image Formation Summary — Lenses — 2</option><option value="49">Lens Formula</option><option value="50">Magnification (m) — Lenses</option><option value="51">Power of a Lens (P)</option><option value="52">Summary of Formulae</option><option value="53">Sign Convention for Solving Numericals</option></select><span class="count" id="count">1 / 29</span><button aria-label="Mobile view" aria-pressed="false" class="view-toggle" id="view-mobile" title="Mobile view" type="button"><span aria-hidden="true" class="view-icon">📱</span></button><button aria-label="Desktop view" aria-pressed="false" class="view-toggle" id="view-desktop" title="Desktop view" type="button"><span aria-hidden="true" class="view-icon">🖥️</span></button><button aria-label="Fullscreen" id="fullscreen" type="button">⛶</button><button aria-label="Decrease font size" id="fontSmaller" type="button">A-</button><button aria-label="Increase font size" id="fontLarger" type="button">A+</button></nav>
 <script id="light-presentation-auto-layout">
-/* Large readable 16:9 typography. Divide material instead of shrinking it. */
+/* Rebuild each A4 content block into legible 16:9 slide-sized fragments. */
 (()=>{
- const stage=document.getElementById('stage');
- const original=[...stage.querySelectorAll(':scope > article.slide')];
- const MIN=25,MAX=34;
- const overflow=b=>b.scrollHeight>b.clientHeight+3||b.scrollWidth>b.clientWidth+3;
- const setSize=(b,n)=>{b.style.zoom='';b.style.fontSize=n+'px';};
- const usable=b=>{setSize(b,MIN);return !overflow(b);};
- function enlarge(b){
-  if(!usable(b))return false;
+ const stage=document.getElementById('stage'), originals=[...stage.querySelectorAll(':scope > article.slide')];
+ const MIN=25,MAX=31;
+ const overflowing=b=>b.scrollHeight>b.clientHeight+3||b.scrollWidth>b.clientWidth+3;
+ const size=(b,n)=>{b.style.fontSize=n+'px';b.style.zoom='';};
+ function fit(b){
+  size(b,MIN);if(overflowing(b))return false;
   let lo=MIN,hi=MAX;
-  for(let i=0;i<12;i++){const m=(lo+hi)/2;setSize(b,m);if(overflow(b))hi=m;else lo=m;}
-  setSize(b,Math.floor(lo*10)/10);return true;
+  for(let k=0;k<10;k++){const n=(lo+hi)/2;size(b,n);if(overflowing(b))hi=n;else lo=n;}
+  size(b,Math.floor(lo*10)/10);return true;
  }
- function continuation(slide){
-  const copy=slide.cloneNode(true);
-  copy.classList.remove('active');
-  const b=copy.querySelector('.light-block > .body');b.replaceChildren();b.removeAttribute('style');
-  slide.after(copy);copy.style.display='block';return copy;
- }
- function splitChild(body){
-  const child=body.lastElementChild;
-  if(!child)return false;
-  /* Split long lists and multi-part content while preserving the original markup. */
-  if(['UL','OL'].includes(child.tagName)&&child.children.length>1){
-   const second=child.cloneNode(false);
-   const n=Math.ceil(child.children.length/2);
-   while(child.children.length>n)second.append(child.children[n]);
-   child.after(second);return true;
-  }
-  if(child.classList.contains('media')||child.classList.contains('two')||child.classList.contains('cases-grid')){
-   if(child.children.length>1){
-    const second=child.cloneNode(false);
-    const n=Math.ceil(child.children.length/2);
-    while(child.children.length>n)second.append(child.children[n]);
-    child.after(second);return true;
+ function pieces(el){
+  const cls=el.classList;
+  if(el.tagName==='TABLE'){
+   const rows=[...el.querySelectorAll('tbody > tr')];
+   if(rows.length>2){
+    const head=el.querySelector('thead'),parts=[];
+    for(let i=0;i<rows.length;i+=2){
+     const t=el.cloneNode(false);
+     if(head)t.append(head.cloneNode(true));
+     const tbody=document.createElement('tbody');
+     rows.slice(i,i+2).forEach(row=>tbody.append(row.cloneNode(true)));
+     t.append(tbody);parts.push(t);
+    }
+    return parts;
    }
   }
-  if(child.tagName==='P'&&child.textContent.length>240){
-   const text=child.textContent.trim(),pivot=text.lastIndexOf('. ',Math.floor(text.length/2));
-   if(pivot>70){const rest=child.cloneNode(false);rest.textContent=text.slice(pivot+2);child.textContent=text.slice(0,pivot+1);child.after(rest);return true;}
+  if(['UL','OL'].includes(el.tagName)&&el.children.length>3){
+   const kids=[...el.children],parts=[];
+   for(let i=0;i<kids.length;i+=3){const l=el.cloneNode(false);kids.slice(i,i+3).forEach(c=>l.append(c.cloneNode(true)));parts.push(l);}
+   return parts;
   }
-  return false;
+  if(cls.contains('cases-grid')||cls.contains('prop-boxes')||cls.contains('optical-type-grid')||cls.contains('plane-feature-grid')){
+   const children=[...el.children];
+   if(children.length>1)return children.map(c=>{const w=el.cloneNode(false);w.append(c.cloneNode(true));return w;});
+  }
+  if(cls.contains('media')||cls.contains('two')||cls.contains('terms-side')){
+   if(el.children.length>1)return [...el.children].map(c=>c.cloneNode(true));
+  }
+  return [el.cloneNode(true)];
  }
- function paginate(slide){
-  slide.style.display='block';
-  let current=slide,b=current.querySelector('.light-block > .body'),guard=0;
-  while(guard++<100){
-   if(enlarge(b))break;
-   if(b.children.length===1){
-    if(splitChild(b))continue;
-    /* Keep diagrams and indivisible tables intact, at the readable minimum. */
-    setSize(b,MIN);break;
+ function newSlide(source,after){
+  const copy=source.cloneNode(true),b=copy.querySelector('.light-block>.body');
+  b.replaceChildren();b.removeAttribute('style');
+  copy.classList.remove('active');copy.style.display='block';after.after(copy);return copy;
+ }
+ originals.forEach(source=>{
+  source.style.display='block';
+  const first=source.querySelector('.light-block>.body');
+  const items=[...first.children].flatMap(pieces);
+  first.replaceChildren();
+  let slide=source,body=first;
+  for(let i=0;i<items.length;i++){
+   body.append(items[i]);size(body,MIN);
+   if(overflowing(body)&&body.children.length>1){
+    body.lastElementChild.remove();fit(body);
+    slide=newSlide(source,slide);body=slide.querySelector('.light-block>.body');
+    body.append(items[i]);
    }
-   const next=continuation(current),dest=next.querySelector('.light-block > .body');
-   dest.prepend(b.lastElementChild);
-   while(!usable(b)&&b.children.length>1)dest.prepend(b.lastElementChild);
-   if(!usable(b)&&splitChild(b)){next.remove();continue;}
-   enlarge(b);
-   current=next;b=dest;
+   if(overflowing(body)&&body.children.length===1){
+    const fragments=pieces(body.firstElementChild);
+    if(fragments.length>1){
+     body.replaceChildren();
+     items.splice(i+1,0,...fragments);
+     continue;
+    }
+    /* An indivisible diagram/table is kept intact, never scaled to tiny type. */
+    size(body,MIN);
+   }
   }
- }
- original.forEach(paginate);
- const all=[...stage.querySelectorAll(':scope > article.slide')],picker=document.getElementById('slidePicker');
+  fit(body);
+ });
+ const all=[...stage.querySelectorAll(':scope>article.slide')],picker=document.getElementById('slidePicker');
  if(picker)picker.replaceChildren();
  all.forEach((slide,i)=>{
-  slide.dataset.slide=String(i+1);slide.id='slide-'+(i+1);
-  slide.classList.toggle('active',i===0);slide.style.display='';
-  const badge=slide.querySelector('.page-number');if(badge)badge.textContent=String(i+1);
-  if(picker){const option=document.createElement('option');option.value=String(i+1);option.textContent=(i+1)+'. '+(slide.querySelector('.masthead h1')?.textContent||'Slide');picker.append(option);}
- });
- /* When images arrive, use available space but never reduce the font below 25px. */
- document.querySelectorAll('.slide .light-block .body img').forEach(img=>{
-  img.addEventListener('load',()=>{const b=img.closest('.light-block .body');if(b)enlarge(b);},{once:true});
+  slide.dataset.slide=String(i+1);slide.id='slide-'+(i+1);slide.classList.toggle('active',i===0);slide.style.display='';
+  const n=slide.querySelector('.page-number');if(n)n.textContent=String(i+1);
+  const b=slide.querySelector('.light-block>.body');if(b)fit(b);
+  if(picker){const o=document.createElement('option');o.value=String(i+1);o.textContent=(i+1)+'. '+(slide.querySelector('.masthead h1')?.textContent||'Slide');picker.append(o);}
  });
 })();
 </script>
