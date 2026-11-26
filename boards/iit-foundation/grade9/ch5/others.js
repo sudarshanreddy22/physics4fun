@@ -523,7 +523,7 @@ window.iitOthersData = {
             "D": "\\(12\\)"
           },
           "answer": "A",
-          "explanation": "1. Given components: \\(A_x=3,\\ A_y=-12,\\ A_z=-4\\)<br>2. \\(|\\vec A|=\\sqrt{A_x^2+A_y^2+A_z^2}\\)<br>3. \\(|\\vec A|=\\sqrt{3^2+(-12)^2+(-4)^2}=\\sqrt{9+144+16}\\)<br>4. \\(|\\vec A|=\\sqrt{169}=13\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Given components: \\(A_x=3,\\ A_y=-12,\\ A_z=-4\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{A_x^2+A_y^2+A_z^2}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{3^2+(-12)^2+(-4)^2}\\\\ &=\\sqrt{9+144+16}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{169}\\\\ &=13\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 12
@@ -537,7 +537,7 @@ window.iitOthersData = {
             "D": "\\(12\\)"
           },
           "answer": "A",
-          "explanation": "1. For a unit vector, magnitude is 1.<br>2. \\(1=\\sqrt{(1/2)^2+(1/2)^2+c^2}\\)<br>3. \\(1=\\frac14+\\frac14+c^2\\)<br>4. \\(c^2=\\frac12\\Rightarrow c=\\pm\\frac1{\\sqrt2}\\)<br>5. The positive value is listed in the options.",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">For a unit vector, magnitude is 1.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}1&=\\sqrt{(1/2)^2+(1/2)^2+c^2}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}1&=\\frac14+\\frac14+c^2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}c^2&=\\frac12\\Rightarrow c\\\\ &=\\pm\\frac1{\\sqrt2}\\end{aligned}\\)</div><div style=\"margin:5px 0;\">The positive value is listed in the options.</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 13
@@ -551,7 +551,7 @@ window.iitOthersData = {
             "D": "\\(\\sqrt{20}\\)"
           },
           "answer": "C",
-          "explanation": "1. \\(2\\vec A=4\\hat i+2\\hat j\\)<br>2. \\(3\\vec B=3\\hat j-3\\hat k\\)<br>3. \\(2\\vec A+3\\vec B=4\\hat i+5\\hat j-3\\hat k\\)<br>4. \\(|2\\vec A+3\\vec B|=\\sqrt{4^2+5^2+(-3)^2}=\\sqrt{50}=5\\sqrt2\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}2\\vec A&=4\\hat i+2\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}3\\vec B&=3\\hat j-3\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}2\\vec A+3\\vec B&=4\\hat i+5\\hat j-3\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|2\\vec A+3\\vec B|&=\\sqrt{4^2+5^2+(-3)^2}\\\\ &=\\sqrt{50}\\\\ &=5\\sqrt2\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 14
@@ -565,7 +565,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "A",
-          "explanation": "1. Projection onto the xy-plane removes the z-component.<br>2. \\(\\vec A_{xy}=2\\hat i+3\\hat j\\)<br>3. \\(|\\vec A_{xy}|=\\sqrt{2^2+3^2}=\\sqrt{13}\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Projection onto the xy-plane removes the z-component.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec A_{xy}&=2\\hat i+3\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A_{xy}|&=\\sqrt{2^2+3^2}\\\\ &=\\sqrt{13}\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 15
@@ -579,7 +579,7 @@ window.iitOthersData = {
             "D": "none"
           },
           "answer": "B",
-          "explanation": "1. \\(|\\vec A|=\\sqrt{2^2+y^2+3^2}=5\\)<br>2. \\(4+y^2+9=25\\)<br>3. \\(y^2=12\\Rightarrow y=\\pm2\\sqrt3\\)<br>4. The positive root is the listed option.",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{2^2+y^2+3^2}\\\\ &=5\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}4+y^2+9&=25\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}y^2&=12\\Rightarrow y\\\\ &=\\pm2\\sqrt3\\end{aligned}\\)</div><div style=\"margin:5px 0;\">The positive root is the listed option.</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 16
@@ -593,7 +593,7 @@ window.iitOthersData = {
             "D": "None of these"
           },
           "answer": "B",
-          "explanation": "1. Position vector is obtained by multiplying each coordinate by its corresponding unit vector.<br>2. \\(\\vec r=x\\hat i+y\\hat j+z\\hat k\\)<br>3. \\(\\vec r=3\\hat i+2\\hat j+5\\hat k\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Position vector is obtained by multiplying each coordinate by its corresponding unit vector.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec r&=x\\hat i+y\\hat j+z\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec r&=3\\hat i+2\\hat j+5\\hat k\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 17
@@ -607,7 +607,7 @@ window.iitOthersData = {
             "D": "\\(\\sqrt{0.39}\\)"
           },
           "answer": "B",
-          "explanation": "1. Magnitude of a unit vector is 1.<br>2. \\(0.5^2+0.8^2+c^2=1\\)<br>3. \\(c^2=1-0.25-0.64=0.11\\)<br>4. \\(c=\\pm\\sqrt{0.11}\\approx\\pm0.332\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Magnitude of a unit vector is 1.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}0.5^2+0.8^2+c^2&=1\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}c^2&=1-0.25-0.64\\\\ &=0.11\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}c&=\\pm\\sqrt{0.11}\\approx\\pm0.332\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 18
@@ -621,7 +621,7 @@ window.iitOthersData = {
             "D": "Zero"
           },
           "answer": "B",
-          "explanation": "1. \\(\\vec A=3\\hat i+4\\hat j\\)<br>2. \\(A_y=\\vec A\\cdot\\hat j=3(0)+4(1)=4\\)<br>3. \\(\\vec A_y=A_y\\hat j=4\\hat j\\)<br>4. The scalar component is 4; the vector projection is as shown.",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec A&=3\\hat i+4\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}A_y&=\\vec A\\cdot\\hat j\\\\ &=3(0)+4(1)\\\\ &=4\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec A_y&=A_y\\hat j\\\\ &=4\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;\">The scalar component is 4; the vector projection is as shown.</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 19
@@ -635,7 +635,7 @@ window.iitOthersData = {
             "D": "\\(15\\hat{i}+20\\hat{j}\\)"
           },
           "answer": "D",
-          "explanation": "1. \\(|\\vec A|=\\sqrt{3^2+4^2}=5\\)<br>2. \\(|\\vec B|=\\sqrt{7^2+24^2}=25\\)<br>3. \\(\\hat A=\\frac{3\\hat i+4\\hat j}{5}\\)<br>4. \\(\\vec C=|\\vec B|\\hat A=15\\hat i+20\\hat j\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{3^2+4^2}\\\\ &=5\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec B|&=\\sqrt{7^2+24^2}\\\\ &=25\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\hat A&=\\frac{3\\hat i+4\\hat j}{5}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec C&=|\\vec B|\\hat A\\\\ &=15\\hat i+20\\hat j\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 20
@@ -649,7 +649,7 @@ window.iitOthersData = {
             "D": "\\(2\\sqrt{10}\\)"
           },
           "answer": "D",
-          "explanation": "1. \\(\\Delta\\vec r=(-2-4)\\hat i+[-2-(-4)]\\hat j+(0-0)\\hat k\\)<br>2. \\(\\Delta\\vec r=-6\\hat i+2\\hat j\\)<br>3. \\(|\\Delta\\vec r|=\\sqrt{36+4}=2\\sqrt{10}\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\Delta\\vec r&=(-2-4)\\hat i+[-2-(-4)]\\hat j+(0-0)\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\Delta\\vec r&=-6\\hat i+2\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\Delta\\vec r|&=\\sqrt{36+4}\\\\ &=2\\sqrt{10}\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 21
@@ -663,7 +663,7 @@ window.iitOthersData = {
             "D": "Scalar"
           },
           "answer": "A",
-          "explanation": "1. \\(|\\vec A|=\\sqrt{\\left(\\frac1{\\sqrt2}\\right)^2+\\left(\\frac1{\\sqrt2}\\right)^2}\\)<br>2. \\(|\\vec A|=\\sqrt{\\frac12+\\frac12}=1\\)<br>3. Therefore it is a unit vector.",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{\\left(\\frac1{\\sqrt2}\\right)^2+\\left(\\frac1{\\sqrt2}\\right)^2}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{\\frac12+\\frac12}\\\\ &=1\\end{aligned}\\)</div><div style=\"margin:5px 0;\">Therefore it is a unit vector.</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 22
@@ -677,7 +677,7 @@ window.iitOthersData = {
             "D": "none"
           },
           "answer": "C",
-          "explanation": "1. \\(0.2^2+0.3^2+z^2=1\\)<br>2. \\(z^2=1-0.04-0.09=0.87\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}0.2^2+0.3^2+z^2&=1\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}z^2&=1-0.04-0.09\\\\ &=0.87\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 23
@@ -691,7 +691,7 @@ window.iitOthersData = {
             "D": "\\(4\\hat{i}+2\\hat{j}-\\hat{k}\\)"
           },
           "answer": "D",
-          "explanation": "1. \\(\\vec r_i=\\hat i+2\\hat j+3\\hat k,\\quad\\vec r_f=5\\hat i+4\\hat j+2\\hat k\\)<br>2. \\(\\Delta\\vec r=\\vec r_f-\\vec r_i\\)<br>3. \\(\\Delta\\vec r=(5-1)\\hat i+(4-2)\\hat j+(2-3)\\hat k\\)<br>4. \\(\\Delta\\vec r=(4\\hat i+2\\hat j-\\hat k)\\,\\mathrm m\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec r_i&=\\hat i+2\\hat j+3\\hat k,\\quad\\vec r_f\\\\ &=5\\hat i+4\\hat j+2\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\Delta\\vec r&=\\vec r_f-\\vec r_i\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\Delta\\vec r&=(5-1)\\hat i+(4-2)\\hat j+(2-3)\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\Delta\\vec r&=(4\\hat i+2\\hat j-\\hat k)\\,\\mathrm m\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 24
@@ -705,7 +705,7 @@ window.iitOthersData = {
             "D": "none"
           },
           "answer": "A",
-          "explanation": "1. \\(\\Delta\\vec r=\\vec r_f-\\vec r_i\\)<br>2. \\(\\Delta\\vec r=[(1-2)\\hat i+(-2-3)\\hat j+(1-5)\\hat k]\\,\\mathrm m\\)<br>3. \\(\\Delta\\vec r=(-\\hat i-5\\hat j-4\\hat k)\\,\\mathrm m\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\Delta\\vec r&=\\vec r_f-\\vec r_i\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\Delta\\vec r&=[(1-2)\\hat i+(-2-3)\\hat j+(1-5)\\hat k]\\,\\mathrm m\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\Delta\\vec r&=(-\\hat i-5\\hat j-4\\hat k)\\,\\mathrm m\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 25
@@ -719,7 +719,7 @@ window.iitOthersData = {
             "D": "\\(-\\frac{3}{4}\\)"
           },
           "answer": "D",
-          "explanation": "1. Parallel vectors have proportional components.<br>2. \\(\\frac82=\\frac{12}3=4\\)<br>3. \\(3=4(-y)\\)<br>4. \\(y=-\\frac34\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Parallel vectors have proportional components.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\frac82&=\\frac{12}3\\\\ &=4\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}3&=4(-y)\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}y&=-\\frac34\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 26
@@ -733,7 +733,7 @@ window.iitOthersData = {
             "D": "\\(20\\hat{i}-15\\hat{j}\\)"
           },
           "answer": "A",
-          "explanation": "1. \\(|\\vec A|=\\sqrt{3^2+4^2}=5\\)<br>2. \\(|\\vec B|=\\sqrt{7^2+24^2}=25\\)<br>3. \\(\\hat A=\\frac{3\\hat i+4\\hat j}{5}\\)<br>4. \\(\\vec C=|\\vec B|\\hat A=15\\hat i+20\\hat j\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{3^2+4^2}\\\\ &=5\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec B|&=\\sqrt{7^2+24^2}\\\\ &=25\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\hat A&=\\frac{3\\hat i+4\\hat j}{5}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec C&=|\\vec B|\\hat A\\\\ &=15\\hat i+20\\hat j\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 27
@@ -747,7 +747,7 @@ window.iitOthersData = {
             "D": "\\(5(3\\hat{i}+4\\hat{j})/8\\)"
           },
           "answer": "A",
-          "explanation": "1. \\(|\\vec A|=\\sqrt{9+16}=5,\\quad|\\vec B|=\\sqrt{25+144}=13\\)<br>2. \\(\\hat A=\\frac{3\\hat i+4\\hat j}{5}\\)<br>3. \\(\\vec C=13\\hat A=\\frac{39}{5}\\hat i+\\frac{52}{5}\\hat j\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{9+16}\\\\ &=5,\\quad|\\vec B|\\\\ &=\\sqrt{25+144}\\\\ &=13\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\hat A&=\\frac{3\\hat i+4\\hat j}{5}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec C&=13\\hat A\\\\ &=\\frac{39}{5}\\hat i+\\frac{52}{5}\\hat j\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 28
@@ -775,7 +775,7 @@ window.iitOthersData = {
             "D": "none"
           },
           "answer": "A",
-          "explanation": "1. \\(|\\vec A|=\\sqrt{6^2+(-8)^2}=10\\)<br>2. \\(-\\hat A=-\\frac{6\\hat i-8\\hat j}{10}\\)<br>3. \\(\\vec C=-5\\hat A=-3\\hat i+4\\hat j\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{6^2+(-8)^2}\\\\ &=10\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}-\\hat A&=-\\frac{6\\hat i-8\\hat j}{10}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec C&=-5\\hat A\\\\ &=-3\\hat i+4\\hat j\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 30
@@ -789,7 +789,7 @@ window.iitOthersData = {
             "D": "\\(2\\)"
           },
           "answer": "B",
-          "explanation": "1. Opposite vectors have a negative proportionality factor.<br>2. \\(\\frac{-6}{3}=\\frac{-8}{4}=-2\\)<br>3. \\(p=(-2)(-2)=4\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Opposite vectors have a negative proportionality factor.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\frac{-6}{3}&=\\frac{-8}{4}\\\\ &=-2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}p&=(-2)(-2)\\\\ &=4\\end{aligned}\\)</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 31
@@ -803,7 +803,7 @@ window.iitOthersData = {
             "D": "none"
           },
           "answer": "C",
-          "explanation": "1. \\(\\vec F_{\\rm net}=\\vec F_1+\\vec F_2+\\vec F_3+\\vec F_4\\)<br>2. \\(\\vec F_{\\rm net}=(1+3-4)\\hat i+(2+3)\\hat j+(1+3)\\hat k\\)<br>3. \\(\\vec F_{\\rm net}=5\\hat j+4\\hat k\\)<br>4. The x-component is zero. Starting from rest, the body moves in the yz-plane (assuming the given forces remain constant).",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec F_{\\rm net}&=\\vec F_1+\\vec F_2+\\vec F_3+\\vec F_4\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec F_{\\rm net}&=(1+3-4)\\hat i+(2+3)\\hat j+(1+3)\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec F_{\\rm net}&=5\\hat j+4\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;\">The x-component is zero. Starting from rest, the body moves in the yz-plane (assuming the given forces remain constant).</div></div>",
           "paper": "WS-2",
           "marks": 1,
           "no": 32
@@ -851,7 +851,7 @@ window.iitOthersData = {
             "D": "infinity"
           },
           "answer": "C",
-          "explanation": "1. Weight acts vertically downward.<br>2. \\(\\vec W=-mg\\hat j\\)<br>3. \\(W_x=0\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Weight acts vertically downward.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec W&=-mg\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}W_x&=0\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 3
@@ -865,7 +865,7 @@ window.iitOthersData = {
             "D": "\\(\\vec{r}\\) makes an angle of \\(45^{\\circ}\\) with x-axis"
           },
           "answer": "A",
-          "explanation": "1. \\(r_x=r\\cos\\theta\\)<br>2. \\(\\cos\\theta\\le1\\)<br>3. Maximum occurs at \\(\\theta=0^\\circ\\) and equals \\(r\\).",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}r_x&=r\\cos\\theta\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\cos\\theta\\le1\\end{aligned}\\)</div><div style=\"margin:5px 0;\">Maximum occurs at \\(\\theta=0^\\circ\\) and equals \\(r\\).</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 4
@@ -893,7 +893,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "D",
-          "explanation": "1. \\(\\vec F=ma\\hat i\\)<br>2. \\(F_y=F\\sin0^\\circ=0\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec F&=ma\\hat i\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_y&=F\\sin0^\\circ\\\\ &=0\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 6
@@ -907,7 +907,7 @@ window.iitOthersData = {
             "D": "\\(90^{\\circ}\\)"
           },
           "answer": "B",
-          "explanation": "1. \\(F_x=F_y\\)<br>2. \\(\\tan\\theta=\\frac{F_x}{F_y}=1\\)<br>3. \\(\\theta=45^\\circ\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_x&=F_y\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\tan\\theta&=\\frac{F_x}{F_y}\\\\ &=1\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\theta&=45^\\circ\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 7
@@ -921,7 +921,7 @@ window.iitOthersData = {
             "D": "\\(35\\sqrt{3} \\,\\mathrm{m} \\,\\mathrm{s}^{-1}\\)"
           },
           "answer": "A",
-          "explanation": "1. \\(v^2=v_x^2+v_y^2\\)<br>2. \\(v_y=\\sqrt{20^2-10^2}=\\sqrt{300}\\)<br>3. \\(v_y=10\\sqrt3\\,\\mathrm{m\\,s^{-1}}\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}v^2&=v_x^2+v_y^2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}v_y&=\\sqrt{20^2-10^2}\\\\ &=\\sqrt{300}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}v_y&=10\\sqrt3\\,\\mathrm{m\\,s^{-1}}\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 8
@@ -935,7 +935,7 @@ window.iitOthersData = {
             "D": "\\(\\sqrt{13}\\) and \\(\\sqrt{29}\\)"
           },
           "answer": "B",
-          "explanation": "1. \\(|\\vec A_{yz}|=\\sqrt{(-3)^2+4^2}=5\\)<br>2. \\(|\\vec A_{xz}|=\\sqrt{2^2+4^2}=\\sqrt{20}=2\\sqrt5\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A_{yz}|&=\\sqrt{(-3)^2+4^2}\\\\ &=5\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A_{xz}|&=\\sqrt{2^2+4^2}\\\\ &=\\sqrt{20}\\\\ &=2\\sqrt5\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 9
@@ -949,7 +949,7 @@ window.iitOthersData = {
             "D": "\\(10 \\,\\mathrm{N}, 10\\sqrt{3} \\,\\mathrm{N}\\)"
           },
           "answer": "C",
-          "explanation": "1. \\(F_1=F\\cos30^\\circ=10\\frac{\\sqrt3}{2}=5\\sqrt3\\,\\mathrm N\\)<br>2. \\(F_2=F\\sin30^\\circ=10\\frac12=5\\,\\mathrm N\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_1&=F\\cos30^\\circ\\\\ &=10\\frac{\\sqrt3}{2}\\\\ &=5\\sqrt3\\,\\mathrm N\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_2&=F\\sin30^\\circ\\\\ &=10\\frac12\\\\ &=5\\,\\mathrm N\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 10
@@ -963,7 +963,7 @@ window.iitOthersData = {
             "D": "\\(25\\sqrt{2} \\,\\mathrm{N}\\)"
           },
           "answer": "C",
-          "explanation": "1. \\(\\tan60^\\circ=\\frac{F_2}{25}\\)<br>2. \\(F_2=25\\tan60^\\circ=25\\sqrt3\\,\\mathrm N\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\tan60^\\circ&=\\frac{F_2}{25}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_2&=25\\tan60^\\circ\\\\ &=25\\sqrt3\\,\\mathrm N\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 11
@@ -977,7 +977,7 @@ window.iitOthersData = {
             "D": "\\(90^{\\circ}\\)"
           },
           "answer": "C",
-          "explanation": "1. \\(A_x=\\sqrt3 A_y\\)<br>2. \\(\\tan\\theta=\\frac{A_x}{A_y}=\\sqrt3\\)<br>3. \\(\\theta=60^\\circ\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}A_x&=\\sqrt3 A_y\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\tan\\theta&=\\frac{A_x}{A_y}\\\\ &=\\sqrt3\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\theta&=60^\\circ\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 12
@@ -991,7 +991,7 @@ window.iitOthersData = {
             "D": "\\(\\sqrt{F^{2}-x^{2}}\\)"
           },
           "answer": "D",
-          "explanation": "1. \\(F^2=x^2+y^2\\)<br>2. \\(y^2=F^2-x^2\\)<br>3. \\(|y|=\\sqrt{F^2-x^2}\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F^2&=x^2+y^2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}y^2&=F^2-x^2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|y|&=\\sqrt{F^2-x^2}\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 13
@@ -1005,7 +1005,7 @@ window.iitOthersData = {
             "D": "\\(\\sqrt{10}\\)"
           },
           "answer": "D",
-          "explanation": "1. \\(\\vec r_{xy}=3\\hat i+\\hat j\\)<br>2. \\(|\\vec r_{xy}|=\\sqrt{3^2+1^2}=\\sqrt{10}\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec r_{xy}&=3\\hat i+\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec r_{xy}|&=\\sqrt{3^2+1^2}\\\\ &=\\sqrt{10}\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 14
@@ -1019,7 +1019,7 @@ window.iitOthersData = {
             "D": "None"
           },
           "answer": "B",
-          "explanation": "1. \\(|\\vec F|=\\sqrt{F_x^2+F_y^2+F_z^2}\\)<br>2. \\(|\\vec F|=\\sqrt{5^2+(-3)^2+(-2)^2}=\\sqrt{38}\\,\\mathrm N\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec F|&=\\sqrt{F_x^2+F_y^2+F_z^2}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec F|&=\\sqrt{5^2+(-3)^2+(-2)^2}\\\\ &=\\sqrt{38}\\,\\mathrm N\\end{aligned}\\)</div></div>",
           "paper": "WS-3",
           "marks": 1,
           "no": 15
@@ -1033,7 +1033,7 @@ window.iitOthersData = {
         {
           "question": "A force of \\(60 \\,\\mathrm{N}\\) acts on a body at angle of \\(60^{\\circ}\\) with the vertical. What are its horizontal and vertical components?",
           "answer": "\\(30\\sqrt{3} \\,\\mathrm{N}, 30 \\,\\mathrm{N}\\)",
-          "explanation": "1. Given \\(F=60\\,\\mathrm N,\\ \\theta=60^\\circ\\) measured from vertical.<br>2. \\(F_x=F\\sin\\theta=60\\frac{\\sqrt3}{2}=30\\sqrt3\\approx51.96\\,\\mathrm N\\)<br>3. \\(F_y=F\\cos\\theta=60\\frac12=30\\,\\mathrm N\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Given \\(F=60\\,\\mathrm N,\\ \\theta=60^\\circ\\) measured from vertical.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_x&=F\\sin\\theta\\\\ &=60\\frac{\\sqrt3}{2}\\\\ &=30\\sqrt3\\approx51.96\\,\\mathrm N\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_y&=F\\cos\\theta\\\\ &=60\\frac12\\\\ &=30\\,\\mathrm N\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 1,
@@ -1043,7 +1043,7 @@ window.iitOthersData = {
         {
           "question": "A child pulls a sled through the snow with a force of 50 Newtons exerted at an angle of 30 degrees above the horizontal. Find the horizontal and vertical components of this force.",
           "answer": "\\(25\\sqrt{3} \\,\\mathrm{N}, 25 \\,\\mathrm{N}\\)",
-          "explanation": "1. Given \\(F=50\\,\\mathrm N,\\ \\theta=30^\\circ\\) above horizontal.<br>2. \\(F_x=50\\cos30^\\circ=25\\sqrt3\\approx43.30\\,\\mathrm N\\)<br>3. \\(F_y=50\\sin30^\\circ=25\\,\\mathrm N\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Given \\(F=50\\,\\mathrm N,\\ \\theta=30^\\circ\\) above horizontal.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_x&=50\\cos30^\\circ\\\\ &=25\\sqrt3\\approx43.30\\,\\mathrm N\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_y&=50\\sin30^\\circ\\\\ &=25\\,\\mathrm N\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 2
@@ -1051,7 +1051,7 @@ window.iitOthersData = {
         {
           "question": "A force is inclined at 60 degree to the horizontal if its rectangular component in the horizontal direction is \\(50 \\,\\mathrm{N}\\) and then magnitude of the vertical component of force is approximately.",
           "answer": "\\(86.6 \\,\\mathrm{N}\\)",
-          "explanation": "1. \\(F_x=50\\,\\mathrm N,\\quad\\theta=60^\\circ\\)<br>2. \\(\\tan\\theta=\\frac{F_y}{F_x}\\)<br>3. \\(F_y=50\\tan60^\\circ=50\\sqrt3\\approx86.60\\,\\mathrm N\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_x&=50\\,\\mathrm N,\\quad\\theta\\\\ &=60^\\circ\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\tan\\theta&=\\frac{F_y}{F_x}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_y&=50\\tan60^\\circ\\\\ &=50\\sqrt3\\approx86.60\\,\\mathrm N\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 3
@@ -1059,7 +1059,7 @@ window.iitOthersData = {
         {
           "question": "A particle has a displacement of \\(8 \\,\\mathrm{m}\\). If one of its rectangular component is \\(4 \\,\\mathrm{m}\\), what is the other rectangular component?",
           "answer": "\\(4\\sqrt{3} \\,\\mathrm{m}\\)",
-          "explanation": "1. \\(d^2=d_x^2+d_y^2\\)<br>2. \\(d_y=\\sqrt{8^2-4^2}=\\sqrt{48}\\)<br>3. \\(d_y=4\\sqrt3\\approx6.93\\,\\mathrm m\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}d^2&=d_x^2+d_y^2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}d_y&=\\sqrt{8^2-4^2}\\\\ &=\\sqrt{48}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}d_y&=4\\sqrt3\\approx6.93\\,\\mathrm m\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 4
@@ -1067,7 +1067,7 @@ window.iitOthersData = {
         {
           "question": "A body is thrown into air with a velocity v m/s making an angle of \\(30^{\\circ}\\) with horizontal. If the vertical component velocity is \\(5 \\,\\mathrm{m}/\\,\\mathrm{s}\\) what is the throwing velocity of the body? And also find horizontal component.",
           "answer": "\\(10 \\,\\mathrm{m}/\\,\\mathrm{s}, 5\\sqrt{3} \\,\\mathrm{m}/\\,\\mathrm{s}\\)",
-          "explanation": "1. \\(v_y=v\\sin30^\\circ=5\\,\\mathrm{m/s}\\)<br>2. \\(v=\\frac5{1/2}=10\\,\\mathrm{m/s}\\)<br>3. \\(v_x=v\\cos30^\\circ=5\\sqrt3\\approx8.66\\,\\mathrm{m/s}\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}v_y&=v\\sin30^\\circ\\\\ &=5\\,\\mathrm{m/s}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}v&=\\frac5{1/2}\\\\ &=10\\,\\mathrm{m/s}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}v_x&=v\\cos30^\\circ\\\\ &=5\\sqrt3\\approx8.66\\,\\mathrm{m/s}\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 5
@@ -1075,7 +1075,7 @@ window.iitOthersData = {
         {
           "question": "The vertical component of force acting at \\(60^{\\circ}\\) to the horizontal is \\(8.48 \\,\\mathrm{N}\\). Find the force and the horizontal component.",
           "answer": "\\(9.79 \\,\\mathrm{N}, 4.90 \\,\\mathrm{N}\\)",
-          "explanation": "1. \\(F_y=F\\sin60^\\circ=8.48\\,\\mathrm N\\)<br>2. \\(F=\\frac{8.48}{\\sqrt3/2}\\approx9.79\\,\\mathrm N\\)<br>3. \\(F_x=F\\cos60^\\circ\\approx4.90\\,\\mathrm N\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_y&=F\\sin60^\\circ\\\\ &=8.48\\,\\mathrm N\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F&=\\frac{8.48}{\\sqrt3/2}\\approx9.79\\,\\mathrm N\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_x&=F\\cos60^\\circ\\approx4.90\\,\\mathrm N\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 6
@@ -1083,7 +1083,7 @@ window.iitOthersData = {
         {
           "question": "A body of mass \\(10 \\,\\mathrm{kg}\\) is at rest on an inclined plane of angle \\(30^{\\circ}\\). What are its weight components parallel and perpendicular to the plane?",
           "answer": "\\(5g \\,\\mathrm{N}, 5\\sqrt{3}g \\,\\mathrm{N}\\)",
-          "explanation": "1. Taking \\(g=9.8\\,\\mathrm{m/s^2}\\) (not specified in question).<br>2. \\(W=mg=10(9.8)=98\\,\\mathrm N\\)<br>3. \\(W_\\parallel=mg\\sin30^\\circ=49\\,\\mathrm N\\)<br>4. \\(W_\\perp=mg\\cos30^\\circ=49\\sqrt3\\approx84.87\\,\\mathrm N\\)<br>5. Parallel component acts down the slope; perpendicular component acts into the plane. For g = 10 m/s², the answers are 50 N and 86.60 N.",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Taking \\(g=9.8\\,\\mathrm{m/s^2}\\) (not specified in question).</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}W&=mg\\\\ &=10(9.8)\\\\ &=98\\,\\mathrm N\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}W_\\parallel&=mg\\sin30^\\circ\\\\ &=49\\,\\mathrm N\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}W_\\perp&=mg\\cos30^\\circ\\\\ &=49\\sqrt3\\approx84.87\\,\\mathrm N\\end{aligned}\\)</div><div style=\"margin:5px 0;\">Parallel component acts down the slope; perpendicular component acts into the plane. For g = 10 m/s², the answers are 50 N and 86.60 N.</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 7
@@ -1091,7 +1091,7 @@ window.iitOthersData = {
         {
           "question": "A force acts on a body at a certain angle with the horizontal such that the vertical component is twice the horizontal component. What is the inclination of force?",
           "answer": "\\(63.43^{\\circ}\\)",
-          "explanation": "1. \\(F_y=2F_x\\)<br>2. \\(\\tan\\theta=\\frac{F_y}{F_x}=2\\)<br>3. \\(\\theta=\\tan^{-1}(2)\\approx63.43^\\circ\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}F_y&=2F_x\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\tan\\theta&=\\frac{F_y}{F_x}\\\\ &=2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\theta&=\\tan^{-1}(2)\\approx63.43^\\circ\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 8
@@ -1099,7 +1099,7 @@ window.iitOthersData = {
         {
           "question": "If \\(\\vec A=\\hat i+\\hat j\\), what is the angle between the vector and the X-axis?",
           "answer": "\\(45^{\\circ}\\)",
-          "explanation": "1. \\(A_x=1,\\quad A_y=1\\)<br>2. \\(\\tan\\theta=\\frac{A_y}{A_x}=1\\)<br>3. \\(\\theta=45^\\circ\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}A_x&=1,\\quad A_y\\\\ &=1\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\tan\\theta&=\\frac{A_y}{A_x}\\\\ &=1\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\theta&=45^\\circ\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 9
@@ -1107,7 +1107,7 @@ window.iitOthersData = {
         {
           "question": "Find the angle which \\(\\vec A=2\\hat i+3\\hat j\\) makes with the y-axis, where \\(\\hat i,\\hat j\\) are unit vectors along the x-axis and y-axis, respectively.",
           "answer": "\\(33.69^{\\circ}\\)",
-          "explanation": "1. Angle is measured from the positive y-axis.<br>2. \\(\\tan\\theta=\\frac{A_x}{A_y}=\\frac23\\)<br>3. \\(\\theta=\\tan^{-1}\\left(\\frac23\\right)\\approx33.69^\\circ\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;\">Angle is measured from the positive y-axis.</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\tan\\theta&=\\frac{A_x}{A_y}\\\\ &=\\frac23\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\theta&=\\tan^{-1}\\left(\\frac23\\right)\\approx33.69^\\circ\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 10
@@ -1115,7 +1115,7 @@ window.iitOthersData = {
         {
           "question": "Find the direction cosines of \\(\\vec A=\\hat i+2\\hat j+3\\hat k\\).",
           "answer": "\\(1/\\sqrt{14}, 2/\\sqrt{14}, 3/\\sqrt{14}\\)",
-          "explanation": "1. \\(|\\vec A|=\\sqrt{1^2+2^2+3^2}=\\sqrt{14}\\)<br>2. \\(l=\\frac{A_x}{|\\vec A|}=\\frac1{\\sqrt{14}}\\)<br>3. \\(m=\\frac2{\\sqrt{14}},\\quad n=\\frac3{\\sqrt{14}}\\)<br>4. \\(l^2+m^2+n^2=\\frac{1+4+9}{14}=1\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{1^2+2^2+3^2}\\\\ &=\\sqrt{14}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}l&=\\frac{A_x}{|\\vec A|}\\\\ &=\\frac1{\\sqrt{14}}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}m&=\\frac2{\\sqrt{14}},\\quad n\\\\ &=\\frac3{\\sqrt{14}}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}l^2+m^2+n^2&=\\frac{1+4+9}{14}\\\\ &=1\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 11
@@ -1123,7 +1123,7 @@ window.iitOthersData = {
         {
           "question": "What angle does \\(\\vec A=3\\hat i-4\\hat j+5\\hat k\\) make with the positive Z-axis?",
           "answer": "\\(45^{\\circ}\\)",
-          "explanation": "1. \\(|\\vec A|=\\sqrt{3^2+(-4)^2+5^2}=\\sqrt{50}=5\\sqrt2\\)<br>2. \\(\\cos\\theta=\\frac{A_z}{|\\vec A|}=\\frac5{5\\sqrt2}=\\frac1{\\sqrt2}\\)<br>3. \\(\\theta=45^\\circ\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec A|&=\\sqrt{3^2+(-4)^2+5^2}\\\\ &=\\sqrt{50}\\\\ &=5\\sqrt2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\cos\\theta&=\\frac{A_z}{|\\vec A|}\\\\ &=\\frac5{5\\sqrt2}\\\\ &=\\frac1{\\sqrt2}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\theta&=45^\\circ\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 12
@@ -1131,7 +1131,7 @@ window.iitOthersData = {
         {
           "question": "With respect to a rectangular Cartesian coordinate system, three vectors are expressed as \\(\\vec a=4\\hat i-\\hat j,\\quad\\vec b=-3\\hat i+2\\hat j,\\quad\\vec c=-\\hat k\\), where \\(\\hat i,\\hat j,\\hat k\\) are unit vectors along the X, Y and Z axes respectively. Find the unit vector along the direction of the sum of these vectors.",
           "answer": "\\((\\hat{i}+\\hat{j}-\\hat{k})/\\sqrt{3}\\)",
-          "explanation": "1. \\(\\vec R=\\vec a+\\vec b+\\vec c\\)<br>2. \\(\\vec R=(4-3)\\hat i+(-1+2)\\hat j-\\hat k=\\hat i+\\hat j-\\hat k\\)<br>3. \\(|\\vec R|=\\sqrt{1+1+1}=\\sqrt3\\)<br>4. \\(\\hat R=\\frac{\\hat i+\\hat j-\\hat k}{\\sqrt3}\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec R&=\\vec a+\\vec b+\\vec c\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec R&=(4-3)\\hat i+(-1+2)\\hat j-\\hat k\\\\ &=\\hat i+\\hat j-\\hat k\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec R|&=\\sqrt{1+1+1}\\\\ &=\\sqrt3\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\hat R&=\\frac{\\hat i+\\hat j-\\hat k}{\\sqrt3}\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 13
@@ -1139,7 +1139,7 @@ window.iitOthersData = {
         {
           "question": "Find the unit vector parallel to the resultant of \\(\\vec A=4\\hat i-3\\hat j\\) and \\(\\vec B=8\\hat i+8\\hat j\\).",
           "answer": "\\((12\\hat{i}+5\\hat{j})/13\\)",
-          "explanation": "1. \\(\\vec R=\\vec A+\\vec B=(4+8)\\hat i+(-3+8)\\hat j\\)<br>2. \\(\\vec R=12\\hat i+5\\hat j\\)<br>3. \\(|\\vec R|=\\sqrt{144+25}=13\\)<br>4. \\(\\hat R=\\frac{12\\hat i+5\\hat j}{13}\\)",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec R&=\\vec A+\\vec B\\\\ &=(4+8)\\hat i+(-3+8)\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec R&=12\\hat i+5\\hat j\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}|\\vec R|&=\\sqrt{144+25}\\\\ &=13\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\hat R&=\\frac{12\\hat i+5\\hat j}{13}\\end{aligned}\\)</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 14
@@ -1147,7 +1147,7 @@ window.iitOthersData = {
         {
           "question": "What is the component of \\(\\vec A=2\\hat i+3\\hat j\\) along the vector \\(\\hat i+\\hat j\\)?",
           "answer": "\\(5/\\sqrt{2}\\)",
-          "explanation": "1. \\(\\vec B=\\hat i+\\hat j,\\quad|\\vec B|=\\sqrt2\\)<br>2. \\(\\hat B=\\frac{\\hat i+\\hat j}{\\sqrt2}\\)<br>3. \\(A_\\parallel=\\vec A\\cdot\\hat B=\\frac{2+3}{\\sqrt2}=\\frac5{\\sqrt2}\\)<br>4. \\(\\vec A_\\parallel=A_\\parallel\\hat B=\\frac52(\\hat i+\\hat j)\\)<br>5. The scalar component is 5/√2; the vector projection is given above.",
+          "explanation": "<div style=\"text-align:left;line-height:1.8;overflow-x:auto;\"><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec B&=\\hat i+\\hat j,\\quad|\\vec B|\\\\ &=\\sqrt2\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\hat B&=\\frac{\\hat i+\\hat j}{\\sqrt2}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}A_\\parallel&=\\vec A\\cdot\\hat B\\\\ &=\\frac{2+3}{\\sqrt2}\\\\ &=\\frac5{\\sqrt2}\\end{aligned}\\)</div><div style=\"margin:5px 0;text-align:left;\">\\(\\displaystyle \\begin{aligned}\\vec A_\\parallel&=A_\\parallel\\hat B\\\\ &=\\frac52(\\hat i+\\hat j)\\end{aligned}\\)</div><div style=\"margin:5px 0;\">The scalar component is 5/√2; the vector projection is given above.</div></div>",
           "paper": "Concept Build Problems",
           "marks": 1,
           "no": 15
