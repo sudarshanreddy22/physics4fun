@@ -1921,68 +1921,6 @@ window.iitOthersData = {
       "name": "WS-3",
       "core": [
         {
-          "question": "Two charges, one +5 μC and another −5 μC, are placed 1 mm apart. Calculate the dipole moment.",
-          "options": {},
-          "answer": "\\(5 \\times 10^{-9}\\) C m",
-          "explanation": "\\(p=qd=(5\\times10^{-6})(10^{-3})=5\\times10^{-9}\\,\\mathrm{C\\,m}\\)",
-          "paper": "WS-3",
-          "marks": 1,
-          "sourcePage": 49,
-          "sourceNumber": 1
-        },
-        {
-          "question": "Two point charges, each of 5 μC but opposite in sign, are placed 4 cm apart. Calculate the electric field intensity at a point 4 cm from the midpoint on the axial line of the dipole.",
-          "options": {},
-          "answer": "\\(10^{8}\\) NC⁻¹",
-          "explanation": "\\(E=kq\\left[\\frac1{(0.04-0.02)^2}-\\frac1{(0.04+0.02)^2}\\right]=1.0\\times10^8\\,\\mathrm{N/C}\\)",
-          "paper": "WS-3",
-          "marks": 1,
-          "sourcePage": 49,
-          "sourceNumber": 2
-        },
-        {
-          "sourceNumber": 3,
-          "question": "Calculate the electric field of a dipole of length 10 cm with charges ±1 μC at an equatorial point 12 cm from its centre.",
-          "options": {},
-          "answer": "\\(4.096 \\times 10^{5}\\) N/C",
-          "explanation": "\\(E=\\frac{kqd}{(r^2+(d/2)^2)^{3/2}}=\\frac{9\\times10^9\\times10^{-6}\\times0.10}{(0.12^2+0.05^2)^{3/2}}\\approx4.096\\times10^5\\,\\mathrm{N/C}\\)",
-          "paper": "WS-3",
-          "marks": 1,
-          "sourcePage": 50
-        },
-        {
-          "sourceNumber": 4,
-          "question": "Two charges ±10 μC are 5.00 mm apart. Find the electric field (a) on the positive axial side, 15 cm from the centre, and (b) on the equatorial line, 15 cm from the centre.",
-          "options": {},
-          "answer": "(a) \\(2.66 \\times 10^{5}\\) N/C, along dipole moment; (b) \\(1.33 \\times 10^{5}\\) N/C, opposite to dipole moment.",
-          "explanation": "\\(p=qd=5\\times10^{-8}\\,\\mathrm{C\\,m}\\). Using the short-dipole approximation: \\(E_a=\\frac{2kp}{r^3}=2.67\\times10^5\\,\\mathrm{N/C},\\quad E_e=\\frac{kp}{r^3}=1.33\\times10^5\\,\\mathrm{N/C}\\). Axial field is along the dipole moment and equatorial field is opposite.",
-          "paper": "WS-3",
-          "marks": 1,
-          "sourcePage": 50
-        },
-        {
-          "sourceNumber": 5,
-          "question": "A dipole has charges of magnitude \\(\\frac13\\times10^{-7}\\,C\\) separated by 2 cm in a field of \\(3 \\times 10^{7}\\) N/C. Find maximum torque.",
-          "options": {},
-          "answer": "0.02 N m",
-          "explanation": "\\(\\tau_{\\max}=qdE=\\frac{10^{-7}}3(0.02)(3\\times10^7)=0.02\\,\\mathrm{N\\,m}\\)",
-          "paper": "WS-3",
-          "marks": 1,
-          "sourcePage": 50
-        },
-        {
-          "sourceNumber": 6,
-          "question": "A dipole of length 4 cm makes an angle of \\(60^\\circ\\) with a field of \\(4 \\times 10^{5}\\) N/C and experiences torque \\(8\\sqrt3\\,\\mathrm{N\\,m}\\). Find either charge.",
-          "options": {},
-          "answer": "1 mC",
-          "explanation": "\\(q=\\frac{\\tau}{dE\\sin60^\\circ}=\\frac{8\\sqrt3}{0.04(4\\times10^5)(\\sqrt3/2)}=10^{-3}\\,\\mathrm C\\)",
-          "paper": "WS-3",
-          "marks": 1,
-          "sourcePage": 50
-        }
-      ],
-      "optimal": [
-        {
           "question": "Choose the correct statement about the electric field.",
           "options": {
             "A": "It is produced by positive charges only.",
@@ -2661,7 +2599,7 @@ window.iitOthersData = {
           "question": "An electric dipole consists of two equal and opposite charges placed 2 cm apart. When the\ndipole is placed in a uniform electric field of strength \\(10^{5}\\) \\(\\mathrm{N\\,C^{-1}}\\), it experiences a maximum\ntorque of \\(0.2 \\times 10^{-3}\\) Nm. Find the magnitude of each charge.",
           "options": {
             "A": "20 µC",
-            "B": "0.1 µe",
+            "B": "\\(0.1\\,\\mu\\mathrm C\\)",
             "C": "15 µC",
             "D": "10 µC"
           },
@@ -2686,7 +2624,9 @@ window.iitOthersData = {
           "marks": 1,
           "sourcePage": 56,
           "sourceQuestion": 48
-        },
+        }
+      ],
+      "optimal": [
         {
           "question": "The distance between two fixed positive charges ‘4e’ and ‘e’ is ‘L’. A third charge ‘q’ is\nplaced at a distance x, on the line joining the two, to remain in equilibrium, from the first\ncharge, in between the charges. Then the value of x is:",
           "options": {
@@ -2750,13 +2690,13 @@ window.iitOthersData = {
         {
           "question": "Two point charges \\(q_{1}\\) = 4 μ C and \\(q_{2}\\) = 4μ C are placed 20 cm apart. The electric field due to\nthem will be zero on the line joining them at distance of ",
           "options": {
-            "A": "8 cm from \\(q_{1}\\)",
+            "A": "10 cm from either charge",
             "B": "8 cm from \\(q_{2}\\)",
             "C": "80/13 cm from \\(q_{1}\\)",
             "D": "80/13 cm from \\(q_{2}\\)"
           },
-          "answer": "",
-          "explanation": "Both charges are equal as printed, so their fields cancel 10 cm from either charge. None of the listed options matches.",
+          "answer": "A",
+          "explanation": "Equal positive charges produce equal and opposite fields at the midpoint, 10 cm from either charge.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2797,12 +2737,12 @@ window.iitOthersData = {
           "question": "Two point charges (+Q) and (-2Q) are fixed on the x -axis at positions a and 2a\nfrom orgin repectively. At what positions on the axis, the resultant electric field is\nzero. ",
           "options": {
             "A": "Only \\(x=\\sqrt2a\\)",
-            "B": "Only \\(x=-\\sqrt2a\\)",
+            "B": "\\(x=-\\sqrt{2}a\\)",
             "C": "Both \\(x=\\pm\\sqrt2a\\)",
             "D": "Only \\(x=\\frac{3a}{2}\\)"
           },
           "answer": "B",
-          "explanation": "For the zero-field point to the left of both charges, \\(\\frac{Q}{(a-x)^2}=\\frac{2Q}{(2a-x)^2}\\Rightarrow x=-\\sqrt2a\\).",
+          "explanation": "On the left of both charges, \\(\\frac{Q}{(a-x)^2}=\\frac{2Q}{(2a-x)^2}\\), giving \\(x=-\\sqrt{2}a\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
