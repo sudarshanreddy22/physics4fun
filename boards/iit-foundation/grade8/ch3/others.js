@@ -585,17 +585,17 @@ window.iitOthersData = {
             "D": "515 s"
           },
           "answer": "B",
-          "explanation": "<div style=\"margin-bottom:8px;\">To completely cross the bridge, the train must travel its own length plus the bridge length.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}v&=5\\times\\frac{1000}{3600}\\\\ &=\\frac{25}{18}\\,\\mathrm{m/s}\\\\ d&=100+500\\\\ &=600\\,\\mathrm m\\\\ t&=\\frac dv\\\\ &=\\frac{600}{25/18}\\\\ &=432\\,\\mathrm s\\end{aligned}\\)</div>",
+          "explanation": "<div>Given: train length = 100 m, bridge length = 500 m, speed = 5 km/h.</div><div>For complete crossing, add both lengths.</div>\\(\\displaystyle\\begin{aligned}d&=100+500\\\\&=600\\,\\mathrm m\\\\v&=5\\times\\frac{5}{18}\\\\&=\\frac{25}{18}\\,\\mathrm{m/s}\\\\t&=\\frac{d}{v}\\\\&=\\frac{600}{25/18}\\\\&=\\frac{600\\times18}{25}\\\\&=\\boxed{432\\,\\mathrm s}\\end{aligned}\\)",
           "paper": "WS-2",
           "marks": 1
         },
         {
-          "question": "If a car covers first 3/5 of the total distance with a speed V₁ and the remaining 2/5 of the total distance with a speed V₂, then its average speed is ……",
+          "question": "If a car covers first \\(\\frac{3}{5}\\) of the total distance with a speed V₁ and the remaining \\(\\frac{2}{5}\\) of the total distance with a speed V₂, then its average speed is ……",
           "options": {
-            "A": "1/2 √(V₁V₂)",
-            "B": "(2V₁ + V₂)/(V₁ + V₂)",
-            "C": "(5V₁V₂)/(3V₁ + 2V₂)",
-            "D": "(5V₁V₂)/(2V₁ + 3V₂)"
+            "A": "\\(\\frac12\\sqrt{V_1V_2}\\)",
+            "B": "\\(\\frac{2V_1+V_2}{V_1+V_2}\\)",
+            "C": "\\(\\frac{5V_1V_2}{3V_1+2V_2}\\)",
+            "D": "\\(\\frac{5V_1V_2}{2V_1+3V_2}\\)"
           },
           "answer": "D",
           "explanation": "<div style=\"margin-bottom:8px;\">Let the total distance be D. Calculate the time for each part separately.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t&=\\frac{3D}{5V_1}+\\frac{2D}{5V_2}\\\\ &=\\frac{D(3V_2+2V_1)}{5V_1V_2}\\\\ v_{\\rm avg}&=\\frac Dt\\\\ &=\\frac{5V_1V_2}{3V_2+2V_1}\\end{aligned}\\)</div><div>Correct option: D. The previous key was inconsistent with the calculation.</div>",
@@ -603,12 +603,12 @@ window.iitOthersData = {
           "marks": 1
         },
         {
-          "question": "A body has a speed V, 2V and 3V in the first 1/3, second 1/3 and the remaining 1/3 of the total distance respectively. Its average speed is",
+          "question": "A body has a speed V, 2V and 3V in the first \\(\\frac{1}{3}\\), second \\(\\frac{1}{3}\\) and the remaining \\(\\frac{1}{3}\\) of the total distance respectively. Its average speed is",
           "options": {
-            "A": "V",
-            "B": "2V",
-            "C": "18/11 V",
-            "D": "11/18 V"
+            "A": "\\(V\\)",
+            "B": "\\(2V\\)",
+            "C": "\\(\\frac{18V}{11}\\)",
+            "D": "\\(\\frac{11V}{18}\\)"
           },
           "answer": "C",
           "explanation": "<div style=\"margin-bottom:8px;\">Let the total distance be D. Each part has length D/3.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{3V}+\\frac D{6V}+\\frac D{9V}\\\\ &=\\frac{11D}{18V}\\\\ v_{\\rm avg}&=\\frac{18V}{11}\\end{aligned}\\)</div>",
@@ -618,10 +618,10 @@ window.iitOthersData = {
         {
           "question": "A body covers the first one-third of the distance with a velocity ‘u’, the second one one-third with a velocity ‘v’ and the remaining with a velocity ‘w’. The average velocity ‘v’ is ……",
           "options": {
-            "A": "(u + v + w)/3",
-            "B": "(uv + vw + wu)/3",
-            "C": "3uvw/(uv + vw + wu)",
-            "D": "(uv + vw + wu)/uvw"
+            "A": "\\(\\frac{u+v+w}{3}\\)",
+            "B": "\\(\\frac{uv+vw+wu}{3}\\)",
+            "C": "\\(\\frac{3uvw}{uv+vw+wu}\\)",
+            "D": "\\(\\frac{uv+vw+wu}{uvw}\\)"
           },
           "answer": "C",
           "explanation": "<div style=\"margin-bottom:8px;\">Assume motion in the same direction. Let the total distance be D.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{3u}+\\frac D{3v}+\\frac D{3w}\\\\ v_{\\rm avg}&=\\frac Dt\\\\ &=\\frac{3uvw}{uv+vw+wu}\\end{aligned}\\)</div>",
@@ -631,10 +631,10 @@ window.iitOthersData = {
         {
           "question": "There is a square field of side ‘a’ units. An insect starts from one corner and reaches the diagonally opposite corner in a time ‘t’. The magnitude of its average velocity is ..",
           "options": {
-            "A": "√2a/t",
-            "B": "2a/t",
-            "C": "4√2a/t",
-            "D": "2at"
+            "A": "\\(\\frac{\\sqrt2 a}{t}\\)",
+            "B": "\\(\\frac{2a}{t}\\)",
+            "C": "\\(\\frac{4\\sqrt2 a}{t}\\)",
+            "D": "\\(2at\\)"
           },
           "answer": "A",
           "explanation": "<div style=\"margin-bottom:8px;\">The displacement is the diagonal of the square.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=\\sqrt{a^2+a^2}\\\\ &=a\\sqrt2\\\\ v_{\\rm avg}&=\\frac{a\\sqrt2}{t}\\end{aligned}\\)</div>",
@@ -657,7 +657,7 @@ window.iitOthersData = {
         {
           "question": "A man travels 3 m along the north direction, 4 m along the east direction and then 8 m along the west direction. The magnitude of average velocity if the total time taken is 5s is…… ms⁻¹.",
           "options": {
-            "A": "√137/5",
+            "A": "\\(\\frac{\\sqrt{137}}5\\)",
             "B": "1",
             "C": "2",
             "D": "none of these"
@@ -715,17 +715,17 @@ window.iitOthersData = {
             "D": "66 km, 28 km"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">Use the circumference to determine the number of revolutions (taking π ≈ 22/7).</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=44(1.5)\\\\ &=66\\,\\mathrm{km}\\\\ C&=2\\pi(7)\\approx44\\,\\mathrm{km}\\\\ n&=66/44\\\\ &=1.5\\\\ s&=2(7)\\\\ &=14\\,\\mathrm{km}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Use the circumference to determine the number of revolutions (taking π ≈ 22/7).</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=44(1.5)\\\\ &=66\\,\\mathrm{km}\\\\ C&=2\\pi(7)\\approx44\\,\\mathrm{km}\\\\ n&=\\frac{66}{44}\\\\ &=1.5\\\\ s&=2(7)\\\\ &=14\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
         {
           "question": "A car goes round circular path of radius 14 km at a constant speed of 22 km/hr. Find the distance and displacement on the car at the end of 5 hrs.",
           "options": {
-            "A": "110 km, 110 km",
-            "B": "110 km, 14√2 km",
-            "C": "110 km, 14 km",
-            "D": "110 km, 28 km"
+            "A": "\\(110,110\\) km",
+            "B": "\\(110,\\ 14\\sqrt2\\) km",
+            "C": "\\(110,14\\) km",
+            "D": "\\(110,28\\) km"
           },
           "answer": "B",
           "explanation": "<div style=\"margin-bottom:8px;\">Use the circumference to determine the fraction of a revolution (taking π ≈ 22/7).</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=22(5)\\\\ &=110\\,\\mathrm{km}\\\\ C&=2\\pi(14)\\approx88\\,\\mathrm{km}\\\\ n&=1.25\\\\ s&=\\sqrt{14^2+14^2}\\\\ &=14\\sqrt2\\,\\mathrm{km}\\end{aligned}\\)</div>",
@@ -735,10 +735,10 @@ window.iitOthersData = {
         {
           "question": "A car moving with a constant speed of 10 m/s covers two rounds of a circular track in 10 s. Find the radius of circular track.",
           "options": {
-            "A": "25/π m",
-            "B": "π/25 m",
-            "C": "50/π m",
-            "D": "π/50 m"
+            "A": "\\(\\frac{25}{\\pi}\\) m",
+            "B": "\\(\\frac{\\pi}{25}\\) m",
+            "C": "\\(\\frac{50}{\\pi}\\) m",
+            "D": "\\(\\frac{\\pi}{50}\\) m"
           },
           "answer": "A",
           "explanation": "<div style=\"margin-bottom:8px;\">The total distance is twice the circumference.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=vt\\\\ &=10(10)\\\\ &=100\\,\\mathrm m\\\\ 4\\pi r&=100\\\\ r&=\\frac{25}{\\pi}\\,\\mathrm m\\end{aligned}\\)</div>",
@@ -785,15 +785,15 @@ window.iitOthersData = {
           "marks": 1
         },
         {
-          "question": "A car travels a speed of 120 kmph for 1 hr and halts for 1/2 hour and then resumes the journey with speed of 100 kmph for the next 1.5 hour. Find the average speed.",
+          "question": "A car travels a speed of 120 kmph for 1 hr and halts for \\(\\frac{1}{2}\\) hour and then resumes the journey with speed of 100 kmph for the next 1.5 hour. Find the average speed.",
           "options": {
             "A": "110 kmph",
             "B": "108 kmph",
             "C": "90 kmph",
-            "D": "220/3 kmph"
+            "D": "\\(\\frac{220}{3}\\) km/h"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">Include the halt in the total journey time.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=120(1)+100(1.5)\\\\ &=270\\,\\mathrm{km}\\\\ t&=1+0.5+1.5\\\\ &=3\\,\\mathrm h\\\\ v_{\\rm avg}&=270/3\\\\ &=90\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Include the halt in the total journey time.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=120(1)+100(1.5)\\\\ &=270\\,\\mathrm{km}\\\\ t&=1+0.5+1.5\\\\ &=3\\,\\mathrm h\\\\ v_{\\rm avg}&=\\frac{270}{3}\\\\ &=90\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -860,7 +860,7 @@ window.iitOthersData = {
             "D": "1.8m/s, 2.4m/s"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">Calculate total time, total distance and resultant displacement separately.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=30/2+40/4\\\\ &=25\\,\\mathrm s\\\\ d&=30+40\\\\ &=70\\,\\mathrm m\\\\ s&=\\sqrt{30^2+40^2}\\\\ &=50\\,\\mathrm m\\\\ v_{\\rm speed}&=70/25\\\\ &=2.8\\,\\mathrm{m/s}\\\\ v_{\\rm avg}&=50/25\\\\ &=2\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Calculate total time, total distance and resultant displacement separately.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac{30}{2}+\\frac{40}{4}\\\\ &=25\\,\\mathrm s\\\\ d&=30+40\\\\ &=70\\,\\mathrm m\\\\ s&=\\sqrt{30^2+40^2}\\\\ &=50\\,\\mathrm m\\\\ v_{\\rm speed}&=\\frac{70}{25}\\\\ &=2.8\\,\\mathrm{m/s}\\\\ v_{\\rm avg}&=\\frac{50}{25}\\\\ &=2\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -930,7 +930,7 @@ window.iitOthersData = {
           "marks": 1
         },
         {
-          "question": "A car is driven at an average speed of 48 km/h to cover 2/3 rd part of a journey. The average speed of the remaining journey is 51km/h. Calculate the average speed of the car for the whole journey?",
+          "question": "A car is driven at an average speed of 48 km/h to cover \\(\\frac{2}{3}\\) rd part of a journey. The average speed of the remaining journey is 51km/h. Calculate the average speed of the car for the whole journey?",
           "options": {
             "A": "50 km/h",
             "B": "48.9 km/h",
