@@ -1923,7 +1923,7 @@ window.iitOthersData = {
         {
           "question": "Two charges, one +5 μC and another −5 μC, are placed 1 mm apart. Calculate the dipole moment.",
           "options": {},
-          "answer": "5 × 10⁻⁹ C m",
+          "answer": "\\(5 \\times 10^{-9}\\) C m",
           "explanation": "",
           "paper": "WS-3",
           "marks": 1,
@@ -1933,7 +1933,7 @@ window.iitOthersData = {
         {
           "question": "Two point charges, each of 5 μC but opposite in sign, are placed 4 cm apart. Calculate the electric field intensity at a point 4 cm from the midpoint on the axial line of the dipole.",
           "options": {},
-          "answer": "10⁸ NC⁻¹",
+          "answer": "\\(10^{8}\\) NC⁻¹",
           "explanation": "",
           "paper": "WS-3",
           "marks": 1,
@@ -1944,7 +1944,7 @@ window.iitOthersData = {
           "sourceNumber": 3,
           "question": "Calculate the electric field of a dipole of length 10 cm with charges ±1 μC at an equatorial point 12 cm from its centre.",
           "options": {},
-          "answer": "4.096 × 10⁵ N/C",
+          "answer": "\\(4.096 \\times 10^{5}\\) N/C",
           "explanation": "",
           "paper": "WS-3",
           "marks": 1,
@@ -1954,7 +1954,7 @@ window.iitOthersData = {
           "sourceNumber": 4,
           "question": "Two charges ±10 μC are 5.00 mm apart. Find the electric field (a) on the positive axial side, 15 cm from the centre, and (b) on the equatorial line, 15 cm from the centre.",
           "options": {},
-          "answer": "(a) 2.66 × 10⁵ N/C, along dipole moment; (b) 1.33 × 10⁵ N/C, opposite to dipole moment.",
+          "answer": "(a) \\(2.66 \\times 10^{5}\\) N/C, along dipole moment; (b) \\(1.33 \\times 10^{5}\\) N/C, opposite to dipole moment.",
           "explanation": "",
           "paper": "WS-3",
           "marks": 1,
@@ -1962,7 +1962,7 @@ window.iitOthersData = {
         },
         {
           "sourceNumber": 5,
-          "question": "A dipole has charges of magnitude \\(\\frac13\\times10^{-7}\\,C\\) separated by 2 cm in a field of 3 × 10⁷ N/C. Find maximum torque.",
+          "question": "A dipole has charges of magnitude \\(\\frac13\\times10^{-7}\\,C\\) separated by 2 cm in a field of \\(3 \\times 10^{7}\\) N/C. Find maximum torque.",
           "options": {},
           "answer": "0.02 N m",
           "explanation": "",
@@ -1972,7 +1972,7 @@ window.iitOthersData = {
         },
         {
           "sourceNumber": 6,
-          "question": "A dipole of length 4 cm makes an angle of 60° with a field of 4 × 10⁵ N/C and experiences torque \\(8\\sqrt3\\,\\mathrm{N\\,m}\\). Find either charge.",
+          "question": "A dipole of length 4 cm makes an angle of \\(60^\\circ\\) with a field of \\(4 \\times 10^{5}\\) N/C and experiences torque \\(8\\sqrt3\\,\\mathrm{N\\,m}\\). Find either charge.",
           "options": {},
           "answer": "1 mC",
           "explanation": "",
@@ -2060,10 +2060,10 @@ window.iitOthersData = {
         {
           "question": "The electric force experienced by a charge of \\(1.0\\times10^{-6}\\,C\\) is \\(1.5\\times10^{-3}\\,N\\). Find the electric field.",
           "options": {
-            "A": "0.8 × 10³ N/C",
-            "B": "2.1 × 10³ N/C",
-            "C": "1.5 × 10³ N/C",
-            "D": "3.2 × 10³ N/C"
+            "A": "\\(0.8 \\times 10^{3}\\) N/C",
+            "B": "\\(2.1 \\times 10^{3}\\) N/C",
+            "C": "\\(1.5 \\times 10^{3}\\) N/C",
+            "D": "\\(3.2 \\times 10^{3}\\) N/C"
           },
           "answer": "C",
           "explanation": "E=F/q=1500 N/C",
@@ -2073,12 +2073,12 @@ window.iitOthersData = {
           "sourceQuestion": 6
         },
         {
-          "question": "The magnitude of electric field intensity E, such that an electron placed in the field\nwould experience an electrical force equal to its weight is [me = 9×10–31 kg, qe = 1.6 ×\n10–19 C, g = 10 m/s2]",
+          "question": "Find the electric field for which the electrical force on an electron equals its weight. Given \\(m_e=9\\times10^{-31}\\,\\mathrm{kg},\\ q_e=1.6\\times10^{-19}\\,\\mathrm C,\\ g=10\\,\\mathrm{m\\,s^{-2}}\\).",
           "options": {
-            "A": "5.6×10⁻⁷ N/C",
-            "B": "5.6×10⁻⁸ N/C",
-            "C": "5.6×10⁻¹⁰ N/C",
-            "D": "5.6×10⁻¹¹ N/C"
+            "A": "\\(5.6\\times 10^{-7}\\) N/C",
+            "B": "\\(5.6\\times 10^{-8}\\) N/C",
+            "C": "\\(5.6\\times 10^{-10}\\) N/C",
+            "D": "\\(5.6\\times 10^{-11}\\) N/C"
           },
           "answer": "D",
           "explanation": "E=mg/e",
@@ -2088,12 +2088,12 @@ window.iitOthersData = {
           "sourceQuestion": 7
         },
         {
-          "question": "The magnitude of the electric field required to just balance in air a 2 × 10−4 kg liquid drop\ncarrying a charge of 9.8×10−2 μC is",
+          "question": "The magnitude of the electric field required to just balance in air a \\(2 \\times 10^{-4}\\) kg liquid drop\ncarrying a charge of \\(9.8\\times 10^{-2}\\) μC is",
           "options": {
-            "A": "10⁴ N/C",
-            "B": "2×10⁴ N/C",
-            "C": "4×10⁴ N/C",
-            "D": "5×10⁴ N/C"
+            "A": "\\(10^{4}\\) N/C",
+            "B": "\\(2\\times 10^{4}\\) N/C",
+            "C": "\\(4\\times 10^{4}\\) N/C",
+            "D": "\\(5\\times 10^{4}\\) N/C"
           },
           "answer": "B",
           "explanation": "E=mg/q",
@@ -2105,10 +2105,10 @@ window.iitOthersData = {
         {
           "question": "A point charge q produces an electric field of magnitude 2NC–1 at a point distance 0.25 m\nfrom it. The value of charge is",
           "options": {
-            "A": "1.39×10⁻¹¹ C",
-            "B": "1.39×10¹¹ C",
-            "C": "13.9×10⁻¹¹ C",
-            "D": "1.39×10¹¹ C"
+            "A": "\\(1.39\\times 10^{-11}\\) C",
+            "B": "\\(1.39\\times 10^{11}\\) C",
+            "C": "\\(13.9\\times 10^{-11}\\) C",
+            "D": "\\(1.39\\times 10^{11}\\) C"
           },
           "answer": "A",
           "explanation": "q=Er²/k",
@@ -2223,11 +2223,11 @@ window.iitOthersData = {
           "sourceQuestion": 16
         },
         {
-          "question": "Figure shown the electric lines of force emerging from a charged body. If the electric\nfield at A and B are EA and EB respectively and if the displacement between A and B is\nr, then",
+          "question": "Figure shown the electric lines of force emerging from a charged body. If the electric\nfield at A and B are \\(E_{A}\\) and \\(E_{B}\\) respectively and if the displacement between A and B is\nr, then",
           "options": {
-            "A": "EA > EB",
-            "B": "EA < EB",
-            "C": "EA = EB",
+            "A": "\\(E_{A}\\) > \\(E_{B}\\)",
+            "B": "\\(E_{A}\\) < \\(E_{B}\\)",
+            "C": "\\(E_{A}\\) = \\(E_{B}\\)",
             "D": "nothing can be said"
           },
           "answer": "",
@@ -2272,12 +2272,12 @@ window.iitOthersData = {
           "sourceNote": "Original figure required; diagram not yet restored."
         },
         {
-          "question": "The given figure gives electric lines of force due to two charges q1 and q2. What are the\nsigns of the two charges?",
+          "question": "The given figure gives electric lines of force due to two charges \\(q_{1}\\) and \\(q_{2}\\). What are the\nsigns of the two charges?",
           "options": {
             "A": "Both are negative",
             "B": "Both are positive",
-            "C": "q1 is positive but q2 is negativ",
-            "D": "q1 is negative but q2 is positive"
+            "C": "\\(q_{1}\\) is positive but \\(q_{2}\\) is negativ",
+            "D": "\\(q_{1}\\) is negative but \\(q_{2}\\) is positive"
           },
           "answer": "",
           "explanation": "",
@@ -2328,10 +2328,10 @@ window.iitOthersData = {
         {
           "question": "The figure shown some of the electric field lines corresponding to an electric field. The\nfigure suggests.",
           "options": {
-            "A": "EA > EB > EC",
-            "B": "EA = EB = EC",
-            "C": "EA = EC > EB",
-            "D": "EA = EC < EB"
+            "A": "\\(E_{A}\\) > \\(E_{B}\\) > \\(E_{C}\\)",
+            "B": "\\(E_{A}\\) = \\(E_{B}\\) = \\(E_{C}\\)",
+            "C": "\\(E_{A}\\) = \\(E_{C}\\) > \\(E_{B}\\)",
+            "D": "\\(E_{A}\\) = \\(E_{C}\\) < \\(E_{B}\\)"
           },
           "answer": "",
           "explanation": "",
@@ -2372,12 +2372,12 @@ window.iitOthersData = {
           "sourceQuestion": 27
         },
         {
-          "question": "In the electric field shown in figure, the electric field lines on the left have twice the\nseparation as that between those on the right. If the magnitude of the field at point A is\n40 NC-1, calculate the force experienced by a proton placed at point A. Also find the\nmagnitude of electric field at the point B.",
+          "question": "In the electric field shown in figure, the electric field lines on the left have twice the\nseparation as that between those on the right. If the magnitude of the field at point A is\n40 \\(\\mathrm{N\\,C^{-1}}\\), calculate the force experienced by a proton placed at point A. Also find the\nmagnitude of electric field at the point B.",
           "options": {
-            "A": "64 x 10 -18\nN, 15 NC\n-1",
-            "B": "6.4 x 10-18\nN, 20 NC-1",
-            "C": "64 x 10 -18\nN, 25 NC -1",
-            "D": "6.4 x 10 -18\nN, 30 NC-1"
+            "A": "\\(64\\times 10^{-18}\\) N, 15 N/C",
+            "B": "\\(6.4\\times 10^{-18}\\) N, 20 N/C",
+            "C": "\\(64\\times 10^{-18}\\) N, 25 N/C",
+            "D": "\\(6.4\\times 10^{-18}\\) N, 30 N/C"
           },
           "answer": "",
           "explanation": "",
@@ -2390,10 +2390,10 @@ window.iitOthersData = {
         {
           "question": "An electron and a proton are at a distance of 1 Å. The moment of this dipole will be (Cm)",
           "options": {
-            "A": "16 x 1019",
-            "B": "1.6 × 10-29",
-            "C": "3.2 × 1019",
-            "D": "3.2 × 1029"
+            "A": "\\(16\\times 10^{19}\\) C m",
+            "B": "\\(1.6\\times 10^{-29}\\) C m",
+            "C": "\\(3.2\\times 10^{19}\\) C m",
+            "D": "\\(3.2\\times 10^{29}\\) C m"
           },
           "answer": "B",
           "explanation": "",
@@ -2426,7 +2426,7 @@ window.iitOthersData = {
             "D": "4ql"
           },
           "answer": "C",
-          "explanation": "The vector sum has magnitude √3ql.",
+          "explanation": "The vector sum has magnitude \\(\\sqrt{3}\\)ql.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2450,10 +2450,10 @@ window.iitOthersData = {
         {
           "question": "What is the angle between the electric dipole moment and the electric field strength due\nto it on the equatorial line",
           "options": {
-            "A": "0°",
-            "B": "90°",
-            "C": "180°",
-            "D": "120°"
+            "A": "\\(0^\\circ\\)",
+            "B": "\\(90^\\circ\\)",
+            "C": "\\(180^\\circ\\)",
+            "D": "\\(120^\\circ\\)"
           },
           "answer": "C",
           "explanation": "",
@@ -2501,7 +2501,7 @@ window.iitOthersData = {
             "D": "\\(qr/d^3\\)"
           },
           "answer": "D",
-          "explanation": "Axial field is proportional to p/d³.",
+          "explanation": "Axial field is proportional to p/\\(d^{3}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2510,10 +2510,10 @@ window.iitOthersData = {
         {
           "question": "When an electric dipole \\(\\vec P\\) is placed in a uniform electric field \\(\\vec E\\), at what angle between them is torque maximum?",
           "options": {
-            "A": "90°",
-            "B": "0°",
-            "C": "180°",
-            "D": "45°"
+            "A": "\\(90^\\circ\\)",
+            "B": "\\(0^\\circ\\)",
+            "C": "\\(180^\\circ\\)",
+            "D": "\\(45^\\circ\\)"
           },
           "answer": "A",
           "explanation": "τ=pE sin θ.",
@@ -2538,11 +2538,11 @@ window.iitOthersData = {
           "sourceQuestion": 38
         },
         {
-          "question": "If Ea, be the electric field strength of a short dipole at a point on its axial line and Ee, that\non the equatorial line at the same distance, then",
+          "question": "If \\(E_{a}\\), be the electric field strength of a short dipole at a point on its axial line and \\(E_{e}\\), that\non the equatorial line at the same distance, then",
           "options": {
-            "A": "Ee = 2Ea",
-            "B": "Ea = 2Ee",
-            "C": "Ea = Ee",
+            "A": "\\(E_e=2E_a\\)",
+            "B": "\\(E_a=2E_e\\)",
+            "C": "\\(E_a=E_e\\)",
             "D": "None of the above"
           },
           "answer": "B",
@@ -2572,11 +2572,11 @@ window.iitOthersData = {
           "options": {
             "A": "1:1",
             "B": "1:2",
-            "C": "1:√2",
-            "D": "∛2:1"
+            "C": "1:\\(\\sqrt{2}\\)",
+            "D": "\\(\\sqrt[3]{2}\\):1"
           },
           "answer": "D",
-          "explanation": "2/x³=1/y³.",
+          "explanation": "2/\\(x^{3}\\)=1/\\(y^{3}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2598,12 +2598,12 @@ window.iitOthersData = {
           "sourceQuestion": 42
         },
         {
-          "question": "A dipole of charges ±2 × 10⁻⁶ C separated by 3 cm is placed in a field of 2 × 10⁵ N/C. Find maximum torque.",
+          "question": "A dipole of charges ±\\(2 \\times 10^{-6}\\) C separated by 3 cm is placed in a field of \\(2 \\times 10^{5}\\) N/C. Find maximum torque.",
           "options": {
-            "A": "12 × 10-1 Nm",
-            "B": "12 × 10-3 Nm",
-            "C": "24 × 10-1 Nm",
-            "D": "24 × 10-3 Nm"
+            "A": "\\(12 \\times 10^{-1}\\) Nm",
+            "B": "\\(12 \\times 10^{-3}\\) Nm",
+            "C": "\\(24 \\times 10^{-1}\\) Nm",
+            "D": "\\(24 \\times 10^{-3}\\) Nm"
           },
           "answer": "B",
           "explanation": "τ=pE=0.012 N m.",
@@ -2613,12 +2613,12 @@ window.iitOthersData = {
           "sourceQuestion": 43
         },
         {
-          "question": "For a dipole q=2 × 10⁻⁶ C, separation d=0.01 m and E=5 × 10⁵ N/C, calculate maximum torque.",
+          "question": "For a dipole q=\\(2 \\times 10^{-6}\\) C, separation d=0.01 m and E=\\(5 \\times 10^{5}\\) N/C, calculate maximum torque.",
           "options": {
-            "A": "1×10⁻³ N m",
-            "B": "10×10⁻³ N m⁻¹",
-            "C": "10×10⁻³ N m",
-            "D": "1×10⁻² N m²"
+            "A": "\\(1\\times 10^{-3}\\) N m",
+            "B": "\\(10\\times 10^{-3}\\) N \\(m^{-1}\\)",
+            "C": "\\(10\\times 10^{-3}\\) N m",
+            "D": "\\(1\\times 10^{-2}\\) N \\(m^{2}\\)"
           },
           "answer": "C",
           "explanation": "τ=qdE=0.01 N m.",
@@ -2628,7 +2628,7 @@ window.iitOthersData = {
           "sourceQuestion": 44
         },
         {
-          "question": "The electric field due to an electric dipole at a distance r from its centre in axial position\nis E. If the dipole is rotated through an angle of 90° about its perpendicular axis, the\nelectric field at the same point will be",
+          "question": "The electric field due to an electric dipole at a distance r from its centre in axial position\nis E. If the dipole is rotated through an angle of \\(90^\\circ\\) about its perpendicular axis, the\nelectric field at the same point will be",
           "options": {
             "A": "E",
             "B": "E/4",
@@ -2643,11 +2643,11 @@ window.iitOthersData = {
           "sourceQuestion": 45
         },
         {
-          "question": "A neutral water molecule (H 2O) in its vapour state has an electric dipole moment of\nmagnitude 6.4 x 10-30 C-m. How far apart are the molecules centres of positive and\nnegative charge",
+          "question": "A neutral water molecule (\\(\\mathrm{H_2O}\\)) in its vapour state has an electric dipole moment of\nmagnitude \\(6.4 \\times 10^{-30}\\) C-m. How far apart are the molecules centres of positive and\nnegative charge",
           "options": {
             "A": "4 nm",
-            "B": "4 A",
-            "C": "4 μ m",
+            "B": "4 Å",
+            "C": "4 μm",
             "D": "4 pm"
           },
           "answer": "",
@@ -2658,7 +2658,7 @@ window.iitOthersData = {
           "sourceQuestion": 46
         },
         {
-          "question": "An electric dipole consists of two equal and opposite charges placed 2 cm apart. When the\ndipole is placed in a uniform electric field of strength 105 NC-1, it experiences a maximum\ntorque of 0.2 x 10-3 Nm. Find the magnitude of each charge.",
+          "question": "An electric dipole consists of two equal and opposite charges placed 2 cm apart. When the\ndipole is placed in a uniform electric field of strength \\(10^{5}\\) \\(\\mathrm{N\\,C^{-1}}\\), it experiences a maximum\ntorque of \\(0.2 \\times 10^{-3}\\) Nm. Find the magnitude of each charge.",
           "options": {
             "A": "20 µC",
             "B": "0.1 µe",
@@ -2688,12 +2688,12 @@ window.iitOthersData = {
           "sourceQuestion": 48
         },
         {
-          "question": "The distance between two fixed positive charges ‘4e’ and ‘e’ is ‘L’. A third charge ‘q’ is\nplaced at a distance x, on the line joining the two, to remain in equilibrium, from the first\ncharge, in between the charges. Then the value of x is \n4e x\nq e\nL\nL 2L 3L 3L",
+          "question": "The distance between two fixed positive charges ‘4e’ and ‘e’ is ‘L’. A third charge ‘q’ is\nplaced at a distance x, on the line joining the two, to remain in equilibrium, from the first\ncharge, in between the charges. Then the value of x is:",
           "options": {
-            "A": "L/3",
-            "B": "2L/3",
-            "C": "3L/2",
-            "D": "3L/4"
+            "A": "\\(\\frac L3\\)",
+            "B": "\\(\\frac{2L}3\\)",
+            "C": "\\(\\frac{3L}2\\)",
+            "D": "\\(\\frac{3L}4\\)"
           },
           "answer": "B",
           "explanation": "",
@@ -2718,12 +2718,12 @@ window.iitOthersData = {
           "sourceQuestion": 2
         },
         {
-          "question": "An infinite number of electric charges each equal to 5nC (magnitude) are placed along X\n- axis at x =1cm, x = 2cm, x = 4 cm, x = 8cm and so on. In the set up if the consectuive\n( 4πε = 9 × 10 )\ncharges have opposite sign, then the electric field in N/C at x =0 is",
+          "question": "An infinite number of charges, each of magnitude 5 nC, are placed along the x-axis at x = 1 cm, 2 cm, 4 cm, 8 cm, and so on. Consecutive charges have opposite signs. Find the electric field at x = 0, given \\(\\frac1{4\\pi\\epsilon_0}=9\\times10^9\\,\\mathrm{N\\,m^2\\,C^{-2}}\\).",
           "options": {
-            "A": "12×10⁴",
-            "B": "24×10⁴",
-            "C": "36×10⁴",
-            "D": "48×10⁴"
+            "A": "\\(12\\times 10^{4}\\)",
+            "B": "\\(24\\times 10^{4}\\)",
+            "C": "\\(36\\times 10^{4}\\)",
+            "D": "\\(48\\times 10^{4}\\)"
           },
           "answer": "C",
           "explanation": "",
@@ -2735,10 +2735,10 @@ window.iitOthersData = {
         {
           "question": "Three charges each of +4 μ C , are placed at the corners B,C, D of a square ABCD of side\n1m. The elctric field at the center O of the square is",
           "options": {
-            "A": "7.2×10⁴ N/C towards A",
-            "B": "7.2×10⁴ N/C towards C",
-            "C": "3.6×10⁴ N/C towards A",
-            "D": "3.6×10⁴ N/C towards C"
+            "A": "\\(7.2\\times 10^{4}\\) N/C towards A",
+            "B": "\\(7.2\\times 10^{4}\\) N/C towards C",
+            "C": "\\(3.6\\times 10^{4}\\) N/C towards A",
+            "D": "\\(3.6\\times 10^{4}\\) N/C towards C"
           },
           "answer": "A",
           "explanation": "",
@@ -2748,12 +2748,12 @@ window.iitOthersData = {
           "sourceQuestion": 4
         },
         {
-          "question": "Two point charges q1 = 4 μ C and q2 = 4μ C are placed 20 cm apart. The electric field due to\nthem will be zero on the line joining them at distance of \n80 80",
+          "question": "Two point charges \\(q_{1}\\) = 4 μ C and \\(q_{2}\\) = 4μ C are placed 20 cm apart. The electric field due to\nthem will be zero on the line joining them at distance of ",
           "options": {
-            "A": "8 cm from q₁",
-            "B": "8 cm from q₂",
-            "C": "80/13 cm from q₁",
-            "D": "80/13 cm from q₂"
+            "A": "8 cm from \\(q_{1}\\)",
+            "B": "8 cm from \\(q_{2}\\)",
+            "C": "80/13 cm from \\(q_{1}\\)",
+            "D": "80/13 cm from \\(q_{2}\\)"
           },
           "answer": "",
           "explanation": "",
@@ -2764,12 +2764,12 @@ window.iitOthersData = {
           "sourceNote": "As printed, both charges are equal; the zero-field point is 10 cm from either, absent from options."
         },
         {
-          "question": "Five point charges (+q each) are placed at the five vertices aregular hexagon of\nside 2a. What is the magnitude of the net electric field at the centre of the\nhexagon? \n1 q q 2q 5q",
+          "question": "Five point charges (+q each) are placed at the five vertices a regular hexagon of\nside 2a. What is the magnitude of the net electric field at the centre of the\nhexagon? ",
           "options": {
-            "A": "\\(q/(4\\pi\\epsilon_0 a^2)\\)",
-            "B": "\\(q/(16\\pi\\epsilon_0 a^2)\\)",
-            "C": "\\(2q/(4\\pi\\epsilon_0 a^2)\\)",
-            "D": "\\(5q/(16\\pi\\epsilon_0 a^2)\\)"
+            "A": "\\(\\frac{q}{4\\pi\\epsilon_0a^2}\\)",
+            "B": "\\(\\frac{q}{16\\pi\\epsilon_0a^2}\\)",
+            "C": "\\(\\frac{2q}{4\\pi\\epsilon_0a^2}\\)",
+            "D": "\\(\\frac{5q}{16\\pi\\epsilon_0a^2}\\)"
           },
           "answer": "B",
           "explanation": "",
@@ -2779,11 +2779,11 @@ window.iitOthersData = {
           "sourceQuestion": 6
         },
         {
-          "question": "Three point charges, each +q, are placed at the corners of an equilateral triangle\nof side r. The elctric field at the circumcetre will be ( k = 4πε ) \n3kq kq 3kq",
+          "question": "Three point charges, each +q, are placed at the corners of an equilateral triangle of side r. Find the electric field at its circumcentre, where \\(k=\\frac1{4\\pi\\epsilon_0}\\).",
           "options": {
-            "A": "3kq/r²",
-            "B": "kq/r²",
-            "C": "3kq/(2r²)",
+            "A": "\\(\\frac{3kq}{r^2}\\)",
+            "B": "\\(\\frac{kq}{r^2}\\)",
+            "C": "\\(\\frac{3kq}{2r^2}\\)",
             "D": "Zero"
           },
           "answer": "D",
@@ -2794,27 +2794,28 @@ window.iitOthersData = {
           "sourceQuestion": 7
         },
         {
-          "question": "Two point charges (+Q) and (-2Q) are fixed on the x -axis at positions a and 2a\nfrom orgin repectively. At what positions on the axis, the resultant electric field is\nzero. \n3a",
+          "question": "Two point charges (+Q) and (-2Q) are fixed on the x -axis at positions a and 2a\nfrom orgin repectively. At what positions on the axis, the resultant electric field is\nzero. ",
           "options": {
-            "A": "Only x = 2a",
-            "B": "Only x = − 2a",
-            "C": "both x = ± 2a",
-            "D": "Only x ="
+            "A": "Only \\(x=\\sqrt2a\\)",
+            "B": "Only \\(x=-\\sqrt2a\\)",
+            "C": "Both \\(x=\\pm\\sqrt2a\\)",
+            "D": "Only \\(x=\\frac{3a}{2}\\)"
           },
           "answer": "",
           "explanation": "",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
-          "sourceQuestion": 8
+          "sourceQuestion": 8,
+          "sourceNote": "Radical in the first three options inferred from the source extraction; verify against printed figure."
         },
         {
-          "question": "Two point charges Q and -3Q are placed at some distance apart. If the electric\nfield at the location of Q is E then at the locality of -3Q, it is \nE E",
+          "question": "Two point charges Q and -3Q are placed at some distance apart. If the electric\nfield at the location of Q is E then at the locality of -3Q, it is ",
           "options": {
-            "A": "−E",
-            "B": "E/3",
-            "C": "−3E",
-            "D": "−E/3"
+            "A": "\\(-E\\)",
+            "B": "\\(\\frac E3\\)",
+            "C": "\\(-3E\\)",
+            "D": "\\(-\\frac E3\\)"
           },
           "answer": "B",
           "explanation": "",
@@ -2841,10 +2842,10 @@ window.iitOthersData = {
         {
           "question": "The electric intensity due to a dipole of length 10 cm and having a charge of 500 μ C, at a\npoint on the axis at a distance 20 cm from one of the charges as shown in the figure in air, is",
           "options": {
-            "A": "6.25 × 107 N/C",
-            "B": "9.28 × 107 N/C",
-            "C": "13.1 × 1111 N/C",
-            "D": "20.5 × 107 N/C\n̂ p̂"
+            "A": "\\(6.25\\times 10^{7}\\) N/C",
+            "B": "\\(9.28\\times 10^{7}\\) N/C",
+            "C": "\\(13.1\\times 10^{11}\\) N/C",
+            "D": "\\(20.5\\times 10^{7}\\) N/C"
           },
           "answer": "",
           "explanation": "",
@@ -2871,10 +2872,10 @@ window.iitOthersData = {
         {
           "question": "An electric dipole of moment p and moment of inertia I is slightly displaced from stable equilibrium in a uniform electric field E. Find its angular frequency.",
           "options": {
-            "A": "\\((pE/I)^{1/2}\\)",
-            "B": "\\((pE/I)^{3/2}\\)",
-            "C": "\\((I/pE)^{1/2}\\)",
-            "D": "\\((p/IE)^{1/2}\\)"
+            "A": "\\(\\sqrt{\\frac{pE}{I}}\\)",
+            "B": "\\(\\left(\\frac{pE}{I}\\right)^{3/2}\\)",
+            "C": "\\(\\sqrt{\\frac{I}{pE}}\\)",
+            "D": "\\(\\sqrt{\\frac{p}{IE}}\\)"
           },
           "answer": "A",
           "explanation": "",
