@@ -4029,7 +4029,7 @@ function renderObjective(data, wrap) {
       const shuffled=pairs.map((p,idx)=>({text:p[1],idx})).sort(()=>Math.random()-0.5);
       body=`<div class="match-wrap" data-total="${pairs.length}"><div class="match-col">${pairs.map((p,idx)=>`<div class="match-item" data-match-left="${idx}">${mathify(p[0])}</div>`).join('')}</div><div class="match-col">${shuffled.map(s=>`<div class="match-item match-right" data-match-right="${s.idx}">${mathify(s.text)}</div>`).join('')}</div></div><div class="match-result"></div><button class="fib-check-btn" onclick="checkMatch(this)">Check Matches</button>`;
     }
-    return `<div class="mcq-card" data-qtype="${type}"><div class="mcq-header"><span class="qno ${badgeClass}">${num}</span><div class="mcq-question" style="margin-bottom:0;">${questionOverride!==null?questionOverride:mathify(q.question)}</div></div>${body}${q.explanation?`<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${mathify(q.explanation)}</div>`:''}</div>`;
+    return `<div class="mcq-card" data-qtype="${type}"><div class="mcq-header"><span class="qno ${badgeClass}">${num}</span><div class="mcq-question" style="margin-bottom:0;">${questionOverride!==null?questionOverride:mathify(q.question)}</div></div>${body}${q.explanation?`<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);">${mathify(q.explanation)}</div>`:''}</div>`;
   };
   if (usePalette) {
     let html = '';
@@ -4371,7 +4371,7 @@ function buildQuestionCardsHTML(qArray, opts) {
       ${imageHtml}
       <div class="options ${optionsLayoutClass(options)}" data-answer="${q.answer}">${optsHtml}</div>
       ${showAnswerButton && q.answer ? `<div class="iit-answer-wrap"><div class="iit-answer-box">${mathify(q.answer)}</div></div>` : ''}
-      ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);"><strong>Explanation:</strong> ${mathify(q.explanation)}</div>` : ''}
+      ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);">${mathify(q.explanation)}</div>` : ''}
     </div>`;
   }).join('') : `<div class="no-content-state"><div class="no-content-icon">🎯</div><h3>No questions yet</h3><p>Questions for this section are being prepared.</p></div>`;
 
