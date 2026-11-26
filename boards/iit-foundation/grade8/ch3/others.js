@@ -65,7 +65,7 @@ window.iitOthersData = {
             "D": "None of these"
           },
           "answer": "B",
-          "explanation": "For half revolution, Distance = πr and Displacement = 2r. Hence ratio = π/2.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=\\pi r\\\\ s&=2r\\\\ \\frac ds&=\\frac{\\pi r}{2r}=\\frac\\pi2\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -78,7 +78,7 @@ window.iitOthersData = {
             "D": "10√2 km"
           },
           "answer": "B",
-          "explanation": "Total distance = 3 + 6 + 5 = 14 km.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=d_1+d_2+d_3\\\\ &=3+6+5\\\\ &=14\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -91,7 +91,7 @@ window.iitOthersData = {
             "D": "14 km"
           },
           "answer": "A",
-          "explanation": "Net east = 8 km, north = 6 km. Displacement = √(8² + 6²) = 10 km.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s_x&=3+5=8\\,\\mathrm{km}\\\\ s_y&=6\\,\\mathrm{km}\\\\ s&=\\sqrt{s_x^2+s_y^2}\\\\ &=\\sqrt{64+36}=10\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -182,7 +182,7 @@ window.iitOthersData = {
             "D": "Zero"
           },
           "answer": "C",
-          "explanation": "Net displacement = 10 − 5 = 5 km towards east.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=10-5\\\\ &=5\\,\\mathrm{km}\\ \\text{east}\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -210,7 +210,7 @@ window.iitOthersData = {
             "D": "19 m"
           },
           "answer": "D",
-          "explanation": "Distance covered = 4 + 3 + 12 = 19 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=4+3+12\\\\ &=19\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -223,7 +223,7 @@ window.iitOthersData = {
             "D": "24 m"
           },
           "answer": "B",
-          "explanation": "Displacement = √(6² + 8² + 10²) = √200 = 10√2 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=\\sqrt{6^2+8^2+10^2}\\\\ &=\\sqrt{200}\\\\ &=10\\sqrt2\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -236,7 +236,7 @@ window.iitOthersData = {
             "D": "4πr"
           },
           "answer": "D",
-          "explanation": "Distance in one revolution = 2πr. Therefore, distance in two revolutions = 4πr.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=2(2\\pi r)\\\\ &=4\\pi r\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -275,7 +275,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "A",
-          "explanation": "Displacement = √(8² + 6²) = √100 = 10 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=\\sqrt{8^2+6^2}\\\\ &=\\sqrt{100}=10\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -288,7 +288,7 @@ window.iitOthersData = {
             "D": "7 m"
           },
           "answer": "A",
-          "explanation": "Displacement = final position − initial position = 55 − 50 = 5 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=x_f-x_i\\\\ &=55-50=5\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -301,7 +301,7 @@ window.iitOthersData = {
             "D": "20 m"
           },
           "answer": "C",
-          "explanation": "The stone travels 25 m upward and 25 m downward. Total distance = 25 + 25 = 50 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=25+25\\\\ &=50\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -314,7 +314,7 @@ window.iitOthersData = {
             "D": "11,500 m"
           },
           "answer": "C",
-          "explanation": "The two ends of the semicircular track are opposite ends of its diameter. Displacement = 2r = 2 × 700 = 1400 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=2r\\\\ &=2(700)=1400\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -327,7 +327,7 @@ window.iitOthersData = {
             "D": "75 m, 110 m"
           },
           "answer": "B",
-          "explanation": "Distance = 50 + 40 + 20 = 110 m. Net northward displacement = 50 − 20 = 30 m and eastward displacement = 40 m. Magnitude = √(30² + 40²) = 50 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=50+40+20=110\\,\\mathrm m\\\\ s_y&=50-20=30\\,\\mathrm m\\\\ s_x&=40\\,\\mathrm m\\\\ s&=\\sqrt{30^2+40^2}=50\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         }
@@ -342,7 +342,7 @@ window.iitOthersData = {
             "D": "Data insufficient"
           },
           "answer": "C",
-          "explanation": "Both Distance and Displacement will be same.",
+          "explanation": "<div style=\"margin-top:6px;\">The displacements are equal if the player and ball start at the same point and meet at the same point. Their path lengths need not be equal.</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -355,7 +355,7 @@ window.iitOthersData = {
             "D": "Total distance covered is zero"
           },
           "answer": "C",
-          "explanation": "The ball returns to its starting point, so its displacement is zero.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=2(40)=80\\,\\mathrm m\\\\ s&=0\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -368,7 +368,7 @@ window.iitOthersData = {
             "D": "0 m, 2 m"
           },
           "answer": "B",
-          "explanation": "Distance = 10 + 20 = 30 m. Displacement = final position − initial position = -10 − 0 = -10 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=10+20=30\\,\\mathrm m\\\\ s&=x_f-x_i=-10-0=-10\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -381,7 +381,7 @@ window.iitOthersData = {
             "D": "0 m"
           },
           "answer": "A",
-          "explanation": "Net northward displacement = 30√3 − 10√3 = 20√3 m and eastward displacement = 20 m. The resultant displacement is 40 m, directed 30° east of north. The supplied answer key marks option A.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s_y&=30\\sqrt3-10\\sqrt3=20\\sqrt3\\\\ s_x&=20\\\\ s&=\\sqrt{1200+400}=40\\,\\mathrm m\\\\ \\theta&=\\tan^{-1}\\frac{20}{20\\sqrt3}=30^\\circ\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -394,7 +394,7 @@ window.iitOthersData = {
             "D": "10 km"
           },
           "answer": "A",
-          "explanation": "Total distance = 3 + 4 + 9 = 16 km. Net eastward displacement = 12 km and northward displacement = 4 km, giving displacement = √(12² + 4²) ≈ 12.6 km. The supplied answer key marks option A.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=3+4+9=16\\,\\mathrm{km}\\\\ s&=\\sqrt{(3+9)^2+4^2}\\\\ &=4\\sqrt{10}\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -407,7 +407,7 @@ window.iitOthersData = {
             "D": "5 km"
           },
           "answer": "D",
-          "explanation": "The two displacements are perpendicular. Magnitude of displacement = √(3² + 4²) = 5 km.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=\\sqrt{3^2+4^2}=5\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -420,7 +420,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "C",
-          "explanation": "Resolving the three displacement vectors into components gives a resultant displacement of 10 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s_x&=10\\cos30^\\circ-10\\cos30^\\circ=0\\\\ s_y&=10\\sin30^\\circ-10+10\\sin30^\\circ=0\\\\ s&=0\\end{aligned}\\)</div><div style=\"margin-top:6px;\">The stated directions give zero displacement, contrary to the previous solution.</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -433,7 +433,7 @@ window.iitOthersData = {
             "D": "0 m, 0"
           },
           "answer": "C",
-          "explanation": "Distance = 40 + 40 = 80 m. Since the body returns to its initial position, displacement = 0.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=40+40=80\\,\\mathrm m\\\\ s&=0\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -448,7 +448,7 @@ window.iitOthersData = {
             "D": "35 m"
           },
           "answer": "A",
-          "explanation": "Adding the lengths of all the path segments gives a total distance of 85 m.",
+          "explanation": "<div style=\"margin-top:6px;\">Add the lengths of the consecutive segments P–A–T–H–S. The existing solution reports 85 m; the segment lengths must be checked against the figure.</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -463,7 +463,7 @@ window.iitOthersData = {
             "D": "70 m"
           },
           "answer": "C",
-          "explanation": "The maximum displacement is between two opposite vertices of the regular hexagon. This is equal to twice the side = 2 × 18 = 36 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s_{\\max}&=2a=2(18)=36\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -476,7 +476,7 @@ window.iitOthersData = {
             "D": "None"
           },
           "answer": "A",
-          "explanation": "Total distance = 2 + 8 + 4 + 12 = 26 m. Net eastward displacement = 6 m and net northward displacement = 4 m. Therefore displacement = √(6² + 4²) = √52 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=2+8+4+12=26\\,\\mathrm m\\\\ s_x&=2+4=6\\\\ s_y&=12-8=4\\\\ s&=\\sqrt{36+16}=2\\sqrt{13}\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -489,7 +489,7 @@ window.iitOthersData = {
             "D": "4√7 m"
           },
           "answer": "C",
-          "explanation": "The two displacement vectors are 60° apart. Resultant = √(4² + 4² + 2 × 4 × 4 × cos60°) = 4√3 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=\\sqrt{4^2+4^2+2(4)(4)\\cos60^\\circ}\\\\ &=\\sqrt{48}=4\\sqrt3\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -502,7 +502,7 @@ window.iitOthersData = {
             "D": "2π + 2 m"
           },
           "answer": "B",
-          "explanation": "For a wheel of radius 1 m rolling through half a rotation, the point of contact moves through the cycloidal path. The supplied answer key marks option B.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s_x&=\\pi r=\\pi\\,\\mathrm m\\\\ s_y&=2r=2\\,\\mathrm m\\\\ s&=\\sqrt{\\pi^2+4}\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -515,7 +515,7 @@ window.iitOthersData = {
             "D": "None"
           },
           "answer": "B",
-          "explanation": "Distance = 10 + 6 + 4 = 20 m. The supplied answer key marks option B.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=10+6+4=20\\,\\mathrm m\\\\ s&=\\sqrt{(10+4)^2+6^2}\\\\ &=2\\sqrt{58}\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         },
@@ -528,7 +528,7 @@ window.iitOthersData = {
             "D": "2r, zero"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=2\\pi r\\\\ s&=0\\end{aligned}\\)</div>",
           "paper": "WS-1",
           "marks": 1
         }
@@ -546,7 +546,7 @@ window.iitOthersData = {
             "D": "It is possible to have a situation in which the speed of a particle is never zero but the magnitude of average velocity in an interval is zero."
           },
           "answer": "D",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"margin-top:6px;\">Distance is the actual path length; displacement is the change in position. Its magnitude cannot exceed distance.</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -559,7 +559,7 @@ window.iitOthersData = {
             "D": "average speed and velocity cannot be zero."
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"margin-top:6px;\">Initial and final positions coincide, so displacement is zero; distance may be positive.</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -572,7 +572,7 @@ window.iitOthersData = {
             "D": "a, b, c and d"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"margin-top:6px;\">The minute hand completes one revolution. Displacement and average velocity are zero; distance and average speed are nonzero.</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -585,7 +585,7 @@ window.iitOthersData = {
             "D": "515 s"
           },
           "answer": "B",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=5\\frac5{18}=\\frac{25}{18}\\,\\mathrm{m/s}\\\\ d&=100+500=600\\,\\mathrm m\\\\ t&=\\frac dv=\\frac{600(18)}{25}=432\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -598,7 +598,7 @@ window.iitOthersData = {
             "D": "(5V₁V₂)/(2V₁ + 3V₂)"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac{3D}{5V_1}+\\frac{2D}{5V_2}\\\\ v_{\\rm avg}&=\\frac Dt=\\frac{5V_1V_2}{3V_2+2V_1}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -611,7 +611,7 @@ window.iitOthersData = {
             "D": "11/18 V"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{3V}+\\frac D{6V}+\\frac D{9V}\\\\ &=\\frac{11D}{18V}\\\\ v_{\\rm avg}&=\\frac{18V}{11}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -624,7 +624,7 @@ window.iitOthersData = {
             "D": "(uv + vw + wu)/uvw"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{3u}+\\frac D{3v}+\\frac D{3w}\\\\ v_{\\rm avg}&=\\frac Dt=\\frac{3uvw}{uv+vw+wu}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -637,7 +637,7 @@ window.iitOthersData = {
             "D": "2at"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=\\sqrt{a^2+a^2}=a\\sqrt2\\\\ v_{\\rm avg}&=\\frac{a\\sqrt2}{t}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -650,7 +650,7 @@ window.iitOthersData = {
             "D": "none of these"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=2(60)=120\\,\\mathrm s\\\\ d&=vt=330(120)=39600\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -663,7 +663,7 @@ window.iitOthersData = {
             "D": "none of these"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s_x&=4-8=-4\\\\ s_y&=3\\\\ s&=\\sqrt{16+9}=5\\,\\mathrm m\\\\ v_{\\rm avg}&=\\frac55=1\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -676,7 +676,7 @@ window.iitOthersData = {
             "D": "2, 3 are correct"
           },
           "answer": "D",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"margin-top:6px;\">The hour hand completes one revolution in 12 hours. Its displacement and average velocity are zero; distance is the circumference.</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -689,7 +689,7 @@ window.iitOthersData = {
             "D": "3.2 × 10⁻⁴ cm s⁻¹"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=12.5(3600)=45000\\,\\mathrm s\\\\ s&=2(5)=10\\,\\mathrm{cm}\\\\ v_{\\rm avg}&=\\frac{10}{45000}=\\frac1{4500}\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -702,7 +702,7 @@ window.iitOthersData = {
             "D": "70 km"
           },
           "answer": "D",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=v_1t_1+v_2t_2\\\\ &=20(1)+25(2)=70\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -715,7 +715,7 @@ window.iitOthersData = {
             "D": "66 km, 28 km"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=44(1.5)=66\\,\\mathrm{km}\\\\ C&=2\\pi(7)\\approx44\\,\\mathrm{km}\\\\ n&=66/44=1.5\\\\ s&=2(7)=14\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -728,7 +728,7 @@ window.iitOthersData = {
             "D": "110 km, 28 km"
           },
           "answer": "B",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=22(5)=110\\,\\mathrm{km}\\\\ C&=2\\pi(14)\\approx88\\,\\mathrm{km}\\\\ n&=1.25\\\\ s&=\\sqrt{14^2+14^2}=14\\sqrt2\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -741,7 +741,7 @@ window.iitOthersData = {
             "D": "π/50 m"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=vt=10(10)=100\\,\\mathrm m\\\\ 4\\pi r&=100\\\\ r&=\\frac{25}{\\pi}\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -754,7 +754,7 @@ window.iitOthersData = {
             "D": "35 kmph, zero"
           },
           "answer": "B",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{2D}{D/30+D/70}\\\\ &=42\\,\\mathrm{km/h}\\\\ \\bar v&=0\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -767,7 +767,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{30(T/2)+70(T/2)}T\\\\ &=50\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -780,7 +780,7 @@ window.iitOthersData = {
             "D": "11 : 1"
           },
           "answer": "D",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=3.5(2\\pi r)=7\\pi r\\\\ s&=2r\\\\ \\frac ds&=\\frac{7\\pi}{2}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -793,7 +793,7 @@ window.iitOthersData = {
             "D": "220/3 kmph"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=120(1)+100(1.5)=270\\,\\mathrm{km}\\\\ t&=1+0.5+1.5=3\\,\\mathrm h\\\\ v_{\\rm avg}&=270/3=90\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -806,7 +806,7 @@ window.iitOthersData = {
             "D": "35 kmph, zero"
           },
           "answer": "D",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{30}+\\frac D{60}+\\frac D{140}\\\\ &=\\frac{2D}{35}\\\\ v_{\\rm avg}&=\\frac{2D}{2D/35}=35\\,\\mathrm{km/h}\\\\ \\bar v&=0\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         }
@@ -821,7 +821,7 @@ window.iitOthersData = {
             "D": "37.5 kmph, 37.5 kmph"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm return}&=(30+70)/2=50\\\\ v_{\\rm avg}&=\\frac{2D}{D/30+D/50}=37.5\\,\\mathrm{km/h}\\\\ \\bar v&=0\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -834,7 +834,7 @@ window.iitOthersData = {
             "D": "44m, 42m"
           },
           "answer": "C",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=r\\theta=21\\frac\\pi3=7\\pi\\,\\mathrm m\\\\ s&=2r\\sin30^\\circ=21\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -847,7 +847,7 @@ window.iitOthersData = {
             "D": "42m, 21m"
           },
           "answer": "B",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=21\\frac{2\\pi}3=14\\pi\\,\\mathrm m\\\\ s&=42\\sin60^\\circ=21\\sqrt3\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -860,7 +860,7 @@ window.iitOthersData = {
             "D": "1.8m/s, 2.4m/s"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=30/2+40/4=25\\,\\mathrm s\\\\ d&=30+40=70\\,\\mathrm m\\\\ s&=\\sqrt{30^2+40^2}=50\\,\\mathrm m\\\\ v_{\\rm speed}&=70/25=2.8\\,\\mathrm{m/s}\\\\ v_{\\rm avg}&=50/25=2\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -873,7 +873,7 @@ window.iitOthersData = {
             "D": "6.28 cm"
           },
           "answer": "B",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=\\pi r=10\\pi\\,\\mathrm{cm}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -886,7 +886,7 @@ window.iitOthersData = {
             "D": "None"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{\\pi r}{t}=\\frac{10\\pi}{60}=\\frac\\pi6\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -899,7 +899,7 @@ window.iitOthersData = {
             "D": "80cm"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=2r=20\\,\\mathrm{cm}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -912,7 +912,7 @@ window.iitOthersData = {
             "D": "None"
           },
           "answer": "B",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{2r}{t}=\\frac{20}{60}=\\frac13\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -925,7 +925,7 @@ window.iitOthersData = {
             "D": "3.15 m/s"
           },
           "answer": "A",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{\\pi r}{t}=\\pi\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -938,7 +938,7 @@ window.iitOthersData = {
             "D": "52 km/h"
           },
           "answer": "B",
-          "explanation": "will be updated shortly",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac D{2D/(3\\cdot48)+D/(3\\cdot51)}\\\\ &=\\frac{3(48)(51)}{2(51)+48}=48.96\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         }
@@ -958,7 +958,7 @@ window.iitOthersData = {
             "D": "2 m/s²"
           },
           "answer": "B",
-          "explanation": "a = (10 − 5)/5 = 1 m/s².",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}a&=\\frac{v-u}{t}=\\frac{10-5}{5}=1\\,\\mathrm{m/s^2}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -972,7 +972,7 @@ window.iitOthersData = {
             "D": "3.5 m/s²"
           },
           "answer": "C",
-          "explanation": "Magnitude of deceleration = (10 − 5)/2 = 2.5 m/s².",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}a&=\\frac{5-10}{2}=-2.5\\,\\mathrm{m/s^2}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -986,7 +986,7 @@ window.iitOthersData = {
             "D": "2 m/s²"
           },
           "answer": "D",
-          "explanation": "Deceleration = 10/5 = 2 m/s².",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}a&=\\frac{0-10}{5}=-2\\,\\mathrm{m/s^2}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1000,7 +1000,7 @@ window.iitOthersData = {
             "D": "8 m/s²"
           },
           "answer": "B",
-          "explanation": "a = (19 − 7)/3 = 4 m/s².",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}a&=\\frac{19-7}{3}=4\\,\\mathrm{m/s^2}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1014,7 +1014,7 @@ window.iitOthersData = {
             "D": "4 : 3"
           },
           "answer": "A",
-          "explanation": "144 km/h = 40 m/s; 108 km/h = 30 m/s. Accelerations 20 and 10 m/s², ratio 2:1.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}a_1&=\\frac{144(5/18)}2=20\\\\ a_2&=\\frac{108(5/18)}3=10\\\\ a_1:a_2&=2:1\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1028,7 +1028,7 @@ window.iitOthersData = {
             "D": "6 m/s²"
           },
           "answer": "C",
-          "explanation": "Speed change = 54 km/h = 15 m/s; retardation = 15/3 = 5 m/s².",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}a&=\\frac{(21-75)(5/18)}3=-5\\,\\mathrm{m/s^2}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1042,7 +1042,7 @@ window.iitOthersData = {
             "D": "200 m"
           },
           "answer": "B",
-          "explanation": "s = [(u + v)/2]t = 10 × 5 = 50 m. PDF key gives option 2, inconsistent with calculation.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=\\frac{u+v}{2}t\\\\ &=\\frac{5+15}{2}(5)=50\\,\\mathrm m\\end{aligned}\\)</div><div style=\"margin-top:6px;\">The previous source key was reported as inconsistent with the calculated result.</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "sourceNote": "Source PDF has an inconsistency or incomplete wording; see explanation.",
@@ -1057,7 +1057,7 @@ window.iitOthersData = {
             "D": "5 m/s"
           },
           "answer": "C",
-          "explanation": "s = [(u + v)/2]t, hence 5 = 1 + v, v = 4 m/s.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}5&=\\frac{1+v}{2}(2)\\\\ v&=4\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1071,7 +1071,7 @@ window.iitOthersData = {
             "D": "98 m"
           },
           "answer": "A",
-          "explanation": "The acceleration value is missing in the source PDF; the answer key gives option 1.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=ut+\\frac12at^2\\\\ &=4(6)+\\frac12a(6)^2\\\\ &=24+18a\\end{aligned}\\)</div><div style=\"margin-top:6px;\">Acceleration is missing in the question, so a numerical answer cannot be determined.</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "sourceNote": "Source PDF has an inconsistency or incomplete wording; see explanation.",
@@ -1086,7 +1086,7 @@ window.iitOthersData = {
             "D": "81 m"
           },
           "answer": "D",
-          "explanation": "u = 2 × 9 = 18 m/s; s = (18 + 0) × 9/2 = 81 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}u&=0-(-2)(9)=18\\,\\mathrm{m/s}\\\\ s&=\\frac{18+0}{2}(9)=81\\,\\mathrm m\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1100,7 +1100,7 @@ window.iitOthersData = {
             "D": "20 m/s"
           },
           "answer": "D",
-          "explanation": "u² = 2as = 400, so u = 20 m/s.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v^2&=u^2+2as\\\\ 0&=u^2-2(4)(50)\\\\ u&=20\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1114,7 +1114,7 @@ window.iitOthersData = {
             "D": "0.8 s"
           },
           "answer": "A",
-          "explanation": "t = 2s/(u+v) = 5.6/35 = 0.16 s.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac{2s}{u+v}=\\frac{5.6}{35}=0.16\\,\\mathrm s\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1128,7 +1128,7 @@ window.iitOthersData = {
             "D": "120 s"
           },
           "answer": "D",
-          "explanation": "Assuming both start from rest: 36000 = (1/2)(8−3)t²; t = 120 s.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}36000&=\\frac12(8-3)t^2\\\\ t^2&=14400\\\\ t&=120\\,\\mathrm s\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1142,7 +1142,7 @@ window.iitOthersData = {
             "D": "9.8 m"
           },
           "answer": "D",
-          "explanation": "Initial speed = 0.4 × 7 = 2.8 m/s; s = (2.8/2) × 7 = 9.8 m.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}u&=0.4(7)=2.8\\,\\mathrm{m/s}\\\\ s&=\\frac{2.8+0}{2}(7)=9.8\\,\\mathrm m\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1156,7 +1156,7 @@ window.iitOthersData = {
             "D": "15 m/s"
           },
           "answer": "D",
-          "explanation": "400 = 10u + 0.5 × 5 × 100; u = 15 m/s.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}400&=10u+\\frac12(5)(10)^2\\\\ 10u&=150\\\\ u&=15\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1170,7 +1170,7 @@ window.iitOthersData = {
             "D": "7.5 m/s²"
           },
           "answer": "A",
-          "explanation": "The source incorrectly references Q14; using deer in Q15, speed after 10 s = 65 m/s, so a = 10 m/s².",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}u&=15+5(10)=65\\,\\mathrm{m/s}\\\\ 240&=65(3)+\\frac12a(3)^2\\\\ a&=10\\,\\mathrm{m/s^2}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "sourceNote": "Source PDF has an inconsistency or incomplete wording; see explanation.",
@@ -1185,7 +1185,7 @@ window.iitOthersData = {
             "D": "28/30"
           },
           "answer": "A",
-          "explanation": "Arc in 15 s = (15/60) × 2π × 14 = 7π cm. Average speed = 7π/15 ≈ 22/15 cm/s.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=\\frac{15}{60}2\\pi(14)=7\\pi\\,\\mathrm{cm}\\\\ v_{\\rm avg}&=\\frac{7\\pi}{15}\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
           "exam": "Foundation MCQ",
           "marks": 1,
           "paper": "WS-3"
@@ -1205,7 +1205,7 @@ window.iitOthersData = {
             "D": "1:9:25"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s_n&=\\frac g2(2n-1)\\\\ s_1:s_2:s_3&=1:3:5\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1218,7 +1218,7 @@ window.iitOthersData = {
             "D": "1:9:25"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s(t)&=\\frac12gt^2\\\\ s(1):s(2):s(3)&=1:4:9\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1231,7 +1231,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_1&=g(t+2)\\\\ v_2&=gt\\\\ v_1-v_2&=2g\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1244,7 +1244,7 @@ window.iitOthersData = {
             "D": "gt²"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\bar v&=\\frac{0+gt}{2}=\\frac{gt}{2}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1257,7 +1257,7 @@ window.iitOthersData = {
             "D": "Zero"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=\\sqrt{2gh}\\\\ \\bar v&=\\frac v2=\\sqrt{\\frac{gh}{2}}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1270,7 +1270,7 @@ window.iitOthersData = {
             "D": "6 sec"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac12g(3)^2&=\\frac g2(2T-1)\\\\ 9&=2T-1\\\\ T&=5\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1283,7 +1283,7 @@ window.iitOthersData = {
             "D": "8 sec"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}1+5+9&=2T-1\\\\ T&=8\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1296,7 +1296,7 @@ window.iitOthersData = {
             "D": "6 sec"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac{2T-1}{T^2}&=\\frac7{16}\\\\ 7T^2-32T+16&=0\\\\ T&=4\\,\\mathrm s\\quad(T\\ge1)\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1309,7 +1309,7 @@ window.iitOthersData = {
             "D": "425 m s⁻¹"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t_f&=\\sqrt{\\frac{2(122.5)}{9.8}}=5\\,\\mathrm s\\\\ t_s&=5.35-5=0.35\\,\\mathrm s\\\\ v_s&=122.5/0.35=350\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1322,7 +1322,7 @@ window.iitOthersData = {
             "D": "20 m"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=2\\bar v=14\\,\\mathrm{m/s}\\\\ h&=\\frac{v^2}{2g}=\\frac{196}{19.6}=10\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1335,7 +1335,7 @@ window.iitOthersData = {
             "D": "u²/4g"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\bar v&=\\frac{u+0}{2}=\\frac u2\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1348,7 +1348,7 @@ window.iitOthersData = {
             "D": "40 m/s²"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}T&=\\frac{2u}{g}\\\\ g&=\\frac{2(10)}4=5\\,\\mathrm{m/s^2}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1361,7 +1361,7 @@ window.iitOthersData = {
             "D": "25 m"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}H&=\\frac{u^2}{2g}\\\\ H'&=4H=400\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1374,7 +1374,7 @@ window.iitOthersData = {
             "D": "0.8 sec"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}g&=\\frac{2(40)}{20}=4\\,\\mathrm{m/s^2}\\\\ t&=\\sqrt{\\frac{2(50)}4}=5\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1387,7 +1387,7 @@ window.iitOthersData = {
             "D": "2 s"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}T&=2t_{\\rm up}=2(2)=4\\,\\mathrm s\\end{aligned}\\)</div><div style=\"margin-top:6px;\">Assuming gravity alone and return to the launch height; with air resistance the times need not be equal.</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1400,7 +1400,7 @@ window.iitOthersData = {
             "D": "45 m"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}H'&=\\frac{(3u)^2}{2g}=9H=90\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1413,7 +1413,7 @@ window.iitOthersData = {
             "D": "19.6 m"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}y_1&=9.8(2)-4.9(2)^2=0\\\\ y_2&=19.6(1)-4.9(1)^2=14.7\\,\\mathrm m\\\\ d&=14.7\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1426,7 +1426,7 @@ window.iitOthersData = {
             "D": "4 sec"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}T&=\\frac{2(19.6)}{9.8}=4\\,\\mathrm s\\\\ T-1&=3\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1439,7 +1439,7 @@ window.iitOthersData = {
             "D": "u/√2"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v^2&=u^2-2g(H/2)\\\\ &=u^2/2\\\\ v&=\\pm\\frac u{\\sqrt2}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1452,7 +1452,7 @@ window.iitOthersData = {
             "D": "23.6 m/s"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=u-gt=2-9.8(2)=-17.6\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         }
@@ -1467,7 +1467,7 @@ window.iitOthersData = {
             "D": "(2−√2) sec"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac{2T-1}{T^2}&=\\frac12\\\\ T^2-4T+2&=0\\\\ T&=2+\\sqrt2\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1480,7 +1480,7 @@ window.iitOthersData = {
             "D": "(x+y)/2 = g"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}x&=\\frac g2(2n-1)\\\\ y&=\\frac g2(2n+1)\\\\ y-x&=g\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1493,7 +1493,7 @@ window.iitOthersData = {
             "D": "t/√2"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac12gt_1^2&=\\frac12\\left(\\frac12gt^2\\right)\\\\ t_1&=\\frac t{\\sqrt2}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1506,7 +1506,7 @@ window.iitOthersData = {
             "D": "4h"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v^2&=2gh\\\\ (2v)^2&=2g(h+x)\\\\ x&=3h\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1519,7 +1519,7 @@ window.iitOthersData = {
             "D": "4v"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v'^2&=2g(2h)=2v^2\\\\ v'&=\\sqrt2v\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1532,7 +1532,7 @@ window.iitOthersData = {
             "D": "g/2"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=gt,\\quad s=\\frac12gt^2\\\\ gt&=\\frac12gt^2\\\\ t&=2\\,\\mathrm s\\\\ v&=2g\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1545,7 +1545,7 @@ window.iitOthersData = {
             "D": "20√2 m"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=10+\\frac12gt^2-\\frac12gt^2=10\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1558,7 +1558,7 @@ window.iitOthersData = {
             "D": "110 m"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=\\frac12g(12^2-10^2)\\\\ &=5(144-100)=220\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1571,7 +1571,7 @@ window.iitOthersData = {
             "D": "5 sec"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac{2T-1}{T^2}&=0.36\\\\ 9T^2-50T+25&=0\\\\ T&=5\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1584,7 +1584,7 @@ window.iitOthersData = {
             "D": "4 sec"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac{2T-1}{2T-3}&=4\\\\ 2T-1&=8T-12\\\\ T&=\\frac{11}{6}\\,\\mathrm s\\end{aligned}\\)</div><div style=\"margin-top:6px;\">This gives T below 2 s, so two complete final one-second intervals cannot exist for release from rest; the question is inconsistent.</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1597,7 +1597,7 @@ window.iitOthersData = {
             "D": "19.6 m"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}H&=\\frac12gt_{\\rm up}^2=\\frac12g(1)^2\\\\ &=4.9\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1610,7 +1610,7 @@ window.iitOthersData = {
             "D": "3 s"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t_{\\rm up}&=\\sqrt{\\frac{2H}{g}}=2\\,\\mathrm s\\\\ T&=4\\,\\mathrm s\\\\ \\Delta t&=T/4=1\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1623,7 +1623,7 @@ window.iitOthersData = {
             "D": "4 sec"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}T&=2(19.6)/9.8=4\\,\\mathrm s\\\\ T-1&=3\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1636,7 +1636,7 @@ window.iitOthersData = {
             "D": "8 s"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}H&=40+\\frac12g(1)^2=45\\,\\mathrm m\\\\ T&=2\\sqrt{2H/g}=6\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1649,7 +1649,7 @@ window.iitOthersData = {
             "D": "1:11"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}u&=6g\\\\ s_1&=6g-g/2=5.5g\\\\ s_7&=g/2\\\\ s_1:s_7&=11:1\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1662,7 +1662,7 @@ window.iitOthersData = {
             "D": "none"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}h&=\\frac{v^2}{2g}=\\frac{49^2}{19.6}=122.5\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1675,7 +1675,7 @@ window.iitOthersData = {
             "D": "94.7 m s⁻¹"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=98-9.8(2)=78.4\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1688,7 +1688,7 @@ window.iitOthersData = {
             "D": "they cannot meet in air"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}490-\\frac12gt^2&=100t-\\frac12gt^2\\\\ t&=4.9\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1701,7 +1701,7 @@ window.iitOthersData = {
             "D": "8 m s⁻²"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}g&=\\frac{2u}{T}=\\frac{48}{4}=12\\,\\mathrm{m/s^2}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1714,7 +1714,7 @@ window.iitOthersData = {
             "D": "20 m"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}u&=\\frac{gT}{2}=2.5g\\\\ y(4)&=2.5g(4)-\\frac12g(16)=2g\\\\ &=19.6\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         }
@@ -1729,7 +1729,7 @@ window.iitOthersData = {
             "D": "60 m s⁻¹"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t_1&=\\sqrt{2(20)/10}=2\\,\\mathrm s\\\\ t_2&=1\\,\\mathrm s\\\\ 20&=u(1)+5(1)^2\\\\ u&=15\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1742,7 +1742,7 @@ window.iitOthersData = {
             "D": "4.5 sec"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac{2T-1}{2T-3}&=\\frac32\\\\ 4T-2&=6T-9\\\\ T&=3.5\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1755,7 +1755,7 @@ window.iitOthersData = {
             "D": "56 m s⁻¹"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=\\sqrt{2g(160)}=\\sqrt{3200}\\\\ &=40\\sqrt2\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1768,7 +1768,7 @@ window.iitOthersData = {
             "D": "58 m"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}T&=2+\\sqrt2\\\\ h&=\\frac12gT^2=5(2+\\sqrt2)^2\\\\ &\\approx58.3\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1781,7 +1781,7 @@ window.iitOthersData = {
             "D": "6 sec"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t_f&=\\sqrt{2(44.1)/9.8}=3\\,\\mathrm s\\\\ t_s&=44.1/330\\approx0.134\\,\\mathrm s\\\\ t&\\approx3.134\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1794,7 +1794,7 @@ window.iitOthersData = {
             "D": "55.5 m s⁻¹"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t_1&=\\sqrt{2(122.5)/9.8}=5\\,\\mathrm s\\\\ t_2&=3\\,\\mathrm s\\\\ 122.5&=3u+4.9(9)\\\\ u&=\\frac{78.4}{3}\\approx26.13\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1807,7 +1807,7 @@ window.iitOthersData = {
             "D": "36 sec"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=(u_2-u_1)t\\\\ 18&=(1-0)t\\\\ t&=18\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1820,7 +1820,7 @@ window.iitOthersData = {
             "D": "4/7 sec"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t_{\\rm top}&=\\sqrt{2(0.1)/g}\\\\ t_{\\rm bottom}&=\\sqrt{2(0.9)/g}\\\\ t&=t_{\\rm bottom}-t_{\\rm top}\\approx0.286\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1833,7 +1833,7 @@ window.iitOthersData = {
             "D": "1:5"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s_3:s_1&=(2(3)-1):(2(1)-1)=5:1\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1846,7 +1846,7 @@ window.iitOthersData = {
             "D": "36 s"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}18&=(1-0)t\\\\ t&=18\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1859,7 +1859,7 @@ window.iitOthersData = {
             "D": "2.5 s"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t_1&=\\frac4{\\sqrt2}=2\\sqrt2\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1872,7 +1872,7 @@ window.iitOthersData = {
             "D": "4.5 s"
           },
           "answer": "A",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac{2T-1}{T^2}&=\\frac7{16}\\\\ 7T^2-32T+16&=0\\\\ T&=4\\,\\mathrm s\\quad(T\\ge1)\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1885,7 +1885,7 @@ window.iitOthersData = {
             "D": "20 m"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s(2)&=\\frac12(10)(2)^2=20\\,\\mathrm m\\\\ s(3)-s(2)&=45-20=25\\,\\mathrm m\\end{aligned}\\)</div><div style=\"margin-top:6px;\">These two distances are unequal for release from rest; the stated equality is inconsistent.</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1898,7 +1898,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}30&=u(1)+\\frac12g(1)^2\\\\ u&=30-\\frac g2=25.1\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1911,7 +1911,7 @@ window.iitOthersData = {
             "D": "12 s"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}60&=40t-5t^2\\\\ t^2-8t+12&=0\\\\ t&=2,\\ 6\\,\\mathrm s\\\\ \\Delta t&=4\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1924,7 +1924,7 @@ window.iitOthersData = {
             "D": "h/3 from the top most point"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v^2&=u^2-2gy\\\\ u^2/9&=u^2-2gy\\\\ y&=\\frac89\\frac{u^2}{2g}=\\frac89h\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1937,7 +1937,7 @@ window.iitOthersData = {
             "D": "12 s"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}60&=40t-5t^2\\\\ t^2-8t+12&=0\\\\ t&=2,\\ 6\\,\\mathrm s\\\\ \\Delta t&=4\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1950,7 +1950,7 @@ window.iitOthersData = {
             "D": "20 m"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}-h&=3(2)-5(2)^2\\\\ h&=14\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1963,7 +1963,7 @@ window.iitOthersData = {
             "D": "both acceleration and velocity are not zero"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"margin-top:6px;\">At maximum height velocity is zero instantaneously, but acceleration remains vertically downward with magnitude g.</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1976,7 +1976,7 @@ window.iitOthersData = {
             "D": "10 m s⁻¹"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t_1&=\\sqrt{40/10}=2\\,\\mathrm s\\\\ t_2&=1\\,\\mathrm s\\\\ 20&=v+5\\\\ v&=15\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -1989,7 +1989,7 @@ window.iitOthersData = {
             "D": "none of the above"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}0&=u-gT\\\\ u&=gT\\\\ h&=\\frac{uT}{2}=\\frac12gT^2\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2002,7 +2002,7 @@ window.iitOthersData = {
             "D": "2:1"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}H_1:H_2&=u_1^2:u_2^2=4:1\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2015,7 +2015,7 @@ window.iitOthersData = {
             "D": "√a:√b"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}u_1:u_2&=\\sqrt{2ga}:\\sqrt{2gb}=\\sqrt a:\\sqrt b\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2028,7 +2028,7 @@ window.iitOthersData = {
             "D": "All the above"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}\\frac g2t^2-ut+h&=0\\\\ t_1+t_2&=\\frac{2u}{g}\\\\ t_1t_2&=\\frac{2h}{g}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2041,7 +2041,7 @@ window.iitOthersData = {
             "D": "23.6 m/s"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=2-9.8(2)=-17.6\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2054,7 +2054,7 @@ window.iitOthersData = {
             "D": "3h/4 m"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}h&=\\frac12gt^2\\\\ s(t/2)&=\\frac12g(t/2)^2=h/4\\\\ h_{\\rm remaining}&=3h/4\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2067,7 +2067,7 @@ window.iitOthersData = {
             "D": "9u/2g"
           },
           "answer": "D",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}u^2&=(2u)^2-2gh\\\\ h&=\\frac{3u^2}{2g}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2080,7 +2080,7 @@ window.iitOthersData = {
             "D": "8 s"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}0&=39.2+9.8t-4.9t^2\\\\ t^2-2t-8&=0\\\\ t&=4\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2093,7 +2093,7 @@ window.iitOthersData = {
             "D": "5 m s⁻¹ upward"
           },
           "answer": "B",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v&=5-9.8(2)=-14.6\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         },
@@ -2106,7 +2106,7 @@ window.iitOthersData = {
             "D": "29.6 m"
           },
           "answer": "C",
-          "explanation": "Answer based on the equations of motion for freely falling and vertically projected bodies.",
+          "explanation": "<div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=\\frac12gt^2=\\frac12(9.8)(2)^2=19.6\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-4",
           "marks": 1
         }
