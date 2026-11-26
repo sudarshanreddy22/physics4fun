@@ -51,7 +51,7 @@ window.iitOthersData = {
           "options": {
             "A": "force",
             "B": "Acceleration",
-            "C": "\\(Work\\)",
+            "C": "Work",
             "D": "Impulse"
           },
           "answer": "C",
@@ -120,8 +120,8 @@ window.iitOthersData = {
           "question": "A vector remains unchanged on",
           "options": {
             "A": "rotating it through some angle",
-            "B": "\\(taking its cross product with a unit vector\\)",
-            "C": "\\(taking its dot product with a unit vector\\)",
+            "B": "taking its cross product with a unit vector",
+            "C": "taking its dot product with a unit vector",
             "D": "shifting it parallel to itself"
           },
           "answer": "D",
@@ -161,8 +161,8 @@ window.iitOthersData = {
         {
           "question": "Assertion: Vector represented by directed line segment. Reason: Length of that line segment is proportional to magnitude of vector and its direction denotes direction of vector.",
           "options": {
-            "A": "\\(Both true and reason correctly explains assertion\\)",
-            "B": "\\(Both true but reason does not correctly explain assertion\\)",
+            "A": "Both true and reason correctly explains assertion",
+            "B": "Both true but reason does not correctly explain assertion",
             "C": "Assertion true but reason false",
             "D": "Assertion false but reason true"
           },
@@ -301,9 +301,9 @@ window.iitOthersData = {
         {
           "question": "All equal vectors are ___ vectors",
           "options": {
-            "A": "\\(unlike\\)",
+            "A": "unlike",
             "B": "Null",
-            "C": "\\(like\\)",
+            "C": "like",
             "D": "unit vectors"
           },
           "answer": "C",
@@ -330,7 +330,7 @@ window.iitOthersData = {
           "question": "The pair containing a scalar and a vector quantity is",
           "options": {
             "A": "Impulse and momentum",
-            "B": "\\(work and frequency\\)",
+            "B": "work and frequency",
             "C": "Electromotive force and force",
             "D": "Power and energy"
           },
@@ -475,10 +475,10 @@ window.iitOthersData = {
         {
           "question": "(A) Physical quantities possessing direction may not be vectors. (B) All vectors should obey the parallelogram law of vectors.",
           "options": {
-            "A": "\\(A is correct but B is wrong\\)",
-            "B": "\\(B is correct but A is wrong\\)",
-            "C": "\\(both A and B are correct\\)",
-            "D": "\\(both A and B are wrong\\)"
+            "A": "A is correct but B is wrong",
+            "B": "B is correct but A is wrong",
+            "C": "both A and B are correct",
+            "D": "both A and B are wrong"
           },
           "answer": "C",
           "explanation": "Both statements hold.",
@@ -505,7 +505,7 @@ window.iitOthersData = {
           "options": {
             "A": "speed, velocity",
             "B": "time, displacement",
-            "C": "\\(energy, work\\)",
+            "C": "energy, work",
             "D": "acceleration, velocity"
           },
           "answer": "D",
@@ -599,7 +599,7 @@ window.iitOthersData = {
           "no": 17
         },
         {
-          "question": "If a unit vector is represented by 0.\\(5\\hat{i}\\)+0.\\(8\\hat{j}\\)+c\\(\\hat{k}\\) then the value of c is",
+          "question": "If a unit vector is represented by \\(0.5\\hat{i}\\)+\\(0.8\\hat{j}\\)+c\\(\\hat{k}\\) then the value of c is",
           "options": {
             "A": "\\(1\\)",
             "B": "\\(\\sqrt{0.11}\\)",
@@ -655,11 +655,11 @@ window.iitOthersData = {
           "no": 21
         },
         {
-          "question": "The expression (\\(\\hat{i}\\)/\\(√\\)2+\\(\\hat{j}\\)/\\(√\\)2) is a",
+          "question": "The expression (\\(\\hat{i}\\)/\\(\\sqrt{2}\\)+\\(\\hat{j}\\)/\\(\\sqrt{2}\\)) is a",
           "options": {
             "A": "Unit vector",
             "B": "Null vector",
-            "C": "Vector of magnitude \\(√\\)2",
+            "C": "Vector of magnitude \\(\\sqrt{2}\\)",
             "D": "Scalar"
           },
           "answer": "A",
@@ -669,7 +669,7 @@ window.iitOthersData = {
           "no": 22
         },
         {
-          "question": "If 0.\\(2\\hat{i}\\)+0.\\(3\\hat{j}\\)+z\\(\\hat{k}\\) is unit vector then z²=",
+          "question": "If \\(0.2\\hat{i}\\)+0.\\(3\\hat{j}\\)+z\\(\\hat{k}\\) is unit vector then z²=",
           "options": {
             "A": "\\(0.27\\)",
             "B": "\\(0.4\\)",
@@ -755,10 +755,10 @@ window.iitOthersData = {
         {
           "question": "If \\(\\vec A=\\vec B\\), then",
           "options": {
-            "A": "\\(A=B and \\hat{A}\\ne \\hat{B}\\)",
-            "B": "\\(A\\ne B and \\hat{A}=\\hat{B}\\)",
-            "C": "\\(A\\ne B and \\hat{A}\\ne \\hat{B}\\)",
-            "D": "\\(A=B and \\hat{A}=\\hat{B}\\)"
+            "A": "\\(A=B\\) and \\(\\hat{A}\\ne \\hat{B}\\)",
+            "B": "\\(A\\ne B\\) and \\(\\hat{A}=\\hat{B}\\)",
+            "C": "\\(A\\ne B\\) and \\(\\hat{A}\\ne \\hat{B}\\)",
+            "D": "\\(A=B\\) and \\(\\hat{A}=\\hat{B}\\)"
           },
           "answer": "D",
           "explanation": "Nonzero equal vectors have same magnitude and direction.",
@@ -797,9 +797,9 @@ window.iitOthersData = {
         {
           "question": "A body, initially at rest, is acted upon by four forces \\(\\vec F_1=\\hat i+\\hat k,\\quad \\vec F_2=2\\hat j+3\\hat k,\\quad \\vec F_3=3\\hat i,\\quad \\vec F_4=3\\hat j-4\\hat i\\). In which plane will the body move?",
           "options": {
-            "A": "\\(X-Y\\)",
-            "B": "\\(X-Z\\)",
-            "C": "\\(Y-Z\\)",
+            "A": "X-Y",
+            "B": "X-Z",
+            "C": "Y-Z",
             "D": "none"
           },
           "answer": "C",
@@ -862,7 +862,7 @@ window.iitOthersData = {
             "A": "\\(\\vec{r}\\) is along +ve x-axis",
             "B": "\\(\\vec{r}\\) is along −ve x-axis",
             "C": "\\(\\vec{r}\\) is along −ve y-axis",
-            "D": "\\(\\vec{r} makes an angle of 45^{\\circ} with x-axis\\)"
+            "D": "\\(\\vec{r}\\) makes an angle of \\(45^{\\circ}\\) with x-axis"
           },
           "answer": "A",
           "explanation": "1. \\(r_x=r\\cos\\theta\\)<br>2. \\(\\cos\\theta\\le1\\)<br>3. Maximum occurs at \\(\\theta=0^\\circ\\) and equals \\(r\\).",
@@ -929,10 +929,10 @@ window.iitOthersData = {
         {
           "question": "If \\(\\vec A=2\\hat i-3\\hat j+4\\hat k\\), its components in the \\(yz\\) and \\(xz\\) planes are respectively",
           "options": {
-            "A": "\\(√\\)13 and 5",
-            "B": "5 and 2\\(√\\)5",
-            "C": "2\\(√\\)5 and \\(√\\)13",
-            "D": "\\(√\\)13 and \\(√\\)29"
+            "A": "\\(\\sqrt{13}\\) and 5",
+            "B": "5 and 2\\(\\sqrt{5}\\)",
+            "C": "2\\(\\sqrt{5}\\) and \\(\\sqrt{13}\\)",
+            "D": "\\(\\sqrt{13}\\) and \\(\\sqrt{29}\\)"
           },
           "answer": "B",
           "explanation": "1. \\(|\\vec A_{yz}|=\\sqrt{(-3)^2+4^2}=5\\)<br>2. \\(|\\vec A_{xz}|=\\sqrt{2^2+4^2}=\\sqrt{20}=2\\sqrt5\\)",
@@ -969,7 +969,7 @@ window.iitOthersData = {
           "no": 11
         },
         {
-          "question": "If the x-component of a vector in xy-plane is \\(√\\)3 times its y-component, angle made by it with y-direction is",
+          "question": "If the x-component of a vector in xy-plane is \\(\\sqrt{3}\\) times its y-component, angle made by it with y-direction is",
           "options": {
             "A": "\\(30^{\\circ}\\)",
             "B": "\\(45^{\\circ}\\)",
@@ -985,7 +985,7 @@ window.iitOthersData = {
         {
           "question": "A force of F is inclined at an angle to the horizontal. If x is its horizontal component, y component is",
           "options": {
-            "A": "\\(F-x\\)",
+            "A": "F-x",
             "B": "\\(F^{2}+x^{2}\\)",
             "C": "\\(F^{2}-x^{2}\\)",
             "D": "\\(\\sqrt{F^{2}-x^{2}}\\)"
