@@ -546,7 +546,7 @@ window.iitOthersData = {
             "D": "It is possible to have a situation in which the speed of a particle is never zero but the magnitude of average velocity in an interval is zero."
           },
           "answer": "D",
-          "explanation": "<div style=\"margin-bottom:8px;\">Speed is the magnitude of instantaneous velocity, so A is also true. For D, consider one complete circular revolution: speed remains positive but displacement is zero. Both A and D are valid.</div><div style=\"margin-top:6px;\">Distance is the actual path length; displacement is the change in position. Its magnitude cannot exceed distance.</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">A and D are both correct. Speed is the magnitude of instantaneous velocity. A moving body can return to its starting point, giving zero average velocity even though its speed never becomes zero.</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -559,7 +559,7 @@ window.iitOthersData = {
             "D": "average speed and velocity cannot be zero."
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">Average velocity is displacement divided by time; average speed is distance divided by time.</div><div style=\"margin-top:6px;\">Initial and final positions coincide, so displacement is zero; distance may be positive.</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">On returning to the starting point, displacement is zero but the distance travelled is positive. Therefore average velocity is zero and average speed is nonzero.</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -572,7 +572,7 @@ window.iitOthersData = {
             "D": "a, b, c and d"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">For one complete revolution, the tip returns to its initial position.</div><div style=\"margin-top:6px;\">The minute hand completes one revolution. Displacement and average velocity are zero; distance and average speed are nonzero.</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">In one hour the minute hand completes one revolution. Its displacement and average velocity are zero, but distance and average speed are positive. Statements (a) and (d) are correct.</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -585,7 +585,7 @@ window.iitOthersData = {
             "D": "515 s"
           },
           "answer": "B",
-          "explanation": "<div>Given: train length = 100 m, bridge length = 500 m, speed = 5 km/h.</div><div>For complete crossing, add both lengths.</div>\\(\\displaystyle\\begin{aligned}d&=100+500\\\\&=600\\,\\mathrm m\\\\v&=5\\times\\frac{5}{18}\\\\&=\\frac{25}{18}\\,\\mathrm{m/s}\\\\t&=\\frac{d}{v}\\\\&=\\frac{600}{25/18}\\\\&=\\frac{600\\times18}{25}\\\\&=\\boxed{432\\,\\mathrm s}\\end{aligned}\\)",
+          "explanation": "<div style=\"margin-bottom:8px;\">Train length 100 m; bridge length 500 m; speed 5 km/h. The entire train must clear the bridge.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d&=100+500\\\\[3pt] &=600\\,\\mathrm m\\\\[3pt] v&=5\\times\\frac5{18}\\\\[3pt] &=\\frac{25}{18}\\,\\mathrm{m/s}\\\\[3pt] t&=\\frac dv\\\\[3pt] &=\\frac{600}{25/18}\\\\[3pt] &=\\frac{600\\times18}{25}\\\\[3pt] &=432\\,\\mathrm s\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -598,7 +598,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{5V_1V_2}{2V_1+3V_2}\\)"
           },
           "answer": "D",
-          "explanation": "<div style=\"margin-bottom:8px;\">Let the total distance be D. Calculate the time for each part separately.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t&=\\frac{3D}{5V_1}+\\frac{2D}{5V_2}\\\\ &=\\frac{D(3V_2+2V_1)}{5V_1V_2}\\\\ v_{\\rm avg}&=\\frac Dt\\\\ &=\\frac{5V_1V_2}{3V_2+2V_1}\\end{aligned}\\)</div><div>Correct option: D. The previous key was inconsistent with the calculation.</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Let total distance be D. Average speed is total distance divided by total time.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t_1&=\\frac{3D}{5V_1}\\\\[3pt] t_2&=\\frac{2D}{5V_2}\\\\[3pt] t&=t_1+t_2\\\\[3pt] &=\\frac{3D}{5V_1}+\\frac{2D}{5V_2}\\\\[3pt] &=\\frac{D(3V_2+2V_1)}{5V_1V_2}\\\\[3pt] v_{\\rm avg}&=\\frac Dt\\\\[3pt] &=\\frac{5V_1V_2}{2V_1+3V_2}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -611,7 +611,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{11V}{18}\\)"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">Let the total distance be D. Each part has length D/3.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{3V}+\\frac D{6V}+\\frac D{9V}\\\\ &=\\frac{11D}{18V}\\\\ v_{\\rm avg}&=\\frac{18V}{11}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Let total distance be D. Each segment is one-third of D.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t_1&=\\frac D{3V}\\\\[3pt] t_2&=\\frac D{6V}\\\\[3pt] t_3&=\\frac D{9V}\\\\[3pt] t&=t_1+t_2+t_3\\\\[3pt] &=\\frac D{3V}+\\frac D{6V}+\\frac D{9V}\\\\[3pt] &=\\frac{6D+3D+2D}{18V}\\\\[3pt] &=\\frac{11D}{18V}\\\\[3pt] v_{\\rm avg}&=\\frac Dt\\\\[3pt] &=\\frac{18V}{11}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -624,7 +624,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{uv+vw+wu}{uvw}\\)"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">Assume motion in the same direction. Let the total distance be D.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{3u}+\\frac D{3v}+\\frac D{3w}\\\\ v_{\\rm avg}&=\\frac Dt\\\\ &=\\frac{3uvw}{uv+vw+wu}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Let total distance be D. Assume motion in the same direction throughout.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t_1&=\\frac D{3u}\\\\[3pt] t_2&=\\frac D{3v}\\\\[3pt] t_3&=\\frac D{3w}\\\\[3pt] t&=t_1+t_2+t_3\\\\[3pt] &=\\frac{D(vw+wu+uv)}{3uvw}\\\\[3pt] v_{\\rm avg}&=\\frac Dt\\\\[3pt] &=\\frac{3uvw}{uv+vw+wu}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -637,7 +637,7 @@ window.iitOthersData = {
             "D": "\\(2at\\)"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">The displacement is the diagonal of the square.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=\\sqrt{a^2+a^2}\\\\ &=a\\sqrt2\\\\ v_{\\rm avg}&=\\frac{a\\sqrt2}{t}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Side of square is a; elapsed time is t. Displacement is the diagonal.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}s&=\\sqrt{a^2+a^2}\\\\[3pt] &=\\sqrt{2a^2}\\\\[3pt] &=a\\sqrt2\\\\[3pt] v_{\\rm avg}&=\\frac st\\\\[3pt] &=\\frac{a\\sqrt2}{t}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -650,7 +650,7 @@ window.iitOthersData = {
             "D": "none of these"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">Convert the time into seconds, then use distance = speed × time.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=2(60)\\\\ &=120\\,\\mathrm s\\\\ d&=vt\\\\ &=330(120)\\\\ &=39600\\,\\mathrm m\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Sound speed 330 m/s; time 2 minutes.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t&=2\\times60\\\\[3pt] &=120\\,\\mathrm s\\\\[3pt] d&=vt\\\\[3pt] &=330\\times120\\\\[3pt] &=39600\\,\\mathrm m\\\\[3pt] &=\\frac{39600}{1000}\\,\\mathrm{km}\\\\[3pt] &=39.6\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -663,7 +663,7 @@ window.iitOthersData = {
             "D": "none of these"
           },
           "answer": "B",
-          "explanation": "<div style=\"margin-bottom:8px;\">Take east and north as positive directions. Resolve the displacement into perpendicular components.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}s_x&=4-8=-4\\,\\mathrm m\\\\ s_y&=3\\,\\mathrm m\\\\ s&=\\sqrt{(-4)^2+3^2}\\\\ &=\\sqrt{25}=5\\,\\mathrm m\\\\ v_{\\rm avg}&=\\frac{s}{t}\\\\ &=\\frac55=1\\,\\mathrm{m/s}\\end{aligned}\\)</div><div>Correct option: B. The previous key was inconsistent with the calculation.</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Take east and north as positive directions. Total time is 5 s.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}s_x&=4-8\\\\[3pt] &=-4\\,\\mathrm m\\\\[3pt] s_y&=3\\,\\mathrm m\\\\[3pt] s&=\\sqrt{s_x^2+s_y^2}\\\\[3pt] &=\\sqrt{16+9}\\\\[3pt] &=\\sqrt{25}\\\\[3pt] &=5\\,\\mathrm m\\\\[3pt] v_{\\rm avg}&=\\frac st\\\\[3pt] &=\\frac55\\\\[3pt] &=1\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -676,7 +676,7 @@ window.iitOthersData = {
             "D": "2, 3 are correct"
           },
           "answer": "D",
-          "explanation": "<div style=\"margin-bottom:8px;\">The hour hand returns to its starting position. The numbered statements are missing from the question, so the option cannot be verified.</div><div style=\"margin-top:6px;\">The hour hand completes one revolution in 12 hours. Its displacement and average velocity are zero; distance is the circumference.</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">The hour hand completes one revolution in 12 hours. Displacement and average velocity are zero; distance and average speed are positive. The numbered statements are missing, so the option cannot be verified.</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -689,7 +689,7 @@ window.iitOthersData = {
             "D": "3.2 × 10⁻⁴ cm s⁻¹"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">The minute hand makes 12 complete revolutions and one half revolution. Its displacement magnitude is the diameter.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=12.5(3600)\\\\ &=45000\\,\\mathrm s\\\\ s&=2(5)\\\\ &=10\\,\\mathrm{cm}\\\\ v_{\\rm avg}&=\\frac{10}{45000}\\\\ &=\\frac1{4500}\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 5 cm; elapsed time 12.5 hours. The minute hand finishes opposite its initial position.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t&=12.5\\times3600\\\\[3pt] &=45000\\,\\mathrm s\\\\[3pt] s&=2r\\\\[3pt] &=2\\times5\\\\[3pt] &=10\\,\\mathrm{cm}\\\\[3pt] v_{\\rm avg}&=\\frac st\\\\[3pt] &=\\frac{10}{45000}\\\\[3pt] &\\approx2.22\\times10^{-4}\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -702,7 +702,7 @@ window.iitOthersData = {
             "D": "70 km"
           },
           "answer": "D",
-          "explanation": "<div style=\"margin-bottom:8px;\">Calculate the distance covered in each time interval and add them.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=v_1t_1+v_2t_2\\\\ &=20(1)+25(2)\\\\ &=70\\,\\mathrm{km}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Speeds 20 and 25 km/h; respective times 1 and 2 h.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d_1&=v_1t_1\\\\[3pt] &=20\\times1\\\\[3pt] &=20\\,\\mathrm{km}\\\\[3pt] d_2&=v_2t_2\\\\[3pt] &=25\\times2\\\\[3pt] &=50\\,\\mathrm{km}\\\\[3pt] d&=d_1+d_2\\\\[3pt] &=20+50\\\\[3pt] &=70\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -715,7 +715,7 @@ window.iitOthersData = {
             "D": "66 km, 28 km"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">Use the circumference to determine the number of revolutions (taking π ≈ 22/7).</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=44(1.5)\\\\ &=66\\,\\mathrm{km}\\\\ C&=2\\pi(7)\\approx44\\,\\mathrm{km}\\\\ n&=\\frac{66}{44}\\\\ &=1.5\\\\ s&=2(7)\\\\ &=14\\,\\mathrm{km}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 7 km; speed 44 km/h; time 1.5 h. Use the textbook approximation for pi.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d&=vt\\\\[3pt] &=44\\times1.5\\\\[3pt] &=66\\,\\mathrm{km}\\\\[3pt] C&=2\\pi r\\\\[3pt] &\\approx2\\times\\frac{22}{7}\\times7\\\\[3pt] &=44\\,\\mathrm{km}\\\\[3pt] n&=\\frac dC\\\\[3pt] &=\\frac{66}{44}\\\\[3pt] &=1.5\\\\[3pt] s&=2r\\\\[3pt] &=2\\times7\\\\[3pt] &=14\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -728,7 +728,7 @@ window.iitOthersData = {
             "D": "\\(110,28\\) km"
           },
           "answer": "B",
-          "explanation": "<div style=\"margin-bottom:8px;\">Use the circumference to determine the fraction of a revolution (taking π ≈ 22/7).</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=22(5)\\\\ &=110\\,\\mathrm{km}\\\\ C&=2\\pi(14)\\approx88\\,\\mathrm{km}\\\\ n&=1.25\\\\ s&=\\sqrt{14^2+14^2}\\\\ &=14\\sqrt2\\,\\mathrm{km}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 14 km; speed 22 km/h; time 5 h. After one and a quarter rounds, displacement is the chord subtending 90 degrees.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d&=vt\\\\[3pt] &=22\\times5\\\\[3pt] &=110\\,\\mathrm{km}\\\\[3pt] C&=2\\pi r\\\\[3pt] &\\approx2\\times\\frac{22}{7}\\times14\\\\[3pt] &=88\\,\\mathrm{km}\\\\[3pt] n&=\\frac{110}{88}\\\\[3pt] &=1.25\\\\[3pt] s&=\\sqrt{14^2+14^2}\\\\[3pt] &=\\sqrt{392}\\\\[3pt] &=14\\sqrt2\\,\\mathrm{km}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -741,7 +741,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{\\pi}{50}\\) m"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">The total distance is twice the circumference.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=vt\\\\ &=10(10)\\\\ &=100\\,\\mathrm m\\\\ 4\\pi r&=100\\\\ r&=\\frac{25}{\\pi}\\,\\mathrm m\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Speed 10 m/s; time 10 s; two complete rounds.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d&=vt\\\\[3pt] &=10\\times10\\\\[3pt] &=100\\,\\mathrm m\\\\[3pt] d&=2(2\\pi r)\\\\[3pt] &=4\\pi r\\\\[3pt] r&=\\frac d{4\\pi}\\\\[3pt] &=\\frac{100}{4\\pi}\\\\[3pt] &=\\frac{25}{\\pi}\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -754,7 +754,7 @@ window.iitOthersData = {
             "D": "35 kmph, zero"
           },
           "answer": "B",
-          "explanation": "<div style=\"margin-bottom:8px;\">Let the one-way distance be D. The total displacement is zero.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{2D}{D/30+D/70}\\\\ &=42\\,\\mathrm{km/h}\\\\ \\bar v&=0\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Let one-way distance be D. Outward and return speeds are 30 and 70 km/h.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{30}+\\frac D{70}\\\\[3pt] &=\\frac{7D+3D}{210}\\\\[3pt] &=\\frac D{21}\\\\[3pt] v_{\\rm speed}&=\\frac{2D}{t}\\\\[3pt] &=\\frac{2D}{D/21}\\\\[3pt] &=42\\,\\mathrm{km/h}\\\\[3pt] v_{\\rm avg}&=\\frac0t\\\\[3pt] &=0\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -767,7 +767,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">The two speeds apply for equal time intervals. Let total time be T.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{30(T/2)+70(T/2)}T\\\\ &=50\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Let total time be T. Each speed applies for half the time.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d_1&=30\\frac T2\\\\[3pt] &=15T\\\\[3pt] d_2&=70\\frac T2\\\\[3pt] &=35T\\\\[3pt] v_{\\rm avg}&=\\frac{d_1+d_2}{T}\\\\[3pt] &=\\frac{15T+35T}{T}\\\\[3pt] &=50\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -780,7 +780,7 @@ window.iitOthersData = {
             "D": "11 : 1"
           },
           "answer": "D",
-          "explanation": "<div style=\"margin-bottom:8px;\">After 3.5 rounds the car is diametrically opposite its starting point.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=3.5(2\\pi r)\\\\ &=7\\pi r\\\\ s&=2r\\\\ \\frac ds&=\\frac{7\\pi}{2}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 100 m; 3.5 rounds. Final position is opposite the starting point.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d&=3.5(2\\pi r)\\\\[3pt] &=700\\pi\\,\\mathrm m\\\\[3pt] s&=2r\\\\[3pt] &=200\\,\\mathrm m\\\\[3pt] \\frac ds&=\\frac{700\\pi}{200}\\\\[3pt] &=\\frac{7\\pi}{2}\\\\[3pt] &\\approx11\\\\[3pt] d:s&=11:1\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -793,7 +793,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{220}{3}\\) km/h"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">Include the halt in the total journey time.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=120(1)+100(1.5)\\\\ &=270\\,\\mathrm{km}\\\\ t&=1+0.5+1.5\\\\ &=3\\,\\mathrm h\\\\ v_{\\rm avg}&=\\frac{270}{3}\\\\ &=90\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Include the half-hour halt in the total time.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d_1&=120\\times1\\\\[3pt] &=120\\,\\mathrm{km}\\\\[3pt] d_2&=100\\times1.5\\\\[3pt] &=150\\,\\mathrm{km}\\\\[3pt] d&=120+150\\\\[3pt] &=270\\,\\mathrm{km}\\\\[3pt] t&=1+0.5+1.5\\\\[3pt] &=3\\,\\mathrm h\\\\[3pt] v_{\\rm avg}&=\\frac dt\\\\[3pt] &=\\frac{270}{3}\\\\[3pt] &=90\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -806,7 +806,7 @@ window.iitOthersData = {
             "D": "35 kmph, zero"
           },
           "answer": "D",
-          "explanation": "<div style=\"margin-bottom:8px;\">Let the one-way distance be D. The return journey has two equal distance segments.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac D{30}+\\frac D{60}+\\frac D{140}\\\\ &=\\frac{2D}{35}\\\\ v_{\\rm avg}&=\\frac{2D}{2D/35}\\\\ &=35\\,\\mathrm{km/h}\\\\ \\bar v&=0\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Let one-way distance be D. Return segments each have distance D/2.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t_1&=\\frac D{30}\\\\[3pt] t_2&=\\frac{D/2}{30}\\\\[3pt] &=\\frac D{60}\\\\[3pt] t_3&=\\frac{D/2}{70}\\\\[3pt] &=\\frac D{140}\\\\[3pt] t&=\\frac D{30}+\\frac D{60}+\\frac D{140}\\\\[3pt] &=\\frac{14D+7D+3D}{420}\\\\[3pt] &=\\frac{2D}{35}\\\\[3pt] v_{\\rm speed}&=\\frac{2D}{t}\\\\[3pt] &=35\\,\\mathrm{km/h}\\\\[3pt] v_{\\rm avg}&=\\frac0t\\\\[3pt] &=0\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         }
@@ -821,7 +821,7 @@ window.iitOthersData = {
             "D": "37.5 kmph, 37.5 kmph"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">The return speeds apply for equal time intervals. Let the one-way distance be D.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm return}&=(30+70)/2\\\\ &=50\\\\ v_{\\rm avg}&=\\frac{2D}{D/30+D/50}\\\\ &=37.5\\,\\mathrm{km/h}\\\\ \\bar v&=0\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Let one-way distance be D. The return journey has equal time intervals at 30 and 70 km/h.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}v_{\\rm return}&=\\frac{30+70}{2}\\\\[3pt] &=50\\,\\mathrm{km/h}\\\\[3pt] t&=\\frac D{30}+\\frac D{50}\\\\[3pt] &=\\frac{8D}{150}\\\\[3pt] v_{\\rm speed}&=\\frac{2D}{t}\\\\[3pt] &=\\frac{300}{8}\\\\[3pt] &=37.5\\,\\mathrm{km/h}\\\\[3pt] v_{\\rm avg}&=\\frac0t\\\\[3pt] &=0\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -834,7 +834,7 @@ window.iitOthersData = {
             "D": "44m, 42m"
           },
           "answer": "C",
-          "explanation": "<div style=\"margin-bottom:8px;\">Convert the central angle to radians. Distance is the arc length; displacement is the chord.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=r\\theta\\\\ &=21\\frac\\pi3\\\\ &=7\\pi\\,\\mathrm m\\\\ s&=2r\\sin30^\\circ\\\\ &=21\\,\\mathrm m\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 21 m; central angle 60 degrees. Use arc length for distance and chord length for displacement.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}\\theta&=60^\\circ\\\\[3pt] &=\\frac\\pi3\\,\\mathrm{rad}\\\\[3pt] d&=r\\theta\\\\[3pt] &=21\\times\\frac\\pi3\\\\[3pt] &=7\\pi\\,\\mathrm m\\\\[3pt] &\\approx22\\,\\mathrm m\\\\[3pt] s&=2r\\sin\\frac\\theta2\\\\[3pt] &=42\\sin30^\\circ\\\\[3pt] &=42\\times\\frac12\\\\[3pt] &=21\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -847,7 +847,7 @@ window.iitOthersData = {
             "D": "42m, 21m"
           },
           "answer": "B",
-          "explanation": "<div style=\"margin-bottom:8px;\">Convert the central angle to radians. Distance is the arc length; displacement is the chord.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=21\\frac{2\\pi}3\\\\ &=14\\pi\\,\\mathrm m\\\\ s&=42\\sin60^\\circ\\\\ &=21\\sqrt3\\,\\mathrm m\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 21 m; central angle 120 degrees.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}\\theta&=120^\\circ\\\\[3pt] &=\\frac{2\\pi}{3}\\,\\mathrm{rad}\\\\[3pt] d&=r\\theta\\\\[3pt] &=21\\times\\frac{2\\pi}{3}\\\\[3pt] &=14\\pi\\,\\mathrm m\\\\[3pt] &\\approx44\\,\\mathrm m\\\\[3pt] s&=2r\\sin\\frac\\theta2\\\\[3pt] &=42\\sin60^\\circ\\\\[3pt] &=42\\times\\frac{\\sqrt3}{2}\\\\[3pt] &=21\\sqrt3\\,\\mathrm m\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -860,7 +860,7 @@ window.iitOthersData = {
             "D": "1.8m/s, 2.4m/s"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">Calculate total time, total distance and resultant displacement separately.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}t&=\\frac{30}{2}+\\frac{40}{4}\\\\ &=25\\,\\mathrm s\\\\ d&=30+40\\\\ &=70\\,\\mathrm m\\\\ s&=\\sqrt{30^2+40^2}\\\\ &=50\\,\\mathrm m\\\\ v_{\\rm speed}&=\\frac{70}{25}\\\\ &=2.8\\,\\mathrm{m/s}\\\\ v_{\\rm avg}&=\\frac{50}{25}\\\\ &=2\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Westward distance 30 m at 2 m/s; northward distance 40 m at 4 m/s.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t_1&=\\frac{30}{2}\\\\[3pt] &=15\\,\\mathrm s\\\\[3pt] t_2&=\\frac{40}{4}\\\\[3pt] &=10\\,\\mathrm s\\\\[3pt] t&=15+10\\\\[3pt] &=25\\,\\mathrm s\\\\[3pt] d&=30+40\\\\[3pt] &=70\\,\\mathrm m\\\\[3pt] s&=\\sqrt{30^2+40^2}\\\\[3pt] &=\\sqrt{2500}\\\\[3pt] &=50\\,\\mathrm m\\\\[3pt] v_{\\rm speed}&=\\frac{70}{25}\\\\[3pt] &=2.8\\,\\mathrm{m/s}\\\\[3pt] v_{\\rm avg}&=\\frac{50}{25}\\\\[3pt] &=2\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -873,7 +873,7 @@ window.iitOthersData = {
             "D": "6.28 cm"
           },
           "answer": "B",
-          "explanation": "<div style=\"margin-bottom:8px;\">The insect travels half the circumference.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}d&=\\pi r\\\\ &=10\\pi\\,\\mathrm{cm}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 10 cm. The insect travels a semicircle.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d&=\\frac12(2\\pi r)\\\\[3pt] &=\\pi r\\\\[3pt] &=10\\pi\\,\\mathrm{cm}\\\\[3pt] &\\approx31.4\\,\\mathrm{cm}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -886,7 +886,7 @@ window.iitOthersData = {
             "D": "None"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">Average speed is arc length divided by elapsed time.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{\\pi r}{t}\\\\ &=\\frac{10\\pi}{60}\\\\ &=\\frac\\pi6\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 10 cm; time 60 s. Average speed uses arc length.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d&=\\pi r\\\\[3pt] &=10\\pi\\,\\mathrm{cm}\\\\[3pt] v_{\\rm avg}&=\\frac dt\\\\[3pt] &=\\frac{10\\pi}{60}\\\\[3pt] &=\\frac\\pi6\\,\\mathrm{cm/s}\\\\[3pt] &\\approx0.52\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -899,7 +899,7 @@ window.iitOthersData = {
             "D": "80cm"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">The initial and final points are opposite ends of a diameter.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}s&=2r\\\\ &=20\\,\\mathrm{cm}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 10 cm. Displacement is the diameter connecting the two opposite points.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}s&=2r\\\\[3pt] &=2\\times10\\\\[3pt] &=20\\,\\mathrm{cm}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -912,7 +912,7 @@ window.iitOthersData = {
             "D": "None"
           },
           "answer": "B",
-          "explanation": "<div style=\"margin-bottom:8px;\">Average velocity magnitude is displacement divided by elapsed time.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{2r}{t}\\\\ &=\\frac{20}{60}\\\\ &=\\frac13\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 10 cm; time 60 s. Average velocity magnitude uses displacement.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}s&=2r\\\\[3pt] &=20\\,\\mathrm{cm}\\\\[3pt] v_{\\rm avg}&=\\frac st\\\\[3pt] &=\\frac{20}{60}\\\\[3pt] &=\\frac13\\,\\mathrm{cm/s}\\\\[3pt] &\\approx0.33\\,\\mathrm{cm/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -925,7 +925,7 @@ window.iitOthersData = {
             "D": "3.15 m/s"
           },
           "answer": "A",
-          "explanation": "<div style=\"margin-bottom:8px;\">The path is a semicircle; its length is πr.</div><div style=\"text-align:left;overflow-x:auto;line-height:1.8;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{\\pi r}{t}\\\\ &=\\pi\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Radius 1 m; time 1 s. The particle travels a semicircle.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}d&=\\pi r\\\\[3pt] &=\\pi\\times1\\\\[3pt] &=\\pi\\,\\mathrm m\\\\[3pt] v_{\\rm avg}&=\\frac dt\\\\[3pt] &=\\frac\\pi1\\\\[3pt] &=\\pi\\,\\mathrm{m/s}\\\\[3pt] &\\approx3.14\\,\\mathrm{m/s}\\end{aligned}\\)</div>",
           "paper": "WS-2",
           "marks": 1
         },
@@ -938,7 +938,7 @@ window.iitOthersData = {
             "D": "52 km/h"
           },
           "answer": "B",
-          "explanation": "<div style=\"margin-bottom:8px;\">Let the total distance be D. Find the time taken for each fraction of the journey.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}v_{\\rm avg}&=\\frac{D}{\\frac{2D}{3(48)}+\\frac{D}{3(51)}}\\\\ &=\\frac{3(48)(51)}{2(51)+48}\\\\ &=48.96\\,\\mathrm{km/h}\\end{aligned}\\)</div>",
+          "explanation": "<div style=\"margin-bottom:8px;\">Let total distance be D. Speeds are 48 and 51 km/h for two-thirds and one-third of the distance.</div><div style=\"text-align:left;overflow-x:auto;\">\\(\\displaystyle\\begin{aligned}t_1&=\\frac{2D}{3\\times48}\\\\[3pt] t_2&=\\frac D{3\\times51}\\\\[3pt] t&=t_1+t_2\\\\[3pt] &=\\frac{D(2\\times51+48)}{3\\times48\\times51}\\\\[3pt] v_{\\rm avg}&=\\frac Dt\\\\[3pt] &=\\frac{3\\times48\\times51}{150}\\\\[3pt] &=48.96\\,\\mathrm{km/h}\\end{aligned}\\)</div><div>Option B is the closest available answer.</div>",
           "paper": "WS-2",
           "marks": 1
         }
