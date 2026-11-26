@@ -4362,12 +4362,12 @@ function buildQuestionCardsHTML(qArray, opts) {
   html += total ? qArray.map((q, idx) => {
     const options = q.options || {};
     const optsHtml = Object.entries(options).map(([k,v]) => `<div class="option" data-opt="${k}"><span class="opt-label">${k}</span><span class="opt-text">${mathify(v)}</span></div>`).join('');
-    const badgesHtml = `<div class="qy-badges">${q.paper?`<span class="qy-badge qy-badge-paper">${q.paper}</span>`:''}${(showExam && q.exam)?`<span class="qy-badge qy-badge-paper">${q.exam}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>`;
+    const badgesHtml = `<div class="qy-badges">${(showExam && q.exam)?`<span class="qy-badge qy-badge-paper">${q.exam}</span>`:''}${q.year?`<span class="qy-badge qy-badge-year">${q.year}</span>`:''}</div>`;
     const qnoClass = accent ? 'qno qno-accent' : 'qno mcq';
     const qnoStyle = accent ? ` style="--qc:${accent};"` : '';
     const imageHtml = q.image ? `<img class="mcq-question-image" src="${q.image}" alt="Question ${q.no||idx+1} figure" loading="lazy"${q.imageWidth ? ` style="width:min(${q.imageWidth},100%) !important;max-width:min(${q.imageWidth},100%) !important;"` : ''}>` : '';
     return `<div class="mcq-card iit-q-card${tapCardForAnswer?' iit-example-card':''}" data-qidx="${idx}" ${tapCardForAnswer && q.answer ? 'onclick="toggleIITCardAnswer(event,this)"' : ''} style="display:${IIT_PRACTICE.mode==='list' || idx===IIT_PRACTICE.index ? 'flex':'none'};">
-      <div class="mcq-header"><span class="${qnoClass}"${qnoStyle}>${q.no||idx+1}</span><div class="mcq-question q-text" style="margin-bottom:0;flex:1;">${mathify(q.question)}</div>${badgesHtml}</div>
+      <div class="mcq-header"><span class="${qnoClass}"${qnoStyle}>${q.no||idx+1}</span><div class="mcq-question q-text" style="margin-bottom:0;flex:1;">${mathify(q.question)}</div>${(showExam && q.exam) || q.year ? badgesHtml : ''} </div>
       ${imageHtml}
       <div class="options ${optionsLayoutClass(options)}" data-answer="${q.answer}">${optsHtml}</div>
       ${showAnswerButton && q.answer ? `<div class="iit-answer-wrap"><div class="iit-answer-box">${mathify(q.answer)}</div></div>` : ''}
