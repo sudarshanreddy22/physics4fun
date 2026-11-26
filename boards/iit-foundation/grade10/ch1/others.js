@@ -1924,7 +1924,7 @@ window.iitOthersData = {
           "question": "Two charges, one +5 μC and another −5 μC, are placed 1 mm apart. Calculate the dipole moment.",
           "options": {},
           "answer": "\\(5 \\times 10^{-9}\\) C m",
-          "explanation": "",
+          "explanation": "\\(p=qd=(5\\times10^{-6})(10^{-3})=5\\times10^{-9}\\,\\mathrm{C\\,m}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 49,
@@ -1934,7 +1934,7 @@ window.iitOthersData = {
           "question": "Two point charges, each of 5 μC but opposite in sign, are placed 4 cm apart. Calculate the electric field intensity at a point 4 cm from the midpoint on the axial line of the dipole.",
           "options": {},
           "answer": "\\(10^{8}\\) NC⁻¹",
-          "explanation": "",
+          "explanation": "\\(E=kq\\left[\\frac1{(0.04-0.02)^2}-\\frac1{(0.04+0.02)^2}\\right]=1.0\\times10^8\\,\\mathrm{N/C}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 49,
@@ -1945,7 +1945,7 @@ window.iitOthersData = {
           "question": "Calculate the electric field of a dipole of length 10 cm with charges ±1 μC at an equatorial point 12 cm from its centre.",
           "options": {},
           "answer": "\\(4.096 \\times 10^{5}\\) N/C",
-          "explanation": "",
+          "explanation": "\\(E=\\frac{kqd}{(r^2+(d/2)^2)^{3/2}}=\\frac{9\\times10^9\\times10^{-6}\\times0.10}{(0.12^2+0.05^2)^{3/2}}\\approx4.096\\times10^5\\,\\mathrm{N/C}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50
@@ -1955,7 +1955,7 @@ window.iitOthersData = {
           "question": "Two charges ±10 μC are 5.00 mm apart. Find the electric field (a) on the positive axial side, 15 cm from the centre, and (b) on the equatorial line, 15 cm from the centre.",
           "options": {},
           "answer": "(a) \\(2.66 \\times 10^{5}\\) N/C, along dipole moment; (b) \\(1.33 \\times 10^{5}\\) N/C, opposite to dipole moment.",
-          "explanation": "",
+          "explanation": "\\(p=qd=5\\times10^{-8}\\,\\mathrm{C\\,m}\\). Using the short-dipole approximation: \\(E_a=\\frac{2kp}{r^3}=2.67\\times10^5\\,\\mathrm{N/C},\\quad E_e=\\frac{kp}{r^3}=1.33\\times10^5\\,\\mathrm{N/C}\\). Axial field is along the dipole moment and equatorial field is opposite.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50
@@ -1965,7 +1965,7 @@ window.iitOthersData = {
           "question": "A dipole has charges of magnitude \\(\\frac13\\times10^{-7}\\,C\\) separated by 2 cm in a field of \\(3 \\times 10^{7}\\) N/C. Find maximum torque.",
           "options": {},
           "answer": "0.02 N m",
-          "explanation": "",
+          "explanation": "\\(\\tau_{\\max}=qdE=\\frac{10^{-7}}3(0.02)(3\\times10^7)=0.02\\,\\mathrm{N\\,m}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50
@@ -1975,7 +1975,7 @@ window.iitOthersData = {
           "question": "A dipole of length 4 cm makes an angle of \\(60^\\circ\\) with a field of \\(4 \\times 10^{5}\\) N/C and experiences torque \\(8\\sqrt3\\,\\mathrm{N\\,m}\\). Find either charge.",
           "options": {},
           "answer": "1 mC",
-          "explanation": "",
+          "explanation": "\\(q=\\frac{\\tau}{dE\\sin60^\\circ}=\\frac{8\\sqrt3}{0.04(4\\times10^5)(\\sqrt3/2)}=10^{-3}\\,\\mathrm C\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50
@@ -1991,7 +1991,7 @@ window.iitOthersData = {
             "D": "It is conservative field."
           },
           "answer": "D",
-          "explanation": "",
+          "explanation": "An electrostatic field is conservative: work done around a closed path is zero.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
@@ -2006,7 +2006,7 @@ window.iitOthersData = {
             "D": "Electric field is the zone of influence of a charge."
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "All four statements are generally valid for electrostatics. The source has no unambiguously incorrect option.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
@@ -2021,7 +2021,7 @@ window.iitOthersData = {
             "D": "the force, an electron would experience there"
           },
           "answer": "C",
-          "explanation": "",
+          "explanation": "Electric field is force per unit positive test charge: \\(E=F/q\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
@@ -2036,7 +2036,7 @@ window.iitOthersData = {
             "D": "touch the nearest electrical pole."
           },
           "answer": "A",
-          "explanation": "",
+          "explanation": "A closed metal-bodied car acts as a Faraday cage; remain inside.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
@@ -2051,7 +2051,7 @@ window.iitOthersData = {
             "D": "both (1) and (3)"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "An electron has negative charge, so its initial acceleration is opposite to the electric field.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2066,7 +2066,7 @@ window.iitOthersData = {
             "D": "\\(3.2 \\times 10^{3}\\) N/C"
           },
           "answer": "C",
-          "explanation": "E=F/q=1500 N/C",
+          "explanation": "\\(E=\\frac Fq=\\frac{1.5\\times10^{-3}}{1.0\\times10^{-6}}=1.5\\times10^3\\,\\mathrm{N/C}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2081,7 +2081,7 @@ window.iitOthersData = {
             "D": "\\(5.6\\times 10^{-11}\\) N/C"
           },
           "answer": "D",
-          "explanation": "E=mg/e",
+          "explanation": "\\(eE=mg\\Rightarrow E=\\frac{9\\times10^{-31}\\times10}{1.6\\times10^{-19}}\\approx5.6\\times10^{-11}\\,\\mathrm{N/C}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2096,7 +2096,7 @@ window.iitOthersData = {
             "D": "\\(5\\times 10^{4}\\) N/C"
           },
           "answer": "B",
-          "explanation": "E=mg/q",
+          "explanation": "\\(E=\\frac{mg}{q}=\\frac{2\\times10^{-4}\\times9.8}{9.8\\times10^{-8}}=2\\times10^4\\,\\mathrm{N/C}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2111,7 +2111,7 @@ window.iitOthersData = {
             "D": "\\(1.39\\times 10^{11}\\) C"
           },
           "answer": "A",
-          "explanation": "q=Er²/k",
+          "explanation": "\\(q=\\frac{Er^2}{k}=\\frac{2(0.25)^2}{9\\times10^9}=1.39\\times10^{-11}\\,\\mathrm C\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2126,7 +2126,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{1}{4\\pi\\epsilon_0}\\frac{4\\sqrt2q}{a^2}\\)"
           },
           "answer": "D",
-          "explanation": "Vector addition of the four fields.",
+          "explanation": "Each corner is at \\(r=a/\\sqrt2\\). The transverse components cancel; the remaining components add: \\(E=4\\frac{2kq}{a^2}\\cos45^\\circ=\\frac{4\\sqrt2kq}{a^2}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2141,7 +2141,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{2q}{4\\pi\\epsilon_0r^2}\\)"
           },
           "answer": "C",
-          "explanation": "Equal opposite fields cancel.",
+          "explanation": "Equal charges produce equal and opposite fields at the midpoint; \\(E=0\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2156,7 +2156,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{2Q}{4\\pi\\epsilon_0a^2}\\) along OD"
           },
           "answer": "D",
-          "explanation": "The field is opposite to that of the missing fourth charge.",
+          "explanation": "The fields of four identical corner charges would cancel. Removing the charge at D leaves \\(E=\\frac{kQ}{(a/\\sqrt2)^2}=\\frac{2kQ}{a^2}\\) directed along OD.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2171,7 +2171,7 @@ window.iitOthersData = {
             "D": "5 cm from charge q"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "\\(\\frac{4kq}{x^2}=\\frac{kq}{(30-x)^2}\\Rightarrow x=20\\,\\mathrm{cm}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2186,7 +2186,7 @@ window.iitOthersData = {
             "D": "some where on the right bisector of line joining -Q and 2Q"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The zero-field point lies outside the interval on the side of the smaller-magnitude charge, −Q.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2201,7 +2201,7 @@ window.iitOthersData = {
             "D": "Only (B) and (C)"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "Field lines cannot intersect themselves or one another. A charged particle need not follow a field line.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2216,7 +2216,7 @@ window.iitOthersData = {
             "D": "radial, outwards"
           },
           "answer": "C",
-          "explanation": "",
+          "explanation": "Electric field lines point radially inward toward a negative point charge.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2231,7 +2231,7 @@ window.iitOthersData = {
             "D": "nothing can be said"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2243,7 +2243,7 @@ window.iitOthersData = {
           "question": "The field pattern which is not possible is given by [ ]\n1) 2) 3) 4)",
           "options": {},
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2254,7 +2254,7 @@ window.iitOthersData = {
           "question": "The field pattern(s) which is/are not possible: [ ]\n1) 2) 3) 4)",
           "options": {},
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2265,7 +2265,7 @@ window.iitOthersData = {
           "question": "A point positive charge is brought near an isolated conducting sphere. The electric field\nlines are best represented by [ ]\n1) 2)\n3) 4)",
           "options": {},
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2280,7 +2280,7 @@ window.iitOthersData = {
             "D": "\\(q_{1}\\) is negative but \\(q_{2}\\) is positive"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2292,7 +2292,7 @@ window.iitOthersData = {
           "question": "Consider the four field patterns shown. Assuming there are no charges in the regions\nshown, which of the patterns represents a possible electrostatic field? [ ]\n1) 2) 3) 4)",
           "options": {},
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2303,7 +2303,7 @@ window.iitOthersData = {
           "question": "Which of the following figures correctly shows the top view sketch of the electric field\nlines for a uniformly charged hollow cylinder as shown in figure? [ ]\n1) 2)\n3) 4)",
           "options": {},
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2318,7 +2318,7 @@ window.iitOthersData = {
             "D": "Both B and C"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2334,7 +2334,7 @@ window.iitOthersData = {
             "D": "\\(E_{A}\\) = \\(E_{C}\\) < \\(E_{B}\\)"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2350,7 +2350,7 @@ window.iitOthersData = {
             "D": "zero."
           },
           "answer": "D",
-          "explanation": "",
+          "explanation": "Inside a conductor in electrostatic equilibrium, the electric field is zero.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2365,7 +2365,7 @@ window.iitOthersData = {
             "D": "None of the above"
           },
           "answer": "D",
-          "explanation": "",
+          "explanation": "A charged particle accelerates along or opposite to the local field, but its trajectory need not coincide with a field line.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2380,7 +2380,7 @@ window.iitOthersData = {
             "D": "\\(6.4\\times 10^{-18}\\) N, 30 N/C"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F=eE=(1.6\\times10^{-19})(40)=6.4\\times10^{-18}\\,\\mathrm N\\). The field at B depends on its location in the original figure.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2396,7 +2396,7 @@ window.iitOthersData = {
             "D": "\\(3.2\\times 10^{29}\\) C m"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "\\(p=ed=(1.6\\times10^{-19})(10^{-10})=1.6\\times10^{-29}\\,\\mathrm{C\\,m}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2411,7 +2411,7 @@ window.iitOthersData = {
             "D": "Only (A) and (C)"
           },
           "answer": "A",
-          "explanation": "",
+          "explanation": "Dipole moment has dimensions \\([LTA]\\) and SI unit C m. Its direction is from negative to positive charge.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2426,7 +2426,7 @@ window.iitOthersData = {
             "D": "4ql"
           },
           "answer": "C",
-          "explanation": "The vector sum has magnitude \\(\\sqrt{3}\\)ql.",
+          "explanation": "\\(p=2ql\\cos30^\\circ=\\sqrt3ql\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2440,8 +2440,8 @@ window.iitOthersData = {
             "C": "A torque but not a force",
             "D": "Neither a force nor a torque"
           },
-          "answer": "",
-          "explanation": "",
+          "answer": "A",
+          "explanation": "A nonuniform field can exert a net force and a torque; torque can vanish for particular orientations.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2456,7 +2456,7 @@ window.iitOthersData = {
             "D": "\\(120^\\circ\\)"
           },
           "answer": "C",
-          "explanation": "",
+          "explanation": "The equatorial field points opposite to the dipole moment, so the angle is \\(180^\\circ\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2471,7 +2471,7 @@ window.iitOthersData = {
             "D": "No force and no torque"
           },
           "answer": "C",
-          "explanation": "",
+          "explanation": "In a uniform field, the forces cancel. For a non-aligned dipole, \\(\\tau=pE\\sin\\theta\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2486,7 +2486,7 @@ window.iitOthersData = {
             "D": "The torque on the dipole due to the field may be zero"
           },
           "answer": "D",
-          "explanation": "",
+          "explanation": "Torque can vanish when the dipole is aligned with the local radial field.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2501,7 +2501,7 @@ window.iitOthersData = {
             "D": "\\(qr/d^3\\)"
           },
           "answer": "D",
-          "explanation": "Axial field is proportional to p/\\(d^{3}\\).",
+          "explanation": "For a short dipole, \\(E_a=\\frac{2kp}{d^3}=\\frac{2kqr}{d^3}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2516,7 +2516,7 @@ window.iitOthersData = {
             "D": "\\(45^\\circ\\)"
           },
           "answer": "A",
-          "explanation": "τ=pE sin θ.",
+          "explanation": "\\(\\tau=pE\\sin\\theta\\) is maximum when \\(\\theta=90^\\circ\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2531,7 +2531,7 @@ window.iitOthersData = {
             "D": "Are not related"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "The equatorial field is antiparallel to the dipole moment.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2546,7 +2546,7 @@ window.iitOthersData = {
             "D": "None of the above"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "\\(E_a=\\frac{2kp}{r^3},\\quad E_e=\\frac{kp}{r^3}\\Rightarrow E_a=2E_e\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2561,7 +2561,7 @@ window.iitOthersData = {
             "D": "1:2"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "\\(E_a:E_e=2:1\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2576,7 +2576,7 @@ window.iitOthersData = {
             "D": "\\(\\sqrt[3]{2}\\):1"
           },
           "answer": "D",
-          "explanation": "2/\\(x^{3}\\)=1/\\(y^{3}\\).",
+          "explanation": "\\(\\frac{2kp}{x^3}=\\frac{kp}{y^3}\\Rightarrow x:y=\\sqrt[3]2:1\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2591,7 +2591,7 @@ window.iitOthersData = {
             "D": "F/8"
           },
           "answer": "D",
-          "explanation": "",
+          "explanation": "\\(F\\propto r^{-3}\\Rightarrow F'=\\frac F8\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2606,7 +2606,7 @@ window.iitOthersData = {
             "D": "\\(24 \\times 10^{-3}\\) Nm"
           },
           "answer": "B",
-          "explanation": "τ=pE=0.012 N m.",
+          "explanation": "\\(\\tau_{\\max}=qdE=(2\\times10^{-6})(0.03)(2\\times10^5)=0.012\\,\\mathrm{N\\,m}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2621,7 +2621,7 @@ window.iitOthersData = {
             "D": "\\(1\\times 10^{-2}\\) N \\(m^{2}\\)"
           },
           "answer": "C",
-          "explanation": "τ=qdE=0.01 N m.",
+          "explanation": "\\(\\tau_{\\max}=(2\\times10^{-6})(0.01)(5\\times10^5)=0.01\\,\\mathrm{N\\,m}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2636,7 +2636,7 @@ window.iitOthersData = {
             "D": "2E"
           },
           "answer": "C",
-          "explanation": "",
+          "explanation": "After rotation, the point is on the equatorial line: \\(E'=E/2\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2650,8 +2650,8 @@ window.iitOthersData = {
             "C": "4 μm",
             "D": "4 pm"
           },
-          "answer": "",
-          "explanation": "",
+          "answer": "D",
+          "explanation": "A water molecule has total positive charge \\(10e\\). \\(d=\\frac{6.4\\times10^{-30}}{10(1.6\\times10^{-19})}=4\\times10^{-12}\\,\\mathrm m=4\\,\\mathrm{pm}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2665,8 +2665,8 @@ window.iitOthersData = {
             "C": "15 µC",
             "D": "10 µC"
           },
-          "answer": "",
-          "explanation": "",
+          "answer": "B",
+          "explanation": "\\(q=\\frac{\\tau}{dE}=\\frac{0.2\\times10^{-3}}{0.02\\times10^5}=10^{-7}\\,\\mathrm C=0.1\\,\\mu\\mathrm C\\). The printed option B appears to contain a unit typo.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2681,7 +2681,7 @@ window.iitOthersData = {
             "D": "4/13 cm"
           },
           "answer": "A",
-          "explanation": "",
+          "explanation": "\\(\\frac P{x^3}=\\frac{64P}{(25-x)^3}\\Rightarrow25-x=4x\\Rightarrow x=5\\,\\mathrm{cm}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2696,7 +2696,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{3L}4\\)"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "\\(\\frac{4ke}{x^2}=\\frac{ke}{(L-x)^2}\\Rightarrow x=\\frac{2L}{3}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2711,7 +2711,7 @@ window.iitOthersData = {
             "D": "60 cm"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "\\(\\frac{10}{x^2}=\\frac{20}{(80-x)^2}\\Rightarrow x=\\frac{80}{1+\\sqrt2}\\approx33.1\\,\\mathrm{cm}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2726,7 +2726,7 @@ window.iitOthersData = {
             "D": "\\(48\\times 10^{4}\\)"
           },
           "answer": "C",
-          "explanation": "",
+          "explanation": "\\(E=\\frac{kq}{(0.01)^2}\\left(1-\\frac14+\\frac1{16}-\\cdots\\right)=4.5\\times10^5\\frac1{1+1/4}=3.6\\times10^5\\,\\mathrm{N/C}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2741,7 +2741,7 @@ window.iitOthersData = {
             "D": "\\(3.6\\times 10^{4}\\) N/C towards C"
           },
           "answer": "A",
-          "explanation": "",
+          "explanation": "By symmetry the resultant equals the negative of the missing corner field: \\(E=\\frac{k(4\\times10^{-6})}{1/2}=7.2\\times10^4\\,\\mathrm{N/C}\\) towards A.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2756,7 +2756,7 @@ window.iitOthersData = {
             "D": "80/13 cm from \\(q_{2}\\)"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Both charges are equal as printed, so their fields cancel 10 cm from either charge. None of the listed options matches.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2772,7 +2772,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{5q}{16\\pi\\epsilon_0a^2}\\)"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "Six equal charges would give zero field. Removing one leaves \\(E=\\frac{kq}{(2a)^2}=\\frac{q}{16\\pi\\epsilon_0a^2}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2787,7 +2787,7 @@ window.iitOthersData = {
             "D": "Zero"
           },
           "answer": "D",
-          "explanation": "",
+          "explanation": "The three equal fields are separated by \\(120^\\circ\\) and cancel.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2801,8 +2801,8 @@ window.iitOthersData = {
             "C": "Both \\(x=\\pm\\sqrt2a\\)",
             "D": "Only \\(x=\\frac{3a}{2}\\)"
           },
-          "answer": "",
-          "explanation": "",
+          "answer": "B",
+          "explanation": "For the zero-field point to the left of both charges, \\(\\frac{Q}{(a-x)^2}=\\frac{2Q}{(2a-x)^2}\\Rightarrow x=-\\sqrt2a\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2818,7 +2818,7 @@ window.iitOthersData = {
             "D": "\\(-\\frac E3\\)"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "Both fields point in the same direction along the line joining the charges; the magnitude ratio is 1:3. Thus \\(E'=E/3\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2833,7 +2833,7 @@ window.iitOthersData = {
             "D": "qa"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The printed charge at C is ambiguous and the original figure is required; a unique dipole moment cannot be established from the extracted text.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2848,7 +2848,7 @@ window.iitOthersData = {
             "D": "\\(20.5\\times 10^{7}\\) N/C"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The original figure is required to determine whether the axial distances from the two charges are 20 cm and 30 cm or 10 cm and 20 cm. Use \\(E=kq\\left|\\frac1{r_+^2}-\\frac1{r_-^2}\\right|\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2863,7 +2863,7 @@ window.iitOthersData = {
             "D": "None of these"
           },
           "answer": "B",
-          "explanation": "",
+          "explanation": "\\(\\vec E_1=-kp\\hat k,\\quad \\vec E_2=\\frac{2k(p/2)}{2^3}\\hat k=\\frac{kp}{8}\\hat k,\\quad \\vec E=-\\frac{7p}{32\\pi\\epsilon_0}\\hat k\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2878,7 +2878,7 @@ window.iitOthersData = {
             "D": "\\(\\sqrt{\\frac{p}{IE}}\\)"
           },
           "answer": "A",
-          "explanation": "",
+          "explanation": "For small oscillations, \\(I\\ddot\\theta=-pE\\theta\\Rightarrow\\omega=\\sqrt{\\frac{pE}{I}}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
