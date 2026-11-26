@@ -2030,6 +2030,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
         <div class="ch-item" onclick="selectChapter('Motion in a Straightline','9','🏃',this,false,'ch1')"><span class="ch-icon">🏃</span><span class="ch-name">Motion in a Straightline</span></div>
         <div class="ch-item" onclick="selectChapter('Laws of Motion','9','⚙️',this,false,'ch2')"><span class="ch-icon">⚙️</span><span class="ch-name">Laws of Motion</span></div>
         <div class="ch-item" onclick="selectChapter('Gravitation','9','🌍',this,false,'ch3')"><span class="ch-icon">🌍</span><span class="ch-name">Gravitation</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Plane','9','↗️',this,false,'ch5')"><span class="ch-icon">↗️</span><span class="ch-name">Motion in a Plane</span></div>
       </div>
 
       <div class="grade-row" onclick="toggleGrade('iit-f-g10',this)">
@@ -5158,6 +5159,15 @@ function worksheetQuestions(w, level) {
 }
 
 function renderIITOthTabs() {
+  if (IITOTH.worksheets.some(w => w.group === 'Vectors-1')) {
+    const active = IITOTH.worksheets[IITOTH.worksheetIdx];
+    const groups = [...new Set(IITOTH.worksheets.map(w=>w.group))];
+    const parents = groups.map((g,i)=>'<div class="iit-parent-item'+(active.group===g?' active':'')+'" style="--pc:'+iitColor(i)+'" onclick="selectIITOthWorksheet('+IITOTH.worksheets.findIndex(w=>w.group===g)+')">'+g+'</div>');
+    const children = IITOTH.worksheets.map((w,i)=>w.group===active.group?'<div class="iit-sub-pill'+(i===IITOTH.worksheetIdx?' active':'')+'" style="--sc:'+iitColor(groups.indexOf(w.group))+'" onclick="selectIITOthWorksheet('+i+')">'+w.name+'</div>':'').join('');
+    document.getElementById('iitOthWorksheetTabsWrap').innerHTML='<div class="iit-worksheet-tabs-with-tools">'+iitInlineHTML(parents,groups.indexOf(active.group),'<div class="iit-sub-row">'+children+'</div>')+iitRenderedUtilityHTML()+'</div>';
+    document.getElementById('iitOthLevelTabsWrap').innerHTML='';
+    return;
+  }
   const activeWs = IITOTH.worksheets[IITOTH.worksheetIdx];
   const available = availableWorksheetLevels(activeWs);
 
@@ -5209,7 +5219,9 @@ function renderIITOthLevel() {
   bodyWrap.innerHTML = buildQuestionCardsHTML(qArray, {
     showExam:false,
     accentColor:accent,
-    combinedNav:true
+    combinedNav:true,
+    showAnswerButton: worksheet.name === 'Concept Build Problems',
+    tapCardForAnswer: worksheet.name === 'Concept Build Problems'
   });
   // Set the question visibility independently of asynchronous MathJax loading.
   // Every worksheet question must remain reachable in Single View.
