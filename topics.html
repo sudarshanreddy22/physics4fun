@@ -5076,7 +5076,8 @@ async function renderIITOthersView() {
   await new Promise(res => {
     const sc = document.createElement('script');
     sc.dataset.iitoth = '1';
-    sc.src = `boards/${board}/grade${gradeNum}/${CUR.slug}/others.js`;
+    const worksheetSlug = board === 'iit-foundation' && gradeNum === '8' && requestedSlug === 'motion-in-a-starlight-line' ? 'ch3' : CUR.slug;
+    sc.src = `boards/${board}/grade${gradeNum}/${worksheetSlug}/others.js` + (worksheetSlug === 'ch3' && board === 'iit-foundation' && gradeNum === '8' ? '?v=20261126-ws2' : '');
     sc.onload = res;
     sc.onerror = () => { console.warn('Worksheet data failed to load:', sc.src); sc.remove(); res(); };
     document.head.appendChild(sc);
