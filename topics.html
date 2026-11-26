@@ -2015,7 +2015,7 @@ mjx-container[display="true"]{margin:8px 0 !important;}
       <div class="chapter-list" id="iit-f-g8">
         <div class="ch-item" onclick="selectChapter('Units and Dimensions','8','📏',this,false,'ch1')"><span class="ch-icon">📏</span><span class="ch-name">Units and Dimensions</span></div>
         <div class="ch-item" onclick="selectChapter('Units and Measurements','8','📐',this,false,'units-and-measurements')"><span class="ch-icon">📐</span><span class="ch-name">Units and Measurements</span></div>
-        <div class="ch-item" onclick="selectChapter('Motion In a Starlight Line','8','🏃',this,false,'motion-in-a-starlight-line')"><span class="ch-icon">🏃</span><span class="ch-name">Motion In a Starlight Line</span></div>
+        <div class="ch-item" onclick="selectChapter('Motion in a Straight Line','8','🏃',this,false,'motion-in-a-starlight-line')"><span class="ch-icon">🏃</span><span class="ch-name">Motion in a Straight Line</span></div>
         <div class="ch-item" onclick="selectChapter('Mechanical Properties of Solids','8','🧱',this,false,'mechanical-properties-of-solids')"><span class="ch-icon">🧱</span><span class="ch-name">Mechanical Properties of Solids</span></div>
         <div class="ch-item" onclick="selectChapter('Mechanical Properties of Fluids','8','💧',this,false,'mechanical-properties-of-fluids')"><span class="ch-icon">💧</span><span class="ch-name">Mechanical Properties of Fluids</span></div>
         <div class="ch-item" onclick="selectChapter('Ray Optics and Optical Instruments','8','🔭',this,false,'ray-optics-and-optical-instruments')"><span class="ch-icon">🔭</span><span class="ch-name">Ray Optics and Optical Instruments</span></div>
@@ -2806,6 +2806,11 @@ let CUR = { gradeId:null, grade:null, chapter:null, slug:null, hasPyq:false, sec
 function mathify(str) {
   if (str === undefined || str === null) return str;
   str = String(str);
+  const protectedParts = [];
+  str = str.replace(/<svg\b[\s\S]*?<\/svg>|\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]|<[^>]+>/gi, part => {
+    protectedParts.push(part);
+    return '\uE000' + (protectedParts.length - 1) + '\uE001';
+  });
   const supMap = {'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁺':'+','⁻':'-'};
   const supToCaret = s => s.replace(/([0-9a-zA-Zπθ)\]])([⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+)/g,
     (m, base, sup) => `${base}^{${sup.split('').map(c=>supMap[c]||c).join('')}}`);
@@ -2816,7 +2821,7 @@ function mathify(str) {
   // simple numeric/Greek fractions like 3/4, π/2 — denominator must be digits (excludes km/h, m/s, and/or, his/her)
   str = str.replace(/(^|[^a-zA-Z0-9])([0-9]+|[πθ])\/([0-9]+)(?![a-zA-Z0-9])/g,
     (m, pre, n, d) => `${pre}\\(\\frac{${n}}{${d}}\\)`);
-  return str;
+  return str.replace(/\uE000(\d+)\uE001/g, (_, i) => protectedParts[Number(i)]);
 }
 
 /* ══ Pick a 1x4 / 2x2 / 4x1 option layout based on how long the option text is,
@@ -5077,7 +5082,7 @@ async function renderIITOthersView() {
     const sc = document.createElement('script');
     sc.dataset.iitoth = '1';
     const worksheetSlug = board === 'iit-foundation' && gradeNum === '8' && requestedSlug === 'motion-in-a-starlight-line' ? 'ch3' : CUR.slug;
-    sc.src = `boards/${board}/grade${gradeNum}/${worksheetSlug}/others.js` + (worksheetSlug === 'ch3' && board === 'iit-foundation' && gradeNum === '8' ? '?v=20261126-ws2' : '');
+    sc.src = `boards/${board}/grade${gradeNum}/${worksheetSlug}/others.js` + (worksheetSlug === 'ch3' && board === 'iit-foundation' && gradeNum === '8' ? '?v=20261126-diagrams-2' : '');
     sc.onload = res;
     sc.onerror = () => { console.warn('Worksheet data failed to load:', sc.src); sc.remove(); res(); };
     document.head.appendChild(sc);
