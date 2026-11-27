@@ -1839,6 +1839,15 @@ mjx-container[display="true"]{margin:8px 0 !important;}
 #content .iit-single-viewport { position: relative; z-index: 0; }
 </style>
 <style id="p4f-account-style">.p4f-auth{margin-left:auto;position:relative;display:flex;align-items:center;font:600 12px system-ui,sans-serif}.p4f-auth [hidden]{display:none!important}.p4f-auth a,.p4f-auth button{font:inherit;padding:7px 10px;border:1px solid var(--divider,#bbb);border-radius:8px;background:var(--card-bg,#fff);color:var(--text,#222);cursor:pointer;text-decoration:none}.p4f-auth-user{display:flex;align-items:center;gap:5px;max-width:170px}.p4f-auth-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.p4f-auth-menu{position:absolute;right:0;top:calc(100% + 6px);padding:6px;background:var(--card-bg,#fff);border:1px solid var(--divider,#bbb);border-radius:9px;box-shadow:0 8px 24px #0003;z-index:1000;min-width:130px}.p4f-auth-menu button{width:100%;text-align:left;border:0}@media(max-width:600px){.p4f-auth-user{max-width:110px}.p4f-auth-name{max-width:70px}}</style>
+<style id="iit-solution-side-by-side">
+.iit-solution-split{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:12px;align-items:center;white-space:normal;width:100%}
+.iit-solution-calculation{min-width:0;overflow-x:auto;white-space:normal}
+.iit-solution-diagram{min-width:0;display:flex;justify-content:center;align-items:center}
+.iit-solution-diagram>div{width:100%;margin:0!important;max-width:300px!important}
+.iit-solution-diagram svg{display:block;width:100%;height:auto;max-width:100%}
+@media(max-width:600px){.iit-solution-split{gap:6px;grid-template-columns:minmax(0,3fr) minmax(0,2fr)}}
+@media(max-width:340px){.iit-solution-split{grid-template-columns:minmax(0,1fr)}}
+</style>
 </head>
 <body class="light">
 
@@ -4335,6 +4344,15 @@ function setIITLevel(level) {
 }
 
 /* ══ Shared Multi-Questions/Single-Question card viewer (reused by IIT Foundation, Competitive Exams, Premier Institutes and Others) ══ */
+function formatIITSolution(explanation) {
+  const raw = String(explanation || '');
+  const match = raw.match(/^\s*(<div[^>]*>\s*<svg\b[\s\S]*?<\/svg>\s*<\/div>)/i);
+  if (!match) return mathify(raw);
+  const diagram = match[1];
+  const calculation = raw.slice(match[0].length);
+  return '<div class="iit-solution-split"><div class="iit-solution-calculation">' +
+    mathify(calculation) + '</div><div class="iit-solution-diagram">' + diagram + '</div></div>';
+}
 function buildQuestionCardsHTML(qArray, opts) {
   opts = opts || {};
   const showExam = !!opts.showExam;
@@ -4376,7 +4394,7 @@ function buildQuestionCardsHTML(qArray, opts) {
       ${imageHtml}
       <div class="options ${optionsLayoutClass(options)}" data-answer="${q.answer}">${optsHtml}</div>
       ${showAnswerButton && q.answer ? `<div class="iit-answer-wrap"><div class="iit-answer-box">${mathify(q.answer)}</div></div>` : ''}
-      ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);">${mathify(q.explanation)}</div>` : ''}
+      ${q.explanation ? `<div class="explanation" style="display:none;margin-top:10px;padding:10px;background:var(--sbg-desc);border-radius:8px;border-left:3px solid var(--col-desc);">${formatIITSolution(q.explanation)}</div>` : ''}
     </div>`;
   }).join('') : `<div class="no-content-state"><div class="no-content-icon">🎯</div><h3>No questions yet</h3><p>Questions for this section are being prepared.</p></div>`;
 
@@ -5082,7 +5100,7 @@ async function renderIITOthersView() {
     const sc = document.createElement('script');
     sc.dataset.iitoth = '1';
     const worksheetSlug = board === 'iit-foundation' && gradeNum === '8' && requestedSlug === 'motion-in-a-starlight-line' ? 'ch3' : CUR.slug;
-    sc.src = `boards/${board}/grade${gradeNum}/${worksheetSlug}/others.js` + (worksheetSlug === 'ch3' && board === 'iit-foundation' && gradeNum === '8' ? '?v=20261126-diagrams-3' : '');
+    sc.src = `boards/${board}/grade${gradeNum}/${worksheetSlug}/others.js` + (worksheetSlug === 'ch3' && board === 'iit-foundation' && gradeNum === '8' ? '?v=20261127-split-1' : '');
     sc.onload = res;
     sc.onerror = () => { console.warn('Worksheet data failed to load:', sc.src); sc.remove(); res(); };
     document.head.appendChild(sc);
