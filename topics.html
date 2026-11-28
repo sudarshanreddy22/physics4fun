@@ -1947,7 +1947,20 @@ document.addEventListener('DOMContentLoaded',()=>{
  new MutationObserver(schedule).observe(content,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style']});
  window.addEventListener('resize',schedule);schedule();
 });
-</script></head>
+</script><style id="p4f-flush-subsection-alignment">
+#contentWrap{gap:0!important}
+#contentWrap>.section-bar{padding-inline:10px!important}
+#content{padding:0 10px 24px!important}
+#content>:is(#panel-iitoth,#panel-iitexamples,#panel-iitcomp,#panel-others){margin:0!important;padding:0!important}
+#content :is(#iitOthWorksheetTabsWrap,#iitOthLevelTabsWrap,#compExamTabsWrap,#compSubTabsWrap,#othersTabsWrap){margin:0!important;padding:0!important;border:0!important}
+#content :is(.iit-worksheet-tabs-with-tools,.iit-inline-row,.calculus-examples-tabs,.desc-tabs,.pyq-tabs){margin:0!important;padding:0!important;justify-content:flex-start!important;align-items:center!important;gap:4px!important;border-radius:0!important}
+#content .iit-inline-row{border:0!important;box-shadow:none!important}
+#content .iit-inline-row>:first-child,#content .calculus-examples-tabs>:first-child{margin-left:0!important}
+#content .iit-worksheet-tabs-with-tools>.iit-rendered-utility{margin:0 0 0 auto!important;padding:0!important}
+#content :is(#iitOthLevelTabsWrap,#compSubTabsWrap):empty{display:none!important}
+#contentWrap>:is(#pyq-tabbar,#desc-tabbar,#obj-tabbar,#playlearn-tabbar,#runthrough-tabbar){padding-inline:10px!important}
+#content :is(#iitOthBody,#compExamBody,#othersBody){padding-top:2px!important}
+</style></head>
 <body class="light">
 
 <!-- HEADER -->
