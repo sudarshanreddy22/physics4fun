@@ -1867,6 +1867,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  if(!calc)return;
  el.classList.remove('p4f-wide-math');
  
+ if(el.closest('#iitOthBody'))return;
  calc.querySelectorAll('mjx-container').forEach(m=>{
  m.style.fontSize='';
  const inner=m.firstElementChild;
@@ -1880,7 +1881,20 @@ document.addEventListener('DOMContentLoaded',()=>{
  document.addEventListener('click',schedule);
 });
 </script>
-</head>
+<style id="iit-worksheet-compact-20261128">
+#iitOthBody .mcq-header{align-items:flex-start!important;margin-bottom:4px!important}
+#iitOthBody .mcq-header .qno{align-self:flex-start!important;margin-top:1px!important;flex:0 0 30px;width:30px;height:30px;border-radius:50%}
+#iitOthBody .mcq-question,#iitOthBody .option,#iitOthBody .opt-text,#iitOthBody .explanation{font-size:calc(15.5px * var(--qfs,1))!important;line-height:1.7}
+#iitOthBody .iit-q-card{gap:4px!important}
+#iitOthBody .options{margin:2px 0 0!important}
+#iitOthBody .explanation{margin:2px 0 0!important;padding:2px 0!important;border:0!important;background:none!important;box-shadow:none!important;color:var(--text)}
+#iitOthBody .p4f-motion-solution,#iitOthBody .iit-solution-split{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important}
+#iitOthBody .p4f-motion-calculation,#iitOthBody .iit-solution-calculation{flex:1 1 60%!important;min-width:0;overflow:visible!important}
+#iitOthBody .p4f-motion-diagram,#iitOthBody .iit-solution-diagram{flex:0 0 37%!important;max-width:260px!important;min-width:0!important;border:0!important;background:none!important;padding:0!important;margin:0!important;box-shadow:none!important}
+#iitOthBody .p4f-motion-diagram svg,#iitOthBody .iit-solution-diagram svg{width:100%!important;height:auto!important;max-width:none!important;border:0!important;background:none!important}
+#iitOthBody .explanation mjx-container{font-size:100%!important}
+@media(max-width:600px){#iitOthBody .p4f-motion-diagram,#iitOthBody .iit-solution-diagram{flex-basis:35%!important;max-width:165px!important}#iitOthBody .p4f-motion-solution,#iitOthBody .iit-solution-split{gap:5px!important}}
+</style></head>
 <body class="light">
 
 <!-- HEADER -->
@@ -5132,7 +5146,7 @@ async function renderIITOthersView() {
     const sc = document.createElement('script');
     sc.dataset.iitoth = '1';
     const worksheetSlug = board === 'iit-foundation' && gradeNum === '8' && requestedSlug === 'motion-in-a-starlight-line' ? 'ch3' : CUR.slug;
-    sc.src = `boards/${board}/grade${gradeNum}/${worksheetSlug}/others.js` + (worksheetSlug === 'ch3' && board === 'iit-foundation' && gradeNum === '8' ? '?v=20261127-split-1' : '');
+    sc.src = `boards/${board}/grade${gradeNum}/${worksheetSlug}/others.js` + (worksheetSlug === 'ch3' && board === 'iit-foundation' && gradeNum === '8' ? '?v=20261127-split-1' : (board === 'iit-foundation' && gradeNum === '10' && worksheetSlug === 'ch1' ? '?v=20261128-diagrams-2' : ''));
     sc.onload = res;
     sc.onerror = () => { console.warn('Worksheet data failed to load:', sc.src); sc.remove(); res(); };
     document.head.appendChild(sc);
