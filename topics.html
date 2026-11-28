@@ -1894,26 +1894,33 @@ document.addEventListener('DOMContentLoaded',()=>{
 #iitOthBody .p4f-motion-diagram svg,#iitOthBody .iit-solution-diagram svg{width:100%!important;height:auto!important;max-width:none!important;border:0!important;background:none!important}
 #iitOthBody .explanation mjx-container{font-size:100%!important}
 @media(max-width:600px){#iitOthBody .p4f-motion-diagram,#iitOthBody .iit-solution-diagram{flex-basis:35%!important;max-width:165px!important}#iitOthBody .p4f-motion-solution,#iitOthBody .iit-solution-split{gap:5px!important}}
-</style></head>
+</style><style id="p4f-navigation-style">
+.header.p4f-topbar{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px;height:auto;min-height:56px;padding:7px 12px;overflow:visible}
+.p4f-selectors{display:flex;align-items:center;gap:6px;min-width:0}
+.p4f-selectors select{min-width:0;max-width:48%;font:600 12px system-ui,sans-serif;color:var(--text);background:var(--card-bg);border:1px solid var(--divider);border-radius:8px;padding:7px 4px;cursor:pointer}
+.p4f-topbar .header-center{flex-direction:column;gap:2px;min-width:0}
+.p4f-topbar .brand{white-space:nowrap;font-size:22px}
+.p4f-topbar .breadcrumb{max-width:260px}
+.p4f-topbar .bc-chip{max-width:150px}
+.p4f-topbar .p4f-auth{justify-self:end;min-width:0;max-width:100%}
+@media(max-width:700px){.header.p4f-topbar{grid-template-columns:minmax(0,1fr) auto;gap:6px;padding:6px 8px}.p4f-topbar .header-center{grid-column:1/-1;grid-row:1;justify-self:center}.p4f-selectors{grid-column:1;grid-row:2}.p4f-topbar .p4f-auth{grid-column:2;grid-row:2}.p4f-topbar .brand{font-size:19px}.p4f-topbar .p4f-auth-user{max-width:115px}.p4f-selectors select{font-size:11px}}
+</style>
+</head>
 <body class="light">
 
 <!-- HEADER -->
-<header class="header">
-  <div style="display:flex;align-items:center;gap:8px;">
-    
-    <span class="brand" title="Show / Hide Boards and Grades" onclick="toggleSidebar()" style="cursor:pointer">Physics4Fun</span>
-    <span class="brand-tag">CBSE</span>
+<header class="header p4f-topbar">
+  <div class="p4f-selectors">
+    <button type="button" class="icon-btn" aria-label="Toggle chapter sidebar" title="Toggle chapter sidebar" onclick="toggleSidebar()">☰</button>
+    <select id="p4fBoardSelect" aria-label="Board"></select>
+    <select id="p4fClassSelect" aria-label="Class"></select>
   </div>
-
-  <div class="p4f-auth" id="p4fAuth"><a href="signin.html" id="p4fSignIn">🔐 Sign in</a><button type="button" class="p4f-auth-user" id="p4fUserButton" hidden aria-expanded="false"><span>👤</span><span class="p4f-auth-name" id="p4fUsername"></span><span>▾</span></button><div class="p4f-auth-menu" id="p4fAuthMenu" hidden><button type="button" id="p4fSignOut">Sign out</button></div></div>
-  <div class="header-center">
-    <div class="breadcrumb" id="breadcrumb">
+  <div class="header-center"><span class="brand">Physics4Fun</span><div class="breadcrumb" id="breadcrumb">
       <span class="bc-chip" id="bc-grade">—</span>
       <span class="bc-sep">›</span>
       <span class="bc-chip active" id="bc-chapter">—</span>
-    </div>
-  </div>
-
+    </div></div>
+  <div class="p4f-auth" id="p4fAuth"><a href="signin.html" id="p4fSignIn">🔐 Sign in</a><button type="button" class="p4f-auth-user" id="p4fUserButton" hidden aria-expanded="false"><span>👤</span><span class="p4f-auth-name" id="p4fUsername"></span><span>▾</span></button><div class="p4f-auth-menu" id="p4fAuthMenu" hidden><button type="button" id="p4fSignOut">Sign out</button></div></div>
 </header>
 
 <!-- MAIN -->
@@ -6926,6 +6933,27 @@ onAuthStateChanged(auth,async user=>{
 },err=>{console.error('Physics4Fun auth state:',err);home('auth-error')});
 logout.addEventListener('click',async()=>{logout.disabled=true;try{await signOut(auth);closeMenu();home()}catch(err){alert('Sign out failed: '+err.message)}finally{logout.disabled=false}});
 }catch(err){console.error('Physics4Fun Firebase loading failed:',err);home('firebase-error')}
+</script>
+<script id="p4f-navigation-script">
+(function(){
+ function init(){
+ const board=document.getElementById('p4fBoardSelect'), grade=document.getElementById('p4fClassSelect'), sidebar=document.getElementById('sidebar');
+ if(!board||!grade||!sidebar)return;
+ const boards=Array.from(sidebar.querySelectorAll('.board-content'));
+ const rowsFor=b=>Array.from(b.querySelectorAll('.grade-row')).filter(row=>{const list=row.nextElementSibling;return list&&list.classList.contains('chapter-list')&&!list.querySelector('.grade-row')});
+ function option(select,value,label){select.add(new Option(label,value))}
+ boards.forEach(b=>option(board,b.id,b.previousElementSibling.textContent.replace(/^[\s▼▶]+/,'').trim()));
+ function fill(b){grade.replaceChildren();option(grade,'','Select class');rowsFor(b).forEach(row=>{const list=row.nextElementSibling;const parent=row.parentElement.closest('.chapter-list');const label=row.querySelector('.grade-label')?.textContent.trim()||row.textContent.trim();const prefix=parent?.previousElementSibling?.querySelector('.grade-label')?.textContent.trim();option(grade,list.id,prefix?prefix+' · '+label:label)})}
+ function openBoard(b){if(b.style.display==='none')b.previousElementSibling.click()}
+ function reveal(){sidebar.classList.remove('hide')}
+ function sync(){const b=boards.find(b=>b.style.display!=='none');if(!b)return;if(board.value!==b.id||!grade.options.length){board.value=b.id;fill(b)}const row=rowsFor(b).find(row=>row.nextElementSibling.classList.contains('open'));grade.value=row?row.nextElementSibling.id:''}
+ board.addEventListener('change',()=>{const b=document.getElementById(board.value);if(!b)return;openBoard(b);fill(b);reveal()});
+ grade.addEventListener('change',()=>{const list=document.getElementById(grade.value);if(!list)return;const b=list.closest('.board-content');openBoard(b);const ancestors=[];let p=list.parentElement.closest('.chapter-list');while(p){ancestors.unshift(p);p=p.parentElement.closest('.chapter-list')}ancestors.forEach(a=>{if(!a.classList.contains('open'))a.previousElementSibling.click()});if(!list.classList.contains('open'))list.previousElementSibling.click();reveal();list.previousElementSibling.scrollIntoView({block:'nearest'})});
+ sidebar.addEventListener('click',()=>queueMicrotask(sync));
+ sync();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
 </script>
 </body>
 </html>
