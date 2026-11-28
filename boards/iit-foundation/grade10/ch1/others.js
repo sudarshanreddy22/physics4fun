@@ -872,7 +872,7 @@ window.iitOthersData = {
             "D": "t h e law of con ser vat ion of ch ar ge"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Coulomb's law and Newton's law of gravitation both follow an inverse-square dependence.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -887,7 +887,7 @@ window.iitOthersData = {
             "D": "Coulomb force is constant with respect to the medium"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Coulomb's law is \\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=k|q_1q_2|/r^2\\end{aligned}\\). Check each option against this relation.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -902,7 +902,7 @@ window.iitOthersData = {
             "D": "none"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "By superposition, the force due to \\(q_1\\) alone is unchanged.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -917,7 +917,7 @@ window.iitOthersData = {
             "D": "1:25"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "By Newton's third law, the forces have equal magnitudes: \\(F_1:F_2=1:1\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -932,7 +932,7 @@ window.iitOthersData = {
             "D": "75 N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=9\\times10^9(3.2\\times10^{-19})^2/(3.2\\times10^{-15})^2\\\\ &=90\\,\\mathrm N\\end{aligned}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -947,7 +947,7 @@ window.iitOthersData = {
             "D": "four times"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=4F\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -962,7 +962,7 @@ window.iitOthersData = {
             "D": "F/16"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=F/16\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -977,7 +977,7 @@ window.iitOthersData = {
             "D": "3                        9"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=F/9\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -992,7 +992,7 @@ window.iitOthersData = {
             "D": "10 -42"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F_g/F_e=Gm_e^2/(ke^2)\\approx2.4\\times10^{-43}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 30,
@@ -1007,7 +1007,7 @@ window.iitOthersData = {
             "D": "104 N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=9\\times10^9/1000^2\\\\ &=9000\\,\\mathrm N\\end{aligned}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1022,7 +1022,7 @@ window.iitOthersData = {
             "D": "Zero"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "One charge becomes zero, so \\(F'=0\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1037,7 +1037,7 @@ window.iitOthersData = {
             "D": "none\nr3                   r3                   r3"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The force is attractive, directed toward the nucleus: \\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=ke^2/r^2\\end{aligned}\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1052,7 +1052,7 @@ window.iitOthersData = {
             "D": "Cannot be calculated"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Permittivity},\\ \\epsilon&=81\\epsilon_0\\approx7.17\\times10^{-10}\\,\\mathrm{F/m}\\end{aligned}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1067,7 +1067,7 @@ window.iitOthersData = {
             "D": "Charges erratically"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "For typical polar liquids, increasing temperature reduces orientational polarization and hence the dielectric constant.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1082,7 +1082,7 @@ window.iitOthersData = {
             "D": "k :1"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F_{\\rm air}:F_{\\rm medium}=K:1\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1097,7 +1097,7 @@ window.iitOthersData = {
             "D": "r K\nK"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(r'=r/\\sqrt K\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1112,7 +1112,7 @@ window.iitOthersData = {
             "D": "2F"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "A conducting plate redistributes charge; the exact force depends on its geometry and electrical boundary conditions.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1127,7 +1127,7 @@ window.iitOthersData = {
             "D": "3F/8"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The neutral identical sphere shares the touched sphere's charge equally; after removal, the force is \\(F/2\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1142,7 +1142,7 @@ window.iitOthersData = {
             "D": "The tension in A is greater than that in B"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The mutual forces are equal. For identical masses, equilibrium angles are equal.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1157,7 +1157,7 @@ window.iitOthersData = {
             "D": "F/4"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=F/4\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 31,
@@ -1172,7 +1172,7 @@ window.iitOthersData = {
             "D": "4F towards +q charge"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Both forces on the middle positive charge point toward the negative charge: \\(F_{\\rm net}=8F\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1187,7 +1187,7 @@ window.iitOthersData = {
             "D": "-20N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=40(2\\times3)/(3\\times8)=10\\,\\mathrm N\\), attractive.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1202,7 +1202,7 @@ window.iitOthersData = {
             "D": "-2:1"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(q'= (10-20)/2=-5\\,\\mu\\mathrm C\\), so \\(F_2/F_1=25/200=1/8\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1217,7 +1217,7 @@ window.iitOthersData = {
             "D": "4πε 0G\nG          πε 0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(kq^2=Gm^2\\Rightarrow q/m=\\sqrt{G/k}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1232,7 +1232,7 @@ window.iitOthersData = {
             "D": "r K"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(r'=r/\\sqrt K\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1247,7 +1247,7 @@ window.iitOthersData = {
             "D": "16"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=16F\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1262,7 +1262,7 @@ window.iitOthersData = {
             "D": "[ε 0 ] = [[ M L T A ]]\n−1 2    −1   −2                             −1 2 −1 1"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\([\\epsilon_0]=M^{-1}L^{-3}T^4A^2\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1277,7 +1277,7 @@ window.iitOthersData = {
             "D": "+Q/4"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(kQ|q|/(d/2)^2=kQ^2/d^2\\Rightarrow q=-Q/4\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1292,7 +1292,7 @@ window.iitOthersData = {
             "D": "K 2d"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Separation},\\ r&=d\\sqrt K\\end{aligned}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1307,7 +1307,7 @@ window.iitOthersData = {
             "D": "decreases K2 times"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=F/K\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1322,7 +1322,7 @@ window.iitOthersData = {
             "D": "F\n16                               9           3"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=(3/4)^2F=9F/16\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 32,
@@ -1337,7 +1337,7 @@ window.iitOthersData = {
             "D": "10-47 C"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(k(\\Delta e)^2=Gm_H^2\\Rightarrow|\\Delta e|=m_H\\sqrt{G/k}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1352,7 +1352,7 @@ window.iitOthersData = {
             "D": "3.6 N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Each force at C has magnitude \\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=1.8\\,\\mathrm N\\end{aligned}\\). Their resultant is parallel to AB toward B, of magnitude \\(1.8\\,\\mathrm N\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1367,7 +1367,7 @@ window.iitOthersData = {
             "D": "4πε 0 L2              4πε 0 L2              12πε 0 L2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The three equal forces at the centre cancel by symmetry.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1382,7 +1382,7 @@ window.iitOthersData = {
             "D": "2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The force ratio is the inverse ratio of squared separations; the corner assignment is needed.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1397,7 +1397,7 @@ window.iitOthersData = {
             "D": "4q"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(k(4q)q/l^2=k|Q|q/(l/2)^2\\Rightarrow Q=-q\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1412,7 +1412,7 @@ window.iitOthersData = {
             "D": "x/6"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(4/(x-y)^2=1/y^2\\Rightarrow y=x/3\\) from the smaller charge.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1427,7 +1427,7 @@ window.iitOthersData = {
             "D": "+\n2                  4                                           2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(kQ^2/r^2=kQ|q|/(r/2)^2\\Rightarrow q=-Q/4\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1442,7 +1442,7 @@ window.iitOthersData = {
             "D": "perpendicular to side AB"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The original charge arrangement is needed to determine the resultant.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1457,7 +1457,7 @@ window.iitOthersData = {
             "D": "-Q"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=-Q\\end{aligned}\\) by balancing the forces on the rightmost charge.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1472,7 +1472,7 @@ window.iitOthersData = {
             "D": "2                 \n2                                          2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Use the inverse-square law; the corner assignment determines the ratio.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 33,
@@ -1487,7 +1487,7 @@ window.iitOthersData = {
             "D": "3.6N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The resultant at C is \\(1.8\\,\\mathrm N\\), parallel to AB toward B.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1502,7 +1502,7 @@ window.iitOthersData = {
             "D": "4πε 0 L2            4πε 0 L2              12πε 0 L2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The three equal forces at the centre cancel by symmetry.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1517,7 +1517,7 @@ window.iitOthersData = {
             "D": "2 |\n2+   |\n4πε 0 a 2\n4πε 0 a 2\n0       4πε 0 a [      2]"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F_{\\rm net}=kq^2/a^2(\\sqrt2+1/2)\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1532,7 +1532,7 @@ window.iitOthersData = {
             "D": "2 2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(kQ^2/(2a^2)=\\sqrt2 kQq/a^2\\Rightarrow Q=2\\sqrt2q\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1549,7 +1549,7 @@ window.iitOthersData = {
             "D": "-20N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=40(2\\times3)/(3\\times8)=10\\,\\mathrm N\\), attractive.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1564,7 +1564,7 @@ window.iitOthersData = {
             "D": "K                      ε0                        Kε0                         K"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=F/K\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1579,7 +1579,7 @@ window.iitOthersData = {
             "D": "none"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Opposite charges redistribute toward the facing surfaces, increasing attraction relative to the point-charge approximation.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1594,7 +1594,7 @@ window.iitOthersData = {
             "D": "45.00N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'=5(0.06/0.04)^2=11.25\\,\\mathrm N\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1609,7 +1609,7 @@ window.iitOthersData = {
             "D": "3F/8"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The neutral identical sphere shares the touched sphere's charge equally; after removal, the force is \\(F/2\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1624,7 +1624,7 @@ window.iitOthersData = {
             "D": "1/4"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The product \\(q(Q-q)\\) is maximum at \\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=Q/2\\end{aligned}\\), so \\(Q/q=2\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 34,
@@ -1639,7 +1639,7 @@ window.iitOthersData = {
             "D": "2.0 × 10 6 N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Number of electrons},\\ n&=(10/63.5)(6.022\\times10^{23})/10^6\\approx9.48\\times10^{16}\\end{aligned}\\). \\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=ne\\approx0.0152\\,\\mathrm C\\end{aligned}\\). \\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=kq^2/(0.1)^2\\approx2.07\\times10^8\\,\\mathrm N\\end{aligned}\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1654,7 +1654,7 @@ window.iitOthersData = {
             "D": "2 × 10 C\n-2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(q_B=3(0.04)/4=0.03\\,\\mathrm C\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1669,7 +1669,7 @@ window.iitOthersData = {
             "D": "e2                              d2                              e2                           q2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Number of electrons},\\ n&=q/e\\\\ &=(d/e)\\sqrt{F/k}\\end{aligned}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1684,7 +1684,7 @@ window.iitOthersData = {
             "D": "36000N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=9\\times10^3(1+1/4+1/16+\\cdots)\\\\ &=12000\\,\\mathrm N\\end{aligned}\\), toward negative x.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1699,7 +1699,7 @@ window.iitOthersData = {
             "D": "Perpendicular to side AD"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Original figure required.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1714,7 +1714,7 @@ window.iitOthersData = {
             "C": "Zero"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Original figure required to identify charge values and signs.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1729,7 +1729,7 @@ window.iitOthersData = {
             "D": "Q\n(\n1+ 2 2      )"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=Q(1/\\sqrt2+1/4)\\end{aligned}\\) by balancing radial forces on a corner charge.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1744,7 +1744,7 @@ window.iitOthersData = {
             "D": "180 ,               \n4πε 0 ( 2 L )2                   4πε 0 L2                     4πε 0 2 L2                 4πε 0 L2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "With no gravity, the strings extend in opposite directions: 180°.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1759,7 +1759,7 @@ window.iitOthersData = {
             "D": "Q2 =           , Q1 =\n4         4                                              2        2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Maximum product occurs at \\(Q_1=Q_2=Q/2\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 35,
@@ -1774,7 +1774,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'/F=(q_1+q_2)^2/(4q_1q_2)\\ge1\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 36,
@@ -1789,7 +1789,7 @@ window.iitOthersData = {
             "D": "3d"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(r'=\\sqrt3d\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 36,
@@ -1804,7 +1804,7 @@ window.iitOthersData = {
             "D": "12 cm form +e"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(9/x^2=1/(16-x)^2\\Rightarrow x=12\\,\\mathrm{cm}\\) from +9e.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 36,
@@ -1819,7 +1819,7 @@ window.iitOthersData = {
             "D": "180 , 4πε              .\n( 4πε 0 ) 2 L2                                           (       0 ) 4L"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "With no gravity, the strings are opposite, with separation 2L.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 36,
@@ -1834,7 +1834,7 @@ window.iitOthersData = {
             "D": "F/4"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "After contact with one sphere, its charge is halved; if the third sphere is removed, the force is F/2.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 36,
@@ -1849,7 +1849,7 @@ window.iitOthersData = {
             "D": "3mN"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The complete force vector and target position are needed for a numerical solution.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 36,
@@ -1864,7 +1864,7 @@ window.iitOthersData = {
             "D": "4F towards +Q charge"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Both forces on the middle positive charge point toward the negative charge: \\(F_{\\rm net}=8F\\).",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 36,
@@ -1879,7 +1879,7 @@ window.iitOthersData = {
             "D": "6:1"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(F'/F=(q_1+q_2)^2/(q_1q_2)\\ge4\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 37,
@@ -1894,7 +1894,7 @@ window.iitOthersData = {
             "D": "180N"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Use horizontal force balance and vertical weight balance; the full equilibrium angle is needed.",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 37,
@@ -1909,7 +1909,7 @@ window.iitOthersData = {
             "D": "1022 ms-2\nPART-03\nELECTRIC FIELD\nINTRODUCTION:\nω  Coulomb’s law states that whenever two charges are kept at some distance, they ex-\nert an attractive or repulsive force on each other. A natural question arises: is it neces-\nsary to have two charges to repel or attract a charge, or how is electrical force exerted\nwhen charged particles are separated (i.e., they do not touch each other)?\nω    This action-at-a-distance force can be explained using the concept of an electricfield.\n◇     Electric Field:\nω    It is the space surrounding an electric charge (q) in which another charge experiences an\nelectrostatic force of attraction or repulsion.\nω    So an electric field is an electric property associated with each point in space when\ncharge is present in any form.\nω    The electric field is a vector quantity. The magnitude and direction of the electric field\n→\nare expressed by the value of E , also called electric field strength, electric intensity,\nor simply electric field."
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Acceleration},\\ a&=ke^2/(m_er^2)\\\\ &=10^{22}\\,\\mathrm{m/s^2}\\end{aligned}\\)",
           "paper": "WS-2",
           "marks": 1,
           "sourcePage": 37,
@@ -1959,7 +1959,7 @@ window.iitOthersData = {
             "D": "the force, an electron would experience there"
           },
           "answer": "C",
-          "explanation": "Electric field is force per unit positive test charge: \\(E=F/q\\).",
+          "explanation": "Electric field is force per unit positive test charge: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=F/q\\end{aligned}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
@@ -2004,7 +2004,7 @@ window.iitOthersData = {
             "D": "\\(3.2 \\times 10^{3}\\) N/C"
           },
           "answer": "C",
-          "explanation": "\\(E=\\frac Fq=\\frac{1.5\\times10^{-3}}{1.0\\times10^{-6}}=1.5\\times10^3\\,\\mathrm{N/C}\\)",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac Fq\\\\ &=\\frac{1.5\\times10^{-3}}{1.0\\times10^{-6}}\\\\ &=1.5\\times10^3\\,\\mathrm{N/C}\\end{aligned}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2034,7 +2034,7 @@ window.iitOthersData = {
             "D": "\\(5\\times 10^{4}\\) N/C"
           },
           "answer": "B",
-          "explanation": "\\(E=\\frac{mg}{q}=\\frac{2\\times10^{-4}\\times9.8}{9.8\\times10^{-8}}=2\\times10^4\\,\\mathrm{N/C}\\)",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{mg}{q}\\\\ &=\\frac{2\\times10^{-4}\\times9.8}{9.8\\times10^{-8}}\\\\ &=2\\times10^4\\,\\mathrm{N/C}\\end{aligned}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2049,7 +2049,7 @@ window.iitOthersData = {
             "D": "\\(1.39\\times 10^{11}\\) C"
           },
           "answer": "A",
-          "explanation": "\\(q=\\frac{Er^2}{k}=\\frac{2(0.25)^2}{9\\times10^9}=1.39\\times10^{-11}\\,\\mathrm C\\)",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=\\frac{Er^2}{k}\\\\ &=\\frac{2(0.25)^2}{9\\times10^9}\\\\ &=1.39\\times10^{-11}\\,\\mathrm C\\end{aligned}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2064,7 +2064,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{1}{4\\pi\\epsilon_0}\\frac{4\\sqrt2q}{a^2}\\)"
           },
           "answer": "D",
-          "explanation": "Each corner is at \\(r=a/\\sqrt2\\). The transverse components cancel; the remaining components add: \\(E=4\\frac{2kq}{a^2}\\cos45^\\circ=\\frac{4\\sqrt2kq}{a^2}\\).",
+          "explanation": "Each corner is at \\(\\displaystyle\\begin{aligned}\\text{Separation},\\ r&=a/\\sqrt2\\end{aligned}\\). The transverse components cancel; the remaining components add: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=4\\frac{2kq}{a^2}\\cos45^\\circ\\\\ &=\\frac{4\\sqrt2kq}{a^2}\\end{aligned}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2079,7 +2079,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{2q}{4\\pi\\epsilon_0r^2}\\)"
           },
           "answer": "C",
-          "explanation": "Equal charges produce equal and opposite fields at the midpoint; \\(E=0\\).",
+          "explanation": "<div class=\"p4f-motion-solution\"><div class=\"p4f-motion-calculation\">Equal charges produce equal and opposite fields at the midpoint; \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=0\\end{aligned}\\).</div><div class=\"p4f-motion-diagram\"><svg viewBox=\"0 0 260 120\" role=\"img\" aria-label=\"Charge positions and field directions\"><defs><marker id=\"ec1\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker></defs><path d=\"M25 60H235\" stroke=\"#94a3b8\"/><circle cx=\"25\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"235\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"130\" cy=\"60\" r=\"3\" fill=\"currentColor\"/><g font-size=\"13\" fill=\"currentColor\" text-anchor=\"middle\"><text x=\"25\" y=\"35\">A (+q)</text><text x=\"235\" y=\"35\">B (+q)</text><text x=\"130\" y=\"84\">P</text><text x=\"77.5\" y=\"105\">d/2</text><text x=\"182.5\" y=\"105\">d/2</text></g><path d=\"M100 49H126 M160 49H134\" stroke=\"#2563eb\" stroke-width=\"2\" marker-end=\"url(#ec1)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2094,7 +2094,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{2Q}{4\\pi\\epsilon_0a^2}\\) along OD"
           },
           "answer": "D",
-          "explanation": "The fields of four identical corner charges would cancel. Removing the charge at D leaves \\(E=\\frac{kQ}{(a/\\sqrt2)^2}=\\frac{2kQ}{a^2}\\) directed along OD.",
+          "explanation": "The fields of four identical corner charges would cancel. Removing the charge at D leaves \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kQ}{(a/\\sqrt2)^2}\\\\ &=\\frac{2kQ}{a^2}\\end{aligned}\\) directed along OD.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2109,7 +2109,7 @@ window.iitOthersData = {
             "D": "5 cm from charge q"
           },
           "answer": "B",
-          "explanation": "\\(\\frac{4kq}{x^2}=\\frac{kq}{(30-x)^2}\\Rightarrow x=20\\,\\mathrm{cm}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\"><div class=\"p4f-motion-calculation\">\\(\\frac{4kq}{x^2}=\\frac{kq}{(30-x)^2}\\Rightarrow x=20\\,\\mathrm{cm}\\)</div><div class=\"p4f-motion-diagram\"><svg viewBox=\"0 0 260 120\" role=\"img\" aria-label=\"Charge positions and field directions\"><defs><marker id=\"ec2\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker></defs><path d=\"M25 60H235\" stroke=\"#94a3b8\"/><circle cx=\"25\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"235\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"165\" cy=\"60\" r=\"3\" fill=\"currentColor\"/><g font-size=\"13\" fill=\"currentColor\" text-anchor=\"middle\"><text x=\"25\" y=\"35\">A (+4q)</text><text x=\"235\" y=\"35\">B (+q)</text><text x=\"165\" y=\"84\">P</text><text x=\"95\" y=\"105\">20 cm</text><text x=\"200\" y=\"105\">10 cm</text></g><path d=\"M135 49H161 M195 49H169\" stroke=\"#2563eb\" stroke-width=\"2\" marker-end=\"url(#ec2)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2318,7 +2318,7 @@ window.iitOthersData = {
             "D": "\\(6.4\\times 10^{-18}\\) N, 30 N/C"
           },
           "answer": "",
-          "explanation": "\\(F=eE=(1.6\\times10^{-19})(40)=6.4\\times10^{-18}\\,\\mathrm N\\). The field at B depends on its location in the original figure.",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=eE\\\\ &=(1.6\\times10^{-19})(40)\\\\ &=6.4\\times10^{-18}\\,\\mathrm N\\end{aligned}\\). The field at B depends on its location in the original figure.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2334,7 +2334,7 @@ window.iitOthersData = {
             "D": "\\(3.2\\times 10^{29}\\) C m"
           },
           "answer": "B",
-          "explanation": "\\(p=ed=(1.6\\times10^{-19})(10^{-10})=1.6\\times10^{-29}\\,\\mathrm{C\\,m}\\)",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Dipole moment},\\ p&=ed\\\\ &=(1.6\\times10^{-19})(10^{-10})\\\\ &=1.6\\times10^{-29}\\,\\mathrm{C\\,m}\\end{aligned}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2364,7 +2364,7 @@ window.iitOthersData = {
             "D": "4ql"
           },
           "answer": "C",
-          "explanation": "\\(p=2ql\\cos30^\\circ=\\sqrt3ql\\)",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Dipole moment},\\ p&=2ql\\cos30^\\circ\\\\ &=\\sqrt3ql\\end{aligned}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2409,7 +2409,7 @@ window.iitOthersData = {
             "D": "No force and no torque"
           },
           "answer": "C",
-          "explanation": "In a uniform field, the forces cancel. For a non-aligned dipole, \\(\\tau=pE\\sin\\theta\\).",
+          "explanation": "In a uniform field, the forces cancel. For a non-aligned dipole, \\(\\displaystyle\\begin{aligned}\\text{Torque},\\ \\tau&=pE\\sin\\theta\\end{aligned}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2454,7 +2454,7 @@ window.iitOthersData = {
             "D": "\\(45^\\circ\\)"
           },
           "answer": "A",
-          "explanation": "\\(\\tau=pE\\sin\\theta\\) is maximum when \\(\\theta=90^\\circ\\).",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Torque},\\ \\tau&=pE\\sin\\theta\\end{aligned}\\) is maximum when \\(\\theta=90^\\circ\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2604,7 +2604,7 @@ window.iitOthersData = {
             "D": "10 µC"
           },
           "answer": "B",
-          "explanation": "\\(q=\\frac{\\tau}{dE}=\\frac{0.2\\times10^{-3}}{0.02\\times10^5}=10^{-7}\\,\\mathrm C=0.1\\,\\mu\\mathrm C\\). The printed option B appears to contain a unit typo.",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=\\frac{\\tau}{dE}\\\\ &=\\frac{0.2\\times10^{-3}}{0.02\\times10^5}\\\\ &=10^{-7}\\,\\mathrm C\\\\ &=0.1\\,\\mu\\mathrm C\\end{aligned}\\). The printed option B appears to contain a unit typo.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2636,7 +2636,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{3L}4\\)"
           },
           "answer": "B",
-          "explanation": "\\(\\frac{4ke}{x^2}=\\frac{ke}{(L-x)^2}\\Rightarrow x=\\frac{2L}{3}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\"><div class=\"p4f-motion-calculation\">\\(\\frac{4ke}{x^2}=\\frac{ke}{(L-x)^2}\\Rightarrow x=\\frac{2L}{3}\\)</div><div class=\"p4f-motion-diagram\"><svg viewBox=\"0 0 260 120\" role=\"img\" aria-label=\"Charge positions and field directions\"><defs><marker id=\"ec3\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker></defs><path d=\"M25 60H235\" stroke=\"#94a3b8\"/><circle cx=\"25\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"235\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"165\" cy=\"60\" r=\"3\" fill=\"currentColor\"/><g font-size=\"13\" fill=\"currentColor\" text-anchor=\"middle\"><text x=\"25\" y=\"35\">A (+4e)</text><text x=\"235\" y=\"35\">B (+e)</text><text x=\"165\" y=\"84\">P</text><text x=\"95\" y=\"105\">x</text><text x=\"200\" y=\"105\">L−x</text></g><path d=\"M135 49H161 M195 49H169\" stroke=\"#2563eb\" stroke-width=\"2\" marker-end=\"url(#ec3)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2651,7 +2651,7 @@ window.iitOthersData = {
             "D": "60 cm"
           },
           "answer": "B",
-          "explanation": "\\(\\frac{10}{x^2}=\\frac{20}{(80-x)^2}\\Rightarrow x=\\frac{80}{1+\\sqrt2}\\approx33.1\\,\\mathrm{cm}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\"><div class=\"p4f-motion-calculation\">\\(\\frac{10}{x^2}=\\frac{20}{(80-x)^2}\\Rightarrow x=\\frac{80}{1+\\sqrt2}\\approx33.1\\,\\mathrm{cm}\\)</div><div class=\"p4f-motion-diagram\"><svg viewBox=\"0 0 260 120\" role=\"img\" aria-label=\"Charge positions and field directions\"><defs><marker id=\"ec4\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker></defs><path d=\"M25 60H235\" stroke=\"#94a3b8\"/><circle cx=\"25\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"235\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"112\" cy=\"60\" r=\"3\" fill=\"currentColor\"/><g font-size=\"13\" fill=\"currentColor\" text-anchor=\"middle\"><text x=\"25\" y=\"35\">A (+10 C)</text><text x=\"235\" y=\"35\">B (+20 C)</text><text x=\"112\" y=\"84\">P</text><text x=\"68.5\" y=\"105\">x</text><text x=\"173.5\" y=\"105\">80−x</text></g><path d=\"M82 49H108 M142 49H116\" stroke=\"#2563eb\" stroke-width=\"2\" marker-end=\"url(#ec4)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2666,7 +2666,7 @@ window.iitOthersData = {
             "D": "\\(48\\times 10^{4}\\)"
           },
           "answer": "C",
-          "explanation": "\\(E=\\frac{kq}{(0.01)^2}\\left(1-\\frac14+\\frac1{16}-\\cdots\\right)=4.5\\times10^5\\frac1{1+1/4}=3.6\\times10^5\\,\\mathrm{N/C}\\)",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kq}{(0.01)^2}\\left(1-\\frac14+\\frac1{16}-\\cdots\\right)\\\\ &=4.5\\times10^5\\frac1{1+1/4}\\\\ &=3.6\\times10^5\\,\\mathrm{N/C}\\end{aligned}\\)",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2681,7 +2681,7 @@ window.iitOthersData = {
             "D": "\\(3.6\\times 10^{4}\\) N/C towards C"
           },
           "answer": "A",
-          "explanation": "By symmetry the resultant equals the negative of the missing corner field: \\(E=\\frac{k(4\\times10^{-6})}{1/2}=7.2\\times10^4\\,\\mathrm{N/C}\\) towards A.",
+          "explanation": "By symmetry the resultant equals the negative of the missing corner field: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{k(4\\times10^{-6})}{1/2}\\\\ &=7.2\\times10^4\\,\\mathrm{N/C}\\end{aligned}\\) towards A.",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2696,7 +2696,7 @@ window.iitOthersData = {
             "D": "80/13 cm from \\(q_{2}\\)"
           },
           "answer": "A",
-          "explanation": "Equal positive charges produce equal and opposite fields at the midpoint, 10 cm from either charge.",
+          "explanation": "<div class=\"p4f-motion-solution\"><div class=\"p4f-motion-calculation\">Equal positive charges produce equal and opposite fields at the midpoint, 10 cm from either charge.</div><div class=\"p4f-motion-diagram\"><svg viewBox=\"0 0 260 120\" role=\"img\" aria-label=\"Charge positions and field directions\"><defs><marker id=\"ec5\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker></defs><path d=\"M25 60H235\" stroke=\"#94a3b8\"/><circle cx=\"25\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"235\" cy=\"60\" r=\"10\" fill=\"#dc2626\"/><circle cx=\"130\" cy=\"60\" r=\"3\" fill=\"currentColor\"/><g font-size=\"13\" fill=\"currentColor\" text-anchor=\"middle\"><text x=\"25\" y=\"35\">A (+4 μC)</text><text x=\"235\" y=\"35\">B (+4 μC)</text><text x=\"130\" y=\"84\">P</text><text x=\"77.5\" y=\"105\">10 cm</text><text x=\"182.5\" y=\"105\">10 cm</text></g><path d=\"M100 49H126 M160 49H134\" stroke=\"#2563eb\" stroke-width=\"2\" marker-end=\"url(#ec5)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2712,7 +2712,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{5q}{16\\pi\\epsilon_0a^2}\\)"
           },
           "answer": "B",
-          "explanation": "Six equal charges would give zero field. Removing one leaves \\(E=\\frac{kq}{(2a)^2}=\\frac{q}{16\\pi\\epsilon_0a^2}\\).",
+          "explanation": "Six equal charges would give zero field. Removing one leaves \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kq}{(2a)^2}\\\\ &=\\frac{q}{16\\pi\\epsilon_0a^2}\\end{aligned}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2788,7 +2788,7 @@ window.iitOthersData = {
             "D": "\\(20.5\\times 10^{7}\\) N/C"
           },
           "answer": "",
-          "explanation": "The original figure is required to determine whether the axial distances from the two charges are 20 cm and 30 cm or 10 cm and 20 cm. Use \\(E=kq\\left|\\frac1{r_+^2}-\\frac1{r_-^2}\\right|\\).",
+          "explanation": "The original figure is required to determine whether the axial distances from the two charges are 20 cm and 30 cm or 10 cm and 20 cm. Use \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=kq\\left|\\frac1{r_+^2}-\\frac1{r_-^2}\\right|\\end{aligned}\\).",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2853,7 +2853,7 @@ window.iitOthersData = {
             "D": "Only (A) and (C)"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Flux is scalar and is defined for any vector field, including electric, magnetic and gravitational fields. Statements 1, 2 and 4 are correct.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 69,
@@ -2868,7 +2868,7 @@ window.iitOthersData = {
             "D": "NC-1 m-2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\mathrm{N\\,m^2/C}\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 69,
@@ -2883,7 +2883,7 @@ window.iitOthersData = {
             "D": "[M1L-3T3A1]"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\([\\Phi]=ML^3T^{-3}A^{-1}\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 69,
@@ -2898,7 +2898,7 @@ window.iitOthersData = {
             "D": "The quantity   ∇∫ E .ds depends on the shape of the gaussian surface."
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\oint\\vec E\\cdot d\\vec A=q_{\\rm enc}/\\epsilon_0\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 69,
@@ -2913,7 +2913,7 @@ window.iitOthersData = {
             "D": "zero"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Original charge distribution required.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 69,
@@ -2928,7 +2928,7 @@ window.iitOthersData = {
             "D": "+q1, and -q1"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The electric field at the surface is due to all charges, but net flux depends only on enclosed charge.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 69,
@@ -2943,7 +2943,7 @@ window.iitOthersData = {
             "D": "is the same for all the figures."
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The surface geometry and field are needed.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 70,
@@ -2958,7 +2958,7 @@ window.iitOthersData = {
             "D": "πε 0                    πε 0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric flux},\\ \\Phi&=100Q/\\epsilon_0\\end{aligned}\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 70,
@@ -2973,7 +2973,7 @@ window.iitOthersData = {
             "D": "zero\nε0                      ε0                           ε0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The curved surface has zero flux because the field is parallel to its axis. The end fluxes cancel.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 70,
@@ -2988,7 +2988,7 @@ window.iitOthersData = {
             "D": "8.86 x 1013 N-m2/C"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Original figure required.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 70,
@@ -3003,7 +3003,7 @@ window.iitOthersData = {
             "D": "(φ1 − φ2 ) / ε 0\n̂"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(q_{\\rm enc}=\\epsilon_0(\\phi_2-\\phi_1)\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 70,
@@ -3018,7 +3018,7 @@ window.iitOthersData = {
             "D": "6l2 E"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\Phi_{\\rm net}=0\\) because no charge is enclosed.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 70,
@@ -3033,7 +3033,7 @@ window.iitOthersData = {
             "D": "ε0                      2ε 0                        4ε 0                          6ε 0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\Phi_{\\rm face}=q/(6\\epsilon_0)\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 70,
@@ -3048,7 +3048,7 @@ window.iitOthersData = {
             "D": "ε0                       ε0                       ε0                   ε0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Each dipole has zero net charge; total flux is zero.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 71,
@@ -3063,7 +3063,7 @@ window.iitOthersData = {
             "D": "ε0                       2ε 0                 ε0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric flux},\\ \\Phi&=q/(2\\epsilon_0)\\end{aligned}\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 71,
@@ -3078,7 +3078,7 @@ window.iitOthersData = {
             "D": "Spherical Gaussian surface will alter the dipole moment"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The dipole field lacks spherical symmetry, so its magnitude is not constant on a spherical surface.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 71,
@@ -3093,7 +3093,7 @@ window.iitOthersData = {
             "D": "2ε 0                     ε0                                            ε0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=0\\end{aligned}\\) because the fields cancel.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 71,
@@ -3108,7 +3108,7 @@ window.iitOthersData = {
             "D": "x2\nx2                       x"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=kQx/R^3\\propto x\\end{aligned}\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 71,
@@ -3123,7 +3123,7 @@ window.iitOthersData = {
             "D": "A line charge of infinite length"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The field of an infinite uniformly charged plane is independent of distance.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 71,
@@ -3138,7 +3138,7 @@ window.iitOthersData = {
             "D": "ε0                       πε 0                     4ε 0                 6ε 0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The square is one face of a cube with the charge at its centre: \\(\\displaystyle\\begin{aligned}\\text{Electric flux},\\ \\Phi&=q/(6\\epsilon_0)\\end{aligned}\\).",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 71,
@@ -3153,7 +3153,7 @@ window.iitOthersData = {
             "D": "k\nε0                            ε0                  ε0                   ε0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Original sheet arrangement required.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 71,
@@ -3170,7 +3170,7 @@ window.iitOthersData = {
             "D": "6.32 x 103 CN-1 m-2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The enclosed charge must be identified from the original figure; use Gauss's law.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 72,
@@ -3185,7 +3185,7 @@ window.iitOthersData = {
             "D": "flux linked with surface is\nε0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric flux},\\ \\Phi&=q/\\epsilon_0\\end{aligned}\\) is constant, hence \\(d\\Phi/dt=0\\).",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 72,
@@ -3200,7 +3200,7 @@ window.iitOthersData = {
             "D": "-4 x 103 ε 0 C\nε0"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=\\epsilon_0(4\\times10^3-8\\times10^3)\\\\ &=-4\\times10^3\\epsilon_0\\end{aligned}\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 72,
@@ -3215,7 +3215,7 @@ window.iitOthersData = {
             "D": "EL2/2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The field is parallel to the surface, so flux is zero.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 72,
@@ -3230,7 +3230,7 @@ window.iitOthersData = {
             "D": "IV"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "The enclosed rod length changes with time; use the original figure and charge density to determine flux.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 73,
@@ -3245,7 +3245,7 @@ window.iitOthersData = {
             "D": "2πε 0 R               2πε 0 R                      4πε 0 R 2            4πε 0 R 2"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "Outside the shell, \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=2kQ/r^2\\end{aligned}\\); between sphere and shell, \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=3kQ/r^2\\end{aligned}\\); inside the metal sphere, \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=0\\end{aligned}\\).",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 73,
@@ -3260,7 +3260,7 @@ window.iitOthersData = {
             "D": "2ε 0                         ε0                ε 0 volts/meter"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\sigma/\\epsilon_0\\end{aligned}\\) between plates; zero outside ideal infinite plates.",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 73,
@@ -3275,7 +3275,7 @@ window.iitOthersData = {
             "D": "Zero"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(E(3)=100(20/10)^2(3/10)=120\\,\\mathrm{V/m}\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 73,
@@ -3290,7 +3290,7 @@ window.iitOthersData = {
             "D": "0                   6"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric flux},\\ \\Phi&=E_0a^3\\Rightarrow q_{\\rm enc}\\\\ &=\\epsilon_0E_0a^3\\end{aligned}\\)",
           "paper": "WS-4",
           "marks": 1,
           "sourcePage": 73,
