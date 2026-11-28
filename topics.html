@@ -1925,7 +1925,29 @@ document.addEventListener('DOMContentLoaded',()=>{
 .p4f-topbar .p4f-selectors select:hover,.p4f-topbar .p4f-auth>a:hover,.p4f-topbar .p4f-auth-user:hover{background:#fff;border-color:#ddd6fe}
 .p4f-topbar .p4f-selectors select:focus-visible,.p4f-topbar .p4f-auth button:focus-visible,.p4f-topbar .p4f-auth a:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .p4f-topbar .p4f-selectors option{background:#fff;color:#4c1d95}
-</style></head>
+</style><style id="p4f-compact-pinned-subsections">
+#content{padding-top:0!important;min-height:0}
+#contentWrap>.section-bar{margin:0!important;padding-top:3px!important;padding-bottom:3px!important}
+#contentWrap>:is(#pyq-tabbar,#desc-tabbar,#obj-tabbar,#playlearn-tabbar,#runthrough-tabbar){margin:0!important;flex-shrink:0;padding-top:0!important;padding-bottom:0!important}
+#content :is(#othersTabsWrap,#compExamTabsWrap,#iitOthWorksheetTabsWrap,.calculus-examples-tabs,.desc-tabs,.pyq-tabs){position:sticky!important;top:0!important;z-index:140!important;background:var(--bg2);margin-top:0!important;margin-bottom:0!important;padding-top:2px!important;padding-bottom:2px!important}
+#content :is(#othersTabsWrap,#compExamTabsWrap,#iitOthWorksheetTabsWrap) .iit-inline-row{margin:0!important;padding:3px 6px!important}
+#content #iitOthLevelTabsWrap:not(:empty),#content #compSubTabsWrap:not(:empty){position:sticky!important;top:var(--p4f-subrow-height,36px)!important;z-index:139!important;background:var(--bg2);margin:0!important;padding:0!important}
+#content :is(#iitOthBody,#compExamBody,#othersBody){padding-top:4px!important;margin-top:0!important}
+#content .calculus-examples-tabs{gap:5px!important;flex-wrap:nowrap!important;overflow-x:auto}
+#content .notes-sticky-header{padding-top:2px!important;padding-bottom:2px!important;margin:0!important}
+#content :is(.iit-practice-nav-combined,.iit-practice-nav-top,.sv-nav-row.visible){top:var(--p4f-nav-stack,0px)!important}
+</style>
+<script id="p4f-subsection-offsets">
+document.addEventListener('DOMContentLoaded',()=>{
+ const content=document.getElementById('content');if(!content)return;
+ const selectors='#othersTabsWrap,#compExamTabsWrap,#iitOthWorksheetTabsWrap,.calculus-examples-tabs,.desc-tabs,.pyq-tabs';
+ let pending=false;
+ function measure(){pending=false;let first=0,second=0;content.querySelectorAll(selectors).forEach(el=>{if(el.getClientRects().length&&el.children.length)first=Math.max(first,el.offsetHeight)});content.querySelectorAll('#iitOthLevelTabsWrap,#compSubTabsWrap').forEach(el=>{if(el.getClientRects().length&&el.children.length)second=Math.max(second,el.offsetHeight)});if(content.style.getPropertyValue('--p4f-subrow-height')!==first+'px')content.style.setProperty('--p4f-subrow-height',first+'px');if(content.style.getPropertyValue('--p4f-nav-stack')!==(first+second)+'px')content.style.setProperty('--p4f-nav-stack',(first+second)+'px')}
+ function schedule(){if(!pending){pending=true;requestAnimationFrame(measure)}}
+ new MutationObserver(schedule).observe(content,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style']});
+ window.addEventListener('resize',schedule);schedule();
+});
+</script></head>
 <body class="light">
 
 <!-- HEADER -->
@@ -2807,7 +2829,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       <div class="welcome" id="welcome">
         <div class="welcome-atom">⚛️</div>
         <h2>Welcome to Physics4Fun</h2>
-        <p>Your complete Physics platform for CBSE, AP State & CISCE Cambridge (Grades 6–12). Pick a board, grade and chapter from the sidebar.</p>
+        <p>Your complete Physics platform for CBSE, AP State & CISCE Cambridge (Grades 6–12). Pick a board, grade and chapter from the selectors above.</p>
         <div class="welcome-pills">
           <span class="w-pill">📖 Notes</span>
           <span class="w-pill">✏️ Descriptive</span>
