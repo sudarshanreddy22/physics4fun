@@ -1929,7 +1929,7 @@ window.iitOthersData = {
             "D": "It is conservative field."
           },
           "answer": "D",
-          "explanation": "An electrostatic field is conservative: work done around a closed path is zero.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">An electrostatic field is conservative: work done around a closed path is zero.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core1b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core1r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">+q</text><path d=\"M134 65L168 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core1b)\"/><path d=\"M129.89949493661166 74.89949493661166L153.94112549695427 98.94112549695427\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core1b)\"/><path d=\"M120 79L120 113\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core1b)\"/><path d=\"M110.10050506338834 74.89949493661166L86.05887450304573 98.94112549695429\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core1b)\"/><path d=\"M106 65L72 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core1b)\"/><path d=\"M110.10050506338834 55.10050506338834L86.05887450304571 31.058874503045722\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core1b)\"/><path d=\"M120 51L119.99999999999999 17\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core1b)\"/><path d=\"M129.89949493661166 55.10050506338833L153.94112549695427 31.058874503045715\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core1b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
@@ -1944,7 +1944,7 @@ window.iitOthersData = {
             "D": "Electric field is the zone of influence of a charge."
           },
           "answer": "",
-          "explanation": "All four statements are generally valid for electrostatics. The source has no unambiguously incorrect option.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">All four statements are generally valid for electrostatics. The source has no unambiguously incorrect option.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core2b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core2r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">+q</text><path d=\"M134 65L168 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core2b)\"/><path d=\"M129.89949493661166 74.89949493661166L153.94112549695427 98.94112549695427\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core2b)\"/><path d=\"M120 79L120 113\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core2b)\"/><path d=\"M110.10050506338834 74.89949493661166L86.05887450304573 98.94112549695429\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core2b)\"/><path d=\"M106 65L72 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core2b)\"/><path d=\"M110.10050506338834 55.10050506338834L86.05887450304571 31.058874503045722\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core2b)\"/><path d=\"M120 51L119.99999999999999 17\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core2b)\"/><path d=\"M129.89949493661166 55.10050506338833L153.94112549695427 31.058874503045715\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core2b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
@@ -1959,14 +1959,14 @@ window.iitOthersData = {
             "D": "the force, an electron would experience there"
           },
           "answer": "C",
-          "explanation": "Electric field is force per unit positive test charge: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=F/q\\end{aligned}\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Electric field is force per unit positive test charge: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=F/q\\end{aligned}\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core3b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core3r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M15 25L225 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core3b)\"/><path d=\"M15 55L225 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core3b)\"/><path d=\"M15 85L225 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core3b)\"/><path d=\"M15 115L225 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core3b)\"/><circle cx=\"120\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">test charge</text><path d=\"M120 70L170 70\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core3r)\"/><text x=\"200\" y=\"17\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
           "sourceQuestion": 3
         },
         {
-          "question": "you are travelling in a car during a thunder storm, in order to protect yourself from\nlightning would you prefer to:",
+          "question": "you are travelling in a car during a thunder storm, in order to protect yourself from lightning would you prefer to:",
           "options": {
             "A": "remain in the car",
             "B": "take shelter under a tree",
@@ -1974,14 +1974,14 @@ window.iitOthersData = {
             "D": "touch the nearest electrical pole."
           },
           "answer": "A",
-          "explanation": "A closed metal-bodied car acts as a Faraday cage; remain inside.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">A closed metal-bodied car acts as a Faraday cage; remain inside.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core4b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core4r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M10 20L230 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core4b)\"/><path d=\"M10 45L230 45\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core4b)\"/><path d=\"M10 90L230 90\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core4b)\"/><path d=\"M10 115L230 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core4b)\"/><circle cx=\"120\" cy=\"67\" r=\"35\" fill=\"var(--card,#e2e8f0)\" stroke=\"#64748b\"/><text x=\"120\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E = 0</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 50,
           "sourceQuestion": 4
         },
         {
-          "question": "How does a free electron at rest move in an electric field ?",
+          "question": "How does a free electron at rest move in an electric field?",
           "options": {
             "A": "It will move along the direction of electric field",
             "B": "It will move in a direction opposite to the direction of electric field",
@@ -1989,7 +1989,7 @@ window.iitOthersData = {
             "D": "both (1) and (3)"
           },
           "answer": "B",
-          "explanation": "An electron has negative charge, so its initial acceleration is opposite to the electric field.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">An electron has negative charge, so its initial acceleration is opposite to the electric field.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core5b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core5r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M15 25L225 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core5b)\"/><path d=\"M15 55L225 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core5b)\"/><path d=\"M15 85L225 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core5b)\"/><path d=\"M15 115L225 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core5b)\"/><circle cx=\"120\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">electron</text><path d=\"M120 70L70 70\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core5r)\"/><text x=\"200\" y=\"17\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2004,7 +2004,7 @@ window.iitOthersData = {
             "D": "\\(3.2 \\times 10^{3}\\) N/C"
           },
           "answer": "C",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac Fq\\\\ &=\\frac{1.5\\times10^{-3}}{1.0\\times10^{-6}}\\\\ &=1.5\\times10^3\\,\\mathrm{N/C}\\end{aligned}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac Fq\\\\ &=\\frac{1.5\\times10^{-3}}{1.0\\times10^{-6}}\\\\ &=1.5\\times10^3\\,\\mathrm{N/C}\\end{aligned}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core6b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core6r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M15 25L225 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core6b)\"/><path d=\"M15 55L225 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core6b)\"/><path d=\"M15 85L225 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core6b)\"/><path d=\"M15 115L225 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core6b)\"/><circle cx=\"120\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">test charge</text><path d=\"M120 70L170 70\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core6r)\"/><text x=\"200\" y=\"17\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2019,14 +2019,14 @@ window.iitOthersData = {
             "D": "\\(5.6\\times 10^{-11}\\) N/C"
           },
           "answer": "D",
-          "explanation": "\\(eE=mg\\Rightarrow E=\\frac{9\\times10^{-31}\\times10}{1.6\\times10^{-19}}\\approx5.6\\times10^{-11}\\,\\mathrm{N/C}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(eE=mg\\Rightarrow E=\\frac{9\\times10^{-31}\\times10}{1.6\\times10^{-19}}\\approx5.6\\times10^{-11}\\,\\mathrm{N/C}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core7b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core7r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"65\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">q</text><path d=\"M120 51L120 15\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core7b)\"/><path d=\"M120 79L120 115\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core7r)\"/><text x=\"155\" y=\"25\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Electric force</text><text x=\"145\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">mg</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
           "sourceQuestion": 7
         },
         {
-          "question": "The magnitude of the electric field required to just balance in air a \\(2 \\times 10^{-4}\\) kg liquid drop\ncarrying a charge of \\(9.8\\times 10^{-2}\\) μC is",
+          "question": "The magnitude of the electric field required to just balance in air a \\(2 \\times 10^{-4}\\) kg liquid drop carrying a charge of \\(9.8\\times 10^{-2}\\) μC is:",
           "options": {
             "A": "\\(10^{4}\\) N/C",
             "B": "\\(2\\times 10^{4}\\) N/C",
@@ -2034,14 +2034,14 @@ window.iitOthersData = {
             "D": "\\(5\\times 10^{4}\\) N/C"
           },
           "answer": "B",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{mg}{q}\\\\ &=\\frac{2\\times10^{-4}\\times9.8}{9.8\\times10^{-8}}\\\\ &=2\\times10^4\\,\\mathrm{N/C}\\end{aligned}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{mg}{q}\\\\ &=\\frac{2\\times10^{-4}\\times9.8}{9.8\\times10^{-8}}\\\\ &=2\\times10^4\\,\\mathrm{N/C}\\end{aligned}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core8b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core8r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">q</text><path d=\"M120 51L120 15\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core8b)\"/><path d=\"M120 79L120 115\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core8r)\"/><text x=\"155\" y=\"25\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Electric force</text><text x=\"145\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">mg</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
           "sourceQuestion": 8
         },
         {
-          "question": "A point charge q produces an electric field of magnitude 2NC–1 at a point distance 0.25 m\nfrom it. The value of charge is",
+          "question": "A point charge q produces an electric field of magnitude 2NC–1 at a point distance 0.25 m from it. The value of charge is:",
           "options": {
             "A": "\\(1.39\\times 10^{-11}\\) C",
             "B": "\\(1.39\\times 10^{11}\\) C",
@@ -2049,7 +2049,7 @@ window.iitOthersData = {
             "D": "\\(1.39\\times 10^{11}\\) C"
           },
           "answer": "A",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=\\frac{Er^2}{k}\\\\ &=\\frac{2(0.25)^2}{9\\times10^9}\\\\ &=1.39\\times10^{-11}\\,\\mathrm C\\end{aligned}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=\\frac{Er^2}{k}\\\\ &=\\frac{2(0.25)^2}{9\\times10^9}\\\\ &=1.39\\times10^{-11}\\,\\mathrm C\\end{aligned}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core9b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core9r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">+q</text><path d=\"M134 65L168 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core9b)\"/><path d=\"M129.89949493661166 74.89949493661166L153.94112549695427 98.94112549695427\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core9b)\"/><path d=\"M120 79L120 113\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core9b)\"/><path d=\"M110.10050506338834 74.89949493661166L86.05887450304573 98.94112549695429\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core9b)\"/><path d=\"M106 65L72 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core9b)\"/><path d=\"M110.10050506338834 55.10050506338834L86.05887450304571 31.058874503045722\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core9b)\"/><path d=\"M120 51L119.99999999999999 17\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core9b)\"/><path d=\"M129.89949493661166 55.10050506338833L153.94112549695427 31.058874503045715\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core9b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
@@ -2064,14 +2064,14 @@ window.iitOthersData = {
             "D": "\\(\\frac{1}{4\\pi\\epsilon_0}\\frac{4\\sqrt2q}{a^2}\\)"
           },
           "answer": "D",
-          "explanation": "Each corner is at \\(\\displaystyle\\begin{aligned}\\text{Separation},\\ r&=a/\\sqrt2\\end{aligned}\\). The transverse components cancel; the remaining components add: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=4\\frac{2kq}{a^2}\\cos45^\\circ\\\\ &=\\frac{4\\sqrt2kq}{a^2}\\end{aligned}\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Each corner is at \\(\\displaystyle\\begin{aligned}\\text{Separation},\\ r&=a/\\sqrt2\\end{aligned}\\). The transverse components cancel; the remaining components add: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=4\\frac{2kq}{a^2}\\cos45^\\circ\\\\ &=\\frac{4\\sqrt2kq}{a^2}\\end{aligned}\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core10b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core10r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><polygon points=\"120,19 168,67 120,115 72,67\" fill=\"none\" stroke=\"#94a3b8\"/><circle cx=\"120\" cy=\"19\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"23\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"3\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"168\" cy=\"67\" r=\"10\" fill=\"#dc2626\"/><text x=\"168\" y=\"71\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"168\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><circle cx=\"120\" cy=\"115\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"119\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">C</text><circle cx=\"72\" cy=\"67\" r=\"10\" fill=\"#2563eb\"/><text x=\"72\" y=\"71\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"72\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">D</text><text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M120 67L78 67\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core10b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
           "sourceQuestion": 10
         },
         {
-          "question": "Two similar charges of the same magnitude ‘q’ are placed at a distance ‘d’ apart. The\nintensity of the electric field at a point mid - way between the charges is \n1 q 1 4q 1 2q",
+          "question": "Two similar charges of magnitude q are separated by a distance d. What is the electric field at the midpoint?",
           "options": {
             "A": "\\(\\frac{1q}{4\\pi\\epsilon_0r^2}\\)",
             "B": "\\(\\frac{4q}{4\\pi\\epsilon_0r^2}\\)",
@@ -2094,14 +2094,14 @@ window.iitOthersData = {
             "D": "\\(\\frac{2Q}{4\\pi\\epsilon_0a^2}\\) along OD"
           },
           "answer": "D",
-          "explanation": "The fields of four identical corner charges would cancel. Removing the charge at D leaves \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kQ}{(a/\\sqrt2)^2}\\\\ &=\\frac{2kQ}{a^2}\\end{aligned}\\) directed along OD.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The fields of four identical corner charges would cancel. Removing the charge at D leaves \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kQ}{(a/\\sqrt2)^2}\\\\ &=\\frac{2kQ}{a^2}\\end{aligned}\\) directed along OD.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core12b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core12r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><polygon points=\"120,19 168,67 120,115 72,67\" fill=\"none\" stroke=\"#94a3b8\"/><circle cx=\"120\" cy=\"19\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"23\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"3\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"168\" cy=\"67\" r=\"10\" fill=\"#dc2626\"/><text x=\"168\" y=\"71\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"168\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><circle cx=\"120\" cy=\"115\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"119\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">C</text><text x=\"72\" y=\"67\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">D</text><text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M120 67L76 67\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core12b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
           "sourceQuestion": 12
         },
         {
-          "question": "Two point charges +4q and +q are placed 30cm apart. At what point on the line joining\nthere is the electric field is zero ?",
+          "question": "Two point charges +4q and +q are placed 30 cm apart. At what point on the line joining them is the electric field zero?",
           "options": {
             "A": "15 cm from charge 4q",
             "B": "20 cm from charge 4q",
@@ -2116,7 +2116,7 @@ window.iitOthersData = {
           "sourceQuestion": 13
         },
         {
-          "question": "Charge 2Q and -Q are placed as shown in figure. The point at which electric field\nintensity is zero will be:",
+          "question": "Charge 2Q and -Q are placed as shown in figure. The point at which electric field intensity is zero will be:",
           "options": {
             "A": "some where between -Q and -2Q",
             "B": "some where on the left of -Q",
@@ -2124,14 +2124,14 @@ window.iitOthersData = {
             "D": "some where on the right bisector of line joining -Q and 2Q"
           },
           "answer": "",
-          "explanation": "The zero-field point lies outside the interval on the side of the smaller-magnitude charge, −Q.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The zero-field point lies outside the interval on the side of the smaller-magnitude charge, −Q.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core14b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core14r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core14b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core14b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core14b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core14b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 51,
           "sourceQuestion": 14
         },
         {
-          "question": "Study following statements about the electric lines of force. \n(A) Two field lines cannot intersect each other.\n(B) The path traced by a positive charge is a field line.\n(C) Field lines are continuous in a medium\n(D) A field line cannot intersect itself.\nChoose the correct statements",
+          "question": "Study following statements about the electric lines of force. (A) Two field lines cannot intersect each other. (B) The path traced by a positive charge is a field line. (C) Field lines are continuous in a medium (D) A field line cannot intersect itself. Choose the correct statements:",
           "options": {
             "A": "Only (A), (B) and (C)",
             "B": "Only (A), (C) and (D)",
@@ -2139,14 +2139,14 @@ window.iitOthersData = {
             "D": "Only (B) and (C)"
           },
           "answer": "B",
-          "explanation": "Field lines cannot intersect themselves or one another. A charged particle need not follow a field line.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Field lines cannot intersect themselves or one another. A charged particle need not follow a field line.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core15b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core15r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">+q</text><path d=\"M134 65L168 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core15b)\"/><path d=\"M129.89949493661166 74.89949493661166L153.94112549695427 98.94112549695427\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core15b)\"/><path d=\"M120 79L120 113\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core15b)\"/><path d=\"M110.10050506338834 74.89949493661166L86.05887450304573 98.94112549695429\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core15b)\"/><path d=\"M106 65L72 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core15b)\"/><path d=\"M110.10050506338834 55.10050506338834L86.05887450304571 31.058874503045722\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core15b)\"/><path d=\"M120 51L119.99999999999999 17\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core15b)\"/><path d=\"M129.89949493661166 55.10050506338833L153.94112549695427 31.058874503045715\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core15b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
           "sourceQuestion": 15
         },
         {
-          "question": "Electric lines of force around a negative point charge are",
+          "question": "Electric lines of force around a negative point charge are:",
           "options": {
             "A": "circular, anticlockwise",
             "B": "circular, clockwise",
@@ -2154,22 +2154,22 @@ window.iitOthersData = {
             "D": "radial, outwards"
           },
           "answer": "C",
-          "explanation": "Electric field lines point radially inward toward a negative point charge.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Electric field lines point radially inward toward a negative point charge.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core16b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core16r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"65\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">−q</text><path d=\"M168 65L134 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core16b)\"/><path d=\"M153.94112549695427 98.94112549695427L129.89949493661166 74.89949493661166\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core16b)\"/><path d=\"M120 113L120 79\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core16b)\"/><path d=\"M86.05887450304573 98.94112549695429L110.10050506338834 74.89949493661166\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core16b)\"/><path d=\"M72 65L106 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core16b)\"/><path d=\"M86.05887450304571 31.058874503045722L110.10050506338834 55.10050506338834\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core16b)\"/><path d=\"M119.99999999999999 17L120 51\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core16b)\"/><path d=\"M153.94112549695427 31.058874503045715L129.89949493661166 55.10050506338833\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core16b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
           "sourceQuestion": 16
         },
         {
-          "question": "Figure shown the electric lines of force emerging from a charged body. If the electric\nfield at A and B are \\(E_{A}\\) and \\(E_{B}\\) respectively and if the displacement between A and B is\nr, then",
+          "question": "Figure shown the electric lines of force emerging from a charged body. If the electric field at A and B are \\(E_{A}\\) and \\(E_{B}\\) respectively and if the displacement between A and B is r, then:",
           "options": {
-            "A": "\\(E_{A}\\) > \\(E_{B}\\)",
-            "B": "\\(E_{A}\\) < \\(E_{B}\\)",
+            "A": "\\(E_{A}>E_{B}\\)",
+            "B": "\\(E_{A}<E_{B}\\)",
             "C": "\\(E_{A}\\) = \\(E_{B}\\)",
             "D": "nothing can be said"
           },
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core17b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core17r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core17b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core17b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core17b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core17b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2178,10 +2178,10 @@ window.iitOthersData = {
         },
         {
           "sourceNumber": 18,
-          "question": "The field pattern which is not possible is given by [ ]\n1) 2) 3) 4)",
+          "question": "The field pattern which is not possible is given by [ ] 1) 2) 3) 4):",
           "options": {},
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core18b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core18r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core18b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core18b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core18b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core18b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2189,10 +2189,10 @@ window.iitOthersData = {
         },
         {
           "sourceNumber": 19,
-          "question": "The field pattern(s) which is/are not possible: [ ]\n1) 2) 3) 4)",
+          "question": "The field pattern(s) which is/are not possible: [ ] 1) 2) 3) 4):",
           "options": {},
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core19b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core19r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core19b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core19b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core19b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core19b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
@@ -2200,17 +2200,17 @@ window.iitOthersData = {
         },
         {
           "sourceNumber": 20,
-          "question": "A point positive charge is brought near an isolated conducting sphere. The electric field\nlines are best represented by [ ]\n1) 2)\n3) 4)",
+          "question": "A point positive charge is brought near an isolated conducting sphere. The electric field lines are best represented by [ ] 1) 2) 3) 4):",
           "options": {},
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core20b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core20r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core20b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core20b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core20b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core20b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 52,
           "sourceNote": "Original figure required; diagram not yet restored."
         },
         {
-          "question": "The given figure gives electric lines of force due to two charges \\(q_{1}\\) and \\(q_{2}\\). What are the\nsigns of the two charges?",
+          "question": "The given figure gives electric lines of force due to two charges \\(q_{1}\\) and \\(q_{2}\\). What are the signs of the two charges?",
           "options": {
             "A": "Both are negative",
             "B": "Both are positive",
@@ -2218,7 +2218,7 @@ window.iitOthersData = {
             "D": "\\(q_{1}\\) is negative but \\(q_{2}\\) is positive"
           },
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core21b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core21r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core21b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core21b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core21b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core21b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2227,10 +2227,10 @@ window.iitOthersData = {
         },
         {
           "sourceNumber": 22,
-          "question": "Consider the four field patterns shown. Assuming there are no charges in the regions\nshown, which of the patterns represents a possible electrostatic field? [ ]\n1) 2) 3) 4)",
+          "question": "Consider the four field patterns shown. Assuming there are no charges in the regions shown, which of the patterns represents a possible electrostatic field? [ ] 1) 2) 3) 4):",
           "options": {},
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core22b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core22r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core22b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core22b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core22b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core22b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2238,17 +2238,17 @@ window.iitOthersData = {
         },
         {
           "sourceNumber": 23,
-          "question": "Which of the following figures correctly shows the top view sketch of the electric field\nlines for a uniformly charged hollow cylinder as shown in figure? [ ]\n1) 2)\n3) 4)",
+          "question": "Which of the following figures correctly shows the top view sketch of the electric field lines for a uniformly charged hollow cylinder as shown in figure? [ ] 1) 2) 3) 4):",
           "options": {},
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core23b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core23r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core23b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core23b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core23b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core23b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
           "sourceNote": "Original figure required; diagram not yet restored."
         },
         {
-          "question": "Figure shown the electric field lines around three point charges A, B and C. Which of the\nfollowing charges are positive?",
+          "question": "Figure shown the electric field lines around three point charges A, B and C. Which of the following charges are positive?",
           "options": {
             "A": "Only A",
             "B": "Only C",
@@ -2256,7 +2256,7 @@ window.iitOthersData = {
             "D": "Both B and C"
           },
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core24b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core24r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core24b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core24b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core24b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core24b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2264,15 +2264,15 @@ window.iitOthersData = {
           "sourceNote": "Original figure required; diagram not yet restored."
         },
         {
-          "question": "The figure shown some of the electric field lines corresponding to an electric field. The\nfigure suggests.",
+          "question": "The figure shown some of the electric field lines corresponding to an electric field. The figure suggests.",
           "options": {
-            "A": "\\(E_{A}\\) > \\(E_{B}\\) > \\(E_{C}\\)",
+            "A": "\\(E_{A}>E_{B}\\) > \\(E_{C}\\)",
             "B": "\\(E_{A}\\) = \\(E_{B}\\) = \\(E_{C}\\)",
-            "C": "\\(E_{A}\\) = \\(E_{C}\\) > \\(E_{B}\\)",
-            "D": "\\(E_{A}\\) = \\(E_{C}\\) < \\(E_{B}\\)"
+            "C": "\\(E_{A}\\) = \\(E_{C}>E_{B}\\)",
+            "D": "\\(E_{A}\\) = \\(E_{C}<E_{B}\\)"
           },
           "answer": "",
-          "explanation": "The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to identify the correct option reliably. Field-line arrows show direction and their density indicates field strength.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core25b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core25r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core25b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core25b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core25b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core25b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
@@ -2280,7 +2280,7 @@ window.iitOthersData = {
           "sourceNote": "Original figure required; diagram not yet restored."
         },
         {
-          "question": "In a region with uniform electric field, the number of lines of force per unit area is E. If a\nspherical metallic conductor is placed in this region, the number of lines of force per unit\narea inside the conductor will be",
+          "question": "In a region with uniform electric field, the number of lines of force per unit area is E. If a spherical metallic conductor is placed in this region, the number of lines of force per unit area inside the conductor will be:",
           "options": {
             "A": "E",
             "B": "more than E",
@@ -2288,29 +2288,29 @@ window.iitOthersData = {
             "D": "zero."
           },
           "answer": "D",
-          "explanation": "Inside a conductor in electrostatic equilibrium, the electric field is zero.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Inside a conductor in electrostatic equilibrium, the electric field is zero.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core26b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core26r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M10 20L230 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core26b)\"/><path d=\"M10 45L230 45\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core26b)\"/><path d=\"M10 90L230 90\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core26b)\"/><path d=\"M10 115L230 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core26b)\"/><circle cx=\"120\" cy=\"67\" r=\"35\" fill=\"var(--card,#e2e8f0)\" stroke=\"#64748b\"/><text x=\"120\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E = 0</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 53,
           "sourceQuestion": 26
         },
         {
-          "question": "A charge particle is free to move in an electric field. It will travel",
+          "question": "A charge particle is free to move in an electric field. It will travel:",
           "options": {
             "A": "Always along a line of force",
             "B": "Along a line of force, if its initial velocity is zero",
-            "C": "Along a line of force, if it has some initial velocity in the direction of an acute angle\nwith the line of force",
+            "C": "Along a line of force, if it has some initial velocity in the direction of an acute angle with the line of force",
             "D": "None of the above"
           },
           "answer": "D",
-          "explanation": "A charged particle accelerates along or opposite to the local field, but its trajectory need not coincide with a field line.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">A charged particle accelerates along or opposite to the local field, but its trajectory need not coincide with a field line.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core27b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core27r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M15 25L225 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core27b)\"/><path d=\"M15 55L225 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core27b)\"/><path d=\"M15 85L225 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core27b)\"/><path d=\"M15 115L225 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core27b)\"/><circle cx=\"120\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">test charge</text><path d=\"M120 70L170 70\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core27r)\"/><text x=\"200\" y=\"17\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
           "sourceQuestion": 27
         },
         {
-          "question": "In the electric field shown in figure, the electric field lines on the left have twice the\nseparation as that between those on the right. If the magnitude of the field at point A is\n40 \\(\\mathrm{N\\,C^{-1}}\\), calculate the force experienced by a proton placed at point A. Also find the\nmagnitude of electric field at the point B.",
+          "question": "In the electric field shown in figure, the electric field lines on the left have twice the separation as that between those on the right. If the magnitude of the field at point A is 40 \\(\\mathrm{N\\,C^{-1}}\\), calculate the force experienced by a proton placed at point A. Also find the magnitude of electric field at the point B.",
           "options": {
             "A": "\\(64\\times 10^{-18}\\) N, 15 N/C",
             "B": "\\(6.4\\times 10^{-18}\\) N, 20 N/C",
@@ -2318,7 +2318,7 @@ window.iitOthersData = {
             "D": "\\(6.4\\times 10^{-18}\\) N, 30 N/C"
           },
           "answer": "",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=eE\\\\ &=(1.6\\times10^{-19})(40)\\\\ &=6.4\\times10^{-18}\\,\\mathrm N\\end{aligned}\\). The field at B depends on its location in the original figure.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Electric force},\\ F&=eE\\\\ &=(1.6\\times10^{-19})(40)\\\\ &=6.4\\times10^{-18}\\,\\mathrm N\\end{aligned}\\). The field at B depends on its location in the original figure.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core28b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core28r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core28b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core28b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core28b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core28b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2326,7 +2326,7 @@ window.iitOthersData = {
           "sourceNote": "Original figure required; diagram not yet restored."
         },
         {
-          "question": "An electron and a proton are at a distance of 1 Å. The moment of this dipole will be (Cm)",
+          "question": "An electron and a proton are at a distance of 1 Å. The moment of this dipole will be (Cm):",
           "options": {
             "A": "\\(16\\times 10^{19}\\) C m",
             "B": "\\(1.6\\times 10^{-29}\\) C m",
@@ -2334,14 +2334,14 @@ window.iitOthersData = {
             "D": "\\(3.2\\times 10^{29}\\) C m"
           },
           "answer": "B",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Dipole moment},\\ p&=ed\\\\ &=(1.6\\times10^{-19})(10^{-10})\\\\ &=1.6\\times10^{-29}\\,\\mathrm{C\\,m}\\end{aligned}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Dipole moment},\\ p&=ed\\\\ &=(1.6\\times10^{-19})(10^{-10})\\\\ &=1.6\\times10^{-29}\\,\\mathrm{C\\,m}\\end{aligned}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core29b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core29r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core29b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
           "sourceQuestion": 29
         },
         {
-          "question": "Study following statements about dipole moment.\n(A) The dimensions of dipole moment is [L TA].\n(B) The unit of dipole moment is Cm.\n(C) Dipole moment is a vector quantity and directed from negative to positive charge.\n(D) Dipole moment is a scalar quantity and has magnitude equal to the potential energy\nof the system of charges.\nChoose the correct statements.",
+          "question": "Study following statements about dipole moment. (A) The dimensions of dipole moment is [L TA]. (B) The unit of dipole moment is Cm. (C) Dipole moment is a vector quantity and directed from negative to positive charge. (D) Dipole moment is a scalar quantity and has magnitude equal to the potential energy of the system of charges. Choose the correct statements.",
           "options": {
             "A": "Only (A), (B) and (C)",
             "B": "Only (A), (B) and (D)",
@@ -2349,14 +2349,14 @@ window.iitOthersData = {
             "D": "Only (A) and (C)"
           },
           "answer": "A",
-          "explanation": "Dipole moment has dimensions \\([LTA]\\) and SI unit C m. Its direction is from negative to positive charge.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Dipole moment has dimensions \\([LTA]\\) and SI unit C m. Its direction is from negative to positive charge.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core30b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core30r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core30b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
           "sourceQuestion": 30
         },
         {
-          "question": "Electric charges q,q,-2q are placed at the corners of an equilateral triangle ABC of side l.\nThe magnitude of electric dipole moment of the system is",
+          "question": "Electric charges q,q,-2q are placed at the corners of an equilateral triangle ABC of side l. The magnitude of electric dipole moment of the system is:",
           "options": {
             "A": "q",
             "B": "2ql",
@@ -2364,14 +2364,14 @@ window.iitOthersData = {
             "D": "4ql"
           },
           "answer": "C",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Dipole moment},\\ p&=2ql\\cos30^\\circ\\\\ &=\\sqrt3ql\\end{aligned}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Dipole moment},\\ p&=2ql\\cos30^\\circ\\\\ &=\\sqrt3ql\\end{aligned}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core31b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core31r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><polygon points=\"120,19 161.56921938165306,91 78.43078061834694,91.00000000000001\" fill=\"none\" stroke=\"#94a3b8\"/><circle cx=\"120\" cy=\"19\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"23\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"3\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"161.56921938165306\" cy=\"91\" r=\"10\" fill=\"#dc2626\"/><text x=\"161.56921938165306\" y=\"95\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"161.56921938165306\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><circle cx=\"78.43078061834694\" cy=\"91.00000000000001\" r=\"10\" fill=\"#2563eb\"/><text x=\"78.43078061834694\" y=\"95.00000000000001\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"78.43078061834694\" y=\"75.00000000000001\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">C</text><text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
           "sourceQuestion": 31
         },
         {
-          "question": "An electric dipole is kept in non-uniform electric field. It experiences",
+          "question": "An electric dipole is kept in non-uniform electric field. It experiences:",
           "options": {
             "A": "A force and a torque",
             "B": "A force but not a torque",
@@ -2379,14 +2379,14 @@ window.iitOthersData = {
             "D": "Neither a force nor a torque"
           },
           "answer": "A",
-          "explanation": "A nonuniform field can exert a net force and a torque; torque can vanish for particular orientations.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">A nonuniform field can exert a net force and a torque; torque can vanish for particular orientations.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core32b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core32r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"100\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"120\" cy=\"35\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M120 86L120 49\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core32b)\"/><text x=\"138\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><path d=\"M20 20L220 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core32b)\"/><path d=\"M20 65L220 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core32b)\"/><path d=\"M20 110L220 110\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core32b)\"/><path d=\"M106 100L65 100\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core32r)\"/><path d=\"M134 35L175 35\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core32r)\"/><text x=\"202\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
           "sourceQuestion": 32
         },
         {
-          "question": "What is the angle between the electric dipole moment and the electric field strength due\nto it on the equatorial line",
+          "question": "What is the angle between the electric dipole moment and the electric field strength due to it on the equatorial line:",
           "options": {
             "A": "\\(0^\\circ\\)",
             "B": "\\(90^\\circ\\)",
@@ -2394,14 +2394,14 @@ window.iitOthersData = {
             "D": "\\(120^\\circ\\)"
           },
           "answer": "C",
-          "explanation": "The equatorial field points opposite to the dipole moment, so the angle is \\(180^\\circ\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The equatorial field points opposite to the dipole moment, so the angle is \\(180^\\circ\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core33b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core33r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core33b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M145 20L95 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core33b)\"/><text x=\"120\" y=\"13\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Equatorial E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
           "sourceQuestion": 33
         },
         {
-          "question": "An electric dipole in a uniform electric field experiences (When it is placed at an angle θ\nwith the field)",
+          "question": "An electric dipole in a uniform electric field experiences (When it is placed at an angle θ with the field):",
           "options": {
             "A": "Force and torque both",
             "B": "Force but no torque",
@@ -2409,14 +2409,14 @@ window.iitOthersData = {
             "D": "No force and no torque"
           },
           "answer": "C",
-          "explanation": "In a uniform field, the forces cancel. For a non-aligned dipole, \\(\\displaystyle\\begin{aligned}\\text{Torque},\\ \\tau&=pE\\sin\\theta\\end{aligned}\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">In a uniform field, the forces cancel. For a non-aligned dipole, \\(\\displaystyle\\begin{aligned}\\text{Torque},\\ \\tau&=pE\\sin\\theta\\end{aligned}\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core34b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core34r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"100\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"120\" cy=\"35\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M120 86L120 49\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core34b)\"/><text x=\"138\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><path d=\"M20 20L220 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core34b)\"/><path d=\"M20 65L220 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core34b)\"/><path d=\"M20 110L220 110\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core34b)\"/><path d=\"M106 100L65 100\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core34r)\"/><path d=\"M134 35L175 35\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core34r)\"/><text x=\"202\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
           "sourceQuestion": 34
         },
         {
-          "question": "An electric dipole is placed in an electric field generated by a point charge",
+          "question": "An electric dipole is placed in an electric field generated by a point charge:",
           "options": {
             "A": "The net electric force on the dipole must be zero",
             "B": "The net electric force on the dipole may be zero",
@@ -2424,7 +2424,7 @@ window.iitOthersData = {
             "D": "The torque on the dipole due to the field may be zero"
           },
           "answer": "D",
-          "explanation": "Torque can vanish when the dipole is aligned with the local radial field.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Torque can vanish when the dipole is aligned with the local radial field.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core35b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core35r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core35b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 54,
@@ -2439,7 +2439,7 @@ window.iitOthersData = {
             "D": "\\(qr/d^3\\)"
           },
           "answer": "D",
-          "explanation": "For a short dipole, \\(E_a=\\frac{2kp}{d^3}=\\frac{2kqr}{d^3}\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">For a short dipole, \\(E_a=\\frac{2kp}{d^3}=\\frac{2kqr}{d^3}\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core36b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core36r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core36b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M190 70L228 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core36b)\"/><text x=\"208\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Axial E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2454,14 +2454,14 @@ window.iitOthersData = {
             "D": "\\(45^\\circ\\)"
           },
           "answer": "A",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Torque},\\ \\tau&=pE\\sin\\theta\\end{aligned}\\) is maximum when \\(\\theta=90^\\circ\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Torque},\\ \\tau&=pE\\sin\\theta\\end{aligned}\\) is maximum when \\(\\theta=90^\\circ\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core37b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core37r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"100\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"120\" cy=\"35\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M120 86L120 49\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core37b)\"/><text x=\"138\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><path d=\"M20 20L220 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core37b)\"/><path d=\"M20 65L220 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core37b)\"/><path d=\"M20 110L220 110\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core37b)\"/><path d=\"M106 100L65 100\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core37r)\"/><path d=\"M134 35L175 35\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core37r)\"/><text x=\"202\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
           "sourceQuestion": 37
         },
         {
-          "question": "The electric field at a point on equatorial line of a dipole and direction of the dipole\nmoment",
+          "question": "The electric field at a point on equatorial line of a dipole and direction of the dipole moment:",
           "options": {
             "A": "Will be parallel",
             "B": "Will be in opposite direction",
@@ -2469,14 +2469,14 @@ window.iitOthersData = {
             "D": "Are not related"
           },
           "answer": "B",
-          "explanation": "The equatorial field is antiparallel to the dipole moment.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The equatorial field is antiparallel to the dipole moment.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core38b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core38r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core38b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M145 20L95 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core38b)\"/><text x=\"120\" y=\"13\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Equatorial E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
           "sourceQuestion": 38
         },
         {
-          "question": "If \\(E_{a}\\), be the electric field strength of a short dipole at a point on its axial line and \\(E_{e}\\), that\non the equatorial line at the same distance, then",
+          "question": "If \\(E_{a}\\), be the electric field strength of a short dipole at a point on its axial line and \\(E_{e}\\), that on the equatorial line at the same distance, then:",
           "options": {
             "A": "\\(E_e=2E_a\\)",
             "B": "\\(E_a=2E_e\\)",
@@ -2484,14 +2484,14 @@ window.iitOthersData = {
             "D": "None of the above"
           },
           "answer": "B",
-          "explanation": "\\(E_a=\\frac{2kp}{r^3},\\quad E_e=\\frac{kp}{r^3}\\Rightarrow E_a=2E_e\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(E_a=\\frac{2kp}{r^3},\\quad E_e=\\frac{kp}{r^3}\\Rightarrow E_a=2E_e\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core39b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core39r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core39b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M145 20L95 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core39b)\"/><text x=\"120\" y=\"13\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Equatorial E</text><path d=\"M190 70L228 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core39b)\"/><text x=\"208\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Axial E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
           "sourceQuestion": 39
         },
         {
-          "question": "The ratio of electric fields on the axis and at equator of an electric dipole will be",
+          "question": "The ratio of electric fields on the axis and at equator of an electric dipole will be:",
           "options": {
             "A": "1:1",
             "B": "2:1",
@@ -2499,14 +2499,14 @@ window.iitOthersData = {
             "D": "1:2"
           },
           "answer": "B",
-          "explanation": "\\(E_a:E_e=2:1\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(E_a:E_e=2:1\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core40b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core40r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core40b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M145 20L95 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core40b)\"/><text x=\"120\" y=\"13\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Equatorial E</text><path d=\"M190 70L228 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core40b)\"/><text x=\"208\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Axial E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
           "sourceQuestion": 40
         },
         {
-          "question": "If the magnitude of intensity of electric field at a distance x on axial line and at a\ndistance y on equatorial line on a given dipole are equal, then x : y is",
+          "question": "If the magnitude of intensity of electric field at a distance x on axial line and at a distance y on equatorial line on a given dipole are equal, then x: y is:",
           "options": {
             "A": "1:1",
             "B": "1:2",
@@ -2514,14 +2514,14 @@ window.iitOthersData = {
             "D": "\\(\\sqrt[3]{2}\\):1"
           },
           "answer": "D",
-          "explanation": "\\(\\frac{2kp}{x^3}=\\frac{kp}{y^3}\\Rightarrow x:y=\\sqrt[3]2:1\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\frac{2kp}{x^3}=\\frac{kp}{y^3}\\Rightarrow x:y=\\sqrt[3]2:1\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core41b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core41r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core41b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M145 20L95 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core41b)\"/><text x=\"120\" y=\"13\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Equatorial E</text><path d=\"M190 70L228 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core41b)\"/><text x=\"208\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Axial E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
           "sourceQuestion": 41
         },
         {
-          "question": "A given charge is situated at a certain distance from an electric dipole in the end-on\nposition experiences a force F. If the distance of the charge is doubled, the force acting on\nthe charge will be",
+          "question": "A given charge is situated at a certain distance from an electric dipole in the end-on position experiences a force F. If the distance of the charge is doubled, the force acting on the charge will be:",
           "options": {
             "A": "2F",
             "B": "F/2",
@@ -2529,7 +2529,7 @@ window.iitOthersData = {
             "D": "F/8"
           },
           "answer": "D",
-          "explanation": "\\(F\\propto r^{-3}\\Rightarrow F'=\\frac F8\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(F\\propto r^{-3}\\Rightarrow F'=\\frac F8\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core42b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core42r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core42b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M190 70L228 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core42b)\"/><text x=\"208\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Axial E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2544,7 +2544,7 @@ window.iitOthersData = {
             "D": "\\(24 \\times 10^{-3}\\) Nm"
           },
           "answer": "B",
-          "explanation": "\\(\\tau_{\\max}=qdE=(2\\times10^{-6})(0.03)(2\\times10^5)=0.012\\,\\mathrm{N\\,m}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\tau_{\\max}=qdE=(2\\times10^{-6})(0.03)(2\\times10^5)=0.012\\,\\mathrm{N\\,m}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core43b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core43r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"100\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"120\" cy=\"35\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M120 86L120 49\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core43b)\"/><text x=\"138\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><path d=\"M20 20L220 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core43b)\"/><path d=\"M20 65L220 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core43b)\"/><path d=\"M20 110L220 110\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core43b)\"/><path d=\"M106 100L65 100\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core43r)\"/><path d=\"M134 35L175 35\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core43r)\"/><text x=\"202\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
@@ -2559,14 +2559,14 @@ window.iitOthersData = {
             "D": "\\(1\\times 10^{-2}\\) N \\(m^{2}\\)"
           },
           "answer": "C",
-          "explanation": "\\(\\tau_{\\max}=(2\\times10^{-6})(0.01)(5\\times10^5)=0.01\\,\\mathrm{N\\,m}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\tau_{\\max}=(2\\times10^{-6})(0.01)(5\\times10^5)=0.01\\,\\mathrm{N\\,m}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core44b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core44r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"100\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"120\" cy=\"35\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M120 86L120 49\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core44b)\"/><text x=\"138\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><path d=\"M20 20L220 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core44b)\"/><path d=\"M20 65L220 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core44b)\"/><path d=\"M20 110L220 110\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core44b)\"/><path d=\"M106 100L65 100\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core44r)\"/><path d=\"M134 35L175 35\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core44r)\"/><text x=\"202\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
           "sourceQuestion": 44
         },
         {
-          "question": "The electric field due to an electric dipole at a distance r from its centre in axial position\nis E. If the dipole is rotated through an angle of \\(90^\\circ\\) about its perpendicular axis, the\nelectric field at the same point will be",
+          "question": "The electric field due to an electric dipole at a distance r from its centre in axial position is E. If the dipole is rotated through an angle of \\(90^\\circ\\) about its perpendicular axis, the electric field at the same point will be:",
           "options": {
             "A": "E",
             "B": "E/4",
@@ -2574,14 +2574,14 @@ window.iitOthersData = {
             "D": "2E"
           },
           "answer": "C",
-          "explanation": "After rotation, the point is on the equatorial line: \\(E'=E/2\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">After rotation, the point is on the equatorial line: \\(E'=E/2\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core45b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core45r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core45b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M145 20L95 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core45b)\"/><text x=\"120\" y=\"13\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Equatorial E</text><path d=\"M190 70L228 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core45b)\"/><text x=\"208\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Axial E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
           "sourceQuestion": 45
         },
         {
-          "question": "A neutral water molecule (\\(\\mathrm{H_2O}\\)) in its vapour state has an electric dipole moment of\nmagnitude \\(6.4 \\times 10^{-30}\\) C-m. How far apart are the molecules centres of positive and\nnegative charge",
+          "question": "A neutral water molecule (\\(\\mathrm{H_2O}\\)) in its vapour state has an electric dipole moment of magnitude \\(6.4 \\times 10^{-30}\\) C-m. How far apart are the molecules centres of positive and negative charge:",
           "options": {
             "A": "4 nm",
             "B": "4 Å",
@@ -2589,14 +2589,14 @@ window.iitOthersData = {
             "D": "4 pm"
           },
           "answer": "D",
-          "explanation": "A water molecule has total positive charge \\(10e\\). \\(d=\\frac{6.4\\times10^{-30}}{10(1.6\\times10^{-19})}=4\\times10^{-12}\\,\\mathrm m=4\\,\\mathrm{pm}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">A water molecule has total positive charge \\(10e\\). \\(d=\\frac{6.4\\times10^{-30}}{10(1.6\\times10^{-19})}=4\\times10^{-12}\\,\\mathrm m=4\\,\\mathrm{pm}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core46b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core46r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core46b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 55,
           "sourceQuestion": 46
         },
         {
-          "question": "An electric dipole consists of two equal and opposite charges placed 2 cm apart. When the\ndipole is placed in a uniform electric field of strength \\(10^{5}\\) \\(\\mathrm{N\\,C^{-1}}\\), it experiences a maximum\ntorque of \\(0.2 \\times 10^{-3}\\) Nm. Find the magnitude of each charge.",
+          "question": "An electric dipole consists of two equal and opposite charges placed 2 cm apart. When the dipole is placed in a uniform electric field of strength \\(10^{5}\\) \\(\\mathrm{N\\,C^{-1}}\\), it experiences a maximum torque of \\(0.2 \\times 10^{-3}\\) Nm. Find the magnitude of each charge.",
           "options": {
             "A": "20 µC",
             "B": "\\(0.1\\,\\mu\\mathrm C\\)",
@@ -2604,14 +2604,14 @@ window.iitOthersData = {
             "D": "10 µC"
           },
           "answer": "B",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=\\frac{\\tau}{dE}\\\\ &=\\frac{0.2\\times10^{-3}}{0.02\\times10^5}\\\\ &=10^{-7}\\,\\mathrm C\\\\ &=0.1\\,\\mu\\mathrm C\\end{aligned}\\). The printed option B appears to contain a unit typo.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Charge},\\ q&=\\frac{\\tau}{dE}\\\\ &=\\frac{0.2\\times10^{-3}}{0.02\\times10^5}\\\\ &=10^{-7}\\,\\mathrm C\\\\ &=0.1\\,\\mu\\mathrm C\\end{aligned}\\). The printed option B appears to contain a unit typo.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core47b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core47r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"100\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"120\" cy=\"35\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M120 86L120 49\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core47b)\"/><text x=\"138\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><path d=\"M20 20L220 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core47b)\"/><path d=\"M20 65L220 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core47b)\"/><path d=\"M20 110L220 110\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core47b)\"/><path d=\"M106 100L65 100\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core47r)\"/><path d=\"M134 35L175 35\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core47r)\"/><text x=\"202\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
           "sourceQuestion": 47
         },
         {
-          "question": "Two electric dipoles of moment P and 64 P are placed in opposite direction on a line at a\ndistance of 25 cm. The electric field will be zero at point between the dipoles whose\ndistance from the dipole of moment P is",
+          "question": "Two electric dipoles of moment P and 64 P are placed in opposite direction on a line at a distance of 25 cm. The electric field will be zero at point between the dipoles whose distance from the dipole of moment P is:",
           "options": {
             "A": "5 cm",
             "B": "25/9 cm",
@@ -2619,7 +2619,7 @@ window.iitOthersData = {
             "D": "4/13 cm"
           },
           "answer": "A",
-          "explanation": "\\(\\frac P{x^3}=\\frac{64P}{(25-x)^3}\\Rightarrow25-x=4x\\Rightarrow x=5\\,\\mathrm{cm}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\frac P{x^3}=\\frac{64P}{(25-x)^3}\\Rightarrow25-x=4x\\Rightarrow x=5\\,\\mathrm{cm}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3core48b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3core48r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3core48b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2628,7 +2628,7 @@ window.iitOthersData = {
       ],
       "optimal": [
         {
-          "question": "The distance between two fixed positive charges ‘4e’ and ‘e’ is ‘L’. A third charge ‘q’ is\nplaced at a distance x, on the line joining the two, to remain in equilibrium, from the first\ncharge, in between the charges. Then the value of x is:",
+          "question": "The distance between two fixed positive charges ‘4e’ and ‘e’ is ‘L’. A third charge ‘q’ is placed at a distance x, on the line joining the two, to remain in equilibrium, from the first charge, in between the charges. Then the value of x is:",
           "options": {
             "A": "\\(\\frac L3\\)",
             "B": "\\(\\frac{2L}3\\)",
@@ -2643,7 +2643,7 @@ window.iitOthersData = {
           "sourceQuestion": 1
         },
         {
-          "question": "Two spheres A and B are charged with the charges of +10 and +20 coulomb respectively\nand seperated bt a distance of 80cm. The electric field at a point on the line joining the\ncentres of the two spheres will be zero at a distance from the sphere A :",
+          "question": "Two spheres A and B are charged with the charges of +10 and +20 coulomb respectively and seperated bt a distance of 80cm. The electric field at a point on the line joining the centres of the two spheres will be zero at a distance from the sphere A:",
           "options": {
             "A": "20 cm",
             "B": "33 cm",
@@ -2666,14 +2666,14 @@ window.iitOthersData = {
             "D": "\\(48\\times 10^{4}\\)"
           },
           "answer": "C",
-          "explanation": "\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kq}{(0.01)^2}\\left(1-\\frac14+\\frac1{16}-\\cdots\\right)\\\\ &=4.5\\times10^5\\frac1{1+1/4}\\\\ &=3.6\\times10^5\\,\\mathrm{N/C}\\end{aligned}\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kq}{(0.01)^2}\\left(1-\\frac14+\\frac1{16}-\\cdots\\right)\\\\ &=4.5\\times10^5\\frac1{1+1/4}\\\\ &=3.6\\times10^5\\,\\mathrm{N/C}\\end{aligned}\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal3b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal3r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"35\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"35\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"35\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"205\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"205\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"205\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><text x=\"120\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Separation</text><text x=\"120\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">P</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
           "sourceQuestion": 3
         },
         {
-          "question": "Three charges each of +4 μ C , are placed at the corners B,C, D of a square ABCD of side\n1m. The elctric field at the center O of the square is",
+          "question": "Three charges each of +4 μ C, are placed at the corners B,C, D of a square ABCD of side 1m. The elctric field at the center O of the square is:",
           "options": {
             "A": "\\(7.2\\times 10^{4}\\) N/C towards A",
             "B": "\\(7.2\\times 10^{4}\\) N/C towards C",
@@ -2681,14 +2681,14 @@ window.iitOthersData = {
             "D": "\\(3.6\\times 10^{4}\\) N/C towards C"
           },
           "answer": "A",
-          "explanation": "By symmetry the resultant equals the negative of the missing corner field: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{k(4\\times10^{-6})}{1/2}\\\\ &=7.2\\times10^4\\,\\mathrm{N/C}\\end{aligned}\\) towards A.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">By symmetry the resultant equals the negative of the missing corner field: \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{k(4\\times10^{-6})}{1/2}\\\\ &=7.2\\times10^4\\,\\mathrm{N/C}\\end{aligned}\\) towards A.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal4b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal4r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><polygon points=\"120,19 168,67 120,115 72,67\" fill=\"none\" stroke=\"#94a3b8\"/><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"168\" cy=\"67\" r=\"10\" fill=\"#dc2626\"/><text x=\"168\" y=\"71\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"168\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><circle cx=\"120\" cy=\"115\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"119\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">C</text><circle cx=\"72\" cy=\"67\" r=\"10\" fill=\"#dc2626\"/><text x=\"72\" y=\"71\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"72\" y=\"51\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">D</text><text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M120 67L120 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal4b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
           "sourceQuestion": 4
         },
         {
-          "question": "Two point charges \\(q_{1}\\) = 4 μ C and \\(q_{2}\\) = 4μ C are placed 20 cm apart. The electric field due to\nthem will be zero on the line joining them at distance of ",
+          "question": "Two point charges of +4 μC each are placed 20 cm apart. At what distance from either charge is the electric field zero on the line joining them?",
           "options": {
             "A": "10 cm from either charge",
             "B": "8 cm from \\(q_{2}\\)",
@@ -2704,7 +2704,7 @@ window.iitOthersData = {
           "sourceNote": "As printed, both charges are equal; the zero-field point is 10 cm from either, absent from options."
         },
         {
-          "question": "Five point charges (+q each) are placed at the five vertices a regular hexagon of\nside 2a. What is the magnitude of the net electric field at the centre of the\nhexagon? ",
+          "question": "Five point charges (+q each) are placed at the five vertices a regular hexagon of side 2a. What is the magnitude of the net electric field at the centre of the hexagon?",
           "options": {
             "A": "\\(\\frac{q}{4\\pi\\epsilon_0a^2}\\)",
             "B": "\\(\\frac{q}{16\\pi\\epsilon_0a^2}\\)",
@@ -2712,7 +2712,7 @@ window.iitOthersData = {
             "D": "\\(\\frac{5q}{16\\pi\\epsilon_0a^2}\\)"
           },
           "answer": "B",
-          "explanation": "Six equal charges would give zero field. Removing one leaves \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kq}{(2a)^2}\\\\ &=\\frac{q}{16\\pi\\epsilon_0a^2}\\end{aligned}\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Six equal charges would give zero field. Removing one leaves \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=\\frac{kq}{(2a)^2}\\\\ &=\\frac{q}{16\\pi\\epsilon_0a^2}\\end{aligned}\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal6b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal6r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><polygon points=\"120,19 161.56921938165306,43 161.56921938165306,91 120,115 78.43078061834694,91.00000000000001 78.43078061834694,42.99999999999999\" fill=\"none\" stroke=\"#94a3b8\"/><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"161.56921938165306\" cy=\"43\" r=\"10\" fill=\"#dc2626\"/><text x=\"161.56921938165306\" y=\"47\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"161.56921938165306\" y=\"27\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><circle cx=\"161.56921938165306\" cy=\"91\" r=\"10\" fill=\"#dc2626\"/><text x=\"161.56921938165306\" y=\"95\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"161.56921938165306\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">C</text><circle cx=\"120\" cy=\"115\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"119\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">D</text><circle cx=\"78.43078061834694\" cy=\"91.00000000000001\" r=\"10\" fill=\"#dc2626\"/><text x=\"78.43078061834694\" y=\"95.00000000000001\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"78.43078061834694\" y=\"75.00000000000001\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text><circle cx=\"78.43078061834694\" cy=\"42.99999999999999\" r=\"10\" fill=\"#dc2626\"/><text x=\"78.43078061834694\" y=\"46.99999999999999\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"78.43078061834694\" y=\"26.999999999999993\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">F</text><text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><path d=\"M120 67L120 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal6b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 56,
@@ -2727,14 +2727,14 @@ window.iitOthersData = {
             "D": "Zero"
           },
           "answer": "D",
-          "explanation": "The three equal fields are separated by \\(120^\\circ\\) and cancel.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The three equal fields are separated by \\(120^\\circ\\) and cancel.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal7b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal7r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><polygon points=\"120,19 161.56921938165306,91 78.43078061834694,91.00000000000001\" fill=\"none\" stroke=\"#94a3b8\"/><circle cx=\"120\" cy=\"19\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"23\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"3\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"161.56921938165306\" cy=\"91\" r=\"10\" fill=\"#dc2626\"/><text x=\"161.56921938165306\" y=\"95\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"161.56921938165306\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><circle cx=\"78.43078061834694\" cy=\"91.00000000000001\" r=\"10\" fill=\"#dc2626\"/><text x=\"78.43078061834694\" y=\"95.00000000000001\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"78.43078061834694\" y=\"75.00000000000001\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">C</text><text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text><text x=\"120\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E = 0</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
           "sourceQuestion": 7
         },
         {
-          "question": "Two point charges (+Q) and (-2Q) are fixed on the x -axis at positions a and 2a\nfrom orgin repectively. At what positions on the axis, the resultant electric field is\nzero. ",
+          "question": "Two point charges (+Q) and (-2Q) are fixed on the x -axis at positions a and 2a from orgin repectively. At what positions on the axis, the resultant electric field is zero.",
           "options": {
             "A": "Only \\(x=\\sqrt2a\\)",
             "B": "\\(x=-\\sqrt{2}a\\)",
@@ -2742,7 +2742,7 @@ window.iitOthersData = {
             "D": "Only \\(x=\\frac{3a}{2}\\)"
           },
           "answer": "B",
-          "explanation": "On the left of both charges, \\(\\frac{Q}{(a-x)^2}=\\frac{2Q}{(2a-x)^2}\\), giving \\(x=-\\sqrt{2}a\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">On the left of both charges, \\(\\frac{Q}{(a-x)^2}=\\frac{2Q}{(2a-x)^2}\\), giving \\(x=-\\sqrt{2}a\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal8b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal8r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"35\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"35\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"35\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"205\" cy=\"65\" r=\"10\" fill=\"#2563eb\"/><text x=\"205\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"205\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><text x=\"120\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Separation</text><text x=\"120\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">P</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2750,7 +2750,7 @@ window.iitOthersData = {
           "sourceNote": "Radical in the first three options inferred from the source extraction; verify against printed figure."
         },
         {
-          "question": "Two point charges Q and -3Q are placed at some distance apart. If the electric\nfield at the location of Q is E then at the locality of -3Q, it is ",
+          "question": "Two point charges Q and -3Q are placed at some distance apart. If the electric field at the location of Q is E then at the locality of -3Q, it is:",
           "options": {
             "A": "\\(-E\\)",
             "B": "\\(\\frac E3\\)",
@@ -2758,14 +2758,14 @@ window.iitOthersData = {
             "D": "\\(-\\frac E3\\)"
           },
           "answer": "B",
-          "explanation": "Both fields point in the same direction along the line joining the charges; the magnitude ratio is 1:3. Thus \\(E'=E/3\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">Both fields point in the same direction along the line joining the charges; the magnitude ratio is 1:3. Thus \\(E'=E/3\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal9b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal9r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"35\" cy=\"65\" r=\"10\" fill=\"#dc2626\"/><text x=\"35\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"35\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"205\" cy=\"65\" r=\"10\" fill=\"#2563eb\"/><text x=\"205\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"205\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><text x=\"120\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Separation</text><path d=\"M50 65L90 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal9b)\"/><path d=\"M150 65L190 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal9b)\"/></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
           "sourceQuestion": 9
         },
         {
-          "question": "112. Three charges of (+2q), (q) and (-9) are placed at the corners A, B and C of an\nequilateral triangle of side a as shown in the adjoining figure. Then the dipole moment of\nthis combination is",
+          "question": "Three charges of (+2q), (q) and (-9) are placed at the corners A, B and C of an equilateral triangle of side a as shown in the adjoining figure. Then the dipole moment of this combination is:",
           "options": {
             "A": "qa",
             "B": "zero",
@@ -2773,14 +2773,14 @@ window.iitOthersData = {
             "D": "qa"
           },
           "answer": "",
-          "explanation": "The printed charge at C is ambiguous and the original figure is required; a unique dipole moment cannot be established from the extracted text.",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The printed charge at C is ambiguous and the original figure is required; a unique dipole moment cannot be established from the extracted text.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal10b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal10r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal10b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal10b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal10b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal10b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
           "sourceQuestion": 10
         },
         {
-          "question": "The electric intensity due to a dipole of length 10 cm and having a charge of 500 μ C, at a\npoint on the axis at a distance 20 cm from one of the charges as shown in the figure in air, is",
+          "question": "The electric intensity due to a dipole of length 10 cm and having a charge of 500 μ C, at a point on the axis at a distance 20 cm from one of the charges as shown in the figure in air, is:",
           "options": {
             "A": "\\(6.25\\times 10^{7}\\) N/C",
             "B": "\\(9.28\\times 10^{7}\\) N/C",
@@ -2788,7 +2788,7 @@ window.iitOthersData = {
             "D": "\\(20.5\\times 10^{7}\\) N/C"
           },
           "answer": "",
-          "explanation": "The original figure is required to determine whether the axial distances from the two charges are 20 cm and 30 cm or 10 cm and 20 cm. Use \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=kq\\left|\\frac1{r_+^2}-\\frac1{r_-^2}\\right|\\end{aligned}\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is required to determine whether the axial distances from the two charges are 20 cm and 30 cm or 10 cm and 20 cm. Use \\(\\displaystyle\\begin{aligned}\\text{Electric field},\\ E&=kq\\left|\\frac1{r_+^2}-\\frac1{r_-^2}\\right|\\end{aligned}\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal11b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal11r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal11b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal11b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal11b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal11b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2803,7 +2803,7 @@ window.iitOthersData = {
             "D": "None of these"
           },
           "answer": "B",
-          "explanation": "\\(\\vec E_1=-kp\\hat k,\\quad \\vec E_2=\\frac{2k(p/2)}{2^3}\\hat k=\\frac{kp}{8}\\hat k,\\quad \\vec E=-\\frac{7p}{32\\pi\\epsilon_0}\\hat k\\)",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">\\(\\vec E_1=-kp\\hat k,\\quad \\vec E_2=\\frac{2k(p/2)}{2^3}\\hat k=\\frac{kp}{8}\\hat k,\\quad \\vec E=-\\frac{7p}{32\\pi\\epsilon_0}\\hat k\\)</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal12b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal12r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"65\" cy=\"70\" r=\"10\" fill=\"#2563eb\"/><text x=\"65\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"65\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"175\" cy=\"70\" r=\"10\" fill=\"#dc2626\"/><text x=\"175\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"175\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M79 70L161 70\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal12b)\"/><text x=\"120\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><text x=\"120\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">O</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2818,7 +2818,7 @@ window.iitOthersData = {
             "D": "\\(\\sqrt{\\frac{p}{IE}}\\)"
           },
           "answer": "A",
-          "explanation": "For small oscillations, \\(I\\ddot\\theta=-pE\\theta\\Rightarrow\\omega=\\sqrt{\\frac{pE}{I}}\\).",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">For small oscillations, \\(I\\ddot\\theta=-pE\\theta\\Rightarrow\\omega=\\sqrt{\\frac{pE}{I}}\\).</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Conceptual illustration\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal13b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal13r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><circle cx=\"120\" cy=\"100\" r=\"10\" fill=\"#2563eb\"/><text x=\"120\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">−</text><text x=\"120\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">A</text><circle cx=\"120\" cy=\"35\" r=\"10\" fill=\"#dc2626\"/><text x=\"120\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" fill=\"white\">+</text><text x=\"120\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">B</text><path d=\"M120 86L120 49\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal13b)\"/><text x=\"138\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">p</text><path d=\"M20 20L220 20\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal13b)\"/><path d=\"M20 65L220 65\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal13b)\"/><path d=\"M20 110L220 110\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal13b)\"/><path d=\"M106 100L65 100\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal13r)\"/><path d=\"M134 35L175 35\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal13r)\"/><text x=\"202\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">E</text></svg></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 57,
@@ -2833,7 +2833,7 @@ window.iitOthersData = {
             "D": "The dipole experiences a force as well as a torque"
           },
           "answer": "",
-          "explanation": "",
+          "explanation": "<div class=\"p4f-motion-solution\" style=\"display:flex;flex-wrap:nowrap;align-items:center;gap:4px\"><div class=\"p4f-motion-calculation\" style=\"flex:1;min-width:0\">The original figure is needed to determine the force and torque directions.</div><div class=\"p4f-motion-diagram\" style=\"flex:0 0 28%;max-width:180px;border:0;background:none;\"><svg viewBox=\"0 0 240 135\" role=\"img\" aria-label=\"Illustration only — original figure unavailable\" style=\"width:100%;height:auto;border:0;background:none\"><defs><marker id=\"ecws3optimal14b\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#2563eb\"/></marker><marker id=\"ecws3optimal14r\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#dc2626\"/></marker></defs><path d=\"M20 25L220 25\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal14b)\"/><path d=\"M20 55L220 55\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal14b)\"/><path d=\"M20 85L220 85\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal14b)\"/><path d=\"M20 115L220 115\" stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#ecws3optimal14b)\"/><text x=\"120\" y=\"12\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\">Example: uniform field</text></svg><small>Illustration only</small></div></div>",
           "paper": "WS-3",
           "marks": 1,
           "sourcePage": 58,
