@@ -1905,16 +1905,20 @@ document.addEventListener('DOMContentLoaded',()=>{
 .p4f-topbar .p4f-auth{justify-self:end;min-width:0;max-width:100%}
 @media(max-width:700px){.header.p4f-topbar{grid-template-columns:minmax(0,1fr) auto;gap:6px;padding:6px 8px}.p4f-topbar .header-center{grid-column:1/-1;grid-row:1;justify-self:center}.p4f-selectors{grid-column:1;grid-row:2}.p4f-topbar .p4f-auth{grid-column:2;grid-row:2}.p4f-topbar .brand{font-size:19px}.p4f-topbar .p4f-auth-user{max-width:115px}.p4f-selectors select{font-size:11px}}
 </style>
-</head>
+<style id="p4f-chapter-navigation">
+#sidebar{display:none!important}
+.p4f-topbar .p4f-selectors{display:flex;flex-direction:column;align-items:stretch;gap:4px;width:100%;max-width:390px}
+.p4f-selector-row{display:flex;gap:5px;min-width:0}
+.p4f-topbar .p4f-selectors select{flex:1;max-width:none;width:0;min-width:0}
+.p4f-topbar #p4fChapterSelect{width:100%;flex:auto}
+.p4f-topbar #breadcrumb{display:none!important}
+@media(max-width:700px){.p4f-topbar .p4f-selectors{max-width:none}.p4f-topbar .p4f-auth{align-self:start}}
+</style></head>
 <body class="light">
 
 <!-- HEADER -->
 <header class="header p4f-topbar">
-  <div class="p4f-selectors">
-    <button type="button" class="icon-btn" aria-label="Toggle chapter sidebar" title="Toggle chapter sidebar" onclick="toggleSidebar()">☰</button>
-    <select id="p4fBoardSelect" aria-label="Board"></select>
-    <select id="p4fClassSelect" aria-label="Class"></select>
-  </div>
+  <div class="p4f-selectors"><div class="p4f-selector-row"><select id="p4fBoardSelect" aria-label="Board"></select><select id="p4fClassSelect" aria-label="Class"></select></div><select id="p4fChapterSelect" aria-label="Chapter"></select></div>
   <div class="header-center"><span class="brand">Physics4Fun</span><div class="breadcrumb" id="breadcrumb">
       <span class="bc-chip" id="bc-grade">—</span>
       <span class="bc-sep">›</span>
@@ -6936,23 +6940,25 @@ logout.addEventListener('click',async()=>{logout.disabled=true;try{await signOut
 </script>
 <script id="p4f-navigation-script">
 (function(){
- function init(){
- const board=document.getElementById('p4fBoardSelect'), grade=document.getElementById('p4fClassSelect'), sidebar=document.getElementById('sidebar');
- if(!board||!grade||!sidebar)return;
+function init(){
+ const board=document.getElementById('p4fBoardSelect'),grade=document.getElementById('p4fClassSelect'),chapter=document.getElementById('p4fChapterSelect'),sidebar=document.getElementById('sidebar');
  const boards=Array.from(sidebar.querySelectorAll('.board-content'));
- const rowsFor=b=>Array.from(b.querySelectorAll('.grade-row')).filter(row=>{const list=row.nextElementSibling;return list&&list.classList.contains('chapter-list')&&!list.querySelector('.grade-row')});
- function option(select,value,label){select.add(new Option(label,value))}
- boards.forEach(b=>option(board,b.id,b.previousElementSibling.textContent.replace(/^[\s▼▶]+/,'').trim()));
- function fill(b){grade.replaceChildren();option(grade,'','Select class');rowsFor(b).forEach(row=>{const list=row.nextElementSibling;const parent=row.parentElement.closest('.chapter-list');const label=row.querySelector('.grade-label')?.textContent.trim()||row.textContent.trim();const prefix=parent?.previousElementSibling?.querySelector('.grade-label')?.textContent.trim();option(grade,list.id,prefix?prefix+' · '+label:label)})}
+ const items=list=>Array.from(list.querySelectorAll('.ch-item')).filter(x=>x.closest('.chapter-list')===list);
+ const rowsFor=b=>Array.from(b.querySelectorAll('.grade-row')).filter(row=>row.nextElementSibling?.classList.contains('chapter-list')&&items(row.nextElementSibling).length);
+ const option=(sel,value,label)=>sel.add(new Option(label,value));
+ let chapters=[];
+ function fillChapters(){chapter.replaceChildren();option(chapter,'','Select chapter');const list=document.getElementById(grade.value);chapters=list?items(list):[];chapters.forEach((el,i)=>option(chapter,String(i),el.querySelector('.ch-name')?.textContent.trim()||el.textContent.trim()));chapter.disabled=!chapters.length;const active=chapters.findIndex(el=>el.classList.contains('active'));if(active>=0)chapter.value=String(active)}
+ function fillGrades(b){grade.replaceChildren();option(grade,'','Select class');rowsFor(b).forEach(row=>{const list=row.nextElementSibling;const parent=row.parentElement.closest('.chapter-list');const label=row.querySelector('.grade-label')?.textContent.trim()||row.textContent.trim();const prefix=parent?.previousElementSibling?.querySelector('.grade-label')?.textContent.trim();option(grade,list.id,prefix?prefix+' · '+label:label)});grade.disabled=grade.options.length===1;fillChapters()}
  function openBoard(b){if(b.style.display==='none')b.previousElementSibling.click()}
- function reveal(){sidebar.classList.remove('hide')}
- function sync(){const b=boards.find(b=>b.style.display!=='none');if(!b)return;if(board.value!==b.id||!grade.options.length){board.value=b.id;fill(b)}const row=rowsFor(b).find(row=>row.nextElementSibling.classList.contains('open'));grade.value=row?row.nextElementSibling.id:''}
- board.addEventListener('change',()=>{const b=document.getElementById(board.value);if(!b)return;openBoard(b);fill(b);reveal()});
- grade.addEventListener('change',()=>{const list=document.getElementById(grade.value);if(!list)return;const b=list.closest('.board-content');openBoard(b);const ancestors=[];let p=list.parentElement.closest('.chapter-list');while(p){ancestors.unshift(p);p=p.parentElement.closest('.chapter-list')}ancestors.forEach(a=>{if(!a.classList.contains('open'))a.previousElementSibling.click()});if(!list.classList.contains('open'))list.previousElementSibling.click();reveal();list.previousElementSibling.scrollIntoView({block:'nearest'})});
- sidebar.addEventListener('click',()=>queueMicrotask(sync));
- sync();
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+ function openGrade(list){const b=list.closest('.board-content');openBoard(b);const ancestors=[];let p=list.parentElement.closest('.chapter-list');while(p){ancestors.unshift(p);p=p.parentElement.closest('.chapter-list')}ancestors.forEach(a=>{if(!a.classList.contains('open'))a.previousElementSibling.click()});if(!list.classList.contains('open'))list.previousElementSibling.click()}
+ function clearContent(){document.querySelectorAll('.ch-item.active').forEach(el=>el.classList.remove('active'));document.getElementById('welcome').style.display='';document.getElementById('sectionBar').classList.remove('visible');document.getElementById('breadcrumb').classList.remove('visible')}
+ boards.forEach(b=>option(board,b.id,b.previousElementSibling.querySelector('span:last-child')?.textContent.trim()||b.id));
+ board.addEventListener('change',()=>{clearContent();const b=document.getElementById(board.value);openBoard(b);fillGrades(b)});
+ grade.addEventListener('change',()=>{clearContent();const list=document.getElementById(grade.value);if(list)openGrade(list);fillChapters()});
+ chapter.addEventListener('change',()=>{if(chapter.value===''){clearContent();return}const list=document.getElementById(grade.value);if(list)openGrade(list);chapters[Number(chapter.value)]?.click()});
+ const active=sidebar.querySelector('.ch-item.active');const list=active?.closest('.chapter-list');const b=list?.closest('.board-content')||boards.find(b=>b.style.display!=='none')||boards[0];if(b){board.value=b.id;fillGrades(b);const selected=list||rowsFor(b).map(r=>r.nextElementSibling).find(l=>l.classList.contains('open'));if(selected){grade.value=selected.id;fillChapters()}}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
 </body>
